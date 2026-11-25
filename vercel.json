@@ -1363,6 +1363,16 @@
       "destination": "/api/wam?op=dpagina&p=bedrijven/:bedrijf"
     },
     {
+      "source": "/:taal(en|de|it)/dossier/:dossier",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dpagina&p=:taal/dossier/:dossier"
+    },
+    {
       "source": "/dossier/:dossier",
       "has": [
         {

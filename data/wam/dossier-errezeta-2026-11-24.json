@@ -5,7 +5,7 @@
   "onderwerp": "Oproep aan andere gedupeerden",
   "uitgelicht": true,
   "directMeedoen": true,
-  "bijgewerkt": "2026-11-24",
+  "bijgewerkt": "2026-11-25",
   "publicatie": "2026-11-24",
   "titel": "Ook gedupeerd door Errezeta Publishing?",
   "seoTitel": "Errezeta Publishing: oproep aan gedupeerden | WAM",
@@ -144,9 +144,9 @@
   "leiding": [
     {
       "naam": "Fabiana D’Amiano",
-      "functie": "Director van Errezeta Publishing Ltd volgens de historische registratie bij Companies House",
-      "bron": "https://find-and-update.company-information.service.gov.uk/company/13678815/officers",
-      "datum": "2026-11-24"
+      "functie": "Director van Errezeta Publishing Ltd sinds 14 oktober 2021 volgens Companies House. Hetzelfde register noemt haar ook als director van RZ Business Ltd (12811363), eveneens ontbonden, en vermeldt Italiaanse nationaliteit en Italië als woonland.",
+      "bron": "https://find-and-update.company-information.service.gov.uk/officers/yxBrdm1XbAl7zh_gYft96Q-3RR0/appointments",
+      "datum": "2026-11-25"
     }
   ],
   "bronnen": [
@@ -164,6 +164,11 @@
       "naam": "Companies House: geregistreerde bestuurder",
       "url": "https://find-and-update.company-information.service.gov.uk/company/13678815/officers",
       "uitleg": "Fabiana D’Amiano staat vermeld als Director. WAM publiceert alleen naam en zakelijke functie, geen privégegevens."
+    },
+    {
+      "naam": "Companies House: functies van Fabiana D’Amiano",
+      "url": "https://find-and-update.company-information.service.gov.uk/officers/yxBrdm1XbAl7zh_gYft96Q-3RR0/appointments",
+      "uitleg": "Twee functies als director: Errezeta Publishing Ltd (13678815) en RZ Business Ltd (12811363), beide ontbonden. Correspondentieadres van beide: een zakelijk adres in Brentford, Verenigd Koninkrijk."
     }
   ],
   "vragen": [
@@ -206,5 +211,27 @@
     },
     "aanleiding": "Deze oproep komt voort uit de eigen zaak van de redactie. Twee ingeziene betalingsdocumenten tonen samen €50.000. Errezeta deed herstelvoorstellen; de levering en mogelijke eindafwikkeling worden nog onderzocht. We willen weten of andere klanten hetzelfde hebben meegemaakt.",
     "voorblad": "We zoeken andere betrokken klanten. Je melding gaat eerst naar de redactie."
+  },
+  "zicht": {
+    "gemeten": "2026-11-25",
+    "metingen": [
+      {
+        "bron": "Google",
+        "vraag": "Errezeta Publishing",
+        "zegt": "Alleen registergegevens: Companies House, The Gazette, OpenCorporates, Endole en North Data. Status ontbonden. Geen enkele klantervaring of review in de resultaten.",
+        "url": "https://www.google.com/search?q=Errezeta+Publishing"
+      },
+      {
+        "bron": "Trustpilot",
+        "vraag": "errezetapublishing.com",
+        "zegt": "Geen pagina met reviews gevonden."
+      },
+      {
+        "bron": "Claude (AI-assistent, zonder op internet te zoeken)",
+        "vraag": "Wat weet je over Errezeta Publishing?",
+        "zegt": "Kent het bedrijf niet en geeft geen beoordeling. Wie het een AI-assistent vraagt, krijgt dus geen waarschuwing en geen ervaringen van klanten."
+      }
+    ],
+    "historie": []
   }
 }

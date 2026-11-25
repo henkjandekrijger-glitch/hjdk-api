@@ -197,6 +197,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026 (Claude, middag): Errezeta vertaald naar EN/DE/IT met hreflang, zichtblok (Google, Trustpilot, AI) met datum, registerfeiten director en RZ Business Ltd. Privéadres van David en verblijfplaats van personen bewust niet gepubliceerd. Voorkant Blendle eerst en loterijtegel; ?h=macht voor campagne. Online geen publieke Errezeta-klantreviews gevonden (Google toont alleen registers). Wederhoor-mail aan Errezeta (support@ en david@buildingai.fm) als concept gemeld (3cebf28fa900, 06843b5e933c), wacht op verstuur.
+
 - 25 nov 2026 (Claude, vervolg): modalconfig wmn live gezet (versie 2); lib/modal.js bewaart nu ook m.volg (eigen volgtekst per taal), anders viel die bij opslaan weg. Errezeta-oproep: twee klanten uit Gmail gevonden (Andy, 5K-pakket; Joshua, due diligence jan 2024), concepten gemeld in POST (7e38a92a948e, dd03ea6f29eb), wachten op verstuur.
 
 - 25 nov 2026, later: 25 november 2026 (later): bekeken-teller telt alleen echte lezers (baken op=dbekeken na 8 s zichtbaar plus scroll, tik of toets; wmn:mens, een keer per ip-hash per dag, zichtbaar vanaf 100). Lerende modal op dossierpagina's met eigen kop per dossier (data-volg, VOLG_KOP in lib/wam-dossiers.js, m.volg in de modalconfig). Mailmind-stroom wam-volg (lib/wam-volgmail.js): welkomstmail na aanmelden en een mail per nieuwe tijdlijnregel via op=dvolgmail&s=<dossier>, afmeldlink met record.mtok; LIVE uit tot Henkjans verstuur. Modalconfig opnieuw gezet via api/mm/modalbeheer.

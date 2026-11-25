@@ -1,0 +1,603 @@
+{
+  "_noot": "Vertalingen van het Errezeta-dossier (bron: dossier-errezeta-2026-11-24.json). Werk bij in dezelfde commit als de Nederlandse tekst. Volgorde van feiten, tijdlijn, documenten, vragen en bronnen is gelijk aan het Nederlandse bestand.",
+  "en": {
+    "taalNaam": "English",
+    "titel": "Did Errezeta Publishing let you down too?",
+    "seoTitel": "Errezeta Publishing: call to affected customers | we are many now",
+    "kort": "Did you pay Errezeta Publishing and run into problems with delivery or settlement? Tell us what was agreed, what you paid and what happened next.",
+    "status": "Payment documents reviewed · delivery and final settlement under investigation",
+    "oproep": {
+      "doel": "We are looking for other customers with a similar experience. The editors compare reports with the existing documents to find out which problems recur. If your case was resolved in the end, we would like to hear that too.",
+      "aanleiding": "This call comes from the editors' own case. Two payment documents reviewed show €50,000 in total. Errezeta made recovery proposals; delivery and any final settlement are still being investigated. We want to know whether other customers went through the same.",
+      "placeholder": "What happened to you?",
+      "knop": "Report your experience with Errezeta Publishing"
+    },
+    "feiten": [
+      "The reporter is an entrepreneur. He states that he was misled when buying services around Amazon Kindle Direct Publishing (KDP) and is asking for €50,000 back. The editors have their own interest in this dossier.",
+      "The two ING transaction documents reviewed name Errezeta Publishing as the recipient: €40,000 on 22 December 2023 and €10,000 on 1 February 2024. Together that is €50,000. These documents show payments, not damages established by a court.",
+      "In correspondence dated 10 April 2024 the reporter describes a blocked account and missing results on other accounts. That was his complaint at the time; a full independent check of all KDP accounts, deliveries and revenue has not been carried out.",
+      "Errezeta replied on 10 and 11 April 2024 with recovery proposals: transfer of an account the company called profitable, a larger plan with two accounts, IngramSpark and additional books. On 27 April the company said a merge request had been sent to Amazon. On 28 April the reporter asked where the confirmation was; on 29 April support said it was checking. A request or offer does not prove a completed transfer.",
+      "Drive also holds a text for a final settlement in which the reporter would confirm receipt of a replacement account and release Errezeta from further obligations. Whether that text was sent, signed or carried out, and what legal effect it may have, has not been established here. This possible final settlement is part of the investigation.",
+      "On 22 June 2026 the reporter corrected his earlier amount from €60,000 to €50,000 by email. On 29 August 2026 he sent a renewed claim for €50,000. That claim alone does not prove the amount is legally owed. A later repayment or final settlement has not been established in the documents checked here.",
+      "Companies House lists Errezeta Publishing Ltd, number 13678815, as dissolved on 12 March 2024. The name and business correspondence address match the contract text in Drive. The dissolution is a register fact; on its own it does not prove fraud and does not say who should bear any obligations."
+    ],
+    "betalingen": [
+      "Two Platinum KDP packages, according to the payment reference",
+      "Invoice payment to Errezeta Publishing"
+    ],
+    "tijdlijn": [
+      {
+        "kop": "Contract text for books and management",
+        "tekst": "A contract text in Drive describes five books, four months of ad management and VIP service for €10,000. The text was read; performance and signing were not separately verified. We do not add this contract price to the two payment documents.",
+        "bron": "Contract text in Drive, dated 11 November 2023"
+      },
+      {
+        "kop": "€40,000 to Errezeta Publishing",
+        "tekst": "The transaction document reviewed shows a debit of €40,000 for two Platinum KDP packages as agreed.",
+        "bron": "ING transaction document, text and display checked"
+      },
+      {
+        "kop": "First notice of strike-off",
+        "tekst": "The Companies House filing history shows a first Gazette notice for compulsory strike-off. This is the notice, not the date the company was dissolved.",
+        "bron": "Companies House, filing history"
+      },
+      {
+        "kop": "Another €10,000 paid",
+        "tekst": "A second transaction document shows €10,000 to Errezeta Publishing with an invoice as reference. The two payments checked here total €50,000.",
+        "bron": "ING transaction document, text and display checked"
+      },
+      {
+        "kop": "Company dissolved",
+        "tekst": "Companies House registers the dissolution of Errezeta Publishing Ltd by compulsory strike-off. The dossier does not establish what this means for individual claims.",
+        "bron": "Companies House, overview and filing history"
+      },
+      {
+        "kop": "Complaint and recovery proposal",
+        "tekst": "The reporter asks for his money back or a concrete recovery plan. Errezeta replies with a proposal to transfer a KDP account the company calls profitable. The reporter writes that one good account could be a way to close the agreements.",
+        "bron": "Email exchange between the reporter and Errezeta, reviewed"
+      },
+      {
+        "kop": "Larger recovery plan",
+        "tekst": "Errezeta offers two accounts and also mentions IngramSpark and additional books. This is a company proposal; the profitability and value mentioned were not independently established.",
+        "bron": "Email from Errezeta with subject plan, reviewed"
+      },
+      {
+        "kop": "Merge request reported, confirmation requested",
+        "tekst": "Errezeta reports an account merge request to Amazon. On 28 April the reporter asks for the missing confirmation. On 29 April support replies that it is checking the linked mailbox. This exchange does not establish a completed transfer.",
+        "bron": "Email exchange Merge confirmation, 27 to 29 April 2024"
+      },
+      {
+        "kop": "Settlement text in Drive",
+        "tekst": "The Drive file with a text about release from further obligations was updated on this date. That is the file date, not proof the letter was sent or signed then. Its status and any execution remain open.",
+        "bron": "Drive file: content and modification date checked"
+      },
+      {
+        "kop": "Amount corrected to €50,000",
+        "tekst": "The reporter corrects the earlier amount of €60,000 to €50,000 and writes that he had previously used list prices. we are many now uses the two payments reviewed, not the higher old amount.",
+        "bron": "Correction email sent by the reporter, reviewed"
+      },
+      {
+        "kop": "Claim repeated",
+        "tekst": "The reporter sends an invoice and claim for €50,000, referring to the payments of 22 December 2023 and 1 February 2024. A claim filed is not a ruling on liability or proof of repayment.",
+        "bron": "Email sent by the reporter, reviewed"
+      }
+    ],
+    "bronverantwoording": "On 24 November 2026 the dossier and contract text from Drive, two transaction documents, the emails about the complaint and recovery in April 2024, the correction of 22 June 2026 and the claim of 29 August 2026 were reviewed. The transaction documents were also checked visually. Only safe summaries appear here; original bank details, private contact details, account details, signatures and internal legal advice are not published. No full bank reconciliation or KDP account audit was carried out. The settlement text was explicitly included as a possibly relevant counterpoint.",
+    "documenten": [
+      {
+        "naam": "Contract text of 11 November 2023",
+        "status": "Books, ad management and VIP services; no additional payment established on the basis of this text alone."
+      },
+      {
+        "naam": "Two ING transaction documents",
+        "status": "Payments of €40,000 on 22 December 2023 and €10,000 on 1 February 2024 to Errezeta Publishing; private details stay confidential."
+      },
+      {
+        "naam": "Correspondence from April 2024",
+        "status": "Both the reporter's complaint and Errezeta's recovery proposals and reported merge request were read."
+      },
+      {
+        "naam": "Settlement text in Drive",
+        "status": "Content and file date read; sending, signing and execution not established."
+      },
+      {
+        "naam": "Emails sent on 22 June and 29 August 2026",
+        "status": "Correction to €50,000 and later claim. Draft emails do not count as a sent complaint or proven procedure."
+      }
+    ],
+    "reactieBedrijf": "In April 2024 Errezeta responded on substance and offered a remedy. The company described a profitable replacement account, worked out a plan and reported a merge request. That is shown here next to the complaint. A current response to this dossier has not been requested yet. A later repayment, completed transfer or final settlement has not been established in the documents checked here.",
+    "volgendeStap": "We are investigating delivery and revenue per agreement, any transfer confirmation from Amazon and the status of the settlement text. It is also open which party made the recovery proposals after the dissolution and whether anything was repaid later. Experiences of other customers are collected through this call and checked separately.",
+    "leidingFunctie": "Director of Errezeta Publishing Ltd since 14 October 2021 according to Companies House. The same register also lists her as director of RZ Business Ltd (12811363), also dissolved, and states Italian nationality and Italy as country of residence.",
+    "bronnenUitleg": [
+      "Official register status: dissolved on 12 March 2024. This is a register fact, not a judgment on this complaint.",
+      "First notice for compulsory strike-off on 26 December 2023 and final registration on 12 March 2024.",
+      "Fabiana D’Amiano is listed as Director. we are many now publishes only name and business role, no private details.",
+      "Two director roles: Errezeta Publishing Ltd (13678815) and RZ Business Ltd (12811363), both dissolved. Correspondence address for both: a business address in Brentford, United Kingdom."
+    ],
+    "vragen": [
+      {
+        "vraag": "How do I report as an affected customer of Errezeta Publishing?",
+        "antwoord": "Use the field at the top to tell us what you agreed with Errezeta, what you paid, what was delivered and whether there was a solution. Leave out names, account details and other private details. Your report goes to the editors first. An experience that was resolved well in the end also helps the investigation. You can write in English, German or Italian."
+      },
+      {
+        "vraag": "What has been shown in this Errezeta Publishing dossier?",
+        "antwoord": "Two transaction documents reviewed show €50,000 in payments to Errezeta Publishing. Contract text, complaints, recovery proposals and a later claim were also read. Delivery and final settlement have not been fully established."
+      },
+      {
+        "vraag": "Why €50,000 and not €60,000?",
+        "antwoord": "The reporter corrected his earlier amount to €50,000 on 22 June 2026. The two transaction documents reviewed here show €40,000 and €10,000. we are many now does not adopt the higher old amount and does not add contract prices to the payments."
+      },
+      {
+        "vraag": "What did Errezeta itself reply?",
+        "antwoord": "In April 2024 Errezeta offered a remedy through replacement accounts and additional services. On 27 April the company reported a merge request to Amazon. That proposal and report are not on their own confirmation that everything agreed was delivered."
+      },
+      {
+        "vraag": "Has this case been finally settled?",
+        "antwoord": "That has not been established. Drive holds a settlement text mentioning receipt of a replacement account and release from further obligations. Whether that text was sent, signed and carried out is still being investigated."
+      },
+      {
+        "vraag": "Has fraud been legally established?",
+        "antwoord": "The reporter states he was misled. The payments, correspondence and register status shown here do not determine intent. we are many now has not checked any criminal judgment or final ruling on liability in this dossier."
+      },
+      {
+        "vraag": "Do you have an experience with Errezeta Publishing, or a question?",
+        "antwoord": "Share at the top what was agreed, what you paid, what was delivered and whether there was a solution. A positive experience or a correction is welcome too, and so is a question. Leave out names, account details and other private details. The editors check responses before anonymous, bundled publication."
+      }
+    ],
+    "zicht": [
+      "Only register data: Companies House, The Gazette, OpenCorporates, Endole and North Data. Status dissolved. Not a single customer experience or review in the results.",
+      "No page with reviews found.",
+      "Does not know the company and gives no assessment. Anyone asking an AI assistant gets no warning and no customer experiences."
+    ],
+    "zichtBron": [
+      "Google",
+      "Trustpilot",
+      "Claude (AI assistant, without searching the web)"
+    ],
+    "L": {
+      "eyebrow": "Call to other affected customers",
+      "volg": "Follow this call",
+      "waarom": "Why this call?",
+      "doelKop": "What happens to your report?",
+      "henkjan": "Want to discuss documents with the editors? <a href=\"/chat#henkjan\">Send Henkjan a message</a>.",
+      "reactiesKop": "Responses to this call",
+      "reactiesLeeg": "Your report goes to the editors first. After review we bundle responses here by topic, without names or private details.",
+      "aanleidingKop": "The case behind this call",
+      "eigenDossier": "Read the case, the documents and the timeline",
+      "stand": "Status of the case:",
+      "stukkenKop": "What the documents show",
+      "betalingenKop": "The payments in the bank documents",
+      "betalingenCaption": "Two transaction documents reviewed; original bank details stay confidential",
+      "datumKol": "Date and description",
+      "bedragKol": "Amount",
+      "totaal": "Together in these documents",
+      "betalingenNoot": "A proven payment is not damages established by a court. These two documents do not show whether anything was repaid later.",
+      "tijdlijnKop": "Timeline",
+      "nieuwste": "Newest first.",
+      "gecontroleerdKop": "What was checked?",
+      "besloten": "The confidential documents behind this dossier",
+      "geraadpleegd": "Consulted",
+      "bedrijfKop": "What does the company say?",
+      "leidingKop": "Business responsibility according to the register",
+      "leidingNoot": "A role in a register does not establish personal liability for this case.",
+      "openKop": "What is still open?",
+      "vragenKop": "Questions about this call",
+      "zichtKop": "What Google and AI assistants say now",
+      "zichtMeta": "Measured on {datum}. When this changes, you will see the change here.",
+      "zichtVeranderd": "Changed since {datum}",
+      "consent": "By sending you allow anonymous publication after review.",
+      "privacy": "Privacy",
+      "bijgewerkt": "Editors we are many now · updated",
+      "voorkant": "Home",
+      "dossiers": "Dossiers and calls",
+      "talen": "This dossier in",
+      "nl": "Nederlands",
+      "bedankt": "Thank you. Your report is with the editors and has not been published yet.",
+      "bezig": "Sending…",
+      "fout": "Sending failed. Try again or send Henkjan a message.",
+      "ookOp": "Also on we are many now",
+      "watIs": "we are many now bundles complaints about companies, so that hundreds or thousands of individual complaints get one voice.",
+      "wis": "Keep this link to delete your response later."
+    }
+  },
+  "de": {
+    "taalNaam": "Deutsch",
+    "titel": "Auch von Errezeta Publishing enttäuscht?",
+    "seoTitel": "Errezeta Publishing: Aufruf an Geschädigte | we are many now",
+    "kort": "Haben Sie an Errezeta Publishing gezahlt und Probleme mit der Lieferung oder Abwicklung gehabt? Erzählen Sie, was vereinbart war, was Sie gezahlt haben und was danach geschah.",
+    "status": "Zahlungsbelege geprüft · Lieferung und endgültige Abwicklung werden untersucht",
+    "oproep": {
+      "doel": "Wir suchen andere Kunden mit ähnlichen Erfahrungen. Die Redaktion vergleicht die Meldungen mit den vorhandenen Unterlagen, um herauszufinden, welche Probleme sich wiederholen. Auch wenn Ihr Fall am Ende gelöst wurde, möchten wir das gern hören.",
+      "aanleiding": "Dieser Aufruf geht auf den eigenen Fall der Redaktion zurück. Zwei geprüfte Zahlungsbelege zeigen zusammen 50.000 €. Errezeta machte Vorschläge zur Wiedergutmachung; Lieferung und eine mögliche endgültige Abwicklung werden noch untersucht. Wir möchten wissen, ob andere Kunden dasselbe erlebt haben.",
+      "placeholder": "Was ist bei Ihnen passiert?",
+      "knop": "Melden Sie Ihre Erfahrung mit Errezeta Publishing"
+    },
+    "feiten": [
+      "Der Melder ist Unternehmer. Er gibt an, beim Kauf von Dienstleistungen rund um Amazon Kindle Direct Publishing (KDP) getäuscht worden zu sein, und fordert 50.000 € zurück. Die Redaktion hat ein eigenes Interesse an diesem Dossier.",
+      "Die zwei geprüften ING-Transaktionsbelege nennen Errezeta Publishing als Empfänger: 40.000 € am 22. Dezember 2023 und 10.000 € am 1. Februar 2024. Zusammen sind das 50.000 €. Diese Belege zeigen Zahlungen, keinen gerichtlich festgestellten Schadenersatz.",
+      "In der Korrespondenz vom 10. April 2024 beschreibt der Melder ein gesperrtes Konto und ausbleibende Ergebnisse bei anderen Konten. Das war seine damalige Beschwerde; eine vollständige unabhängige Prüfung aller KDP-Konten, Lieferungen und Erträge wurde nicht durchgeführt.",
+      "Errezeta antwortet am 10. und 11. April 2024 mit Vorschlägen zur Wiedergutmachung: Übertragung eines nach Angaben des Unternehmens profitablen Kontos, ein erweiterter Plan mit zwei Konten, IngramSpark und zusätzlichen Büchern. Am 27. April meldet das Unternehmen, dass ein Zusammenführungsantrag an Amazon gesendet wurde. Am 28. April fragt der Melder nach der Bestätigung; am 29. April erklärt der Support, dies zu prüfen. Ein Antrag oder Angebot beweist noch keine erfolgte Übertragung.",
+      "In Drive liegt außerdem ein Text für eine endgültige Abwicklung, in dem der Melder den Erhalt eines Ersatzkontos bestätigen und Errezeta von weiteren Verpflichtungen freistellen würde. Ob dieser Text versendet, unterzeichnet und umgesetzt wurde und welche Rechtsfolgen er hat, ist hier nicht festgestellt. Auch diese mögliche Abwicklung ist Teil der Untersuchung.",
+      "Am 22. Juni 2026 korrigiert der Melder per E-Mail seinen früheren Betrag von 60.000 € auf 50.000 €. Am 29. August 2026 sendet er erneut eine Rückforderung über 50.000 €. Diese Forderung allein beweist nicht, dass der Betrag rechtlich geschuldet ist. Eine spätere Rückzahlung oder endgültige Abwicklung ist in den hier geprüften Unterlagen nicht festgestellt.",
+      "Companies House führt Errezeta Publishing Ltd, Nummer 13678815, als am 12. März 2024 aufgelöst. Name und geschäftliche Korrespondenzadresse stimmen mit dem Vertragstext in Drive überein. Die Auflösung ist eine Registertatsache; sie beweist für sich keinen Betrug und sagt nicht, wer etwaige Verpflichtungen tragen muss."
+    ],
+    "betalingen": [
+      "Zwei Platinum-KDP-Pakete laut Verwendungszweck",
+      "Rechnungszahlung an Errezeta Publishing"
+    ],
+    "tijdlijn": [
+      {
+        "kop": "Vertragstext für Bücher und Betreuung",
+        "tekst": "Ein Vertragstext in Drive beschreibt fünf Bücher, vier Monate Anzeigenbetreuung und VIP-Service für 10.000 €. Der Text wurde gelesen; Ausführung und Unterzeichnung wurden damit nicht gesondert geprüft. Diesen Vertragspreis rechnen wir nicht zu den zwei Zahlungsbelegen hinzu.",
+        "bron": "Vertragstext in Drive vom 11. November 2023"
+      },
+      {
+        "kop": "40.000 € an Errezeta Publishing",
+        "tekst": "Der geprüfte Transaktionsbeleg zeigt eine Abbuchung von 40.000 € für zwei Platinum-KDP-Pakete laut Vereinbarung.",
+        "bron": "ING-Transaktionsbeleg, Text und Darstellung geprüft"
+      },
+      {
+        "kop": "Erste Ankündigung der Löschung",
+        "tekst": "Die Einreichungshistorie bei Companies House zeigt eine erste Gazette-Bekanntmachung zur Zwangslöschung (compulsory strike-off). Das ist die Ankündigung, nicht das Datum der Auflösung.",
+        "bron": "Companies House, Einreichungshistorie"
+      },
+      {
+        "kop": "Weitere 10.000 € gezahlt",
+        "tekst": "Ein zweiter Transaktionsbeleg zeigt 10.000 € an Errezeta Publishing mit einer Rechnung als Verwendungszweck. Die zwei hier geprüften Zahlungen betragen zusammen 50.000 €.",
+        "bron": "ING-Transaktionsbeleg, Text und Darstellung geprüft"
+      },
+      {
+        "kop": "Gesellschaft aufgelöst",
+        "tekst": "Companies House registriert die Auflösung der Errezeta Publishing Ltd durch Zwangslöschung. Das Dossier stellt nicht fest, was dies für einzelne Ansprüche bedeutet.",
+        "bron": "Companies House, Übersicht und Einreichungshistorie"
+      },
+      {
+        "kop": "Beschwerde und Vorschlag zur Wiedergutmachung",
+        "tekst": "Der Melder verlangt sein Geld zurück oder einen konkreten Plan. Errezeta antwortet mit dem Vorschlag, ein nach eigenen Angaben profitables KDP-Konto zu übertragen. Der Melder schreibt, ein gutes Konto könne ein möglicher Abschluss der Vereinbarungen sein.",
+        "bron": "E-Mail-Wechsel zwischen dem Melder und Errezeta, geprüft"
+      },
+      {
+        "kop": "Erweiterter Plan",
+        "tekst": "Errezeta bietet zwei Konten an und nennt zusätzlich IngramSpark und weitere Bücher. Das ist ein Vorschlag des Unternehmens; die genannte Rentabilität und Bewertung wurden nicht unabhängig festgestellt.",
+        "bron": "E-Mail von Errezeta mit dem Betreff plan, geprüft"
+      },
+      {
+        "kop": "Zusammenführungsantrag gemeldet, Bestätigung angefragt",
+        "tekst": "Errezeta meldet einen Antrag auf Kontozusammenführung bei Amazon. Am 28. April fragt der Melder nach der fehlenden Bestätigung. Am 29. April antwortet der Support, er prüfe das verknüpfte Postfach. Dieser Austausch belegt keine erfolgte Übertragung.",
+        "bron": "E-Mail-Wechsel Merge confirmation, 27. bis 29. April 2024"
+      },
+      {
+        "kop": "Abwicklungstext in Drive",
+        "tekst": "Die Drive-Datei mit einem Text über die Freistellung von weiteren Verpflichtungen wurde an diesem Tag geändert. Das ist das Dateidatum, kein Beweis, dass der Brief damals versendet oder unterzeichnet wurde. Status und Umsetzung bleiben offen.",
+        "bron": "Drive-Datei: Inhalt und Änderungsdatum geprüft"
+      },
+      {
+        "kop": "Betrag auf 50.000 € korrigiert",
+        "tekst": "Der Melder korrigiert den zuvor genannten Betrag von 60.000 € auf 50.000 € und schreibt, er habe zuvor mit Listenpreisen gerechnet. we are many now verwendet die zwei geprüften Zahlungen, nicht den höheren alten Betrag.",
+        "bron": "Versendete Korrektur-E-Mail des Melders, geprüft"
+      },
+      {
+        "kop": "Rückforderung wiederholt",
+        "tekst": "Der Melder sendet eine Rechnung und Rückforderung über 50.000 € und verweist auf die Zahlungen vom 22. Dezember 2023 und 1. Februar 2024. Eine eingereichte Forderung ist kein Urteil über die Haftung und kein Beleg einer Rückzahlung.",
+        "bron": "Versendete E-Mail des Melders, geprüft"
+      }
+    ],
+    "bronverantwoording": "Am 24. November 2026 wurden das Dossier und der Vertragstext aus Drive, zwei Transaktionsbelege, die E-Mails zu Beschwerde und Wiedergutmachung im April 2024, die Korrektur vom 22. Juni 2026 und die Rückforderung vom 29. August 2026 gelesen. Die Transaktionsbelege wurden auch visuell geprüft. Hier stehen nur sichere Zusammenfassungen; Original-Bankdaten, private Kontaktdaten, Kontodaten, Unterschriften und interne Rechtsberatung werden nicht veröffentlicht. Es wurde keine vollständige Bankabstimmung und keine Prüfung der KDP-Konten durchgeführt. Der Abwicklungstext wurde ausdrücklich als möglicherweise relevantes Gegenstück einbezogen.",
+    "documenten": [
+      {
+        "naam": "Vertragstext vom 11. November 2023",
+        "status": "Bücher, Anzeigenbetreuung und VIP-Leistungen; allein aufgrund dieses Textes keine zusätzliche Zahlung festgestellt."
+      },
+      {
+        "naam": "Zwei ING-Transaktionsbelege",
+        "status": "Zahlungen von 40.000 € am 22. Dezember 2023 und 10.000 € am 1. Februar 2024 an Errezeta Publishing; private Daten bleiben vertraulich."
+      },
+      {
+        "naam": "Korrespondenz aus April 2024",
+        "status": "Sowohl die Beschwerde des Melders als auch die Vorschläge und der gemeldete Zusammenführungsantrag von Errezeta wurden gelesen."
+      },
+      {
+        "naam": "Abwicklungstext in Drive",
+        "status": "Inhalt und Dateidatum gelesen; Versand, Unterzeichnung und Umsetzung nicht festgestellt."
+      },
+      {
+        "naam": "Versendete E-Mails vom 22. Juni und 29. August 2026",
+        "status": "Korrektur auf 50.000 € und spätere Rückforderung. Entwürfe gelten nicht als versendete Beschwerde oder nachgewiesenes Verfahren."
+      }
+    ],
+    "reactieBedrijf": "Errezeta hat im April 2024 inhaltlich reagiert und Wiedergutmachung angeboten. Das Unternehmen beschrieb ein profitables Ersatzkonto, arbeitete einen Plan aus und meldete einen Zusammenführungsantrag. Das wird hier neben der Beschwerde gezeigt. Eine aktuelle Stellungnahme zu diesem Dossier wurde noch nicht angefragt. Eine spätere Rückzahlung, erfolgte Übertragung oder endgültige Abwicklung ist in den hier geprüften Unterlagen nicht festgestellt.",
+    "volgendeStap": "Wir untersuchen Lieferung und Erträge je Vereinbarung, eine etwaige Übertragungsbestätigung von Amazon und den Status des Abwicklungstextes. Offen ist auch, welche Partei die Vorschläge nach der Auflösung machte und ob später etwas zurückgezahlt wurde. Erfahrungen anderer Kunden werden über diesen Aufruf gesammelt und gesondert geprüft.",
+    "leidingFunctie": "Director der Errezeta Publishing Ltd seit dem 14. Oktober 2021 laut Companies House. Dasselbe Register führt sie auch als Director der RZ Business Ltd (12811363), ebenfalls aufgelöst, und nennt italienische Staatsangehörigkeit und Italien als Wohnsitzland.",
+    "bronnenUitleg": [
+      "Offizieller Registerstatus: aufgelöst am 12. März 2024. Das ist eine Registertatsache, kein Urteil über diese Beschwerde.",
+      "Erste Bekanntmachung zur Zwangslöschung am 26. Dezember 2023 und endgültige Eintragung am 12. März 2024.",
+      "Fabiana D’Amiano ist als Director eingetragen. we are many now veröffentlicht nur Name und geschäftliche Funktion, keine privaten Daten.",
+      "Zwei Funktionen als Director: Errezeta Publishing Ltd (13678815) und RZ Business Ltd (12811363), beide aufgelöst. Korrespondenzadresse beider: eine Geschäftsadresse in Brentford, Vereinigtes Königreich."
+    ],
+    "vragen": [
+      {
+        "vraag": "Wie melde ich mich als Geschädigter von Errezeta Publishing?",
+        "antwoord": "Schreiben Sie oben, was Sie mit Errezeta vereinbart hatten, was Sie gezahlt haben, was geliefert wurde und ob es eine Lösung gab. Lassen Sie Namen, Kontodaten und andere private Daten weg. Ihre Meldung geht zuerst an die Redaktion. Auch eine Erfahrung, die am Ende gut ausging, hilft bei der Untersuchung. Sie können auf Deutsch, Englisch oder Italienisch schreiben."
+      },
+      {
+        "vraag": "Was ist in diesem Dossier zu Errezeta Publishing belegt?",
+        "antwoord": "Zwei geprüfte Transaktionsbelege zeigen zusammen 50.000 € an Zahlungen an Errezeta Publishing. Außerdem wurden Vertragstext, Beschwerden, Vorschläge zur Wiedergutmachung und eine spätere Rückforderung gelesen. Lieferung und endgültige Abwicklung sind nicht vollständig festgestellt."
+      },
+      {
+        "vraag": "Warum 50.000 € und nicht 60.000 €?",
+        "antwoord": "Der Melder korrigierte seinen früheren Betrag am 22. Juni 2026 auf 50.000 €. Die zwei hier geprüften Transaktionsbelege zeigen 40.000 € und 10.000 €. we are many now übernimmt den höheren alten Betrag nicht und rechnet Vertragspreise nicht zusätzlich zu den Zahlungen."
+      },
+      {
+        "vraag": "Was hat Errezeta selbst geantwortet?",
+        "antwoord": "Im April 2024 bot Errezeta Wiedergutmachung über Ersatzkonten und zusätzliche Leistungen an. Am 27. April meldete das Unternehmen einen Zusammenführungsantrag bei Amazon. Dieser Vorschlag und diese Meldung bestätigen für sich nicht, dass alle vereinbarten Leistungen erbracht wurden."
+      },
+      {
+        "vraag": "Ist dieser Fall endgültig abgewickelt?",
+        "antwoord": "Das ist nicht festgestellt. In Drive liegt ein Abwicklungstext, der den Erhalt eines Ersatzkontos und die Freistellung von weiteren Verpflichtungen nennt. Ob dieser Text versendet, unterzeichnet und umgesetzt wurde, wird noch untersucht."
+      },
+      {
+        "vraag": "Ist Betrug rechtlich festgestellt?",
+        "antwoord": "Der Melder gibt an, getäuscht worden zu sein. Die hier gezeigten Zahlungen, die Korrespondenz und der Registerstatus bestimmen nicht, mit welcher Absicht gehandelt wurde. we are many now hat in diesem Dossier kein Strafurteil und keine endgültige Entscheidung über die Haftung geprüft."
+      },
+      {
+        "vraag": "Haben Sie auch eine Erfahrung mit Errezeta Publishing oder eine Frage?",
+        "antwoord": "Schreiben Sie oben, was vereinbart war, was Sie gezahlt haben, was geliefert wurde und ob es eine Lösung gab. Auch eine positive Erfahrung, eine Korrektur oder eine Frage ist willkommen. Lassen Sie Namen, Kontodaten und andere private Daten weg. Die Redaktion prüft Reaktionen vor einer anonymen, gebündelten Veröffentlichung."
+      }
+    ],
+    "zicht": [
+      "Nur Registerdaten: Companies House, The Gazette, OpenCorporates, Endole und North Data. Status aufgelöst. Keine einzige Kundenerfahrung oder Bewertung in den Ergebnissen.",
+      "Keine Seite mit Bewertungen gefunden.",
+      "Kennt das Unternehmen nicht und gibt keine Einschätzung. Wer einen KI-Assistenten fragt, bekommt also keine Warnung und keine Kundenerfahrungen."
+    ],
+    "zichtBron": [
+      "Google",
+      "Trustpilot",
+      "Claude (KI-Assistent, ohne Websuche)"
+    ],
+    "L": {
+      "eyebrow": "Aufruf an andere Geschädigte",
+      "volg": "Diesem Aufruf folgen",
+      "waarom": "Warum dieser Aufruf?",
+      "doelKop": "Was passiert mit Ihrer Meldung?",
+      "henkjan": "Möchten Sie Unterlagen mit der Redaktion besprechen? <a href=\"/chat#henkjan\">Schreiben Sie Henkjan eine Nachricht</a>.",
+      "reactiesKop": "Reaktionen auf diesen Aufruf",
+      "reactiesLeeg": "Ihre Meldung geht zuerst an die Redaktion. Nach der Prüfung bündeln wir Reaktionen hier nach Thema, ohne Namen oder private Daten.",
+      "aanleidingKop": "Der Fall hinter diesem Aufruf",
+      "eigenDossier": "Lesen Sie den Fall, die Unterlagen und den Zeitverlauf",
+      "stand": "Stand des Falls:",
+      "stukkenKop": "Was die Unterlagen zeigen",
+      "betalingenKop": "Die Zahlungen in den Bankbelegen",
+      "betalingenCaption": "Zwei geprüfte Transaktionsbelege; die Original-Bankdaten bleiben vertraulich",
+      "datumKol": "Datum und Beschreibung",
+      "bedragKol": "Betrag",
+      "totaal": "Zusammen in diesen Belegen",
+      "betalingenNoot": "Eine nachgewiesene Zahlung ist kein gerichtlich festgestellter Schadenersatz. Diese zwei Belege zeigen nicht, ob später etwas zurückgezahlt wurde.",
+      "tijdlijnKop": "Zeitverlauf",
+      "nieuwste": "Das Neueste steht oben.",
+      "gecontroleerdKop": "Was wurde geprüft?",
+      "besloten": "Die vertraulichen Unterlagen hinter diesem Dossier",
+      "geraadpleegd": "Abgerufen",
+      "bedrijfKop": "Was sagt das Unternehmen?",
+      "leidingKop": "Geschäftliche Verantwortung laut Register",
+      "leidingNoot": "Eine Funktion im Register ist keine Feststellung persönlicher Haftung in diesem Fall.",
+      "openKop": "Was ist noch offen?",
+      "vragenKop": "Fragen zu diesem Aufruf",
+      "zichtKop": "Was Google und KI-Assistenten jetzt sagen",
+      "zichtMeta": "Gemessen am {datum}. Ändert sich das, sehen Sie die Änderung hier.",
+      "zichtVeranderd": "Geändert seit {datum}",
+      "consent": "Mit dem Absenden erlauben Sie eine anonyme Veröffentlichung nach Prüfung.",
+      "privacy": "Datenschutz",
+      "bijgewerkt": "Redaktion we are many now · aktualisiert",
+      "voorkant": "Startseite",
+      "dossiers": "Dossiers und Aufrufe",
+      "talen": "Dieses Dossier auf",
+      "nl": "Nederlands",
+      "bedankt": "Danke. Ihre Meldung liegt bei der Redaktion und ist noch nicht veröffentlicht.",
+      "bezig": "Wird gesendet…",
+      "fout": "Senden fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie Henkjan.",
+      "ookOp": "Auch auf we are many now",
+      "watIs": "we are many now bündelt Beschwerden über Unternehmen, damit Hunderte oder Tausende einzelne Beschwerden eine Stimme bekommen.",
+      "wis": "Bewahren Sie diesen Link auf, um Ihre Reaktion später zu löschen."
+    }
+  },
+  "it": {
+    "taalNaam": "Italiano",
+    "titel": "Anche tu deluso da Errezeta Publishing?",
+    "seoTitel": "Errezeta Publishing: appello ai clienti danneggiati | we are many now",
+    "kort": "Hai pagato Errezeta Publishing e hai avuto problemi con la consegna o la chiusura del rapporto? Racconta cosa era stato concordato, quanto hai pagato e cosa è successo dopo.",
+    "status": "Documenti di pagamento esaminati · consegna e chiusura definitiva in corso di verifica",
+    "oproep": {
+      "doel": "Cerchiamo altri clienti con un'esperienza simile. La redazione confronta le segnalazioni con i documenti esistenti per capire quali problemi si ripetono. Se alla fine il tuo caso è stato risolto, vogliamo saperlo comunque.",
+      "aanleiding": "Questo appello nasce dal caso della redazione stessa. Due documenti di pagamento esaminati mostrano in totale 50.000 €. Errezeta ha fatto proposte di rimedio; la consegna e un'eventuale chiusura definitiva sono ancora in verifica. Vogliamo sapere se altri clienti hanno vissuto la stessa cosa.",
+      "placeholder": "Cosa ti è successo?",
+      "knop": "Segnala la tua esperienza con Errezeta Publishing"
+    },
+    "feiten": [
+      "Chi segnala è un imprenditore. Afferma di essere stato ingannato nell'acquisto di servizi legati ad Amazon Kindle Direct Publishing (KDP) e chiede la restituzione di 50.000 €. La redazione ha un proprio interesse in questo dossier.",
+      "I due documenti di transazione ING esaminati indicano Errezeta Publishing come beneficiario: 40.000 € il 22 dicembre 2023 e 10.000 € il 1º febbraio 2024. In totale 50.000 €. Questi documenti mostrano pagamenti, non un risarcimento stabilito da un giudice.",
+      "Nella corrispondenza del 10 aprile 2024 chi segnala descrive un account bloccato e risultati mancanti su altri account. Era il suo reclamo di allora; non è stato fatto un controllo indipendente completo di tutti gli account KDP, delle consegne e dei ricavi.",
+      "Errezeta risponde il 10 e l'11 aprile 2024 con proposte di rimedio: trasferimento di un account che secondo l'azienda era redditizio, un piano più ampio con due account, IngramSpark e libri aggiuntivi. Il 27 aprile l'azienda comunica di aver inviato ad Amazon una richiesta di unione degli account. Il 28 aprile chi segnala chiede dove sia la conferma; il 29 aprile l'assistenza dice di verificare. Una richiesta o un'offerta non prova un trasferimento avvenuto.",
+      "In Drive c'è anche un testo per una chiusura definitiva in cui chi segnala confermerebbe di aver ricevuto un account sostitutivo e libererebbe Errezeta da ulteriori obblighi. Se quel testo sia stato inviato, firmato ed eseguito, e quali effetti giuridici abbia, qui non è stato accertato. Anche questa possibile chiusura fa parte della verifica.",
+      "Il 22 giugno 2026 chi segnala corregge via e-mail l'importo indicato in precedenza da 60.000 € a 50.000 €. Il 29 agosto 2026 invia di nuovo una richiesta di restituzione di 50.000 €. Questa richiesta da sola non prova che l'importo sia giuridicamente dovuto. Un rimborso successivo o una chiusura definitiva non risultano dai documenti esaminati qui.",
+      "Companies House indica Errezeta Publishing Ltd, numero 13678815, come sciolta il 12 marzo 2024. Il nome e l'indirizzo commerciale per la corrispondenza corrispondono al testo del contratto in Drive. Lo scioglimento è un fatto di registro; da solo non prova una truffa e non dice chi debba sostenere eventuali obblighi."
+    ],
+    "betalingen": [
+      "Due pacchetti KDP Platinum, secondo la causale",
+      "Pagamento fattura a Errezeta Publishing"
+    ],
+    "tijdlijn": [
+      {
+        "kop": "Testo del contratto per libri e gestione",
+        "tekst": "Un testo di contratto in Drive descrive cinque libri, quattro mesi di gestione pubblicitaria e un servizio VIP per 10.000 €. Il testo è stato letto; esecuzione e firma non sono state verificate separatamente. Non sommiamo questo prezzo ai due documenti di pagamento.",
+        "bron": "Testo del contratto in Drive, datato 11 novembre 2023"
+      },
+      {
+        "kop": "40.000 € a Errezeta Publishing",
+        "tekst": "Il documento di transazione esaminato mostra un addebito di 40.000 € per due pacchetti KDP Platinum come concordato.",
+        "bron": "Documento di transazione ING, testo e visualizzazione verificati"
+      },
+      {
+        "kop": "Primo avviso di cancellazione",
+        "tekst": "Lo storico dei depositi di Companies House mostra un primo avviso nella Gazette per la cancellazione d'ufficio (compulsory strike-off). È l'avviso, non la data dello scioglimento.",
+        "bron": "Companies House, storico dei depositi"
+      },
+      {
+        "kop": "Pagati altri 10.000 €",
+        "tekst": "Un secondo documento di transazione mostra 10.000 € a Errezeta Publishing con una fattura come causale. I due pagamenti verificati qui ammontano in totale a 50.000 €.",
+        "bron": "Documento di transazione ING, testo e visualizzazione verificati"
+      },
+      {
+        "kop": "Società sciolta",
+        "tekst": "Companies House registra lo scioglimento di Errezeta Publishing Ltd per cancellazione d'ufficio. Il dossier non stabilisce cosa significhi per le singole pretese.",
+        "bron": "Companies House, panoramica e storico dei depositi"
+      },
+      {
+        "kop": "Reclamo e proposta di rimedio",
+        "tekst": "Chi segnala chiede la restituzione del denaro o un piano concreto. Errezeta risponde proponendo il trasferimento di un account KDP che l'azienda definisce redditizio. Chi segnala scrive che un buon account potrebbe chiudere gli accordi.",
+        "bron": "Scambio di e-mail tra chi segnala ed Errezeta, esaminato"
+      },
+      {
+        "kop": "Piano di rimedio più ampio",
+        "tekst": "Errezeta offre due account e cita anche IngramSpark e libri aggiuntivi. È una proposta dell'azienda; redditività e valore indicati non sono stati verificati in modo indipendente.",
+        "bron": "E-mail di Errezeta con oggetto plan, esaminata"
+      },
+      {
+        "kop": "Richiesta di unione segnalata, conferma chiesta",
+        "tekst": "Errezeta segnala ad Amazon una richiesta di unione degli account. Il 28 aprile chi segnala chiede la conferma mancante. Il 29 aprile l'assistenza risponde che sta controllando la casella collegata. Questo scambio non prova un trasferimento avvenuto.",
+        "bron": "Scambio di e-mail Merge confirmation, dal 27 al 29 aprile 2024"
+      },
+      {
+        "kop": "Testo di chiusura in Drive",
+        "tekst": "Il file in Drive con un testo sulla liberazione da ulteriori obblighi è stato modificato in questa data. È la data del file, non la prova che la lettera sia stata inviata o firmata allora. Lo stato e l'eventuale esecuzione restano aperti.",
+        "bron": "File in Drive: contenuto e data di modifica verificati"
+      },
+      {
+        "kop": "Importo corretto a 50.000 €",
+        "tekst": "Chi segnala corregge l'importo indicato in precedenza da 60.000 € a 50.000 € e scrive di aver usato prima i prezzi di listino. we are many now usa i due pagamenti esaminati, non il vecchio importo più alto.",
+        "bron": "E-mail di correzione inviata da chi segnala, esaminata"
+      },
+      {
+        "kop": "Richiesta di restituzione ripetuta",
+        "tekst": "Chi segnala invia una fattura e una richiesta di restituzione di 50.000 €, citando i pagamenti del 22 dicembre 2023 e del 1º febbraio 2024. Una richiesta presentata non è una decisione sulla responsabilità né la prova di un rimborso.",
+        "bron": "E-mail inviata da chi segnala, esaminata"
+      }
+    ],
+    "bronverantwoording": "Il 24 novembre 2026 sono stati letti il dossier e il testo del contratto in Drive, due documenti di transazione, le e-mail su reclamo e rimedio di aprile 2024, la correzione del 22 giugno 2026 e la richiesta di restituzione del 29 agosto 2026. I documenti di transazione sono stati verificati anche visivamente. Qui compaiono solo sintesi sicure; dati bancari originali, contatti privati, dati degli account, firme e consulenza legale interna non vengono pubblicati. Non è stata fatta una riconciliazione bancaria completa né una verifica degli account KDP. Il testo di chiusura è stato incluso espressamente come possibile elemento a favore dell'azienda.",
+    "documenten": [
+      {
+        "naam": "Testo del contratto dell'11 novembre 2023",
+        "status": "Libri, gestione pubblicitaria e servizi VIP; nessun pagamento aggiuntivo accertato sulla base di questo solo testo."
+      },
+      {
+        "naam": "Due documenti di transazione ING",
+        "status": "Pagamenti di 40.000 € il 22 dicembre 2023 e 10.000 € il 1º febbraio 2024 a Errezeta Publishing; i dati privati restano riservati."
+      },
+      {
+        "naam": "Corrispondenza di aprile 2024",
+        "status": "Letti sia il reclamo di chi segnala sia le proposte di rimedio e la richiesta di unione segnalata da Errezeta."
+      },
+      {
+        "naam": "Testo di chiusura in Drive",
+        "status": "Contenuto e data del file letti; invio, firma ed esecuzione non accertati."
+      },
+      {
+        "naam": "E-mail inviate il 22 giugno e il 29 agosto 2026",
+        "status": "Correzione a 50.000 € e successiva richiesta di restituzione. Le bozze non valgono come reclamo inviato o procedura provata."
+      }
+    ],
+    "reactieBedrijf": "Ad aprile 2024 Errezeta ha risposto nel merito e offerto un rimedio. L'azienda ha descritto un account sostitutivo redditizio, ha preparato un piano e ha segnalato una richiesta di unione. Lo mostriamo qui accanto al reclamo. Una risposta aggiornata a questo dossier non è ancora stata chiesta. Un rimborso successivo, un trasferimento avvenuto o una chiusura definitiva non risultano dai documenti esaminati qui.",
+    "volgendeStap": "Verifichiamo consegna e ricavi per ogni accordo, un'eventuale conferma di trasferimento da Amazon e lo stato del testo di chiusura. Resta aperto anche quale soggetto abbia fatto le proposte di rimedio dopo lo scioglimento e se in seguito sia stato rimborsato qualcosa. Le esperienze di altri clienti vengono raccolte con questo appello e verificate separatamente.",
+    "leidingFunctie": "Director di Errezeta Publishing Ltd dal 14 ottobre 2021 secondo Companies House. Lo stesso registro la indica anche come director di RZ Business Ltd (12811363), anch'essa sciolta, e riporta nazionalità italiana e Italia come paese di residenza.",
+    "bronnenUitleg": [
+      "Stato ufficiale nel registro: sciolta il 12 marzo 2024. È un fatto di registro, non un giudizio su questo reclamo.",
+      "Primo avviso di cancellazione d'ufficio il 26 dicembre 2023 e registrazione definitiva il 12 marzo 2024.",
+      "Fabiana D’Amiano è registrata come Director. we are many now pubblica solo nome e ruolo aziendale, nessun dato privato.",
+      "Due incarichi da director: Errezeta Publishing Ltd (13678815) e RZ Business Ltd (12811363), entrambe sciolte. Indirizzo per la corrispondenza di entrambe: un indirizzo commerciale a Brentford, Regno Unito."
+    ],
+    "vragen": [
+      {
+        "vraag": "Come segnalo di essere stato danneggiato da Errezeta Publishing?",
+        "antwoord": "Scrivi nel campo in alto cosa avevi concordato con Errezeta, quanto hai pagato, cosa è stato consegnato e se c'è stata una soluzione. Ometti nomi, dati degli account e altri dati privati. La tua segnalazione va prima alla redazione. Anche un'esperienza finita bene aiuta la verifica. Puoi scrivere in italiano, inglese o tedesco."
+      },
+      {
+        "vraag": "Cosa è dimostrato in questo dossier su Errezeta Publishing?",
+        "antwoord": "Due documenti di transazione esaminati mostrano in totale 50.000 € di pagamenti a Errezeta Publishing. Sono stati letti anche il testo del contratto, i reclami, le proposte di rimedio e una successiva richiesta di restituzione. Consegna e chiusura definitiva non sono del tutto accertate."
+      },
+      {
+        "vraag": "Perché 50.000 € e non 60.000 €?",
+        "antwoord": "Chi segnala ha corretto l'importo il 22 giugno 2026 a 50.000 €. I due documenti di transazione esaminati mostrano 40.000 € e 10.000 €. we are many now non riprende il vecchio importo più alto e non somma i prezzi dei contratti ai pagamenti."
+      },
+      {
+        "vraag": "Cosa ha risposto Errezeta?",
+        "antwoord": "Ad aprile 2024 Errezeta ha offerto un rimedio con account sostitutivi e servizi aggiuntivi. Il 27 aprile l'azienda ha segnalato una richiesta di unione ad Amazon. Quella proposta e quella segnalazione non confermano da sole che tutto quanto concordato sia stato consegnato."
+      },
+      {
+        "vraag": "Il caso è stato chiuso definitivamente?",
+        "antwoord": "Non è accertato. In Drive c'è un testo di chiusura che menziona la ricezione di un account sostitutivo e la liberazione da ulteriori obblighi. Se quel testo sia stato inviato, firmato ed eseguito è ancora in verifica."
+      },
+      {
+        "vraag": "La truffa è stata accertata giuridicamente?",
+        "antwoord": "Chi segnala afferma di essere stato ingannato. I pagamenti, la corrispondenza e lo stato nel registro mostrati qui non stabiliscono con quale intenzione si sia agito. we are many now non ha verificato in questo dossier alcuna sentenza penale né decisione definitiva sulla responsabilità."
+      },
+      {
+        "vraag": "Hai anche tu un'esperienza con Errezeta Publishing, o una domanda?",
+        "antwoord": "Scrivi in alto cosa era stato concordato, quanto hai pagato, cosa è stato consegnato e se c'è stata una soluzione. Sono benvenute anche un'esperienza positiva, una correzione o una domanda. Ometti nomi, dati degli account e altri dati privati. La redazione controlla le risposte prima di una pubblicazione anonima e raggruppata."
+      }
+    ],
+    "zicht": [
+      "Solo dati di registro: Companies House, The Gazette, OpenCorporates, Endole e North Data. Stato sciolta. Nessuna esperienza di clienti né recensione nei risultati.",
+      "Nessuna pagina con recensioni trovata.",
+      "Non conosce l'azienda e non dà alcuna valutazione. Chi chiede a un assistente IA non riceve quindi alcun avvertimento né esperienze di clienti."
+    ],
+    "zichtBron": [
+      "Google",
+      "Trustpilot",
+      "Claude (assistente IA, senza cercare sul web)"
+    ],
+    "L": {
+      "eyebrow": "Appello ad altri clienti danneggiati",
+      "volg": "Segui questo appello",
+      "waarom": "Perché questo appello?",
+      "doelKop": "Cosa succede alla tua segnalazione?",
+      "henkjan": "Vuoi discutere dei documenti con la redazione? <a href=\"/chat#henkjan\">Scrivi un messaggio a Henkjan</a>.",
+      "reactiesKop": "Risposte a questo appello",
+      "reactiesLeeg": "La tua segnalazione va prima alla redazione. Dopo la verifica raggruppiamo qui le risposte per argomento, senza nomi né dati privati.",
+      "aanleidingKop": "Il caso dietro questo appello",
+      "eigenDossier": "Leggi il caso, i documenti e la cronologia",
+      "stand": "Stato del caso:",
+      "stukkenKop": "Cosa mostrano i documenti",
+      "betalingenKop": "I pagamenti nei documenti bancari",
+      "betalingenCaption": "Due documenti di transazione esaminati; i dati bancari originali restano riservati",
+      "datumKol": "Data e descrizione",
+      "bedragKol": "Importo",
+      "totaal": "In totale in questi documenti",
+      "betalingenNoot": "Un pagamento dimostrato non è un risarcimento stabilito da un giudice. Questi due documenti non mostrano se in seguito sia stato rimborsato qualcosa.",
+      "tijdlijnKop": "Cronologia",
+      "nieuwste": "Il più recente è in alto.",
+      "gecontroleerdKop": "Cosa è stato verificato?",
+      "besloten": "I documenti riservati dietro questo dossier",
+      "geraadpleegd": "Consultato il",
+      "bedrijfKop": "Cosa dice l'azienda?",
+      "leidingKop": "Responsabilità aziendale secondo il registro",
+      "leidingNoot": "Un ruolo nel registro non stabilisce una responsabilità personale in questo caso.",
+      "openKop": "Cosa resta aperto?",
+      "vragenKop": "Domande su questo appello",
+      "zichtKop": "Cosa dicono ora Google e gli assistenti IA",
+      "zichtMeta": "Misurato il {datum}. Se cambia, vedrai qui il cambiamento.",
+      "zichtVeranderd": "Cambiato dal {datum}",
+      "consent": "Inviando consenti la pubblicazione anonima dopo la verifica.",
+      "privacy": "Privacy",
+      "bijgewerkt": "Redazione we are many now · aggiornato",
+      "voorkant": "Home",
+      "dossiers": "Dossier e appelli",
+      "talen": "Questo dossier in",
+      "nl": "Nederlands",
+      "bedankt": "Grazie. La tua segnalazione è presso la redazione e non è ancora pubblicata.",
+      "bezig": "Invio in corso…",
+      "fout": "Invio non riuscito. Riprova o scrivi a Henkjan.",
+      "ookOp": "Anche su we are many now",
+      "watIs": "we are many now raccoglie i reclami sulle aziende, così centinaia o migliaia di reclami singoli hanno una sola voce.",
+      "wis": "Conserva questo link per cancellare la tua risposta in seguito."
+    }
+  }
+}

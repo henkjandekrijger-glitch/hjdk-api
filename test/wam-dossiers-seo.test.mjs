@@ -7,7 +7,9 @@ import { WAM_VRAGEN, wamZichtManifest, wamLlms, WAM_INDEXNOW_URLS } from '../lib
 const grafiek = html => JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
 test('de voorkant opent met concrete dossiers en linkt de reviews als achtergrond', () => {
   const h = pagina('nl', true), b = pagina('bedrijven', true);
-  assert.equal((h.match(/class="dossier-teaser"/g) || []).length, 3);
+  assert.equal((h.match(/class="dossier-teaser"/g) || []).length, 4);
+  const v = h.slice(h.indexOf('class="dossier-teaser"'));
+  assert.ok(v.indexOf('/dossier/blendle') < v.indexOf('Vast aan een loterij?') && v.indexOf('Vast aan een loterij?') < v.indexOf('/dossier/anp') && v.indexOf('/dossier/anp') < v.indexOf('/dossier/errezeta'));
   assert.ok(h.indexOf('Blendle: abonnement gestopt') < h.indexOf('Praktische hulp en ervaringen'));
   assert.ok(h.indexOf('ANP: €391,29') < h.indexOf('Praktische hulp en ervaringen'));
   assert.ok(h.includes('href="/bedrijven"'));
@@ -93,4 +95,19 @@ test('modal volgt het dossier, teller alleen na echte-lezersbaken, mailstroom ui
   assert.ok(w.onderwerp === 'Je volgt het Blendle-dossier' && w.html.includes('/afmelden#' + 'b'.repeat(24) + '.' + 'a'.repeat(40)) && !/#5f6368|gray|grey/i.test(w.html));
   const { DOSSIERLIJST } = await import('../lib/wam-dossiers.js'), d = DOSSIERLIJST.find(x => x.id === 'blendle');
   assert.equal(VM.nieuwsteRegel(d).datum, '2026-11-25');
+});
+
+test('Errezeta staat er in het Engels, Duits en Italiaans met hreflang en een eigen formulier', () => {
+  for (const t of ['en', 'de', 'it']) {
+    const h = pagina(t + '/dossier/errezeta', true);
+    assert.ok(h.startsWith('<!doctype html><html lang="' + t + '">'), t);
+    assert.ok(h.includes('hreflang="nl" href="https://wearemany.now/dossier/errezeta"') && h.includes('hreflang="x-default"'), t);
+    assert.ok(h.includes('data-bedrijf="errezeta"') && h.includes('data-dank='), t);
+    assert.ok(!h.includes('data-modal="wmn"'), t + ' geen Nederlandse modal');
+    assert.ok(h.includes('id="zicht"'), t + ' zichtblok');
+    assert.ok(!/Siegfried|Köln|50678/.test(h), t + ' geen privéadres');
+  }
+  const nl = pagina('dossier/errezeta', true);
+  assert.ok(nl.includes('hreflang="it"') && nl.includes('taalregel') && nl.includes('Wat Google en AI-assistenten nu zeggen'));
+  assert.ok(nl.includes('RZ Business Ltd'));
 });
