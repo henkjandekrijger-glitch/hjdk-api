@@ -73,6 +73,12 @@ const MARKTPRIJS = ['oc_4173958164185089', 'oc_4174003731562498', 'oc_4174003714
 // 23 nov 2026 (Henkjan: "Zorg vor marges . Geen verlies meer accepteren ."): de sieraden en horloges van Orderchamp krijgen een margevloer (MARGE_VLOER) via de prijslijst.
 // 23 nov 2026 later (Henkjan: "Lokkers zijn niet geschrapt dat is een apart proces ." en "Ik wil zien of dat werkt met GMC ."): de lokkers blijven, met hun eigen stopregel; controle op op=lokkercheck.
 const MARGE_VLOER = { min: 10, pct: 0.2, merken: /glam|menthe|lanlivia|luxaa|lisberg/i };
+// 25 nov 2026 (Henkjan: "Zullen we alle fotos van alle relevante producten optimaliseren ... en meten of de geoptimaliseerde beter verkopen" en "Ja voer nu alles in een keer door"):
+// fototest voor Google Shopping, Lens en Discover. Per paar twee vergelijkbare producten (zelfde soort, vergelijkbaar aantal vertoningen); het testproduct krijgt
+// in Merchant Center een andere hoofdfoto (i = n-de foto van de productpagina: aan het oor, om de pols, in de kamer), 1200x1200, via de aanvullende bron
+// 'Kadoly fototest' (go.kadoly.com/api/shop/gmcbeeld.csv). Het controleproduct blijft zoals het is. Oordeel op op=fototest: vertoningen, kliks en klikratio
+// per groep in Google (gratis en betaald) sinds start, en verkopen. Na 14 dagen: wint test (kans > 90%), dan krijgen alle sieraden en woonproducten de foto-regel.
+const FOTOTEST = { start: '2026-11-26', paren: [] };
 const LOKKER = { uit: null, start: '2026-11-23', max: 60, dagen: 14, items: { oc_4174002164400133: { prijs: 15.95, verlies: 3.55 }, oc_4174003456851970: { prijs: 29.95, verlies: 3.23 }, oc_4174002211717121: { prijs: 13.95, verlies: 3.46 }, oc_4174003712770050: { prijs: 42.95, verlies: 3.25 }, oc_4174003731562498: { prijs: 44.95, verlies: 3.35 }, oc_4174003462750209: { prijs: 22.95, verlies: 3.81 } } }; // 25 nov (Henkjan: "Vermeldingen met lokkers kan zeker werken"): drie woonlokkers erbij die in Google Shopping al vertoond en aangeklikt werden (wollen plaid 699/13, wollen deken 218/5, ornament 120/3), zelfde stopregel van EUR 60 in totaal
 async function lokkerStand() { // betaalde bestellingen met een lokker sinds de start, verlies en extra verkoop, en of de stopregel geldt
   let stop = null; try { stop = await kv.get('hjdk:shop:lokker:stop'); } catch (e) {}
@@ -865,7 +871,7 @@ async function pixel(req, res, url) {
 
 // ---------------- advertentiebeeld ----------------
 // De productfoto zelf, op maat gesneden als JPEG (klein bestand, ook als de bron webp of png is). icon = 192x192, md = 720x360 (Mondiad), pa = 492x328 (PropellerAds), ca = 360x180 (Clickadu staat hooguit 362x182 toe).
-const MATEN = { icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'], mg: [984, 656, 'contain'], ig: [1080, 1350, 'contain'], sq: [1080, 1080, 'contain'] }; // mg: MGID 3:2, minstens 492x328; ig: Instagram/Facebook 4:5, sq: vierkant (16 nov, Kadoly sociale posts)
+const MATEN = { g: [1200, 1200, 'contain'], icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'], mg: [984, 656, 'contain'], ig: [1080, 1350, 'contain'], sq: [1080, 1080, 'contain'] }; // mg: MGID 3:2, minstens 492x328; ig: Instagram/Facebook 4:5, sq: vierkant (16 nov, Kadoly sociale posts)
 const OG_FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
 const hEl = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
 async function plaatje(req, res, url) {
@@ -1684,6 +1690,40 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(r); }
+    if (op === 'fototest' || op === 'gmcbeeld.csv' || op === 'beeldblad') {
+      const vg = async fn => { try { return await fn(); } catch (e) { return null; } };
+      if (op === 'gmcbeeld.csv') { // aanvullende bron: alleen de testproducten (en hun varianten) met een nieuwe hoofdfoto
+        let ids = []; await vg(async () => { const rr = await fetch('https://cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml', { signal: AbortSignal.timeout(25000) }); if (rr.ok) ids = [...(await rr.text()).matchAll(/<g:id>\s*(?:<!\[CDATA\[)?([^<\]]+?)(?:\]\]>)?\s*<\/g:id>/g)].map(m => m[1].trim()); });
+        const rij = ['id,image_link'];
+        for (const p of FOTOTEST.paren) { const fotoUrl = 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); }
+        res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(rij.join('\n') + '\n'); }
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      res.setHeader('cache-control', 'no-store');
+      if (op === 'beeldblad') { // contactvel om per product de beste foto te kiezen: i = 0..5
+        const pids = String(url.searchParams.get('p') || '').split(',').map(pidOk).filter(Boolean).slice(0, 12); const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i.t]));
+        res.setHeader('content-type', 'text/html; charset=utf-8');
+        return res.status(200).send('<!doctype html><meta charset="utf-8"><style>body{font:14px system-ui;margin:8px}div{display:flex;gap:6px;align-items:flex-start;margin:0 0 10px}img{width:150px;height:150px;object-fit:contain;border:1px solid #000}b{display:block;width:150px;font-size:12px}</style>' + pids.map(p => '<div><b>' + esc(p) + '<br>' + esc(String(naam[p] || '').slice(0, 50)) + '</b>' + [0, 1, 2, 3, 4, 5].map(i => '<figure style="margin:0"><img src="https://go.kadoly.com/api/shop/beeld/' + p + '/sq.jpg?i=' + i + '" loading="eager"><figcaption>i=' + i + '</figcaption></figure>').join('') + '</div>').join(''));
+      }
+      const { token } = await import('../lib/gsc.js'); const M = await import('../lib/merchant.js');
+      const tk = await token(String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || ''), 'https://www.googleapis.com/auth/content');
+      if (url.searchParams.get('zet') === '1') return res.status(200).json(await M.labelBron(tk, '5876502305', { uri: 'https://go.kadoly.com/api/shop/gmcbeeld.csv', naam: 'Kadoly fototest' }));
+      const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i]));
+      if (url.searchParams.get('kies') === '1') { // kandidaten: sieraden en wonen met de meeste vertoningen in Google (14 dagen)
+        const c = await kv.get('hjdk:shop:mcprest3').catch(() => null); const pr = {}; for (const [id, o] of Object.entries((c && c.p) || {})) { const b = String(id).split('-')[0]; const x = pr[b] || (pr[b] = { v: 0, k: 0 }); x.v += (o.gv || 0) + (o.bv || 0); x.k += (o.gk || 0) + (o.bk || 0); }
+        const soort = it => /sierad|ketting|oorbel|armband|ring\b|hoops|creol|bedel|horloge/i.test((it.c || '') + ' ' + it.t) ? 'sier' : /wonen|keuken/.test(it.c || '') ? 'wonen' : '';
+        const lijst = cat.items.filter(it => soort(it) && it.img).map(it => ({ id: it.id, soort: soort(it), titel: String(it.t).slice(0, 60), vert: (pr[it.id] || {}).v || 0, kliks: (pr[it.id] || {}).k || 0, marge: it.mg })).sort((a, b) => b.vert - a.vert);
+        return res.status(200).json({ ok: true, van: c && c.van, tot: c && c.tot, sier: lijst.filter(x => x.soort === 'sier').slice(0, 24), wonen: lijst.filter(x => x.soort === 'wonen').slice(0, 24) }); }
+      const dagen = Math.max(1, Math.min(60, Math.round((Date.now() - Date.parse(FOTOTEST.start + 'T00:00:00Z')) / 864e5)));
+      const pr = await vg(() => M.prestaties(tk, '5876502305', dagen)) || { producten: {} }; const som = {}; for (const [id, o] of Object.entries(pr.producten || {})) { const b = String(id).split('-')[0]; const x = som[b] || (som[b] = { v: 0, k: 0 }); x.v += (o.gv || 0) + (o.bv || 0); x.k += (o.gk || 0) + (o.bk || 0); }
+      let orders = []; await vg(async () => { const fe = await kv.get('hjdk:shop:lusfeed'); orders = ((fe && fe.orders) || []).filter(o => /paid|betaald/i.test(o.s) && Date.parse(o.at) >= Date.parse(FOTOTEST.start)); });
+      const verk = id => orders.filter(o => String(o.p).split('-')[0] === id).length;
+      const groep = { test: { v: 0, k: 0, verkocht: 0 }, controle: { v: 0, k: 0, verkocht: 0 } };
+      const paren = FOTOTEST.paren.map(p => { const T = som[p.t] || { v: 0, k: 0 }, C = som[p.c] || { v: 0, k: 0 }; groep.test.v += T.v; groep.test.k += T.k; groep.controle.v += C.v; groep.controle.k += C.k; groep.test.verkocht += verk(p.t); groep.controle.verkocht += verk(p.c);
+        return { soort: p.soort, test: { id: p.t, titel: String((naam[p.t] || {}).t || '').slice(0, 50), foto: 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i, ...T }, controle: { id: p.c, titel: String((naam[p.c] || {}).t || '').slice(0, 50), ...C } }; });
+      const ctr = g => g.v ? Math.round(10000 * g.k / g.v) / 100 + '%' : '-';
+      let kansBeter = null; if (groep.test.v && groep.controle.v) { let w = 0; const gam = a => { let x = 0; for (let i = 0; i < 12; i++) x += Math.random(); return a + Math.sqrt(a) * (x - 6); }; for (let i = 0; i < 4000; i++) { const t = Math.max(0, gam(1 + groep.test.k)) / Math.max(1, groep.test.v), c = Math.max(0, gam(1 + groep.controle.k)) / Math.max(1, groep.controle.v); if (t > c) w++; } kansBeter = Math.round(w / 40); }
+      return res.status(200).json({ ok: true, start: FOTOTEST.start, dagen, groep: { test: { ...groep.test, klikratio: ctr(groep.test) }, controle: { ...groep.controle, klikratio: ctr(groep.controle) } }, kansTestBeterProcent: kansBeter, oordeel: dagen < 14 ? 'nog leertijd tot ' + new Date(Date.parse(FOTOTEST.start) + 14 * 864e5).toISOString().slice(0, 10) : kansBeter >= 90 ? 'test wint: foto-regel naar alle sieraden en woonproducten' : kansBeter <= 10 ? 'controle wint: terug naar de leveranciersfoto' : 'nog geen duidelijk verschil', paren, merchantFout: pr.fout || null });
+    }
     if (op === 'koperprofiel') { // 25 nov (Henkjan: "Onderzoek wat voor iemand het kocht en vorige keer ook zodat we gerichter kunnen adverteren."): per betaalde bestelling wat we weten zonder persoonsgegevens: producten, bedrag, moment, toestel en app, terugkerend, bron. Beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(120, Number(url.searchParams.get('dagen')) || 90)); let orders = [], feedFout = null;
