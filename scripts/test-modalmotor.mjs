@@ -40,6 +40,7 @@ await ok('beslissing: controlegroep, arm, vorm zonder afdekken uit Google, facto
   assert.ok(ctrl > 10 && ctrl < 60, 'controlegroep rond 10%: ' + ctrl); assert.equal(over, 0, 'uit Google nooit midden of vol'); assert.ok(metFx > 100); assert.ok(mails0 > 0); assert.ok(ids.has('gids') && ids.has('chat'), [...ids].join(',')); });
 await ok('gids-arm toont passende gidsen, chat een voorbeeldvraag', async () => {
   assert.ok(besl && besl.arm.gidsen && besl.arm.gidsen.length >= 1, JSON.stringify(besl && besl.arm));
+  assert.ok(!('beeld' in (besl.arm.fx || {})), 'geen beeldfactor zonder beeld');
   const g = await MT.gidsenVoor('kadoly', { pa: '/kerstcadeau' }); assert.ok(g.every(x => !/\/kerstcadeau\?/.test(x.url)) && g.length === 3, JSON.stringify(g));
   const t = await M.modalBeslis(kv, { site: 'kadolygids', pid: 'f'.repeat(16), test: 'chat', origin: 'https://gids.kadoly.com', pa: '/serviesset' }); assert.ok(t.arm.keuzes && t.arm.keuzes[0].vraag, JSON.stringify(t.arm.keuzes)); });
 await ok('tellers per factor en leren (facLeer)', async () => {
