@@ -197,6 +197,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026, later: 25 november 2026 (later): bekeken-teller telt alleen echte lezers (baken op=dbekeken na 8 s zichtbaar plus scroll, tik of toets; wmn:mens, een keer per ip-hash per dag, zichtbaar vanaf 100). Lerende modal op dossierpagina's met eigen kop per dossier (data-volg, VOLG_KOP in lib/wam-dossiers.js, m.volg in de modalconfig). Mailmind-stroom wam-volg (lib/wam-volgmail.js): welkomstmail na aanmelden en een mail per nieuwe tijdlijnregel via op=dvolgmail&s=<dossier>, afmeldlink met record.mtok; LIVE uit tot Henkjans verstuur. Modalconfig opnieuw gezet via api/mm/modalbeheer.
+
 - 25 nov 2026, later: melding over Blendle ingediend en per e-mail bevestigd bij ACM ConsuWijzer (ACM geeft geen persoonlijk vervolgbericht). Blendle in de bestaande draad om een reactie gevraagd vóór 2 december, zonder link omdat Gmail in Chrome geen klikken toeliet. Beide teksten staan op /dossier/blendle onder Zie correspondentie (uitklapper, zonder namen en contactgegevens), met twee tijdlijnregels van 25 november. ECC en SignalConso niet ingediend: het ECC vraagt of de melder in Nederland woont en helpt niet bij Nederlandse bedrijven; het incassant-ID lijkt Nederlands. Henkjan wil in berichten niet dat we are many now als zijn initiatief wordt genoemd.
 
 - 25 nov 2026: tijdlijn nieuwste boven, oprichtersvermelding weg, echte bekeken-teller vanaf 100, deelknoppen met eigen teller en Clickmind-actie, Blendle bijgewerkt tot en met de verstreken termijn van 23 november, persfout Flanderijn hersteld, beschrijvingen en llms.txt gerepareerd. ACM/ECC/SignalConso: concepten in de chat, nog niet ingediend.

@@ -1,6 +1,9 @@
 {
   "site": "wmn",
-  "domeinen": ["wearemany.now", "www.wearemany.now"],
+  "domeinen": [
+    "wearemany.now",
+    "www.wearemany.now"
+  ],
   "uit": false,
   "modus": "leer",
   "taal": "nl",
@@ -10,16 +13,84 @@
   "minSec": 20,
   "controle": 0.2,
   "verken": 0.2,
-  "vormen": ["hoek", "onder"],
+  "vormen": [
+    "hoek",
+    "onder"
+  ],
   "remOp": "hoofd",
-  "nooit": ["/start", "/privacy", "/afmelden", "/reactie-wissen", "/chat"],
-  "waarde": {"hoofd": 20, "aanmelding": 100, "bevestigd": 0, "koop": 0},
-  "stijl": {"knop": "#111113", "knopTekst": "#ffffff", "kaart": "#ffffff", "tekst": "#111113", "zacht": "#111113", "rand": "#111113", "font": "Inter,system-ui,sans-serif", "ronding": 18},
+  "nooit": [
+    "/start",
+    "/privacy",
+    "/afmelden",
+    "/reactie-wissen",
+    "/chat"
+  ],
+  "waarde": {
+    "hoofd": 20,
+    "aanmelding": 100,
+    "bevestigd": 0,
+    "koop": 0
+  },
+  "stijl": {
+    "knop": "#111113",
+    "knopTekst": "#ffffff",
+    "kaart": "#ffffff",
+    "tekst": "#111113",
+    "zacht": "#111113",
+    "rand": "#111113",
+    "font": "Inter,system-ui,sans-serif",
+    "ronding": 18
+  },
   "instructies": "Alleen WAM-dossierupdates. Rustige zwart-wit vormgeving zoals Sealed Intent. Eén e-mailveld, geen valse haast, geen beloning, geen aantallen, geen juridische belofte. Nooit een ander project aanbieden. Geen grijze tekst. Doel blijft eigen. Een bevestigde opslag is geen bevestiging van het e-mailadres. De site stuurt nog geen automatische dossiermails.",
-  "notitie": "Henkjan 24 november 2026: lerende aanmeldmodal en knoppen, alles via Clickmind. Geen advertentiebudget geactiveerd. Werkelijke aanmeldingen en afmeldlinks beheert WAM; Clickmind ontvangt de uitkomst na opslag, zonder dubbele telling van een bestaand adres binnen dezelfde scope.",
+  "notitie": "Henkjan 24 november 2026: lerende aanmeldmodal en knoppen, alles via Clickmind. Geen advertentiebudget geactiveerd. Werkelijke aanmeldingen en afmeldlinks beheert WAM; Clickmind ontvangt de uitkomst na opslag, zonder dubbele telling van een bestaand adres binnen dezelfde scope. 25 nov 2026: op dossierpagina's krijgt de e-mailarm de volg-variant (data-volg op de cm.js-regel, kop per dossier uit lib/wam-dossiers.js VOLG_KOP); welkomst- en updatemail via lib/wam-volgmail.js, uit tot Henkjans verstuur.",
   "armen": [
-    {"id": "geen", "soort": "geen", "gewicht": 1, "wie": "alle"},
-    {"id": "volg", "soort": "email", "doel": "eigen", "lijst": "wmn", "gewicht": 1, "wie": "alle", "moment": "leer", "vorm": "leer", "titel": "Hoor het als er iets verandert.", "tekst": "Volg nieuwe dossiers en bevestigde ontwikkelingen bij WAM. Alleen als er nieuws is.", "knop": "Houd me op de hoogte", "veld": "Je e-mailadres", "klein": "Met aanmelden geef je toestemming voor dossierupdates. Afmelden kan altijd. Privacy: wearemany.now/privacy", "dank": "Je aanmelding is opgeslagen. Je persoonlijke afmeldlink staat onderaan de pagina.", "nee": "Verder lezen"},
-    {"id": "samen", "soort": "email", "doel": "eigen", "lijst": "wmn", "gewicht": 1, "wie": "alle", "moment": "leer", "vorm": "leer", "titel": "Blijf betrokken bij de dossiers.", "tekst": "Krijg bericht bij een nieuw dossier of een bevestigde ontwikkeling. Vrijblijvend, per e-mail.", "knop": "Ik blijf betrokken", "veld": "Je e-mailadres", "klein": "Met aanmelden geef je toestemming voor dossierupdates. Afmelden kan altijd. Privacy: wearemany.now/privacy", "dank": "Je aanmelding is opgeslagen. Je persoonlijke afmeldlink staat onderaan de pagina.", "nee": "Verder lezen"}
-  ]
+    {
+      "id": "geen",
+      "soort": "geen",
+      "gewicht": 1,
+      "wie": "alle"
+    },
+    {
+      "id": "volg",
+      "soort": "email",
+      "doel": "eigen",
+      "lijst": "wmn",
+      "gewicht": 1,
+      "wie": "alle",
+      "moment": "leer",
+      "vorm": "leer",
+      "titel": "Hoor het als er iets verandert.",
+      "tekst": "Volg nieuwe dossiers en bevestigde ontwikkelingen bij WAM. Alleen als er nieuws is.",
+      "knop": "Houd me op de hoogte",
+      "veld": "Je e-mailadres",
+      "klein": "Met aanmelden geef je toestemming voor dossierupdates. Afmelden kan altijd. Privacy: wearemany.now/privacy",
+      "dank": "Je aanmelding is opgeslagen. Je persoonlijke afmeldlink staat onderaan de pagina.",
+      "nee": "Verder lezen"
+    },
+    {
+      "id": "samen",
+      "soort": "email",
+      "doel": "eigen",
+      "lijst": "wmn",
+      "gewicht": 1,
+      "wie": "alle",
+      "moment": "leer",
+      "vorm": "leer",
+      "titel": "Blijf betrokken bij de dossiers.",
+      "tekst": "Krijg bericht bij een nieuw dossier of een bevestigde ontwikkeling. Vrijblijvend, per e-mail.",
+      "knop": "Ik blijf betrokken",
+      "veld": "Je e-mailadres",
+      "klein": "Met aanmelden geef je toestemming voor dossierupdates. Afmelden kan altijd. Privacy: wearemany.now/privacy",
+      "dank": "Je aanmelding is opgeslagen. Je persoonlijke afmeldlink staat onderaan de pagina.",
+      "nee": "Verder lezen"
+    }
+  ],
+  "volg": {
+    "nl": {
+      "titel": "{volg}.",
+      "tekst": "Je krijgt één mail bij een nieuwe stap in dit dossier: een reactie van het bedrijf, een melding bij een toezichthouder of een uitspraak. Verder niets.",
+      "knop": "Volg dit dossier",
+      "dank": "Je volgt dit dossier. Je persoonlijke afmeldlink staat onderaan de pagina."
+    }
+  }
 }
