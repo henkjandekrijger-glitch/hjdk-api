@@ -68,6 +68,7 @@ test('praktische antwoorden staan voor reviews, brondata en FAQ stemmen overeen'
   assert.ok(postnl.includes('alleen de afzender opdracht kan geven'));
   assert.ok(postnl.includes('Je kunt als ontvanger wel een bezorgklacht'));
   assert.ok(postnl.includes('<time datetime="2026-11-25">25 november 2026</time>'));
+  assert.ok(postnl.includes('Praktische hulp · <time datetime="2026-11-25">25 november 2026</time>'));
   assert.ok(postnl.indexOf('class="praktische-hulp"') < postnl.indexOf('<section id="bronnenbeeld">'));
   assert.ok(wamLlms().includes('/bedrijven/postnl#pakket-niet-ontvangen'));
   assert.ok(WAM_INDEXNOW_URLS.includes('https://wearemany.now/bedrijven/postnl'));
