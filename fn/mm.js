@@ -209,6 +209,23 @@ export default async function handler(req, res) {
       const r = await paginaUitkomst(kv, j).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }));
       return req.method === 'POST' && j.antwoord !== true ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
     }
+    if (op === 'bezoek') { // 25 nov 2026 (Henkjan: "Je hebt toch clickmind verdomme ?"): Clickmind volgt op kadoly.com ELKE bezoeker, niet alleen advertentieklikken.
+      // cm.js stuurt per nieuw bezoek de herkomst (verwijzer-host, landingspad, utm, klik-id's, laatste mmc) en bij het afrekenen de sha256 van het e-mailadres.
+      // Bewaard: cmv:<id> (eerste en laatste herkomst, 90 dagen) en cmv:em:<hash> -> id (90 dagen). Geen IP, geen adres, alleen hashes. lib/herkomst.js koppelt zo elke bestelling aan zijn bron.
+      cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end();
+      const ua = String(req.headers['user-agent'] || ''); if (/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(ua)) return res.status(204).end();
+      const j = req.method === 'POST' ? (leesJson(req.body) || {}) : {}; const v = String(j.v || '').toLowerCase(); if (!/^[0-9a-f]{16}$/.test(v)) return res.status(204).end();
+      const S = (x, n = 120) => String(x == null ? '' : x).replace(/[^\w .:/@+=~-]/g, '').slice(0, n);
+      try {
+        const k = 'cmv:' + v; let rec = null; try { rec = await kv.get(k); } catch (e) {} rec = rec && typeof rec === 'object' ? rec : { n: 0 };
+        if (j.t && typeof j.t === 'object') { const t = { at: new Date().toISOString() }; for (const f of ['r', 'l', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'gclid', 'gbraid', 'wbraid', 'srsltid', 'ttclid', 'fbclid', 'wacid', 'epik', 'msclkid', 'hj', 'mmc']) if (j.t[f]) t[f] = S(j.t[f], f === 'l' ? 80 : 120);
+          if (!rec.ft) rec.ft = t; if (t.r || Object.keys(t).some(x => x !== 'at' && x !== 'l' && x !== 'r') || !rec.lt) rec.lt = t; rec.n = (rec.n || 0) + 1; }
+        if (/^[0-9a-f]{8,24}$/.test(String(j.c || ''))) rec.c = String(j.c);
+        const em = String(j.em || '').toLowerCase(); if (/^[0-9a-f]{64}$/.test(em)) { rec.em = 1; await kv.set('cmv:em:' + em, v, { ex: 90 * 86400 }); }
+        rec.at = Date.now(); await kv.set(k, rec, { ex: 90 * 86400 });
+        try { await kv.raw(['HINCRBY', 'cmv:tel', new Date().toISOString().slice(0, 10) + '|' + (j.em ? 'em' : j.t ? 'bezoek' : 'anders'), '1']); await kv.raw(['EXPIRE', 'cmv:tel', String(60 * 86400)]); } catch (e) {}
+      } catch (e) {}
+      return res.status(204).end(); }
     if (op === 'uitkomst') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
@@ -645,6 +662,15 @@ async function wisselRoute(req, res, url, q) {
 const MMU_JS = String.raw`/* clickmind uitkomst */(function(){var W=window,D=document;try{if(W.__cmU)return;W.__cmU=1;/* 5 nov: twee cm.js-regels op een pagina (oude whichtobuy-regel en go.kadoly.com) tellen maar één keer */var c='',u=new URL(location.href).searchParams.get('mmc')||'';
 if(/^[0-9a-f]{8,24}$/.test(u)){c=u;try{sessionStorage.setItem('mmc',u);localStorage.setItem('mmc',u+'|'+Date.now())}catch(e){}}
 if(!c){try{c=sessionStorage.getItem('mmc')||'';if(!c){var l=(localStorage.getItem('mmc')||'').split('|');if(l[0]&&Date.now()-Number(l[1]||0)<864e5)c=l[0]}}catch(e){}}
+/* 25 nov (Henkjan: "Zorg dat je niets meer mist en altijd bron kan vinden"): op kadoly.com volgt Clickmind ELKE bezoeker. Eén id per toestel (cmv, 90 dagen), per nieuw bezoek de herkomst (verwijzer-host, landingspad, utm, klik-id's, laatste advertentieklik binnen 30 dagen) en bij het afrekenen alleen de sha256 van het e-mailadres. Zo vindt lib/herkomst.js de bron van elke bestelling, ook zonder kenmerk. */
+if(/(^|\.)kadoly\.com$/.test(location.hostname)){try{var VB='https://whichtobuy.best/api/mm/bezoek',vz=function(o){try{var x=JSON.stringify(o);if(!(navigator.sendBeacon&&navigator.sendBeacon(VB,x))&&W.fetch)fetch(VB,{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}},vid=localStorage.getItem('cmv')||'';
+if(!/^[0-9a-f]{16}$/.test(vid)){vid='';var ra=new Uint8Array(8);crypto.getRandomValues(ra);for(var ri=0;ri<8;ri++)vid+=('0'+ra[ri].toString(16)).slice(-2);localStorage.setItem('cmv',vid)}W.cmVid=vid;
+var lc=(localStorage.getItem('mmc')||'').split('|'),lcc=lc[0]&&Date.now()-Number(lc[1]||0)<30*864e5?lc[0]:'';
+var vr='';try{vr=D.referrer?new URL(D.referrer).hostname.toLowerCase():''}catch(e){}if(/(^|\.)kadoly\.com$/.test(vr))vr='';
+var vp=new URL(location.href).searchParams,vt={l:location.pathname.slice(0,80)},vx=0;if(vr)vt.r=vr;['utm_source','utm_medium','utm_campaign','utm_content','gclid','gbraid','wbraid','srsltid','ttclid','fbclid','wacid','epik','msclkid','hj','mmc'].forEach(function(k){var v=vp.get(k);if(v){vt[k]=v.slice(0,120);vx=1}});
+var vn=!sessionStorage.getItem('cmvs');sessionStorage.setItem('cmvs','1');if(vn||vr||vx)vz({v:vid,t:vt,c:lcc});
+if(/\/checkout/.test(location.pathname)&&W.crypto&&crypto.subtle&&W.TextEncoder){var vem='',vh=function(){var e=D.getElementById('f-guest-email')||D.querySelector('input[type=email]'),m=e&&String(e.value||'').trim().toLowerCase();if(!m||!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(m)||m===vem)return;vem=m;crypto.subtle.digest('SHA-256',new TextEncoder().encode(m)).then(function(b){var h='',a=new Uint8Array(b);for(var i=0;i<a.length;i++)h+=('0'+a[i].toString(16)).slice(-2);vz({v:vid,em:h,c:lcc})})['catch'](function(){})};D.addEventListener('change',vh,true);D.addEventListener('focusout',vh,true);W.addEventListener('pagehide',vh)}
+}catch(e){}}
 var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;gehad[soort]=1;var x=JSON.stringify({cid:c,soort:soort,waarde:waarde||0,bron:location.host});
 if(!(navigator.sendBeacon&&navigator.sendBeacon('https://whichtobuy.best/api/mm/uitkomst',x))&&W.fetch)fetch('https://whichtobuy.best/api/mm/uitkomst',{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}};
 W.mmKlikId=c;
