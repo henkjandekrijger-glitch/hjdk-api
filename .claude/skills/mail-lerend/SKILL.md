@@ -1,7 +1,26 @@
 ---
 name: mail-lerend
-description: Gebruik bij elke mail die namens Henkjan de deur uit gaat (koude mail, outreach, opvolging, antwoord, automatische mail). Lees eerst de regels van de POST-lus, toets het concept, meld het, en laat het dan pas aan Henkjan zien.
+description: Mailmind, Henkjans lerende mailmotor. Gebruik bij elke mail die namens Henkjan de deur uit gaat (koude mail, outreach, opvolging, antwoord, automatische mail, mail naar een lijst). Lees eerst de regels van de POST-lus, toets het concept, meld het, en laat het dan pas aan Henkjan zien. Mail in bulk loopt altijd via de Mailmind-motor.
 ---
+
+# Mailmind: elke mail lerend (POST-lus en motor)
+
+Mailmind is de naam van het geheel (Henkjan 25 nov 2026: "Ik wil een intelligente mail motor hebben die alle mail kan versturen en altijd lerend is . En dus ook adressen kan vinden die beste zullen scoren" ... "Ja mailmind"). Broertje van Clickmind: Clickmind leert van elke klik, Mailmind van elke mail. Twee delen:
+
+- **De regels (POST-lus, hieronder):** elke losse mail van een chat gaat eerst langs de regels, wordt gemeld en pas na Henkjans "verstuur" verstuurd.
+- **De motor (lib/mailmind.js):** alles wat in aantallen gaat (een lijst, werving, opvolging). Overzicht: https://hjdk-api-henq.vercel.app/api/post?op=mailmind, per stroom &s=<stroom>.
+
+## De Mailmind-motor
+
+- **Stroom** = één soort mail met één doel. Een nieuwe stroom is een module met varianten, de mail, de bak-indeling en wat er bij ja gebeurt (voorbeeld: lib/tkmc.js, stroom tk-mailchimp) en een regel in STROMEN in lib/mailmind.js. Bouw nooit een eigen verzendlus naast Mailmind.
+- **Adressen die het best scoren eerst:** elk adres zit in een bak (kenmerken van de stroom, bijv. score in de oude lijst, soort adres gratis/provider/eigen/algemeen, jaar). Thompson kiest elke ronde de bak met de beste kans op ja; stand per bak in de stand van de stroom (perBak).
+- **Altijd lerend:** twee varianten tegelijk; elke 20 verstuurde mails een leermoment (slechtste met 80% kans eruit, na 60 per variant de laagste toch). Nieuwe uitdager: &uitdager={"o":"onderwerp","t":"tekst met {aanhef} {ja} {stop}"}. Lees de antwoorden met &leer=1 en schrijf er een uitdager op als iets terugkomt.
+- **Kanaal:** persoonlijke mail en oude lijsten uit Henkjans Gmail via Zernio (antwoorden landen in zijn inbox). Resend alleen voor mail aan mensen die zelf ja zeiden (welkomst, nieuwsbrief): Resend verbiedt oude en gekochte lijsten.
+- **Poort per mailbox, voor alle stromen samen (ook de clubwerving):** hooguit 180 per dag en 12 per uur uit Henkjans Gmail, pauze na 6 bounces in een uur. Eén blokkeerlijst voor alle projecten: wie ergens stop zegt of bounct, krijgt nergens meer iets.
+- **Volume per stroom:** bounce onder 5% en stop onder 3%: +10 per 2 dagen tot het maximum; bounce 8% of stop 5%: halveren.
+- **Toestemming:** een oude lijst krijgt één vraag; alleen wie ja zegt komt op de lijst, niets doen = niet meer mailen.
+- **Live alleen op Henkjans "verstuur":** LIVE in de stroom én &s=<stroom>&zet=1&aan=1. Zonder dat wacht de ronde (stand: wachtOp).
+- **Rapport:** elke dag dat er iets gebeurde een regel in het werklog (dashboard, wie <project>-mailmind); de dagronde van het project meldt ja, stops, bounces en de winnende variant in de chat.
 
 # POST: elke mail eerst langs de lus
 

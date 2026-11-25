@@ -21,6 +21,7 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   const q = Object.assign({}, req.query || {}, typeof req.body === 'object' && req.body ? req.body : {}); const op = q.op || 'regels';
   try {
+    if (op === 'mailmind') return await (await import('../lib/mailmind.js')).mailmindOp({ req, res, q: new URL(req.url, 'http://x').searchParams }); // Mailmind: één lerende mailmotor voor alle projecten (25 nov 2026)
     if (op === 'tkmc') return await (await import('../lib/tkmc.js')).tkmcOp({ req, res, q: new URL(req.url, 'http://x').searchParams }); // oude Mailchimp-lijst van Tania opnieuw vragen (25 nov 2026), uit tot Henkjans woord
     if (op === 'o') return await beeldAntwoord(req, res, String(q.code || ''));
     if (op === 'meting') { const r = await meetStand(String(q.sleutel || '')); return res.status(r ? 200 : 404).json(r || { ok: false }); }
