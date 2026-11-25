@@ -147,6 +147,7 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 
 ## Logboek (nieuwste boven)
 
+- 25 nov 15:10 UTC chat-taniakross: Henkjan: "Zet de link naar de site erin met francis podcast in beeld en laat ze ook zien dat ze welkom zijn met welkom terug". Welkompagina in de stijl van de site op taniakross.media/blijf/<tok> (na ja: welkom terug, bevestiging, nieuwste aflevering live van de site, nu Francis Sling) en /blijf/<tok>?l=1 (kijklink: welkom terug, aflevering in beeld, ja-knop onder de video). Voorbeeld: /blijf/voorbeeld?l=1. De kijklink in de mail staat klaar maar uit tot Henkjans akkoord (kv tkmc:kijk, op=tkmc&kijk=1 op de beschermde host). Mailmind vervangt links nu langste eerst.
 - 25 nov 13:55 UTC chat-taniakross: Henkjan: "Verstuur". Mailmind-stroom tk-mailchimp aan (LIVE en aan=1); eerste mails in de uurronde van :23, 40 per dag, hooguit 7 per uur, 9 tot 21 uur NL. Elke link in de mail is nu een Clickmind-meetlink (taniakross.media/m/<code>, rewrite in simpele-site naar keuzehulp.best).
 
 - 25 nov 13:40 UTC chat-taniakross: op Henkjans "Ja ga naar 40 per dag . en verhoog dus": bod 12187841 van $0,01 (stond per ongeluk zo laag) naar $0,10, verkenner 12168319 van $0,03 naar $0,05. Uitzetten van de oude 12183102 werd door de veiligheidscontrole geweigerd; hij loopt nog. Dagronde nu als cloudtaak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3 (08:17 Curaçao), los van computer en account. Doel en planning op het dashboard (project tk: 40 adressen per dag, op weg naar 1.000); Mailmind zet de ledenstand elk uur zelf op het dashboard.
