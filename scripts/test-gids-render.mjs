@@ -12,6 +12,8 @@ import * as redactie from '../lib/kadoly-redactie.js';
 import * as gidsen from '../lib/gidsen-kadoly.js';
 import * as tvreken from '../lib/tvrekenhulp.js';
 import * as openaifeed from '../lib/openaifeed.js';
+import * as ontdekking from '../lib/gids-ontdekking.js';
+import * as binnenkort from '../lib/binnenkort.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
 for(let k=0;k<140;k++)catalog.push({id:'oc_extra'+k,t:(k%2?'Mok':'Dinerbord')+' test '+k,vr:true,p:k+1,vk:3,c:'keuken',s:'servies',lt:3,l:Date.now()});
@@ -28,6 +30,8 @@ const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
 const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=>''},'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
 stubs['../lib/tvrekenhulp.js']=tvreken;
+stubs['../lib/gids-ontdekking.js']=ontdekking;
+stubs['../lib/binnenkort.js']=binnenkort;
 // Groepscadeaus horen niet bij deze SSR-proef; geen opslag, mail of betaalverkeer.
 stubs['../lib/groepscadeau.js']={gcLijst:()=>[],gcLlms:()=>'',LIVE:new Set(),gcOp:()=>{throw Error('Geen groepscadeau-acties in gidstest');}};
 const imports=[];
@@ -37,6 +41,16 @@ for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.i
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
+// Alleen de bestaande beschermde inspectie geeft de volledige HTML-linkbewijzen terug.
+{ const oudFetch=context.fetch;
+  context.fetch=async()=>({status:200,headers:new Map(),text:async()=>'<a href="https://gids.kadoly.com/tv-meubel-breedte-berekenen">Bereken</a>'});
+  const p=(await render('op=pagina&u=%2Fproduct%2Fdp_1022','hjdk-api-henq.vercel.app')).body;
+  assert.equal(p.ontdekking.gidsLinks[0].volgbaar,true);
+  assert.equal(p.ontdekking.gidsLinks[0].url,'https://gids.kadoly.com/tv-meubel-breedte-berekenen');
+  context.fetch=()=>{throw Error('Openbare inspectie mag niets ophalen');};
+  await render('op=pagina&u=%2Fproduct%2Fdp_1022','gids.kadoly.com',{status:404});
+  context.fetch=oudFetch;
+}
 // De winkel gebruikt de eerste twee links; de rekenhulp moet dus vooraan staan.
 { const links=(await render('op=pidgids')).body;
   for(const {pid} of tvreken.TV_MEUBELS){assert.equal(links.perProduct[pid][0].url,'https://gids.kadoly.com'+tvreken.TV_PAD);assert.ok(links.perProduct[pid].some(x=>x.slug==='dressoir'));}

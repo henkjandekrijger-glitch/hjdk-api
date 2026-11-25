@@ -1,0 +1,97 @@
+{
+  "datum": "2026-11-25",
+  "gemeten_op": "2026-11-25T09:44:38Z",
+  "organisch": {
+    "periode": "Kanaal- en posttotalen cumulatief sinds 16 november; verschillen sinds ochtendsnapshot 24 november.",
+    "facebook": {
+      "kliks": 48,
+      "echt": 18,
+      "acties": 2,
+      "mandjes": 3,
+      "verschil_ochtend24": {
+        "kliks": 9,
+        "echt": 5,
+        "mandjes": 1
+      },
+      "gisteren_utc": {
+        "kliks": 9,
+        "voorvertoningen": 31
+      }
+    },
+    "pinterest": {
+      "kliks": 3
+    },
+    "gids": {
+      "doorsturen": 551,
+      "echt": 1,
+      "acties": 1,
+      "verschil_ochtend24": {
+        "doorsturen": 277,
+        "echt": 0
+      }
+    },
+    "signaal": {
+      "post": "v-n261124b",
+      "onderwerp": "Green-goose sokken",
+      "kliks": 4,
+      "echt": 4,
+      "mandjes": 1,
+      "oordeel": "Eén video, te weinig voor opschaling."
+    }
+  },
+  "koop": {
+    "laatste_betaalde": {
+      "tijd_utc": "2026-11-25T07:30:52Z",
+      "bedrag_eur": 69.95,
+      "stuks": 2,
+      "bron": "onbekend"
+    },
+    "periode_14_dagen": {
+      "bestellingen": 4,
+      "perBron": {
+        "onbekend": {
+          "bestellingen": 2,
+          "omzet": 123.09
+        },
+        "tiktok": {
+          "bestellingen": 2,
+          "omzet": 91.36
+        }
+      }
+    },
+    "organische_koop": "Geen bevestigde organische bron; nieuw Clickmind-bezoekkoppelen staat sinds 25 nov aan. Geen historische herkomst verzinnen."
+  },
+  "vindbaarheid": {
+    "gsc_28_dagen": {
+      "vertoningen": 11,
+      "kliks": 0
+    },
+    "indexinspectie": {
+      "datum": "2026-11-25",
+      "bekeken": 69,
+      "geindexeerd": 6
+    },
+    "sitemap_actueel": 73,
+    "tv_gebruik24": {
+      "directe_weergaven": 4,
+      "t15": 1,
+      "t60": 1,
+      "beperking": "Technische events, kunnen eigen controles bevatten; geen bewezen organische bezoekers."
+    }
+  },
+  "bestaande_rondes": {
+    "social": "Drie Pinterestpins en twee Instagramreels gepland, niet herhaald.",
+    "facebook": "Socialronde meldt verlopen koppeling, Meta error190 sinds24nov23:34UTC; niet onafhankelijk via Zernio-connector te controleren.",
+    "gids_redactie": "Prioriteit ontdekking bestaande pagina’s, nieuwe lootjestool wacht op akkoord."
+  },
+  "grootste_lek": {
+    "probleem": "Winkel-gidsverbinding nog niet bewezen; robots mist gids-sitemap. Ruwe gidsdoorsturen leveren geen aantoonbare extra echte bezoekers.",
+    "gedaan": "Bestaande beschermde op=pagina uitgebreid met volledige gidslinks uit server-HTML, rel/volgbaar en robots-sitemapsignaal. Scripts/commentaar tellen niet als links. Geen nieuwe openbare route.",
+    "controle": "Na uitrol productdp_1022, plaidproduct, homepage en robots uitlezen; middagopvolging en indexbesluit28nov."
+  },
+  "beperkingen": [
+    "Weekvergelijking, opt-ins per kanaal en terugkeer niet beschikbaar.",
+    "Geen geld of betaalde scans.",
+    "Pushmeldingen niet bevestigd."
+  ]
+}

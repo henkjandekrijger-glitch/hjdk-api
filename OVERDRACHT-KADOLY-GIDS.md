@@ -10,6 +10,7 @@ Regie (sinds 23 nov 2026): het groei-account van Kadoly is regisseur van alle or
 - Inspiratie van Henkjan: vertrouwen groeit als de klant ziet hoe de winkel handelt wanneer zijn belang en het verkoopbelang uiteenlopen (geschiktheidscheck die kan afraden, zichtbare selectie, eerlijk over hoe we verdienen, retourroute vooraf, cadeauzekerheid).
 
 ## Hoe het werkt
+- Beschermde winkelcontrole (groei-account, 25 november 2026): op=pagina op de vercel.app-host geeft naast tekst nu ontdekking.gidsLinks (url, tekst, rel, volgbaar) en gidsSitemapInRobots. Dit komt uit de volledige server-HTML, dus ook links buiten de eerste 6.000 teksttekens. Script-, style-, template- en commentaarinhoud uitgesloten. Geen bewijs van browserzichtbaarheid, echte Googlebot-IP-toegang of indexering. Bestaande winkelopdracht TAAK G ermee controleren, geen extra publicatieronde.
 - Code: fn/gids.js (pagina's, sitemap, robots, llms.txt, teller, op=feiten voor productfeiten via de beschermde vercel.app-host), gidsen in lib/gidsen-kadoly.js (met de hand geschreven op echte productfeiten), kliks via /naar/<pid> naar fn/shop.js op=gidsuit en dan Clickmind direct() naar kadoly.com met hj-code (net x, utm_source kadoly-gids, utm_medium gids, utm_campaign <gids>).
 - Routes in vercel.json voor host gids.kadoly.com. Testen kan al op https://hjdk-api-henq.vercel.app/api/gids?slug=<gids>.
 - Tellers: hash gk:d:<dag> (60 dagen): <gids>|v (weergave), <gids>|uit-<blok> (klik naar de shop), <gids>|check-<uitkomst>. Lezen: /api/gids?op=stand&dagen=7.

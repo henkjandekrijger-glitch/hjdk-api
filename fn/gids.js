@@ -7,6 +7,7 @@
 // Kliks naar de shop gaan via /naar/<pid> (fn/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
 import { catalogusInhoud, normaliseerGidsProduct } from '../lib/gids-catalogus.js';
 import { gidsIndexPlan } from '../lib/gids-indexnow.js';
+import { gidsOntdekking } from '../lib/gids-ontdekking.js';
 import * as GC from '../lib/groepscadeau.js'; // groepscadeaus per moment (21 nov 2026), live pagina's op /<slug>, groepslinks op /samen/<id>
 import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
@@ -773,7 +774,7 @@ export default async function handler(req, res) {
       const formulieren = [...html.matchAll(/<form\b[^>]*>/gi)].map(m => m[0].slice(0, 200));
       const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
       const van = N(q.get('van'));
-      return res.status(200).json({ ok: true, hops, status: r && r.status, bytes: html.length, formulieren, velden, scripts, tekst: tekst.slice(van, van + 6000) }); }
+      return res.status(200).json({ ok: true, hops, status: r && r.status, bytes: html.length, formulieren, velden, scripts, ontdekking: gidsOntdekking(html, u, { contentType: r && r.headers.get('content-type') || '' }), tekst: tekst.slice(van, van + 6000) }); }
     if (op === 'shopapi') { // hoeveel producten geeft de shop-API echt (alleen lezen, beschermde host)? 31 okt, Henkjan: "Er zijn er veel meer producten"
       if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const KOPS = { 'user-agent': 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Mobile Safari/537.36', accept: 'application/json', 'accept-language': 'nl-NL,nl;q=0.9' };
