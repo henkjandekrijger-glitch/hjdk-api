@@ -97,5 +97,40 @@
       {"vraag": "Is een klacht over Flanderijn hetzelfde als bezwaar tegen het bedrag?", "antwoord": "Nee. Flanderijn beschrijft bezwaar tegen de vordering en een klacht over de behandeling als verschillende routes. Maak duidelijk welke rekening of welk bedrag je betwist en welke klacht je eventueel daarnaast hebt."},
       {"vraag": "Begint de veertiendagentermijn op de datum van de brief?", "antwoord": "Voor de consumentenaanmaning begint de volledige termijn op de dag na ontvangst. De formulering en de ontvangst zijn dus van belang; alleen de dagtekening geeft niet het hele antwoord. Voor gerechtelijke documenten gelden andere procedures en termijnen."}
     ]
+  },
+  "postnl": {
+    "kop": "PostNL-pakket niet ontvangen?",
+    "seoTitel": "PostNL-pakket niet ontvangen: klacht en onderzoek | WAM",
+    "titel": "Laat de juiste partij het onderzoek starten",
+    "anker": "pakket-niet-ontvangen",
+    "bijgewerkt": "2026-11-25",
+    "kort": "Ben je ontvanger? Vraag de afzender om het pakket bij PostNL te laten onderzoeken.",
+    "antwoord": "Ben je ontvanger, vraag dan de afzender om het onderzoek bij PostNL te starten. Volgens PostNL kan alleen de afzender opdracht geven om een pakket op te sporen en krijgt die ook de onderzoeksinformatie. Je kunt als ontvanger wel een bezorgklacht of melding aan PostNL doorgeven. Kocht je bij een webwinkel, neem dan contact op met die verkoper als afzender.",
+    "actie": {"naam": "PostNL: pakket niet ontvangen", "url": "https://www.postnl.nl/klantenservice/niets-ontvangen/pakket-post-met-track-trace/"},
+    "stappenTitel": "Dit doe je per situatie",
+    "stappen": [
+      "Controleer track & trace en vraag bij de buren. Staat het pakket vandaag op bezorgd, dan kun je via track & trace navraag bij de bezorger doen.",
+      "Ben je ontvanger en is er na twee bezorgdagen nog geen pakket of nieuwe scan? Neem contact op met de afzender. Die kan bij PostNL een onderzoek starten.",
+      "Gaat het om een webwinkelbestelling? Stuur de verkoper je bestelnummer, track & trace-code en wat je al hebt gecontroleerd. Zet geen adres of andere privégegevens in een openbare reactie.",
+      "Ben je zelf de afzender? Start het onderzoek bij PostNL en bewaar het zaaknummer en de reactie. Een losse bezorgklacht is niet hetzelfde als een onderzoek naar de zending."
+    ],
+    "routes": [
+      {"situatie": "Ontvanger, vandaag als bezorgd gescand", "route": "Doe navraag bij de bezorger via track & trace", "url": "https://www.postnl.nl/klantenservice/niets-ontvangen/vragen-bezorgmoment/"},
+      {"situatie": "Ontvanger, na twee bezorgdagen nog niets", "route": "Vraag de afzender om een onderzoek te starten", "url": "https://www.postnl.nl/klantenservice/niets-ontvangen/pakket-post-met-track-trace/"},
+      {"situatie": "Afzender", "route": "Start het onderzoek bij PostNL", "url": "https://www.postnl.nl/klantenservice/niets-ontvangen/pakket-post-met-track-trace/"},
+      {"situatie": "Klacht over de bezorging", "route": "Meld de klacht via PostNL", "url": "https://www.postnl.nl/klantenservice/klacht-indienen/"}
+    ],
+    "noot": "Een klacht over de bezorging en een onderzoek naar een zoekgeraakte zending zijn verschillende routes. WAM kan zonder de zendinggegevens en reacties niet vaststellen waar een pakket is gebleven.",
+    "bronnen": [
+      {"naam": "PostNL: pakket met track & trace niet bezorgd", "url": "https://www.postnl.nl/klantenservice/niets-ontvangen/pakket-post-met-track-trace/", "uitleg": "PostNL maakt onderscheid tussen ontvanger en afzender. Na twee bezorgdagen vraagt de ontvanger de afzender om een onderzoek te starten."},
+      {"naam": "PostNL: klacht indienen", "url": "https://www.postnl.nl/klantenservice/klacht-indienen/", "uitleg": "De klachtenroute loopt via de digitale assistent of een medewerker en staat los van wie het zendingsonderzoek kan starten."},
+      {"naam": "Rijksoverheid: klacht over postbezorging", "url": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/postbezorging/hoe-kan-ik-een-klacht-indienen-over-postbezorging", "uitleg": "Een ontvanger neemt contact op met de persoon of het bedrijf dat de post verstuurde; de verzender kan bij het postbedrijf klagen en een schadevraag oppakken."}
+    ],
+    "vragen": [
+      {"vraag": "Mijn PostNL-pakket is niet aangekomen. Wie moet het onderzoek starten?", "antwoord": "De afzender. PostNL zegt dat alleen de afzender opdracht kan geven om het pakket op te sporen. Ben je ontvanger, vraag dan de webwinkel, het bedrijf of de persoon die het verstuurde om het onderzoek te starten."},
+      {"vraag": "Kan ik als ontvanger zelf een klacht indienen bij PostNL?", "antwoord": "Je kunt een bezorgklacht of melding doorgeven via de PostNL-klachtenroute. Het onderzoek naar de zending en de informatie daarover lopen volgens PostNL via de afzender. Zet daarom beide stappen niet op één hoop."},
+      {"vraag": "Een webwinkelpakket is niet bezorgd. Moet ik bij PostNL of de verkoper zijn?", "antwoord": "Neem contact op met de verkoper als afzender en vraag die het PostNL-onderzoek te starten. Je kunt daarnaast een bezorgervaring aan PostNL melden, maar dat vervangt het contact met de verkoper niet."}
+    ]
   }
 }
+

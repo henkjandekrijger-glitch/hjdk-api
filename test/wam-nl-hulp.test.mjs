@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { incassoBereken, incassoPagina, INCASSO_JS, INCASSO_VRAGEN } from '../lib/wam-incasso.js';
 import { PRAKTISCHE_HULP } from '../lib/wam-hulp.js';
-import { pagina, PADEN } from '../lib/wam-dossier.js';
+import { pagina, PADEN, sitemapLastmod } from '../lib/wam-dossier.js';
 import { wamLlms, WAM_INDEXNOW_URLS } from '../lib/wam-vindbaarheid.js';
 
 const schema = html => JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
@@ -54,7 +54,7 @@ test('serverformulier werkt zonder JavaScript, bewaakt situatie en ontsmet invoe
   assert.ok(h.includes('exclusief eventuele btw') && h.includes('zes maanden') && h.includes('1 oktober 2024'));
 });
 test('praktische antwoorden staan voor reviews, brondata en FAQ stemmen overeen', () => {
-  for (const id of ['postcodeloterij','ns','flanderijn','videoland']) {
+  for (const id of ['postcodeloterij','ns','flanderijn','videoland','postnl']) {
     const g = PRAKTISCHE_HULP[id], h = pagina('bedrijven/' + id, true), graph = schema(h);
     assert.ok(h.includes(g.antwoord));
     assert.ok(h.indexOf('class="praktische-hulp"') < h.indexOf('<section id="bronnenbeeld">'));
@@ -64,6 +64,15 @@ test('praktische antwoorden staan voor reviews, brondata en FAQ stemmen overeen'
     assert.ok(g.seoTitel.length <= 60);
     assert.ok(!graph.some(g => g['@type'] === 'AggregateRating'));
   }
+  const postnl = pagina('bedrijven/postnl', true), hulp = PRAKTISCHE_HULP.postnl;
+  assert.ok(postnl.includes('alleen de afzender opdracht kan geven'));
+  assert.ok(postnl.includes('Je kunt als ontvanger wel een bezorgklacht'));
+  assert.ok(postnl.includes('<time datetime="2026-11-25">25 november 2026</time>'));
+  assert.ok(postnl.indexOf('class="praktische-hulp"') < postnl.indexOf('<section id="bronnenbeeld">'));
+  assert.ok(wamLlms().includes('/bedrijven/postnl#pakket-niet-ontvangen'));
+  assert.ok(WAM_INDEXNOW_URLS.includes('https://wearemany.now/bedrijven/postnl'));
+  assert.equal(sitemapLastmod('/bedrijven/postnl'), '2026-11-25');
+  assert.equal(sitemapLastmod('/bedrijven/kpn'), '2026-11-24');
   const h = pagina('incassokosten-berekenen', true), graph = schema(h);
   assert.equal(graph.find(g => g['@type'] === 'FAQPage').mainEntity.length, INCASSO_VRAGEN.length);
   for (const q of INCASSO_VRAGEN) assert.ok(h.includes(q.vraag) && h.includes(q.antwoord));
@@ -73,3 +82,4 @@ test('praktische antwoorden staan voor reviews, brondata en FAQ stemmen overeen'
   assert.ok(WAM_INDEXNOW_URLS.includes('https://wearemany.now/incassokosten-berekenen'));
   assert.ok(wamLlms().includes('/bedrijven/ns#aanvragen') && wamLlms().includes('/incassokosten-berekenen'));
 });
+
