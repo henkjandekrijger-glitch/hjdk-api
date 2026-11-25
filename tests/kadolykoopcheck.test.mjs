@@ -66,3 +66,41 @@ test('chat never promises free returns without matching product facts', () => {
   assert.match(returnAnswer({}), /niet bevestigen dat de retour gratis is/);
   assert.match(returnAnswer({ listingId: 'dp_1037' }), /nog 14 dagen/);
 });
+
+function checkoutHarness(rows) {
+  let changes = 0;
+  const text = { _value: 'Totaal €1304,10 · gratis retourneren · iDEAL', get nodeValue() { return this._value; }, set nodeValue(v) { changes++; this._value = v; } };
+  const sure = { nodes: [text] }, inserted = [], observers = [];
+  const document = {
+    documentElement: { lang: 'nl' }, readyState: 'complete', head: { appendChild() {} },
+    createElement: () => ({ textContent: '', innerHTML: '' }),
+    querySelector: () => null,
+    querySelectorAll: selector => selector.includes('co-trust-line') ? [sure] : [],
+    getElementById: id => id === 'co-s1-sure' ? sure : id === 'pay-btn' ? { insertAdjacentElement: (_, node) => inserted.push(node) } : null,
+    createTreeWalker: node => { let i = 0; return { nextNode: () => (node.nodes || [])[i++] || null }; },
+  };
+  const window = rows.length === 1 ? { CO_DATA: { listing: rows[0] } } : { YCartLines: () => rows };
+  vm.runInNewContext(KOOPCHECK_JS, { window, document, location: { hostname: 'kadoly.com', pathname: '/checkout/dp_1037' },
+    MutationObserver: class { constructor(callback) { this.callback = callback; } observe() { observers.push(this.callback); } } });
+  return { text, inserted, observers, changes: () => changes };
+}
+test('first checkout step replaces its old free-return promise and follows later rerenders without looping', () => {
+  const h = checkoutHarness([dressoir]);
+  assert.match(h.text.nodeValue, /Retour op eigen kosten/);
+  h.text.nodeValue = 'Nieuwe totaalprijs · gratis retourneren';
+  h.observers[0]();
+  assert.match(h.text.nodeValue, /Retour op eigen kosten/);
+  const before = h.changes(); h.observers[0](); assert.equal(h.changes(), before);
+});
+test('mixed checkout preserves the separate return condition for each item', () => {
+  const h = checkoutHarness([dressoir, { id: 'oc_123', title: 'Armband' }]);
+  assert.equal(h.inserted.length, 1);
+  assert.match(h.inserted[0].innerHTML, /Retour op eigen kosten/);
+  assert.match(h.inserted[0].innerHTML, /Gratis retourneren/);
+  assert.match(h.text.nodeValue, /Retourvoorwaarden per product/);
+});
+test('free-return checkout is not incorrectly changed to customer-paid returns', () => {
+  const h = checkoutHarness([{ id: 'oc_123' }]);
+  assert.match(h.text.nodeValue, /gratis retourneren/);
+  assert.equal(h.inserted.length, 0);
+});
