@@ -87,14 +87,15 @@ test('tijdlijn nieuwste boven, echte bekeken-teller pas vanaf honderd, deelknopp
   for (const p of ['nl', 'dossier/blendle', 'bedrijven/ns']) assert.ok(!/name="description" content="[^"]*…"/.test(pagina(p, true)), p);
 });
 
-test('modal volgt het dossier, teller alleen na echte-lezersbaken, mailstroom uit', async () => {
+test('modal volgt het dossier, teller alleen na echte-lezersbaken, mailstroom aan met beginnen en doorsturen', async () => {
   const h = pagina('dossier/blendle', true);
   assert.ok(h.includes('data-volg="Hoor het als Blendle reageert"') && !pagina('bedrijven/ns', true).includes('data-volg='));
   assert.ok(h.includes("op=dbekeken") && h.includes('8000'));
   const VM = await import('../lib/wam-volgmail.js');
-  assert.equal(VM.LIVE, false);
+  assert.equal(VM.LIVE, true);
   const r = { scope: 'blendle', mtok: 'a'.repeat(40), email: 'x@voorbeeld.nl' }, w = VM.welkomMail('b'.repeat(24), r);
   assert.ok(w.onderwerp === 'Je volgt het Blendle-dossier' && w.html.includes('/afmelden#' + 'b'.repeat(24) + '.' + 'a'.repeat(40)) && !/#5f6368|gray|grey/i.test(w.html));
+  assert.ok(w.html.includes('/dossier/blendle#reageren') && w.html.includes('https://wearemany.now/start') && w.html.includes('https://wa.me/?text=') && w.tekst.includes('Stuur deze mail door'));
   const { DOSSIERLIJST } = await import('../lib/wam-dossiers.js'), d = DOSSIERLIJST.find(x => x.id === 'blendle');
   assert.equal(VM.nieuwsteRegel(d).datum, '2026-11-25');
 });

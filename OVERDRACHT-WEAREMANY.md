@@ -247,4 +247,4 @@ Logboek 24 november 2026: Errezeta-dossier op expliciet verzoek toegevoegd met g
 
 
 Logboek 24 november 2026: Errezeta op Henkjans verduidelijking omgezet naar aparte gedupeerdenoproep; direct instuurveld, eigen zaak uitklapbaar, bestaande moderatie en bewijsbasis behouden.
-
+- 25 nov 2026 (Claude, 16:30 UTC): op Henkjans "verstuur" de volgmail aangezet (LIVE true). Welkomstmail met drie links: ervaring erbij (#reageren), eigen melding beginnen (/start), doorsturen (mail of WhatsApp ?d=wa). Updatemails ook met ervaring en doorsturen. Inhaalronde welkom voor volgers van vóór vandaag (op=dvolgmail&welkom=1). Campagnes 12189120 en 12189124: uurstatus in de chat.
