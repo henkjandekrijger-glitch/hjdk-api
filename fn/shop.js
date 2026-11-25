@@ -42,6 +42,7 @@ import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 import { gebruikerVan, koppel as cmKoppel, zoek as cmZoek, zetOpKlik as cmZetOpKlik, telMatch as cmTel } from '../lib/cmmatch.js'; // 20 nov: Clickmind-matching (verkopen terugvinden, herkenning zonder klik-id)
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
+import { bronVan, perBron } from '../lib/herkomst.js'; // 25 nov: herkomst van elke betaalde bestelling
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL, bundelKandidaten, geldigeSets } from '../lib/bundel.js';
 import { kiesPakketten, pakketTekst, PAKKET_SOORTEN, pakketOpenbaar, soortVan } from '../lib/pakket.js';
@@ -179,6 +180,26 @@ async function bewaarCatalogus(items, bron, extra) {
   const c = Object.assign({ at: Date.now(), bron, items }, extra || {}); await kv.set(K.cat, c); CAT = c; CAT_AT = Date.now();
   try { if (!(await kv.get(K.snap(DAY())))) { const s = {}; items.forEach(i => { if (i.v || i.f) s[i.id] = [i.v, i.f]; }); await kv.set(K.snap(DAY()), s, { ex: 40 * 86400 }); } } catch (e) {}
   return c;
+}
+// 25 nov 2026 (Henkjan: "Zorg dat je niets meer mist en altijd bron kan vinden !"): leest de betaalde bestellingen uit de datapagina van de shop,
+// bepaalt per bestelling de bron (lib/herkomst.js) en zet elke nieuwe verkoop eenmaal in het werklog (mm:handover:log, wie=verkoopwacht) en in hjdk:verkoop:log.
+async function verkoopWacht(alleenLezen = false, dagen = 3) {
+  let orders = [], feedFout = null; try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop(), signal: AbortSignal.timeout(20000) }); if (r.ok) { const j = await r.json(); orders = Array.isArray(j.orders) ? j.orders : []; } else feedFout = 'HTTP ' + r.status; } catch (e) { feedFout = String(e.message || e).slice(0, 80); }
+  const hulp = { getRec: hj => kv.get(K.rec(hj)), zoekEm: async o => { const u = gebruikerVan(o); return (u.em || u.ph) ? await cmZoek(kv, u) : ''; } };
+  const vanaf = Date.now() - dagen * 864e5, lijst = []; let nieuw = 0;
+  for (const o of orders.slice(0, 300)) {
+    if (!/paid|betaald/i.test(String(o.status || ''))) continue;
+    const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && at < vanaf) continue;
+    const id = String(o.order_id || o.id || (o.created_at || '') + '|' + (o.product_id || '')).replace(/[^A-Za-z0-9_|:+.-]/g, '').slice(0, 60);
+    const b = await bronVan(o, hulp);
+    const v = { id, at: o.paid_at || o.created_at || null, bedrag: num(o.amount), product: String(o.product_id || '').slice(0, 30), titel: String(o.product_title || o.product_name || o.title || '').slice(0, 70), stuks: num(o.quantity || 1), methode: String(o.payment_method || ''), ...b };
+    lijst.push(v);
+    if (!alleenLezen && id) { let eerst = false; try { eerst = (await kv.raw(['SADD', 'hjdk:verkoop:gezien', id])) === 1; } catch (e) {} if (eerst) { nieuw++; const t = 'VERKOOP Kadoly: ' + (v.stuks > 1 ? v.stuks + 'x ' : '') + (v.titel || v.product) + ' EUR ' + v.bedrag.toFixed(2).replace('.', ',') + ' (' + (v.methode || '?') + '), bron: ' + v.bron + (v.via ? ' (' + v.via + ')' : '') + (v.bron === 'onbekend' ? '. Bron onbekend: TAAK H in de winkel moet de herkomst meesturen.' : '');
+      try { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'verkoopwacht', tekst: t })]); await kv.raw(['LPUSH', 'hjdk:verkoop:log', JSON.stringify({ t: new Date().toISOString(), ...v })]); await kv.raw(['LTRIM', 'hjdk:verkoop:log', '0', '499']); } catch (e) {} } }
+  }
+  let log = []; try { log = ((await kv.raw(['LRANGE', 'hjdk:verkoop:log', '0', '19'])) || []).map(x => { try { return typeof x === 'string' ? JSON.parse(x) : x; } catch (e) { return null; } }).filter(Boolean); } catch (e) {}
+  const onbekend = lijst.filter(v => v.bron === 'onbekend').length;
+  return { ok: !feedFout, at: new Date().toISOString(), dagen, feedFout, betaald: lijst.length, nieuwGemeld: nieuw, onbekend, perBron: perBron(lijst), lijst, gemeld: log };
 }
 async function haalFeed() {
   // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
@@ -1601,6 +1622,10 @@ export default async function handler(req, res) {
       const html = cmRender({ kop: 'Kadoly', periode: dagen === 1 ? 'Vandaag' : 'Laatste ' + dagen + ' dagen', totaal: tot, netten: nl, ads: al, orders, match, koppelingen, adviesTekst: adviesTekst || '', nu: new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC' });
       if (sp.get('vorm') === 'json') return res.status(200).json({ ok: true, dagen, totaal: tot, netten: nl, ads: al, orders, match, koppelingen });
       res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(html); }
+    if (op === 'verkopen') { // 25 nov (Henkjan: "Zorg dat je niets meer mist en altijd bron kan vinden !"): elke betaalde bestelling met bron, en wat de verkoopwacht al meldde. Beschermde host, geen persoonsgegevens
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
+      res.setHeader('cache-control', 'no-store'); return res.status(200).json(r); }
     if (op === 'kassalek') { // 16 nov (Henkjan: "Ja zoek maar uit maar ik denk dat het verkeersbron is ."): waar strandt het betalen, per verkeersbron. Alleen tellingen en bestellingen zonder persoonsgegevens, alleen via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 28));
@@ -1609,11 +1634,11 @@ export default async function handler(req, res) {
       for (const n of Object.keys(perNet)) if (!perNet[n].aangekomen && !perNet[n]['afrekenpagina'] && !perNet[n].betaald) delete perNet[n];
       const LET = { m: 'echt', a: 'actie', g: 'geladen', z: 'zicht1' }; for (const [k, v] of Object.entries(GEDRAG)) LET[v] = k;
       let orders = [], feedFout = null; try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop(), signal: AbortSignal.timeout(20000) }); if (r.ok) { const j = await r.json(); orders = Array.isArray(j.orders) ? j.orders : []; } else feedFout = 'HTTP ' + r.status; } catch (e) { feedFout = String(e.message || e).slice(0, 80); }
-      const best = []; for (const o of orders.slice(0, 200)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null; if (hj) { try { rec = await kv.get(K.rec(hj)); } catch (e) {} }
+      const best = []; const herkomstHulp = { getRec: hj => kv.get(K.rec(hj)), zoekEm: async o => { const u = gebruikerVan(o); return (u.em || u.ph) ? await cmZoek(kv, u) : ''; } }; for (const o of orders.slice(0, 200)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null; if (hj) { try { rec = await kv.get(K.rec(hj)); } catch (e) {} }
         const at = Date.parse(o.created_at || '') || null;
         best.push({ at: o.created_at || null, betaaldOm: o.paid_at || null, status: String(o.status || ''), shop: String(o.shop_status || ''), methode: String(o.payment_method || ''), bedrag: num(o.amount), verzend: o.shipping != null ? num(o.shipping) : null, product: String(o.product_id || '').slice(0, 30), stuks: num(o.quantity || 1),
           kenmerk: !!hj, gevonden: !!rec, net: rec ? rec.s : (o.ad_network || (hj ? '?' : 'geen')), plek: rec ? rec.z || null : null, toestel: rec ? rec.h || null : null, minNaKlik: rec && at && rec.at ? Math.round((at - rec.at) / 60000) : null, test: rec ? !!rec.t : null,
-          stappen: rec ? Object.keys(rec).filter(k => /^y[a-z0-9]{1,2}$/.test(k)).map(k => LET[k.slice(1)] || k).slice(0, 40) : null }); }
+          stappen: rec ? Object.keys(rec).filter(k => /^y[a-z0-9]{1,2}$/.test(k)).map(k => LET[k.slice(1)] || k).slice(0, 40) : null, herkomst: await bronVan(o, herkomstHulp) }); }
       const samen = {}; for (const b of best) { const k = b.net || '?'; const o = samen[k] = samen[k] || { bestellingen: 0, betaald: 0, verlopen: 0, anders: 0, methodes: {} }; o.bestellingen++; if (/paid|betaald/i.test(b.status)) o.betaald++; else if (/expir|verlop/i.test(b.status)) o.verlopen++; else o.anders++; o.methodes[(b.methode || '-') + ':' + b.status] = (o.methodes[(b.methode || '-') + ':' + b.status] || 0) + 1; }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, dagen, perNet, bestellingen: { totaal: best.length, perNet: samen, feedFout, lijst: best } }); }
     if (op === 'whlead') { // 16 nov: aanmelding na een Meta-klik via Whop (Curacao.day, later Sealed Intent): eenmaal per aanmelding een 'lead' naar de Events API van het Whop-bedrijf van dat project
@@ -1765,6 +1790,7 @@ export default async function handler(req, res) {
         return res.status(200).json({ ok: true, stand: st, log: lg }); }
       if (!mag) return res.status(404).send('Niet gevonden');
       if (!whopKlaar()) return res.status(200).json({ ok: true, overgeslagen: 'geen WHOP_API_KEY' });
+      let verkoopW = null; try { verkoopW = await verkoopWacht(false, 3); } catch (e) { verkoopW = { fout: String(e.message || e).slice(0, 80) }; } // 25 nov: elke nieuwe betaalde bestelling met bron in het werklog, elke 30 minuten
       let sierWacht = null; try { sierWacht = await whSierWacht({}, !!url.searchParams.get('droog'), LAND()); if (sierWacht && (sierWacht.bloeders || []).some(b => b.pauze === 'gelukt')) { const t = 'Kadoly sieraden Meta (Whop): bloeders uit en vervangen: ' + sierWacht.bloeders.filter(b => b.pauze === 'gelukt').map(b => b.titel + ' (' + b.reden + ') -> ' + (b.nieuw || '-')).join(' | '); try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: t })]); await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'whop-sier', tekst: t })]); } catch (e) {} } if (sierWacht && sierWacht.actie === 'pauze') { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'sieradencampagne op pauze: $' + sierWacht.spend + ' uitgegeven zonder verkoop (' + (sierWacht.pauze || '?') + ')' })]); await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'whop-sier', tekst: 'Kadoly sieraden Meta (Whop) op pauze: $' + sierWacht.spend + ' zonder verkoop (regel Henkjan 24 nov: bij 20 eruit)' })]); } } catch (e) { sierWacht = { fout: String(e.message || e).slice(0, 80) }; } // 24 nov: stopregel sieraden draait ook als de ronde stilstaat
       { let gestopt = null; try { gestopt = await kv.get('hjdk:whop:stop'); } catch (e) {} if (gestopt) return res.status(200).json({ ok: true, sierWacht, overgeslagen: 'Whop gestopt: geen nieuwe advertenties, geen meldingen (op=whstop; weer aan met op=whstop&aan=1)', gestopt }); } // 20 nov (Henkjan: "Ja meta heeft nul opbrengst dus verschuif")
       const droog = !!url.searchParams.get('droog'), nu = new Date(), dagNL = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(nu);
