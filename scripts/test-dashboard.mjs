@@ -3,7 +3,7 @@ const m=new Map(), sets=new Map();
 const log=[{t:'2026-11-25T08:40:00Z',wie:'kdp-statuscheck',tekst:'LC naar voorgesteld bod <b>'},{t:'2026-11-25T07:00:00Z',wie:'deploy',tekst:'Live gezet abc: WAM: tijdlijn'},{t:'2026-11-24T07:00:00Z',wie:'wam-chat',tekst:'x'}];
 m.set('mm:wachtuur:laatst',{eigen:{projecten:{todayin:{kliks:1894,aanmelding:48,koop:0},'todayin|NL':{kliks:426,aanmelding:7},shop:{kliks:223,aanmelding:0,koop:0}}}});
 const H=new Map();
-const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));if(a[0]==='HSET'){H.set(a[2],a[3]);return 1}if(a[0]==='HDEL'){for(const f of a.slice(2))H.delete(f);return 1}if(a[0]==='HGETALL')return [...H.entries()].flat();return null}};
+const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));if(a[0]==='HSET'){H.set(a[2],a[3]);return 1}if(a[0]==='HDEL'){for(const f of a.slice(2))H.delete(f);return 1}if(a[0]==='HGETALL')return [...H.entries()].flat();if(a[0]==='HKEYS')return [...H.keys()];return null}};
 const ok=(c,n)=>{if(!c){console.log('FOUT',n);process.exitCode=1}};
 let d=await D.dashData(kv); const k=d.projecten.find(p=>p.id==='kdp');
 ok(k.pct===24,'pct');ok(k.log.length===1,'log kdp');ok(d.projecten.find(p=>p.id==='wam').log.length===2,'log wam');ok(d.agenda.some(a=>a.id==='kdp'&&a.d==='2026-11-27')&&d.agenda.every((a,i)=>!i||d.agenda[i-1].d<=a.d),'agenda');
@@ -39,4 +39,8 @@ ok(us.projecten.find(x=>x.id==='curacao').kosten===6.2&&us.dagen.find(x=>x.dag==
 ok(dg.opvallend.some(o=>o.id==='curacao'&&o.verder.includes('INGRIJPEN')),'opvallend kosten zonder opbrengst');ok(!dg.opvallend.some(o=>o.id==='kdp'&&/kosten/.test(o.tekst)),'kdp niet opvallend');
 const hg=D.dashHtml(dg);ok(hg.includes('Laat Claude ingrijpen')&&hg.includes('<h2>Geld, laatste 7 dagen</h2>'),'geld html');ok(D.dashTekst(dg).includes('GELD laatste 7 dagen')&&D.dashTekst(dg,'kdp').includes('opbrengst: royalty'),'geld tekst');
 ok((await D.zetDash(kv,{project:'kdp',geld:{dag:gd,kosten:{'Amazon Ads':0}}})).ok&&(await D.dashData(kv)).geld.perMunt[0].totaal.kosten===6.84,'geld weghalen');
+ok(D.LEERPROMPT.includes('RANGORDE')&&D.LEERPROMPT.includes('WAARDE ALS ER NOG GEEN OMZET IS'),'leerprompt rangorde en waarde');
+ok(!(await D.zetDash(kv,{project:'curacao',waarde:{bedrag:0.5}})).ok,'waarde zonder waarom');ok((await D.zetDash(kv,{project:'curacao',waarde:{bedrag:0.5,per:'aanmelding',waarom:'proefschatting voor de test, lager dan de inkoopprijs'}})).ok,'waarde zet');
+await D.dashData(kv);let dw=await D.dashData(kv);const cw=dw.geld.perMunt[0].projecten.find(x=>x.id==='curacao');ok(cw.waarde===24&&cw.opbrengst===0&&dw.geld.perMunt[0].totaal.opbrengst===61.95,'waarde apart van opbrengst '+cw.waarde);
+ok(!dw.opvallend.some(o=>o.id==='curacao'&&/kosten/.test(o.tekst)),'waarde dekt kosten: niet opvallend');ok(D.dashHtml(dw).includes('geen omzet'),'waarde html');
 console.log('klaar',h.length,d.projecten.length);
