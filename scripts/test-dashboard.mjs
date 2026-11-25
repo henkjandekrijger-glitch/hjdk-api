@@ -1,6 +1,7 @@
 import * as D from '../lib/dashboard.js';
 const m=new Map(), sets=new Map();
 const log=[{t:'2026-11-25T08:40:00Z',wie:'kdp-statuscheck',tekst:'LC naar voorgesteld bod <b>'},{t:'2026-11-25T07:00:00Z',wie:'deploy',tekst:'Live gezet abc: WAM: tijdlijn'},{t:'2026-11-24T07:00:00Z',wie:'wam-chat',tekst:'x'}];
+m.set('mm:wachtuur:laatst',{eigen:{projecten:{todayin:{kliks:1894,aanmelding:48,koop:0},'todayin|NL':{kliks:426,aanmelding:7},shop:{kliks:223,aanmelding:0,koop:0}}}});
 const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));return null}};
 const ok=(c,n)=>{if(!c){console.log('FOUT',n);process.exitCode=1}};
 let d=await D.dashData(kv); const k=d.projecten.find(p=>p.id==='kdp');
@@ -18,4 +19,10 @@ ok((await D.zetDash(kv,{project:'wam',archief:true})).ok,'archiveer');
 d=await D.dashData(kv);ok(!d.projecten.some(p=>p.id==='wam')&&d.archief.some(a=>a.id==='wam'),'archief weg uit overzicht');ok(!d.agenda.some(a=>a.id==='wam'),'archief weg uit planning');
 const h2=D.dashHtml(d,{tekst:'x',terug:'wam'});ok(h2.includes('?terug=wam')&&h2.includes('<h2>Archief</h2>')&&!h2.includes('id="wam"'),'archief html');ok(h2.includes('?archiveer=kdp'),'archiveerknop');ok(!D.dashTekst(d).includes('## We Are Many'),'archief tekst');
 ok((await D.zetDash(kv,{project:'wam',archief:false})).ok,'terug');d=await D.dashData(kv);ok(d.projecten.some(p=>p.id==='wam')&&!d.archief.length,'terug in overzicht');
+const c=d.projecten.find(p=>p.id==='clickmind');ok(c&&c.nu===2.3&&c.pct===46,'clickmind live '+(c&&c.nu));ok(c.advies&&!c.doel,'advies geen doel');
+const kk=d.projecten.find(p=>p.id==='kdp');ok(kk.verder.startsWith('https://claude.ai/code/new?q=')&&kk.verder.includes('&repo=henkjandekrijger-glitch%2Fhjdk-api')&&kk.verder.length<2500,'verder kdp '+kk.verder.length);ok(decodeURIComponent(kk.verder).includes('project=kdp'),'verder inhoud');
+ok(d.projecten.find(p=>p.id==='tk').verder.startsWith('https://claude.ai/new?q='),'verder zonder repo');
+ok(!(await D.zetDash(kv,{project:'kdp',claude:'https://evil.example/x'})).ok,'claude url geweigerd');ok((await D.zetDash(kv,{project:'kdp',claude:'https://claude.ai/project/abc-123'})).ok,'claude url');
+ok((await D.dashData(kv)).projecten.find(p=>p.id==='kdp').verder.startsWith('https://claude.ai/project/abc-123?q='),'verder project');
+ok(D.dashHtml(d).includes('Verder in Claude'),'knop');
 console.log('klaar',h.length,d.projecten.length);
