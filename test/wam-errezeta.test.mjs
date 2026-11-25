@@ -17,7 +17,7 @@ test('Errezeta toont alleen de twee gecontroleerde betalingen en het gecorrigeer
 });
 test('dossier neemt herstel en mogelijk tegenstuk mee zonder oplichting als feit vast te stellen', () => {
   const h = pagina('dossier/errezeta', true);
-  for (const t of ['herstelvoorstellen','afwikkelingstekst','Verzending, ondertekening','De redactie heeft zelf een belang','Een actuele inhoudelijke reactie','geen strafrechtelijk vonnis']) assert.ok(h.includes(t),t);
+  for (const t of ['herstelvoorstellen','afwikkelingstekst','Verzending, ondertekening','De redactie heeft zelf een belang','om een actuele reactie op dit dossier gevraagd','geen strafrechtelijk vonnis']) assert.ok(h.includes(t),t);
   assert.ok(!h.includes('zijn oplichters') && !h.includes('geen diensten geleverd'));
   assert.ok(d.documenten.length && d.leiding[0].naam === 'Fabiana D’Amiano');
 });
