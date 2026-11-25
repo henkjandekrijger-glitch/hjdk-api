@@ -121,3 +121,14 @@ Meet iedere werkelijk gepubliceerde Instagramboekpost afzonderlijk: providerpost
 SITECONTENT blijft dagelijks onderdeel: Lasting Change maximaal1nuttigartikelconcept volgens gemeten gecachte vraag/primairesources, bestaande2liveartikelen nietoverschrijven. Stocking Books dagelijks1echtinhoudelijk verbeterpunt uit bestaande gratis tools/cadeaugidsen voorbereiden; alleen nieuwepagina bij onbeantwoorde gemetenvraag, geen dunnevarianten. Koppel alle socialcontent aan een relevante bestaande eigenpagina. Showexactsitepreviewbeforelive. Henkjans actuelepublicatieakkoorden uitvoeren, geen herhaaldconceptstatusbericht voor alPublishedwerk.
 Morgen25nov: naast4pinconcepten1InstagramReelconcept voor cadeau/man,1bruikbareStockingBooks-inhoudsverbetering en de bestaande LC-artikellus. Gebruik één gedeelde bronanalyse en bestaandecaches, geen extra betaalde lus. Rapporteer live/concept/idee eerlijk, feitelijke verbeteringen en verkeerperkanaal, en bewaar bronnen/perioden/lessen/volgendeactie. Nieuwe scope geen toestemming voor advertenties of ongetoonde bulk.
 
+
+
+## Artikelronde 25 november UTC, 24 november laat Curaçao
+
+Gesloten24nov: Stocking42tegen32, LC5tegen12geregistreerdeopeningen.30ruweAmazonredirects, geenconversiepercentageofuniekemensen. Verseproviderstatistiekenvoor18boekpinsontbreken,oude0cachesnietalsperformancegebruikt. Bestaande2specifiekgoedgekeurde pins alPublished; nietnogmaalsplaatsenofomakkoordvragen.
+
+Nieuw beschermdconcept: i-wasted-another-year,1294woorden,7secties,4FAQseneigenterugblikkaart. Exactejaartitelvolumeonbekend; gerelateerdeRadarvraag i wasted my life210/maandUS,maandreeks[320,260,260,210,260,170,210,210,210,170,210,210],cache23nov. Nietwasted40500ofwasted years4400optellen,geenbetaaldenieuwcall. Moduseerst-zienvooropslaan,statusconceptnaopslaan,HTTP200/noindex,nietinsitemapoflivegidsen;beideliveartikelenbehouden. Preview https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=i-wasted-another-year&concept=1 . Drieprimaireonderzoekenmetbeperkteclaims,geenbewezenveranderinggarantie. Paperbackoptioneel,PDF/mailblijvenuit.
+
+Makeronderzoek25novUTC: NessLabsannualreviewpagina,praktischeinhoudnaarbruikbaretemplateenboek;geenverkeerscijfersofgroeiuitgeclaimd. Zie2026-11-25-traffic-onderzoek.md. Kop/kaartzijn eigenwerk. Artikelonderscheidt terugblik/keuze van bestaand7dagenplan. Distributiehaakvoorlaterepin,geenplaatsingnaarongepubliceerdconcept. Oordeel14tot21dagenvanafwerkelijkegoedgekeurdepublicatie,genoegvergelijkbaredata,controlebestaandestart-overpaginaalleenrichtinggevend.
+
+Stockingconcreettekstvoorstel: kerstquizheeftrondes11/5/16/8vragen,FAQzegt10perronde. Printknoppenmet/zonderantwoordbestaanal,dusgeennieuwprintfunctiebouwen. ExactFAQvoorstelin2026-11-25-stocking-trivia-concept.md,geenlivewijziging. Rondein2026-11-25-artikel.json,geslotenmeetdagin2026-11-24.json,geenmain/build/extraTelegram/ads.

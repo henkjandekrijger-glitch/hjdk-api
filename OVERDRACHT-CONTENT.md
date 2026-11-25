@@ -250,6 +250,9 @@ Plak dit als eerste bericht:
 
 ## Logboek (nieuwste bovenaan)
 
+- 2026-11-25 UTC, content-Codex: nieuw1294woordconcept i-wasted-another-year opgeslagen in eerst-zien; beschermdHTTP200/noindex, nietinlivegidsen/sitemap,2bestaandeartikelenlivebehouden. Eigenjaarterugblikkaart,3gecontroleerdeprimairebronnen. Radar gerelateerdevraag210/mndUS,exactjaartitelonbekend;geenambiguewastedvolumes. Gesloten24nov42/5geregistreerdeopeningen,geenorganischegroei/conversieclaim. KerstquizFAQmismatch11/5/16/8vs10vragenals exacttekstconceptbewaard. Alleendatabranch,geenpublicatie/main/build/extraTelegram.
+
+
 - 2026-11-24, content-Codex: Henkjan breidt scope uit naar Instagram @kadoly.shop voor eigen boeken via bestaand Zernio-account6afb8787a26245ebf04dc7be. Drie bestaande taken aangepast met sitecontent plus eigenReelconcept, sharedKadolyplanning en kanaalspecifiekleren. Nieuwebeelden/copy blijven eerst-zien; geen publicatie of bioverandering gedaan. Morgenplan bevat storyboard/caption voor mannenboek, nog geen gerenderdeReel. LC2artikelenlive opnieuwbevestigd; dagelijkse nuttigeStockingupdate en max1LCconcept behouden.
 
 - 2026-11-24, content-Codex: Henkjan vraagt blijven posten en maximaliseren. Bestaande Pinterest- en rapporttaak aangepast: vanaf25nov4uniekeconcepten als eerste werkvolume, geen bewezen optimum of verplicht quotum. Oude3cap niet opnieuw automatische blokkade; nieuwebeelden/copy eerst-zien, geen duplicaten. Plan aangevuld met kerstgrappen als vierde ingang. Officiële Pinterestbron: kwaliteit/relevantie gaat boven frequentie. Dagelijks per-pinleren, geen verkeerswinst uit volume afleiden.
