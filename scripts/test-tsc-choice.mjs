@@ -27,7 +27,7 @@ let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
 const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm,'').replace(/await import\('\.\/chirurgie\.js'\)/g,'CHIRURGIE_TEST');
 const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent,...ranking,FN_JS,metHuisstijl,chirurgie, ...provider, ...lookLayer, ...linkLayer,CHIRURGIE_TEST:chirurgie };
-const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,extraPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
+const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,extraPagina,llms,ALL,pageDate,ixAuto,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
 await test('active surgery renderer keeps dental answers and limits ranking claims',()=>{
@@ -250,6 +250,17 @@ await test('focused quote landing: three indexable translations and value before
 });
 await test('quote checker preserves unknowns and transmits no amounts',()=>{
  const html=searchIntent.quoteGuideBody(data.SITE.base,'nl','',''),source=html.match(/<script>([\s\S]*?)<\/script>/)[1],els={'quote-check':{},'quote-result':{},'quote-currency':{value:'EUR'}};for(let i=0;i<3;i++)els['quote-amount-'+i]={value:[1000,250,200][i]};for(let i=0;i<5;i++)els['quote-part-'+i]={checked:false};new Function('document',source)({getElementById:id=>els[id]});els['quote-check'].onsubmit({preventDefault(){}});assert.ok(els['quote-result'].textContent.includes('1.450'));assert.ok(els['quote-result'].textContent.includes('Nog te bevestigen'));assert.ok(!/fetch\(|sendBeacon|XMLHttpRequest/.test(source));
+});
+
+
+await test('IndexNow keeps same-day late pages and suppresses already sent URLs',async()=>{
+ const latest=render.ALL().map(render.pageDate).filter(x=>/^\d{4}-\d\d-\d\d$/.test(String(x))).sort().at(-1);
+ const calls=[],fresh={raw:async cmd=>{calls.push(cmd);if(cmd[0]==='GET')return latest;if(cmd[0]==='MGET')return cmd.slice(1).map(()=>null);return 'OK';}};
+ const first=await render.ixAuto(fresh,true);
+ assert.ok(first.nieuw>0);assert.ok(first.urls.length>0);assert.ok(calls.some(cmd=>cmd[0]==='MGET'));
+ const seen={raw:async cmd=>{if(cmd[0]==='GET')return latest;if(cmd[0]==='MGET')return cmd.slice(1).map(()=>1);return 'OK';}};
+ const second=await render.ixAuto(seen,true);
+ assert.equal(second.nieuw,first.nieuw);assert.equal(second.urls.length,0);
 });
 
 console.log(JSON.stringify({checks,ssrRankPages:Object.keys(RANK_SLUGS).length,topics:catalog.PROCEDURES.length,lists:Object.keys(LIJSTEN).length,indexableLists:Object.values(LIJSTEN).filter(l=>!l.noindex).length,realEmailsSent:0}));
