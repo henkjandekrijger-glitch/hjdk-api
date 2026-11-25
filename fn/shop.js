@@ -86,6 +86,15 @@ const FOTOTEST = { start: '2026-11-26', paren: [ // gekozen 25 nov op het contac
   { t: 'oc_4174003357499393', c: 'oc_4174003356876801', i: 2, soort: 'wonen servies, gedekte tafel van boven' },
   { t: 'oc_4251973775228929', c: 'oc_4254790010142721', i: 2, soort: 'sieraad ketting, gedragen' }
 ] };
+// 25 nov 2026 (Henkjan: "Ja maak"): gedragen foto's voor sieraden met een beeldmodel (lib/kadolydraag.js). Test krijgt na goedkeuring met het oog de gedragen
+// foto als hoofdfoto in Google; controle lijkt erop en houdt de productfoto. Een paar telt pas vanaf de dag na goedkeuring (kd:draag:<pid>.beoordeeld).
+const DRAAGTEST = { paren: [
+  { t: 'oc_4254790027034626', c: 'oc_4254790016565249', soort: 'ketting' },
+  { t: 'oc_4254790000459777', c: 'oc_4254790044041218', soort: 'oorbellen hoops' },
+  { t: 'oc_4251973869322241', c: 'oc_4251974028165121', soort: 'armband hart' },
+  { t: 'oc_4254790004621313', c: 'oc_4251974627524609', soort: 'ring' },
+  { t: 'oc_4254790012796929', c: 'oc_4254790057590785', soort: 'oorbellen parel' },
+  { t: 'oc_4254790079299585', c: 'oc_4254790005506049', soort: 'ketting munt' } ] };
 const LOKKER = { uit: null, start: '2026-11-23', max: 60, dagen: 14, items: { oc_4174002164400133: { prijs: 15.95, verlies: 3.55 }, oc_4174003456851970: { prijs: 29.95, verlies: 3.23 }, oc_4174002211717121: { prijs: 13.95, verlies: 3.46 }, oc_4174003712770050: { prijs: 42.95, verlies: 3.25 }, oc_4174003731562498: { prijs: 44.95, verlies: 3.35 }, oc_4174003462750209: { prijs: 22.95, verlies: 3.81 } } }; // 25 nov (Henkjan: "Vermeldingen met lokkers kan zeker werken"): drie woonlokkers erbij die in Google Shopping al vertoond en aangeklikt werden (wollen plaid 699/13, wollen deken 218/5, ornament 120/3), zelfde stopregel van EUR 60 in totaal
 async function lokkerStand() { // betaalde bestellingen met een lokker sinds de start, verlies en extra verkoop, en of de stopregel geldt
   let stop = null; try { stop = await kv.get('hjdk:shop:lokker:stop'); } catch (e) {}
@@ -884,12 +893,14 @@ const hEl = (type, style, children) => ({ type, props: { style: Object.assign({ 
 async function plaatje(req, res, url) {
   const cat = await catalog(); const it = cat.items.find(i => i.id === pidOk(url.searchParams.get('p'))); const m = MATEN[String(url.searchParams.get('t') || 'icon').replace(/\.(jpe?g|png|webp)$/i, '')] || MATEN.icon; // /api/shop/beeld/<pid>/<t>.jpg: MGID wil een link die op .jpg eindigt
   if (!it || !it.img) { res.statusCode = 404; return res.end('onbekend product'); }
+  let draag = null; if (url.searchParams.get('d')) { try { const D = await import('../lib/kadolydraag.js'); const f = await D.lees(it.id, url.searchParams.get('n')); if (f && (url.searchParams.get('n') || f.stand.oordeel === 'goed')) draag = f; } catch (e) {} } // 25 nov: gedragen foto (lib/kadolydraag.js); zonder goedkeuring de gewone foto
+  if (draag && String(url.searchParams.get('t') || '').replace(/\.(jpe?g|png|webp)$/i, '') === 'g' && !url.searchParams.get('s')) { res.setHeader('content-type', draag.ct); res.setHeader('cache-control', 'public, max-age=86400'); return res.end(draag.buf); } // Google: het origineel met de AI-metadata
   try {
     // cdn.yoo.rs weigert sinds 22 okt kale server-verzoeken (403): vraag de foto op zoals een browser die op yoo.rs zit, en probeer anders zonder verwijzer
     const H = [{ 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1', accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8', referer: 'https://kadoly.com/' }, { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'image/*,*/*;q=0.8' }, {}];
     let bronUrl = it.img; const fi = Math.max(0, Math.min(9, Number(url.searchParams.get('i')) || 0)); // 24 nov: i = n-de foto van de productpagina (vaak een foto om, aan of in de hand)
     if (fi > 0) { try { const h = await (await fetch('https://kadoly.com/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const alle = [...new Set([...h.matchAll(/"(?:serverUrl|src|url)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/gi)].map(m => m[1].replace(/\\\//g, '/')).filter(u => !/logo|icon|avatar|favicon/i.test(u)))]; res.setHeader('x-beelden', String(alle.length)); if (alle[fi]) bronUrl = alle[fi]; } catch (e) {} }
-    let r = null; for (const h of H) { r = await fetch(bronUrl, { headers: h, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
+    let r = draag ? new Response(draag.buf) : null; if (!r) for (const h of H) { r = await fetch(bronUrl, { headers: h, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
     if (!r || !r.ok) { // foto staat niet meer op die plek (catalogus achter): haal de huidige eerste foto van de productpagina
       const eerst = r ? r.status : 'geen antwoord'; let nu = null;
       try { const h = await (await fetch('https://kadoly.com/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const m = h.match(/"(?:serverUrl|src)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/i); if (m) nu = m[1].replace(/\\\//g, '/'); } catch (e) {}
@@ -1697,15 +1708,28 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(r); }
-    if (op === 'fototest' || op === 'gmcbeeld.csv' || op === 'beeldblad') {
+    if (op === 'fototest' || op === 'gmcbeeld.csv' || op === 'beeldblad' || op === 'draag') {
       const vg = async fn => { try { return await fn(); } catch (e) { return null; } };
       if (op === 'gmcbeeld.csv') { // aanvullende bron: alleen de testproducten (en hun varianten) met een nieuwe hoofdfoto
         let ids = []; await vg(async () => { const rr = await fetch('https://cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml', { signal: AbortSignal.timeout(25000) }); if (rr.ok) ids = [...(await rr.text()).matchAll(/<g:id>\s*(?:<!\[CDATA\[)?([^<\]]+?)(?:\]\]>)?\s*<\/g:id>/g)].map(m => m[1].trim()); });
         const rij = ['id,image_link'];
         for (const p of FOTOTEST.paren) { const fotoUrl = 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); }
+        { const D = await import('../lib/kadolydraag.js'); for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); if (!st || st.oordeel !== 'goed') continue; const fotoUrl = 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.' + (/\.png$/.test(st.pad) ? 'png' : 'jpg') + '?d=' + st.n; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); } }
         res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(rij.join('\n') + '\n'); }
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       res.setHeader('cache-control', 'no-store');
+      if (op === 'draag') { // &p=<pid>&maak=1 nieuwe gedragen foto (beeldmodel, ongeveer $0,04); &oordeel=goed|af&waarom= na de controle met het oog. Zonder p: stand van de test
+        const D = await import('../lib/kadolydraag.js'); const pid = pidOk(url.searchParams.get('p'));
+        if (!pid) return res.status(200).json({ ok: true, paren: await Promise.all(DRAAGTEST.paren.map(async p => ({ ...p, foto: await vg(() => D.stand(p.t)) }))) });
+        if (url.searchParams.get('oordeel')) return res.status(200).json(await D.oordeel(pid, url.searchParams.get('oordeel'), url.searchParams.get('waarom')));
+        if (url.searchParams.get('maak') !== '1') return res.status(200).json({ ok: true, foto: await D.stand(pid) });
+        const cat = await catalog(); const it = cat.items.find(i => i.id === pid); if (!it) return res.status(404).json({ ok: false, fout: 'onbekend product' });
+        const rb = await fetch('https://go.kadoly.com/api/shop/beeld/' + pid + '/g.jpg', { signal: AbortSignal.timeout(20000) }).catch(() => null); if (!rb || !rb.ok) return res.status(502).json({ ok: false, fout: 'productfoto ' + (rb ? rb.status : '-') });
+        return res.status(200).json(await D.maak(pid, it.t, Buffer.from(await rb.arrayBuffer()), String(req.headers['x-vercel-oidc-token'] || ''))); }
+      if (op === 'beeldblad' && url.searchParams.get('draag')) { // gedragen foto's naast de productfoto, om met het oog te keuren
+        const D = await import('../lib/kadolydraag.js'); const ids = DRAAGTEST.paren.map(p => p.t); const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i.t]));
+        const rij = await Promise.all(ids.map(async p => { const st = await vg(() => D.stand(p)); return '<div><b>' + esc(p) + '<br>' + esc(String(naam[p] || '').slice(0, 60)) + '<br>' + (st ? 'versie ' + st.n + ', ' + (st.oordeel || 'niet gekeurd') : 'nog geen foto') + '</b><img src="https://go.kadoly.com/api/shop/beeld/' + p + '/g.jpg">' + ((st && st.versies) || []).map(v => '<figure style="margin:0"><img src="https://go.kadoly.com/api/shop/beeld/' + p + '/sq.jpg?d=1&n=' + v.n + '&v=' + Date.now() + '"><figcaption>n=' + v.n + '</figcaption></figure>').join('') + '</div>'; }));
+        res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('<!doctype html><meta charset="utf-8"><style>body{font:14px system-ui;margin:8px}div{display:flex;gap:6px;align-items:flex-start;margin:0 0 10px}img{width:260px;height:260px;object-fit:contain;border:1px solid #000}b{display:block;width:150px;font-size:12px}</style>' + rij.join('')); }
       if (op === 'beeldblad') { // contactvel om per product de beste foto te kiezen: i = 0..5
         const pids = String(url.searchParams.get('p') || '').split(',').map(pidOk).filter(Boolean).slice(0, 12); const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i.t]));
         res.setHeader('content-type', 'text/html; charset=utf-8');
@@ -1729,7 +1753,11 @@ export default async function handler(req, res) {
         return { soort: p.soort, test: { id: p.t, titel: String((naam[p.t] || {}).t || '').slice(0, 50), foto: 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i, ...T }, controle: { id: p.c, titel: String((naam[p.c] || {}).t || '').slice(0, 50), ...C } }; });
       const ctr = g => g.v ? Math.round(10000 * g.k / g.v) / 100 + '%' : '-';
       let kansBeter = null; if (groep.test.v && groep.controle.v) { let w = 0; const gam = a => { let x = 0; for (let i = 0; i < 12; i++) x += Math.random(); return a + Math.sqrt(a) * (x - 6); }; for (let i = 0; i < 4000; i++) { const t = Math.max(0, gam(1 + groep.test.k)) / Math.max(1, groep.test.v), c = Math.max(0, gam(1 + groep.controle.k)) / Math.max(1, groep.controle.v); if (t > c) w++; } kansBeter = Math.round(w / 40); }
-      return res.status(200).json({ ok: true, start: FOTOTEST.start, dagen, groep: { test: { ...groep.test, klikratio: ctr(groep.test) }, controle: { ...groep.controle, klikratio: ctr(groep.controle) } }, kansTestBeterProcent: kansBeter, oordeel: dagen < 14 ? 'nog leertijd tot ' + new Date(Date.parse(FOTOTEST.start) + 14 * 864e5).toISOString().slice(0, 10) : kansBeter >= 90 ? 'test wint: foto-regel naar alle sieraden en woonproducten' : kansBeter <= 10 ? 'controle wint: terug naar de leveranciersfoto' : 'nog geen duidelijk verschil', paren, merchantFout: pr.fout || null });
+      const draag = await vg(async () => { const D = await import('../lib/kadolydraag.js'); const g = { test: { v: 0, k: 0, verkocht: 0 }, controle: { v: 0, k: 0, verkocht: 0 } }; const rij = [];
+        for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); const live = st && st.oordeel === 'goed'; if (live) { const T = som[p.t] || { v: 0, k: 0 }, C = som[p.c] || { v: 0, k: 0 }; g.test.v += T.v; g.test.k += T.k; g.controle.v += C.v; g.controle.k += C.k; g.test.verkocht += verk(p.t); g.controle.verkocht += verk(p.c); }
+          rij.push({ soort: p.soort, test: p.t, controle: p.c, foto: st ? { versie: st.n, oordeel: st.oordeel, sinds: st.beoordeeld || null } : null }); }
+        return { let: 'cijfers lopen sinds ' + FOTOTEST.start + '; een paar telt mee zodra de foto is goedgekeurd', test: { ...g.test, klikratio: ctr(g.test) }, controle: { ...g.controle, klikratio: ctr(g.controle) }, paren: rij }; });
+      return res.status(200).json({ ok: true, start: FOTOTEST.start, dagen, draag, groep: { test: { ...groep.test, klikratio: ctr(groep.test) }, controle: { ...groep.controle, klikratio: ctr(groep.controle) } }, kansTestBeterProcent: kansBeter, oordeel: dagen < 14 ? 'nog leertijd tot ' + new Date(Date.parse(FOTOTEST.start) + 14 * 864e5).toISOString().slice(0, 10) : kansBeter >= 90 ? 'test wint: foto-regel naar alle sieraden en woonproducten' : kansBeter <= 10 ? 'controle wint: terug naar de leveranciersfoto' : 'nog geen duidelijk verschil', paren, merchantFout: pr.fout || null });
     }
     if (op === 'koperprofiel') { // 25 nov (Henkjan: "Onderzoek wat voor iemand het kocht en vorige keer ook zodat we gerichter kunnen adverteren."): per betaalde bestelling wat we weten zonder persoonsgegevens: producten, bedrag, moment, toestel en app, terugkerend, bron. Beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
