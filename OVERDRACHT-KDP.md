@@ -25,6 +25,18 @@ Dit is het werkplan voor de hele plank. Elk account en elke chat werkt hieruit: 
 - Royalty per dag 17-24 nov: $50,59 / $25,21 / $43,53 / $35,16 / $34,61 / $91,62 (22 nov: Teens $54,38, Adults $20,30) / $38,26 / 24 nov tot 11:40 UTC $22,75.
 - Ads 22-24 nov, alle landen: CA$44,14 (74 kliks). Teens-ads zijn 17% van de Teens-royalty, Adults-ads 34% (grens 40%).
 
+**Doel: $200 per dag, ook na januari (Henkjan 25 nov 2026: "Dit moet naar 200 per dag ook NA januari").** Dat is ~$6.000 per maand, het hele jaar. Waar we staan: 18-24 nov $47 per dag; juni-oktober 2026 $282-416 per maand (~$11 per dag); de 12 maanden tot nov 2025 gemiddeld $132 per dag, toen de advertenties nog liepen. Buiten het seizoen komt het dus niet vanzelf; het plan is een kalender waarin elk kwartaal een eigen boek draagt, plus de winnaars in meer landen:
+- Jan-feb: Lasting Change (nieuwjaar; jan-feb 2026 $3.543) en de 2027-planners onder het LC-merk.
+- Feb-apr: Valentijn (Choose Wisely, Darling) en Pasen (Bible Color By Number, Easter Basket Stuffers uit de boekwedstrijd).
+- Apr-mei: Moederdag (Mom's Word Search, was $2.451 per jaar).
+- Mei-jul: grillseizoen en Vaderdag (PIT BOSS, Traeger, Griddle; PIT BOSS deed $13.482 in het jaar met ads).
+- Aug-sep: nieuwe cadeautitels bouwen en live zetten, zodat ze reviews hebben voor oktober.
+- Okt-dec: cadeauboeken (Teens, Adults, For Men, Duitse titels).
+- Hele jaar: Apocrypha en Enoch (VK, VS, Australie) en elke winnaar in Canada, VK, Australie en Duitsland.
+- Regel voor nieuwe titels: 8 weken voor het seizoen live, eerst reviews (Kindle gratis dagen, review-QR), dan pas ads. Elke maand in ronde A op de 1e: royalty van de maand tegen $6.000 en welk seizoenboek de volgende 8 weken klaar moet staan.
+
+**Lasting Change nu (Henkjan 25 nov: "Ik zie niks van Lasting Change probeer daar wat mee"):** LC deed $0 in november (rang 1,07 mln, $19,99, 130 reviews). 25 nov 08:35 UTC: KDP LC NIEUWJAAR EXACT (A00430132MU3YXJN4IMNK) van $0,07-0,40 naar het voorgestelde bod: new year resolution journal $0,35, habit workbook $0,56, habits workbook $0,56, habit tracker journal $1,05, self discipline workbook $0,91, self improvement workbook $0,81, goal setting workbook $0,57, personal growth workbook $1,42, self help workbook for adults $0,44, 30 day challenge book $0,57, lasting change journal $0,35, lasting change book $0,74, lasting change workbook $0,55 en de overige woorden met een voorstel; woorden zonder voorstel bleven. Budget $10/dag, down only. Oordeel 28 nov: $15 uitgegeven zonder LC-verkoop = generieke woorden terug naar $0,30 en alleen de merkwoorden (lasting change ...) op het voorgestelde bod houden; daarna de 40%-regel op de LC-royalty. De rest van de LC-omschakeling (4 broad-woorden, AUTO Loose) blijft op 1 dec.
+
 **Stappen (volgorde = volgorde van geld):**
 
 | # | Stap | Wat precies | Stand 24 nov | Wie beslist |
@@ -49,6 +61,7 @@ Dit is het werkplan voor de hele plank. Elk account en elke chat werkt hieruit: 
 
 **Rondes (4 geplande taken in het account dat de rondes draait):**
 - 23 nov liepen de 4 rondes pas op 24 nov 11:13 UTC en zonder Chrome: geen cijfers, geen wijzigingen. De rondes hebben Chrome met de extensie nodig op Henkjans iMac.
+- 25 nov: de rondes werken weer (Chrome aan) maar kunnen nog niet naar de repo pushen; een chat met repo-toegang neemt hun werklogregels over in kdp/rapport.md. Nieuwe geplande taken aanmaken vanuit een chat met de repo erbij werd 25 nov geweigerd door de veiligheidscheck; Henkjan beslist hoe verder.
 - Alleen ronde D heeft sinds 24 nov de nieuwe taaktekst (40%-regel, Teens-rem vervallen, schrijft alleen in het werklog, KDP-cijfers via fetch). Rondes A, B en C noemen nog 50% en proberen naar de repo te pushen (lukt niet vanuit een geplande taak). Voor alle rondes geldt: de besluiten in het werklog en deze overdracht gaan voor de taaktekst.
 - Wie een ronde draait vanuit een gewone chat kan wel pushen (add_repo met push) en werkt dan kdp/rapport.md en deze sectie bij.
 
