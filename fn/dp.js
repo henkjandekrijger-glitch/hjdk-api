@@ -11,12 +11,15 @@
 //   AW Dropship EU (lib/awdrop.js, 21 nov 2026): op=awfeed (X-Lus-Key), op=awkeur (cron 05:23 UTC), op=awtoken, op=awstand,
 //   op=awapi (beschermde host), POST op=aworder (X-Lus-Key; mandje bij AW, betalen alleen met kv aw:order:auto = ja)
 //   CJdropshipping (lib/cj.js, 24 nov 2026): op=cjtoken (sleutel plakken), op=cjstand, op=cjzoek&q=&land=DE|CN&n=, op=cjkies&vid=&prijs=&titel_nl= (beschermde host),
+//   Bijouxmode (lib/bjx.js, 25 nov 2026): op=bjxfeed (X-Lus-Key; ?vers=1 leest Bijouxmode opnieuw), op=bjxstand (aantal en weggelaten met reden),
+//   POST op=bjxorder (X-Lus-Key; bewaren en melden, Henkjan bestelt), op=bjxorders (beschermde host; &besteld=<order_id>&ref= om af te vinken)
 //   op=cjfeed (X-Lus-Key), POST op=cjorder (X-Lus-Key; order bij CJ aangemaakt met payType 3, betalen doet Henkjan in CJ), op=cjorders
 import { WC_TENANT, wcHost, wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
 import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
 import { cjSleutelZet, cjStand, cjZoek, cjKies, cjFeed, cjNieuweOrder, cjOrders, cjOrderInfo } from '../lib/cj.js';
+import { bjxFeed, bjxStand, bjxNieuweOrder, bjxOrders, bjxBesteld } from '../lib/bjx.js';
 import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, awZoek, awPakketten, logRegel as awLog } from '../lib/awdrop.js';
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -150,6 +153,15 @@ export default async function handler(req, res) {
     if (op === 'cjstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjStand()); }
     if (op === 'cjzoek') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjZoek({ q: q.get('q') || undefined, land: q.get('land') || undefined, n: q.get('n') || undefined, naar: q.get('naar') || undefined })); }
     if (op === 'cjkies') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjKies({ vid: q.get('vid'), prijs: q.get('prijs'), titel_nl: q.get('titel_nl'), categorie: q.get('categorie'), land: q.get('land'), weg: q.get('weg') === '1' })); }
+    if (op === 'bjxfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await bjxFeed({ start: q.get('start'), size: q.get('size'), vers: !!q.get('vers') })); }
+    if (op === 'bjxstand') { if (!beschermd && !lus) return res.status(404).send('Niet gevonden'); return res.status(200).json(await bjxStand()); }
+    if (op === 'bjxorders') { if (!beschermd) return res.status(404).send('Niet gevonden'); if (q.get('besteld')) return res.status(200).json(await bjxBesteld(q.get('besteld'), q.get('ref'))); return res.status(200).json(await bjxOrders()); }
+    if (op === 'bjxorder') {
+      if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' });
+      if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
+      const b = typeof req.body === 'object' && req.body ? req.body : JSON.parse(req.body || '{}');
+      const r = await bjxNieuweOrder(b); return res.status(r.ok ? 200 : 400).json(r);
+    }
     if (op === 'cjfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await cjFeed()); }
     if (op === 'cjorders') { if (!beschermd) return res.status(404).send('Niet gevonden'); const id = q.get('cj'); return res.status(200).json(id ? await cjOrderInfo(String(id).replace(/[^A-Za-z0-9_-]/g, '')) : await cjOrders()); }
     if (op === 'cjorder') {
