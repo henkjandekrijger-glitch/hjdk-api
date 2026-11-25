@@ -19,7 +19,7 @@ import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
 import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, bronnenHtml, adviesBlok, bronLink, nieuwProductAdvies, leveringsBeperking, aanbevelingToegestaan, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
 import { bronScript, groeiRonde, groeiStand, groeiHtml, actueleAiStand } from '../lib/gids-groei.js';
-import { BINNENKORT, BINNENKORT_SLUGS, bkInhoud, bkJsonLd } from '../lib/binnenkort.js'; // nog niet leverbare onderwerpen met vraag (25 nov 2026)
+import { BINNENKORT, BINNENKORT_SLUGS, bkInhoud, bkJsonLd, bkLlms, bkIndex } from '../lib/binnenkort.js'; // nog niet leverbare onderwerpen met vraag (25 nov 2026)
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 import * as RED from '../lib/kadoly-redactie.js'; // redactie: elke dag een artikel (19 nov 2026)
 import { kzuxBlok } from '../lib/kzux.js'; // de lerende chat van de keuzehulpen, geleend (19 nov 2026)
@@ -50,6 +50,7 @@ async function catalogus() {
 }
 let CAT_BRON = null;
 let LEVEND = null;
+const BK_OPEN = () => BINNENKORT_SLUGS.filter(x => !GIDSEN[x]); // binnenkort-pagina's zonder gewone gids (25 nov 2026)
 const LEVENDE = () => GIDS_IDS.filter(id => !LEVEND || LEVEND.has(id));
 const thuis = i => Math.round((N(i.p) + (i.fs ? 0 : N(i.vk))) * 100) / 100;
 const leverDatum = lt => { const d = new Date(new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Amsterdam' }) + 'T12:00:00Z'); let n = Math.max(1, N(lt) || 5); while (n > 0) { d.setUTCDate(d.getUTCDate() + 1); const w = d.getUTCDay(); if (w !== 0 && w !== 6) n--; } return d; };
@@ -388,6 +389,7 @@ ${alleHtml(g, A)}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
 ${g.slug === 'dressoir' ? `<section class="si-sec" id="rekenhulp"><p class="eb">Rekenhulp</p><div class="si-l"><a href="${TV_PAD}"><span><b>${esc(TV_TITEL)}</b></span><i aria-hidden="true">→</i></a></div></section>` : ''}
 ${(g.cluster || []).filter(id => GIDSEN[id]).length ? `<section class="si-sec" id="meer-home-staging"><p class="eb">Meer over home staging</p><div class="si-l">${g.cluster.filter(id => GIDSEN[id]).map(id => `<a href="/${esc(id)}"><span><b>${esc(GIDSEN[id].h1)}</b></span><i aria-hidden="true">→</i></a>`).join('')}</div></section>` : ''}
+${(g.binnenkort || []).filter(x => BINNENKORT[x] && !GIDSEN[x]).length ? `<section class="si-sec" id="binnenkort"><p class="eb">Binnenkort bij Kadoly</p><div class="si-l">${g.binnenkort.filter(x => BINNENKORT[x] && !GIDSEN[x]).map(x => `<a href="/${esc(x)}"><span><b>${esc(BINNENKORT[x].h1)}</b><small>Nog niet te koop, wel ons advies</small></span><i aria-hidden="true">→</i></a>`).join('')}</div></section>` : ''}
 ${andere.length ? `<section class="si-sec"><p class="eb">Andere gidsen van Kadoly</p><div class="si-l">${andere.slice(0, 8).map(a => `<a href="/${esc(a.slug)}"><span><b>${esc(a.h1)}</b></span><i aria-hidden="true">→</i></a>`).join('')}</div><p style="margin:14px 0 0"><a href="/">Alle ${andere.length + 1} gidsen</a></p></section>` : ''}</article>
 ${baken(g.slug)}` + VOET(g, await armKans());
 }
@@ -532,6 +534,7 @@ async function home(kans) {
     `<p class="kicker">Kadoly gids</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">${alle} producten van makers. Bij alles de prijs inclusief btw en verzending en de dag dat het in huis is. Past niets, dan zeggen we dat.</p>
 ${kadolyChat(null)}
 ${LEVENDE().length ? `<section class="si-sec" aria-labelledby="gidsen"><p class="eb" id="gidsen">Gidsen</p><div class="si-l">${LEVENDE().slice(0, 8).map(id => GIDSEN[id]).map(x => siRij('/' + x.slug, x.h1)).join('')}</div>${LEVENDE().length > 8 ? `<details class="si-meer"><summary>Toon alle ${LEVENDE().length} gidsen</summary><div class="si-l">${LEVENDE().slice(8).map(id => GIDSEN[id]).map(x => siRij('/' + x.slug, x.h1)).join('')}</div></details>` : ''}</section>` : ''}
+${BK_OPEN().length ? `<section class="si-sec" aria-labelledby="binnenkort"><p class="eb" id="binnenkort">Binnenkort bij Kadoly</p><div class="si-l">${BK_OPEN().map(x => BINNENKORT[x]).map(x => siRij('/' + x.slug, x.h1, 'Nog niet te koop, wel ons advies')).join('')}</div></section>` : ''}
 <section class="si-sec" aria-labelledby="redactie"><p class="eb" id="redactie">Van de redactie</p><div class="si-l">${RED.nieuwsteEerst().slice(0, 3).map(a => siRij('/redactie/' + a.slug, a.titel)).join('')}${siRij('/redactie', 'Alle artikelen van de redactie')}</div></section>
 <section class="si-sec" aria-labelledby="rubrieken"><p class="eb" id="rubrieken">Per rubriek</p><div class="si-l">${R.map(r => siRij('/rubriek/' + r.c, r.naam, r.n + ' producten, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief btw en verzending')).join('')}${siRij('/alle-producten', 'Alle ' + alle + ' producten op een rij')}</div></section>
 ${NF.n ? `<section class="si-sec" aria-labelledby="nieuw"><p class="eb" id="nieuw">Nieuw bij Kadoly</p><p>${NF.n} producten met een recente winkelcatalogusdatum. Een herimportdatum bewijst geen nieuwe introductie.</p><ul class="nwl">${NF.L.slice(0, 4).map(i => nieuwRij(i, '_home')).join('')}</ul><div class="si-l">${siRij(NIEUW_PAD, 'Alles wat nieuw is, per rubriek')}</div></section>` : ''}
@@ -562,7 +565,7 @@ async function llmsVol() {
   const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly (afgelopen ' + NIEUW_DAGEN + ' dagen)\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + '\n\n' + NF.groepen.map(([c, l]) => '- ' + naamR(c) + ': ' + l.length + ' nieuw, ' + HOST + NIEUW_PAD + '#n-' + c).join('\n') + '\n\nIn het aanbod hieronder staat de opgegeven winkelcatalogusdatum; herimport kan die veranderen.\n\n';
   const R = await rubrieken(); t += '## Het hele aanbod van Kadoly per rubriek\n\n'; // 4 nov: alles wat in de winkel staat, zodat AI-assistenten elk product kunnen noemen
   for (const r of R) { t += '### ' + r.naam + '\n\n' + HOST + '/rubriek/' + r.c + '\n\n'; for (const [sb, l] of Object.entries(r.subs).sort((a, b) => (a[0] === 'overig') - (b[0] === 'overig') || b[1].length - a[1].length)) t += '#### ' + naamS(sb) + '\n\n' + l.slice().sort((a, b) => N(b.sc) - N(a.sc)).map(i => llmRegel(i, true)).join('\n') + '\n\n'; }
-  return t + tvLlms(HOST) + "\n" + RED.redactieLlms(HOST, true) + onderzoekTekst(Object.values(cat));
+  return t + tvLlms(HOST) + "\n" + bkLlms(HOST, true, BK_OPEN()) + RED.redactieLlms(HOST, true) + onderzoekTekst(Object.values(cat));
 }
 // zicht.json: het manifest voor de ZICHT-lus (lib/zicht-projecten.js), met eigen meting van lezers en AI-bots
 async function zichtJson() {
@@ -582,6 +585,7 @@ async function llms() {
   const R = await rubrieken(); t += '## Rubrieken\n\n' + R.map(r => '- ' + r.naam + ': ' + r.n + ' producten van ' + r.merken.size + ' makers, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief btw en verzending, ' + HOST + '/rubriek/' + r.c).join('\n') + '\n\n';
   const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + ' De volledige lijst staat in ' + HOST + '/llms-full.txt.\n\n' + NF.L.slice(0, 20).map(i => llmRegel(i, true)).join('\n') + '\n\n';
   for (const id of LEVENDE()) { const g = GIDSEN[id]; t += '## ' + g.h1 + '\n\n' + HOST + '/' + id + '\n\n' + g.kort + '\n\n'; for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief btw en verzending. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; } t += '\n'; }
+  t += bkLlms(HOST, false, BK_OPEN()); // 25 nov 2026: binnenkort-pagina's (nog niet te koop, wel advies) ook voor AI-assistenten
   return t + RED.redactieLlms(HOST, false) + onderzoekTekst(Object.values(cat));
 }
 
@@ -714,7 +718,7 @@ export default async function handler(req, res) {
       await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
       const RR = await rubrieken(); const NF = await nieuwFeiten();
       let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {}
-      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(GC.gcLijst(), RED.RED_PAGINAS()), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'2-rubrieken-1121',rubrieken:'2-rubrieken-1121',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
+      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(GC.gcLijst(), RED.RED_PAGINAS(), bkIndex(BK_OPEN())), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'2-rubrieken-1121',rubrieken:'2-rubrieken-1121',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
       try { const { cadeauTipsCheck, CADEAUTIPS_SLUGS } = await import('../lib/gidsen-cadeautips.js'); const { HS_SLUGS } = await import('../lib/gidsen-homestaging.js'); const weg = cadeauTipsCheck(GIDSEN, await catalogus(), CADEAUTIPS_SLUGS.concat(HS_SLUGS)); if (weg.length) { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'cadeautips-check', tekst: 'Cadeautips op gids.kadoly.com noemen producten die niet leverbaar zijn; tekst aanpassen in lib/gidsen-cadeautips.js: ' + weg.map(x => x.slug + ' ' + x.naam).join('; ').slice(0, 800) })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } } catch (e) {} // 21 nov: controle, de cadeautips noemen vaste producten in het korte antwoord
       const urls = q.get('alles') === '1' ? [...new Set([...Object.keys(plan.paginas), ...plan.urls])] : plan.urls;
       if (!urls.length) return res.status(200).json({ ok:true, niets:true, gewijzigd:0 });
@@ -835,7 +839,7 @@ export default async function handler(req, res) {
       return res.status(200).send(kop(TV_TITEL.replace(': welk meubel past bij jouw tv?', ' voor 32 tot 98 inch'), 'Reken je tv-maat om naar de breedte van het tv-meubel: 65 inch heeft circa 144 cm beeldbreedte. Met stylingindicatie en checks voor voet, diepte en draagvermogen.', TV_PAD, '<script type="application/ld+json">' + tvLd(HOST, ORG) + '</script>') + tvPagina({ esc, euro, cat, thuis, leverTekst: i => 'in huis ' + nlDatum(leverDatum(i.lt)) }, inch) + baken('tv-rekenhulp') + VOET(null, await armKans(), false)); } // zonder de algemene cadeauchat: die zette cadeau-pills boven de rekenhulp
     if (slug === 'alle-producten') { await telBot(ua, '_catalogus'); return res.status(200).send(await alleProducten(await armKans())); }
     if (slug === NIEUW_PAD.slice(1)) { await telBot(ua, 'nieuw'); return res.status(200).send(await nieuwPagina(await armKans())); }
-    const bk = !GIDSEN[slug] && BINNENKORT[slug]; if (bk) { await telBot(ua, slug); res.setHeader('cache-control', 'public, max-age=600'); return res.status(200).send(kop(bk.titel + ' | Kadoly gids', bk.beschrijving, '/' + slug, bkJsonLd(bk)) + bkInhoud(bk) + VOET(bk, 0.5)); }
+    const bk = !GIDSEN[slug] && BINNENKORT[slug]; if (bk) { await telBot(ua, slug); res.setHeader('cache-control', 'public, max-age=600'); const live = x => LEVENDE().includes(x) || !!BINNENKORT[x]; return res.status(200).send(kop(bk.titel.length <= 46 ? bk.titel + ' | Kadoly gids' : bk.titel, bk.beschrijving, '/' + slug, bkJsonLd(bk)) + bkInhoud(bk, live) + VOET(bk, 0.5)); }
     const g = GIDSEN[slug]; if (!g) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(kop('Niet gevonden', 'Deze gids bestaat niet.', '/', '') + '<h1>Deze gids bestaat (nog) niet</h1><p><a href="/">Naar alle gidsen</a></p>' + VOET(null, 0.5)); }
     await telBot(ua, slug);
     await catalogus(); if (LEVEND && !LEVEND.has(slug)) { res.setHeader('cache-control', 'public, max-age=3600'); res.setHeader('x-robots-tag', 'noindex'); return res.status(410).send(kop(g.h1, 'De producten uit deze gids zijn niet meer leverbaar bij Kadoly.', '/' + slug, '<meta name="robots" content="noindex,follow">') + `<h1>${esc(g.h1)}</h1><p>De producten uit deze gids verkopen we niet meer. Kijk bij de andere gidsen:</p><ul>${LEVENDE().map(id => `<li><a href="/${esc(id)}">${esc(GIDSEN[id].h1)}</a></li>`).join('')}</ul>` + VOET(null, 0.5)); }
