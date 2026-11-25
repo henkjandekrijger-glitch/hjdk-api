@@ -1,0 +1,107 @@
+{
+  "gecontroleerd": "2026-11-25",
+  "titel": "Eigen fotoclaims uit het mailarchief",
+  "inleiding": "De redactie heeft meerdere eigen zakenreeksen in het mailarchief aangetroffen. Ze hebben verschillende eisers en beelden. De bedragen hieronder zijn verzoeken uit brieven, geen optelsom van bewezen schulden of inkomsten. Correspondentie en originele bijlagen blijven besloten.",
+  "zaken": [
+    {
+      "id": "hollandse-hoogte-2018",
+      "datum": "2018-05-02",
+      "partij": "Hollandse Hoogte / Permission Machine",
+      "periode": "mei tot oktober 2018",
+      "foto": "Afbeelding bij een humorblog op Yoors",
+      "bedrag": "€817,50 genoemd in de verzonden mail van 28 september 2018",
+      "status": "De melder schreef op 7 en 8 oktober 2018 dat onder protest was betaald. Een bankbewijs van de betaling is in deze controle niet vastgesteld.",
+      "bewijs": "Ontvangen sommatie van 2 mei, correspondentie van 8 mei en 28 september, verzonden berichten van 7 en 8 oktober 2018; fotobijlage ingezien als tekstextractie.",
+      "betekenis": "De foto werd volgens de melder direct verwijderd. Hollandse Hoogte/Permission Machine antwoordde dat verwijdering de vergoeding voor eerder gebruik niet wegnam.",
+      "bronIds": [],
+      "fotoUrl": null
+    },
+    {
+      "id": "roel-dijkstra-2022",
+      "datum": "2021-03-24",
+      "partij": "Roel Dijkstra / gemachtigde mr. K.M. van Boven",
+      "periode": "2021 tot januari 2023",
+      "foto": "Hand met pillen; daarnaast een afzonderlijke claim in augustus 2022",
+      "bedrag": "Uitkomstbedrag hier niet vastgesteld",
+      "status": "De mailbox bevat een op 23 december 2022 doorgestuurde scan met de naam '20221222 vonnis.pdf'. De vier gescande pagina's konden in deze ronde niet volledig worden uitgelezen. De correspondentie en Bakx' openbare verslag beschrijven een veroordeling; het precieze dictum is hier niet zelfstandig vastgesteld.",
+      "bewijs": "Brieven van 24 maart en 7 juli 2021; procescorrespondentie uit 2022, ontvangen vonnisscan en berichten van december 2022/januari 2023.",
+      "betekenis": "De melder betwistte de claim en liet zich vertegenwoordigen. Een nieuwe claim in augustus 2022 hoort niet bij de ANP-brieven. Een verzoek om herroeping besproken in mail is geen bewijs dat een herroepingsprocedure daadwerkelijk is gevoerd.",
+      "bronIds": [
+        "eigen-dijkstra-verslag",
+        "roel-archief"
+      ],
+      "fotoUrl": "https://fotos.roeldijkstra.nl/photos/5eb1e7eeea0d38147c45df47"
+    },
+    {
+      "id": "anp-2022",
+      "datum": "2022-10-26",
+      "partij": "ANP / Visual Rights Group",
+      "periode": "oktober tot december 2022",
+      "foto": "Stalbrand, ANP-beeldnummer 364111274",
+      "bedrag": "€355,06 oorspronkelijk voorstel",
+      "kosten": [
+        95,
+        23.75,
+        190,
+        46.31
+      ],
+      "status": "De ontvanger betwistte op 26 oktober en 20 december 2022 de bevoegdheid om schadevergoeding te eisen. Geen betaling, intrekking of eindvonnis vastgesteld.",
+      "bewijs": "Eerste brief van 26 oktober 2022 met betaalverzoek en beeldbijlage; eigen antwoorden; ANP/VRG-reactie en beeldbankscreenshot van 20 december 2022.",
+      "betekenis": "ANP/VRG beriep zich op het vermoeden van makerschap uit artikel 4 Auteurswet en verwees naar publicaties met ANP-credit. De ontvanger vond dat geen bewijs van overdracht of exclusieve licentie. Beide standpunten worden weergegeven; WAM beslecht dit geschil niet.",
+      "bronIds": [],
+      "fotoUrl": "https://www.anpfoto.nl/search.pp?pictureid=364111274&page=1&pos=1"
+    },
+    {
+      "id": "iversen-2023",
+      "datum": "2023-01-09",
+      "partij": "Mads Peter Iversen / Duitse gemachtigde",
+      "periode": "januari 2023",
+      "foto": "Foto in een afzonderlijke internationale claim; precieze afbeelding hier niet vastgesteld",
+      "bedrag": "€2.621,38 netto; €3.276,73 inclusief opgevoerde Deense btw",
+      "status": "Een kostenspecificatie is ontvangen. Een betaling, intrekking of eindvonnis is in deze controle niet vastgesteld.",
+      "bewijs": "Rechtstreeks ontvangen e-mail 'Cost Breakdown: Mads Peter Iversen / Yoors' van 9 januari 2023 met bijlage; de e-mailtekst bevat de specificatie.",
+      "betekenis": "De brief vroeg €685 licentie, €685 wegens ontbrekende bron, €59,38 rente, €95 documentatie en €1.097 juridische kosten. De geldigheid van de claim en de belastingbehandeling zijn hiermee niet bewezen.",
+      "bronIds": [],
+      "fotoUrl": null
+    },
+    {
+      "id": "anp-2024",
+      "datum": "2024-09-25",
+      "partij": "ANP / Visual Rights Group",
+      "periode": "september 2024 tot april 2025",
+      "foto": "Mark Rutte en Bill Gates, ANP-beeldnummer 337086141",
+      "bedrag": "€391,29 oorspronkelijk voorstel",
+      "kosten": [
+        105,
+        26.25,
+        209,
+        51.04
+      ],
+      "status": "Herinnering van 7 februari en ingebrekestelling van 3 april 2025; elk noemt €22,50 extra. Geen betaling, intrekking of eindvonnis vastgesteld.",
+      "bewijs": "Ontvangen brieven met betaalverzoek en beeldbijlage; correspondentie van 3 april 2025 met Martine Bakx.",
+      "betekenis": "Het pad in de beeldbijlage verwijst naar een Yoors-preview van een Twitterbericht. Dat stelt op zichzelf niet vast of het juridisch om embedden, een eigen kopie of ander hergebruik ging. Bakx betwijfelde in haar advies de rechtenpositie van ANP; dat advies is geen rechterlijke beslissing.",
+      "bronIds": [],
+      "fotoUrl": "https://www.anpfoto.nl/search.pp?pictureid=337086141&page=1&pos=1"
+    },
+    {
+      "id": "belga-2024",
+      "datum": "2024-12-10",
+      "partij": "Belga / Visual Rights Group",
+      "periode": "december 2024 tot juli 2025",
+      "foto": "Onweer, in de brief aangeduid als beeld 90618568",
+      "bedrag": "€412,85 oorspronkelijk voorstel",
+      "kosten": [
+        150,
+        0,
+        209,
+        53.85
+      ],
+      "status": "Herinnering op 9 januari en ingebrekestelling op 9 juli 2025. Bakx nam op verzoek van de ontvanger de correspondentie over en vroeg op 11 juli om rechtenbewijs. Geen bevestigde intrekking, betaling of eindvonnis vastgesteld.",
+      "bewijs": "Brief van 10 december 2024 met kosten- en beeldbijlage, herinnering en ingebrekestelling; daadwerkelijk verzonden verzoek om rechtenbewijs van 11 juli 2025.",
+      "betekenis": "De afzender vorderde namens Belga. Dat het beeld ook via een ANP-beeldbank kon worden aangeboden, maakt deze claim niet tot een ANP-claim. Bakx noemde Jonas d'Hollander als fotograaf; die identificatie is hier aan haar bericht toegeschreven.",
+      "bronIds": [],
+      "fotoUrl": "https://www.anpfoto.nl/search.pp?pictureid=495546135&page=1&pos=1"
+    }
+  ],
+  "beeldbeleid": "De geclaimde foto's zijn geen door WAM vrijgegeven beeldmateriaal. Waar een oorspronkelijke beeldbanklink of openbaar archief is geïdentificeerd, staat een gewone uitgaande link. Er wordt geen foto, screenshot, originele bijlage of voorvertoning van die bron ingeladen. Dit voorkomt dat WAM die betwiste foto's opnieuw publiceert; een claimvrije uitkomst kan niemand garanderen."
+}

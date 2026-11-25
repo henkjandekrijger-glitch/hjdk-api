@@ -1,0 +1,204 @@
+{
+  "publicatie": "2026-11-25",
+  "bijgewerkt": "2026-11-25",
+  "titel": "Fotoclaims als verdienmodel: wie verdient aan de brief?",
+  "seoTitel": "Fotoclaims als verdienmodel: fotografen en claimbedrijven | WAM",
+  "kort": "Van een foto van €105 naar een brief van €391,29: het geld achter fotoclaims, met concrete fotografen, primaire uitspraken, eigen claimbrieven en de grenzen van wat bewezen is.",
+  "bronnen": [
+    {
+      "id": "wolf-vonnis",
+      "naam": "Amtsgericht Würzburg · 18 C 611/18, 18 december 2018 (afschrift)",
+      "url": "https://www.ifross.org/Fremdartikel/AG_Wuerzburg_Urteil_CC_2018.pdf",
+      "noot": "Oordeel over de werkwijze op p. 5; partijen zijn in deze kopie geanonimiseerd."
+    },
+    {
+      "id": "wolf-identiteit",
+      "naam": "Markus Kompa · verslag van de eigen zaak, januari 2019",
+      "url": "https://kanzleikompa.de/blog/amtsgericht-wuerzburg-schadensersatz-fuer-anwaltskosten-gegen-unberechtigte-geldforderung-bei-fehlerhafter-creative-commons-nutzung",
+      "noot": "De betrokken advocaat identificeert zijn wederpartij als Thomas Wolf. Hij vermeldde destijds dat de uitspraak nog niet onherroepelijk was."
+    },
+    {
+      "id": "verch-vonnis",
+      "naam": "Handelsgericht Zürich · HG180107-O, 6 mei 2020",
+      "url": "https://www.gerichte-zh.ch/fileadmin/user_upload/entscheide/oeffentlich/HG180107-O8.pdf",
+      "noot": "Primaire rechtbankpublicatie; afwijzing van €6.127,40 en onderbouwing van de licentieschade."
+    },
+    {
+      "id": "verch-identiteit",
+      "naam": "Martin Steiger · bespreking van de door hem gevoerde procedure",
+      "url": "https://steigerlegal.ch/publikation/flickr-abmahnungen-urteil/",
+      "noot": "Identificeert de geanonimiseerde wederpartij als Marco Verch."
+    },
+    {
+      "id": "verch-eigen",
+      "naam": "Marco Verch · eigen uitleg over nalicentiëring",
+      "url": "https://foto.wuestenigel.com/abmahnung/",
+      "noot": "Actueel gepubliceerd eigen standpunt; geen onafhankelijke bevestiging van de rechtmatigheid van elke claim."
+    },
+    {
+      "id": "cc-5887",
+      "naam": "Rechtspraak · ECLI:NL:RBMNE:2021:5887",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBMNE:2021:5887",
+      "noot": "Schadevergoeding, voorwaarden CC-licentie en afzonderlijke proceskosten; eiser is geanonimiseerd."
+    },
+    {
+      "id": "broekhuijzen-identiteit",
+      "naam": "Martine Bakx · eigen verslag zaak CC-foto",
+      "url": "https://www.fotoclaim.nl/2021/12/cc-by-sa-40-licentie-wikipedia.html",
+      "noot": "Bakx schreef het verweer en noemt Richard Broekhuijzen en gemachtigde D.J.H. Dijkstra. Die naamkoppeling is haar verslag, niet de openbare rechtbankkop."
+    },
+    {
+      "id": "dijkstra-2012",
+      "naam": "Rechtspraak · ECLI:NL:RBROT:2012:BY3179",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2012:BY3179",
+      "noot": "Roel Dijkstra Persfotografie / NoRisk Parking; een toegewezen auteursrechtclaim."
+    },
+    {
+      "id": "dijkstra-2024",
+      "naam": "Rechtspraak · ECLI:NL:RBZWB:2024:9224",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBZWB:2024:9224",
+      "noot": "Rechter verwerpt een algemeen beroep op verdienmodel of claimcultuur; bron voor het juridische tegenargument."
+    },
+    {
+      "id": "dijkstra-verslag",
+      "naam": "Martine Bakx · verslag hand met pillen",
+      "url": "https://www.martinebakx.com/2022/12/vonnis-hand-met-pillen.html",
+      "noot": "Openbaar procesverslag bij de zaak die ook in het eigen mailarchief zit."
+    },
+    {
+      "id": "pixray-groei",
+      "naam": "Dennis Wetzig · eigen bericht over omzetgroei Fair Licensing",
+      "url": "https://www.linkedin.com/posts/dwetzig_revenue-growth-for-our-fair-licensing-activity-7275454668422459393-RYJY",
+      "noot": "Een eigen bedrijfsuitlating over 2024. Geen onafhankelijke jaarrekening of ANP-omzet."
+    },
+    {
+      "id": "cc-beleid",
+      "naam": "Creative Commons Germany · FAQ 2.14 en 2.15",
+      "url": "https://de.creativecommons.net/faqs/",
+      "noot": "Verklaart zowel de afdwingbaarheid van licenties als de grens bij buitensporige handhaving."
+    },
+    {
+      "id": "anp-standpunt",
+      "naam": "Martha Riemsma · ingezonden ANP-standpunt, 17 april 2026",
+      "url": "https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos",
+      "noot": "ANP verdedigt de bescherming en vergoeding van makers en beschrijft de verandering van de handhavingsroute."
+    }
+  ],
+  "secties": [
+    {
+      "id": "het-model",
+      "kop": "De foto is het begin. De handhaving kan een aparte markt worden.",
+      "alineas": [
+        "Een fotograaf kan geld ontvangen voor het vooraf licentiëren van een beeld. Na ongeoorloofd gebruik kan een tweede geldstroom ontstaan: een vergoeding voor eerder gebruik, toeslagen, onderzoeks- en documentatiekosten, juridische bijstand en soms proceskosten. De vraag is wie welk deel ontvangt en welke posten werkelijk onderbouwd zijn.",
+        "Het eigen ANP-voorstel uit 2024 maakt dat concreet. Bij een opgevoerde licentie van €105 kwam €26,25 verhoging, €209 voor opsporing en onderzoek en €51,04 buitengerechtelijke kosten. Het totaal was €391,29. €260,04 van dat verzoek bestond uit diensten van VRG, niet uit de gemiste basislicentie. Dat zijn gevraagde bedragen; de brief bewijst geen betaling, winst of persoonlijke opbrengst voor de fotograaf.",
+        "De economische prikkel is onze analyse: wanneer opsporing, standaardcorrespondentie en afhandeling herhaalbaar zijn, kan handhaving zelf een product worden. Of een specifieke claim onrechtmatig of misbruik is, vereist bewijs over die concrete zaak. Het woord verdienmodel vervangt dat bewijs niet."
+      ],
+      "bronIds": []
+    },
+    {
+      "id": "fotografen",
+      "kop": "De fotografen: het bewijs verschilt per naam",
+      "alineas": [
+        "Hieronder staan concrete voorbeelden, met hun verschillende bewijsstatus. Een historisch vonnis zegt niet automatisch hoe iemand nu werkt. Omzetverdeling en het aandeel van claims in het totale inkomen zijn voor deze personen niet vastgesteld."
+      ],
+      "items": [
+        {
+          "kop": "Thomas Wolf: een rechter benoemde een systematische geldverdienaanpak",
+          "alineas": [
+            "In een zaak van 18 december 2018 oordeelde het Amtsgericht Würzburg dat achter het optreden van de fotograaf een systematische aanpak zat om gebruikers op te sporen en met te hoge schadevorderingen geld te verdienen. De tegenvordering van €450 werd afgewezen; de fotograaf moest €215 aan buitengerechtelijke advocaatkosten vergoeden, naast de proceskosten.",
+            "Het afschrift is geanonimiseerd. De advocaat die de gebruiker vertegenwoordigde, Markus Kompa, identificeerde de wederpartij in zijn eigen verslag als Thomas Wolf van tw-photomedia. Kompa vermeldde in januari 2019 dat het vonnis toen nog niet onherroepelijk was. Een latere beroepsuitkomst is in dit onderzoek niet vastgesteld.",
+            "Dit is het duidelijkste onderzochte voorbeeld van een rechterlijk bekritiseerde geldverdienaanpak. Het is geen algemene uitspraak dat iedere foto of vordering van deze fotograaf ongeldig is."
+          ],
+          "bronIds": [
+            "wolf-vonnis",
+            "wolf-identiteit"
+          ]
+        },
+        {
+          "kop": "Marco Verch: publiek aanbod voor nalicentiëring en een afgewezen claim",
+          "alineas": [
+            "Marco Verch biedt veel foto's onder Creative Commons aan. Op zijn eigen website legt hij uit dat hij bij een schending van de voorwaarden een rechtstreeks aanbod voor nalicentiëring stuurt, naar eigen zeggen om een duurdere advocatenbrief te voorkomen. Daarmee beschrijft hij zelf een terugkerende route van gratis voorwaardelijk gebruik naar betaald herstel.",
+            "In de door advocaat Martin Steiger als Verch-zaak geïdentificeerde procedure HG180107-O stelde het Handelsgericht Zürich op 6 mei 2020 vast dat een eis van €6.127,40 voor tien foto's niet bestond. Het bewijs van de gestelde inbreuk en de onderbouwing van de schade schoten tekort. Ook de brief voldeed volgens het vonnis niet aan de beoordeelde Duitse eisen.",
+            "De rechtbank hoefde daarvoor geen algemeen oordeel over een onrechtmatig bedrijfsmodel te geven. Verch benadrukt nu dat gratis gebruik aan licentievoorwaarden gebonden blijft. Een afwijzing van deze claim is geen vrijbrief om zijn beelden zonder naams- en licentievermelding te gebruiken."
+          ],
+          "bronIds": [
+            "verch-vonnis",
+            "verch-identiteit",
+            "verch-eigen"
+          ]
+        },
+        {
+          "kop": "Roel Dijkstra: herhaalde handhaving, met ook toegewezen vorderingen",
+          "alineas": [
+            "Roel Dijkstra Persfotografie komt al in de benoemde procedure tegen NoRisk Parking uit 2012 voor. Daarnaast bevat het eigen WAM-mailarchief een andere zaak over een hand met pillen, procescorrespondentie uit 2022 en een afzonderlijke nieuwe claim in augustus 2022. Dat onderbouwt een herhaalde handhavingspraktijk. Het bewijst niet welk aandeel van zijn inkomen uit claims komt.",
+            "In de NoRisk-zaak wees de rechter een vergoeding toe. Het openbare verslag van Bakx over de eigen zaak beschrijft eveneens een voor de ontvanger ongunstige uitspraak. De ontvangen vonnisscan kon hier niet volledig worden uitgelezen; daarom publiceren we voor die eigen zaak geen zelfstandig vastgesteld dictum of schadebedrag.",
+            "Roel Dijkstra, Fotopersburo Dijkstra B.V. en gemachtigde D.J.H. (Dirk) Dijkstra van nl.legal zijn niet zonder meer dezelfde persoon of rechtspersoon. Het dossier voegt hun uitspraken en inkomsten niet samen."
+          ],
+          "bronIds": [
+            "dijkstra-2012",
+            "dijkstra-verslag"
+          ]
+        },
+        {
+          "kop": "Richard Broekhuijzen: een CC-foto met een toegewezen schade- en kostenveroordeling",
+          "alineas": [
+            "Bakx identificeert de fotograaf in ECLI:NL:RBMNE:2021:5887 als Richard Broekhuijzen en de gemachtigde als D.J.H. Dijkstra van nl.legal. In de primaire uitspraak zijn de partijen geanonimiseerd. De naamkoppeling steunt hier dus op haar verslag van een procedure waarin zij het verweer schreef.",
+            "De rechter kende op 8 december 2021 €360 licentieschade en €90 wegens ontbrekende naamsvermelding toe. Daarboven kwamen €67,50 buitengerechtelijke kosten, €2.036,30 proceskosten in conventie en €124 in reconventie. Opsporingskosten werden niet afzonderlijk toegewezen. De voorwaarden voor de gunstigere CC BY-SA 4.0-licentie waren volgens het vonnis niet gevolgd.",
+            "Dit laat zien hoe de rekening groter kan worden dan de basislicentie. Het laat óók zien dat een rechter een claim over een gratis onder voorwaarden aangeboden foto kan toewijzen. Dit vonnis bewijst geen misbruik door Broekhuijzen en geen persoonlijke winst ter grootte van de totale proceskosten."
+          ],
+          "bronIds": [
+            "cc-5887",
+            "broekhuijzen-identiteit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eigen-brieven",
+      "kop": "Wat de eigen brieven over de geldstroom laten zien",
+      "alineas": [
+        "In de oorspronkelijke ANP-brief uit 2022 was de basislicentie €95; met €23,75 verhoging, €190 onderzoek en €46,31 buitengerechtelijke kosten werd €355,06 gevraagd. De ANP-brief uit 2024 kwam bij €105 basislicentie op €391,29. De Belga/VRG-brief uit december 2024 vroeg €150 licentie plus €209 onderzoek en €53,85 buitengerechtelijke kosten: €412,85.",
+        "Een afzonderlijke e-mail namens fotograaf Mads Peter Iversen vroeg op 9 januari 2023 €685 basislicentie, nog eens €685 wegens ontbrekende bron, €59,38 rente, €95 documentatie en €1.097 juridische kosten. Dat kwam op €2.621,38 netto. Met de opgevoerde Deense btw werd €3.276,73 gevraagd. De brief noemde een vermindering tot het nettobedrag bij een geldig Europees btw-nummer.",
+        "De eisen betroffen verschillende partijen, landen en feiten. WAM presenteert deze niet als één gezamenlijke operatie en telt ze niet op tot bewezen schade of ontvangen inkomsten. Eén eigen brief namens Iversen bewijst geen structureel claimmodel van die fotograaf. De status en bronstukken van alle eigen zaken staan in het ANP-dossier."
+      ],
+      "bronIds": []
+    },
+    {
+      "id": "bedrijven",
+      "kop": "De handhavingsdienst is zelf een verkoopbaar product",
+      "alineas": [
+        "Bij een claim kunnen een fotograaf, beeldbank, opsporingsleverancier, afhandelingsbedrijf en gemachtigde betrokken zijn. Hun rollen en contracten verschillen. De kostenstaat van een brief laat niet zien welk deel uiteindelijk naar de fysieke maker gaat.",
+        "Een concrete bedrijfsuitlating is het LinkedIn-bericht van PIXRAY-directeur Dennis Wetzig over omzetgroei van het Fair Licensing-platform in 2024. Het toont dat de leverancier zijn handhavingsplatform als commerciële activiteit beschrijft. Het is geen geverifieerde jaarrekening, geen cijfer over ANP en geen bewijs dat alle groei uit onterechte claims kwam.",
+        "Ook de oude combinatie van ANP en Visual Rights Group moet worden onderscheiden van de huidige ANP Fair Licensing-route. ANP beschreef in 2026 dat de samenwerking met VRG was beëindigd. Een oude brief mag niet aan een later aangetreden directeur of een andere leverancier worden toegeschreven alsof die hem zelf heeft verzonden."
+      ],
+      "bronIds": [
+        "pixray-groei",
+        "anp-standpunt"
+      ]
+    },
+    {
+      "id": "tegenargument",
+      "kop": "Waarom fotografen zeggen dat handhaving nodig is",
+      "alineas": [
+        "Het tegenargument is wezenlijk: een foto kan onrechtmatig gebruikt zijn en een maker kan daardoor inkomsten missen. Een vrij te bekijken foto is niet automatisch vrij herbruikbaar. Een Creative Commons-licentie kan naamsvermelding, een licentielink of andere voorwaarden vereisen.",
+        "Creative Commons Germany benadrukt zowel dat de voorwaarden afdwingbaar zijn als dat buitensporige eisen en dreigementen kunnen doorschieten. De organisatie bepleit bij fouten in naamsvermelding ook een minnelijke correctie.",
+        "De Nederlandse rechter wees in ECLI:NL:RBZWB:2024:9224 erop dat een algemeen beroep op een verdienmodel of claimcultuur geen reden was om een onderbouwde schadeclaim af te wijzen. Dat is een noodzakelijk tegenwicht bij het woord fototrol: herhaalde handhaving is niet op zichzelf onrechtmatig."
+      ],
+      "bronIds": [
+        "cc-beleid",
+        "dijkstra-2024",
+        "anp-standpunt"
+      ]
+    },
+    {
+      "id": "bewijsgrens",
+      "kop": "Wat nog nodig is om het echte verdienmodel vast te stellen",
+      "alineas": [
+        "Voor een onderbouwd oordeel over de omvang zijn meer gegevens nodig: aantallen verstuurde claims, het aandeel ingetrokken en betaalde dossiers, gemiddelde basislicentie en bijkomende kosten, de verdeling tussen maker en dienstverlener, werkelijk gemaakte kosten en de normale verkoop van licenties buiten claims.",
+        "Die cijfers zijn hier niet bekend. Een opgevoerd bedrag is geen ontvangen omzet en ontvangen omzet is geen winst. Een verloren claim bewijst geen opzet; een gewonnen claim bewijst niet dat alle andere dossiers correct zijn. Waar de rechter wél een systematische geldverdienaanpak benoemt, vermelden we dat oordeel met zijn zaak, datum en begrenzing.",
+        "De vraag aan iedere handhaver is concreet: laat per beeld de rechtenketen, het oorspronkelijke gebruik, het normale tarief en de verrichte werkzaamheden zien. WAM heeft in deze ronde geen nieuwe wederhoorverzoeken aan deze personen verstuurd."
+      ],
+      "bronIds": []
+    }
+  ]
+}

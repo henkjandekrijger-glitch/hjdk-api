@@ -1,0 +1,255 @@
+{
+  "bijgewerkt": "2026-11-25",
+  "methode": "Publieke professionele identiteit gekoppeld op naam én organisatie. Een profiel bevestigt geen persoonlijke aansprakelijkheid. Alleen foto's met aantoonbare passende hergebruikstoestemming worden ingeladen; overige portretten blijven een gewone bronlink. Geen profielfoto's van LinkedIn gekopieerd.",
+  "personen": [
+    {
+      "id": "martha-riemsma",
+      "naam": "Martha Riemsma",
+      "linkedin": "https://nl.linkedin.com/in/marthariemsma",
+      "bron": "https://www.stichtingrpo.nl/5-vragen-aan-martha-riemsma-directeur-bij-anp-en-voorzitter-van-bestuur-de-tegel/",
+      "gecontroleerd": "2026-11-25",
+      "portretBron": "https://www.stichtingrpo.nl/5-vragen-aan-martha-riemsma-directeur-bij-anp-en-voorzitter-van-bestuur-de-tegel/"
+    },
+    {
+      "id": "martijn-bennis",
+      "naam": "Martijn Bennis",
+      "linkedin": "https://nl.linkedin.com/in/martijnbennis",
+      "bron": "https://ecp.nl/werknemer/martijn-bennis/",
+      "gecontroleerd": "2026-11-25",
+      "portretBron": "https://ecp.nl/werknemer/martijn-bennis/"
+    },
+    {
+      "id": "chris-oomen",
+      "naam": "Chris Oomen",
+      "linkedin": null,
+      "bron": "https://marketingreport.nl/martha-riemsma-nieuwe-algemeen-directeur-van-het-anp",
+      "gecontroleerd": "2026-11-25",
+      "noot": "Geen eenduidig geverifieerd persoonlijk LinkedIn-profiel. De gevonden naamgenoot bij Christian Alexander is niet aan deze eigenaar gekoppeld."
+    },
+    {
+      "id": "jacques-kuyf",
+      "naam": "Jacques Kuyf",
+      "linkedin": null,
+      "bron": "https://nl.linkedin.com/posts/jacques-p-m-kuyf-a7aab01b_trots-de-opening-2026-vanuit-gaststad-eindhoven-activity-7500266160169353217-n1mM",
+      "gecontroleerd": "2026-11-25",
+      "aliases": [
+        "Jacques P.M. Kuyf"
+      ]
+    },
+    {
+      "id": "martine-bakx",
+      "naam": "Martine Bakx",
+      "linkedin": "https://nl.linkedin.com/in/martine-bakx-092708186",
+      "bron": "https://www.martinebakx.com/p/over-mij.html",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "edouard-van-arem",
+      "naam": "Edouard van Arem",
+      "linkedin": "https://nl.linkedin.com/in/edouardvanarem",
+      "bron": "https://nl.linkedin.com/in/edouardvanarem",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "jessica-van-der-waal",
+      "naam": "Jessica van der Waal",
+      "linkedin": "https://nl.linkedin.com/in/jessicavanderwaal",
+      "bron": "https://nl.linkedin.com/in/jessicavanderwaal",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "dennis-wetzig",
+      "naam": "Dennis Wetzig",
+      "linkedin": "https://de.linkedin.com/in/dwetzig",
+      "bron": "https://www.linkedin.com/company/getpixray",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "christoffer-feilberg",
+      "naam": "Christoffer Feilberg",
+      "linkedin": "https://dk.linkedin.com/in/christofferfeilberg",
+      "bron": "https://www.linkedin.com/posts/christofferfeilberg_exciting-news-to-share-i-am-thrilled-to-activity-7059553750423658496-eu83",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "ywein-van-den-brande",
+      "naam": "Ywein Van den Brande",
+      "linkedin": "https://be.linkedin.com/in/ywein-van-den-brande",
+      "bron": "https://be.linkedin.com/company/visualrights",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "patricia-rehe",
+      "naam": "Patricia Rehe",
+      "linkedin": "https://nl.linkedin.com/in/patricia-rehe-9142331b",
+      "bron": "https://nl.linkedin.com/in/patricia-rehe-9142331b",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "paul-vreeker",
+      "naam": "Paul Vreeker",
+      "linkedin": "https://nl.linkedin.com/in/paul-vreeker-40631018",
+      "bron": "https://nl.linkedin.com/in/paul-vreeker-40631018",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "kim-van-keken",
+      "naam": "Kim van Keken",
+      "linkedin": "https://nl.linkedin.com/in/kim-van-keken-2101679",
+      "bron": "https://nl.linkedin.com/in/kim-van-keken-2101679",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "jurryt-van-de-vooren",
+      "naam": "Jurryt van de Vooren",
+      "linkedin": "https://nl.linkedin.com/in/jurryt",
+      "bron": "https://nl.linkedin.com/in/jurryt",
+      "gecontroleerd": "2026-11-25",
+      "foto": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Jurryt_van_de_Vooren_bij_Publiek_Domeindag_2025_%2854259805924%29.jpg/330px-Jurryt_van_de_Vooren_bij_Publiek_Domeindag_2025_%2854259805924%29.jpg",
+        "bron": "https://commons.wikimedia.org/wiki/File:Jurryt_van_de_Vooren_bij_Publiek_Domeindag_2025_(54259805924).jpg",
+        "maker": "Sebastiaan ter Burg",
+        "licentie": "CC BY 2.0",
+        "licentieUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "datum": "2025-01-10",
+        "bijschrift": "Jurryt van de Vooren tijdens Publiek Domeindag 2025.",
+        "bewerking": "Ongewijzigd; verkleind weergegeven.",
+        "toestemming": "De bestandsbeschrijving vermeldt CC BY 2.0 en de maker."
+      }
+    },
+    {
+      "id": "hans-de-zwart",
+      "naam": "Hans de Zwart",
+      "linkedin": null,
+      "bron": "https://blog.hansdezwart.nl/bio-nl/",
+      "gecontroleerd": "2026-11-25",
+      "foto": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Hans_de_Zwart%2C_directeur_van_Bits_of_Freedom%2C_hield_de_SETUP_Privacyrede_2014_%2814934442479%29.jpg/330px-Hans_de_Zwart%2C_directeur_van_Bits_of_Freedom%2C_hield_de_SETUP_Privacyrede_2014_%2814934442479%29.jpg",
+        "bron": "https://commons.wikimedia.org/wiki/File:Hans_de_Zwart,_directeur_van_Bits_of_Freedom,_hield_de_SETUP_Privacyrede_2014_(14934442479).jpg",
+        "maker": "Sebastiaan ter Burg",
+        "licentie": "CC BY 2.0",
+        "licentieUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "datum": "2014-09-02",
+        "bijschrift": "Hans de Zwart tijdens de Privacyrede in 2014; historische foto.",
+        "bewerking": "Ongewijzigd; verkleind weergegeven.",
+        "toestemming": "De bestandsbeschrijving vermeldt CC BY 2.0; Flickr-licentie is op Commons gecontroleerd."
+      }
+    },
+    {
+      "id": "laurent-kayser",
+      "naam": "Laurent Kayser",
+      "linkedin": "https://uk.linkedin.com/in/laurentkayser",
+      "bron": "https://communities.cafeyn.co/press/leadership-cafeyn",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "dion-goudkuil",
+      "naam": "Dion Goudkuil",
+      "linkedin": "https://nl.linkedin.com/in/diongoudkuil",
+      "bron": "https://nieuws.mijndomein.nl/over-mijndomein/veiligheid-boven-beschikbaarheid/",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "wouter-stoutjesdijk",
+      "naam": "Wouter Stoutjesdijk",
+      "linkedin": "https://nl.linkedin.com/in/wouter-stoutjesdijk",
+      "bron": "https://nl.linkedin.com/posts/wouter-stoutjesdijk_deze-week-begon-ik-als-nieuwe-ceo-van-yourhosting-activity-7280968412770578432-HWUo",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "rene-oldenbeuving",
+      "naam": "René Oldenbeuving",
+      "linkedin": "https://nl.linkedin.com/in/reneoldenbeuving",
+      "bron": "https://www.emerce.nl/interviews/klanten-gewoon-helpt",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "claudio-corbetta",
+      "naam": "Claudio Corbetta",
+      "linkedin": "https://it.linkedin.com/in/claudiocorbetta",
+      "bron": "https://team.blue/leadership/claudio/",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "tom-denkers",
+      "naam": "Tom Denkers",
+      "linkedin": "https://nl.linkedin.com/in/tomdenkers",
+      "bron": "https://www.bit.nl/referenties/vimexx/",
+      "gecontroleerd": "2026-11-25"
+    },
+    {
+      "id": "jens-reich",
+      "naam": "Jens Reich",
+      "linkedin": "https://de.linkedin.com/in/jens-reich-phd-b6045b26",
+      "bron": "https://www.strato.nl/imprint/",
+      "gecontroleerd": "2026-11-25",
+      "aliases": [],
+      "foto": {
+        "url": "https://www.strato.nl/hq/jens_reich.jpg",
+        "bron": "https://www.strato.nl/pers/",
+        "maker": "STRATO",
+        "licentie": "Redactionele perstoestemming STRATO",
+        "licentieUrl": "https://www.strato.nl/pers/",
+        "bijschrift": "Jens Reich; officieel directieportret van STRATO.",
+        "bewerking": "Ongewijzigd; volledig beeld, verkleind weergegeven.",
+        "toestemming": "De perspagina staat gratis online publicatie voor redactioneel werk toe met bronvermelding STRATO. Bewerken alleen met schriftelijke toestemming."
+      }
+    },
+    {
+      "id": "patrik-heider",
+      "naam": "Patrik Heider",
+      "linkedin": "https://de.linkedin.com/in/patrikheider",
+      "bron": "https://www.strato.nl/imprint/",
+      "gecontroleerd": "2026-11-25",
+      "aliases": [],
+      "foto": {
+        "url": "https://www.strato.nl/hq/patrik_heider.jpg",
+        "bron": "https://www.strato.nl/pers/",
+        "maker": "STRATO",
+        "licentie": "Redactionele perstoestemming STRATO",
+        "licentieUrl": "https://www.strato.nl/pers/",
+        "bijschrift": "Patrik Heider; officieel directieportret van STRATO.",
+        "bewerking": "Ongewijzigd; volledig beeld, verkleind weergegeven.",
+        "toestemming": "De perspagina staat gratis online publicatie voor redactioneel werk toe met bronvermelding STRATO. Bewerken alleen met schriftelijke toestemming."
+      }
+    },
+    {
+      "id": "huseyin-dogan",
+      "naam": "Hüseyin Dogan",
+      "linkedin": "https://de.linkedin.com/in/hueseyindogan",
+      "bron": "https://www.strato.nl/imprint/",
+      "gecontroleerd": "2026-11-25",
+      "aliases": [],
+      "foto": {
+        "url": "https://www.strato.nl/hq/hueseyin_dogan_coo_strato_ag.jpg",
+        "bron": "https://www.strato.nl/pers/",
+        "maker": "STRATO",
+        "licentie": "Redactionele perstoestemming STRATO",
+        "licentieUrl": "https://www.strato.nl/pers/",
+        "bijschrift": "Hüseyin Dogan; officieel directieportret van STRATO.",
+        "bewerking": "Ongewijzigd; volledig beeld, verkleind weergegeven.",
+        "toestemming": "De perspagina staat gratis online publicatie voor redactioneel werk toe met bronvermelding STRATO. Bewerken alleen met schriftelijke toestemming."
+      }
+    },
+    {
+      "id": "markus-noga",
+      "naam": "Markus Leander Noga",
+      "linkedin": "https://de.linkedin.com/in/mlnoga",
+      "bron": "https://www.strato.nl/imprint/",
+      "gecontroleerd": "2026-11-25",
+      "aliases": [
+        "Markus Noga"
+      ],
+      "foto": {
+        "url": "https://www.strato.nl/hq/dr_markus_noga_cto_strato_ag.jpg",
+        "bron": "https://www.strato.nl/pers/",
+        "maker": "STRATO",
+        "licentie": "Redactionele perstoestemming STRATO",
+        "licentieUrl": "https://www.strato.nl/pers/",
+        "bijschrift": "Markus Leander Noga; officieel directieportret van STRATO.",
+        "bewerking": "Ongewijzigd; volledig beeld, verkleind weergegeven.",
+        "toestemming": "De perspagina staat gratis online publicatie voor redactioneel werk toe met bronvermelding STRATO. Bewerken alleen met schriftelijke toestemming."
+      }
+    }
+  ]
+}

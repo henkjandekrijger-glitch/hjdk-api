@@ -1,0 +1,111 @@
+{
+  "frequentie": "Wekelijkse controle",
+  "volgendeControle": "2026-12-02",
+  "controleDag": "woensdag",
+  "tijdzone": "America/Curacao",
+  "toelichting": "Inhoudelijke wijzigingen krijgen een datum en bron. Een controle zonder inhoudelijke wijziging verandert de oorspronkelijke brondatum of publicatiedatum niet.",
+  "paginas": {
+    "/dossier/anp": {
+      "gecontroleerd": "2026-11-25",
+      "gewijzigd": "2026-11-25",
+      "wijzigingen": [
+        {
+          "datum": "2026-11-25",
+          "tekst": "Eigen mailzaken apart toegevoegd: Hollandse Hoogte, Roel Dijkstra, twee ANP-claims, Mads Peter Iversen en Belga. Foto-identificatie en bewijsgrenzen per zaak vermeld.",
+          "bronnen": [
+            {
+              "naam": "Eigen correspondentie en bijlagen (besloten)",
+              "url": null
+            },
+            {
+              "naam": "Openbaar verslag zaak hand met pillen",
+              "url": "https://www.martinebakx.com/2022/12/vonnis-hand-met-pillen.html"
+            }
+          ]
+        },
+        {
+          "datum": "2026-11-25",
+          "tekst": "Professionele profielkoppelingen en foto's met controleerbare toestemming toegevoegd; onderzoek naar het verdienmodel van fotoclaims gekoppeld.",
+          "bronnen": [
+            {
+              "naam": "Fotoclaims als verdienmodel",
+              "url": "/fotoclaims-verdienmodel"
+            }
+          ]
+        }
+      ]
+    },
+    "/dossier/hosters": {
+      "gecontroleerd": "2026-11-25",
+      "gewijzigd": "2026-11-25",
+      "wijzigingen": [
+        {
+          "datum": "2026-11-25",
+          "tekst": "Geverifieerde professionele profielkoppelingen en vier onbewerkte directieportretten uit de STRATO-perscollectie toegevoegd.",
+          "bronnen": [
+            {
+              "naam": "STRATO persvoorwaarden",
+              "url": "https://www.strato.nl/pers/"
+            }
+          ]
+        }
+      ]
+    },
+    "/dossier/blendle": {
+      "gecontroleerd": "2026-11-25",
+      "gewijzigd": "2026-11-25",
+      "wijzigingen": [
+        {
+          "datum": "2026-11-25",
+          "tekst": "Professioneel profiel van Laurent Kayser gekoppeld aan de bestaande bronvermelding over zijn functie.",
+          "bronnen": [
+            {
+              "naam": "Cafeyn benoemingsbericht",
+              "url": "https://communities.cafeyn.co/press/leadership-cafeyn"
+            },
+            {
+              "naam": "LinkedIn Laurent Kayser",
+              "url": "https://uk.linkedin.com/in/laurentkayser"
+            }
+          ]
+        }
+      ]
+    },
+    "/fotoclaims-verdienmodel": {
+      "gecontroleerd": "2026-11-25",
+      "gewijzigd": "2026-11-25",
+      "wijzigingen": [
+        {
+          "datum": "2026-11-25",
+          "tekst": "Nieuw brononderzoek naar de geldstromen achter fotoclaims, met Nederlandse, Duitse en Zwitserse zaken en de positie van fotografen en handhavingsbedrijven.",
+          "bronnen": [
+            {
+              "naam": "Creative Commons Germany",
+              "url": "https://de.creativecommons.net/faqs/"
+            }
+          ]
+        }
+      ]
+    },
+    "/werkwijze": {
+      "gecontroleerd": "2026-11-25",
+      "gewijzigd": "2026-11-25",
+      "wijzigingen": [
+        {
+          "datum": "2026-11-25",
+          "tekst": "Beeldbeleid, verificatie van personen en wekelijkse controle met zichtbaar wijzigingenlog toegevoegd.",
+          "bronnen": [
+            {
+              "naam": "STRATO persvoorwaarden",
+              "url": "https://www.strato.nl/pers/"
+            },
+            {
+              "naam": "Uitleg beeldcitaat",
+              "url": "https://www.auteursrecht.nl/Auteursrechtwijzer/Citeren-wat-is-toegestaan"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

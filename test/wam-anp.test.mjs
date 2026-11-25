@@ -11,7 +11,7 @@ test('ANP-onderzoek blijft naast de eigen claim staan, met volledige primaire br
   assert.equal(d.bijgewerkt, '2026-11-25');
   assert.equal(d.onderzoek.rechtspraak.length, 8);
   assert.equal(sitemapLastmod('/dossier/anp'), '2026-11-25');
-  assert.equal(sitemapLastmod('/dossier/hosters'), '2026-11-24');
+  assert.equal(sitemapLastmod('/dossier/hosters'), '2026-11-25');
   assert.ok(h.includes('De tijdlijn van de eigen claim') && h.includes('id="openbare-ontwikkelingen"'));
   const body = h.slice(h.indexOf('<body>'));
   for (const c of d.onderzoek.rechtspraak) {
@@ -24,4 +24,5 @@ test('ANP-onderzoek blijft naast de eigen claim staan, met volledige primaire br
   assert.ok(d.onderzoek.rechtspraak.find(c => c.ecli.endsWith('7694')).grens.includes('geen verband'));
   assert.ok(wamLlms().includes('Redactionele controle: 2026-11-25'));
 });
+
 
