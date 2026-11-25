@@ -71,7 +71,8 @@ test('tijdlijn nieuwste boven, echte bekeken-teller pas vanaf honderd, deelknopp
   const { bekekenRegel, DEEL_KANALEN } = await import('../lib/wam-dossiers.js');
   const h = pagina('dossier/blendle', true, false, [], { bekeken: { blendle: 347 } });
   const data = [...h.matchAll(/<li><p class="meta"><time datetime="([^"]+)"/g)].map(m => m[1]);
-  assert.ok(data.length >= 8 && data[0] === '2026-11-23');
+  assert.ok(data.length >= 10 && data[0] === '2026-11-25');
+  assert.ok(h.includes('<summary>Zie correspondentie</summary>') && h.includes('Melding van de melder aan ACM ConsuWijzer') && !/Beste Liele|Beste Martin|6 55395630/.test(h));
   assert.deepEqual(data, [...data].sort().reverse());
   assert.equal(bekekenRegel(99), ''); assert.equal(bekekenRegel(0), ''); assert.ok(bekekenRegel(347).includes('Ruim 300 keer bekeken'));
   assert.ok(h.includes('Ruim 300 keer bekeken') && !pagina('dossier/anp', true, false, [], { bekeken: { anp: 99 } }).includes('keer bekeken'));

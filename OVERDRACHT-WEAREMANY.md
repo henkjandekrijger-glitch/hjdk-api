@@ -197,6 +197,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026, later: melding over Blendle ingediend en per e-mail bevestigd bij ACM ConsuWijzer (ACM geeft geen persoonlijk vervolgbericht). Blendle in de bestaande draad om een reactie gevraagd vóór 2 december, zonder link omdat Gmail in Chrome geen klikken toeliet. Beide teksten staan op /dossier/blendle onder Zie correspondentie (uitklapper, zonder namen en contactgegevens), met twee tijdlijnregels van 25 november. ECC en SignalConso niet ingediend: het ECC vraagt of de melder in Nederland woont en helpt niet bij Nederlandse bedrijven; het incassant-ID lijkt Nederlands. Henkjan wil in berichten niet dat we are many now als zijn initiatief wordt genoemd.
+
 - 25 nov 2026: tijdlijn nieuwste boven, oprichtersvermelding weg, echte bekeken-teller vanaf 100, deelknoppen met eigen teller en Clickmind-actie, Blendle bijgewerkt tot en met de verstreken termijn van 23 november, persfout Flanderijn hersteld, beschrijvingen en llms.txt gerepareerd. ACM/ECC/SignalConso: concepten in de chat, nog niet ingediend.
 - 25 nov 2026: dagronde WAM. Bestaande PostNL-pagina verdiept met het onderscheid tussen een bezorgklacht door de ontvanger en het zendingsonderzoek via de afzender; officiële PostNL- en Rijksoverheidbronnen, zichtbare FAQ, llms en IndexNow. ZICHT-basisantwoord was bruikbaar, geen groot AI-gat geclaimd. Geen afgesloten volledige Clickmind-dag; oude dagen onvolledig. Mini-aantallen in modal en knopproef leveren geen winnaar. GSC-toegang tot wearemany.now ontbreekt.
 

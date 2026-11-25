@@ -12,8 +12,8 @@
       "seoTitel": "Blendle afschrijving: opgezegd, geld terug gevraagd | WAM",
       "kaartTitel": "Blendle: abonnement gestopt, ticket ‘opgelost’, €297 teruggevraagd",
       "kort": "Blendle bevestigt de opzegging. De terugbetaling van €297 is niet bevestigd. De termijn van 23 november 2026 verstreek zonder antwoord.",
-      "laatsteStuk": "2026-11-19",
-      "status": "Opzegging bevestigd · terugbetaling niet bevestigd · termijn van 23 november verstreken",
+      "laatsteStuk": "2026-11-25",
+      "status": "Opzegging bevestigd · terugbetaling niet bevestigd · melding bij ACM ConsuWijzer ingediend",
       "bewijsStatus": "Primaire correspondentie ingezien",
       "bedragen": [
         {
@@ -81,11 +81,23 @@
           "kop": "Termijn verstreken zonder antwoord",
           "tekst": "De termijn van de melder liep af op 23 november 2026 om 17.00 uur. Bij controle van zijn mailbox op 25 november 2026 is na 19 november geen bericht van Blendle aangetroffen. De spammap is niet gecontroleerd. Een bankbetaling is niet vastgesteld.",
           "bron": "Mailbox van de melder, gecontroleerd op 25 november 2026"
+        },
+        {
+          "datum": "2026-11-25",
+          "kop": "Melding ingediend bij ACM ConsuWijzer",
+          "tekst": "De melder dient zijn melding over Blendle in bij ACM ConsuWijzer en bevestigt die per e-mail. De ACM schrijft bij het formulier dat melders geen persoonlijk bericht over het vervolg krijgen. De tekst van de melding staat onder Zie correspondentie.",
+          "bron": "Ontvangstbevestiging van ACM ConsuWijzer, ingezien"
+        },
+        {
+          "datum": "2026-11-25",
+          "kop": "Blendle om een reactie gevraagd",
+          "tekst": "De melder laat Blendle weten dat dit dossier openbaar staat en vraagt of het bedrijf vóór 2 december 2026 inhoudelijk wil reageren of feiten wil corrigeren. De tekst staat onder Zie correspondentie.",
+          "bron": "E-mail van de melder, ingezien"
         }
       ],
       "bronverantwoording": "De redactie heeft de correspondentie van 9 tot en met 19 november 2026 nagelezen op 24 en 25 november 2026. Op 25 november is de mailbox van de melder gecontroleerd op latere berichten van Blendle. Hier staan geanonimiseerde samenvattingen; de originele e-mails met account- en betaalgegevens worden niet gepubliceerd. De aangehaalde bedragen uit de melderstekst zijn niet zelfstandig met bankafschriften vergeleken.",
-      "reactieBedrijf": "Blendle heeft inhoudelijk geantwoord: de opzegging en het niet opnieuw incasseren van de betaling uit 2026 zijn bevestigd. Over de terugbetaling gaf Blendle op 12 november 2026 geen toezegging; het inzageverzoek is volgens het bedrijf in behandeling. Na 19 november is in de gecontroleerde mailbox geen reactie van Blendle aangetroffen.",
-      "volgendeStap": "Nog te controleren: een eventuele latere betaalbevestiging, de bijbehorende bankboeking en het antwoord op het inzageverzoek, waarvoor de wettelijke termijn op 9 december 2026 afloopt. De melder heeft meldingen bij ACM ConsuWijzer, het Europees Consumentencentrum en de DGCCRF aangekondigd. Zodra die zijn ingediend, staat dat hier.",
+      "reactieBedrijf": "Blendle heeft inhoudelijk geantwoord: de opzegging en het niet opnieuw incasseren van de betaling uit 2026 zijn bevestigd. Over de terugbetaling gaf Blendle op 12 november 2026 geen toezegging; het inzageverzoek is volgens het bedrijf in behandeling. Na 19 november is in de gecontroleerde mailbox geen reactie van Blendle aangetroffen. Op 25 november 2026 is Blendle gevraagd vóór 2 december 2026 te reageren voor dit dossier.",
+      "volgendeStap": "Nog te controleren: een reactie van Blendle op het verzoek van 25 november, een eventuele betaalbevestiging met de bijbehorende bankboeking en het antwoord op het inzageverzoek, waarvoor de wettelijke termijn op 9 december 2026 afloopt. De melding bij ACM ConsuWijzer is op 25 november 2026 ingediend. Bij het Europees Consumentencentrum en de DGCCRF is nog niets ingediend.",
       "bedrijven": [
         "Blendle"
       ],
@@ -121,7 +133,36 @@
           "bron": 0
         }
       ],
-      "bijgewerkt": "2026-11-25"
+      "bijgewerkt": "2026-11-25",
+      "correspondentie": [
+        {
+          "datum": "2026-11-25",
+          "aan": "ACM ConsuWijzer",
+          "kop": "Melding van de melder aan ACM ConsuWijzer",
+          "noot": "Ingediend via het meldformulier en per e-mail bevestigd. De mening over de regels is die van de melder; de ACM heeft hierover niet geoordeeld.",
+          "alineas": [
+            "Ik meld een probleem met Blendle, onderdeel van het Franse Cafeyn.",
+            "In september 2019 sloot ik een abonnement op Blendle Premium af. Sinds december 2022 gebruik ik de dienst niet meer. Het laatste bericht dat ik van Blendle kreeg, is van 19 september 2021.",
+            "Toch is in september 2023, 2024, 2025 en 2026 telkens 99 euro van mijn rekening afgeschreven, samen 396 euro. Ik heb daar nooit een aankondiging, verlengingsbericht of factuur per e-mail over ontvangen. De facturen van 2023 en 2024 in mijn account heten “Blendle Premium Monthly”, terwijl er een jaarbedrag ineens is afgeschreven.",
+            "Op 9 november 2026 heb ik opgezegd en Blendle schriftelijk gevraagd om 297 euro terug te betalen (2023, 2024 en 2025). De afschrijving van 2026 heb ik via mijn bank laten terugboeken. Ik heb ook om inzage in mijn gegevens gevraagd.",
+            "Blendle antwoordde eerst dat er geen actief abonnement op mijn e-mailadres te vinden was. Op 12 november bevestigde Blendle dat het abonnement is stopgezet en dat de betaling van 2026 niet opnieuw wordt geïncasseerd. Over de terugbetaling schreef Blendle dat het “geen verdere informatie of toezeggingen” kon geven. Op 16 november markeerde het ticketsysteem mijn verzoek als opgelost, terwijl ik had gereageerd. Mijn termijn van 23 november 2026 is verstreken zonder antwoord.",
+            "Volgens mij gaat het om een stilzwijgende verlenging met telkens een jaar, een misleidende productnaam en incasso's zonder vooraankondiging. Ik vraag de ACM dit mee te nemen in haar toezicht. De correspondentie kan ik aanleveren.",
+            "Deze zaak staat ook als dossier op we are many now (wearemany.now). we are many now bundelt losse klachten van consumenten over hetzelfde bedrijf tot één dossier. Het doel is dat een toezichthouder niet honderden of duizenden losse klachten krijgt, maar één onderbouwde stem. Mag ik een eventuele reactie van de ACM op deze melding daar publiceren?"
+          ]
+        },
+        {
+          "datum": "2026-11-25",
+          "aan": "Blendle",
+          "kop": "Bericht van de melder aan Blendle",
+          "noot": "Verstuurd in de bestaande draad met de klantenservice. Aanhef, ondertekening en contactgegevens zijn weggelaten.",
+          "alineas": [
+            "Mijn termijn van 23 november is verstreken zonder antwoord van Blendle.",
+            "Het dossier over deze zaak staat sinds 24 november openbaar op we are many now, onder Dossiers. we are many now bundelt klachten van consumenten over hetzelfde bedrijf tot één dossier. Namen van medewerkers en mijn account- en betaalgegevens staan er niet in.",
+            "Blendle kan reageren of feiten corrigeren. Uw reactie wordt in het dossier opgenomen. Een antwoord of oplossing van Blendle wordt meteen gemeld aan we are many now en in het dossier verwerkt. Wilt u vóór 2 december 2026 laten weten of Blendle inhoudelijk reageert?",
+            "Vandaag heb ik ook de aangekondigde melding ingediend bij ACM ConsuWijzer. Mijn verzoek om terugbetaling van €297 en mijn inzageverzoek (termijn 9 december 2026) blijven staan."
+          ]
+        }
+      ]
     },
     {
       "id": "anp",
