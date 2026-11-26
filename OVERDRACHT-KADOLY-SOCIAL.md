@@ -76,6 +76,7 @@ Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequ
 
 ## 6. Logboek (nieuwste bovenaan)
 
+- 2026-11-26 (kadoly-chat): twee goedgekeurde gids-pins ingepland op Pinterest kadolyshop, bord Wonen en decoratie, met eigen beeld 1000x1500 (go.kadoly.com/api/shop/beeld/<pid>/g.jpg?s=gids). Tv-meubel 26 nov 18:45 UTC (Zernio 6b083a2d58833ba789e0e2f8) in plaats van de kaarsenhouder-productpin (verwijderd), planten home staging 27 nov 18:45 UTC (6b083a2d58833ba789e0e2ff). Op 27 nov dus maar twee productpins (11:00 en 15:00). Meten na 24 uur en 7 dagen via utm_campaign gids-tv-20261125 en gids-planten-20261125.
 - 2026-11-23: concrete UX-goedkeuring uitgevoerd: zes merkstories en drie merkpins gepubliceerd via ingelogd Zernio, alle postobjecten Published; publieke pins en UTM-links gecontroleerd. Meetbeperking storylink vastgelegd en bestaande ronde niet herhaald.
 
 - 2026-11-20: overdracht geschreven, live op `/api/shop?op=socoverdracht`. Stand: 0 verkoop via social, Pinterest enige kanaal met bereik, firewall kadoly.com blokkeert Pinterest.

@@ -1,11 +1,11 @@
 {
   "datum": "2026-11-25",
-  "status": "goedgekeurd-uitvoering-open",
+  "status": "gepland",
   "publiceren": true,
   "concepten": [
     {
       "id": "gids-tv-20261125",
-      "status": "goedgekeurd-uitvoering-open",
+      "status": "gepland",
       "vorm": "Pinterest-gidspin",
       "bord": "Wonen en decoratie",
       "titel": "Tv-meubel voor 65 inch: bereken welke breedte past",
@@ -19,11 +19,14 @@
       "uitkomst": "144 cm",
       "eenheid": "breed beeld bij 16:9",
       "regel": "Bereken je meubelbreedte",
-      "grens": "Zonder rand. Meet ook je tv-voet, diepte en draagvermogen."
+      "grens": "Zonder rand. Meet ook je tv-voet, diepte en draagvermogen.",
+      "zernio_id": "6b083a2d58833ba789e0e2f8",
+      "gepland": "2026-11-26T18:45:00Z",
+      "beeld": "go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids"
     },
     {
       "id": "gids-planten-20261125",
-      "status": "goedgekeurd-uitvoering-open",
+      "status": "gepland",
       "vorm": "Pinterest-gidspin",
       "bord": "Wonen en decoratie",
       "titel": "Planten bij home staging: echt of kunst kiezen",
@@ -37,7 +40,10 @@
       "uitkomst": "Groen in een lege woning",
       "eenheid": "Kies op plek, maat en onderhoud",
       "regel": "Bekijk de plantenkeuze",
-      "grens": "Afgebeeld: Raphis kunstplant van 150 cm. Geen eigen producttest."
+      "grens": "Afgebeeld: Raphis kunstplant van 150 cm. Geen eigen producttest.",
+      "zernio_id": "6b083a2d58833ba789e0e2ff",
+      "gepland": "2026-11-27T18:45:00Z",
+      "beeld": "go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids"
     }
   ],
   "publicatievoorwaarden": [

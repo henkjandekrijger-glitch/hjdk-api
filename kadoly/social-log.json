@@ -779,9 +779,38 @@
       "tijdvak": "19:45",
       "via": "zernio",
       "zernio_id": "6b07f17d6ef5c90ebda689f9",
+      "status": "vervangen",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1126-wonen",
+      "noot": "26 nov: verwijderd uit Zernio, vak gaat naar gidspin gids-tv-20261125"
+    },
+    {
+      "tijd": "2026-11-26T18:45:00Z",
+      "dag": "2026-11-26",
+      "platform": "pinterest",
+      "soort": "gids",
+      "pid": "dp_1022",
+      "gids": "tv-meubel-breedte-berekenen",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6b083a2d58833ba789e0e2f8",
       "status": "gepland",
       "bord": "Wonen en decoratie",
-      "code": "pin-1126-wonen"
+      "code": "gids-tv-20261125"
+    },
+    {
+      "tijd": "2026-11-27T18:45:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "gids",
+      "pid": "oc_4174003512573953",
+      "gids": "planten-home-staging",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6b083a2d58833ba789e0e2ff",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "gids-planten-20261125"
     }
   ]
 }
