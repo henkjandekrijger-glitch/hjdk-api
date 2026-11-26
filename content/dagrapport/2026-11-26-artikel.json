@@ -1,0 +1,1668 @@
+{
+  "schema_version": 1,
+  "round": "article",
+  "event_date_utc": "2026-11-26",
+  "report_date_curacao": "2026-11-25",
+  "observed_at_utc": "2026-11-26T03:41:06.995Z",
+  "reporting_period_utc": {
+    "start": "2026-11-25T00:00:00Z",
+    "end_exclusive": "2026-11-26T00:00:00Z"
+  },
+  "sources": {
+    "/api/bs?op=dagrapport&droog=1": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:14 GMT",
+      "response": {
+        "droog": true,
+        "tekst": "Organisch boeken, 2026-11-25 (UTC)\nstockingbooks.com: 13 geregistreerde pagina-openingen (-29)\nlastingchange.works: 3 geregistreerde pagina-openingen (-2)\nAmazonverzoeken: 23 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 23\nBeste pagina's: stockingbooks.com/ 13, lastingchange.works/ 3\nPinterest: 4 pins geplaatst, 4 kliks, 9 saves; beste kop: enoch-wat\nNieuw LC-artikel: I Wasted Another Year: A Fair Review and One Next Step (zoekvraag 210/mnd) https://lastingchange.works/i-wasted-another-year\n11 pagina's in Google\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+      }
+    },
+    "/api/bs?site=lc&op=lcartikelen": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lcartikelen",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:40:08 GMT",
+      "response": {
+        "modus": "eerst-zien",
+        "artikelen": [
+          {
+            "slug": "how-to-stop-procrastinating",
+            "titel": "How to Stop Procrastinating: 7 Steps and a 2-Minute Plan",
+            "datum": "2026-11-23",
+            "status": "live",
+            "zoekterm": "procrastination",
+            "volume": 135000,
+            "gerelateerd": []
+          },
+          {
+            "slug": "how-to-start-over-in-life",
+            "titel": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+            "datum": "2026-11-24",
+            "status": "live",
+            "zoekterm": "how to start over in life",
+            "volume": 590,
+            "gerelateerd": [
+              "how-to-stop-procrastinating"
+            ]
+          },
+          {
+            "slug": "i-wasted-another-year",
+            "titel": "I Wasted Another Year: A Fair Review and One Next Step",
+            "datum": "2026-11-25",
+            "status": "live",
+            "zoekterm": "i wasted my life",
+            "volume": 210,
+            "gerelateerd": [
+              "how-to-start-over-in-life",
+              "how-to-stop-procrastinating"
+            ]
+          },
+          {
+            "slug": "how-to-get-your-life-together",
+            "titel": "How to Get Your Life Together: A Life Admin Checklist",
+            "datum": "2026-11-26",
+            "status": "concept",
+            "zoekterm": "how to get your life together",
+            "volume": 720,
+            "gerelateerd": [
+              "how-to-start-over-in-life",
+              "i-wasted-another-year",
+              "how-to-stop-procrastinating"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/bs?site=lc&op=gezond": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:23 GMT",
+      "response": {
+        "ok": true,
+        "pdfKnop": false,
+        "pdfBestand": true,
+        "mail": false,
+        "uitleg": "PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon",
+        "fouten": []
+      }
+    },
+    "/api/bs?op=pinstand": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:13 GMT",
+      "response": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "haken": [
+          {
+            "id": "we-ruzie",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-dad",
+            "pins": 2,
+            "klik": 1,
+            "saves": 1,
+            "imp": 7
+          },
+          {
+            "id": "we-onder10",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          {
+            "id": "we-regels",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 6
+          },
+          {
+            "id": "sok-haar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 7
+          },
+          {
+            "id": "sok-hem",
+            "pins": 2,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-tiener",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-puzzel",
+            "pins": 2,
+            "klik": 0,
+            "saves": 1,
+            "imp": 4
+          },
+          {
+            "id": "ss-gen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-ideeen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          {
+            "id": "sok-gids-haar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-gids-hem",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-jaar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 2
+          },
+          {
+            "id": "lc-66",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-stappen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "enoch-wat",
+            "pins": 2,
+            "klik": 2,
+            "saves": 1,
+            "imp": 5
+          },
+          {
+            "id": "apo-14",
+            "pins": 2,
+            "klik": 1,
+            "saves": 1,
+            "imp": 5
+          }
+        ],
+        "laatste": [
+          {
+            "id": "20261122-enoch-wat-79n1",
+            "haak": "enoch-wat",
+            "a": "B0B5KV79N1",
+            "post": "6b03306970f37227beb16166",
+            "t": "2026-11-22T18:12:12.629Z",
+            "m": {
+              "klik": 2,
+              "saves": 1,
+              "imp": 5
+            }
+          },
+          {
+            "id": "20261122-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "post": "6b03306ec4d17d4a0f103bf2",
+            "t": "2026-11-22T18:12:13.608Z",
+            "m": {
+              "klik": 1,
+              "saves": 1,
+              "imp": 5
+            }
+          },
+          {
+            "id": "20261122-we-ruzie-z3g3",
+            "haak": "we-ruzie",
+            "a": "B0DNDQZ3G3",
+            "post": "6b0344b6783be3b4addd3e43",
+            "t": "2026-11-22T19:38:53.148Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-sok-haar-mssk",
+            "haak": "sok-haar",
+            "a": "B0DMR1MSSK",
+            "post": "6b0344ba9978cd4d9a1ca580",
+            "t": "2026-11-22T19:38:54.191Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 7
+            }
+          },
+          {
+            "id": "20261122-we-dad-syxw",
+            "haak": "we-dad",
+            "a": "B0DK3CSYXW",
+            "post": "6b0344bf56bdc437db134475",
+            "t": "2026-11-22T19:38:55.293Z",
+            "m": {
+              "klik": 1,
+              "saves": 1,
+              "imp": 7
+            }
+          },
+          {
+            "id": "20261122-sok-gids-hem-1fsp",
+            "haak": "sok-gids-hem",
+            "a": "B0DMP31FSP",
+            "post": "6b0344c49978cd4d9a1ca59e",
+            "t": "2026-11-22T19:38:56.288Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261123-sok-puzzel-prd9",
+            "haak": "sok-puzzel",
+            "a": "B0DN65PRD9",
+            "post": "6b049678d511266d6a856bec",
+            "t": "2026-11-23T19:39:54.871Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 4
+            }
+          },
+          {
+            "id": "20261123-we-ideeen-t9jt",
+            "haak": "we-ideeen",
+            "a": "B0DNB1T9JT",
+            "post": "6b04967b5d67d2299ad22eb9",
+            "t": "2026-11-23T19:39:56.079Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 1
+            }
+          },
+          {
+            "id": "20261123-we-onder10-fxb1",
+            "haak": "we-onder10",
+            "a": "B0DP42FXB1",
+            "post": "6b04967fd511266d6a856c13",
+            "t": "2026-11-23T19:39:57.187Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 1
+            }
+          },
+          {
+            "id": "20261123-lc-jaar-1l5j",
+            "haak": "lc-jaar",
+            "a": "B0F1SM1L5J",
+            "post": "6b049681d511266d6a856c28",
+            "t": "2026-11-23T19:39:58.268Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 2
+            }
+          },
+          {
+            "id": "20261124-ss-gen-dhd6",
+            "haak": "ss-gen",
+            "a": "B0DNCLDHD6",
+            "post": "6b05e7df7a6d18398505d60a",
+            "t": "2026-11-24T19:39:35.087Z"
+          },
+          {
+            "id": "20261124-sok-gids-haar-lklt",
+            "haak": "sok-gids-haar",
+            "a": "B0DMNGLKLT",
+            "post": "6b05e7e46cf47dfab007ad2f",
+            "t": "2026-11-24T19:39:37.269Z"
+          },
+          {
+            "id": "20261124-lc-66-1l5j",
+            "haak": "lc-66",
+            "a": "B0F1SM1L5J",
+            "post": "6b05e7e952ad165c265fa790",
+            "t": "2026-11-24T19:39:38.366Z"
+          },
+          {
+            "id": "20261124-lc-stappen-1l5j",
+            "haak": "lc-stappen",
+            "a": "B0F1SM1L5J",
+            "post": "6b05e7ec6cf47dfab007ad4b",
+            "t": "2026-11-24T19:39:39.552Z"
+          },
+          {
+            "id": "20261123-sok-puzzel-1j5t",
+            "haak": "sok-puzzel",
+            "a": "B0DMNK1J5T",
+            "post": "6b05f89c3ea213a32f7d5a66",
+            "t": "2026-11-24T20:58:01.581Z"
+          },
+          {
+            "id": "20261123-sok-hem-j7cy",
+            "haak": "sok-hem",
+            "a": "B0HRGNJ7CY",
+            "post": "6b05f9fdacf4072f8e620181",
+            "t": "2026-11-24T20:58:03.317Z"
+          },
+          {
+            "id": "20261125-enoch-wat-79n1",
+            "haak": "enoch-wat",
+            "a": "B0B5KV79N1",
+            "post": "6b07397bcb651a6eadc070bb",
+            "t": "2026-11-25T19:39:50.426Z"
+          },
+          {
+            "id": "20261125-we-dad-syxw",
+            "haak": "we-dad",
+            "a": "B0DK3CSYXW",
+            "post": "6b073986be3f02dcc0ff44d7",
+            "t": "2026-11-25T19:40:07.517Z"
+          },
+          {
+            "id": "20261125-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "post": "6b073998b436184d7f495f0b",
+            "t": "2026-11-25T19:40:19.109Z"
+          },
+          {
+            "id": "20261125-sok-hem-syxw",
+            "haak": "sok-hem",
+            "a": "B0DK3CSYXW",
+            "post": "6b0739a3be3f02dcc0ff4563",
+            "t": "2026-11-25T19:40:33.189Z"
+          }
+        ]
+      }
+    },
+    "/api/bs?site=lc&op=verkoop": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=verkoop",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:24 GMT",
+      "response": {
+        "pdfKnop": false,
+        "perDag": {}
+      }
+    },
+    "/api/zicht?op=stand&site=bookstuffers": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=bookstuffers",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:25 GMT",
+      "response": {
+        "ok": true,
+        "dag": "2026-11-26",
+        "sites": {
+          "bookstuffers": {
+            "host": "stockingbooks.com",
+            "laatste": {
+              "dag": "2026-11-25",
+              "site": "bookstuffers",
+              "host": "stockingbooks.com",
+              "gsc": {
+                "imp": 0,
+                "clicks": 0
+              },
+              "index": {
+                "dag": "2026-11-25",
+                "inSitemap": 17,
+                "bekeken": 17,
+                "geindexeerd": 11
+              },
+              "aiBots": null,
+              "zoekvragen": {
+                "dagen": 0,
+                "regels": 0
+              },
+              "bezoek": null,
+              "llmPanel": "512c93670cae508b",
+              "llm": [
+                {
+                  "vraag": "Free printable Christmas coloring pages",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "crayola.com",
+                    "giant.org"
+                  ]
+                },
+                {
+                  "vraag": "What are good white elephant gifts under $10?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "thousandgiftideas.com",
+                    "eatingwell.com",
+                    "wreg.com"
+                  ]
+                },
+                {
+                  "vraag": "What are good stocking stuffers for women?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "coolmompicks.com",
+                    "instyle.com",
+                    "mysubscriptionaddiction.com"
+                  ]
+                },
+                {
+                  "vraag": "What are good stocking stuffers for men who have everything?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "goodhousekeeping.com",
+                    "mastersofgifts.com"
+                  ]
+                },
+                {
+                  "vraag": "Is there a free Secret Santa generator that does not need emails?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "secretsantamatch.com"
+                  ]
+                },
+                {
+                  "vraag": "What are the rules of white elephant?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "cbsnews.com",
+                    "whiteelephantrules.com"
+                  ]
+                },
+                {
+                  "vraag": "What is the Book of Enoch?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "en.wikipedia.org",
+                    "britannica.com"
+                  ]
+                },
+                {
+                  "vraag": "Which books are in the Apocrypha?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "en.wikipedia.org",
+                    "bibleodyssey.org",
+                    "britannica.com"
+                  ]
+                }
+              ],
+              "llmRate": 0,
+              "llmCitatie": {
+                "model": "perplexity/sonar",
+                "panel": "512c93670cae508b",
+                "geslaagd": 8,
+                "perVraag": [
+                  {
+                    "id": "7787c049b90bc59b",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "4b65e326d7b05f2f",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "da5375d13d862e0f",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "6c3e04e422c1e852",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "4dbaac792645a4d2",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "47af35b4989ef458",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "79df91543fbc51d7",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "438b876797028be8",
+                    "geciteerd": false
+                  }
+                ],
+                "geciteerd": 0,
+                "rate": 0
+              },
+              "winnaars": [
+                [
+                  "en.wikipedia.org",
+                  2
+                ],
+                [
+                  "britannica.com",
+                  2
+                ],
+                [
+                  "crayola.com",
+                  1
+                ],
+                [
+                  "giant.org",
+                  1
+                ],
+                [
+                  "thousandgiftideas.com",
+                  1
+                ],
+                [
+                  "eatingwell.com",
+                  1
+                ],
+                [
+                  "wreg.com",
+                  1
+                ],
+                [
+                  "coolmompicks.com",
+                  1
+                ],
+                [
+                  "instyle.com",
+                  1
+                ],
+                [
+                  "mysubscriptionaddiction.com",
+                  1
+                ]
+              ]
+            },
+            "historie": [
+              {
+                "dag": "2026-11-25",
+                "imp": 0,
+                "clicks": 0,
+                "geindexeerd": 11,
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "512c93670cae508b",
+                  "geslaagd": 8,
+                  "perVraag": [
+                    {
+                      "id": "7787c049b90bc59b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "4b65e326d7b05f2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "da5375d13d862e0f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "6c3e04e422c1e852",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "4dbaac792645a4d2",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "47af35b4989ef458",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "79df91543fbc51d7",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "438b876797028be8",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-24",
+                "imp": 0,
+                "clicks": 0,
+                "geindexeerd": 1,
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "25202fffca5956b8",
+                  "geslaagd": 8,
+                  "perVraag": [
+                    {
+                      "id": "6c3e04e422c1e852",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "4dbaac792645a4d2",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "47af35b4989ef458",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "79df91543fbc51d7",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "438b876797028be8",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "8c5fef7573e1ec5b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "522ba70955d17463",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "e8278d8971f9aa5c",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-23",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "181bd30fa896a9bd",
+                  "geslaagd": 8,
+                  "perVraag": [
+                    {
+                      "id": "79df91543fbc51d7",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "438b876797028be8",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "8c5fef7573e1ec5b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "522ba70955d17463",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "e8278d8971f9aa5c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "7787c049b90bc59b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "4b65e326d7b05f2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "da5375d13d862e0f",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              }
+            ],
+            "proeven": {
+              "lopend": 0,
+              "klaar": [],
+              "perStatus": {},
+              "verlengd": 0,
+              "eerstKlaar": null,
+              "nietBeoordeeld": [],
+              "langLopend": []
+            }
+          }
+        }
+      }
+    },
+    "/api/zicht?op=stand&site=lastingchange": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=lastingchange",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:37:15 GMT",
+      "response": {
+        "ok": true,
+        "dag": "2026-11-26",
+        "sites": {
+          "lastingchange": {
+            "host": "lastingchange.works",
+            "laatste": {
+              "dag": "2026-11-25",
+              "site": "lastingchange",
+              "host": "lastingchange.works",
+              "aiBots": null,
+              "zoekvragen": null,
+              "bezoek": null,
+              "llmPanel": "94af3b369c8c22c9",
+              "llm": [
+                {
+                  "vraag": "How do I stick to my New Year’s resolutions?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "bbc.com",
+                    "wral.com"
+                  ]
+                },
+                {
+                  "vraag": "What is a good habit workbook for the new year?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "penguinrandomhouse.com"
+                  ]
+                },
+                {
+                  "vraag": "How long does it take to form a habit?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "healthline.com",
+                    "jamesclear.com"
+                  ]
+                },
+                {
+                  "vraag": "I did nothing this year, how do I start over in 2027?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "youarecapableofmore.com",
+                    "unlimits.com"
+                  ]
+                }
+              ],
+              "llmRate": 0,
+              "llmCitatie": {
+                "model": "perplexity/sonar",
+                "panel": "94af3b369c8c22c9",
+                "geslaagd": 4,
+                "perVraag": [
+                  {
+                    "id": "2f5222f42e0b992e",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "3afce6eee7e68e2f",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "fab12185a259b35c",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "a2ab905318b52680",
+                    "geciteerd": false
+                  }
+                ],
+                "geciteerd": 0,
+                "rate": 0
+              },
+              "winnaars": [
+                [
+                  "bbc.com",
+                  1
+                ],
+                [
+                  "wral.com",
+                  1
+                ],
+                [
+                  "penguinrandomhouse.com",
+                  1
+                ],
+                [
+                  "healthline.com",
+                  1
+                ],
+                [
+                  "jamesclear.com",
+                  1
+                ],
+                [
+                  "youarecapableofmore.com",
+                  1
+                ],
+                [
+                  "unlimits.com",
+                  1
+                ]
+              ]
+            },
+            "historie": [
+              {
+                "dag": "2026-11-25",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "94af3b369c8c22c9",
+                  "geslaagd": 4,
+                  "perVraag": [
+                    {
+                      "id": "2f5222f42e0b992e",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "3afce6eee7e68e2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "fab12185a259b35c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "a2ab905318b52680",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-24",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "94af3b369c8c22c9",
+                  "geslaagd": 4,
+                  "perVraag": [
+                    {
+                      "id": "2f5222f42e0b992e",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "3afce6eee7e68e2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "fab12185a259b35c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "a2ab905318b52680",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-23",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "94af3b369c8c22c9",
+                  "geslaagd": 4,
+                  "perVraag": [
+                    {
+                      "id": "2f5222f42e0b992e",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "3afce6eee7e68e2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "fab12185a259b35c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "a2ab905318b52680",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-22",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-21",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-20",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-19",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-18",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-17",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-16",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-15",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-14",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-13",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-12",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-11",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-10",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-09",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-08",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-07",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-06",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-05",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-04",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-03",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-02",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-01",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-31",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-30",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-29",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-28",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-27",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              }
+            ],
+            "proeven": {
+              "lopend": 0,
+              "klaar": [],
+              "perStatus": {},
+              "verlengd": 0,
+              "eerstKlaar": null,
+              "nietBeoordeeld": [],
+              "langLopend": []
+            }
+          }
+        }
+      }
+    },
+    "/api/zicht?op=zoekvragen&site=bookstuffers": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:38:24 GMT",
+      "response": {
+        "ok": true,
+        "ververst": null,
+        "site": "bookstuffers",
+        "dagen": 28,
+        "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "perDag": [],
+        "zoekvragen": [],
+        "aantal": 0
+      }
+    },
+    "/api/zicht?op=zoekvragen&site=lastingchange": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=lastingchange",
+      "http": 200,
+      "observed_at": "Thu, 26 Nov 2026 03:38:22 GMT",
+      "response": {
+        "ok": true,
+        "ververst": null,
+        "site": "lastingchange",
+        "dagen": 28,
+        "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "perDag": [],
+        "zoekvragen": [],
+        "aantal": 0
+      }
+    }
+  },
+  "traffic": {
+    "definition": "Registered page-openings, not unique humans, organic arrivals or sales.",
+    "stockingbooks": 13,
+    "lastingchange": 3,
+    "previous_meetday": "2026-11-24",
+    "previous_stockingbooks": 42,
+    "previous_lastingchange": 5,
+    "delta_stockingbooks": -29,
+    "delta_lastingchange": -2,
+    "source_breakdown": null,
+    "weekly_average": null,
+    "top_pages": [
+      {
+        "site": "stockingbooks.com",
+        "path": "/",
+        "openings": 13
+      },
+      {
+        "site": "lastingchange.works",
+        "path": "/",
+        "openings": 3
+      }
+    ],
+    "lesson": "Both totals decrease; no evidence of organicgrowth. Article-level acquisition/attributed outcomes remain insufficient."
+  },
+  "amazon": {
+    "definition": "Raw redirect requests, not unique clickers/conversions/sales.",
+    "total": 23,
+    "stockingbooks": 23,
+    "lastingchange": null,
+    "note": "LC omitted by dry report; not imputed as zero."
+  },
+  "pinterest": {
+    "register_rows": 22,
+    "registrations_on_meetday": 4,
+    "cache_reported_clicks": 4,
+    "cache_reported_saves": 9,
+    "cache_period": null,
+    "impressions": null,
+    "verified_organic_outbound_clicks": null,
+    "verified_saves": null,
+    "all_rows_snapshot_appended": true,
+    "note": "Cache totals printed alongside closed-day placements are not proven same-day provider metrics. Exact definition/window missing. No pinuitkomst or winner."
+  },
+  "sales": {
+    "pdf_button": false,
+    "pdf_per_day": {},
+    "mail": false,
+    "attributed_pdf_sales": null,
+    "organic_kdp_sales": null,
+    "not_rechecked_or_inferred": true
+  },
+  "google": {
+    "latest_observation_day": "2026-11-25",
+    "stockingbooks_indexed": 11,
+    "checked": 17,
+    "gsc_valid_traffic_period": null,
+    "query_records": 0,
+    "query_days": 0,
+    "not_zero_organic_traffic": true,
+    "ai_panels": {
+      "stockingbooks": "0/8citations, changed panel on25nov; no exposuretrend inferred.",
+      "lastingchange": "0/4citations, no website-traffic inference."
+    }
+  },
+  "largest_demonstrable_leak": {
+    "finding": "Source/pin/landing attribution incomplete; overlapping other publication round also repeats same-ASIN products.",
+    "evidence": "Dry report cannot link23redirects to13+3openings; bsmeet stores no pinID.25nov4otherpostIDsuse22novASINsanddadASINtwice; pinPlanonlyyesterdayfilterwithfallback.",
+    "existing_review_proposals": [
+      "content/dagrapport/2026-11-25-meetvoorstel.md",
+      "content/dagrapport/2026-11-25-batch.md"
+    ],
+    "not_approved_for_live_code": true
+  },
+  "action_selection": [
+    {
+      "action": "Publish another page immediately",
+      "expected": "Uncertain acquisition; existing measured traffic too sparse to forecast.",
+      "decision": "Reject live action: exact new text not approved."
+    },
+    {
+      "action": "Fix joint attribution and sharedASINguard",
+      "expected": "Make outcomes comparable and prevent observed repeats, not guaranteed trafficgrowth.",
+      "decision": "Concrete review proposals already prepared; no unapproved live change. Keep as first technical priority."
+    },
+    {
+      "action": "Prepare distinct useful life-admin checklist from cached exact question",
+      "expected": "Review-ready resource for a currently unanswered measured intent. No traffic effect until approved publication/exposure.",
+      "decision": "Selected independent authorized content work; no added paidcall."
+    }
+  ],
+  "demand": {
+    "source": "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=jaar-reset&cc=US",
+    "cache_updated_at": "2026-11-23T00:14:01.941Z",
+    "query": "how to get your life together",
+    "volume_monthly_us": 720,
+    "months": [
+      880,
+      590,
+      590,
+      590,
+      590,
+      590,
+      720,
+      720,
+      590,
+      720,
+      720,
+      880
+    ],
+    "narrow_checklist_query": {
+      "query": "how to get your life together checklist",
+      "volume": 70,
+      "months": [
+        110,
+        50,
+        50,
+        70,
+        50,
+        50,
+        90,
+        70,
+        50,
+        70,
+        70,
+        110
+      ]
+    },
+    "no_synonym_volumes_added": true,
+    "excluded": "life together9900 ambiguous, Roblox codes and Bonhoeffer book excluded.",
+    "historical_cache_cost": 0.1,
+    "new_paid_calls": 0
+  },
+  "article": {
+    "slug": "how-to-get-your-life-together",
+    "titel": "How to Get Your Life Together: A Life Admin Checklist",
+    "h1": "How to Get Your Life Together: A Life Admin Checklist",
+    "desc": "Use a practical life admin checklist to sort loose ends, identify a real deadline, choose one next action, and build a review you can return to.",
+    "datum": "2026-11-26",
+    "zoekterm": "how to get your life together",
+    "volume": 720,
+    "gerelateerd": [
+      "how-to-start-over-in-life",
+      "i-wasted-another-year",
+      "how-to-stop-procrastinating"
+    ],
+    "antwoord": "To get your life together, start by making your current obligations visible. Put loose ends in one place, separate actual deadlines from things you would simply like to improve, and choose one action you can carry out. The checklist below helps you organize everyday life admin without turning every unfinished task into a new project. Use paper or a note you already have.",
+    "secties": [
+      {
+        "kop": "1. Define the problem in observable terms",
+        "alineas": [
+          "The phrase get my life together can hide several different needs. An unanswered letter, a crowded calendar, a pile of laundry, and uncertainty about your career require different responses. Before adding a new routine, name the situation that prompted you to look for help today.",
+          "Write a sentence that someone else could understand without knowing your whole life: I cannot find the appointment details, or I have promised more work than I have room to complete. This gives you something you can check. Avoid using your list as a verdict on your character.",
+          "If the main question is whether to change direction, use our separate starting-over guide. This page is for organizing the obligations you already have and deciding what happens next. You can use it even while your longer-term plans remain uncertain."
+        ],
+        "lijst": [
+          "The practical problem I need to address is _____.",
+          "I will recognize a useful improvement when _____."
+        ]
+      },
+      {
+        "kop": "2. Collect loose ends in one place",
+        "alineas": [
+          "Choose one page or note and list the things you are trying to remember. Include messages you need to answer, dates to check, household tasks, paperwork, and commitments to other people. Keep this first pass brief enough to finish. You can add another item when you discover it.",
+          "Check the places where obligations actually arrive, such as your calendar, mail, and messages. Do not assume that remembering a task means you know its deadline or requirements. Mark missing information so that looking it up becomes a specific next action.",
+          "You do not need a new app or a carefully designed notebook. If you already keep a useful calendar, keep using it. The aim is to make the open items visible, not to move everything into a different system."
+        ],
+        "lijst": [
+          "Home: What needs cleaning, replacing, arranging, or putting away?",
+          "Paperwork and appointments: What needs a reply, a date check, or a document?",
+          "Work or study: What have I agreed to deliver, and to whom?",
+          "People and care: Which messages, arrangements, or shared responsibilities need attention?"
+        ]
+      },
+      {
+        "kop": "3. Separate deadlines, next actions, and waiting",
+        "alineas": [
+          "Read the list once and give each item a practical status. A task with a confirmed deadline belongs on your calendar with the information needed to act. An item waiting on another person needs a follow-up date. An idea you might pursue later can stay on a separate later list.",
+          "Check deadlines against the original notice or agreement. A task that feels uncomfortable is not automatically the most urgent one. If the consequences or instructions are unclear, the next action may be to ask the responsible organization for clarification.",
+          "Choose what to handle first from the facts you have: the real deadline, the consequence of delay, and the resources available. This checklist cannot decide every priority for you. It can help reveal which decision needs more information or another person's help."
+        ],
+        "lijst": [
+          "Confirmed deadline: What is due, when, and where did I verify it?",
+          "Ready to act: What is the next visible action?",
+          "Waiting: Who or what am I waiting for, and when will I check again?",
+          "Later or remove: Can I defer, decline, or stop this commitment?"
+        ]
+      },
+      {
+        "kop": "4. Turn one item into a workable next action",
+        "alineas": [
+          "Pick one item and replace its broad label with an action you can start. Sort out my paperwork could become find the latest letter and write its reference number on this page. Clean the house could become clear the kitchen counter. Choose the action because it advances the item you selected, not because it makes the list look impressive.",
+          "Include the material or information the action requires. If a form needs a document you cannot find, locating or requesting that document comes before finishing the form. A waiting status is more accurate than repeatedly putting an impossible task back on today's list.",
+          "Choose a realistic opportunity for the action. Specify where you will be and what you will have available. If the task needs more time than you have, record a smaller preparatory step or arrange an appropriate time instead of pretending it fits."
+        ],
+        "lijst": [
+          "My next action is _____.",
+          "I need _____ before I can do it.",
+          "I will do it at _____, in _____, using _____."
+        ]
+      },
+      {
+        "kop": "5. Copy this one-page life admin card",
+        "alineas": [
+          "Use the following lines for your own situation. You can copy them into a notebook or document and print that document. This is a text worksheet, not a separate downloadable PDF or a checkout offer.",
+          "For example: Item: confirm an appointment. Verified date: Wednesday, from the confirmation message. Next action: reply with the requested information. Status: ready. Review: check for a response on Friday. The example is a format to adapt, not a recommended schedule for every appointment."
+        ],
+        "lijst": [
+          "ITEM: _____.",
+          "CONFIRMED DATE OR DEADLINE, IF ANY: _____.",
+          "WHERE I VERIFIED IT: _____.",
+          "NEXT ACTION: _____.",
+          "WHAT I NEED OR WHO CAN HELP: _____.",
+          "STATUS: ready / scheduled / waiting / later / removed.",
+          "NEXT REVIEW DATE: _____."
+        ]
+      },
+      {
+        "kop": "6. Review what actually changed",
+        "alineas": [
+          "At your next review, record what happened to the selected item. Done, waiting on a reply, and needs a different approach are all useful observations. If the action was too large or the required information was missing, change the next step accordingly.",
+          "Keep the review short enough to repeat. You might attach it to an existing weekly calendar check, but choose a frequency that fits the obligations on your list. Time-sensitive matters may need earlier attention. Remove completed or abandoned items so they do not keep competing with current work.",
+          "The point is not to finish every item before you are allowed to feel organized. A useful record tells you what is current, what is waiting, and when you intend to look again. That record can still be helpful during a busy or difficult week."
+        ]
+      },
+      {
+        "kop": "7. What the research supports, and what this checklist adds",
+        "alineas": [
+          "Masicampo and Baumeister's 2011 experiments found that forming specific plans reduced interference from unfinished goals during other tasks. The study concerned particular experimental tasks and does not establish that a life admin checklist resolves every kind of overwhelm.",
+          "Harkin and colleagues' 2016 meta-analysis examined 138 studies of progress-monitoring interventions. On average, those interventions improved goal attainment. This supports checking progress as part of a plan, while leaving uncertainty about which method fits a particular person or situation.",
+          "The categories, card, examples, and sequence on this page are our editorial tools. The complete checklist has not been tested as an intervention. Use the parts that help you make decisions, and revise or leave out the parts that add unnecessary work."
+        ]
+      },
+      {
+        "kop": "8. When a workbook is useful",
+        "alineas": [
+          "A list of obligations and a repeated habit need different kinds of records. If this exercise identifies one action you want to practice regularly, the Lasting Change Workbook paperback is an optional way to keep that practice in a dedicated book. Check Amazon for the current listing and availability.",
+          "You can also continue with the page or notebook you already used. Buying a workbook is not required to complete the checklist. If you want to reconsider your direction before choosing a repeated action, read the seven-day starting-over guide next."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Where should I start if every area feels disorganized?",
+        "Write down the concrete problem that needs attention first, then check whether it has a real deadline or consequence. Choose one action that fits your current resources. Keep the remaining items on the page so you do not need to decide on all of them immediately."
+      ],
+      [
+        "What if I do not know the deadline or the next step?",
+        "Mark the missing information instead of guessing. Your next action may be to find the original notice, check an agreement, or ask the relevant person what is required. Record where the answer came from."
+      ],
+      [
+        "How is this different from the seven-day reset plan?",
+        "This checklist organizes existing obligations and follow-ups. The seven-day reset plan helps you explore what to keep or change in your life. You can use the checklist without changing your direction or committing to a seven-day sequence."
+      ],
+      [
+        "Do I need an app or a paid planner?",
+        "No. A page, a note, and your existing calendar are enough to use this structure. A dedicated book is optional if you decide it would help you record a repeated practice."
+      ],
+      [
+        "How can I tell whether my system is helping?",
+        "Check whether you can identify the next action and locate the information you need. At review time, record what changed and what remains blocked. A longer list or a more attractive planner is not, by itself, evidence that your obligations are easier to manage."
+      ]
+    ],
+    "bronnen": [
+      {
+        "naam": "Masicampo and Baumeister (2011). Consider It Done! Journal of Personality and Social Psychology. Original experimental paper.",
+        "url": "https://users.wfu.edu/masicaej/MasicampoBaumeister2011JPSP.pdf"
+      },
+      {
+        "naam": "Harkin et al. (2016). Does Monitoring Goal Progress Promote Goal Attainment? Psychological Bulletin. Meta-analysis of experimental evidence.",
+        "url": "https://www.apa.org/pubs/journals/releases/bul-bul0000025.pdf"
+      }
+    ],
+    "status": "concept",
+    "words": 1430,
+    "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-get-your-life-together&concept=1"
+  },
+  "checks": {
+    "errors": [],
+    "words": 1430,
+    "titleLength": 53,
+    "descriptionLength": 144,
+    "mode_before_save": "eerst-zien",
+    "slug_absent_before_save": true,
+    "save_status": "concept",
+    "preview_http": 200,
+    "preview_robots": "noindex, nofollow",
+    "card_rendered": true,
+    "sources_rendered": true,
+    "not_in_sitemap": true,
+    "not_in_live_guides": true,
+    "existing_three_live_preserved": true,
+    "no_live_link_read": true
+  },
+  "source_verification": [
+    {
+      "url": "https://users.wfu.edu/masicaej/MasicampoBaumeister2011JPSP.pdf",
+      "type": "Full original paper,18pages",
+      "claims": "Specific planning reduced unfinishedgoal interference in experimental tasks; not proof for this whole checklist.",
+      "checked_utc": "2026-11-26T03:41:06.995Z"
+    },
+    {
+      "url": "https://www.apa.org/pubs/journals/releases/bul-bul0000025.pdf",
+      "type": "Full primary meta-analysis,32pages",
+      "claims": "138randomizedinterventionstudies;averagegoalattainmentbenefit. No individual outcome or checklistvalidation promised.",
+      "checked_utc": "2026-11-26T03:41:06.995Z"
+    },
+    {
+      "pubmed": "Abstract pages gave incomplete extraction; switched to full original PDFs, no repeated failure loop."
+    }
+  ],
+  "research": {
+    "reused": "content/dagrapport/2026-11-25-traffic-onderzoek.md",
+    "primary_maker": "https://nesslabs.com/annual-review",
+    "method": "Usable own worksheet as discovery entrance; makertrafficclaim not verified. Reuse shared day's finding, not a new maker case."
+  },
+  "distribution_concept": {
+    "search_query": "how to get your life together checklist",
+    "destination": "https://lastingchange.works/how-to-get-your-life-together",
+    "primary_metric": "Google Search Console clicks to exact URL once valid period exists.",
+    "future_pin_hook": "Show one filled-in ITEM/NEXT ACTION/STATUS card, direct approved article destination with ownUTM, exact newimage/copy first show. Not created/posted in this round.",
+    "pinterest_metric": "Verified organic outbound clicks separately.",
+    "control": "Keep existing how-to-start-over-in-life page unchanged as directional reference only; different intent and exposure, not randomized A/B.",
+    "purchase_route": "Optional paperback, no available PDFcheckout claim."
+  },
+  "actual_changes": [
+    {
+      "status": "concept_only",
+      "slug": "how-to-get-your-life-together",
+      "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-get-your-life-together&concept=1",
+      "details": "Own1430wordarticle8sections5FAQs, original7lineadmincard."
+    },
+    {
+      "status": "measurement_log",
+      "details": "22oldpinrows retain prior snapshots and gain current secondary observations/nulls."
+    }
+  ],
+  "live_improvements": [],
+  "stocking_update": "Existing quizFAQ11/5/16/8 correction remains separate draft; not republished as new work.",
+  "next_test": {
+    "technical": "After exact proposal approval first isolated2pinID/2sitejointcounter and sharedcooldown tests; then working live check.",
+    "content": "14to21days from actual approved publication plus enough comparable data; no start date for this draft. Existing25novlivearticle9to16dec remains independent.",
+    "primary_metric": "Qualified measured acquisition, exactURLGSCclicks first, attributed sale only if available.",
+    "north_star": "30xambition has no valid7dayorganicbaseline or exactabsoluteendtarget/deadline; progress not computable."
+  },
+  "limitations": [
+    "No new publicarticle/pin/Reel or sitecode in this round.",
+    "No campaigns/payments/bio/settings/ads/Telegram/outreach changed.",
+    "Querycache retrieved once; costfieldhistoricalnotnewcharge.",
+    "No providerwindow/organicclickdefinition restored by this run."
+  ]
+}

@@ -5,7 +5,7 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-25T19:43:05.625Z",
+  "updated_at_utc": "2026-11-26T03:40:11.761Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
@@ -83,6 +83,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -151,6 +165,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -223,6 +251,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 2,
+            "saves": 1,
+            "imp": 5
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -295,6 +341,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 5
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -367,6 +431,24 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -439,6 +521,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 7
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -511,6 +611,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 7
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -583,6 +701,24 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -655,6 +791,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 4
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -735,6 +889,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -815,6 +987,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -887,6 +1077,24 @@
           "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 2
+          },
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -951,6 +1159,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1015,6 +1237,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1079,6 +1315,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1143,6 +1393,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1215,6 +1479,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1287,6 +1565,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "lesson": {
@@ -1326,6 +1618,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -1366,6 +1672,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -1406,6 +1726,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -1446,6 +1780,20 @@
           "secondary_provider_claim": null,
           "website_per_pin_openings": null,
           "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        },
+        {
+          "observed_at_utc": "2026-11-26T03:40:11.761Z",
+          "round": "article",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Thu, 26 Nov 2026 03:37:13 GMT",
+          "reported_internal_metrics": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "website_per_pin_openings": null,
+          "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
