@@ -103,6 +103,14 @@ export default async function handler(req, res) {
     const doel=await A.klik({p:String(q.get('p')||''),s:q.get('s'),u:q.get('u'),mmc:q.get('mmc'),ua:req.headers['user-agent'],host:String(req.headers['x-forwarded-host']||req.headers.host||'')}).catch(()=>null);
     if(!doel)return res.status(404).send('Onbekende link');res.setHeader('location',doel);res.setHeader('referrer-policy','no-referrer-when-downgrade');return res.status(302).end();
   }
+  if(q.get('tool')==='mobi'){ // mobiliseren per bedrijf bij een echt dossier op we are many now (lib/mobiliseer.js, 26 nov 2026)
+    const MB=await import('../lib/mobiliseer.js');const op=String(q.get('op')||'');res.setHeader('x-robots-tag','noindex');
+    if(op==='stand'){res.setHeader('cache-control','public, max-age=300');return res.status(200).json(await MB.mobiStand().catch(()=>({ok:false,d:{}})));}
+    res.setHeader('cache-control','no-store');
+    if(op==='ev'){if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,400));}catch{b={};}return res.status(200).json(await MB.mobiEv(b,req.headers['user-agent']).catch(()=>({ok:false})));}
+    if(op==='meet'){if(!/\.vercel\.app$/i.test(String(req.headers.host||'')))return res.status(404).json({ok:false});return res.status(200).json(await MB.mobiMeet(Math.min(60,Number(q.get('dagen'))||14)));}
+    return res.status(400).json({ok:false});
+  }
   if(q.get('tool')==='haak'){ // haken in de chat: peiling, kennistest, uitdaging (lib/haak.js, 21 nov 2026)
     const HK=await import('../lib/haak.js');const op=String(q.get('op')||'');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     if(op==='stand')return res.status(200).json(await HK.stand());

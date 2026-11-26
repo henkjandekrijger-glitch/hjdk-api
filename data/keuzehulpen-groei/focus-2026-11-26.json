@@ -1,0 +1,156 @@
+{
+ "datum": "2026-11-26",
+ "id": "kz-focus-20261126",
+ "door": "kz-claude (Henkjan: 'Check met demandradar waar we nu op moeten focussen kwa organisch verkeer. En voer dat ook door.')",
+ "bronnen": {
+  "demand_radar_gaps": "https://demandradar-ivory.vercel.app/api/demand?view=gaps&format=text (opgehaald 2026-11-26, zoekvolumes oktober 2026, AI-vragen 19 nov)",
+  "search_console": "/api/gsc?op=status, venster 2026-10-28 t/m 2026-11-24",
+  "kern": "/api/kz?op=kern (2026-11-26 06:45 UTC)",
+  "crawl": "/api/zicht?op=crawl (2026-11-26)",
+  "rangorde_23nov": "data/keuzehulpen-groei/potenties-2026-11-23.json"
+ },
+ "stand": {
+  "keuzehulp.best": {
+   "google28d": {
+    "vertoningen": 11,
+    "kliks": 0
+   },
+   "was_7nov": {
+    "vertoningen": 1564,
+    "kliks": 6
+   },
+   "kern_open": 139,
+   "kern_in_google": 9,
+   "dicht_noindex": 349,
+   "googlebot_7d": 1575,
+   "googlebot_7d_daarvoor": 14,
+   "lezing": "Google leest de site sinds 21 nov weer, maar heeft de kern nog niet terug in de index. Onderwerpkeuze is nu niet de beperking; herindexering is dat."
+  },
+  "whichtobuy.best": {
+   "eigen_gidsen_google28d": {
+    "vertoningen": 20,
+    "kliks": 0
+   },
+   "googlebot_7d": 51,
+   "in_google": "10 van 192"
+  },
+  "kaufberater.best": {
+   "eigen_gidsen_google28d": {
+    "vertoningen": 5,
+    "kliks": 2
+   },
+   "googlebot_7d": 6,
+   "in_google": "7 van 130",
+   "zoekbezoek_7d": 27,
+   "opmerking": "zoekbezoek komt vooral van Bing"
+  },
+  "curacao.day": {
+   "google28d": {
+    "vertoningen": 18841,
+    "kliks": 285
+   },
+   "lezing": "Enige plek met echt zoekverkeer. Zoekvragen op bedrijfsnaam staan op plek 5 tot 12."
+  }
+ },
+ "focus": [
+  {
+   "rang": 1,
+   "wat": "Curaçao-bedrijfspagina's waar Google ons al op plek 4 tot 15 toont",
+   "waarom": "Hier is al vraag en positie; een geverifieerd feit kan een klik opleveren. Sluit aan op de noordster van 113 naar 1.130.",
+   "kandidaten_28d": [
+    {
+     "vraag": "steak and chill saloon",
+     "vertoningen": 18,
+     "plek": 10.8
+    },
+    {
+     "vraag": "bentana di informashon",
+     "vertoningen": 15,
+     "plek": 11.2
+    },
+    {
+     "vraag": "tire mart curacao",
+     "vertoningen": 13,
+     "plek": 8.2
+    },
+    {
+     "vraag": "paramaribo restaurant curacao",
+     "vertoningen": 10,
+     "plek": 8.1
+    },
+    {
+     "vraag": "master painting curacao",
+     "vertoningen": 9,
+     "plek": 9.0
+    },
+    {
+     "vraag": "toelatingsorganisatie curaçao",
+     "vertoningen": 8,
+     "plek": 5.8
+    },
+    {
+     "vraag": "kas di beibel curacao",
+     "vertoningen": 5,
+     "plek": 8.4
+    }
+   ],
+   "regel": "Tot 3 per dag in plaats van 1, alleen met een officiële bron per feit; geen feit zonder bron, geen pagina vullen om het vullen. Deze cijfers zijn gemeten op de oude adressen van kaufberater.best en whichtobuy.best, die sinds 24 nov doorsturen naar curacao.day."
+  },
+  {
+   "rang": 2,
+   "wat": "keuzehulp.best: de kern terug in Google, geen inhoud wijzigen aan pagina's in een lopende proef",
+   "waarom": "81 lopende proeven en Google is pas vijf dagen terug. Meten: kern in Google, elke dag.",
+   "verversvolgorde_als_Henkjan_ververs_zegt": [
+    "stekkerbatterij",
+    "marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+    "winterjas",
+    "iphone-18",
+    "energieleverancier-vergelijken",
+    "zonnepanelen",
+    "strijkplank",
+    "matras",
+    "heggenschaar",
+    "luchtbevochtiger",
+    "slowjuicer",
+    "soundbar"
+   ],
+   "vraag_per_maand_demand_radar": {
+    "thuisbatterij met stekker": 8100,
+    "marstek venus e 3.0": 18100,
+    "winter jassen": 531000,
+    "iphone 18": 411000,
+    "energiecontract": 109200,
+    "zonnepanelen": 80600
+   },
+   "eerder_zoekvragen_in_search_console": [
+    "strijkplank",
+    "matras",
+    "heggenschaar",
+    "luchtbevochtiger",
+    "slowjuicer",
+    "soundbar",
+    "robotmaaier",
+    "inductiekookplaat",
+    "lattenbodem",
+    "laptop-school",
+    "wasdroger",
+    "schmink-kind"
+   ]
+  },
+  {
+   "rang": 3,
+   "wat": "VS en DE: ontdekking door Google",
+   "waarom": "Googlebot leest whichtobuy 51 keer en kaufberater 6 keer per 7 dagen. Zonder lezen geen index. Geen nieuwe gidsen; bestaande volgorde DE balkonopslag en VS pomp-back-up blijft."
+  }
+ ],
+ "niet_gedaan": [
+  "Geen pagina-inhoud gewijzigd.",
+  "Geen nieuwe keuzehulp.",
+  "Geen campagne of budget."
+ ],
+ "volgende_toets": {
+  "kern_in_google": "dagelijks via /api/kz?op=kern",
+  "curacao_noordster": "dagelijks",
+  "oordeel": "1 december meetdekking; SEO-oordeel pas met volwassen vensters"
+ }
+}

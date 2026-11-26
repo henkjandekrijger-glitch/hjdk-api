@@ -109,6 +109,16 @@ Behandel volume als een schatting per term, tel synoniemen niet op en noteer de 
 
 Leg vóór elke inzet vast: vraag, gekozen en afgewezen onderwerp, huidige beperking, URL, bron/venster, traffic-segment, teller/noemer, wijzigings- en blootstellingsdatum, verwachte uitkomst, tegenbewijs en evaluatiemoment. Onderzoek na 7 dagen eerst meetdekking en ontdekking. Een SEO-oordeel vereist volwassen gescheiden vensters, minimaal circa 35 dagen na de echte ingreep en voldoende data. Beoordeel later ook of de vooraf voorspelde onderwerpvolgorde klopt. Meer bots, pill-kliks of zoekvolume bewijst geen omzet. Bescherm lopende SEO-proeven; herstel een aantoonbaar fout product wel en leg die meetverstoring apart vast. Geen onbewezen tweede pagina of verplichte dagelijkse nieuwbouw.
 
+## 5b. Focus organisch en mobiliseren (26 november 2026)
+
+Lees data/keuzehulpen-groei/focus-2026-11-26.json. Volgorde tot een nieuwe meting iets anders zegt:
+
+1. Curaçao-bedrijfspagina's waar Google ons al op plek 4 tot 15 toont: tot 3 per dag in plaats van 1, elk feit met een officiële bron, volgens OVERDRACHT-CURACAO-BEDRIJFSPAGINAS.md. Geen feit zonder bron.
+2. keuzehulp.best: de kern terug in Google (`/api/kz?op=kern`, 26 nov: 9 van 139). Wijzig geen inhoud van pagina's in een lopende proef. Verversen gebeurt overdag in de Claude-chat met de tokens van die chat, met de Vercel AI Gateway als reserve, en pas op Henkjans woord; de volgorde staat in het focusbestand.
+3. VS en DE: Googlebot leest nauwelijks. Geen nieuwe gidsen om dat op te lossen.
+
+Mobiliseren per bedrijf (lib/mobiliseer.js): achter de chat staat een blok 'Ik heb dit ook' zodra een bedrijf met een gepubliceerd dossier op we are many now op de pagina staat of in de chat genoemd wordt. Lees elke dag `https://hjdk-api-henq.vercel.app/api/keuze-tools?tool=mobi&op=meet` (stappen per site, bevestigde aanmeldingen, lek) en meld alleen wat bewoog. Meldt het veld `lek` iets: pas één ding aan, de regel of de knoptekst in MOBI of T. Komt er op de dossiersite een dossier met ik-ook bij: regel in MOBI, `node scripts/test-mobiliseer.mjs`, en kijk of een bestaande keuzehulp dat bedrijf noemt. Zet nooit een bedrijf zonder dossier in MOBI.
+
 ## 6. Lopende proeven in de chat (stand 23 nov 15:02 UTC)
 
 Dagronde 23 nov: uitsluitend factor pillflow beslist voor VS en DE. In VS won a met waarde 3,20 tegen 0,69 (4.432 tegen 601 gezien; intenties 356 tegen 5); in DE 4,97 tegen 1,16 (2.056 tegen 332; intenties 295 tegen 2). Beide voldeden aan 300 per arm en 95% kans volgens het bestaande model. Versie a blijft de standaard; b staat in de code uit. Alleen oude b-beslissingen worden opnieuw opgehaald, zodat ze niet zes dagen doorlopen. Ronde 3 en de andere factoren blijven bewaard. NL wacht nog op 300 voor a. De meeste waarnemingen komen van Android; dit is geen omzetbewijs. Geen nieuwe variant verzonnen: geef een volgende uitdager door aan ontwikkelchat kz-chat.
