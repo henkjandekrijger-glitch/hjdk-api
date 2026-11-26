@@ -1,11 +1,11 @@
 {
   "datum": "2026-11-25",
-  "status": "wacht-op-akkoord",
-  "publiceren": false,
+  "status": "goedgekeurd-uitvoering-open",
+  "publiceren": true,
   "concepten": [
     {
       "id": "gids-tv-20261125",
-      "status": "wacht-op-akkoord",
+      "status": "goedgekeurd-uitvoering-open",
       "vorm": "Pinterest-gidspin",
       "bord": "Wonen en decoratie",
       "titel": "Tv-meubel voor 65 inch: bereken welke breedte past",
@@ -23,7 +23,7 @@
     },
     {
       "id": "gids-planten-20261125",
-      "status": "wacht-op-akkoord",
+      "status": "goedgekeurd-uitvoering-open",
       "vorm": "Pinterest-gidspin",
       "bord": "Wonen en decoratie",
       "titel": "Planten bij home staging: echt of kunst kiezen",
@@ -41,7 +41,7 @@
     }
   ],
   "publicatievoorwaarden": [
-    "Henkjans expliciete akkoord voor gids-pins en gidsbestemming.",
+    "Akkoord ontvangen op 26 november; geen nieuwe toestemming nodig voor deze twee concrete pins.",
     "Actuele bronfoto's en beschikbaarheid hercontroleren; definitieve 1000x1500-afbeeldingen exporteren uit de getoonde opmaak.",
     "Pinterest-UTM bron en campagne doormeting controleren zonder echte gebruikerssignalen na te bootsen.",
     "Huidig plafond van drie pins per dag behouden; geen dubbel ingeplande producten of gidsen."
@@ -52,6 +52,13 @@
       "7 dagen"
     ],
     "rechter": "echte bezoeken, productkliks, mandjes, koop; Pinterestbereik apart",
-    "beperking": "Pinterest-UTM nog niet apart in gidsbronclassificatie. Geen meetresultaat uit concept afleiden."
-  }
+    "beperking": "Pinterestbron sinds 26 november apart herkend; campagnebehoud tot koop nog controleren. Akkoord is geen meetresultaat."
+  },
+  "goedkeuring": {
+    "datum": "2026-11-26",
+    "tekst": "Ja akkoord . GO !",
+    "scope": "Twee getoonde gids-pins, één per dag in plaats van een productpin binnen drie."
+  },
+  "publicatie_bevestigd": false,
+  "blokkade": "Zernio-postoverzicht bleef laden; connector ontbreekt. Geen plaatsing of planning bevestigd."
 }

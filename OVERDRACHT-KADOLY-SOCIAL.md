@@ -15,6 +15,8 @@ Na "JA allemaal live netjes ." op de getoonde UX heeft groei drie merkontwerpen 
 Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequentie blijft gelijk; geen borden, accounts of mail toegevoegd. De knop in de stories is beeld: Instagram Graph API ondersteunt geen linkstickers en toont geen captions. Facebook heeft de Clickmind-link in de custom caption, maar klikbaarheid is niet bevestigd. De pins hebben de juiste directe UTM-productlinks, openbaar HTTP 200. Geen bereik of koop uit publiceren afgeleid. De volgende ronde meet vóór de stories verlopen.
 
 ## 1. Wat het oplevert (16 tot en met 20 nov)
+**Akkoord 26 november 2026:** Henkjan gaf "Ja akkoord . GO !" op het groeiwerk. De twee getoonde gids-pins voor tv-meubelbreedte en planten-home-staging mogen via de bestaande socialronde worden uitgevoerd, één per dag ter vervanging van een productpin binnen drie pins. Bronbestand en uitvoeringsvoorwaarden staan in `kadoly/taak-social.md` en `kadoly/groei/2026-11-25-pinconcepten.json`. Nog niet als gepubliceerd of ingepland bevestigd; de browser bleef hangen op het Zernio-postoverzicht. Geen extra frequentie of borden.
+
 
 | Kanaal | Volgers | Posts | Bereik | Kliks (Clickmind) | Echte mensen | Mandje | Verkoop |
 |---|---|---|---|---|---|---|---|
