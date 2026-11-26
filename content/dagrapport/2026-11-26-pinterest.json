@@ -334,6 +334,73 @@
         "no_paid_calls": true,
         "no_main_push": true
       }
+    },
+    {
+      "observed_at_utc": "2026-11-26T22:52:37.960Z",
+      "trigger": "Je bent lui zorg dat ik morgen meer verkeer zie.",
+      "round": "measurement_repair",
+      "actual_work": {
+        "status": "review_branch_only",
+        "pr": 16,
+        "url": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/16",
+        "commit": "462a33dbf84a72285290b4e1e1b86a5e00adbe44",
+        "tests_passed": 22,
+        "syntax": true,
+        "mergeable": true,
+        "live": false,
+        "changes": "Dry structured closed-day source report, explicit missing/readerror/invalid/read; no providers/Telegram/IndexNow/writes; existing authguard. No per-pinjoin or growthproof."
+      },
+      "observed_new_pins": [
+        {
+          "id": "6b088afe6edb5e8d51c8b5eb",
+          "published_at_utc": "2026-11-26T19:39:45.452Z",
+          "url": "https://www.pinterest.com/pin/271060471319768471/",
+          "created_by_this_turn": false,
+          "approval_not_inferred": true
+        },
+        {
+          "id": "6b088af9810e459fa7791c82",
+          "published_at_utc": "2026-11-26T19:39:41.626Z",
+          "url": "https://www.pinterest.com/pin/271060471319768468/",
+          "created_by_this_turn": false,
+          "approval_not_inferred": true
+        },
+        {
+          "id": "6b088af5e1654dc25d265332",
+          "published_at_utc": "2026-11-26T19:39:37.175Z",
+          "url": "https://www.pinterest.com/pin/271060471319768464/",
+          "created_by_this_turn": false,
+          "approval_not_inferred": true
+        },
+        {
+          "id": "6b088af06edb5e8d51c8b5af",
+          "published_at_utc": "2026-11-26T19:39:33.155Z",
+          "url": "https://www.pinterest.com/pin/271060471319768463/",
+          "created_by_this_turn": false,
+          "approval_not_inferred": true
+        }
+      ],
+      "automation": {
+        "id": "Automation_78bd50f1177c819187c97dbc4098ab6e",
+        "updated": true,
+        "schedule_unchanged": true,
+        "read_all_pins": 26
+      },
+      "associates": {
+        "user_intent": "Ik geef je een associates account dan kun je amz producten toevoegen .",
+        "account_received": false,
+        "tracking_id_received": false,
+        "public_products_added": false,
+        "preview_first": true
+      },
+      "constraints": {
+        "main_push": false,
+        "publications": false,
+        "paid_calls": false,
+        "extraTelegram": false,
+        "outreach": false,
+        "traffic_guarantee": false
+      }
     }
   ]
 }
