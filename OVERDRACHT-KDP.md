@@ -93,6 +93,18 @@ Dit is het werkplan voor de hele plank. Elk account en elke chat werkt hieruit: 
 - Nooit wachtwoorden typen; inloggen doet Henkjan. Nooit sleutels in code, pagina's of URL's. Zijn e-mailadres staat nergens.
 - KDP-inhoud: geen dubbele inhoud met eigen boeken (vertalen mag), geen merk- of reekstitels van anderen, geen verzonnen reviews, quotes of studies, geen gedachtestreepjes in gepubliceerde tekst.
 
+## 2a. Oversight: elke dag de zoekwoordencheck (Henkjan 26 nov 2026)
+
+Henkjan 26 nov: "Doe ieder dag een zoekwoorden check op alle campagnes zodat we nooit aan bleeders uitgeven zet ook in dashboard." Stand en regels: https://hjdk-api-henq.vercel.app/oversight (voor een chat ?vorm=tekst; code lib/oversight.js). Ronde A doet het elke dag; ronde B doet het als Oversight om 12:20 UTC nog geen complete ronde van vandaag toont.
+
+1. Lijst alle lopende campagnes in elke markt (advertising.amazon.com voor VS, VK, DE, AU; advertising.amazon.ca voor Canada). Tel ze: dat is campagnesActief.
+2. Per campagne, datum laatste 30 dagen: Targeting (zoekwoorden en producttargets) en bij AUTO of BROAD ook Search terms, gesorteerd op kosten.
+3. Bleeder: 10 of meer kliks en geen aankoop, of kosten van minstens één royalty van dat boek (PIT BOSS paperback $5,05, LC $9,48, onbekend $5) en geen aankoop. Oude winnaar (lifetime 2+ aankopen onder $9 per aankoop): pas bij 20 kliks zonder aankoop.
+4. Actie: woord of target op pauze; zoekterm in AUTO of BROAD als negatief exact in die campagne. Geen bod, budget of campagne aanraken. Duur maar verkopend (3+ aankopen, meer dan 2x royalty per aankoop): niet uitzetten, als voorstel melden.
+5. Meld elke campagne, ook zonder bleeders: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/oversight?zet={"markt":"US","campagne":"<naam>","id":"<id>","boek":"pitboss","royalty":5.05,"gecheckt":<aantal bekeken>,"bleeders":[{"woord":"...","soort":"woord|target|zoekterm","kliks":12,"kosten":6.4,"aankopen":0,"actie":"pauze|negatief"}],"voorstel":["..."]} (JSON URL-gecodeerd).
+6. Sluit af: https://hjdk-api-henq.vercel.app/oversight?zet={"rond":{"campagnesActief":<aantal>,"wie":"kdp-ronde-a"}}. Oversight is pas groen als het aantal gemelde campagnes gelijk is aan campagnesActief.
+7. In het rapport aan Henkjan: een regel Oversight (campagnes bekeken, bleeders uit, geremd per dag). Controle: staat Oversight 26 uur niet op groen, dan zet het dashboard het bovenaan onder Opvallend met Laat Claude ingrijpen.
+
 ## 3. Wat je nodig hebt (toegang)
 
 - Repo henkjandekrijger-glitch/hjdk-api met push (add_repo, clone naar /home/claude/hjdk-api, register_repo_root).
@@ -118,13 +130,13 @@ Opdrachttekst ronde A (VOL):
 
 > KDP-ronde A, 06:20 UTC, soort VOL (Henkjan 13 nov: "Ja je mag dus alles doen als ROI maar maximaal is . En je hier dagelijks minimaal 4 x rapporteert .", 15 nov: "Geef hier ook altijd organische resultaten van de keuzehulpen ." en 16 nov: "HOu mn ROI in de gaten en de ROAS !!").
 > 1. add_repo henkjandekrijger-glitch/hjdk-api met push-toegang, clonen naar /home/claude/hjdk-api, register_repo_root (bestaat de map al: git pull --rebase). Lees de overdracht https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht (web_fetch_vercel_url): regels, stand, draaiboek kdp/rapport.md, wachtrij en boekwedstrijd.
-> 2. Voer de ronde VOL uit zoals in kdp/rapport.md: verkoop gisteren per boek (KDP Reports in Chrome), ads per boek op beide platforms tegen royalty met ROAS tegen break-even en doel (gisteren en 7 dagen; geen bod boven max CPC), stopregels en opschalen, Teens-rang in Canada tegen #1, boekwedstrijd (3 nieuwe kandidaten scoren), ORGANISCH van de keuzehulpen (web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/wtb?op=boekstand&m=us, tegen gisteren) plus indexaanvragen in Search Console (8 tot 10 per dag, boekgidsen eerst) en IndexNow voor gewijzigde gidsen. Doe zelf alles wat het rendement maximaliseert binnen de grenzen (hoogstens $10/dag per campagne, margeregel); Publish-knoppen in KDP laat je aan Henkjan (stuur de link).
+> 2. Voer de ronde VOL uit zoals in kdp/rapport.md: verkoop gisteren per boek (KDP Reports in Chrome), ads per boek op beide platforms tegen royalty met ROAS tegen break-even en doel (gisteren en 7 dagen; geen bod boven max CPC), stopregels en opschalen, Teens-rang in Canada tegen #1, boekwedstrijd (3 nieuwe kandidaten scoren), ORGANISCH van de keuzehulpen (web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/wtb?op=boekstand&m=us, tegen gisteren) plus indexaanvragen in Search Console (8 tot 10 per dag, boekgidsen eerst) en IndexNow voor gewijzigde gidsen. Daarna OVERSIGHT: de zoekwoordencheck op alle lopende campagnes volgens sectie 2a en melden op https://hjdk-api-henq.vercel.app/oversight. Doe zelf alles wat het rendement maximaliseert binnen de grenzen (hoogstens $10/dag per campagne, margeregel); Publish-knoppen in KDP laat je aan Henkjan (stuur de link).
 > 3. Rapport kort Nederlands, alleen wat nieuw is: VERKOOP eerst, ROI (per boek met ads: kosten, ad-omzet, ROAS tegen break-even en doel, ROI op royalty, plus totaal alle ads; gisteren en 7 dagen), ORGANISCH, wat ik veranderde, wat werkt en wat niet, Teens-rang, top 3 wachtrij, tempo naar 10x.
 > 4. Nieuwe kennis, gewijzigde campagnes en een regel onder Organisch in kdp/rapport.md (commit met expliciete bestandsnaam, push) en log in de handover (web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/mm/handover?log=...&wie=kdp-rapport). Reageert Chrome niet: nieuw tabblad maken en het oude sluiten; lukt het dan niet, meld dat kort en doe de rest.
 
 Opdrachttekst rondes B, C en D (TUSSEN; bij D "met dagafsluiting"): gelijk aan A met stap 2 en 3 zo:
 
-> 2. Voer de ronde TUSSEN uit zoals in kdp/rapport.md: ads van vandaag per campagne (Amazon US, Canada en VK), ROAS per boek tegen break-even (geen bod boven max CPC), stopregels toepassen, campagnes zonder vertoningen een stap omhoog binnen de marge, zoektermen met aankoop exact toevoegen, verkoop vandaag tot nu, status van openstaande KDP-wijzigingen, en ORGANISCH (boekstand, tegen de vorige regel onder Organisch).
+> 2. Kijk eerst https://hjdk-api-henq.vercel.app/oversight?vorm=tekst: is er van vandaag nog geen complete check, doe dan OVERSIGHT volgens sectie 2a. Voer de ronde TUSSEN uit zoals in kdp/rapport.md: ads van vandaag per campagne (Amazon US, Canada en VK), ROAS per boek tegen break-even (geen bod boven max CPC), stopregels toepassen, campagnes zonder vertoningen een stap omhoog binnen de marge, zoektermen met aankoop exact toevoegen, verkoop vandaag tot nu, status van openstaande KDP-wijzigingen, en ORGANISCH (boekstand, tegen de vorige regel onder Organisch).
 > 3. Rapport in hooguit 7 regels Nederlands, alleen wat nieuw is: verkoop vandaag, kosten vandaag, ROI (ROAS per boek tegen break-even en ROI op royalty, plus totaal), ORGANISCH, wat ik veranderde, wat opviel. Ronde D sluit de dag af: royalty en ads van vandaag in totaal en plan voor morgen.
 
 ## 5. Stand 19 nov 2026

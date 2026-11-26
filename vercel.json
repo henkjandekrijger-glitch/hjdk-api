@@ -2773,6 +2773,26 @@
       "destination": "/api/mm?op=js"
     },
     {
+      "source": "/oversight",
+      "has": [
+        {
+          "type": "host",
+          "value": "hjdk-api-henq.vercel.app"
+        }
+      ],
+      "destination": "/api/mm?op=oversight"
+    },
+    {
+      "source": "/dashboard",
+      "has": [
+        {
+          "type": "host",
+          "value": "hjdk-api-henq.vercel.app"
+        }
+      ],
+      "destination": "/api/mm?op=dashboard"
+    },
+    {
       "source": "/api/mm/:op",
       "destination": "/api/mm?op=:op"
     },

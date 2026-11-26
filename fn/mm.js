@@ -333,6 +333,18 @@ export default async function handler(req, res) {
       const t = await H.handover(kv); res.setHeader('cache-control', 'no-store');
       if (q('vorm') === 'json') return res.status(200).json(t.json);
       res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(t.tekst); }
+    if (op === 'oversight') { // Oversight (Henkjan 26 nov 2026): dagelijkse zoekwoordencheck op alle Amazon Ads-campagnes, zodat we nooit aan bleeders uitgeven; kort adres /oversight
+      const O = await import('../lib/oversight.js'); res.setHeader('cache-control', 'no-store');
+      if (req.method === 'POST' && !beschermd(req)) { const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
+        const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); if (!given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
+        const b = leesJson(req.body) || {}; const u = await O.zetOversight(kv, b, b.wie || 'cloud'); return res.status(u.ok ? 200 : 400).json(u); }
+      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      if (req.method === 'POST') { const b = leesJson(req.body) || {}; const u = await O.zetOversight(kv, b, b.wie || ''); return res.status(u.ok ? 200 : 400).json(u); }
+      if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b ? await O.zetOversight(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON>, zie ?vorm=tekst' }; return res.status(u.ok ? 200 : 400).json(u); }
+      const s = await O.ovStand(kv, 14);
+      if (q('vorm') === 'json') return res.status(200).json(s);
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(O.ovTekst(s) + '\n'); }
+      const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(O.ovHtml(s, CSS)); }
     if (op === 'dashboard') { // dashboard voor alle projecten (Henkjan 25 nov 2026): doel, voortgang, planning, overdracht en logboek per project; ?zet=<JSON> werkt bij, ?vorm=json|tekst, ?project=<id>
       if (req.method === 'POST' && !beschermd(req)) { // projecten zetten hun eigen voortgang bij vanuit de cloud (Henkjan 25 nov: "onafh comp en account"): alleen zet, met de gedeelde team-sleutel
         const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);

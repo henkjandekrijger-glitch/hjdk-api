@@ -25,6 +25,10 @@ Schrijf kort, in gewoon Nederlands, met ingevulde cijfers. Eerst doen, dan melde
 - Bestaande campagnes zonder Clickmind gaan over via de dagelijkse kopieën, want een lopende PropellerAds-campagne kan zijn link niet wijzigen. De oude campagne gaat uit volgens Dagelijkse kopieën.
 - Bij elke uurlijkse check: tel de lopende campagnes zonder Clickmind-link per netwerk en meld het aantal.
 
+## Oversight: dagelijkse zoekwoordencheck op Amazon Ads (Henkjan 26 nov 2026)
+
+Elke dag kijkt KDP-ronde A (B als A het niet deed) alle lopende Amazon Ads-campagnes in alle markten na, zodat er nooit geld naar bleeders gaat. Bleeder: 10+ kliks of kosten van één royalty (standaard $5) zonder aankoop in 30 dagen; oude winnaars (2+ aankopen onder $9 per aankoop) pas bij 20 kliks. Actie: woord of target op pauze, zoekterm in AUTO of BROAD negatief exact. Nooit bod, budget of campagne. Regels, meldformaat en stand: https://hjdk-api-henq.vercel.app/oversight?vorm=tekst (code lib/oversight.js).
+
 ## Uurlijkse verspillingscheck (elk uur, in de cloud)
 
 Naast de wachten van elke 10 minuten draait elk uur één check over alle netwerken en projecten. Doel: elke dollar die niet naar een echt mens gaat binnen het uur zien en stoppen. Zelf mag: zones en bronnen blokkeren. Pauzeren, bod, budget en targeting alleen op Henkjans woord ("los op", of een opdracht zoals "zet alles voor rereviews uit", die geldt dan voor precies die campagnes).
