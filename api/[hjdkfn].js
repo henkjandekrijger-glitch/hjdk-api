@@ -36,6 +36,7 @@ const FN = {
   shop: () => import('../fn/shop.js'),
   t: () => import('../fn/t.js'),
   verzekeringen: () => import('../fn/verzekeringen.js'),
+  videomind: () => import('../fn/videomind.js'),
   vindbaarheid: () => import('../fn/vindbaarheid.js'),
   w: () => import('../fn/w.js'),
   wam: () => import('../fn/wam.js'),
