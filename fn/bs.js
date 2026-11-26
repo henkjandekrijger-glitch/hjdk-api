@@ -200,10 +200,16 @@ export default async function handler(req, res) {
   }
   // Plan van vandaag (lezen mag iedereen); log en uitkomst alleen via de beschermde host (hjdk-api-henq.vercel.app)
   if (op === 'pinplan' || op === 'pinstand') {
-    const stand = (await kv.get('bs:pinstand').catch(() => null)) || {}, log = (await kv.get('bs:pinlog').catch(() => null)) || [];
+    const stand = (await kv.get('bs:pinstand').catch(() => null)) || {};
+    let log;
+    try {
+      log = await kv.get('bs:pinlog');
+      if (!Array.isArray(log)) throw new Error('ongeldig boeklog');
+    } catch (e) {
+      return stuur(res, 503, 'application/json; charset=utf-8', JSON.stringify({ ok: false, fout: 'Boekhistorie niet beschikbaar; geen kandidaten veilig te controleren.' }), { cache: 'no-store', robots: 'noindex' });
+    }
     if (op === 'pinstand') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, haken: HAKEN.map(h => ({ id: h.id, ...(stand[h.id] || {}) })), laatste: log.slice(-20) }), { cache: 'no-store', robots: 'noindex' });
-    const gisteren = log.filter(x => Date.now() - Date.parse(x.t) < 2 * 864e5).map(x => x.a);
-    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, pins: pinPlan(stand, { aantal: Math.max(1, Math.min(8, +q.get('n') || 4)), gisteren }) }), { cache: 'no-store', robots: 'noindex' });
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, pins: pinPlan(stand, { aantal: Math.max(1, Math.min(8, +q.get('n') || 4)), log }), controle: { afkoeldagen: 14, bron: 'geregistreerde boekplaatsingen; geen volledige providerplanning', reservering: false } }), { cache: 'no-store', robots: 'noindex' });
   }
   if (op === 'pinlog' || op === 'pinuitkomst') {
     if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
