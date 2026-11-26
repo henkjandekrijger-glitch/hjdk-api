@@ -268,3 +268,8 @@ Lokale bronmap heeft geen gitmetadata; git pull --rebase gaf niet-een-git-reposi
 
 ### Uitrolakkoord26nov2026
 Henkjan: 'Ja akkoord .' op precies PR15. Deze commit voert die geteste reparatie uit;26tests slagen ook tegen de huidige main-afhankelijkheden. De bescherming geldt voor bekende boekregistraties en één batch; providerplanning en gelijktijdige reserveringen blijven buiten scope. Productiecontrole volgt na deploy en wordt in het centrale werklog en codex/content-dagboek vastgelegd. Geen nieuwe pin/artikel/CTA/affiliatepublicatie aan dit akkoord toevoegen.
+
+
+### 26nov2026: bronrapport als concrete reviewreparatie
+Henkjan vraagt meer verkeer morgen. Nieuwe code ter beoordeling, geen main/deploy: bestaand op=dagrapport&droog=1&vorm=json geeft gesloten UTC-dag plus vorige dag, per-site bronopeningen en alleen bekende publieke paginatotalen. Leesstatus ontbreekt/leesfout/ongeldig/gelezen apart; geen ontbrekende waarde als nul. Ruwe Amazonverzoeken en PDFdagregistratie apart, geen conversiepercentage. Geen per-pinlandingclaim: gezamenlijke UTMmeting blijft een afzonderlijke nog te beoordelen stap. De gestructureerde droge tak slaat ZICHT/pinproviders/IndexNow/Telegram en alle writes over; bestaande cron en tekstmodus behouden.
+Validatie:22tests (5nieuwebron/UTC/privacy/routecontroles,3bestaandeorganisch,14paginacontroles) plus fn/bs.js syntaxis. Geen liveKVtest of productiesiteverkeer gegenereerd. Bestaande eerder getoonde gratisresourcepins blijven exactterinzage tot publicatieakkoord. Vandaagvier andere boekpins15:39CuraçaoPublished; niet dubbelplaatsen. Meertraffic in24uur is niet gegarandeerd.

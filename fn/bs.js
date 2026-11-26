@@ -12,7 +12,7 @@ import * as LCW from '../lib/lcwaarom.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
 import { pinPlan, haakVan, vind, HAKEN, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
-import { dagRapport, rapportTekst, BRON_OK } from '../lib/bsorganisch.js';
+import { dagRapport, rapportTekst, rapportData, BRON_OK } from '../lib/bsorganisch.js';
 const FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
 const el = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
 const beschermd = req => /-henq\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
@@ -171,6 +171,13 @@ export default async function handler(req, res) {
   if (op === 'dagrapport') {
     const cron = /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
     if (!cron && !beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false}', { cache: 'no-store' });
+    if (q.get('droog') === '1' && q.get('vorm') === 'json') {
+      const gelezen = await kv.get('lc:arts').catch(() => null);
+      const arts = Array.isArray(gelezen) ? gelezen : [];
+      const publiekePaden = { bs: SLUGS.map(sl => '/' + sl), lc: ['/', '/guides', '/refund', '/how-to-stick-to-new-years-resolutions', ...arts.filter(a => a.status === 'live').map(a => '/' + a.slug)] };
+      const r = await rapportData(kv, { publiekePaden });
+      return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(r), { cache: 'no-store', robots: 'noindex' });
+    }
     let zicht = null; try { const z = await (await fetch('https://keuzehulp.best/api/zicht?op=stand&site=bookstuffers', { signal: AbortSignal.timeout(8000) })).json(); const l = z && z.sites && z.sites.bookstuffers && z.sites.bookstuffers.laatste; if (l) zicht = { imp: l.gsc && l.gsc.imp, clicks: l.gsc && l.gsc.clicks, geindexeerd: l.index && l.index.geindexeerd, ai: Array.isArray(l.llm) ? l.llm.filter(x => x.genoemd || x.geciteerd).length : 0 }; } catch (e) {}
     let pins = null; try { const log = (await kv.get('bs:pinlog')) || [], st = (await kv.get('bs:pinstand')) || {}, gist = new Date(Date.now() - 864e5).toISOString().slice(0, 10); const t = Object.entries(st).reduce((a, [, v]) => ({ klik: a.klik + (v.klik || 0), saves: a.saves + (v.saves || 0) }), { klik: 0, saves: 0 }); const beste = Object.entries(st).sort((a, b) => ((b[1].klik || 0) + (b[1].saves || 0)) - ((a[1].klik || 0) + (a[1].saves || 0)))[0]; pins = { geplaatst: log.filter(x => String(x.t).startsWith(gist)).length, ...t, beste: beste && ((beste[1].klik || 0) + (beste[1].saves || 0)) > 0 ? beste[0] : '' }; } catch (e) {}
     const arts = (await kv.get('lc:arts').catch(() => null)) || [];
