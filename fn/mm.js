@@ -346,6 +346,7 @@ export default async function handler(req, res) {
       const d = await D.dashData(kv);
       if (q('vorm') === 'json') return res.status(200).json(d);
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
       if (melding) { const a = d.archief.find(x => x.id === melding.id), p = d.projecten.find(x => x.id === melding.id); melding = melding.aan ? { tekst: ((a && a.naam) || melding.id) + ' is gearchiveerd en staat niet meer in het overzicht.', terug: melding.id } : { tekst: ((p && p.naam) || melding.id) + ' staat weer in het overzicht.' }; }
       res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding)); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers

@@ -54,3 +54,8 @@ console.log('klaar',h.length,d.projecten.length);
   if (l.length < 9 || l.some(k => !k.staat)) throw new Error('skill ontbreekt: ' + l.filter(k => !k.staat).map(k => k.naam).join(', '));
   if (!D.skillTekst('clickmind') || D.skillTekst('bestaat-niet') !== null || D.skillTekst('../../package') !== null) throw new Error('skillTekst');
   console.log('skills ok', l.length); }
+
+// startopdracht voor een chat (26 nov): bovenaan de HTML (commentaar) en bovenaan vorm=tekst
+{ const D = await import('../lib/dashboard.js'); const st = D.startTekst({ projecten: [{ id: 'kdp', naam: 'KDP-boeken', doel: 'x' }] });
+  if (!/STARTOPDRACHT/.test(st) || !/vorm=tekst&project=<id>/.test(st) || /--/.test(st.replace(/https?:\/\/\S+/g, ''))) throw new Error('startTekst');
+  console.log('startopdracht ok'); }
