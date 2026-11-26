@@ -1149,7 +1149,7 @@ export default async function handler(req, res) {
       if (op === 'winloting') return res.status(200).json(await KW.loting(kv, dag, { opnieuw: url.searchParams.get('opnieuw') === '1' }));
       if (url.searchParams.get('leer') === '1') return res.status(200).json(await KW.leermoment(kv));
       const d8 = D8(); const tel = async k => Number(await kv.get('c:' + k).catch(() => 0)) || 0;
-      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout'), proef: await KW.proefStand(kv) }); }
+      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout'), proef: await KW.proefStand(kv, { alle: url.searchParams.get("alle") === "1" }) }); }
     if (op === 'b') return await baken(req, res);
     if (op === 'hb') return await hulpBaken(req, res);
     if (op === 'hulp') return await hulp(req, res, url);
