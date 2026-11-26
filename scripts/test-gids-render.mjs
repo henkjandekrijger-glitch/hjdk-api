@@ -306,7 +306,7 @@ assert.ok(!bewijs.bronLink({id:'test',t:'Hoes voor kamado'}).includes('#kamado-2
 assert.ok((await render('op=llmsfull')).body.includes('Kamado 22 inch XL'));
 for(const q of ['', 'slug=nieuw-bij-kadoly', 'slug=whisky-set-cadeau']) {
  const h=(await render(q)).body;
- assert.ok(h.includes('tegenstrijdigheid'));
+ assert.ok(h.includes('retour op eigen kosten') || h.includes('gratis of op eigen kosten'));
  assert.ok(!h.includes('je krijgt een retourlabel en het hele bedrag terug'));
  assert.ok(!h.includes('versturen met gratis retourlabel'));
 }
@@ -333,7 +333,7 @@ for(const pid of ['oc_4174002187829249','oc_4173959383220225']){
 assert.ok(sc.keuze.some(k=>k.pid==='oc_4174004652687361'));
 const scHtml=(await render('slug=schoencadeautjes-sinterklaas')).body;
 assert.ok(scHtml.includes('/naar/oc_4174004652687361?g=schoencadeautjes-sinterklaas&b=tabel'));
-assert.ok(!scHtml.includes('uiterlijk maandag 30 november'));assert.ok(scHtml.includes('tegenstrijdigheid'));
+assert.ok(!scHtml.includes('uiterlijk maandag 30 november'));assert.ok(scHtml.includes('retour gratis of op eigen kosten'));
 const kg=gidsen.GIDSEN.kerstcadeau;assert.equal(kg.bijgewerkt,'2026-11-23');
 assert.ok(!JSON.stringify(kg).includes('uiterlijk woensdag 16 december'));
 assert.ok((await render('slug=kerstcadeau')).body.includes('geen algemene uiterste besteldag'));
@@ -378,3 +378,16 @@ for(const id of ['oc_4174003312721921','oc_4174003313590273','oc_417400346599424
 assert.ok(bewijs.bronLink({id:'oc_4174003512573953'}).includes('/planten-home-staging#uitleg'));
 for(const query of ['slug=onderzoek-en-bronnen','op=llms','op=llmsfull']) {const b=(await render(query)).body;assert.ok(b.includes('tuinposter'));assert.ok(b.includes('kunstboom'));assert.ok(b.includes(bewijs.BRONNEN.cadeauHuidAad.url));}
 console.log('25nov: 19 adviesroutes zonder ongefundeerde aankoop, modelgrenzen, passende matches, FAQ/schema en bronnen in beide LLM-bestanden geslaagd.');
+
+// 26nov: geen fysieke tv-passing uit beeldbreedte; beperkingen blijven in winkelexport.
+const dr=(await render('slug=dressoir')).body;
+assert.ok(!dr.includes('past mooi tot 75 inch'));assert.ok(!dr.includes('Een meubel van minstens 144 cm'));
+assert.ok(dr.includes('volledige voet'));
+const winkel26=(await render('op=winkelcontent&pid=dp_1022')).body;
+assert.ok(winkel26.html.includes('Let op:'));assert.ok(winkel26.html.includes('Hoe zwaar de tv erop mag zijn'));
+assert.ok(!winkel26.html.includes('past mooi tot 75 inch'));assert.ok(winkel26.html.includes('draagvermogen'));
+for(const id of ['dp_2710','dp_2698'])assert.ok(bewijs.bronLink({id}).includes('#bamboebed-26nov'));
+assert.ok(bewijs.bamboeBedMatch({t:'Bamboe dekbedovertrek groen'}));
+for(const t of ['Bamboe wasmand','Bamboe lamp','Bamboe borstel','Kunstbamboeplant'])assert.ok(!bewijs.bamboeBedMatch({t}));
+for(const q of ['slug=onderzoek-en-bronnen','op=llms','op=llmsfull']){const b=(await render(q)).body;assert.ok(b.includes('BCSI'));assert.ok(b.includes('dp_2698'));assert.ok(b.includes(bewijs.BRONNEN.oekoCheck26.url));}
+console.log('26nov: fysieke tv-grenzen en exportbeperkingen, passende beddengoedmatches, bronhub/LLM en actuele retourkosten geslaagd.');
