@@ -731,7 +731,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
     const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: (u => /iPhone|iPad/.test(u) ? 'ios' : /Android/.test(u) ? 'android' : 'desktop')(String(req.headers['user-agent'] || '')) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
     const pot = keus.kans === 'aan' || keus.mtekst === 'b' ? await KW.potGrootte(kv).catch(() => 0) : 0;
-    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus, pot })); }
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus, pot, gid: process.env.WAM_GOOGLE_CLIENT_ID || '' })); }
   return res.status(200).send(html);
 }
 
@@ -740,15 +740,18 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 async function winAanmeld(req, res) {
   res.setHeader('cache-control', 'no-store'); if (req.method !== 'POST') return res.status(405).json({ ok: false });
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
-  const email = String(b.email || '').trim().toLowerCase(); if (!/^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i.test(email) || email.length > 120) return res.status(400).json({ ok: false, fout: 'email' });
+  let email = String(b.email || '').trim().toLowerCase(), gv = false;
+  if (b.cred) { const g = await googleMail(b.cred); if (!g) { try { await inc(['sh-win-gfout']); } catch (e) {} return res.status(400).json({ ok: false, fout: 'google' }); } email = g; gv = true; } // 26 nov: aanmelden met één tik via Google One Tap
+  if (!/^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i.test(email) || email.length > 120) return res.status(400).json({ ok: false, fout: 'email' });
   if (isBot(req.headers['user-agent'])) return res.status(200).json({ ok: true });
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null; if (code) { try { rec = await kv.get(K.rec(code)); } catch (e) {} } const net = rec ? rec.s : 'x';
   try { const MM = await import('../lib/mailmind.js'); if (await MM.geblokkeerd(email)) return res.status(200).json({ ok: true }); } catch (e) {}
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
   const MT = await import('../lib/modalmotor.js');
   const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : '') + (b.bron === 'modal' ? '-modal' : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
-    toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
+    direct: gv, toestemming: gv ? 'Winactie go.kadoly.com, Doe mee met Google: e-mailadres (door Google bevestigd) voor de winactie en de mail van Kadoly met sieraden en cadeautips; tekst bij de knop: Je doet mee en krijgt de mail van Kadoly met sieraden en cadeautips; afmelden met één klik.' : 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
   if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
+  if (r.ok && r.direct) { try { const KN = await import('../lib/kadoly-nieuws.js'); const bs = await KN.bevestig(r.direct); if (bs) r.al = true; } catch (e) {} r.google = true; } // Google bevestigde het adres: meteen bevestigd, naBevestig zet het in de pot van deze week
   if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} }
   if (r.ok && code) { try { await KW.keusMail(kv, code); if (b.bron === 'modal') await KW.keusTel(kv, code, 'mm'); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && rec.w && net === 'pa' && rec.c && !rec.conv && !rec.t && PB.pa) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const rr = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = rr.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; await inc(['sh-pa-conv', 'sh-d' + D8() + '-pa-conv', 'sh-pa-winconv', 'sh-pa-pb' + (st || 0)].concat(rec.z ? ['sh-pa-z' + rec.z + '-conv'] : [])); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } // doel 1 = adres (26 nov)
@@ -756,7 +759,15 @@ async function winAanmeld(req, res) {
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {}
     if (!rec.t && rec.k) { try { const { campUitkomst } = await import('../lib/doelketen.js'); await campUitkomst(kv, net, rec.k, 'aanmelding'); } catch (e) {} } } // 26 nov: het adres telt ook bij de campagne in Clickmind (doelketen, uitkomst-ingreep)
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
-  return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout });
+  if (gv) { try { await inc(['sh-win-google', 'sh-d' + D8() + '-win-google' + (r.ok ? '' : '-fout')]); } catch (e) {} }
+  return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout, mee: !!(r.ok && r.al) || undefined });
+}
+// Google One Tap: Google controleert het token (tokeninfo); alleen een bevestigd adres voor onze client telt (zelfde client als We Are Many, env WAM_GOOGLE_CLIENT_ID)
+async function googleMail(cred) {
+  const cid = process.env.WAM_GOOGLE_CLIENT_ID; if (!cid || !cred) return null; let j = null;
+  try { const r = await fetch('https://oauth2.googleapis.com/tokeninfo?id_token=' + encodeURIComponent(String(cred).slice(0, 4000)), { signal: AbortSignal.timeout(8000) }); j = r.ok ? await r.json() : null; } catch (e) {}
+  if (!j || j.aud !== cid || !/^(https:\/\/)?accounts\.google\.com$/.test(String(j.iss || '')) || String(j.email_verified) !== 'true' || Number(j.exp) * 1000 < Date.now()) return null;
+  const m = String(j.email || '').trim().toLowerCase(); return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(m) ? m : null;
 }
 
 // ---------------- cadeau-keuzehulpen (keuzehulp.best/cadeau/<gids>) ----------------
@@ -824,6 +835,7 @@ async function uitgang(req, res, url) {
 async function baken(req, res) {
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
   if ((b.e === 'mtoon' || b.e === 'mweg') && !isBot(req.headers['user-agent'])) { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c) { try { await KW.keusTel(kv, c, b.e === 'mtoon' ? 't' : 'mx'); } catch (x) {} } return res.status(204).end(); } // winactie: vertrekmodal getoond of weggeklikt
+  if (/^g(toon|tik|nee|fout)$/.test(String(b.e || ''))) { if (!isBot(req.headers['user-agent'])) { try { await inc(['sh-win-' + b.e, 'sh-d' + D8() + '-win-' + b.e]); if (b.e === 'gtik') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c) await KW.keusVeld(kv, c); } } catch (x) {} } return res.status(204).end(); } // winactie: Google-knop getoond, getikt, One Tap weggeklikt of fout
   if (b.e === 'veld') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c && !isBot(req.headers['user-agent'])) { try { await KW.keusVeld(kv, c); } catch (x) {} } return res.status(204).end(); } // winactie: tik in het e-mailveld = vroeg signaal voor het leren
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const e = b.e === 'mens' ? 'mens' : b.e === 'eng' ? 'eng' : '';
   if (!e || isBot(req.headers['user-agent'])) return res.status(204).end();
