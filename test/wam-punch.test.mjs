@@ -25,3 +25,11 @@ test('punchlines: de leider blijft, de zwakste plek krijgt een nieuwe uitdager e
   assert.ok((await punchRonde(nepKv(), { nu: Date.parse('2026-11-27T05:00:00Z'), stand })).wacht);
   assert.ok(PUNCH.every(p => p.kop.length <= 60 && p.quote.split(' ').length < 15), 'kort en citaten onder 15 woorden');
 });
+
+test('volgen met één tik onder het beeld op voorkant en /start', async () => {
+  const p = await import('../lib/wam-punch.js'), d = await import('../lib/wam-dossier.js');
+  const v = p.manifest(p.STANDAARD_SLOTS);
+  assert.ok(v.indexOf('data-mvolg') > v.indexOf('manifest-beeld') && v.indexOf('data-mvolg') < v.indexOf('id="voor-kop"'));
+  assert.ok(d.pagina('start', true, false, [], {}).includes('data-mvolg'));
+  assert.ok(p.MANIFEST_JS.includes('wamMeld') && p.MANIFEST_JS.includes("waar:'beeld'"));
+});

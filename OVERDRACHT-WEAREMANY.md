@@ -223,6 +223,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 - Begin met CLAUDE.md van hjdk-api en de live handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
 ## Logboek (nieuwste bovenaan)
+- 26 nov 2026 (wam-chat, 23:40 UTC, Henkjan "meer witruimte bij de pic ... daar meteen volgen met one tap"): knop Volg met één tik direct onder het beeld op / en /start (push via wamMeld, anders één e-mailveld op de plek, waar=beeld); Volg WAM in de kop blijft; beeld 40/28 px ruimte. Tests 64 groen (2 oude fouten #44 #48).
 - 26 nov 2026 (wam-chat, 23:30 UTC, Henkjan "statement op FP ... punchlines iedere dag wisselen ... ALTIJD gechallenged ... zelfgemaakte pic"): manifest bovenaan / en /start (lib/wam-punch.js, eigen SVG, punchline, spreuk, vier knoppen), proef wmn ronde 4 factor punch, dagelijkse uitdager via cron op=leer, stand op=dpunch.
 - 26 nov 2026 (wam-chat, 22:15 UTC, Henkjan "positiever ... stuur naar iemand die hier ook mee zit"): /start positief (Alleen sta je machteloos. Samen niet.), knop Tel mee, deelblok WhatsApp/mail/link, na treffer met bedrijfsnaam en /start?b=<bedrijf>.
 - 26 nov 2026 (wam-chat, 21:50 UTC, Henkjan "top 10 bedrijven die niet reageren ... strakker"): tien organisaties met AP- of rechtersbron op /inzageverzoek (Odido, DPG Media, Risepoint, Stripe, Netflix, Clearview AI, Uber, Michael Page, Locatefamily.com, Theodoor Gilissen); dossierpagina's (AVG en landen) strakker: geen tegels, brief pas na eerste antwoord, vragen als uitklappers.
