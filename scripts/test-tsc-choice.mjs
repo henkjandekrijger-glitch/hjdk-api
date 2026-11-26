@@ -38,6 +38,7 @@ await test('active surgery renderer keeps dental answers and limits ranking clai
   assert.ok(!/Onze eerste keus|De beste klinieken/.test(html),id);assert.ok(html.includes('geen oordeel over veiligheid, geschiktheid of behandelresultaat'),id);
   scriptCheck(html);
  }
+ const implantJourney=chirurgie.lijstPagina(data.SITE.base,'procedure-dental-implants','nl',{});assert.ok(implantJourney.includes('Gepubliceerd behandeltraject bij reizen'));assert.ok(implantJourney.includes('5 tot 7 dagen'));assert.ok(implantJourney.includes('3 tot 6 maanden'));assert.ok(implantJourney.includes('3 tot 5 dagen'));assert.ok(implantJourney.includes('Geen vaste aanbiederprijs gepubliceerd'));assert.ok(implantJourney.includes('https://smiledentalcentermedellin.com/en/treatments/dental-implants'));const allOn4Journey=chirurgie.lijstPagina(data.SITE.base,'procedure-all-on-4','nl',{});assert.ok(allOn4Journey.includes('alleen bij voldoende primaire stabiliteit'));assert.ok(allOn4Journey.includes('zirkonium of metaal-keramiek'));assert.ok(!chirurgie.lijstPagina(data.SITE.base,'procedure-veneers','nl',{}).includes('Gepubliceerd behandeltraject bij reizen'));
  const dr=chirurgie.rang('bbl-dr'),y=[...dr.rij,...dr.rest].find(x=>/Yily De Los Santos/i.test(x.k.naam));
  assert.ok(y);assert.equal(y.e.sources.included.some(x=>/suspend|geschorst/i.test(x.waarschuwing||'')),false);assert.ok(y.s.erv<30);
  assert.ok(!/Kies Dr\. Yily|Choose Dr\. Yily|Wählen Sie Dr\. Yily/.test(chirurgie.lijstPagina(data.SITE.base,'bbl-dr','nl',{})));
