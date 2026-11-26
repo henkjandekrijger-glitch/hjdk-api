@@ -686,7 +686,7 @@ async function land(req, res, url) {
   // in de winkel maar op de actiepagina (lib/kadolywin.js) met één veld en één knop; de regel van 28 okt (geen tussenpagina) gold de route naar de
   // winkel, deze pagina is zelf het doel. Bots gaan nog steeds door direct() (die weert ze). Na de actie loopt de winkelroute via /api/shop/uit.
   const winPa = net === 'pa' && !!code && !bot && KW.loopt();
-  let zegelPa = false; if (winPa && (camp || q.get('zegel') === '1')) { try { zegelPa = q.get('zegel') === '1' || !!(await kv.raw(['SISMEMBER', 'kd:zegel:camps', String(camp)])); } catch (e) {} } // 26 nov: spaarzegel-campagnes landen op de zegelpagina (lijst kd:zegel:camps)
+  let zegelPa = false; if (winPa && (camp || q.get('zegel') === '1')) { try { zegelPa = q.get('zegel') === '1' || ZEGEL_CAMPS.includes(String(camp)) || !!(await kv.raw(['SISMEMBER', 'kd:zegel:camps', String(camp)])); } catch (e) {} } // 26 nov: spaarzegel-campagnes landen op de zegelpagina (lijst kd:zegel:camps)
   if (code && !winPa) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), Object.assign({ c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, winPa ? { w: 1 } : {}, zegelPa ? { zg: 1 } : {}), { ex: 7 * 86400 }); } catch (e) {} }
@@ -932,6 +932,7 @@ const OG_FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weigh
 const hEl = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
 // Spaarzegel-campagne (Henkjan 26 nov 2026: "Test een campagne over de spaarzegels . En dat ze ze als eerste krijgen 5 op een kaart is vol . Zij krijgen er meteen 3"):
 // een spaarkaart met 3 van de 5 zegels. v=icon (192x192, één zegel) of img (984x656, kaart); t = regel onder de kaart (0-3).
+const ZEGEL_CAMPS = ['12196034']; // PA-campagnes die op de zegelpagina landen (12196034: SHOP-LUS ZEGEL spaarkaart, 26 nov 2026, CPA-doel $0,50, $10/dag, $30 totaal)
 const ZEGEL_REGEL = ['Kaart vol = gratis cadeau', 'Nog 2 en je kiest een cadeau', 'Je krijgt er meteen 3', 'Als eerste sparen bij Kadoly'];
 async function zegelBeeld(res, url) {
   const v = url.searchParams.get('v') === 'icon' ? 'icon' : 'img', t = Math.max(0, Math.min(3, Number(url.searchParams.get('t')) || 0));
