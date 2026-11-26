@@ -1708,6 +1708,9 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(r); }
+    if (op === 'gorobots') { // 26 nov: go.kadoly.com eigen robots.txt (stuurde door naar kadoly.com); Google mag de productfoto's en de fotobron ophalen
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600');
+      return res.status(200).send('User-agent: *\nAllow: /api/shop/beeld/\nAllow: /api/shop/gmcbeeld.csv\nAllow: /api/shop/gmclabels.csv\nDisallow: /api/\nDisallow: /o\n'); }
     if (op === 'fototest' || op === 'gmcbeeld.csv' || op === 'beeldblad' || op === 'draag') {
       const vg = async fn => { try { return await fn(); } catch (e) { return null; } };
       if (op === 'gmcbeeld.csv') { // aanvullende bron: alleen de testproducten (en hun varianten) met een nieuwe hoofdfoto
