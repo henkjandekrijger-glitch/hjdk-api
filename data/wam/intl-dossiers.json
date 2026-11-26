@@ -1,0 +1,37 @@
+{
+  "us/planet-fitness": {
+    "bijgewerkt": "2026-11-26",
+    "titel": "Cancelling Planet Fitness: just the facts.",
+    "seo": "How to cancel Planet Fitness: official routes, deadlines and the record (2026) | we are many now",
+    "kort": "About 90,500 people in the US search every month how to cancel their Planet Fitness membership. These are the official ways to cancel, the deadlines that decide what you still pay, and what is on the public record.",
+    "actie": {
+      "kop": "Easiest step now: send your cancellation in writing.",
+      "tekst": "Planet Fitness accepts written notice mailed to your home club. Copy this letter, fill in the brackets, and keep proof that you sent it, for example by certified mail.",
+      "brief": "[Your full name]\n[Your mailing address]\n[Phone number] · [Email address]\nPlanet Fitness member number: [number on your key tag or in your account]\n\n[Date]\n\nTo: Planet Fitness, [address of your home club]\n\nI am ending my Planet Fitness membership. Please stop all billing and confirm the cancellation in writing to the email address above.\n\nSignature: ____________________",
+      "knop": "Copy the letter"
+    },
+    "routes": [
+      { "wat": "By mail", "tekst": "Written notice mailed to your home club, asking to end your membership." },
+      { "wat": "In person", "tekst": "At your home club." },
+      { "wat": "Online", "tekst": "Through the member portal on the Planet Fitness website. The FAQ adds that policies may vary by location based on state and local guidelines." }
+    ],
+    "termijnen": [
+      "To stop monthly billing on the 17th, the club must receive your request by the 10th of the month. Billing changes can take up to seven business days.",
+      "To avoid the annual fee, the club must receive your request by the 25th of the month before the annual fee date.",
+      "Ending a membership with a minimum term before the term ends costs a $58 buyout fee."
+    ],
+    "bronRoute": { "naam": "Planet Fitness, Frequently Asked Questions", "url": "https://www.planetfitness.com/mobileapp/FAQ", "gelezen": "2026-11-26" },
+    "feiten": [
+      { "datum": "2020-03-27", "tekst": "The Arizona Attorney General wrote to Planet Fitness that requiring members to come in person to cancel is problematic and may violate the Arizona Consumer Fraud Act. The office asked Planet Fitness to let members cancel by phone or email, at least during the mandated closures.", "bron": { "naam": "Arizona Attorney General, letter to Planet Fitness, 27 March 2020", "url": "https://www.azag.gov/sites/default/files/docs/press-releases/2020/letters/2020_03_27_LTR_TO_PLANET_FITNESS.pdf" } }
+    ],
+    "open": [
+      "Whether online cancellation works for every home club. The FAQ does not say it does.",
+      "How Planet Fitness answered the Arizona letter. We have not found a public reply."
+    ],
+    "vragen": [
+      { "vraag": "Can I cancel Planet Fitness online?", "antwoord": "The Planet Fitness FAQ lists the online member portal as one of three ways, next to mail and an in-person visit, and says policies may vary by location. If the portal does not offer it for your club, mail written notice to your home club." },
+      { "vraag": "When do I have to cancel to avoid the next payment?", "antwoord": "The club must receive your request by the 10th of the month to stop billing on the 17th, and by the 25th of the month before your annual fee date to avoid that fee." },
+      { "vraag": "Is there a fee to cancel?", "antwoord": "Only if your membership has a minimum term that has not ended. Then the FAQ lists a $58 buyout fee." }
+    ]
+  }
+}

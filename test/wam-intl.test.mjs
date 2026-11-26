@@ -36,3 +36,17 @@ test('aanmelden op een landenpagina: eigen toestemming en taal, Engelse of Duits
   const h = pagina('de', true, false, [], {}); assert.ok(h.includes('class="intl-volg" data-scope="de"') && h.includes('Anleitung schicken'));
   const wk = readFileSync(new URL('../lib/wam-week.js', import.meta.url), 'utf8'); assert.ok(/r\.taal !== 'nl'/.test(wk));
 });
+
+test('dossier per bedrijf: makkelijkste actie bovenaan, alleen feiten met bron, link vanaf de lijst', async () => {
+  const { INTL_DOSSIERS } = await import('../lib/wam-intl.js');
+  for (const [p, D] of Object.entries(INTL_DOSSIERS)) {
+    const h = pagina(p, true, false, [], {});
+    assert.ok(h.indexOf('id="actie"') > 0 && h.indexOf('id="actie"') < h.indexOf('id="opzeggen"'), p);
+    for (const f of D.feiten) assert.ok(/^https:\/\//.test(f.bron.url) && /^\d{4}-\d{2}-\d{2}$/.test(f.datum), p);
+    assert.ok(/^https:\/\//.test(D.bronRoute.url) && D.vragen.length >= 2 && D.open.length >= 1, p);
+    assert.ok(h.includes('data-arm="' + p.split('/')[1] + '"') && h.includes('"@type":"Article"') && !/ — | – /.test(h.replace(/<[^>]+>/g, '')), p);
+    assert.ok(pagina(p.split('/')[0], true, false, [], {}).includes('href="/' + p + '"'), p);
+  }
+  const v = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
+  assert.ok(v.rewrites.some(r => r.source === '/:m(us|uk|ca|de)/:bedrijf'));
+});

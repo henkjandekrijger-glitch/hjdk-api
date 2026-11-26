@@ -223,6 +223,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 - Begin met CLAUDE.md van hjdk-api en de live handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
 ## Logboek (nieuwste bovenaan)
+- 26 nov 2026 (wam-chat, 20:10 UTC): Engelse/Duitse aanmelding en welkomstmail (wam-volg-en/-de); dossier per bedrijf /<markt>/<bedrijf>, eerste us/planet-fitness (PF FAQ, AZ AG-brief 2020). Rest van de 40 volgt in rondes, alleen primaire bronnen.
 - 26 nov 2026 (wam-chat, 19:40 UTC, Henkjan "Vind top 10 in die landen ... Ook duitsland"): /us, /uk, /ca, /de met top 10 uit Demand Radar (wam-us/gb/ca/de), Me too-teller, ItemList/Dataset/FAQ, hreflang, llms.txt, IndexNow-lijst. Volgende: pagina per bedrijf met officiele route en bronnen, Engelse/Duitse mailstroom.
 - 26 nov 2026 (wam-chat, 19:10 UTC): Bereik-dashboard bovenaan dossier (d.bereik met Google, AI-overzicht, index; tegels gelezen, gedeeld, dagen). Mail aan Blendle verstuurd via Zernio (post 291ad4bc8d0f). Lezerscampagne 12195442 in moderatie.
 - 26 nov 2026 (wam-chat, 17:45 UTC, Henkjan "veel views ... prominent in beeld"): tegels gelezen (met vandaag) en dagen na de klacht bovenaan het dossier; voorbeeld op hjdk-api-henq met &voorbeeld=1. Lezerscampagne Blendle ($10) wacht op budgetuitzondering.
