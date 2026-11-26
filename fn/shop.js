@@ -753,7 +753,8 @@ async function winAanmeld(req, res) {
   if (r.ok && code) { try { await KW.keusMail(kv, code); if (b.bron === 'modal') await KW.keusTel(kv, code, 'mm'); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && rec.w && net === 'pa' && rec.c && !rec.conv && !rec.t && PB.pa) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const rr = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = rr.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; await inc(['sh-pa-conv', 'sh-d' + D8() + '-pa-conv', 'sh-pa-winconv', 'sh-pa-pb' + (st || 0)].concat(rec.z ? ['sh-pa-z' + rec.z + '-conv'] : [])); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } // doel 1 = adres (26 nov)
   if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
-    await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
+    await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {}
+    if (!rec.t && rec.k) { try { const { campUitkomst } = await import('../lib/doelketen.js'); await campUitkomst(kv, net, rec.k, 'aanmelding'); } catch (e) {} } } // 26 nov: het adres telt ook bij de campagne in Clickmind (doelketen, uitkomst-ingreep)
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
   return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout });
 }

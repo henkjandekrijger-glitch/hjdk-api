@@ -16,4 +16,9 @@ const H=new Map(),kv={raw:async a=>a[0]==='HSET'?(H.set(a[2],a[3]),1):H.get(a[2]
 ok(await doelBewaar(kv,'2026-11-25',k)&&(await doelDag(kv,'2026-11-25')).nu===2.3&&!(await doelDag(kv,'x')),'bewaar');
 ok(!(await doelBewaar(kv,'d',doelKeten([camps[4].kliks?c('A','x',50,50,1,1,1):0]))),'te weinig');
 const t=ketenTekst(k);ok(!/[—–]/.test(t.join())&&t.some(z=>z.startsWith('Grootste lek: KAUFBERATER')),'tekst');
+const {campUitkomst,adresMeetgat}=await import('../lib/doelketen.js');const C=[],kv2={raw:async a=>(C.push(a),1)};
+ok(await campUitkomst(kv2,'pa','12190846','aanmelding','2026-11-26')&&C[0].join(' ')==='HINCRBY mm:cu:2026-11-26 propeller|12190846|aanmelding 1'&&C[1][0]==='EXPIRE','campUitkomst');
+ok(!(await campUitkomst(kv2,'x','1','aanmelding'))&&!(await campUitkomst(kv2,'pa','','aanmelding'))&&!(await campUitkomst(kv2,'pa','1','raar'))&&C.length===2,'campUitkomst weigert');
+ok(adresMeetgat(4,0)&&adresMeetgat(6,2)&&!adresMeetgat(2,0)&&!adresMeetgat(6,3)&&!adresMeetgat(0,0),'adresMeetgat');
+const sk=doelKeten([c('[In-Page] SHOP-LUS PAKKET Bureau set winactie','shop',500,480,null,0,4)]).lijnen[0];ok(sk.uit===4&&sk.per100===0.8&&/^van mens naar uitkomst: 4 uitkomsten$/.test(sk.stap),'shop adres telt '+sk.stap);
 console.log(process.exitCode?'doelketen FOUT':'doelketen ok');
