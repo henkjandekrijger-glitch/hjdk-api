@@ -91,6 +91,13 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
 - **Stand 26 nov (dagronde + Henkjan "Ja doen .Go !"):** 12187841 en VERKENNER 12168319 staan uit op Henkjans woord (25 nov), **12183102 is de enige lopende TK-campagne** en blijft aan. Gisteren 7 adressen ($0,05 per adres in 12183102; alles samen $1,05, $0,15 per adres), maar hij won maar 0,12% van de veilingen. Daarom **bod $0,10 naar $0,20** en **witte lijst 43 naar 82 zones** (39 Clickmind-wit zones uit de verkenner erbij; 12219015 blijft eraf). Lijst 73 leden. Grens: haalt hij 40+ per dag en stijgt de prijs boven $0,15 per adres, dan bod -$0,02.
 - **Stand 25 nov (dagronde, Henkjan: "optimaliseer en vernieuw campagen met geleerde"):** BEWEZEN 12183102 gaf 12 adressen voor ongeveer $0,057 per adres, maar won maar 0,2% van de veilingen (leverde te weinig), dus **bod $0,05 naar $0,06**. Witte lijst nu 44 zones (12219015 eraf, 11196806 erbij). Advertenties 27810196 en 27810200 uit. VERKENNER 12168319: zone 12300292 geblokkeerd; zonder de bewezen zones 1 adres voor $0,28. **Nieuwe dagkopie 12187841** met de 6 beste en 2 nieuwe advertenties, zelfde 44 zones, bod $0,06, $10 per dag, $50 totaal, bij moderatie ingediend; de oude BEWEZEN gaat uit zodra 12187841 loopt. Lijst van 51 naar 63 leden.
 - **Stand 26 nov 12:20 UTC (dagronde):** alleen **BEWEZEN 12183102** loopt (bod **$0,10** op Henkjans woord 25 nov; 43 zones op de witte lijst). VERKENNER 12168319 en dagkopie 12187841 staan uit op Henkjans woord ("VEEEEEEEL eerder stoppen": 12168319 224 kliks zonder adres; 12187841 136 kliks, 0 adressen voor $0,47). Gisteren 12183102 11 adressen voor $0,36 ($0,033 per adres). Vandaag tot 12:18 1 adres voor $0,12. Win rate blijft 0,12%: het hogere bod levert niet meer vertoningen op. Geen advertentie heeft 300 kliks, dus geen nieuwe kopie; geen zone boven 80 kliks zonder adres (12219015 stond al van de lijst). Lijst 73 leden. Zonder VERKENNER worden er geen nieuwe zones gevonden: dat vraagt een besluit van Henkjan.
+- **Dagkopie 26 nov 14:25 UTC (Henkjan: "Je moet /campagnes-henkjan gebruiken dan zie je dat je verbeterde nieuwe campagne moet starten iedere dag"): 12193513**, ingediend voor moderatie.
+  - Witte lijst van 118 zones: de 82 van 12183102, zonder 10572751 (63 kliks, 0 adressen), plus 37 zones die Clickmind wit noemt (js 5+, mens 30%+, geen datacenter).
+  - Advertenties: de 6 beste (Waarom muziek ons heelt cr 4,3%, Wie is Tania Kross echt 3%, Opera zonder drempel, Tania heeft iets voor je, Nieuw van Tania Kross, Muziek als medicijn) plus 2 nieuwe (Muziek die je beter maakt; Tania Kross, heel persoonlijk).
+  - Knop in het Nederlands, "Luister gratis" (was het Engelse "Discover now").
+  - Bod $0,20, hetzelfde als 12183102 sinds 26 nov ~12:30 UTC.
+  - 12183102 gaat uit zodra 12193513 levert (check om 18:26 UTC).
+  - **Vaste regel vanaf nu: elke dagronde zet een nieuwe, verbeterde kopie live** (stap 4 hierboven) en zet de vorige uit zodra de nieuwe levert.
 - Advertentiebeelden op maat: https://hjdk-api-henq.vercel.app/api/advbeeld?u=<beeld>&t=icon|pa|mg.
 - Volledige werking van tk-podcast en tk-mail staat ook in lib/werking.js (regel taniakross.media podcast).
 
@@ -148,6 +155,8 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 26 nov 14:25 UTC chat-taniakross: dagkopie 12193513 ingediend (118 zones, 6 beste + 2 nieuwe advertenties, knop Luister gratis). Daarna gaat 12183102 uit. Elke dag een nieuwe kopie (Henkjan).
 
 - 26 nov 12:30 UTC tk-dagronde: op Henkjans "Ja doen .Go !" 12183102 bod $0,20 en 82 zones (was 43). Gisteren 7 adressen, lijst 73, Mailmind 62 verstuurd 5 ja 8 stop.
 
