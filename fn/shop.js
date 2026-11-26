@@ -25,7 +25,7 @@ import { INTER_500, INTER_800 } from '../lib/pinfont.js';
 import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
-import { berichten, HAIKU, SONNET } from '../lib/ai.js';
+import { berichten, HAIKU, SONNET, gatewaySleutel, tags as aiTags } from '../lib/ai.js';
 import { verkoopTeksten } from '../lib/shoptekst.js';
 import { md } from '../lib/mdmcp.js';
 import { look } from '../lib/look.js';
@@ -1652,6 +1652,18 @@ export default async function handler(req, res) {
         await kv.set('hjdk:kadoly:videopids', gebruikt); await kv.set(kp, plan, { ex: 3 * 86400 });
       }
       return res.status(200).json({ ok: true, dag, regel: VIDEO_REGEL, plan }); }
+    if (op === 'stem' || op === 'muziek') { // 26 nov (Henkjan: "Ja echt goede VO en muziekje . Mag geen robot voice zijn"): voice-over en muziek voor de uitlegvideo's via AI Gateway (ElevenLabs). Alleen de beschermde vercel.app-host. stem: t= (meerdere), v= stem-id; muziek: t= omschrijving, s= seconden (max 90)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const sl = gatewaySleutel(req.headers['x-vercel-oidc-token']); if (!sl) return res.status(500).json({ ok: false, fout: 'geen gateway-sleutel' });
+      const spreek = async (model, body) => { const r = await fetch('https://ai-gateway.vercel.sh/v4/ai/speech-model', { method: 'POST', headers: Object.assign({ authorization: 'Bearer ' + sl, 'ai-gateway-protocol-version': '0.0.1', 'ai-speech-model-specification-version': '4', 'ai-model-id': model, 'content-type': 'application/json' }, aiTags('shop-' + op)), body: JSON.stringify(body), signal: AbortSignal.timeout(110000) }); const tx = await r.text(); let j = null; try { j = JSON.parse(tx); } catch (e) {} if (!r.ok || !j || !j.audio) throw new Error(r.status + ' ' + tx.slice(0, 300)); return j.audio; };
+      try {
+        if (op === 'muziek') { const sec = Math.max(5, Math.min(90, Number(url.searchParams.get('s')) || 50)); const a = await spreek(url.searchParams.get('m') || 'elevenlabs/music-v2.5', { text: String(url.searchParams.get('t') || '').slice(0, 600), outputFormat: 'mp3', providerOptions: { elevenlabs: { musicLengthMs: sec * 1000 } } }); return res.status(200).json({ ok: true, audio: a }); }
+        const teksten = url.searchParams.getAll('t').map(x => String(x).slice(0, 600)).filter(Boolean).slice(0, 14); if (!teksten.length) return res.status(400).json({ ok: false, fout: 't ontbreekt' });
+        const model = url.searchParams.get('m') || 'elevenlabs/eleven-multilingual-v2', stem = url.searchParams.get('v') || 'XrExE9yKIg1WjnnlVkGX';
+        const uit = []; for (const t of teksten) uit.push(await spreek(model, { text: t, voice: stem, outputFormat: 'mp3', language: 'nl', providerOptions: { elevenlabs: { languageCode: 'nl', voiceSettings: { stability: 0.45, similarityBoost: 0.8, style: 0.25, useSpeakerBoost: true } } } }));
+        return res.status(200).json({ ok: true, audio: uit });
+      } catch (e) { return res.status(502).json({ ok: false, fout: String(e.message || e).slice(0, 400) }); }
+    }
     if (op === 'fotob64') { // 16 nov: productfoto's als base64 voor het maken van advertentievideo's (alleen via de beschermde vercel.app-host); ?p=pid,pid&t=ig
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const t = /^(ig|sq|md|mg)$/.test(url.searchParams.get('t') || '') ? url.searchParams.get('t') : 'ig'; const out = {};
