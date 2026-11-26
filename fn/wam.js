@@ -251,7 +251,7 @@ export default async function handler(req, res) {
   // AI Gateway via OIDC: Vercel geeft het token per verzoek in een kop (lib/ai.js leest VERCEL_OIDC_TOKEN)
   const oidc = req.headers['x-vercel-oidc-token']; if (oidc) process.env.VERCEL_OIDC_TOKEN = String(oidc);
   try {
-    if (DOS.OPS.has(op)) return await DOS.handel(op, req, res, { q, beschermd: beschermd(host) && beschermd(String(req.headers.host || '').toLowerCase()), body: () => leesBody(req) }); // dossiersite (lib/wam-dossier.js)
+    if (DOS.OPS.has(op)) return await DOS.handel(op, req, res, { q, beschermd: beschermd(host) && beschermd(String(req.headers.host || '').toLowerCase()), body: async () => leesBody(req) }); // async: de dossier-ops doen c.body().catch(), op een gewoon object gooide dat een fout en telde niets (26 nov 2026) // dossiersite (lib/wam-dossier.js)
     if (op === 'pagina') {
       const ua = String(req.headers['user-agent'] || ''); const land = String(req.headers['x-vercel-ip-country'] || '').toUpperCase().slice(0, 2);
       const taal = W.taalVan(req.headers['accept-language'], land); const k = W.kanalen();

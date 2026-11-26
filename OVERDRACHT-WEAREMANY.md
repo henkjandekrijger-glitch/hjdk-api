@@ -223,6 +223,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 - Begin met CLAUDE.md van hjdk-api en de live handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
 ## Logboek (nieuwste bovenaan)
+- 26 nov 2026 (wam-chat, 17:30 UTC, Henkjan "Ik zie nog geen views en volgers"): tellers dbekeken, dikook, ddeel, dref, dopzeg en dpushvolg faalden allemaal (c.body().catch op een gewoon object); body nu async. Standblok bovenaan Blendle: dagen sinds klacht, termijn 2 december, gelezen/ik ook/volgers/gedeeld. Blendle-tijdlijn 26 nov bijgewerkt (alleen automatische ticketmelding). Tests wam 57 groen; 2 oude fouten (test 39 en 43, ook zonder deze wijziging).
 
 - 26 nov 2026 (kz-claude, 13:15 UTC, Henkjan "mobiliseren per bedrijf ... synergie", "Ok voer door"): de keuzehulpen (keuzehulp.best, whichtobuy.best, kaufberater.best) tonen bij een bedrijf met een dossier hier het blok 'Ik heb dit ook' (lib/mobiliseer.js). Aanmeldingen komen binnen via op=daanmelden met waar = mobi en arm = kz-nl, kz-us of kz-de, scope = het dossier; `waar` in lib/wam-aanmelden.js kent nu ook mobi. Welke dossiers meedoen staat in MOBI en moet gelijk lopen met IKOOK: bij een nieuw dossier met ik-ook een regel in MOBI en `node scripts/test-mobiliseer.mjs`. Aan de dossiersite zelf is niets veranderd.
 

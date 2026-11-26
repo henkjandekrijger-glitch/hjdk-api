@@ -73,12 +73,12 @@ test('tijdlijn nieuwste boven, echte bekeken-teller pas vanaf honderd, deelknopp
   const { bekekenRegel, DEEL_KANALEN } = await import('../lib/wam-dossiers.js');
   const h = pagina('dossier/blendle', true, false, [], { bekeken: { blendle: 347 }, gedeeld: { blendle: 12 }, volgers: { blendle: 34 } });
   const data = [...h.matchAll(/<li><p class="meta"><time datetime="([^"]+)"/g)].map(m => m[1]);
-  assert.ok(data.length >= 10 && data[0] === '2026-11-25');
+  assert.ok(data.length >= 10 && data[0] === '2026-11-26');
   assert.ok(h.includes('<summary>Zie correspondentie</summary>') && h.includes('Melding van de melder aan ACM ConsuWijzer') && !/Beste Liele|Beste Martin|6 55395630/.test(h));
   assert.deepEqual(data, [...data].sort().reverse());
   assert.equal(bekekenRegel(49), ''); assert.equal(bekekenRegel(0), ''); assert.ok(bekekenRegel(347).includes('347 keer gelezen'));
-  assert.ok(h.includes('<span>Deel</span> <span class="knop-n">12</span>') && h.includes('<span>Volg</span> <span class="knop-n">34</span>') && h.includes('347 keer gelezen'));
-  const laag = pagina('dossier/anp', true, false, [], { bekeken: { anp: 49 }, volgers: { anp: 4 }, gedeeld: { anp: 0 } }); assert.ok(!laag.includes('keer gelezen') && !laag.includes('<span class="knop-n">'));
+  assert.ok(h.includes('<span>Deel</span> <span class="knop-n">12</span>') && h.includes('<span>Volg</span> <span class="knop-n">34</span>') && h.includes('<b>347</b> keer gelezen') && h.includes('<b>34</b> volgen dit dossier') && !h.includes('class="deel-tel'));
+  const laag = pagina('dossier/anp', true, false, [], { bekeken: { anp: 9 }, volgers: { anp: 0 }, gedeeld: { anp: 0 } }); assert.ok(!laag.includes('keer gelezen') && !laag.includes('<span class="knop-n">'));
   assert.equal((h.match(/class="deel-knop"/g) || []).length, 1); 
   for (const k of ['wa', 'mail', 'link']) assert.ok(h.includes('data-deel="' + k + '"'), k); assert.ok(DEEL_KANALEN.native && h.includes('data-deel-open'));
   assert.ok(h.includes("op=ddeel") && h.includes('wamMeetActie') && h.includes('dossier%2Fblendle%3Fd%3Dwa'));
@@ -97,7 +97,7 @@ test('modal volgt het dossier, teller alleen na echte-lezersbaken, mailstroom aa
   assert.ok(w.onderwerp === 'Je volgt het Blendle-dossier' && w.html.includes('/afmelden#' + 'b'.repeat(24) + '.' + 'a'.repeat(40)) && !/#5f6368|gray|grey/i.test(w.html));
   assert.ok(w.html.includes('/dossier/blendle#reageren') && w.html.includes('https://wearemany.now/start') && w.html.includes('https://wa.me/?text=') && w.tekst.includes('Stuur deze mail door'));
   const { DOSSIERLIJST } = await import('../lib/wam-dossiers.js'), d = DOSSIERLIJST.find(x => x.id === 'blendle');
-  assert.equal(VM.nieuwsteRegel(d).datum, '2026-11-25');
+  assert.equal(VM.nieuwsteRegel(d).datum, '2026-11-26');
 });
 
 test('Errezeta staat er in het Engels, Duits en Italiaans met hreflang en een eigen formulier', () => {

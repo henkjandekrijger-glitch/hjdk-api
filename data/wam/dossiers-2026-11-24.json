@@ -93,6 +93,12 @@
           "kop": "Blendle om een reactie gevraagd",
           "tekst": "De melder laat Blendle weten dat dit dossier openbaar staat en vraagt of het bedrijf vóór 2 december 2026 inhoudelijk wil reageren of feiten wil corrigeren. De tekst staat onder Zie correspondentie.",
           "bron": "E-mail van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-26",
+          "kop": "Nog geen inhoudelijke reactie van Blendle",
+          "tekst": "Op de vraag van 25 november kwam alleen de automatische melding van het klantensysteem dat het verzoek is bijgewerkt (ticket 832950). Een inhoudelijk antwoord, een correctie van feiten of een terugbetaling is er nog niet. De termijn die de melder gaf loopt tot 2 december 2026.",
+          "bron": "Ticketberichten van Blendle Support tot en met 26 november 2026, ingezien"
         }
       ],
       "bronverantwoording": "De redactie heeft de correspondentie van 9 tot en met 19 november 2026 nagelezen op 24 en 25 november 2026. Op 25 november is de mailbox van de melder gecontroleerd op latere berichten van Blendle. Hier staan geanonimiseerde samenvattingen; de originele e-mails met account- en betaalgegevens worden niet gepubliceerd. De aangehaalde bedragen uit de melderstekst zijn niet zelfstandig met bankafschriften vergeleken.",
@@ -133,7 +139,7 @@
           "bron": 0
         }
       ],
-      "bijgewerkt": "2026-11-25",
+      "bijgewerkt": "2026-11-26",
       "correspondentie": [
         {
           "datum": "2026-11-25",
@@ -162,7 +168,13 @@
             "Vandaag heb ik ook de aangekondigde melding ingediend bij ACM ConsuWijzer. Mijn verzoek om terugbetaling van €297 en mijn inzageverzoek (termijn 9 december 2026) blijven staan."
           ]
         }
-      ]
+      ],
+      "wacht": {
+        "klacht": "2026-11-09",
+        "open": "nog geen terugbetaling",
+        "bedrijf": "Blendle",
+        "tot": "2026-12-02"
+      }
     },
     {
       "id": "anp",
