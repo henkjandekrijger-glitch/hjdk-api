@@ -180,6 +180,9 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 26 nov 2026 05:20 UTC (shop-winactie): woonprijs-campagne 12190717 '[In-Page] SHOP-LUS WONEN Tafelhaard Zand winactie | NL iOS' (clone van 12186821, 8 nieuwe ads, landing winactie met oc_4174002164744193). Alleen iOS en dagvenster 07:00-22:00 UTC (08:00-23:00 NL), ## Logboek (nieuwste bovenaan, één regel per wijziging)
+
+0/dag, totaal $30. Ingediend, in moderatie.
 - 26 nov 2026 05:15 UTC (sieradencontrole): de winkel levert sinds ~03:00 UTC ref_host, landing, utm_* en ref_srsltid per order (TAAK G). lib/herkomst.js gebruikt die nu (stap 5b) en herkent google-lens (lens.google.com) en google-app (Discover/zoeken in de Google-app, android-app://...googlequicksearchbox).
 - 25 nov 2026 23:00 UTC (pa-uurcontrole): winactie 8 aanmeldingen, 1 bevestigd. Bevestigingsmail voor de winactie heeft nu onderwerp 'Nog één tik: doe mee met de winactie van Kadoly' en knop 'Ja, ik doe mee'; de bedankpagina noemt spam en heeft een knop Open je mail naar de webmail van het domein (Gmail, Outlook, Yahoo, iCloud, Ziggo, KPN). Oordeel: bevestigd per aanmelding in op=motorstand (aanvraag|winactie tegen bevestigd|winactie).
 - 25 nov 2026 (shop-chat): gedragen foto's voor sieraden gebouwd (lib/kadolydraag.js, op=draag, op=beeldblad&draag=1, DRAAGTEST met 6 paren). Beeldmodel via de AI Gateway, elke foto eerst met het oog gekeurd; alleen goedgekeurde gaan naar Google en de ads.
