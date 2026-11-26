@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-26",
   "note": "Source inventory and published-price snapshots. No complete market, licence, suitability, outcome or guaranteed-savings claim. Provider groups can span locations. Brand availability is explicitly sourced and may vary by practice. Amounts retain currency, unit, treatment scope and known omissions; no synthetic FX or country averages.",
   "providers": [
     {
@@ -413,19 +413,19 @@
       "stad": "Medellín",
       "kind": "clinic",
       "scope": "organization",
-      "checked_at": "2026-11-16",
+      "checked_at": "2026-11-26",
       "artsen": [],
       "reviews": [],
       "offers": {
         "dental-implants": {
-          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments/dental-implants",
           "source_type": "provider_website",
-          "checked_at": "2026-11-16"
+          "checked_at": "2026-11-26"
         },
         "all-on-4": {
-          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments/all-on-4",
           "source_type": "provider_website",
-          "checked_at": "2026-11-16"
+          "checked_at": "2026-11-26"
         },
         "veneers": {
           "source_url": "https://smiledentalcentermedellin.com/en/treatments",
@@ -2842,6 +2842,78 @@
         "travel"
       ],
       "location": "All SOTA Mexico locations"
+    }
+  ],
+  "journeys": [
+    {
+      "provider": "sdc-medellin",
+      "topic": "dental-implants",
+      "location": "El Poblado, Medellín, Colombia",
+      "checked_at": "2026-11-26",
+      "source_url": "https://smiledentalcentermedellin.com/en/treatments/dental-implants",
+      "source_type": "provider_website",
+      "first_visit_days": [
+        5,
+        7
+      ],
+      "healing_months": [
+        3,
+        6
+      ],
+      "second_visit_days": [
+        3,
+        5
+      ],
+      "provisional": "only_if_stability_allows",
+      "final": "custom_crown",
+      "remote_follow_up": [
+        "WhatsApp",
+        "video_call"
+      ],
+      "price_status": "no_fixed_provider_price",
+      "unknown": [
+        "bone_graft_or_sinus_lift_effect",
+        "home_dentist_cost",
+        "travel",
+        "accommodation",
+        "extra_trip"
+      ]
+    },
+    {
+      "provider": "sdc-medellin",
+      "topic": "all-on-4",
+      "location": "El Poblado, Medellín, Colombia",
+      "checked_at": "2026-11-26",
+      "source_url": "https://smiledentalcentermedellin.com/en/treatments/all-on-4",
+      "source_type": "provider_website",
+      "first_visit_days": [
+        5,
+        7
+      ],
+      "healing_months": [
+        3,
+        6
+      ],
+      "second_visit_days": [
+        3,
+        5
+      ],
+      "provisional": "fixed_pmma_only_if_stability_allows",
+      "final": "zirconia_or_metal_ceramic_arch",
+      "remote_follow_up": [
+        "WhatsApp",
+        "video_call"
+      ],
+      "price_status": "no_fixed_provider_price",
+      "unknown": [
+        "one_or_two_arches",
+        "four_or_six_implants",
+        "extractions_or_grafts",
+        "home_dentist_cost",
+        "travel",
+        "accommodation",
+        "extra_trip"
+      ]
     }
   ]
 }
