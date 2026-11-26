@@ -912,6 +912,22 @@ async function plaatje(req, res, url) {
       if (!r || !r.ok) throw new Error('foto ' + eerst + ' (' + String(it.img).replace(/^https?:\/\//, '').slice(0, 70) + ')' + (nu ? ', pagina-foto ' + (r ? r.status : '-') : ', geen foto op de pagina'));
     }
     const bron = Buffer.from(await r.arrayBuffer()), stijl = String(url.searchParams.get('s') || '');
+    if (stijl === 'gids') { // 26 nov (Henkjan: "Ja akkoord . GO !" op de gids-pinconcepten, kadoly/groei/2026-11-25-pinconcepten.json): Pinterest-gidspin 1000x1500. tk = vraag, u = uitkomst, e = eenheid, r = knoptekst, g = grens (kleine regel)
+      const sch = (k, n) => String(url.searchParams.get(k) || '').replace(/[<>]/g, '').slice(0, n);
+      const tk = sch('tk', 40), u = sch('u', 40), e = sch('e', 60), rk = sch('r', 40), g = sch('g', 120);
+      const foto = 'data:image/jpeg;base64,' + (await sharp(bron).flatten({ background: '#ffffff' }).resize(820, 640, { fit: 'contain', background: '#ffffff' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+      const el = hEl('div', { width: 1000, height: 1500, flexDirection: 'column', alignItems: 'center', background: '#f3ece3', fontFamily: 'Inter', padding: '90px 70px 0' }, [
+        hEl('div', { fontSize: 72, fontWeight: 800, color: '#111111', lineHeight: 1.1, textAlign: 'center' }, tk || it.t.slice(0, 40)),
+        hEl('div', { fontSize: u.length > 12 ? 74 : 150, fontWeight: 800, color: '#111111', lineHeight: 1.05, textAlign: 'center', marginTop: 34 }, u),
+        hEl('div', { fontSize: 38, fontWeight: 500, color: '#111111', textAlign: 'center', marginTop: 18 }, e),
+        hEl('div', { width: 860, height: 680, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 40, marginTop: 46 }, [{ type: 'img', props: { src: foto, width: 820, height: 640, style: { objectFit: 'contain' } } }]),
+        hEl('div', { marginTop: 44, background: '#111111', color: '#ffffff', fontSize: 44, fontWeight: 800, padding: '26px 56px', borderRadius: 60 }, rk || 'Bekijk de gids'),
+        hEl('div', { fontSize: 28, fontWeight: 500, color: '#111111', textAlign: 'center', marginTop: 30, lineHeight: 1.3 }, g),
+        hEl('div', { fontSize: 30, fontWeight: 800, color: '#111111', marginTop: 'auto', marginBottom: 46 }, 'gids.kadoly.com')]);
+      const png = Buffer.from(await new ImageResponse(el, { width: 1000, height: 1500, fonts: OG_FONTS }).arrayBuffer());
+      const jpg = await sharp(png).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
+      res.setHeader('content-type', 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400'); return res.end(jpg);
+    }
     if (stijl === 'st') { // 24 nov (Henkjan: "Dan moet jij dus betere ads maken !!!"): staand 1080x1920 voor TikTok-carrousels, Reels en Pinterest. f = haak | zoom | feit | eind; tk = grote regel, t2 = feiten (gescheiden door |)
       const f = String(url.searchParams.get('f') || 'haak'), tk = String(url.searchParams.get('tk') || '').replace(/[<>]/g, '').slice(0, 60), t2 = String(url.searchParams.get('t2') || '').replace(/[<>]/g, '').slice(0, 160).split('|').map(x => x.trim()).filter(Boolean).slice(0, 3);
       const W = 1080, Hh = url.searchParams.get('fmt') === '45' ? 1350 : 1920, wit = await sharp(bron).flatten({ background: '#ffffff' }); // fmt=45: 1080x1350 voor de feed van Facebook en Instagram
