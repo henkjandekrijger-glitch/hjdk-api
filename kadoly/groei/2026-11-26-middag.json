@@ -1,0 +1,269 @@
+{
+  "datum": "2026-11-26",
+  "ronde": "middag",
+  "gemeten_op": "2026-11-26T17:46:00Z",
+  "organisch": {
+    "facebook": {
+      "kliks": 48,
+      "echt": 18,
+      "acties": 2,
+      "mandjes": 3
+    },
+    "pinterest": {
+      "kliks_clickmind": 3
+    },
+    "gids": {
+      "doorsturen": 873,
+      "echt": 1,
+      "acties": 1,
+      "extra_sinds_ochtend": 77
+    }
+  },
+  "koop": {
+    "bestellingen_7dagen": 2,
+    "organisch_bevestigd": 0,
+    "werkelijk_organisch": "onbekend door ontbrekende herkomst",
+    "bronnen": [
+      {
+        "at": "2026-11-25T07:30:52+00:00",
+        "bedrag": 69.95,
+        "bron": "onbekend"
+      },
+      {
+        "at": "2026-11-19T21:01:24+00:00",
+        "bedrag": 52.91,
+        "bron": "tiktok"
+      }
+    ]
+  },
+  "winkel": {
+    "product": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [
+        {
+          "url": "https://gids.kadoly.com/dressoir",
+          "tekst": "Lees de hele gids: Dressoir, tv-meubel of ladekast: welke past bij jouw muur?",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/",
+          "tekst": "Kadoly gids: hulp bij kiezen",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/redactie",
+          "tekst": "Redactie",
+          "rel": [],
+          "volgbaar": true
+        }
+      ],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": false
+    },
+    "robots": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": true
+    },
+    "specifieke_tv_rekenhulplink": false
+  },
+  "ochtendcode": {
+    "status": 200,
+    "pinterest_bron_aanwezig": true
+  },
+  "gidspins": [
+    {
+      "id": "6b083a2d58833ba789e0e2ff",
+      "status": "scheduled",
+      "content": "Een lege woning of woon je er nog? Vergelijk echte planten en kunstplanten voor home staging. De gids helpt kiezen op plek, maat en onderhoud, met actuele producten en hun beperkingen.",
+      "title": "Planten bij home staging: echt of kunst kiezen",
+      "scheduled_for": "2026-11-27T18:45:00.000Z",
+      "timezone": "UTC",
+      "media_urls": [
+        "https://go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids&tk=Echt%20of%20kunst%3F&u=Groen%20in%20een%20lege%20woning&e=Kies%20op%20plek%2C%20maat%20en%20onderhoud&r=Bekijk%20de%20plantenkeuze&g=Afgebeeld%3A%20Raphis%20kunstplant%20van%20150%20cm.%20Geen%20eigen%20producttest."
+      ],
+      "targets": [
+        {
+          "platform": "pinterest",
+          "account_id": "6afb8a5d86e8bb18f844fc95",
+          "username": "kadolyshop",
+          "status": "pending"
+        }
+      ],
+      "controle": "Zernio get_post/list_posts, validate_post geldig zonder issues; beeld opgehaald en visueel bekeken, 1000x1500. Nog niet gepubliceerd."
+    },
+    {
+      "id": "6b083a2d58833ba789e0e2f8",
+      "status": "scheduled",
+      "content": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+      "title": "Tv-meubel voor 65 inch: bereken welke breedte past",
+      "scheduled_for": "2026-11-26T18:45:00.000Z",
+      "timezone": "UTC",
+      "media_urls": [
+        "https://go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids&tk=65%20inch%20tv%3F&u=144%20cm&e=breed%20beeld%20bij%2016%3A9&r=Bereken%20je%20meubelbreedte&g=Zonder%20rand.%20Meet%20ook%20je%20tv-voet%2C%20diepte%20en%20draagvermogen."
+      ],
+      "targets": [
+        {
+          "platform": "pinterest",
+          "account_id": "6afb8a5d86e8bb18f844fc95",
+          "username": "kadolyshop",
+          "status": "pending"
+        }
+      ],
+      "controle": "Zernio get_post/list_posts, validate_post geldig zonder issues; beeld opgehaald en visueel bekeken, 1000x1500. Nog niet gepubliceerd."
+    }
+  ],
+  "accountgezondheid": [
+    {
+      "account_id": "6afafaf7446856cecd87324f",
+      "platform": "facebook",
+      "status": "healthy",
+      "canPost": true,
+      "needsReconnect": false
+    },
+    {
+      "account_id": "6afb8787a26245ebf04dc7be",
+      "platform": "instagram",
+      "status": "healthy",
+      "canPost": true,
+      "needsReconnect": false
+    },
+    {
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "platform": "pinterest",
+      "status": "healthy",
+      "canPost": true,
+      "needsReconnect": false
+    },
+    {
+      "account_id": "6b08384bff3a28e7d1bf3f5c",
+      "platform": "youtube",
+      "status": "healthy",
+      "canPost": true,
+      "needsReconnect": false
+    },
+    {
+      "account_id": "6b0843e70e9a0994700ea737",
+      "platform": "tiktok",
+      "status": "healthy",
+      "canPost": true,
+      "needsReconnect": false
+    }
+  ],
+  "pinterest_account_analytics": {
+    "from_date": "2026-11-19",
+    "to_date": "2026-11-25",
+    "days": [
+      {
+        "date": "2026-11-19",
+        "post_count": 5,
+        "metrics": {
+          "impressions": 64,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 4,
+          "clicks": 0,
+          "views": 0
+        }
+      },
+      {
+        "date": "2026-11-21",
+        "post_count": 3,
+        "metrics": {
+          "impressions": 85,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 3,
+          "clicks": 0,
+          "views": 0
+        }
+      },
+      {
+        "date": "2026-11-22",
+        "post_count": 8,
+        "metrics": {
+          "impressions": 92,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 8,
+          "clicks": 4,
+          "views": 0
+        }
+      },
+      {
+        "date": "2026-11-23",
+        "post_count": 10,
+        "metrics": {
+          "impressions": 181,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 10,
+          "clicks": 3,
+          "views": 0
+        }
+      },
+      {
+        "date": "2026-11-24",
+        "post_count": 7,
+        "metrics": {
+          "impressions": 43,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 6,
+          "clicks": 1,
+          "views": 0
+        }
+      },
+      {
+        "date": "2026-11-25",
+        "post_count": 7,
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0
+        }
+      }
+    ],
+    "platform_totals": [
+      {
+        "platform": "pinterest",
+        "post_count": 40,
+        "metrics": {
+          "impressions": 465,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 31,
+          "clicks": 8,
+          "views": 0
+        }
+      }
+    ]
+  },
+  "meetbeperkingen": [
+    "Pinterest-accountcijfers omvatten ook boekenpins: geen Kadoly-productresultaat uit 40 posts/465 vertoningen/8 gemelde kliks afleiden.",
+    "De wrapper toont geen pin-link of bordveld; beoogde UTM-bestemming uit repolog niet als live uitgaande pinlink bevestigd.",
+    "Bestaande gidsuit-route gebruikt gids als campagne; de oorspronkelijke pin-campagne tot koop is niet bewezen.",
+    "Deze run publiceert niets opnieuw. Geen geld, mail, nieuw kanaal of extra ronde. Pushmeldingen niet bevestigd."
+  ],
+  "volgende": "Bestaande socialronde meet echte publicatiestatus en uitgaande pinlink na de geplande tijden; eerste verkeer na 24u, indexbesluit28nov."
+}

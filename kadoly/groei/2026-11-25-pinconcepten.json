@@ -22,7 +22,17 @@
       "grens": "Zonder rand. Meet ook je tv-voet, diepte en draagvermogen.",
       "zernio_id": "6b083a2d58833ba789e0e2f8",
       "gepland": "2026-11-26T18:45:00Z",
-      "beeld": "go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids"
+      "beeld": "go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids",
+      "platformvalidatie": {
+        "valid": true,
+        "issues": []
+      },
+      "beeldcontrole": {
+        "status": 200,
+        "breedte": 1000,
+        "hoogte": 1500,
+        "visueel_gecontroleerd": true
+      }
     },
     {
       "id": "gids-planten-20261125",
@@ -43,7 +53,17 @@
       "grens": "Afgebeeld: Raphis kunstplant van 150 cm. Geen eigen producttest.",
       "zernio_id": "6b083a2d58833ba789e0e2ff",
       "gepland": "2026-11-27T18:45:00Z",
-      "beeld": "go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids"
+      "beeld": "go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids",
+      "platformvalidatie": {
+        "valid": true,
+        "issues": []
+      },
+      "beeldcontrole": {
+        "status": 200,
+        "breedte": 1000,
+        "hoogte": 1500,
+        "visueel_gecontroleerd": true
+      }
     }
   ],
   "publicatievoorwaarden": [
@@ -58,7 +78,7 @@
       "7 dagen"
     ],
     "rechter": "echte bezoeken, productkliks, mandjes, koop; Pinterestbereik apart",
-    "beperking": "Pinterestbron sinds 26 november apart herkend; campagnebehoud tot koop nog controleren. Akkoord is geen meetresultaat."
+    "beperking": "Pinterestbron op gids werkt. Get_post bevestigt planning en media, maar geeft geen bord/linkveld. Pin-campagne tot koop niet bewezen: gidsuit gebruikt gids als campagne. Publicatie en uitgaande pinlink na geplande tijden controleren."
   },
   "goedkeuring": {
     "datum": "2026-11-26",
@@ -66,5 +86,7 @@
     "scope": "Twee getoonde gids-pins, één per dag in plaats van een productpin binnen drie."
   },
   "publicatie_bevestigd": false,
-  "blokkade": "Zernio-postoverzicht bleef laden; connector ontbreekt. Geen plaatsing of planning bevestigd."
+  "blokkade": null,
+  "planning_bevestigd": true,
+  "planning_gecontroleerd_op": "2026-11-26T17:46:00Z"
 }
