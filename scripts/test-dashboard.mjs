@@ -3,7 +3,7 @@ const m=new Map(), sets=new Map();
 const log=[{t:'2026-11-25T08:40:00Z',wie:'kdp-statuscheck',tekst:'LC naar voorgesteld bod <b>'},{t:'2026-11-25T07:00:00Z',wie:'deploy',tekst:'Live gezet abc: WAM: tijdlijn'},{t:'2026-11-24T07:00:00Z',wie:'wam-chat',tekst:'x'}];
 m.set('mm:wachtuur:laatst',{eigen:{projecten:{todayin:{kliks:1894,aanmelding:48,koop:0},'todayin|NL':{kliks:426,aanmelding:7},shop:{kliks:223,aanmelding:0,koop:0}}}});
 const H=new Map();
-const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));if(a[0]==='HSET'){H.set(a[2],a[3]);return 1}if(a[0]==='HDEL'){for(const f of a.slice(2))H.delete(f);return 1}if(a[0]==='HGETALL')return [...H.entries()].flat();if(a[0]==='HKEYS')return [...H.keys()];return null}};
+const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));const HH=k=>H.get(k)||(H.set(k,new Map()),H.get(k));if(a[0]==='HSET'){HH(a[1]).set(a[2],a[3]);return 1}if(a[0]==='HDEL'){for(const f of a.slice(2))HH(a[1]).delete(f);return 1}if(a[0]==='HGETALL')return [...HH(a[1]).entries()].flat();if(a[0]==='HKEYS')return [...HH(a[1]).keys()];return null}};
 const ok=(c,n)=>{if(!c){console.log('FOUT',n);process.exitCode=1}};
 let d=await D.dashData(kv); const k=d.projecten.find(p=>p.id==='kdp');
 ok(k.pct===24,'pct');ok(k.log.length===1,'log kdp');ok(d.projecten.find(p=>p.id==='wam').log.length===2,'log wam');ok(d.agenda.some(a=>a.id==='kdp'&&a.d==='2026-11-27')&&d.agenda.every((a,i)=>!i||d.agenda[i-1].d<=a.d),'agenda');
@@ -59,3 +59,22 @@ console.log('klaar',h.length,d.projecten.length);
 { const D = await import('../lib/dashboard.js'); const st = D.startTekst({ projecten: [{ id: 'kdp', naam: 'KDP-boeken', doel: 'x' }] });
   if (!/STARTOPDRACHT/.test(st) || !/vorm=tekst&project=<id>/.test(st) || /--/.test(st.replace(/https?:\/\/\S+/g, ''))) throw new Error('startTekst');
   console.log('startopdracht ok'); }
+// output en outcome (Henkjan 26 nov 2026)
+{
+  const O = await import('../lib/output.js');
+  const vd2=new Date().toISOString().slice(0,10), dg=n=>new Date(Date.now()-n*864e5).toISOString().slice(0,10);
+  ok(!(await D.zetDash(kv,{project:'kdp',output:{wat:'x'}})).ok,'output zonder intentie geweigerd');
+  const u=await D.zetDash(kv,{project:'kdp',output:{wat:'PIT BOSS EXACT aan met 16 winnaars',intentie:'PIT BOSS-royalty omhoog, KDP royalty per dag omhoog',metriek:'opbrengst',drempel:5,oordeel:vd2,dag:dg(3)}});
+  ok(u.ok&&u.output,'output zet '+JSON.stringify(u));
+  for(let i=1;i<=10;i++) await D.zetDash(kv,{project:'kdp',geld:{dag:dg(i),opbrengst:{royalty:i<=3?80:50}}});
+  let dd=await D.dashData(kv,{dagen:30}); const kk=dd.projecten.find(p=>p.id==='kdp');
+  ok(kk.nu>=50&&/kasboek/.test(kk.gemeten),'kdp nu uit kasboek '+kk.nu+' '+kk.gemeten);
+  ok(kk.output&&kk.output.tel.gemaakt>=1,'kdp output');
+  const it=kk.output.items.find(x=>x.id===u.output); ok(it&&['raak','mis','geen meting'].includes(it.oordeelNu.uitslag),'oordeel '+JSON.stringify(it&&it.oordeelNu));
+  ok((await D.zetDash(kv,{project:'kdp',oordeel:{id:u.output,uitslag:'mis',waarom:'royalty steeg niet boven 5 dollar per dag'}})).ok,'zelf oordelen');
+  dd=await D.dashData(kv); ok(dd.projecten.find(p=>p.id==='kdp').output.items.find(x=>x.id===u.output).oordeelNu.uitslag==='mis','oordeel gaat voor');
+  const hh=D.dashHtml(dd); ok(hh.includes('Output en outcome')&&hh.includes('Outcome: doel en getal')&&hh.includes('id="vraag"')&&!/[—–]/.test(hh),'output html');
+  ok(D.dashTekst(dd).includes('OUTPUT EN OUTCOME')&&D.dashTekst(dd,'kdp').includes('Output (wat we maakten'),'output tekst');
+  ok(O.outputTekst(dd.output,'kdp').includes('[mis] PIT BOSS EXACT'),'output tekst los');
+  console.log(process.exitCode?'output FOUT':'output ok');
+}

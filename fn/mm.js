@@ -361,8 +361,9 @@ export default async function handler(req, res) {
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
       if (q('archiveer') || q('terug')) { const id = q('archiveer') || q('terug'); const u = await D.zetDash(kv, { project: id, archief: !!q('archiveer') }, 'dashboard'); if (!u.ok) return res.status(400).json(u); melding = { id, aan: !!q('archiveer') }; }
-      const d = await D.dashData(kv);
+      const d = await D.dashData(kv, { dagen: q('dagen') || q('periode') });
       if (q('vorm') === 'json') return res.status(200).json(d);
+      if (q('vorm') === 'output') { const O = await import('../lib/output.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(d.output ? O.outputTekst(d.output, q('project') || '') + '\n' : 'geen output\n'); }
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
       if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
       if (melding) { const a = d.archief.find(x => x.id === melding.id), p = d.projecten.find(x => x.id === melding.id); melding = melding.aan ? { tekst: ((a && a.naam) || melding.id) + ' is gearchiveerd en staat niet meer in het overzicht.', terug: melding.id } : { tekst: ((p && p.naam) || melding.id) + ' staat weer in het overzicht.' }; }
