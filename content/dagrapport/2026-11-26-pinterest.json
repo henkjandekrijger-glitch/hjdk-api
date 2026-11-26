@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "round": "pinterest",
+  "event_date_utc": "2026-11-26",
+  "observed_at_utc": "2026-11-26T11:53:57.401Z",
+  "trigger": [
+    "Dan moet je harder werken !",
+    "Slimmer werken ."
+  ],
+  "work_type": "tested_code_proposal_not_live",
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "Pinterest books kadolyshop"
+  ],
+  "measurement_context": {
+    "closed_utc_day": "2026-11-25",
+    "registered_page_openings": {
+      "stockingbooks": 13,
+      "lastingchange": 3
+    },
+    "previous_day": "2026-11-24",
+    "previous_registered": {
+      "stockingbooks": 42,
+      "lastingchange": 5
+    },
+    "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+    "source_observed_utc": "2026-11-26T11:37:09Z",
+    "not_unique_or_organic": true,
+    "change_effect_on_traffic": null
+  },
+  "largest_leak": {
+    "finding": "Planner can choose books within the agreed14daycooldown and the same ASIN twice via different hooks.",
+    "evidence": {
+      "book_log": 22,
+      "other_round_date": "2026-11-25",
+      "other_round_new_ids": 4,
+      "previous_same_products": "2026-11-22",
+      "same_round_duplicate_asin": "B0DK3CSYXW",
+      "source": "content/dagrapport/PIN-LEERREGISTER.json plus current lib/bspin.js/fn/bs.js"
+    },
+    "hypothesis": "Excluding known ASINs for14days, skipping ineligible hooks and keeping oneASINperbatch prevents these observed planning repeats. It does not prove acquisition growth.",
+    "control": "Previous22registrations retained; publishedpins, approvalscope, controls and provider schedules not modified."
+  },
+  "actual_changes": [
+    {
+      "status": "review_branch_only",
+      "branch": "codex/books-cooldown-20261126",
+      "commit": "0894e408b2c32a89301835188b0964c577d568d9",
+      "review_url": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/15",
+      "files": [
+        "lib/bspin.js",
+        "fn/bs.js",
+        "test/bspin-cooldown.test.mjs",
+        "OVERDRACHT-CONTENT.md",
+        "lib/werking.js"
+      ],
+      "behavior": [
+        "Use all registered14dayhistory rather than2days",
+        "Never fall back to excludedASIN",
+        "OneASINperbatch",
+        "Unknown/future timestamp blocks product",
+        "Missing/unreadable/malformedhistory returns503",
+        "Response states not a reservation or full providerqueue"
+      ],
+      "test": {
+        "passed": 26,
+        "focused": 12,
+        "existing_page": 14,
+        "handler_syntax": true,
+        "offline_redis_network_blocked": true,
+        "live_provider_integration": false
+      },
+      "simulation": {
+        "type": "deterministic, not publication/traffic",
+        "history_rows": 22,
+        "requested": 8,
+        "old_recent_product_choices": 7,
+        "new_eligible_unique_candidates": 4,
+        "new_recent_product_choices": 0
+      },
+      "limit": "Only registered bookhistory and one batch; no atomic reservations/concurrent request lock, no full providerqueue, no prevention of publishers bypassingplanner."
+    }
+  ],
+  "live_changes": [],
+  "pinlog_or_pinuitkomst_written": false,
+  "site_copy_changes": [],
+  "publication_status": "Existing approved batchalreadyPublished; newlyshown4pin/Reelpreviews still need their exactapproval. This code is separatelyreviewable, no publicationpermission inferred.",
+  "source_control": {
+    "remote_base": "8162101f66994fb340fdd83510e9b9c64ed4549a",
+    "read_existing_blobs": true,
+    "git_pull_rebase": "attempted; local directory has no gitmetadata; exactremoteSHAused instead",
+    "main_updated": false,
+    "production_deploy_requested": false
+  },
+  "next_test": {
+    "working": "After exact codeapproval deploy only this reviewed task once, read pinplan and verify no recent/duplicateASIN, verify actual sharedproviderqueue before any pin publication; no synthetic productiontraffic.",
+    "primary_measure": "Eligible unique product candidates, duplicate/cooldown violation count; actual outboundtraffic separately.",
+    "traffic": "14to21days after actual approved publishing plus enough matched data; no growth forecast from this repair."
+  }
+}
