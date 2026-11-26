@@ -19,3 +19,20 @@ test('landenpagina\'s: top 10 per markt, gesorteerd, met methode, hreflang en Me
   const v = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
   assert.ok(v.rewrites.some(r => r.source === '/:p(us|uk|ca|de)' && r.destination === '/api/wam?op=dpagina&p=:p'));
 });
+
+test('aanmelden op een landenpagina: eigen toestemming en taal, Engelse of Duitse welkomstmail, geen Nederlandse weekupdate', async () => {
+  const { aanmelden, TOESTEMMING_TAAL } = await import('../lib/wam-aanmelden.js');
+  const opslag = new Map(), db = { incr: async () => 1, raw: async (c) => { if (c[0] === 'EVAL') { if (/ZADD/.test(c[1])) { opslag.set(c[3], c[8]); return 1; } return 1; } return 1; }, get: async k => null };
+  const r = await aanmelden({ email: 'x@voorbeeld.com', scope: 'us', toestemming: true }, '1.2.3.4', db, Date.now(), 'test:');
+  assert.ok(r.ok && r.nieuw);
+  const rec = JSON.parse([...opslag.values()][0]); assert.equal(rec.taal, 'en'); assert.equal(rec.toestemming, TOESTEMMING_TAAL.en);
+  const fout = await aanmelden({ email: 'geen', scope: 'de', toestemming: true }, '1.2.3.4', db, Date.now(), 'test:'); assert.match(fout.fout, /gültige/);
+  const V = await import('../lib/wam-volgstroom.js');
+  for (const [st, sc] of [[V.STROOM_EN, 'uk'], [V.STROOM_DE, 'de']]) for (const v of st.varianten) {
+    const m = st.mail({ scope: sc }, { v, tok: 'a'.repeat(30) });
+    assert.ok(m.tekst.includes('/v/' + 'a'.repeat(30) + '/x') && m.tekst.includes('/v/' + 'a'.repeat(30) + '/d') && !/ — | – |Hoi|dossier/.test(m.tekst), st.id);
+  }
+  const M = await import('../lib/mailmind.js'); assert.ok(M.STROMEN['wam-volg-en'] && M.STROMEN['wam-volg-de']);
+  const h = pagina('de', true, false, [], {}); assert.ok(h.includes('class="intl-volg" data-scope="de"') && h.includes('Anleitung schicken'));
+  const wk = readFileSync(new URL('../lib/wam-week.js', import.meta.url), 'utf8'); assert.ok(/r\.taal !== 'nl'/.test(wk));
+});
