@@ -180,6 +180,9 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 26 nov 2026 06:35 UTC (pa-uurcontrole): nieuwe winactie-campagnes, alleen iOS en 07:00-22:00 UTC (08:00-23:00 NL), ## Logboek (nieuwste bovenaan, één regel per wijziging)
+
+0/dag, totaal $30: 12190844 SIERADEN Polly (clone 12186821), 12190846 PAKKET Bureau set (clone 12186814), plus 12190717 WONEN Tafelhaard (al goedgekeurd). Oude 12186810, -13, -14, -16, -18, -21 blijven uit (Henkjan 25 nov: nacht in NL werkt niet).
 - 26 nov 2026 05:20 UTC (shop-winactie): woonprijs-campagne 12190717 '[In-Page] SHOP-LUS WONEN Tafelhaard Zand winactie | NL iOS' (clone van 12186821, 8 nieuwe ads, landing winactie met oc_4174002164744193). Alleen iOS en dagvenster 07:00-22:00 UTC (08:00-23:00 NL), ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
 0/dag, totaal $30. Ingediend, in moderatie.
