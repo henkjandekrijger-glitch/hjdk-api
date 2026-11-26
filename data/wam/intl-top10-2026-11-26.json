@@ -1,0 +1,50 @@
+{
+  "gemeten": "2026-11-26",
+  "bron": "Demand Radar (thema's wam-us, wam-gb, wam-ca, wam-de): Google-suggesties plus maandelijkse zoekvolumes uit Google Ads, gemeten 26 november 2026. Schattingen; synoniemen niet opgeteld; per bedrijf de grootste zoekterm.",
+  "markten": {
+    "us": { "taal": "en", "land": "the US", "inwoners": "Americans", "items": [
+      { "id": "planet-fitness", "naam": "Planet Fitness", "k": "how to cancel planet fitness membership", "v": 90500, "y": 82 },
+      { "id": "youtube-tv", "naam": "YouTube TV", "k": "how to cancel youtube tv", "v": 60500, "y": -33 },
+      { "id": "amazon", "naam": "Amazon (Prime and subscriptions)", "k": "how to cancel subscriptions on amazon", "v": 40500, "y": 233 },
+      { "id": "doordash", "naam": "DoorDash", "k": "how to cancel doordash order", "v": 33100, "y": 50 },
+      { "id": "unifin", "naam": "Unifin (debt collector)", "k": "unifin debt collector", "v": 33100, "y": 173 },
+      { "id": "hulu", "naam": "Hulu", "k": "cancel hulu subscription", "v": 27100, "y": 0 },
+      { "id": "netflix", "naam": "Netflix", "k": "how to cancel netflix", "v": 27100, "y": 0 },
+      { "id": "chatgpt", "naam": "ChatGPT Plus", "k": "how to cancel chatgpt subscription", "v": 22200, "y": 234 },
+      { "id": "uber-one", "naam": "Uber One", "k": "how to cancel uber one", "v": 22200, "y": 0 },
+      { "id": "paramount-plus", "naam": "Paramount+", "k": "how to cancel paramount plus", "v": 22200, "y": 0 } ] },
+    "uk": { "taal": "en", "land": "the UK", "inwoners": "people in the UK", "items": [
+      { "id": "spotify", "naam": "Spotify Premium", "k": "how to cancel spotify premium", "v": 18100, "y": -33 },
+      { "id": "tv-licensing", "naam": "TV Licensing", "k": "cancel tv licence", "v": 18100, "y": -18 },
+      { "id": "puregym", "naam": "PureGym", "k": "cancel puregym membership", "v": 14800, "y": 0 },
+      { "id": "amazon", "naam": "Amazon Prime", "k": "how to cancel amazon prime", "v": 14800, "y": -33 },
+      { "id": "uber-one", "naam": "Uber One", "k": "how to cancel uber one", "v": 14800, "y": 49 },
+      { "id": "sky", "naam": "Sky", "k": "cancel sky tv", "v": 9900, "y": -33 },
+      { "id": "disney-plus", "naam": "Disney+", "k": "cancel disney plus", "v": 9900, "y": -18 },
+      { "id": "jd-gyms", "naam": "JD Gyms", "k": "cancel jd gym membership", "v": 9900, "y": 0 },
+      { "id": "netflix", "naam": "Netflix", "k": "how to cancel netflix", "v": 6600, "y": 0 },
+      { "id": "hellofresh", "naam": "HelloFresh", "k": "how to cancel hellofresh", "v": 6600, "y": -19 } ] },
+    "ca": { "taal": "en", "land": "Canada", "inwoners": "Canadians", "items": [
+      { "id": "uber-one", "naam": "Uber One", "k": "how to cancel uber one", "v": 8100, "y": 22 },
+      { "id": "fit4less", "naam": "Fit4Less", "k": "cancel fit4less membership", "v": 4400, "y": 23 },
+      { "id": "spotify", "naam": "Spotify Premium", "k": "how to cancel spotify premium", "v": 4400, "y": 50 },
+      { "id": "adobe", "naam": "Adobe", "k": "cancel adobe subscription", "v": 3600, "y": 0 },
+      { "id": "apple", "naam": "Apple", "k": "refund apple", "v": 3600, "y": 24 },
+      { "id": "planet-fitness", "naam": "Planet Fitness", "k": "how to cancel planet fitness membership", "v": 3600, "y": 125 },
+      { "id": "amazon", "naam": "Amazon Prime", "k": "how to cancel amazon prime", "v": 3600, "y": -33 },
+      { "id": "chatgpt", "naam": "ChatGPT Plus", "k": "how to cancel chatgpt subscription", "v": 3600, "y": 175 },
+      { "id": "netflix", "naam": "Netflix", "k": "how to cancel netflix", "v": 2900, "y": -18 },
+      { "id": "common-collection-agency", "naam": "Common Collection Agency", "k": "common collection agency", "v": 2400, "y": 26 } ] },
+    "de": { "taal": "de", "land": "Deutschland", "inwoners": "Menschen in Deutschland", "items": [
+      { "id": "coeo", "naam": "Coeo Inkasso", "k": "inkasso coeo", "v": 49500, "y": -33 },
+      { "id": "vodafone", "naam": "Vodafone", "k": "vodafone kündigen", "v": 27100, "y": 22 },
+      { "id": "netflix", "naam": "Netflix", "k": "netflix kündigen", "v": 27100, "y": 0 },
+      { "id": "amazon-prime", "naam": "Amazon Prime", "k": "amazon prime kündigen", "v": 27100, "y": 0 },
+      { "id": "telekom", "naam": "Telekom", "k": "telekom kündigen", "v": 22200, "y": -18 },
+      { "id": "dhl", "naam": "DHL", "k": "beschwerde dhl", "v": 22200, "y": -33 },
+      { "id": "sky", "naam": "Sky", "k": "sky kündigen", "v": 18100, "y": -55 },
+      { "id": "o2", "naam": "O2", "k": "o2 kündigen", "v": 12100, "y": -18 },
+      { "id": "dazn", "naam": "DAZN", "k": "dazn kündigen", "v": 12100, "y": -18 },
+      { "id": "wow", "naam": "WOW", "k": "wow kündigen", "v": 12100, "y": -55 } ] }
+  }
+}
