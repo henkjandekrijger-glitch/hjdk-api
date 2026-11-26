@@ -1,0 +1,2979 @@
+{
+  "observed_at_utc": "2026-11-26T19:39:03.038Z",
+  "account": "6afb8a5d86e8bb18f844fc95",
+  "health": {
+    "accountId": "6afb8a5d86e8bb18f844fc95",
+    "platform": "pinterest",
+    "username": "kadolyshop",
+    "displayName": "kadolyshop",
+    "ownerUserId": "6afaf153cea83f663eb3a255",
+    "status": "healthy",
+    "tokenStatus": {
+      "valid": true,
+      "expiresAt": "2026-12-24T12:15:14.495Z",
+      "expiresIn": "27 days",
+      "needsRefresh": false
+    },
+    "permissions": {
+      "posting": [
+        {
+          "scope": "boards:read",
+          "granted": true,
+          "required": true
+        },
+        {
+          "scope": "boards:write",
+          "granted": true,
+          "required": true
+        },
+        {
+          "scope": "pins:read",
+          "granted": true,
+          "required": true
+        },
+        {
+          "scope": "pins:write",
+          "granted": true,
+          "required": true
+        }
+      ],
+      "analytics": [
+        {
+          "scope": "user_accounts:read",
+          "granted": true,
+          "required": false
+        }
+      ],
+      "optional": [
+        {
+          "scope": "ads:read",
+          "granted": true,
+          "required": false
+        },
+        {
+          "scope": "ads:write",
+          "granted": true,
+          "required": false
+        }
+      ],
+      "canPost": true,
+      "canFetchAnalytics": true,
+      "analyticsSupported": true,
+      "missingRequired": []
+    },
+    "issues": [],
+    "recommendations": [],
+    "analyticsSync": {
+      "status": "ok",
+      "lastSyncedAt": "2026-11-26T18:40:11.414Z"
+    }
+  },
+  "summary": {
+    "synced": 17,
+    "pending": 5,
+    "impressions": 100,
+    "saves": 12,
+    "generic_clicks": 4
+  },
+  "limitations": [
+    "Genericclicks not confirmed organicoutbound",
+    "17synced,5pending",
+    "No comparablepreviousproviderwindow",
+    "Timeline25nov vsaccountaggregator conflict",
+    "Do not sum across timeline dates"
+  ],
+  "posts": [
+    {
+      "post_id": "6b03305e0c584efce0d64de2",
+      "analytics": {
+        "post_id": "6b03305e0c584efce0d64de2",
+        "content": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+        "status": "published",
+        "published_at": "2026-11-22T18:11:48.079Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 11,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 9.09
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653361/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 11,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 9.09
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b03305e0c584efce0d64de2",
+        "status": "published",
+        "content": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+        "scheduled_for": "2026-11-22T18:11:43.030Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T18:11:48.079Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DNQ61ZJM-we-regels.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653361/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b03305e0c584efce0d64de2",
+        "timeline": [
+          {
+            "date": "2026-11-22",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653361",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653361",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653361",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653361",
+            "impressions": 6,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653361",
+            "impressions": 11,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319653361",
+        "message": "White elephant rules: how to play + free printable\n\nThe white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+        "createdTime": "2026-11-22T18:11:47.000Z",
+        "picture": "https://i.pinimg.com/564x/2a/f2/87/2af2877b38fa9eb4c776734eb50fe376.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319653361/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "White elephant rules: how to play + free printable",
+        "description": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+        "link": "https://bookstuffers.com/white-elephant-rules?utm_source=pinterest&utm_content=20261122-we-regels-1zjm",
+        "boardId": "271060540011963291",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b033065c4d17d4a0f103be1",
+      "analytics": {
+        "post_id": "6b033065c4d17d4a0f103be1",
+        "content": "Stocking Stuffers For Teens: 408 weird, smart and funny facts, 147 pages, $9.99. Rated 4.1 out of 5 by 128 readers on Amazon. Stocking stuffer ideas for teen boys and girls.",
+        "status": "published",
+        "published_at": "2026-11-22T18:11:52.586Z",
+        "sync_status": "pending",
+        "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "sync_status": "pending"
+          }
+        ]
+      },
+      "post": {
+        "id": "6b033065c4d17d4a0f103be1",
+        "status": "published",
+        "content": "Stocking Stuffers For Teens: 408 weird, smart and funny facts, 147 pages, $9.99. Rated 4.1 out of 5 by 128 readers on Amazon. Stocking stuffer ideas for teen boys and girls.",
+        "scheduled_for": "2026-11-22T18:11:49.077Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T18:11:52.586Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DJQLBM75-sok-tiener.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653366/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b033065c4d17d4a0f103be1",
+        "timeline": []
+      },
+      "metadata": null
+    },
+    {
+      "post_id": "6b03306970f37227beb16166",
+      "analytics": {
+        "post_id": "6b03306970f37227beb16166",
+        "content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "status": "published",
+        "published_at": "2026-11-22T18:11:57.788Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 9,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 2,
+          "views": 0,
+          "engagement_rate": 11.11
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653370/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 9,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 2,
+              "views": 0,
+              "engagement_rate": 11.11
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b03306970f37227beb16166",
+        "status": "published",
+        "content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "scheduled_for": "2026-11-22T18:11:53.119Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T18:11:57.788Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0B5KV79N1-enoch-wat.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653370/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b03306970f37227beb16166",
+        "timeline": [
+          {
+            "date": "2026-11-22",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653370",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653370",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653370",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653370",
+            "impressions": 5,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 2,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653370",
+            "impressions": 9,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 2,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319653370",
+        "message": "What is the Book of Enoch? 1, 2 and 3 Enoch explained\n\nThe Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "createdTime": "2026-11-22T18:11:57.000Z",
+        "picture": "https://i.pinimg.com/564x/19/db/2d/19db2d4cf8cd2eabd1b5865c1d3399f2.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319653370/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "What is the Book of Enoch? 1, 2 and 3 Enoch explained",
+        "description": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "link": "https://bookstuffers.com/book-of-enoch?utm_source=pinterest&utm_content=20261122-enoch-wat-79n1",
+        "boardId": "271060540011963294",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b03306ec4d17d4a0f103bf2",
+      "analytics": {
+        "post_id": "6b03306ec4d17d4a0f103bf2",
+        "content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "status": "published",
+        "published_at": "2026-11-22T18:12:02.901Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 10,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 1,
+          "views": 0,
+          "engagement_rate": 10
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653376/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 10,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "engagement_rate": 10
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b03306ec4d17d4a0f103bf2",
+        "status": "published",
+        "content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "scheduled_for": "2026-11-22T18:11:58.600Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T18:12:02.901Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DDBTXC9J-apo-14.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319653376/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b03306ec4d17d4a0f103bf2",
+        "timeline": [
+          {
+            "date": "2026-11-22",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653376",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653376",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653376",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653376",
+            "impressions": 5,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 1,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319653376",
+            "impressions": 10,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 1,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319653376",
+        "message": "What is the Apocrypha? The books left out of the Bible\n\nThe 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "createdTime": "2026-11-22T18:12:02.000Z",
+        "picture": "https://i.pinimg.com/564x/8c/ac/dd/8cacdd405682b658011dcc0086514173.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319653376/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "What is the Apocrypha? The books left out of the Bible",
+        "description": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "link": "https://bookstuffers.com/apocrypha?utm_source=pinterest&utm_content=20261122-apo-14-xc9j",
+        "boardId": "271060540011963294",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b0344b6783be3b4addd3e43",
+      "analytics": {
+        "post_id": "6b0344b6783be3b4addd3e43",
+        "content": "Funny white elephant gift idea under $5: Think and Stink, a 40-page bathroom word search. Flat to wrap, nobody guesses it, and it gets a laugh when it is opened. White elephant gift ideas, gag gift, Yankee swap, Dirty Santa.",
+        "status": "published",
+        "published_at": "2026-11-22T19:38:34.357Z",
+        "sync_status": "pending",
+        "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "sync_status": "pending"
+          }
+        ]
+      },
+      "post": {
+        "id": "6b0344b6783be3b4addd3e43",
+        "status": "published",
+        "content": "Funny white elephant gift idea under $5: Think and Stink, a 40-page bathroom word search. Flat to wrap, nobody guesses it, and it gets a laugh when it is opened. White elephant gift ideas, gag gift, Yankee swap, Dirty Santa.",
+        "scheduled_for": "2026-11-22T19:38:30.273Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T19:38:34.357Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DNDQZ3G3-we-ruzie.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655653/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b0344b6783be3b4addd3e43",
+        "timeline": []
+      },
+      "metadata": null
+    },
+    {
+      "post_id": "6b0344ba9978cd4d9a1ca580",
+      "analytics": {
+        "post_id": "6b0344ba9978cd4d9a1ca580",
+        "content": "Merry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+        "status": "published",
+        "published_at": "2026-11-22T19:38:38.599Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 12,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 8.33
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655654/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 12,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 8.33
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b0344ba9978cd4d9a1ca580",
+        "status": "published",
+        "content": "Merry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+        "scheduled_for": "2026-11-22T19:38:34.957Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T19:38:38.599Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DMR1MSSK-sok-haar.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655654/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b0344ba9978cd4d9a1ca580",
+        "timeline": [
+          {
+            "date": "2026-11-22",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655654",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655654",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655654",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655654",
+            "impressions": 7,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655654",
+            "impressions": 12,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319655654",
+        "message": "Stocking stuffer for women: Merry Christmas Sudoku\n\nMerry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+        "createdTime": "2026-11-22T19:38:38.000Z",
+        "picture": "https://i.pinimg.com/564x/c7/40/ae/c740aec58fed42446e88184187c88e2a.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319655654/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "Stocking stuffer for women: Merry Christmas Sudoku",
+        "description": "Merry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+        "link": "https://bookstuffers.com/stocking-stuffers?utm_source=pinterest&utm_content=20261122-sok-haar-mssk#for-her",
+        "boardId": "271060540011963292",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b0344bf56bdc437db134475",
+      "analytics": {
+        "post_id": "6b0344bf56bdc437db134475",
+        "content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "status": "published",
+        "published_at": "2026-11-22T19:38:43.497Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 12,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 1,
+          "views": 0,
+          "engagement_rate": 8.33
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655656/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 12,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "engagement_rate": 8.33
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b0344bf56bdc437db134475",
+        "status": "published",
+        "content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "scheduled_for": "2026-11-22T19:38:39.287Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T19:38:43.497Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DK3CSYXW-we-dad.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655656/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b0344bf56bdc437db134475",
+        "timeline": [
+          {
+            "date": "2026-11-22",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655656",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655656",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655656",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655656",
+            "impressions": 7,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 1,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319655656",
+            "impressions": 12,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 1,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319655656",
+        "message": "White elephant gift for men: 400 dad jokes\n\nDad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "createdTime": "2026-11-22T19:38:43.000Z",
+        "picture": "https://i.pinimg.com/564x/74/73/f7/7473f7b52e578c02822855bb2f14d50c.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319655656/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "White elephant gift for men: 400 dad jokes",
+        "description": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "link": "https://bookstuffers.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261122-we-dad-syxw",
+        "boardId": "271060540011963291",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b0344c49978cd4d9a1ca59e",
+      "analytics": {
+        "post_id": "6b0344c49978cd4d9a1ca59e",
+        "content": "Stocking stuffer ideas for men, dad and husband: useful, edible or funny. The five-slot rule and a budget planner. Featured: Beer Tasting Journal, $4.99.",
+        "status": "published",
+        "published_at": "2026-11-22T19:38:47.021Z",
+        "sync_status": "pending",
+        "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "sync_status": "pending"
+          }
+        ]
+      },
+      "post": {
+        "id": "6b0344c49978cd4d9a1ca59e",
+        "status": "published",
+        "content": "Stocking stuffer ideas for men, dad and husband: useful, edible or funny. The five-slot rule and a budget planner. Featured: Beer Tasting Journal, $4.99.",
+        "scheduled_for": "2026-11-22T19:38:44.075Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-22T19:38:47.021Z",
+        "media_urls": [
+          "https://bookstuffers.com/pin/B0DMP31FSP-sok-gids-hem.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319655658/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b0344c49978cd4d9a1ca59e",
+        "timeline": []
+      },
+      "metadata": null
+    },
+    {
+      "post_id": "6b049678d511266d6a856bec",
+      "analytics": {
+        "post_id": "6b049678d511266d6a856bec",
+        "content": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+        "status": "published",
+        "published_at": "2026-11-23T19:39:39.054Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 11,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 9.09
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684937/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 11,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 9.09
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b049678d511266d6a856bec",
+        "status": "published",
+        "content": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+        "scheduled_for": "2026-11-23T19:39:36.085Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-23T19:39:39.054Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DN65PRD9-sok-puzzel.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684937/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b049678d511266d6a856bec",
+        "timeline": [
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684937",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684937",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684937",
+            "impressions": 4,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684937",
+            "impressions": 11,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319684937",
+        "message": "Christmas stocking stuffer: Word Search for Christmas (2 in 1)\n\nWord Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+        "createdTime": "2026-11-23T19:39:38.000Z",
+        "picture": "https://i.pinimg.com/564x/f3/6f/f7/f36ff7f6485a6573fd13bc5d7156901c.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319684937/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "Christmas stocking stuffer: Word Search for Christmas (2 in 1)",
+        "description": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_content=20261123-sok-puzzel-prd9",
+        "boardId": "271060540011963292",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b04967b5d67d2299ad22eb9",
+      "analytics": {
+        "post_id": "6b04967b5d67d2299ad22eb9",
+        "content": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "status": "published",
+        "published_at": "2026-11-23T19:39:42.100Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 7,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 14.29
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684940/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 7,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 14.29
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b04967b5d67d2299ad22eb9",
+        "status": "published",
+        "content": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "scheduled_for": "2026-11-23T19:39:39.646Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-23T19:39:42.100Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684940/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b04967b5d67d2299ad22eb9",
+        "timeline": [
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684940",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684940",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684940",
+            "impressions": 1,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684940",
+            "impressions": 7,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319684940",
+        "message": "White elephant gift ideas by price: under $5, $10, $25\n\nFunny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "createdTime": "2026-11-23T19:39:41.000Z",
+        "picture": "https://i.pinimg.com/564x/da/0f/4c/da0f4cadebfee2f936e0a1785290e167.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319684940/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "White elephant gift ideas by price: under $5, $10, $25",
+        "description": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "link": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
+        "boardId": "271060540011963291",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b04967fd511266d6a856c13",
+      "analytics": {
+        "post_id": "6b04967fd511266d6a856c13",
+        "content": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "status": "published",
+        "published_at": "2026-11-23T19:39:45.169Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 8,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 12.5
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684942/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 8,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 12.5
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b04967fd511266d6a856c13",
+        "status": "published",
+        "content": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "scheduled_for": "2026-11-23T19:39:43.146Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-23T19:39:45.169Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684942/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b04967fd511266d6a856c13",
+        "timeline": [
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684942",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684942",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684942",
+            "impressions": 1,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684942",
+            "impressions": 8,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319684942",
+        "message": "Funny white elephant gift ideas under $10\n\nStuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "createdTime": "2026-11-23T19:39:44.000Z",
+        "picture": "https://i.pinimg.com/564x/92/39/af/9239af89199c143948d94b5ee4b15fc3.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319684942/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "Funny white elephant gift ideas under $10",
+        "description": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
+        "boardId": "271060540011963291",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b049681d511266d6a856c28",
+      "analytics": {
+        "post_id": "6b049681d511266d6a856c28",
+        "content": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+        "status": "published",
+        "published_at": "2026-11-23T19:39:48.379Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 8,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 12.5
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684943/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 8,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 12.5
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b049681d511266d6a856c28",
+        "status": "published",
+        "content": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+        "scheduled_for": "2026-11-23T19:39:45.802Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-23T19:39:48.379Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0F1SM1L5J-lc-jaar.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319684943/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b049681d511266d6a856c28",
+        "timeline": [
+          {
+            "date": "2026-11-23",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684943",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-24",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684943",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684943",
+            "impressions": 2,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319684943",
+            "impressions": 8,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319684943",
+        "message": "How to stick to New Year’s resolutions: one habit, 30 days\n\nDid nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+        "createdTime": "2026-11-23T19:39:47.000Z",
+        "picture": "https://i.pinimg.com/564x/14/cf/fb/14cffb70ca7a4ffb44cf5dd8bc1beb2f.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319684943/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "How to stick to New Year’s resolutions: one habit, 30 days",
+        "description": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+        "link": "https://lastingchange.works/?utm_source=pinterest&utm_content=20261123-lc-jaar-1l5j",
+        "boardId": "271060540011963293",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b05e7df7a6d18398505d60a",
+      "analytics": {
+        "post_id": "6b05e7df7a6d18398505d60a",
+        "content": "Draw names for Secret Santa for free: keep couples apart, set a budget and send everyone a private link with their match and gift ideas under the budget. No sign-up, no emails.",
+        "status": "published",
+        "published_at": "2026-11-24T19:39:15.178Z",
+        "sync_status": "pending",
+        "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "sync_status": "pending"
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05e7df7a6d18398505d60a",
+        "status": "published",
+        "content": "Draw names for Secret Santa for free: keep couples apart, set a budget and send everyone a private link with their match and gift ideas under the budget. No sign-up, no emails.",
+        "scheduled_for": "2026-11-24T19:39:11.171Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-24T19:39:15.178Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DNCLDHD6-ss-gen.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713889/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05e7df7a6d18398505d60a",
+        "timeline": []
+      },
+      "metadata": null
+    },
+    {
+      "post_id": "6b05e7e46cf47dfab007ad2f",
+      "analytics": {
+        "post_id": "6b05e7e46cf47dfab007ad2f",
+        "content": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+        "status": "published",
+        "published_at": "2026-11-24T19:39:20.434Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 4,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 25
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713890/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 4,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 25
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05e7e46cf47dfab007ad2f",
+        "status": "published",
+        "content": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+        "scheduled_for": "2026-11-24T19:39:16.354Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-24T19:39:20.434Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DMNGLKLT-sok-gids-haar.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713890/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05e7e46cf47dfab007ad2f",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713890",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713890",
+            "impressions": 4,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319713890",
+        "message": "Stocking stuffers for women: ideas by price from $5\n\nStocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+        "createdTime": "2026-11-24T19:39:19.000Z",
+        "picture": "https://i.pinimg.com/564x/3f/a8/64/3fa86410a03bf6f8c6374fc18d701ee0.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319713890/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "Stocking stuffers for women: ideas by price from $5",
+        "description": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+        "link": "https://stockingbooks.com/stocking-stuffers-for-women?utm_source=pinterest&utm_content=20261124-sok-gids-haar-lklt",
+        "boardId": "271060540011963292",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b05e7e952ad165c265fa790",
+      "analytics": {
+        "post_id": "6b05e7e952ad165c265fa790",
+        "content": "In a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+        "status": "published",
+        "published_at": "2026-11-24T19:39:24.246Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 4,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 25
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713892/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 4,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 25
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05e7e952ad165c265fa790",
+        "status": "published",
+        "content": "In a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+        "scheduled_for": "2026-11-24T19:39:21.295Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-24T19:39:24.246Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0F1SM1L5J-lc-66.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713892/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05e7e952ad165c265fa790",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713892",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713892",
+            "impressions": 4,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319713892",
+        "message": "How long does it take to form a habit? 66 days\n\nIn a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+        "createdTime": "2026-11-24T19:39:23.000Z",
+        "picture": "https://i.pinimg.com/564x/71/cf/c0/71cfc0cac98241ce2075fa5a77f8cd58.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319713892/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "How long does it take to form a habit? 66 days",
+        "description": "In a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+        "link": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-66-1l5j",
+        "boardId": "271060540011963293",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b05e7ec6cf47dfab007ad4b",
+      "analytics": {
+        "post_id": "6b05e7ec6cf47dfab007ad4b",
+        "content": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+        "status": "published",
+        "published_at": "2026-11-24T19:39:28.690Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 3,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 1,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 33.33
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713895/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 3,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 33.33
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05e7ec6cf47dfab007ad4b",
+        "status": "published",
+        "content": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+        "scheduled_for": "2026-11-24T19:39:24.779Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-24T19:39:28.690Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0F1SM1L5J-lc-stappen.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319713895/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05e7ec6cf47dfab007ad4b",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713895",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319713895",
+            "impressions": 3,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319713895",
+        "message": "New Year’s resolutions that stick: 6 steps\n\nPick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+        "createdTime": "2026-11-24T19:39:28.000Z",
+        "picture": "https://i.pinimg.com/564x/a9/6c/b7/a96cb776956d87aa84c506b3deba07c4.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319713895/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "New Year’s resolutions that stick: 6 steps",
+        "description": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+        "link": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-stappen-1l5j",
+        "boardId": "271060540011963293",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b05f89c3ea213a32f7d5a66",
+      "analytics": {
+        "post_id": "6b05f89c3ea213a32f7d5a66",
+        "content": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "status": "published",
+        "published_at": "2026-11-24T20:54:16.973Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 1,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319715665/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 1,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05f89c3ea213a32f7d5a66",
+        "status": "published",
+        "content": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "scheduled_for": "2026-11-24T20:54:15.269Z",
+        "timezone": "America/Curacao",
+        "published_at": "2026-11-24T20:54:16.973Z",
+        "media_urls": [
+          "https://media.zernio.com/media/1795553433810_03f8479c2b184ccd_2026-11-23-pin-woordzoekers.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319715665/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05f89c3ea213a32f7d5a66",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319715665",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319715665",
+            "impressions": 1,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319715665",
+        "message": "12 Free Printable Christmas Word Searches with Answer Keys\n\nPrint 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "createdTime": "2026-11-24T20:54:16.000Z",
+        "picture": "https://i.pinimg.com/564x/5b/7d/21/5b7d214c4ca606f4499e59607c96f5c2.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319715665/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "description": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "boardId": "271060540011963292",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b05f9fdacf4072f8e620181",
+      "analytics": {
+        "post_id": "6b05f9fdacf4072f8e620181",
+        "content": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "status": "published",
+        "published_at": "2026-11-24T20:56:31.789Z",
+        "sync_status": "pending",
+        "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "sync_status": "pending"
+          }
+        ]
+      },
+      "post": {
+        "id": "6b05f9fdacf4072f8e620181",
+        "status": "published",
+        "content": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "scheduled_for": "2026-11-24T20:56:28.594Z",
+        "timezone": "America/Curacao",
+        "published_at": "2026-11-24T20:56:31.789Z",
+        "media_urls": [
+          "https://media.zernio.com/media/1795553786180_79140876bf87bb5e_B0HRGNJ7CY-sok-hem.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319715692/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b05f9fdacf4072f8e620181",
+        "timeline": []
+      },
+      "metadata": null
+    },
+    {
+      "post_id": "6b07397bcb651a6eadc070bb",
+      "analytics": {
+        "post_id": "6b07397bcb651a6eadc070bb",
+        "content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "status": "published",
+        "published_at": "2026-11-25T19:39:43.777Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741575/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b07397bcb651a6eadc070bb",
+        "status": "published",
+        "content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "scheduled_for": "2026-11-25T19:39:39.599Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-25T19:39:43.777Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0B5KV79N1-enoch-wat.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741575/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b07397bcb651a6eadc070bb",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741575",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741575",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319741575",
+        "message": "What is the Book of Enoch? 1, 2 and 3 Enoch explained\n\nThe Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "createdTime": "2026-11-25T19:39:43.000Z",
+        "picture": "https://i.pinimg.com/564x/19/db/2d/19db2d4cf8cd2eabd1b5865c1d3399f2.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319741575/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "What is the Book of Enoch? 1, 2 and 3 Enoch explained",
+        "description": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "link": "https://stockingbooks.com/book-of-enoch?utm_source=pinterest&utm_content=20261125-enoch-wat-79n1",
+        "boardId": "271060540011963294",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b073986be3f02dcc0ff44d7",
+      "analytics": {
+        "post_id": "6b073986be3f02dcc0ff44d7",
+        "content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "status": "published",
+        "published_at": "2026-11-25T19:39:54.507Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741582/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b073986be3f02dcc0ff44d7",
+        "status": "published",
+        "content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "scheduled_for": "2026-11-25T19:39:51.014Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-25T19:39:54.507Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DK3CSYXW-we-dad.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741582/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b073986be3f02dcc0ff44d7",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741582",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741582",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319741582",
+        "message": "White elephant gift for men: 400 dad jokes\n\nDad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "createdTime": "2026-11-25T19:39:54.000Z",
+        "picture": "https://i.pinimg.com/564x/74/73/f7/7473f7b52e578c02822855bb2f14d50c.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319741582/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "White elephant gift for men: 400 dad jokes",
+        "description": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261125-we-dad-syxw",
+        "boardId": "271060540011963291",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b073998b436184d7f495f0b",
+      "analytics": {
+        "post_id": "6b073998b436184d7f495f0b",
+        "content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "status": "published",
+        "published_at": "2026-11-25T19:40:13.311Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741588/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b073998b436184d7f495f0b",
+        "status": "published",
+        "content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "scheduled_for": "2026-11-25T19:40:08.148Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-25T19:40:13.311Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DDBTXC9J-apo-14.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741588/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b073998b436184d7f495f0b",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741588",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741588",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": {
+        "id": "271060471319741588",
+        "message": "What is the Apocrypha? The books left out of the Bible\n\nThe 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "createdTime": "2026-11-25T19:40:12.000Z",
+        "picture": "https://i.pinimg.com/564x/8c/ac/dd/8cacdd405682b658011dcc0086514173.jpg",
+        "permalink": "https://www.pinterest.com/pin/271060471319741588/",
+        "mediaType": "image",
+        "platform": "pinterest",
+        "title": "What is the Apocrypha? The books left out of the Bible",
+        "description": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "link": "https://stockingbooks.com/apocrypha?utm_source=pinterest&utm_content=20261125-apo-14-xc9j",
+        "boardId": "271060540011963294",
+        "boardOwnerUsername": "kadolyshop",
+        "isOwner": true
+      }
+    },
+    {
+      "post_id": "6b0739a3be3f02dcc0ff4563",
+      "analytics": {
+        "post_id": "6b0739a3be3f02dcc0ff4563",
+        "content": "Dad Jokes You Never Asked For: 400 Ways to Make Anyone Groan: $8.99, 103 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "status": "published",
+        "published_at": "2026-11-25T19:40:23.516Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741591/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "post": {
+        "id": "6b0739a3be3f02dcc0ff4563",
+        "status": "published",
+        "content": "Dad Jokes You Never Asked For: 400 Ways to Make Anyone Groan: $8.99, 103 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "scheduled_for": "2026-11-25T19:40:19.652Z",
+        "timezone": "UTC",
+        "published_at": "2026-11-25T19:40:23.516Z",
+        "media_urls": [
+          "https://stockingbooks.com/pin/B0DK3CSYXW-sok-hem.png"
+        ],
+        "targets": [
+          {
+            "platform": "pinterest",
+            "account_id": "6afb8a5d86e8bb18f844fc95",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319741591/"
+          }
+        ]
+      },
+      "timeline": {
+        "postId": "6b0739a3be3f02dcc0ff4563",
+        "timeline": [
+          {
+            "date": "2026-11-25",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741591",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          },
+          {
+            "date": "2026-11-26",
+            "platform": "pinterest",
+            "platformPostId": "271060471319741591",
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "follows": 0,
+            "completionRate": 0,
+            "profileViews": 0,
+            "websiteClicks": 0,
+            "impressionSources": {},
+            "audienceTypes": {},
+            "audienceCountries": {},
+            "retentionCurve": {},
+            "replays": 0
+          }
+        ]
+      },
+      "metadata": null
+    }
+  ]
+}

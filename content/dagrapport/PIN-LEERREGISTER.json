@@ -5,7 +5,7 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-26T13:39:08.783Z",
+  "updated_at_utc": "2026-11-26T19:39:03.038Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
@@ -37,9 +37,17 @@
       "asin": "B0DNQ61ZJM",
       "registered_at_utc": "2026-11-22T18:12:10.118Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319653361/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "White elephant rules: how to play + free printable",
+        "description": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+        "board": "271060540011963291",
+        "destination": "https://bookstuffers.com/white-elephant-rules?utm_source=pinterest&utm_content=20261122-we-regels-1zjm",
+        "image": "https://i.pinimg.com/564x/2a/f2/87/2af2877b38fa9eb4c776734eb50fe376.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -112,20 +120,169 @@
           "registration_visible_in_last20": false,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03305e0c584efce0d64de2",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 11,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-22T18:11:48.079Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319653361/",
+          "timeline": [
+            {
+              "date": "2026-11-22",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653361",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653361",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653361",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653361",
+              "impressions": 6,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653361",
+              "impressions": 11,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "11 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 91.4,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 97.5,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T18:11:48.079Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DNQ61ZJM-we-regels.png"
+      ]
     },
     {
       "id": "20261122-sok-tiener-bm75",
@@ -134,7 +291,7 @@
       "asin": "B0DJQLBM75",
       "registered_at_utc": "2026-11-22T18:12:11.081Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319653366/",
       "published_at_utc_minute": null,
       "metadata": null,
       "raw_internal_cache": {
@@ -209,20 +366,58 @@
           "registration_visible_in_last20": false,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b033065c4d17d4a0f103be1",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "pending",
+          "impressions": null,
+          "saves": null,
+          "generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": true,
+          "previous_comparable_snapshot": false,
+          "reason": "Provider pending; zero placeholders are unknown, not zero performance.",
+          "provider_timestamp": "2026-11-22T18:11:52.586Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319653366/",
+          "timeline": [],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "Provider analytics pending; no zeros inferred",
+        "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 91.4,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 97.5,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T18:11:52.586Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Stocking Stuffers For Teens: 408 weird, smart and funny facts, 147 pages, $9.99. Rated 4.1 out of 5 by 128 readers on Amazon. Stocking stuffer ideas for teen boys and girls.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DJQLBM75-sok-tiener.png"
+      ]
     },
     {
       "id": "20261122-enoch-wat-79n1",
@@ -231,9 +426,17 @@
       "asin": "B0B5KV79N1",
       "registered_at_utc": "2026-11-22T18:12:12.629Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319653370/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "What is the Book of Enoch? 1, 2 and 3 Enoch explained",
+        "description": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "board": "271060540011963294",
+        "destination": "https://bookstuffers.com/book-of-enoch?utm_source=pinterest&utm_content=20261122-enoch-wat-79n1",
+        "image": "https://i.pinimg.com/564x/19/db/2d/19db2d4cf8cd2eabd1b5865c1d3399f2.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -318,20 +521,169 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03306970f37227beb16166",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 9,
+          "saves": 1,
+          "generic_clicks": 2,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-22T18:11:57.788Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319653370/",
+          "timeline": [
+            {
+              "date": "2026-11-22",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653370",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653370",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653370",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653370",
+              "impressions": 5,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 2,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653370",
+              "impressions": 9,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 2,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "9 provider impressions,1saves,2genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 91.4,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 97.5,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T18:11:57.788Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0B5KV79N1-enoch-wat.png"
+      ]
     },
     {
       "id": "20261122-apo-14-xc9j",
@@ -340,9 +692,17 @@
       "asin": "B0DDBTXC9J",
       "registered_at_utc": "2026-11-22T18:12:13.608Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319653376/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "What is the Apocrypha? The books left out of the Bible",
+        "description": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "board": "271060540011963294",
+        "destination": "https://bookstuffers.com/apocrypha?utm_source=pinterest&utm_content=20261122-apo-14-xc9j",
+        "image": "https://i.pinimg.com/564x/8c/ac/dd/8cacdd405682b658011dcc0086514173.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -427,20 +787,169 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03306ec4d17d4a0f103bf2",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 10,
+          "saves": 1,
+          "generic_clicks": 1,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-22T18:12:02.901Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319653376/",
+          "timeline": [
+            {
+              "date": "2026-11-22",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653376",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653376",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653376",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653376",
+              "impressions": 5,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319653376",
+              "impressions": 10,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "10 provider impressions,1saves,1genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 91.4,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 97.5,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T18:12:02.901Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DDBTXC9J-apo-14.png"
+      ]
     },
     {
       "id": "20261122-we-ruzie-z3g3",
@@ -449,7 +958,7 @@
       "asin": "B0DNDQZ3G3",
       "registered_at_utc": "2026-11-22T19:38:53.148Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319655653/",
       "published_at_utc_minute": null,
       "metadata": null,
       "raw_internal_cache": {
@@ -536,20 +1045,58 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344b6783be3b4addd3e43",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "pending",
+          "impressions": null,
+          "saves": null,
+          "generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": true,
+          "previous_comparable_snapshot": false,
+          "reason": "Provider pending; zero placeholders are unknown, not zero performance.",
+          "provider_timestamp": "2026-11-22T19:38:34.357Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319655653/",
+          "timeline": [],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "Provider analytics pending; no zeros inferred",
+        "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 90,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 96,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T19:38:34.357Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Funny white elephant gift idea under $5: Think and Stink, a 40-page bathroom word search. Flat to wrap, nobody guesses it, and it gets a laugh when it is opened. White elephant gift ideas, gag gift, Yankee swap, Dirty Santa.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DNDQZ3G3-we-ruzie.png"
+      ]
     },
     {
       "id": "20261122-sok-haar-mssk",
@@ -558,9 +1105,17 @@
       "asin": "B0DMR1MSSK",
       "registered_at_utc": "2026-11-22T19:38:54.191Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319655654/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "Stocking stuffer for women: Merry Christmas Sudoku",
+        "description": "Merry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+        "board": "271060540011963292",
+        "destination": "https://bookstuffers.com/stocking-stuffers?utm_source=pinterest&utm_content=20261122-sok-haar-mssk#for-her",
+        "image": "https://i.pinimg.com/564x/c7/40/ae/c740aec58fed42446e88184187c88e2a.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -645,20 +1200,169 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344ba9978cd4d9a1ca580",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 12,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-22T19:38:38.599Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319655654/",
+          "timeline": [
+            {
+              "date": "2026-11-22",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655654",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655654",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655654",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655654",
+              "impressions": 7,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655654",
+              "impressions": 12,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "12 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 90,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 96,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T19:38:38.599Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Merry Christmas Sudoku: $4.99, 52 pages, fits in her stocking. Stocking stuffer ideas for women, mom, wife and grandma.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DMR1MSSK-sok-haar.png"
+      ]
     },
     {
       "id": "20261122-we-dad-syxw",
@@ -667,9 +1371,17 @@
       "asin": "B0DK3CSYXW",
       "registered_at_utc": "2026-11-22T19:38:55.293Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319655656/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "White elephant gift for men: 400 dad jokes",
+        "description": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "board": "271060540011963291",
+        "destination": "https://bookstuffers.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261122-we-dad-syxw",
+        "image": "https://i.pinimg.com/564x/74/73/f7/7473f7b52e578c02822855bb2f14d50c.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -754,20 +1466,169 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344bf56bdc437db134475",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 12,
+          "saves": 1,
+          "generic_clicks": 1,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-22T19:38:43.497Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319655656/",
+          "timeline": [
+            {
+              "date": "2026-11-22",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655656",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655656",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655656",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655656",
+              "impressions": 7,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319655656",
+              "impressions": 12,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "12 provider impressions,1saves,1genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 90,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 96,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T19:38:43.497Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DK3CSYXW-we-dad.png"
+      ]
     },
     {
       "id": "20261122-sok-gids-hem-1fsp",
@@ -776,7 +1637,7 @@
       "asin": "B0DMP31FSP",
       "registered_at_utc": "2026-11-22T19:38:56.288Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319655658/",
       "published_at_utc_minute": null,
       "metadata": null,
       "raw_internal_cache": {
@@ -863,20 +1724,58 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344c49978cd4d9a1ca59e",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "pending",
+          "impressions": null,
+          "saves": null,
+          "generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": true,
+          "previous_comparable_snapshot": false,
+          "reason": "Provider pending; zero placeholders are unknown, not zero performance.",
+          "provider_timestamp": "2026-11-22T19:38:47.021Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319655658/",
+          "timeline": [],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "Provider analytics pending; no zeros inferred",
+        "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 90,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 96,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-22T19:38:47.021Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Stocking stuffer ideas for men, dad and husband: useful, edible or funny. The five-slot rule and a budget planner. Featured: Beer Tasting Journal, $4.99.",
+      "verified_media_urls": [
+        "https://bookstuffers.com/pin/B0DMP31FSP-sok-gids-hem.png"
+      ]
     },
     {
       "id": "20261123-sok-puzzel-prd9",
@@ -885,9 +1784,17 @@
       "asin": "B0DN65PRD9",
       "registered_at_utc": "2026-11-23T19:39:54.871Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319684937/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "Christmas stocking stuffer: Word Search for Christmas (2 in 1)",
+        "description": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+        "board": "271060540011963292",
+        "destination": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_content=20261123-sok-puzzel-prd9",
+        "image": "https://i.pinimg.com/564x/f3/6f/f7/f36ff7f6485a6573fd13bc5d7156901c.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -972,20 +1879,147 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b049678d511266d6a856bec",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 11,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-23T19:39:39.054Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319684937/",
+          "timeline": [
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684937",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684937",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684937",
+              "impressions": 4,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684937",
+              "impressions": 11,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "11 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 66,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 72,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-23T19:39:39.054Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DN65PRD9-sok-puzzel.png"
+      ]
     },
     {
       "id": "20261123-we-ideeen-t9jt",
@@ -1003,7 +2037,14 @@
         "tekst": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
         "link": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
         "beeld": "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png",
-        "a": "B0DNB1T9JT"
+        "a": "B0DNB1T9JT",
+        "title": "White elephant gift ideas by price: under $5, $10, $25",
+        "description": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "board": "271060540011963291",
+        "destination": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
+        "image": "https://i.pinimg.com/564x/da/0f/4c/da0f4cadebfee2f936e0a1785290e167.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
       },
       "raw_internal_cache": {
         "klik": 0,
@@ -1089,20 +2130,147 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b04967b5d67d2299ad22eb9",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 7,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-23T19:39:42.100Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319684940/",
+          "timeline": [
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684940",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684940",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684940",
+              "impressions": 1,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684940",
+              "impressions": 7,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "7 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 66,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 72,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-23T19:39:42.100Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png"
+      ]
     },
     {
       "id": "20261123-we-onder10-fxb1",
@@ -1120,7 +2288,14 @@
         "tekst": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
         "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
         "beeld": "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png",
-        "a": "B0DP42FXB1"
+        "a": "B0DP42FXB1",
+        "title": "Funny white elephant gift ideas under $10",
+        "description": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "board": "271060540011963291",
+        "destination": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
+        "image": "https://i.pinimg.com/564x/92/39/af/9239af89199c143948d94b5ee4b15fc3.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
       },
       "raw_internal_cache": {
         "klik": 0,
@@ -1206,20 +2381,147 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b04967fd511266d6a856c13",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 8,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-23T19:39:45.169Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319684942/",
+          "timeline": [
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684942",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684942",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684942",
+              "impressions": 1,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684942",
+              "impressions": 8,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "8 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 66,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 72,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-23T19:39:45.169Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png"
+      ]
     },
     {
       "id": "20261123-lc-jaar-1l5j",
@@ -1228,9 +2530,17 @@
       "asin": "B0F1SM1L5J",
       "registered_at_utc": "2026-11-23T19:39:58.268Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319684943/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "How to stick to New Year’s resolutions: one habit, 30 days",
+        "description": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+        "board": "271060540011963293",
+        "destination": "https://lastingchange.works/?utm_source=pinterest&utm_content=20261123-lc-jaar-1l5j",
+        "image": "https://i.pinimg.com/564x/14/cf/fb/14cffb70ca7a4ffb44cf5dd8bc1beb2f.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": {
         "klik": 0,
         "saves": 0,
@@ -1315,20 +2625,147 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b049681d511266d6a856c28",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 8,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-23T19:39:48.379Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319684943/",
+          "timeline": [
+            {
+              "date": "2026-11-23",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684943",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-24",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684943",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684943",
+              "impressions": 2,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319684943",
+              "impressions": 8,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "8 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 66,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 72,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-23T19:39:48.379Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0F1SM1L5J-lc-jaar.png"
+      ]
     },
     {
       "id": "20261124-ss-gen-dhd6",
@@ -1337,7 +2774,7 @@
       "asin": "B0DNCLDHD6",
       "registered_at_utc": "2026-11-24T19:39:35.087Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319713889/",
       "published_at_utc_minute": null,
       "metadata": null,
       "raw_internal_cache": null,
@@ -1408,20 +2845,58 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7df7a6d18398505d60a",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "pending",
+          "impressions": null,
+          "saves": null,
+          "generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": true,
+          "previous_comparable_snapshot": false,
+          "reason": "Provider pending; zero placeholders are unknown, not zero performance.",
+          "provider_timestamp": "2026-11-24T19:39:15.178Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319713889/",
+          "timeline": [],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "Provider analytics pending; no zeros inferred",
+        "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 42,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 48,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T19:39:15.178Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Draw names for Secret Santa for free: keep couples apart, set a budget and send everyone a private link with their match and gift ideas under the budget. No sign-up, no emails.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DNCLDHD6-ss-gen.png"
+      ]
     },
     {
       "id": "20261124-sok-gids-haar-lklt",
@@ -1430,9 +2905,17 @@
       "asin": "B0DMNGLKLT",
       "registered_at_utc": "2026-11-24T19:39:37.269Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319713890/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "Stocking stuffers for women: ideas by price from $5",
+        "description": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+        "board": "271060540011963292",
+        "destination": "https://stockingbooks.com/stocking-stuffers-for-women?utm_source=pinterest&utm_content=20261124-sok-gids-haar-lklt",
+        "image": "https://i.pinimg.com/564x/3f/a8/64/3fa86410a03bf6f8c6374fc18d701ee0.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": null,
       "internal_cache_is_fresh_provider_statistic": false,
       "snapshots": [
@@ -1501,20 +2984,103 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7e46cf47dfab007ad2f",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 4,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-24T19:39:20.434Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319713890/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713890",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713890",
+              "impressions": 4,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "4 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 42,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 48,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T19:39:20.434Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DMNGLKLT-sok-gids-haar.png"
+      ]
     },
     {
       "id": "20261124-lc-66-1l5j",
@@ -1523,9 +3089,17 @@
       "asin": "B0F1SM1L5J",
       "registered_at_utc": "2026-11-24T19:39:38.366Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319713892/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "How long does it take to form a habit? 66 days",
+        "description": "In a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+        "board": "271060540011963293",
+        "destination": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-66-1l5j",
+        "image": "https://i.pinimg.com/564x/71/cf/c0/71cfc0cac98241ce2075fa5a77f8cd58.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": null,
       "internal_cache_is_fresh_provider_statistic": false,
       "snapshots": [
@@ -1594,20 +3168,103 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7e952ad165c265fa790",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 4,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-24T19:39:24.246Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319713892/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713892",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713892",
+              "impressions": 4,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "4 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 42,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 48,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T19:39:24.246Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "In a 2010 study by Lally and colleagues, a new habit took a median of 66 days to feel automatic. Six steps to make a New Year’s resolution stick, and a workbook that runs to day 66.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0F1SM1L5J-lc-66.png"
+      ]
     },
     {
       "id": "20261124-lc-stappen-1l5j",
@@ -1616,9 +3273,17 @@
       "asin": "B0F1SM1L5J",
       "registered_at_utc": "2026-11-24T19:39:39.552Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319713895/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "New Year’s resolutions that stick: 6 steps",
+        "description": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+        "board": "271060540011963293",
+        "destination": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-stappen-1l5j",
+        "image": "https://i.pinimg.com/564x/a9/6c/b7/a96cb776956d87aa84c506b3deba07c4.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "raw_internal_cache": null,
       "internal_cache_is_fresh_provider_statistic": false,
       "snapshots": [
@@ -1687,20 +3352,103 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7ec6cf47dfab007ad4b",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 3,
+          "saves": 1,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-24T19:39:28.690Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319713895/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713895",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319713895",
+              "impressions": 3,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "3 provider impressions,1saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 42,
-        "basis": "registration_not_exact_publication"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 48,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T19:39:28.690Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0F1SM1L5J-lc-stappen.png"
+      ]
     },
     {
       "id": "20261123-sok-puzzel-1j5t",
@@ -1718,7 +3466,14 @@
         "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
         "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
         "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
-        "a": "B0DMNK1J5T"
+        "a": "B0DMNK1J5T",
+        "title": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "description": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "board": "271060540011963292",
+        "destination": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "image": "https://i.pinimg.com/564x/5b/7d/21/5b7d214c4ca606f4499e59607c96f5c2.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
       },
       "raw_internal_cache": null,
       "internal_cache_is_fresh_provider_statistic": false,
@@ -1788,20 +3543,103 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05f89c3ea213a32f7d5a66",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 1,
+          "saves": 0,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-24T20:54:16.973Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319715665",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319715665",
+              "impressions": 1,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "1 provider impressions,0saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 40.8,
-        "basis": "verified_publication_minute"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 46.7,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T20:54:16.973Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+      "verified_media_urls": [
+        "https://media.zernio.com/media/1795553433810_03f8479c2b184ccd_2026-11-23-pin-woordzoekers.png"
+      ]
     },
     {
       "id": "20261123-sok-hem-j7cy",
@@ -1889,20 +3727,58 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05f9fdacf4072f8e620181",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "pending",
+          "impressions": null,
+          "saves": null,
+          "generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": true,
+          "previous_comparable_snapshot": false,
+          "reason": "Provider pending; zero placeholders are unknown, not zero performance.",
+          "provider_timestamp": "2026-11-24T20:56:31.789Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+          "timeline": [],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "Provider analytics pending; no zeros inferred",
+        "next_action": "Read nextchanged provider snapshot; no repeatedsame-runpending retries.",
         "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 40.7,
-        "basis": "verified_publication_minute"
-      }
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 46.7,
+        "basis": "verified_provider_publication_seconds"
+      },
+      "verified_published_at_utc": "2026-11-24T20:56:31.789Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+      "verified_media_urls": [
+        "https://media.zernio.com/media/1795553786180_79140876bf87bb5e_B0HRGNJ7CY-sok-hem.png"
+      ]
     },
     {
       "id": "20261125-enoch-wat-79n1",
@@ -1911,9 +3787,17 @@
       "asin": "B0B5KV79N1",
       "registered_at_utc": "2026-11-25T19:39:50.426Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319741575/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "What is the Book of Enoch? 1, 2 and 3 Enoch explained",
+        "description": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+        "board": "271060540011963294",
+        "destination": "https://stockingbooks.com/book-of-enoch?utm_source=pinterest&utm_content=20261125-enoch-wat-79n1",
+        "image": "https://i.pinimg.com/564x/19/db/2d/19db2d4cf8cd2eabd1b5865c1d3399f2.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "snapshots": [
         {
           "observed_at_utc": "2026-11-25T19:43:05.625Z",
@@ -1957,21 +3841,104 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b07397bcb651a6eadc070bb",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 0,
+          "saves": 0,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-25T19:39:43.777Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319741575/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741575",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741575",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 18,
-        "basis": "registration_not_exact_publication"
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 24,
+        "basis": "verified_provider_publication_seconds"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "0 provider impressions,0saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-27"
+      "next_observation_curacao": "2026-11-27",
+      "verified_published_at_utc": "2026-11-25T19:39:43.777Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0B5KV79N1-enoch-wat.png"
+      ]
     },
     {
       "id": "20261125-we-dad-syxw",
@@ -1980,9 +3947,17 @@
       "asin": "B0DK3CSYXW",
       "registered_at_utc": "2026-11-25T19:40:07.517Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319741582/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "White elephant gift for men: 400 dad jokes",
+        "description": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+        "board": "271060540011963291",
+        "destination": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261125-we-dad-syxw",
+        "image": "https://i.pinimg.com/564x/74/73/f7/7473f7b52e578c02822855bb2f14d50c.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "snapshots": [
         {
           "observed_at_utc": "2026-11-25T19:43:05.625Z",
@@ -2026,21 +4001,104 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b073986be3f02dcc0ff44d7",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 0,
+          "saves": 0,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-25T19:39:54.507Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319741582/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741582",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741582",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 18,
-        "basis": "registration_not_exact_publication"
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 24,
+        "basis": "verified_provider_publication_seconds"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "0 provider impressions,0saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-27"
+      "next_observation_curacao": "2026-11-27",
+      "verified_published_at_utc": "2026-11-25T19:39:54.507Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DK3CSYXW-we-dad.png"
+      ]
     },
     {
       "id": "20261125-apo-14-xc9j",
@@ -2049,9 +4107,17 @@
       "asin": "B0DDBTXC9J",
       "registered_at_utc": "2026-11-25T19:40:19.109Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319741588/",
       "published_at_utc_minute": null,
-      "metadata": null,
+      "metadata": {
+        "title": "What is the Apocrypha? The books left out of the Bible",
+        "description": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+        "board": "271060540011963294",
+        "destination": "https://stockingbooks.com/apocrypha?utm_source=pinterest&utm_content=20261125-apo-14-xc9j",
+        "image": "https://i.pinimg.com/564x/8c/ac/dd/8cacdd405682b658011dcc0086514173.jpg",
+        "source": "Zernio accounts_get_account_posts live native platform read",
+        "observed_at_utc": "2026-11-26T19:39:03.038Z"
+      },
       "snapshots": [
         {
           "observed_at_utc": "2026-11-25T19:43:05.625Z",
@@ -2095,21 +4161,104 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b073998b436184d7f495f0b",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 0,
+          "saves": 0,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-25T19:40:13.311Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319741588/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741588",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741588",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 18,
-        "basis": "registration_not_exact_publication"
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 24,
+        "basis": "verified_provider_publication_seconds"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "0 provider impressions,0saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-27"
+      "next_observation_curacao": "2026-11-27",
+      "verified_published_at_utc": "2026-11-25T19:40:13.311Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DDBTXC9J-apo-14.png"
+      ]
     },
     {
       "id": "20261125-sok-hem-syxw",
@@ -2118,7 +4267,7 @@
       "asin": "B0DK3CSYXW",
       "registered_at_utc": "2026-11-25T19:40:33.189Z",
       "registration_is_not_exact_publication_time": true,
-      "pin_url": null,
+      "pin_url": "https://www.pinterest.com/pin/271060471319741591/",
       "published_at_utc_minute": null,
       "metadata": null,
       "snapshots": [
@@ -2164,21 +4313,104 @@
           "registration_visible_in_last20": true,
           "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
           "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
+        },
+        {
+          "observed_at_utc": "2026-11-26T19:39:03.038Z",
+          "round": "pinterest",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0739a3be3f02dcc0ff4563",
+          "period": {
+            "kind": "provider_single_post_snapshot",
+            "explicit_start": null,
+            "explicit_end": null,
+            "not_closed_day": true
+          },
+          "definition": {
+            "impressions": "provider-reported impressions",
+            "saves": "provider-reported saves",
+            "generic_clicks": "Provider clicks; not verified OUTBOUND_CLICK",
+            "organic_outbound_clicks": "Unknown; genericclicks cannot be substituted"
+          },
+          "provider_sync_status": "synced",
+          "impressions": 0,
+          "saves": 0,
+          "generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "raw_pending_zeros_ignored": false,
+          "previous_comparable_snapshot": false,
+          "reason": "First valid synced provider snapshot. Genericclick type/period not enough to claim traffic or update pinuitkomst.",
+          "provider_timestamp": "2026-11-25T19:40:23.516Z",
+          "provider_pin_url": "https://www.pinterest.com/pin/271060471319741591/",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741591",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319741591",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ],
+          "timeline_note": "Docs call rows daily; do not sum acrossdates or derivegrowth until semantics consistent with account totals. websiteClicks documented TikTokonly,ignorePinterestzeros.",
+          "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-26T13:39:08.783Z",
-        "hours": 18,
-        "basis": "registration_not_exact_publication"
+        "at_utc": "2026-11-26T19:39:03.038Z",
+        "hours": 24,
+        "basis": "verified_provider_publication_seconds"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
-        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
+        "evidence": "0 provider impressions,0saves,0genericclicks;organicoutboundunknown",
+        "next_action": "Recheck comparable provider snapshot after sync; obtain explicitly named organicoutbound metrics; preservecontrol, no winner.",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-27"
+      "next_observation_curacao": "2026-11-27",
+      "verified_published_at_utc": "2026-11-25T19:40:23.516Z",
+      "publication_precision": "provider_timestamp_seconds",
+      "verified_content": "Dad Jokes You Never Asked For: 400 Ways to Make Anyone Groan: $8.99, 103 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+      "verified_media_urls": [
+        "https://stockingbooks.com/pin/B0DK3CSYXW-sok-hem.png"
+      ]
     }
   ]
 }

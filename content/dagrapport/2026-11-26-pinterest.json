@@ -156,6 +156,184 @@
         "reason": "No IAB and empty browser inventory; no rendered screenshots claimed"
       },
       "report": true
+    },
+    {
+      "observed_at_utc": "2026-11-26T19:39:03.038Z",
+      "round": "pinterest",
+      "closed_utc_day": "2026-11-25",
+      "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+      "traffic": {
+        "stockingbooks": 13,
+        "lastingchange": 3,
+        "previous_stockingbooks": 42,
+        "previous_lastingchange": 5,
+        "source_breakdown": null,
+        "not_unique": true,
+        "north_star_progress": null
+      },
+      "provider_access": {
+        "connector_now_available": true,
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "health": {
+          "accountId": "6afb8a5d86e8bb18f844fc95",
+          "platform": "pinterest",
+          "username": "kadolyshop",
+          "displayName": "kadolyshop",
+          "ownerUserId": "6afaf153cea83f663eb3a255",
+          "status": "healthy",
+          "tokenStatus": {
+            "valid": true,
+            "expiresAt": "2026-12-24T12:15:14.495Z",
+            "expiresIn": "27 days",
+            "needsRefresh": false
+          },
+          "permissions": {
+            "posting": [
+              {
+                "scope": "boards:read",
+                "granted": true,
+                "required": true
+              },
+              {
+                "scope": "boards:write",
+                "granted": true,
+                "required": true
+              },
+              {
+                "scope": "pins:read",
+                "granted": true,
+                "required": true
+              },
+              {
+                "scope": "pins:write",
+                "granted": true,
+                "required": true
+              }
+            ],
+            "analytics": [
+              {
+                "scope": "user_accounts:read",
+                "granted": true,
+                "required": false
+              }
+            ],
+            "optional": [
+              {
+                "scope": "ads:read",
+                "granted": true,
+                "required": false
+              },
+              {
+                "scope": "ads:write",
+                "granted": true,
+                "required": false
+              }
+            ],
+            "canPost": true,
+            "canFetchAnalytics": true,
+            "analyticsSupported": true,
+            "missingRequired": []
+          },
+          "issues": [],
+          "recommendations": [],
+          "analyticsSync": {
+            "status": "ok",
+            "lastSyncedAt": "2026-11-26T18:40:11.414Z"
+          }
+        },
+        "health_not_a_traffic_result": true
+      },
+      "provider_per_pin": {
+        "count": 22,
+        "all_publication_status_verified": true,
+        "summary": {
+          "synced": 17,
+          "pending": 5,
+          "impressions": 100,
+          "saves": 12,
+          "generic_clicks": 4
+        },
+        "definition": "Current synced subset snapshot, not closeddaytotal; genericclicks not organicoutbound",
+        "organic_outbound_clicks": null,
+        "window": null,
+        "account_closed_day_conflict": "25novdailyaggregator0impressions vs17posttimelinerows38impressions, unresolved",
+        "raw_file": "content/dagrapport/2026-11-26-zernio-snapshots.json",
+        "overview": "content/dagrapport/2026-11-26-pin-overzicht.md"
+      },
+      "approval": {
+        "old_approved_batch_completed": true,
+        "pending_approved_ids": [],
+        "no_old_daycap_blocker": true,
+        "new_batch_requires_exact_approval": true,
+        "new_publications": []
+      },
+      "shared_planning": {
+        "observed_at_utc": "2026-11-26T19:39:03.038Z",
+        "pinterest_published_today": 4,
+        "pinterest_scheduled": [
+          {
+            "id": "6b083a2d58833ba789e0e2ff",
+            "at": "2026-11-27T18:45:00Z"
+          }
+        ],
+        "instagram_published_today": 2,
+        "instagram_scheduled": [
+          {
+            "id": "6b07f16a6ef5c90ebda68972",
+            "at": "2026-11-26T20:00:00Z"
+          }
+        ],
+        "other_schedule_unchanged": true
+      },
+      "prepared": {
+        "batch": "content/dagrapport/2026-11-26-batch.md",
+        "new_creatives": 1,
+        "revalidated_pin_previews": 3,
+        "revalidated_reel": 1,
+        "new_pin": "20261126-free-secret-santa",
+        "source_query": {
+          "q": "random name generator for secret santa",
+          "date": "2026-11-25",
+          "impressions": 1,
+          "clicks": 0,
+          "position": 38,
+          "volume": null
+        },
+        "primary_measure": "Verified organicoutbound clicks, not generic clicks; qualified siteUTMopenings separately",
+        "hypothesis": "Show useful free tool steps clearly as discoveryentrance; no winningclaim",
+        "control": "Existing ss-gen pin retained; directiononlydifferentcreative,notmatchedAB"
+      },
+      "checks": {
+        "new_png": "1000x1500RGB,visuallyinspected",
+        "existing_contactsheet": "visuallyinspected",
+        "reel": "12s1080x1920H264AAC",
+        "destinations": "HTTP200 via protectedexistingpreviews",
+        "five_old_bookstuffers_paths": "HEADredirectsto sameStockingpathwithUTMs,final200;noJSmeasurement",
+        "instagram_bio": "HTTP200,noverifiablebookrouteinHTML,nochange"
+      },
+      "largest_leak": {
+        "finding": "Reach low and only genericclicks; missing explicitoutbounddefinition prevents reliable acquisitionranking",
+        "evidence": "17syncedpins100impressions12saves4genericclicks;5pending. Mostpins1to4daysold",
+        "action": "Currentfirstproviderbaseline saved; newtoolcreativepreview tiedtoactualquery,carryexistingresourcepreviews,do not chaseunknownwinner",
+        "next_check": "Next daily comparableproviderread; final14to21daysfromactualpublicationand sufficientdata"
+      },
+      "research_reused": "2026-11-26-traffic-onderzoek.md",
+      "site_content": {
+        "live_lc_articles": 3,
+        "concept_lc_articles": 2,
+        "stocking_quiz_update": "existingconceptnotlive"
+      },
+      "pinuitkomst_written": false,
+      "pinlog_written": false,
+      "new_live_changes": [],
+      "constraints": {
+        "no_ads": true,
+        "no_payment": true,
+        "no_outreach": true,
+        "no_extra_telegram": true,
+        "no_paid_calls": true,
+        "no_main_push": true
+      }
     }
   ]
 }

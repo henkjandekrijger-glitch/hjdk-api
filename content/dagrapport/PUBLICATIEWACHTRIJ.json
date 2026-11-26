@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-24T22:01:42.893Z",
+  "updated_at_utc": "2026-11-26T19:39:03.038Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -749,6 +749,19 @@
       "native_browser_dependency": false,
       "setup_link_stored_in_repo": false,
       "publication_created": false
+    },
+    {
+      "at_utc": "2026-11-26T19:39:03.038Z",
+      "zernio_connector_now_available": true,
+      "account_health": "healthy",
+      "pins22_publication_verified": true,
+      "analytics_synced": 17,
+      "analytics_pending": 5,
+      "published_today_other_kadoly": 4,
+      "scheduled_next_day": 1,
+      "new_posts_created": [],
+      "old_batch_completed": true,
+      "account_disconnected": false
     }
   ],
   "review_observations": [
@@ -843,6 +856,20 @@
         "20261125-free-coloring",
         "20261125-free-trivia",
         "20261125-free-jokes",
+        "20261125-seven-day-reset"
+      ],
+      "instagram_id": "20261125-ig-men",
+      "does_not_change_existing_publication_approvals": true
+    },
+    {
+      "at_utc": "2026-11-26T19:39:03.038Z",
+      "approval_status": "newSSpreview_and3carryovers_pending_exact_approval",
+      "batch": "content/dagrapport/2026-11-26-batch.json",
+      "preview": "content/dagrapport/2026-11-26-batch.md",
+      "pin_ids": [
+        "20261126-free-secret-santa",
+        "20261125-free-coloring",
+        "20261125-free-trivia",
         "20261125-seven-day-reset"
       ],
       "instagram_id": "20261125-ig-men",
