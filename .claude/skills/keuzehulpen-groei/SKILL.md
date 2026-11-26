@@ -119,6 +119,10 @@ Lees data/keuzehulpen-groei/focus-2026-11-26.json. Volgorde tot een nieuwe metin
 
 Mobiliseren per bedrijf (lib/mobiliseer.js): achter de chat staat een blok 'Ik heb dit ook' zodra een bedrijf met een gepubliceerd dossier op we are many now op de pagina staat of in de chat genoemd wordt. Lees elke dag `https://hjdk-api-henq.vercel.app/api/keuze-tools?tool=mobi&op=meet` (stappen per site, bevestigde aanmeldingen, lek) en meld alleen wat bewoog. Meldt het veld `lek` iets: pas één ding aan, de regel of de knoptekst in MOBI of T. Komt er op de dossiersite een dossier met ik-ook bij: regel in MOBI, `node scripts/test-mobiliseer.mjs`, en kijk of een bestaande keuzehulp dat bedrijf noemt. Zet nooit een bedrijf zonder dossier in MOBI.
 
+Doel sinds 26 nov (Henkjans woord): minimaal 100 zoekbezoeken per dag en 100 chats per dag met 1 aankoop per dag, affiliate of eigen. Meld elke dag de drie getallen: zoekbezoeken, chats, aankopen.
+
+Chat op 26 nov gelijkgetrokken: één kop op alle pagina's, een wedervraag als de chat een getypte vraag niet kan plaatsen, nexy.help en lastingchange.works uit de proef van de keuzehulpen. Reken een uitslag van de Nederlandse proef pas op waarnemingen vanaf 27 nov. Rotterdam: alleen de dienstpagina's staan open voor Google (lib/rdam.js ZAAK_IN_GOOGLE); eerste oordeel 10 dec op `/api/zicht?op=stand&site=rotterdam`.
+
 ## 6. Lopende proeven in de chat (stand 23 nov 15:02 UTC)
 
 Dagronde 23 nov: uitsluitend factor pillflow beslist voor VS en DE. In VS won a met waarde 3,20 tegen 0,69 (4.432 tegen 601 gezien; intenties 356 tegen 5); in DE 4,97 tegen 1,16 (2.056 tegen 332; intenties 295 tegen 2). Beide voldeden aan 300 per arm en 95% kans volgens het bestaande model. Versie a blijft de standaard; b staat in de code uit. Alleen oude b-beslissingen worden opnieuw opgehaald, zodat ze niet zes dagen doorlopen. Ronde 3 en de andere factoren blijven bewaard. NL wacht nog op 300 voor a. De meeste waarnemingen komen van Android; dit is geen omzetbewijs. Geen nieuwe variant verzonnen: geef een volgende uitdager door aan ontwikkelchat kz-chat.

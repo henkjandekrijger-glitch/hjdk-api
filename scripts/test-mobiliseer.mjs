@@ -1,7 +1,7 @@
 // Controle van het mobiliseerblok (lib/mobiliseer.js). Draai: node scripts/test-mobiliseer.mjs
 // Bewaakt: alleen echte, gepubliceerde dossiers met "ik ook"; smalle herkenning van het bedrijf; niets op andere sites; opbouw van het script.
 import assert from 'node:assert/strict';
-import { MOBI, mobiAan, mobiJs, mobiEv, mobiStand, mobiMeet } from '../lib/mobiliseer.js';
+import { MOBI, mobiAan, mobiJs, mobiEv, mobiStand, mobiMeet, mobiVraag } from '../lib/mobiliseer.js';
 import { DOSSIERLIJST, IKOOK, DREMPEL } from '../lib/wam-dossiers.js';
 
 let n = 0; const ok = (naam, f) => { f(); n++; };
@@ -35,6 +35,11 @@ ok('script is geldig en bevat geen grijs of nullen', () => {
     assert.ok(h.includes('/api/wam?op=daanmelden') && h.includes('"waar":"mobi"') === false); // waar wordt in de browser gezet, niet in de config
     assert.ok(!/\bWAM\b/.test(h), 'de naam WAM mag niet in beeld'); assert.ok(!/machteloos/i.test(h));
   }
+});
+ok('wedervraag in de chat alleen bij een dossierbedrijf', () => {
+  const v = mobiVraag('nl', 'blendle'); assert.ok(v && v.id === 'blendle' && /Blendle/.test(v.a) && v.opties.length === 3 && /\?$/.test(v.vraag));
+  assert.equal(mobiVraag('nl', 'een blender voor smoothies'), null); assert.equal(mobiVraag('kadoly', 'blendle'), null);
+  assert.ok(mobiVraag('de', 'Ärger mit Blendle')); assert.ok(mobiVraag('us', 'ANP Fair Licensing letter'));
 });
 const nepDb = () => { const h = {}; return { h, raw: async a => { if (a[0] === 'HINCRBY') { h[a[1]] = h[a[1]] || {}; h[a[1]][a[2]] = (h[a[1]][a[2]] || 0) + Number(a[3]); return h[a[1]][a[2]]; } if (a[0] === 'HGETALL') return Object.entries(h[a[1]] || {}).flat(); return 1; }, get: async k => (k.endsWith('scopeklaar') ? 1 : null), set: async () => 1 }; };
 await okA('stappen tellen alleen geldige invoer, geen bots', async () => {
