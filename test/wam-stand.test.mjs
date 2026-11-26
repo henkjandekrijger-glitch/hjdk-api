@@ -21,6 +21,8 @@ test('standblok: dagen, termijn en alleen echte tellers', () => {
   assert.match(vol, /1<\/b> zei: ik ook/);
   assert.match(vol, /2<\/b> volgen dit dossier/);
   assert.doesNotMatch(vol, /gedeeld/);
+  assert.match(standBlok(d, { gedeeld: { blendle: 4 } }, nu), /<b>4<\/b><span>keer gedeeld/);
+  assert.match(standBlok({ ...d, bereik: { regels: [{ waar: 'AI', tekst: 'noemt dit nog niet', bron: 'x' }] } }, {}, nu), /<li><b>AI<\/b> noemt dit nog niet/);
   assert.match(standBlok(d, {}, new Date('2026-12-03T12:00:00Z')), /termijn van 2 december is verstreken/);
   assert.equal(standBlok({ id: 'x', naam: 'X' }, {}, nu), '');
 });
