@@ -323,7 +323,8 @@ export default async function handler(req, res) {
     if (op === 'privacy') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(privacy(W.taalVan(req.headers['accept-language'], req.headers['x-vercel-ip-country']))); }
     if (op === 'leer') {
       if (!isCron(req) && !beschermd(host)) return res.status(404).send('Niet gevonden');
-      return res.status(200).json(await W.leerRonde({ forceer: beschermd(host) && q('forceer') === '1' }));
+      const pr = await import('../lib/wam-punch.js').then(async P => P.punchRonde((await import('../lib/db.js')).kv)).catch(x => ({ ok: false, fout: String(x && x.message || x) })); // dagelijkse uitdager voor de punchlines (alleen eenmaal per dag na 06:00 UTC)
+      return res.status(200).json({ ...(await W.leerRonde({ forceer: beschermd(host) && q('forceer') === '1' })), punch: pr });
     }
     if (op === 'stand') {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden');
