@@ -4,11 +4,11 @@ if (!/127\.0\.0\.1|localhost/.test(String(process.env.KV_REDIS_URL || ''))) { co
 const { kv } = await import('../lib/db.js'); await kv.raw(['FLUSHDB']);
 const V = await import('../lib/videomind.js');
 const ok = (c, n) => { if (!c) { console.log('FOUT', n); process.exitCode = 1; } else console.log('ok  ', n); };
-const H = 3600e3, nu = Date.now(), iso = t => new Date(t).toISOString(), dag = t => iso(t).slice(0, 10);
+const N = Number, H = 3600e3, nu = Date.now(), iso = t => new Date(t).toISOString(), dag = t => iso(t).slice(0, 10);
 process.env.ZERNIO_API_KEY = 'test';
 const views = { z1: 40, z2: 12, z3: 35, z4: 9, z5: 50, z6: 10 };
 globalThis.fetch = async u => { const id = decodeURIComponent(String(u).split('postId=')[1] || String(u).split('/posts/')[1] || '');
-  if (/\/posts\//.test(u)) return { ok: true, status: 200, json: async () => ({ post: { title: 'Titel van ' + id + ': can you answer this? #shorts', content: 'x https://a.b/p?utm_source=youtube&utm_content=' + id } }) };
+  if (/\/posts\//.test(u)) return { ok: true, status: 200, json: async () => ({ post: { title: N(id.slice(1)) % 2 ? 'CDL: can you answer this? #shorts' : 'CDL: how far behind a truck should you stay?', content: 'x https://a.b/p?utm_source=youtube&utm_content=' + id } }) };
   return { ok: true, status: 200, json: async () => ({ status: 'published', platformPostUrl: 'https://youtu.be/' + id, analytics: { views: views[id], likes: 2, comments: 1, videoDurationSeconds: 15 }, platformAnalytics: [{ platformPostId: 'yt' + id }] }) }; };
 // register
 ok(!(await V.zet({ id: 'x', project: 'p', platform: 'youtube' })).ok, 'te kort id geweigerd');
@@ -20,6 +20,8 @@ L.push({ id: 'v8', project: 'kadoly', platform: 'tiktok', at: iso(nu - 3 * H) })
 const r = await V.zetVeel(L); ok(r.gezet === 8 && r.nieuw === 8, 'acht video\'s gezet');
 ok(!(await V.zet({ id: 'v1', project: 'kadoly', platform: 'youtube' })).ok, 'id van een ander project geweigerd');
 ok((await V.video('v1')).haak === 'uitdaging' && (await V.video('v2')).haak === 'vraag' && (await V.video('v7')).haak === 'n-vragen', 'haak afgeleid uit de titel');
+// haak met de hand blijft, afgeleide haak volgt de echte titel uit Zernio
+await V.zet({ id: 'v2', project: 'mylevel', platform: 'youtube', titel: 'oude titel', haak: 'uitdaging', haakHand: false });
 // Clickmind-tellers zoals de mensmeter ze schrijft
 await kv.raw(['HSET', 'mm:z:' + dag(nu), 'youtube|v1|n', '5', 'youtube|v1|mens', '3', 'youtube|v3|n', '2', 'tiktok|v8|n', '4', 'youtube|vreemd|n', '9']);
 await kv.raw(['HSET', 'mm:z:' + dag(nu - 24 * H), 'youtube|v1|n', '1']);
@@ -29,6 +31,7 @@ const u = await V.ronde(); ok(u.zernio.gemeten === 6, 'Zernio: zes geplaatste vi
 ok(u.clickmind.bezoeken === 12, 'Clickmind-bezoeken van onze zones geteld ' + JSON.stringify(u.clickmind));
 const v1 = await V.video('v1'); ok(v1.m48 && v1.m48.weergaven === 40, '48 uur-meting vastgelegd');
 ok(v1.url === 'https://youtu.be/z1' && v1.lengte === 15, 'url en lengte uit Zernio');
+ok((await V.video('v2')).titel.startsWith('CDL: how far') && (await V.video('v2')).haak === 'vraag', 'titel en haak uit Zernio over een seed-haak heen');
 const u2 = await V.ronde(); ok(u2.zernio.gemeten === 0, 'tweede ronde meet niet opnieuw binnen het interval');
 const s = await V.stand({ project: 'mylevel' }); const r1 = s.videos.find(x => x.id === 'v1');
 ok(r1.weergaven === 40 && r1.bezoeken === 6 && r1.mens === 3 && r1.koop === 1, 'stand v1: weergaven, bezoeken, mens, koop');
