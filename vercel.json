@@ -1343,7 +1343,7 @@
       "destination": "/api/verzekeringen?op=out&id=:id"
     },
     {
-      "source": "/:p(nl|start|achtergrond|pers|vriendenloterij-opzeggen|bedrijven|dossiers|werkwijze|privacy|reactie-wissen|afmelden|incassokosten-berekenen|fotoclaims-verdienmodel)",
+      "source": "/:p(nl|start|achtergrond|pers|vriendenloterij-opzeggen|bedrijven|dossiers|werkwijze|privacy|reactie-wissen|afmelden|incassokosten-berekenen|inzageverzoek|fotoclaims-verdienmodel)",
       "has": [
         {
           "type": "host",
