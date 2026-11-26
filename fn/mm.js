@@ -144,6 +144,12 @@ const cors = res => { res.setHeader('access-control-allow-origin', '*'); res.set
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = String(url.searchParams.get('op') || '').toLowerCase(); const q = k => url.searchParams.get(k);
   // Todayin AI reports only a verified opt-in, with its server-only shared key.
+  if (op === 'ai-welkom') { // You and AI: bevestigde abonnee naar de Mailmind-stroom youandai (26 nov 2026)
+    res.setHeader('cache-control', 'no-store');
+    const { welkom } = await import('../lib/youandai-stroom.js');
+    const r = await welkom({ method: req.method, authorization: req.headers.authorization, body: leesJson(req.body), secret: process.env.CLICKMIND_AI_SECRET });
+    return res.status(r.status).json(r.body);
+  }
   if (op === 'ai-confirm') {
     res.setHeader('cache-control', 'no-store');
     const { confirmAIOptin } = await import('../lib/ai-confirm.js');
