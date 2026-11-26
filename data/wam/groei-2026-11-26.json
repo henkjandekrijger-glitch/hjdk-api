@@ -1,0 +1,165 @@
+{
+  "dag": "2026-11-26",
+  "tijdzone": "America/Curacao",
+  "doel": {
+    "datum": "2026-12-31",
+    "organischeBezoekenPerDag": 1000
+  },
+  "bron": "Clickmind op=dgroei",
+  "dagen": [
+    {
+      "dag": "2026-11-19",
+      "volledig": false,
+      "bezoeken": 28,
+      "paginaWeergaven": 28,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 28,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-20",
+      "volledig": false,
+      "bezoeken": 22,
+      "paginaWeergaven": 23,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 22,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-21",
+      "volledig": false,
+      "bezoeken": 26,
+      "paginaWeergaven": 28,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 26,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-22",
+      "volledig": false,
+      "bezoeken": 14,
+      "paginaWeergaven": 16,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 14,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-23",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 13,
+      "botWeergaven": 1,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-24",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 12,
+      "botWeergaven": 14,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-25",
+      "volledig": true,
+      "bezoeken": 315,
+      "paginaWeergaven": 482,
+      "botWeergaven": 125,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 310,
+        "verwijzing": 1,
+        "directOnbekend": 4,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "modal|samen": 1
+      }
+    }
+  ],
+  "volledigeDagen": 1,
+  "zevenDagenOrganisch": null,
+  "volledigGemetenOrganischGemiddelde": 0,
+  "organischeAanmeldratio": null,
+  "meetgrens": "Voor 25nov organisch onbekend. Alleen browsers met Clickmind; bots apart.",
+  "ai": {
+    "model": "perplexity/sonar",
+    "scan": "wam-kpn-20261126",
+    "vragen": 1,
+    "gelukt": 0,
+    "fout": "402 A positive credit balance is required",
+    "conclusie": "Hypothese, geen gemeten AI-gat."
+  },
+  "gsc": {
+    "beschikbaar": false,
+    "fout": "geen toegang tot wearemany.now"
+  },
+  "modal": {
+    "basis": "cumulatief, meerdere versies",
+    "vertoningen": 183,
+    "aanmeldingen": 1,
+    "besluit": "Geen winnaar."
+  },
+  "vast": {
+    "ronde": 3,
+    "sinds": "2026-11-26",
+    "volgknopGezien": {
+      "a": 1,
+      "b": 1
+    },
+    "aanmeldingen": 0
+  }
+}
+

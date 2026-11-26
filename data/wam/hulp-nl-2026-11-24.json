@@ -131,6 +131,39 @@
       {"vraag": "Kan ik als ontvanger zelf een klacht indienen bij PostNL?", "antwoord": "Je kunt een bezorgklacht of melding doorgeven via de PostNL-klachtenroute. Het onderzoek naar de zending en de informatie daarover lopen volgens PostNL via de afzender. Zet daarom beide stappen niet op één hoop."},
       {"vraag": "Een webwinkelpakket is niet bezorgd. Moet ik bij PostNL of de verkoper zijn?", "antwoord": "Neem contact op met de verkoper als afzender en vraag die het PostNL-onderzoek te starten. Je kunt daarnaast een bezorgervaring aan PostNL melden, maar dat vervangt het contact met de verkoper niet."}
     ]
+  },
+  "kpn": {
+    "kop": "KPN opzeggen of overstappen?",
+    "seoTitel": "KPN opzeggen: internet, mobiel en overstapservice | WAM",
+    "titel": "Controleer wat je overstap werkelijk beëindigt",
+    "anker": "opzeggen",
+    "bijgewerkt": "2026-11-26",
+    "kort": "De overstapservice voor internet stopt een los mobiel abonnement niet. Controleer de bevestiging per abonnement.",
+    "antwoord": "Gebruik je de overstapservice voor KPN-internet? Dan zegt de nieuwe aanbieder je internetabonnement en de bijbehorende producten op. Een los abonnement voor Mobiel, Digitenne, E-mail of Vast Bellen valt daar volgens KPN buiten. Wil je zelf opzeggen, kies dan op de officiële KPN-opzegpagina het juiste abonnement en log in met je KPN ID.",
+    "actie": {"naam": "Naar de KPN-opzegpagina", "url": "https://www.kpn.com/service/administratie/opzeggen"},
+    "stappenTitel": "Leg eerst deze afspraken vast",
+    "stappen": [
+      "Bekijk de contracteinddatum. Na de vaste looptijd geldt volgens ACM ConsuWijzer maximaal één maand opzegtermijn, vanaf de dag van opzeggen.",
+      "Controleer of de nieuwe aanbieder de overstapservice heeft bevestigd en welke producten daarin staan. Controleer losse abonnementen apart.",
+      "Bewaar de opzegbevestiging met einddatum. Controleer daarin ook of apparatuur terug moet en bewaar je verzendbewijs."
+    ],
+    "routes": [
+      {"situatie": "Zelf stoppen met internet of mobiel", "route": "Kies het passende online formulier bij KPN", "url": "https://www.kpn.com/service/administratie/opzeggen"},
+      {"situatie": "Overstapservice laat oud contract doorlopen", "route": "ACM ConsuWijzer: dubbele rekeningen bij overstappen", "url": "https://consument.acm.nl/vergelijken-en-overstappen/telecom/problemen-overstappen-naar-andere-telecomaanbieder"}
+    ],
+    "extra": {"kop": "Dubbele rekening na een mislukte overstap", "tekst": "Heeft de nieuwe aanbieder beloofd op te zeggen maar dat niet gedaan? ACM ConsuWijzer adviseert dan zelf het oude abonnement zo snel mogelijk te stoppen. Volgens de toezichthouder blijft de oude rekening verschuldigd en moet de nieuwe aanbieder de extra kosten vergoeden. Bewaar de overstapafspraak en beide facturen; de precieze situatie moet wel bij deze uitleg passen."},
+    "noot": "Deze uitleg geldt voor consumenten. Binnen de vaste looptijd kunnen beëindigingskosten gelden. Bij storingen of gewijzigde voorwaarden gelden andere regels. Een prijsstijging of dubbele factuur bewijst op zichzelf geen recht op kosteloos stoppen.",
+    "bronnen": [
+      {"naam": "KPN: abonnement opzeggen", "url": "https://www.kpn.com/service/administratie/opzeggen", "uitleg": "Online routes, overstapservice, losse abonnementen en apparatuur. Officiële paginainhoud via de zoekindex gelezen; het formulier achter inloggen is niet doorlopen."},
+      {"naam": "ACM ConsuWijzer: telecomabonnement opzeggen", "url": "https://consument.acm.nl/telefoon-internet-en-televisie/abonnementen/wanneer-abonnement-opzeggen", "uitleg": "Vaste looptijd, ingangsdag van de opzegtermijn, schriftelijk opzeggen en bevestiging."},
+      {"naam": "ACM ConsuWijzer: problemen bij overstappen", "url": "https://consument.acm.nl/vergelijken-en-overstappen/telecom/problemen-overstappen-naar-andere-telecomaanbieder", "uitleg": "Wat je doet als de beloofde opzegging uitblijft en er dubbele rekeningen komen."}
+    ],
+    "vragen": [
+      {"vraag": "Stopt mijn losse KPN-mobielabonnement als ik internet overstap?", "antwoord": "Nee. KPN noemt een los mobiel abonnement als uitzondering op de overstapservice voor internet. Controleer apart wat je met je mobiele abonnement wilt doen."},
+      {"vraag": "Moet ik wachten tot het einde van de maand om KPN op te zeggen?", "antwoord": "Na de vaste looptijd kun je volgens ACM ConsuWijzer op ieder moment opzeggen met maximaal één maand opzegtermijn. Die begint direct op de opzegdag. Binnen de vaste looptijd kunnen andere afspraken en kosten gelden."},
+      {"vraag": "Wie spreek ik aan als de overstapservice mijn oude abonnement niet stopte?", "antwoord": "Vraag de nieuwe aanbieder om herstel van de beloofde overstap en vergoeding van de extra kosten. ACM ConsuWijzer adviseert ook zelf het oude abonnement snel op te zeggen om verdere kosten te beperken. Bewaar de afspraak en de facturen."}
+    ]
   }
 }
+
 
