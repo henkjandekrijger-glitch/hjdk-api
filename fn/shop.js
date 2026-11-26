@@ -1747,6 +1747,9 @@ export default async function handler(req, res) {
         const soort = it => /sierad|ketting|oorbel|armband|ring\b|hoops|creol|bedel|horloge/i.test((it.c || '') + ' ' + it.t) ? 'sier' : /wonen|keuken/.test(it.c || '') ? 'wonen' : '';
         const lijst = cat.items.filter(it => soort(it) && it.img).map(it => ({ id: it.id, soort: soort(it), titel: String(it.t).slice(0, 60), vert: (pr[it.id] || {}).v || 0, kliks: (pr[it.id] || {}).k || 0, marge: it.mg })).sort((a, b) => b.vert - a.vert);
         return res.status(200).json({ ok: true, van: c && c.van, tot: c && c.tot, sier: lijst.filter(x => x.soort === 'sier').slice(0, 24), wonen: lijst.filter(x => x.soort === 'wonen').slice(0, 24) }); }
+      if (url.searchParams.get('check') === '1') { // 26 nov: wat Merchant Center nu per testproduct heeft (hoofdfoto, status per kanaal, meldingen)
+        const ids = [...FOTOTEST.paren.map(p => p.t), ...DRAAGTEST.paren.map(p => p.t)].concat(String(url.searchParams.get('ids') || '').split(',').map(x => x.trim()).filter(x => /^oc_[\w-]+$/.test(x))).slice(0, 30);
+        return res.status(200).json(await M.productCheck(tk, '5876502305', ids, new Date(Date.now() - 2 * 864e5).toISOString().slice(0, 10))); }
       const dagen = Math.max(1, Math.min(60, Math.round((Date.now() - Date.parse(FOTOTEST.start + 'T00:00:00Z')) / 864e5)));
       const pr = await vg(() => M.prestaties(tk, '5876502305', dagen)) || { producten: {} }; const som = {}; for (const [id, o] of Object.entries(pr.producten || {})) { const b = String(id).split('-')[0]; const x = som[b] || (som[b] = { v: 0, k: 0 }); x.v += (o.gv || 0) + (o.bv || 0); x.k += (o.gk || 0) + (o.bk || 0); }
       let orders = []; await vg(async () => { const fe = await kv.get('hjdk:shop:lusfeed'); orders = ((fe && fe.orders) || []).filter(o => /paid|betaald/i.test(o.s) && Date.parse(o.at) >= Date.parse(FOTOTEST.start)); });
