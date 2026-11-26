@@ -339,6 +339,10 @@
     {
       "path": "/api/videomind?op=ronde",
       "schedule": "19 */6 * * *"
+    },
+    {
+      "path": "/api/mm?op=buiten&run=1",
+      "schedule": "41 6 * * *"
     }
   ],
   "rewrites": [
