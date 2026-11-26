@@ -18,3 +18,14 @@ const vo=O.ovOpvallend(s); ok(vo&&/voorstel/.test(vo.tekst),'opvallend voorstel'
 s=await O.ovStand(kv,14,Date.now()+30*36e5); ok(s.status==='te laat'&&O.ovOpvallend(s).zwaar===50,'te laat '+s.status);
 ok(O.REGELS.every(r=>!/[—–]/.test(r)),'regels zonder streepjes');
 console.log(process.exitCode?'test-oversight FOUT':'test-oversight ok');
+// kosten
+const m2=new Map(); const kv2={get:async k=>m2.get(k)??null,set:async(k,v)=>{m2.set(k,JSON.parse(JSON.stringify(v)))}};
+let k=await O.ovStand(kv2); ok(k.kosten.status==='nooit','kosten nooit');
+const gis=new Date(Date.now()-864e5).toISOString().slice(0,10);
+ok((await O.zetOversight(kv2,{kosten:{dag:gis,totaal:12.5,posten:{'Build CPU Minutes':4.1,'Function Storage':1.6,'Fast Origin Transfer':1.4},ai:{totaal:0.8,projecten:{'hjdk-api':0.8}},lekken:['builds hjdk-api 40 per dag']}})).ok,'kosten zet');
+k=await O.ovStand(kv2); ok(k.kosten.status==='te duur'&&/Build CPU Minutes \$4,10/.test(k.kosten.zin)&&/AI Gateway \$0,80/.test(k.kosten.zin),'te duur '+k.kosten.zin);
+const ko=O.ovOpvallend(k); ok(ko&&(ko.id==='kosten'||ko.zwaar>=40),'opvallend kosten of zwaarder');
+const hk=O.ovHtml(k,D.CSS); ok(hk.includes('Kosten Vercel')&&hk.includes('builds hjdk-api')&&!/[—–]/.test(hk),'kosten html');
+ok(O.ovTekst(k).includes('KOSTEN VERCEL: te duur')&&O.ovTekst(k).includes('2 Claude-accounts'),'kosten tekst');
+ok((await O.zetOversight(kv2,{kosten:{dag:gis,totaal:8.2,posten:{}}})).ok&&(await O.ovStand(kv2)).kosten.status==='ok','kosten ok');
+console.log(process.exitCode?'test-oversight kosten FOUT':'test-oversight kosten ok');
