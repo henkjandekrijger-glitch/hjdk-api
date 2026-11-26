@@ -1405,5 +1405,113 @@
     "No campaigns/payments/bio/settings/ads/Telegram/outreach changed.",
     "Querycache retrieved once; costfieldhistoricalnotnewcharge.",
     "No providerwindow/organicclickdefinition restored by this run."
+  ],
+  "additions": [
+    {
+      "observed_at_utc": "2026-11-26T11:38:15.395Z",
+      "round": "interactive_status",
+      "trigger": "Henkjan: Wat is statits ? Ik zie geen verkeer .",
+      "traffic": {
+        "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+        "period": "2026-11-25 UTC",
+        "stocking_registered_page_openings": 13,
+        "previous_stocking": 42,
+        "lc_registered_page_openings": 3,
+        "previous_lc": 5,
+        "organic_growth_proven": false
+      },
+      "google_query_evidence": {
+        "source": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers",
+        "retrieved_at": "Thu, 26 Nov 2026 11:37:22 GMT",
+        "response": {
+          "ok": true,
+          "ververst": null,
+          "site": "bookstuffers",
+          "dagen": 28,
+          "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+          "perDag": [
+            {
+              "dag": "2026-11-25",
+              "zoekvragen": 4,
+              "imp": 4,
+              "kliks": 0
+            }
+          ],
+          "zoekvragen": [
+            {
+              "q": "play white elephant",
+              "imp": 1,
+              "kliks": 0,
+              "pos": 83,
+              "eerst": "2026-11-25",
+              "laatst": "2026-11-25",
+              "paginas": [
+                "/white-elephant-rules"
+              ]
+            },
+            {
+              "q": "random name generator for secret santa",
+              "imp": 1,
+              "kliks": 0,
+              "pos": 38,
+              "eerst": "2026-11-25",
+              "laatst": "2026-11-25",
+              "paginas": [
+                "/secret-santa-generator"
+              ]
+            },
+            {
+              "q": "white elephant game",
+              "imp": 1,
+              "kliks": 0,
+              "pos": 95,
+              "eerst": "2026-11-25",
+              "laatst": "2026-11-25",
+              "paginas": [
+                "/white-elephant-rules"
+              ]
+            },
+            {
+              "q": "white elephant rules",
+              "imp": 1,
+              "kliks": 0,
+              "pos": 86,
+              "eerst": "2026-11-25",
+              "laatst": "2026-11-25",
+              "paginas": [
+                "/white-elephant-rules"
+              ]
+            }
+          ],
+          "aantal": 4
+        },
+        "definition": "Search Console query rows for25nov:4impressions0clicks. Not full site totals, low exposure and one-day positions not robust trends.",
+        "site_cache_disagrees": "ZICHT gsc site cache says0/0; don't reconcile to a fabricated total. Prefer dated query rows for this limited observation."
+      },
+      "index": {
+        "source": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=bookstuffers",
+        "state_day": "2026-11-25",
+        "indexed": 13,
+        "sitemap": 17,
+        "not_traffic": true
+      },
+      "provider_error": {
+        "first_observed_status_day": "2026-11-26",
+        "source": "ZICHT stand bothsites",
+        "error": "perplexity/sonar402positivecreditbalancerequired",
+        "successful_requests": 0,
+        "valid_citation_result": null,
+        "no_retry_or_balance_change": true,
+        "no_traffic_inference": true
+      },
+      "publication": {
+        "lc_live": 3,
+        "lc_concepts": 2,
+        "nov25batch_new_previews_not_posted": true,
+        "previous_approved_wordsearch_and_men_already_posted": true
+      },
+      "lesson": "Traffic volume is down. First datedGooglequerysignals exist but are tiny and positions38/83/86/95. No claim that pins or more articles have deliveredgrowth; emphasize existing-page discovery and reliableoutbound attribution. Record separatepublisherduplication as knownexecutionleak.",
+      "live_changes_this_status": []
+    }
   ]
 }
