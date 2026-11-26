@@ -1740,7 +1740,7 @@ export default async function handler(req, res) {
       }
       const { token } = await import('../lib/gsc.js'); const M = await import('../lib/merchant.js');
       const tk = await token(String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || ''), 'https://www.googleapis.com/auth/content');
-      if (url.searchParams.get('zet') === '1') return res.status(200).json(await M.labelBron(tk, '5876502305', { uri: 'https://go.kadoly.com/api/shop/gmcbeeld.csv', naam: 'Kadoly fototest' }));
+      if (url.searchParams.get('zet') === '1') return res.status(200).json(await M.labelBron(tk, '5876502305', { uri: 'https://go.kadoly.com/api/shop/gmcbeeld.csv', naam: 'Kadoly fototest', voorop: true }));
       const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i]));
       if (url.searchParams.get('kies') === '1') { // kandidaten: sieraden en wonen met de meeste vertoningen in Google (14 dagen)
         const c = await kv.get('hjdk:shop:mcprest3').catch(() => null); const pr = {}; for (const [id, o] of Object.entries((c && c.p) || {})) { const b = String(id).split('-')[0]; const x = pr[b] || (pr[b] = { v: 0, k: 0 }); x.v += (o.gv || 0) + (o.bv || 0); x.k += (o.gk || 0) + (o.bk || 0); }
