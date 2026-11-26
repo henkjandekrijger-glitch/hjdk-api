@@ -1563,6 +1563,36 @@
       "destination": "/api/keuze-tools?tool=voorkant&market=de"
     },
     {
+      "source": "/x/m/:t([A-Za-z0-9]+)/:w(r|x)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater|keuzehulp)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=extra&b=m&t=:t&w=:w"
+    },
+    {
+      "source": "/x/:b([a-z0-9-]+)/:w(bonus)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater|keuzehulp)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=extra&b=:b&w=:w"
+    },
+    {
+      "source": "/x/:b([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater|keuzehulp)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=extra&b=:b"
+    },
+    {
       "source": "/r/:b([a-z0-9-]+)",
       "has": [
         {

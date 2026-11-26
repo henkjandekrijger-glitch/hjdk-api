@@ -217,14 +217,31 @@ export default async function handler(req, res) {
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
   }
   if (op === 'rev') { // QR achterin de KDP-boeken (/r/<boek>) -> reviewscherm op Amazon; telt scans per boek per dag. Zonder ASIN: zoeken op Amazon (Henkjan 21 nov 2026: "Je kunt boeken bijna weggeven vr reviews . Vind een strategie daarvoor .")
-    const REV = { wtt: ['com', 'B0HRFY3TLB'], men: ['com', 'B0HRGNJ7CY'], teens: ['com', 'B0DJQLBM75'], advent: ['de', 'B0HRRCXTNV'], echtjetzt: ['de', 'B0HSM3KSBN'], momentmal: ['de', 'B0HRY6CYMD'], buero: ['de', '', 'Ich tu nur so als ob David Warrior'], apo: ['com', 'B0DDBTXC9J'] };
+    // Sinds 26 nov 2026 (Henkjan: "Nee we doen alles zelf . Dus maak werkend mechanisme in de boeken.") in lib/kdpreview.js: naar de Amazon van het land
+    // van de lezer, telling per boek, plek (?p=) en land. Boeken en ASIN's staan daar in BOEKEN.
+    const R = await import('../lib/kdpreview.js');
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
-    if (q.get('stand')) { let h = []; try { h = (await kv.raw(['HGETALL', 'kdp:rev'])) || []; } catch (e) {} const o = {}; if (Array.isArray(h)) for (let i = 0; i < h.length; i += 2) o[h[i]] = Number(h[i + 1]); else Object.assign(o, h); return res.status(200).json({ ok: true, scans: o, boeken: REV }); }
-    const b = String(q.get('b') || '').toLowerCase(); const r = REV[b];
-    if (r) { try { await kv.raw(['HINCRBY', 'kdp:rev', b + ':' + new Date().toISOString().slice(0, 10), 1]); } catch (e) {} }
-    const dom = 'https://www.amazon.' + (r ? r[0] : 'com');
-    res.setHeader('location', !r ? dom + '/' : r[1] ? dom + '/review/create-review?asin=' + r[1] : dom + '/s?k=' + encodeURIComponent(r[2]) + '&i=stripbooks');
+    if (q.get('stand')) return res.status(200).json(await R.stand());
+    const b = String(q.get('b') || '').toLowerCase(), land = String(req.headers['x-vercel-ip-country'] || '');
+    await R.tel(b, q.get('p'), land, req.headers['user-agent']);
+    res.setHeader('location', R.reviewUrl(b, land));
     return res.status(302).end();
+  }
+  if (op === 'extra') { // bonus bij een KDP-boek (/x/<boek>, /x/<boek>/bonus) en kliks uit de reviewmail (/x/m/<tok>/<r|x>), lib/kdpreview.js
+    const R = await import('../lib/kdpreview.js'); const b = String(q.get('b') || '').toLowerCase(), w = String(q.get('w') || ''), land = String(req.headers['x-vercel-ip-country'] || ''), ua = req.headers['user-agent'];
+    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+    const html = h => { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(h ? 200 : 404).send(h || 'Not found'); };
+    if (b === 'm') { const k = await R.mailKlik(String(q.get('t') || ''), w, ua, req.method); if (k.afgemeld) return html(R.afgemeldPagina()); res.setHeader('location', k.naar); return res.status(302).end(); }
+    if (req.method === 'POST') {
+      let body = req.body; if (typeof body === 'string') { try { body = JSON.parse(body); } catch (e) { body = Object.fromEntries(new URLSearchParams(body)); } }
+      body = body || {}; if (body.naam) return res.status(200).json({ ok: true, bonus: R.bonusPad(b) }); // honingpot: bot krijgt niets opgeslagen
+      const u = await R.aanmelden({ b, email: body.email, land, plek: body.p, ua });
+      if (/json/.test(String(req.headers.accept || ''))) return res.status(u.ok ? 200 : 400).json(u);
+      res.setHeader('location', u.ok ? u.bonus : '/x/' + b); return res.status(303).end();
+    }
+    if (w === 'bonus') return html(R.bonusPagina(b));
+    await R.tel(b, 'x' + (q.get('p') || 'boek'), land, ua); // x... telt als bonusbezoek, niet als reviewscan
+    return html(R.extraPagina(b));
   }
   if (op === 'kdpoverdracht') { // overdracht KDP-boeken voor een ander account of andere chat (Henkjan 19 nov 2026: "Zet handover op vercel zodat ander account kan overnemen .")
     const host = String(req.headers['x-forwarded-host'] || req.headers.host || ''); if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');

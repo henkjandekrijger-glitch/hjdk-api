@@ -98,6 +98,8 @@ def checkin(c, links, n, voorbeeld=False):
     return yT
 
 
+REVIEW = 'https://whichtobuy.best/r/lc?p=achter'  # reviewformulier op de Amazon van het land van de lezer, telt scans (lib/kdpreview.js; 26 nov 2026)
+BONUS = 'https://whichtobuy.best/x/lc?p=tracker'  # printbare restart kit, zonder voorwaarde (lib/kdpreview.js)
 ASK = 'https://wa.me/31655395630?text=Dear%20John%2C%20I%20am%20a%20reader%20and%20have%20a%20question.'  # direct naar WhatsApp, met de tekst die Henkjan wil zien
 
 
@@ -115,14 +117,14 @@ def qr(c, x, y, maat, url):
                 c.rect(x + (k + 2) * mod, y - (r + 3) * mod, mod, mod, stroke=0, fill=1)
 
 
-def qr_blok(c, x, y, w, bron, kop, t, maat=66):
+def qr_blok(c, x, y, w, bron, kop, t, maat=66, url=ASK):
     """Vak met QR links en uitleg rechts; y = bovenkant. Geeft de onderkant terug."""
     h = maat + 12
     c.setFillColor(VLAK)
     c.roundRect(x, y - h, w, h, 6, stroke=0, fill=1)
     c.setFillColor(white)
     c.rect(x + 6, y - 6 - maat, maat, maat, stroke=0, fill=1)
-    qr(c, x + 6, y - 6, maat, ASK)
+    qr(c, x + 6, y - 6, maat, url)
     tx = x + maat + 18
     c.setFillColor(black)
     c.setFont('PopB', 10.5)
@@ -719,7 +721,7 @@ def tracker(c, nr):
     y -= 16
     kol = 6
     vak = w / kol
-    hv = min(vak * 0.8, (y - ONDER - 40) / 9)
+    hv = min(vak * 0.8, (y - ONDER - 40 - 92) / 9)  # ruimte onderaan voor de bonus-QR (26 nov 2026)
     for i in range(54):
         r, k = divmod(i, kol)
         bx = x0 + k * vak
@@ -741,6 +743,7 @@ def tracker(c, nr):
     c.setFillColor(GRIJS)
     c.drawString(x0, yy, 'Day 120 is the bold box. By then this is simply who you are.')
     c.setFillColor(black)
+    qr_blok(c, x0, ONDER + 84, w, 'bonus', 'Want fresh copies of this tracker?', 'Scan for the free printable restart kit: tracker, weekly reset and habit plan.', maat=60, url=BONUS)
     paginanummer(c, nr)
 
 
@@ -838,11 +841,12 @@ def nawoord(c, nr):
     y -= 30
     for t in ['Most people who buy a workbook never fill in a single page. You did. Whether you ticked all 30 days or 13 of them, you now know how to make a habit small enough to start, strong enough for bad days and personal enough to keep.',
               'Use the one-page plans for your next habit, and the bad-day card whenever you need it. And come back to this book next year. Your Day 0 page will make you smile.',
-              'If this workbook helped you, an honest review on Amazon helps other readers decide whether it is right for them. Thank you for reading, and for doing.']:
+              'Whether this workbook helped you or not, an honest review on Amazon helps other readers decide whether it is right for them. Thank you for reading, and for doing.']:
         y = tekst(c, t, x0, y, w, s=10.8, lead=15) - 10
     y -= 8
     c.setFont('PopM', 11)
     c.drawString(x0, y, 'John Warrior')
+    qr_blok(c, x0, ONDER + 182, w, 'review', 'Write an honest review', 'Scan to open the review page on Amazon in your country. One sentence is enough.', url=REVIEW)
     qr_blok(c, x0, ONDER + 92, w, 'eind', 'Questions, wins, your certificate?', 'Scan to send them to me on WhatsApp. I read every message and answer personally.')
     paginanummer(c, nr)
 
