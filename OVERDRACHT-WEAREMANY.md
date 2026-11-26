@@ -220,6 +220,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 26 nov 2026 (Claude, 12:00 UTC, Henkjan "Bij welkom mail ook laten doorsturen ... meten leren wat dat oplevert"): doorstuurlink met r=<tok>, op=dref en ref bij aanmelding, tellers wmn:ref:tel (op=drefstand), aanmelding via doorsturen = ja voor Mailmind; welkomstvariant o3 'Wie ken jij die hier ook mee zit?'.
 - 26 nov 2026 (Claude, 11:45 UTC, Henkjan "Je geeft veel te veel uit" en "Machteloos verdwijnt vind de juiste emotionele snaar"): Machteloos v2 12189888 uit en blijft uit. Voorkant leert nu op emotie (proef wmn ronde 3): vkop nuchter/herkenning/onrecht/hoop, lkop kracht/onrecht/herkenning. Stand 10:50 UTC: $11,12 voor 3 adressen.
 - 26 nov 2026 (Claude, 02:30 UTC, Henkjan "Zorg voor volgers ... maak lerend alles ... empowering ads ... wekelijkse update volledig transparant"): aansluitblok in het eerste scherm van de voorkant (scope algemeen), kop, belofte en knop lerend (proef wmn vkop, lkop, lbelofte, lknop); machteloos-kop weg; stroom wam-week (lib/wam-week.js) elke maandag een open overzicht; toestemming noemt de weekupdate. Doel 26 nov: minstens 10 adressen.
 - 25 nov 2026 (Claude, 20:20 UTC, Henkjan "zorg dat die opzeghulp werkt ... los dit slim op"): opzeghulp met check voor Postcode Loterij en VriendenLoterij. Bezoeker zegt zelf op (online, eigen brief of mail, bellen); met e-mailadres vraagt Mailmind (wam-opzeg) na 7 dagen of het gelukt is. Antwoorden worden dossierdata per loterij.
