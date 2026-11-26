@@ -52,9 +52,14 @@
       ]
     },
     "/dossier/blendle": {
-      "gecontroleerd": "2026-11-25",
-      "gewijzigd": "2026-11-25",
+      "gecontroleerd": "2026-11-26",
+      "gewijzigd": "2026-11-26",
       "wijzigingen": [
+        {
+          "datum": "2026-11-26",
+          "tekst": "Tijdlijn bijgewerkt: op de vraag van 25 november kwam alleen een automatische ticketmelding van Blendle; de termijn loopt tot 2 december. Stand bovenaan met dagen sinds de klacht en het aantal lezers.",
+          "bronnen": []
+        },
         {
           "datum": "2026-11-25",
           "tekst": "Professioneel profiel van Laurent Kayser gekoppeld aan de bestaande bronvermelding over zijn functie.",
