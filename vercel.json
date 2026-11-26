@@ -343,6 +343,10 @@
     {
       "path": "/api/mm?op=buiten&run=1",
       "schedule": "41 6 * * *"
+    },
+    {
+      "path": "/api/mm?op=campagnes&run=1",
+      "schedule": "57 5 * * *"
     }
   ],
   "rewrites": [

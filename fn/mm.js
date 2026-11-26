@@ -196,6 +196,16 @@ export default async function handler(req, res) {
       if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
     }
+    if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
+      const C = await import('../lib/cmcamp.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (q('run') === '1') {
+        const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+        if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+        return res.status(200).json(await C.ronde({ dag: q('dag') }));
+      }
+      if (q('campagne')) return res.status(200).json(await C.campagne(q('campagne'), Number(q('dagen')) || 30));
+      return res.status(200).json(await C.leer({ dagen: Number(q('dagen')) || 14, project: q('project') || '', net: q('net') || '' }));
+    }
     if (op === 'buiten') { // data van buiten per project (lib/buiten.js, Henkjan 26 nov 2026: "data van buiten voor ieder merk en project")
       const B = await import('../lib/buiten.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       if (q('run') === '1') {
