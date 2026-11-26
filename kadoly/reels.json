@@ -780,6 +780,12 @@
           "kliks": 4,
           "echt": 4,
           "mandje": 1
+        },
+        "instagram_36u": {
+          "dag": "2026-11-26",
+          "weergaven": 12,
+          "bereik": 8,
+          "likes": 1
         }
       }
     },
@@ -818,6 +824,11 @@
         "clickmind": {
           "kliks": 5,
           "echt": 1
+        },
+        "instagram_42u": {
+          "dag": "2026-11-26",
+          "weergaven": 8,
+          "bereik": 5
         }
       }
     },
@@ -845,6 +856,13 @@
           "status": "overgeslagen",
           "opm": "Facebook-koppeling verlopen (Meta error 190)"
         }
+      },
+      "gemeten": {
+        "instagram_13u": {
+          "dag": "2026-11-26",
+          "weergaven": 7,
+          "bereik": 2
+        }
       }
     },
     {
@@ -870,6 +888,13 @@
           "status": "overgeslagen",
           "opm": "Facebook-koppeling verlopen (Meta error 190)"
         }
+      },
+      "gemeten": {
+        "instagram_18u": {
+          "dag": "2026-11-26",
+          "weergaven": 4,
+          "bereik": 1
+        }
       }
     },
     {
@@ -884,6 +909,70 @@
       "tekst": "Welke kleur kies jij?\n1. Heren Precision Horloge Bruin Leer Witte Wijzerplaat - Menthe à l'eau (bruin)\n2. Heren Zwarte Leren Horloge Blauwe Wijzerplaat Multifunctioneel - Menthe à l'eau (zwart)\n3. Heren 24-Uur Horloge met Zwart- Oranje NATO Band (oranje)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Menthe à l'eau.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
       "tiktok_tekst": "Welke kleur kies jij: bruin, zwart of oranje? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "n261126a",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261126a.mp4",
+      "pids": [
+        "oc_4174004632076289",
+        "oc_4174004928544769",
+        "oc_4174004739670018"
+      ],
+      "tekst": "3 finds voor een mooie tafel:\n1. Tricolore Bord Elegant Tafelgerei AULICA\n2. Elegante Glazen Saladeschaal met Gouden Rand 23.5cm\n3. Grote Steengoed Schaal Ddoria, Elegante Rustieke Ontwerp van EDDA\nWelke kies jij?\n\nLink in bio, zoek op Kadoly.\n\n#kadoly #servies #tafelstyling #keuken #homedecor",
+      "tiktok_tekst": "3 finds voor een mooie tafel. Welke kies jij? Link in bio. #kadoly #servies #tafelstyling #keuken #homedecor",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-26",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b07f1691b7a9e6f7bde1f6c",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "status": "overgeslagen",
+          "opm": "Facebook-koppeling verlopen (Meta error 190)"
+        }
+      }
+    },
+    {
+      "id": "n261126b",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261126b.mp4",
+      "pids": [
+        "oc_4174003718160386",
+        "oc_4174003728039938",
+        "oc_4174003713294337"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Merino Wol Beddeken Warm Aegean Blauw (blauw)\n2. Merino Cashmere Roze Plaid van MoST Blankets (roze)\n3. Merino Wol Beddeken Blad Oker 140x200 cm, MoST Dekens (oker)\nZet je nummer in de reacties.\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "Welke kleur kies jij: blauw, roze of oker? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261126c",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261126c.mp4",
+      "pids": [
+        "oc_4254789982339073",
+        "oc_4254789995986945",
+        "oc_4254789983535105"
+      ],
+      "tekst": "3 favorieten van GLAM & GLORY Jewels made with love:\n1. Bloom Ketting met Mini Pareltjes, 18k Goud Verguld\n2. Sterling Zilveren Earcuff met Zirkonia Steentjes van GLAM & GLORY\n3. Dromerige Zirkonia Oorbellen, Sterling Zilver, 2.5cm - GLAM & GLORY\nWelke kies jij?\n\nLink in bio, zoek op GLAM & GLORY Jewels made with love.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "3 favorieten van GLAM & GLORY Jewels made with love. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-26",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b07f16a6ef5c90ebda68972",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "opm": "hashtags vervangen door #kadoly #sieraden #zilver #oorbellen, 'zoek op GLAM & GLORY'"
+        },
+        "facebook": {
+          "status": "overgeslagen",
+          "opm": "Facebook-koppeling verlopen (Meta error 190)"
+        }
+      }
     }
   ],
   "lerend": {
@@ -929,7 +1018,8 @@
       "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
       "2026-11-23: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261118c (finds, planten; finds gaf met kerstfinds het eerste Clickmind-mandje via een video) en 21:00 n261118a (set, Housevitamin kerst; set heeft 12 Clickmind-kliks over 4 video's en 21:00 gaf de meeste IG-weergaven: steenlampen 20, n261119a 5 kliks). IG-weergaven per video: set 6,8, pov 12 (1 video), kleurkeuze 1,5. FB-reels 2 tot 8 weergaven. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
       "2026-11-24: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261124c (finds, in huis; finds heeft het enige Clickmind-mandje via video, kerstfinds) en 21:00 n261124b (set, Green-goose sokken: past bij schoencadeautjes uit de voorrang van het groei-account; set nu 16 Clickmind-kliks, 4 echt). Weergaven per video blijven 1 tot 10 (kerstfinds FB 10, IG 3); te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261124a horloges overgeslagen: hashtags passen niet).",
-      "2026-11-25: Facebook-koppeling in Zernio verlopen (Meta error 190 sinds 24 nov 23:34 UTC), dus vandaag alleen Instagram: 08:30 al voorbij (ronde 09:42 NL), 15:30 n261125b (finds, muurdecoratie Housevitamin) en 21:00 n261125a (set, LanLivia zilveren sieraden; set wint op Clickmind: n261124b sokken 4 echt en 1 mandje, n261118a 2 echt). IG-weergaven per video blijven 3 tot 5; te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261125a-c)."
+      "2026-11-25: Facebook-koppeling in Zernio verlopen (Meta error 190 sinds 24 nov 23:34 UTC), dus vandaag alleen Instagram: 08:30 al voorbij (ronde 09:42 NL), 15:30 n261125b (finds, muurdecoratie Housevitamin) en 21:00 n261125a (set, LanLivia zilveren sieraden; set wint op Clickmind: n261124b sokken 4 echt en 1 mandje, n261118a 2 echt). IG-weergaven per video blijven 3 tot 5; te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261125a-c).",
+      "2026-11-26: 08:30 al voorbij (ronde 09:44 NL), dus 2 op Instagram: 15:30 n261126a (finds, tafel; past bij kerstdiner) en 21:00 n261126c (set, GLAM & GLORY sieraden; set is de beste soort: n261124b Green-goose 4 echt, 1 mandje, 12 IG-weergaven, en 21:00 geeft de meeste weergaven). Facebook nog verlopen, YouTube niet gekoppeld. IG-weergaven 25 nov laag: n261125a 7, n261125b 4. 3 nieuwe video's uit kadoly-video toegevoegd."
     ]
   }
 }

@@ -7,7 +7,7 @@
       "pagina_id": "61596079596846",
       "account_id": "6afafaf7446856cecd87324f",
       "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)",
-      "status": "2026-11-25: Zernio meldt token ongeldig (Meta error 190) sinds 24 nov 23:34 UTC, needsReconnect; Henkjan moet opnieuw koppelen"
+      "status": "2026-11-26: nog steeds token ongeldig (Meta error 190) sinds 24 nov 23:34 UTC, needsReconnect; Henkjan moet opnieuw koppelen"
     },
     "instagram": {
       "handle": "kadoly.shop",
@@ -27,6 +27,9 @@
         "Hobby en creatief": "271060540011940610"
       },
       "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
+    },
+    "youtube": {
+      "status": "2026-11-26: niet in Zernio-profiel Kadoly"
     }
   },
   "lerend": {
@@ -43,7 +46,8 @@
     ],
     "besluiten": [
       "2026-11-24: Pinterest 3 pins volgens rotatie en de voorrang van het groei-account (kerst en schoencadeautjes): 11:00 wonen gouden kerstboom Mica (13 mandjes), 15:00 nieuw schoenzetmat rond Label2X, 19:45 sieraad moissanite kerstboomketting. Pinterest-pins blijven zonder bereik in Zernio; Clickmind pinterest 3 kliks totaal, facebook 39 kliks, 13 echt, 2 mandjes (cumulatief sinds 16 nov). Nog steeds pins van een ander project (White elephant, stocking stuffer) op het Kadoly-Pinterestaccount op 22 en 23 nov.",
-      "2026-11-25: Pinterest 3 pins volgens rotatie en voorrang (schoencadeautjes, kerst): 11:00 mandje kurken portemonnee Delfts blauw green-goose (8 mandjes), 15:00 wonen metalen kerststal Rostikal (3 mandjes, 238 echt), 19:45 nieuw rieten serveertray Soeji (26% tikken). Pinterest-pins blijven 0 in Zernio; Clickmind pinterest 3 kliks totaal, facebook 48 kliks, 18 echt, 2 acties, 3 mandjes (cumulatief sinds 16 nov). Facebook-koppeling verlopen: vandaag niets op Facebook."
+      "2026-11-25: Pinterest 3 pins volgens rotatie en voorrang (schoencadeautjes, kerst): 11:00 mandje kurken portemonnee Delfts blauw green-goose (8 mandjes), 15:00 wonen metalen kerststal Rostikal (3 mandjes, 238 echt), 19:45 nieuw rieten serveertray Soeji (26% tikken). Pinterest-pins blijven 0 in Zernio; Clickmind pinterest 3 kliks totaal, facebook 48 kliks, 18 echt, 2 acties, 3 mandjes (cumulatief sinds 16 nov). Facebook-koppeling verlopen: vandaag niets op Facebook.",
+      "2026-11-26: Pinterest 3 pins volgens rotatie en voorrang (schoencadeautjes, kerst): 11:00 sieraad Polly parel hoops GLAM & GLORY (1 mandje, 63 echt), 15:00 mandje Sinterklaas schoenzetmat XL Label2X (4 mandjes, 127 echt), 19:45 wonen Bethlehem-kaarsenhouder Rostikal (1 mandje, 39 echt). Clickmind cumulatief: facebook 48 kliks, 18 echt, 2 acties, 3 mandjes; pinterest 3 kliks. Facebook-koppeling nog verlopen: niets op Facebook."
     ],
     "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad",
     "notities": [
@@ -739,6 +743,45 @@
       "status": "gepland",
       "bord": "Wonen en decoratie",
       "code": "pin-1125-nieuw"
+    },
+    {
+      "tijd": "2026-11-26T10:00:00Z",
+      "dag": "2026-11-26",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4254790012796929",
+      "tijdvak": "11:00",
+      "via": "zernio",
+      "zernio_id": "6b07f17b1b7a9e6f7bde1fcd",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1126-sieraad"
+    },
+    {
+      "tijd": "2026-11-26T14:00:00Z",
+      "dag": "2026-11-26",
+      "platform": "pinterest",
+      "soort": "mandje",
+      "pid": "oc_4174004652687361",
+      "tijdvak": "15:00",
+      "via": "zernio",
+      "zernio_id": "6b07f17c1b7a9e6f7bde1fd3",
+      "status": "gepland",
+      "bord": "Cadeau-ideeën",
+      "code": "pin-1126-mandje"
+    },
+    {
+      "tijd": "2026-11-26T18:45:00Z",
+      "dag": "2026-11-26",
+      "platform": "pinterest",
+      "soort": "wonen",
+      "pid": "oc_4174003619020802",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6b07f17d6ef5c90ebda689f9",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1126-wonen"
     }
   ]
 }
