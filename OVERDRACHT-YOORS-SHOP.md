@@ -180,6 +180,8 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 26 nov 2026 11:50 UTC (Henkjan: "Los op !! Zorg voor campagne die veel beter converteert naar adressen !"): op de winactiepagina is PropellerAds doel 1 nu de aanmelding met e-mailadres (winAanmeld, rec.w), de eerste aanraking gaat als doel 2. CPA-doel van 12190717, 12190844 en 12190846 van $0,01 naar $0,50 per adres (was per aanraking, daardoor ~12 bezoekers per uur). Controle: elk uur; $5 zonder adres op een campagne = doel terug naar $0,25.
+
 - 26 nov 2026 06:35 UTC (pa-uurcontrole): nieuwe winactie-campagnes, alleen iOS en 07:00-22:00 UTC (08:00-23:00 NL), ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
 0/dag, totaal $30: 12190844 SIERADEN Polly (clone 12186821), 12190846 PAKKET Bureau set (clone 12186814), plus 12190717 WONEN Tafelhaard (al goedgekeurd). Oude 12186810, -13, -14, -16, -18, -21 blijven uit (Henkjan 25 nov: nacht in NL werkt niet).
