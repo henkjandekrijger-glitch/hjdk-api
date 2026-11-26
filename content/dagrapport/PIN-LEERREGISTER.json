@@ -5,7 +5,7 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-26T03:40:11.761Z",
+  "updated_at_utc": "2026-11-26T13:39:08.783Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
@@ -97,18 +97,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": false,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 73.5,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 91.4,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -179,18 +194,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": false,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 73.5,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 91.4,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -269,18 +299,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 2,
+            "saves": 1,
+            "imp": 5
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 73.5,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 91.4,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -359,18 +408,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 5
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 73.5,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 91.4,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -449,18 +517,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 72.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 90,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -539,18 +626,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 7
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 72.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 90,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -629,18 +735,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 7
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 72.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 90,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -719,18 +844,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 72.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 90,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -809,18 +953,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 4
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 48.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 66,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -907,18 +1070,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 48.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 66,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1005,18 +1187,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 48.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 66,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1095,18 +1296,37 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 2
+          },
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 48.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 66,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1173,18 +1393,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 24.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 42,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1251,18 +1486,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 24.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 42,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1329,18 +1579,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 24.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 42,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1407,18 +1672,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 24.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 42,
         "basis": "registration_not_exact_publication"
       }
     },
@@ -1493,18 +1773,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 22.8,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 40.8,
         "basis": "verified_publication_minute"
       }
     },
@@ -1579,18 +1874,33 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26",
+      "next_observation_curacao": "2026-11-27",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 22.8,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 40.7,
         "basis": "verified_publication_minute"
       }
     },
@@ -1632,21 +1942,36 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 0.1,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 18,
         "basis": "registration_not_exact_publication"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26"
+      "next_observation_curacao": "2026-11-27"
     },
     {
       "id": "20261125-we-dad-syxw",
@@ -1686,21 +2011,36 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 0,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 18,
         "basis": "registration_not_exact_publication"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26"
+      "next_observation_curacao": "2026-11-27"
     },
     {
       "id": "20261125-apo-14-xc9j",
@@ -1740,21 +2080,36 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 0,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 18,
         "basis": "registration_not_exact_publication"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26"
+      "next_observation_curacao": "2026-11-27"
     },
     {
       "id": "20261125-sok-hem-syxw",
@@ -1794,21 +2149,36 @@
           "definition": null,
           "website_per_pin_openings": null,
           "reason": "Secondary internal metrics still lack provider window and verified organicoutbound definition. No new pinuitkomst or winner; preserve prior partial observations."
+        },
+        {
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "round": "morning",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "period": null,
+          "definition": null,
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "website_per_pin_openings": null,
+          "reported_internal_metrics": null,
+          "registration_visible_in_last20": true,
+          "reason": "Internal cache lacks provider window and verified organicoutbound definition. No callable Zernio connector after fresh discovery; no new credentials or alternative provider access used.",
+          "next_measure_action": "Read exact existing provider-post analytics through authorized Zernio access when available; do not resend pin."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
       "age_at_observation": {
-        "at_utc": "2026-11-25T19:43:05.625Z",
-        "hours": 0,
+        "at_utc": "2026-11-26T13:39:08.783Z",
+        "hours": 18,
         "basis": "registration_not_exact_publication"
       },
       "lesson": {
         "status": "insufficient_comparable_data",
-        "evidence": "Valid current provider outcome unavailable; no zero inference.",
-        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "evidence": "Current verified provider impressions/outbound/saves unavailable; cache values not a closed-day result",
+        "next_action": "Keep comparison/control; obtain exact provider window first, assess14to21days with sufficientdata; no repost of sameproduct within14days",
         "traffic_claim": null
       },
-      "next_observation_curacao": "2026-11-26"
+      "next_observation_curacao": "2026-11-27"
     }
   ]
 }

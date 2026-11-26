@@ -1512,6 +1512,1376 @@
       },
       "lesson": "Traffic volume is down. First datedGooglequerysignals exist but are tiny and positions38/83/86/95. No claim that pins or more articles have deliveredgrowth; emphasize existing-page discovery and reliableoutbound attribution. Record separatepublisherduplication as knownexecutionleak.",
       "live_changes_this_status": []
+    },
+    {
+      "observed_at_utc": "2026-11-26T13:39:08.783Z",
+      "round": "morning",
+      "period_utc": {
+        "start": "2026-11-25T00:00:00Z",
+        "end_exclusive": "2026-11-26T00:00:00Z"
+      },
+      "sources": {
+        "/api/bs?op=dagrapport&droog=1": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:44 GMT",
+          "http": 200,
+          "response": {
+            "droog": true,
+            "tekst": "Organisch boeken, 2026-11-25 (UTC)\nstockingbooks.com: 13 geregistreerde pagina-openingen (-29)\nlastingchange.works: 3 geregistreerde pagina-openingen (-2)\nAmazonverzoeken: 23 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 23\nBeste pagina's: stockingbooks.com/ 13, lastingchange.works/ 3\nPinterest: 4 pins geplaatst, 4 kliks, 9 saves; beste kop: enoch-wat\nNieuw LC-artikel: I Wasted Another Year: A Fair Review and One Next Step (zoekvraag 210/mnd) https://lastingchange.works/i-wasted-another-year\nWacht op jouw ok (2): How to Get Your Life Together: A Life Admin Checklist: bekijk https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-get-your-life-together&concept=1 · live zetten https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=how-to-get-your-life-together | How Long Does It Take to Form a Habit? About 66 Days, Not 21: bekijk https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-long-does-it-take-to-form-a-habit&concept=1 · live zetten https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=how-long-does-it-take-to-form-a-habit\n13 pagina's in Google\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+          }
+        },
+        "/api/bs?op=pinstand": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:42 GMT",
+          "http": 200,
+          "response": {
+            "account": "6afb8a5d86e8bb18f844fc95",
+            "haken": [
+              {
+                "id": "we-ruzie",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "we-dad",
+                "pins": 2,
+                "klik": 1,
+                "saves": 1,
+                "imp": 7
+              },
+              {
+                "id": "we-onder10",
+                "pins": 1,
+                "klik": 0,
+                "saves": 1,
+                "imp": 1
+              },
+              {
+                "id": "we-regels",
+                "pins": 1,
+                "klik": 0,
+                "saves": 1,
+                "imp": 6
+              },
+              {
+                "id": "sok-haar",
+                "pins": 1,
+                "klik": 0,
+                "saves": 1,
+                "imp": 7
+              },
+              {
+                "id": "sok-hem",
+                "pins": 2,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "sok-tiener",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "sok-puzzel",
+                "pins": 2,
+                "klik": 0,
+                "saves": 1,
+                "imp": 4
+              },
+              {
+                "id": "ss-gen",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "we-ideeen",
+                "pins": 1,
+                "klik": 0,
+                "saves": 1,
+                "imp": 1
+              },
+              {
+                "id": "sok-gids-haar",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "sok-gids-hem",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "lc-jaar",
+                "pins": 1,
+                "klik": 0,
+                "saves": 1,
+                "imp": 2
+              },
+              {
+                "id": "lc-66",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "lc-stappen",
+                "pins": 1,
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              },
+              {
+                "id": "enoch-wat",
+                "pins": 2,
+                "klik": 2,
+                "saves": 1,
+                "imp": 5
+              },
+              {
+                "id": "apo-14",
+                "pins": 2,
+                "klik": 1,
+                "saves": 1,
+                "imp": 5
+              }
+            ],
+            "laatste": [
+              {
+                "id": "20261122-enoch-wat-79n1",
+                "haak": "enoch-wat",
+                "a": "B0B5KV79N1",
+                "post": "6b03306970f37227beb16166",
+                "t": "2026-11-22T18:12:12.629Z",
+                "m": {
+                  "klik": 2,
+                  "saves": 1,
+                  "imp": 5
+                }
+              },
+              {
+                "id": "20261122-apo-14-xc9j",
+                "haak": "apo-14",
+                "a": "B0DDBTXC9J",
+                "post": "6b03306ec4d17d4a0f103bf2",
+                "t": "2026-11-22T18:12:13.608Z",
+                "m": {
+                  "klik": 1,
+                  "saves": 1,
+                  "imp": 5
+                }
+              },
+              {
+                "id": "20261122-we-ruzie-z3g3",
+                "haak": "we-ruzie",
+                "a": "B0DNDQZ3G3",
+                "post": "6b0344b6783be3b4addd3e43",
+                "t": "2026-11-22T19:38:53.148Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 0,
+                  "imp": 0
+                }
+              },
+              {
+                "id": "20261122-sok-haar-mssk",
+                "haak": "sok-haar",
+                "a": "B0DMR1MSSK",
+                "post": "6b0344ba9978cd4d9a1ca580",
+                "t": "2026-11-22T19:38:54.191Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 1,
+                  "imp": 7
+                }
+              },
+              {
+                "id": "20261122-we-dad-syxw",
+                "haak": "we-dad",
+                "a": "B0DK3CSYXW",
+                "post": "6b0344bf56bdc437db134475",
+                "t": "2026-11-22T19:38:55.293Z",
+                "m": {
+                  "klik": 1,
+                  "saves": 1,
+                  "imp": 7
+                }
+              },
+              {
+                "id": "20261122-sok-gids-hem-1fsp",
+                "haak": "sok-gids-hem",
+                "a": "B0DMP31FSP",
+                "post": "6b0344c49978cd4d9a1ca59e",
+                "t": "2026-11-22T19:38:56.288Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 0,
+                  "imp": 0
+                }
+              },
+              {
+                "id": "20261123-sok-puzzel-prd9",
+                "haak": "sok-puzzel",
+                "a": "B0DN65PRD9",
+                "post": "6b049678d511266d6a856bec",
+                "t": "2026-11-23T19:39:54.871Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 1,
+                  "imp": 4
+                }
+              },
+              {
+                "id": "20261123-we-ideeen-t9jt",
+                "haak": "we-ideeen",
+                "a": "B0DNB1T9JT",
+                "post": "6b04967b5d67d2299ad22eb9",
+                "t": "2026-11-23T19:39:56.079Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 1,
+                  "imp": 1
+                }
+              },
+              {
+                "id": "20261123-we-onder10-fxb1",
+                "haak": "we-onder10",
+                "a": "B0DP42FXB1",
+                "post": "6b04967fd511266d6a856c13",
+                "t": "2026-11-23T19:39:57.187Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 1,
+                  "imp": 1
+                }
+              },
+              {
+                "id": "20261123-lc-jaar-1l5j",
+                "haak": "lc-jaar",
+                "a": "B0F1SM1L5J",
+                "post": "6b049681d511266d6a856c28",
+                "t": "2026-11-23T19:39:58.268Z",
+                "m": {
+                  "klik": 0,
+                  "saves": 1,
+                  "imp": 2
+                }
+              },
+              {
+                "id": "20261124-ss-gen-dhd6",
+                "haak": "ss-gen",
+                "a": "B0DNCLDHD6",
+                "post": "6b05e7df7a6d18398505d60a",
+                "t": "2026-11-24T19:39:35.087Z"
+              },
+              {
+                "id": "20261124-sok-gids-haar-lklt",
+                "haak": "sok-gids-haar",
+                "a": "B0DMNGLKLT",
+                "post": "6b05e7e46cf47dfab007ad2f",
+                "t": "2026-11-24T19:39:37.269Z"
+              },
+              {
+                "id": "20261124-lc-66-1l5j",
+                "haak": "lc-66",
+                "a": "B0F1SM1L5J",
+                "post": "6b05e7e952ad165c265fa790",
+                "t": "2026-11-24T19:39:38.366Z"
+              },
+              {
+                "id": "20261124-lc-stappen-1l5j",
+                "haak": "lc-stappen",
+                "a": "B0F1SM1L5J",
+                "post": "6b05e7ec6cf47dfab007ad4b",
+                "t": "2026-11-24T19:39:39.552Z"
+              },
+              {
+                "id": "20261123-sok-puzzel-1j5t",
+                "haak": "sok-puzzel",
+                "a": "B0DMNK1J5T",
+                "post": "6b05f89c3ea213a32f7d5a66",
+                "t": "2026-11-24T20:58:01.581Z"
+              },
+              {
+                "id": "20261123-sok-hem-j7cy",
+                "haak": "sok-hem",
+                "a": "B0HRGNJ7CY",
+                "post": "6b05f9fdacf4072f8e620181",
+                "t": "2026-11-24T20:58:03.317Z"
+              },
+              {
+                "id": "20261125-enoch-wat-79n1",
+                "haak": "enoch-wat",
+                "a": "B0B5KV79N1",
+                "post": "6b07397bcb651a6eadc070bb",
+                "t": "2026-11-25T19:39:50.426Z"
+              },
+              {
+                "id": "20261125-we-dad-syxw",
+                "haak": "we-dad",
+                "a": "B0DK3CSYXW",
+                "post": "6b073986be3f02dcc0ff44d7",
+                "t": "2026-11-25T19:40:07.517Z"
+              },
+              {
+                "id": "20261125-apo-14-xc9j",
+                "haak": "apo-14",
+                "a": "B0DDBTXC9J",
+                "post": "6b073998b436184d7f495f0b",
+                "t": "2026-11-25T19:40:19.109Z"
+              },
+              {
+                "id": "20261125-sok-hem-syxw",
+                "haak": "sok-hem",
+                "a": "B0DK3CSYXW",
+                "post": "6b0739a3be3f02dcc0ff4563",
+                "t": "2026-11-25T19:40:33.189Z"
+              }
+            ]
+          }
+        },
+        "/api/bs?site=lc&op=gezond": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:40 GMT",
+          "http": 200,
+          "response": {
+            "ok": true,
+            "pdfKnop": false,
+            "pdfBestand": true,
+            "mail": false,
+            "uitleg": "PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon",
+            "fouten": []
+          }
+        },
+        "/api/bs?site=lc&op=lcartikelen": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lcartikelen",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:41 GMT",
+          "http": 200,
+          "response": {
+            "modus": "eerst-zien",
+            "artikelen": [
+              {
+                "slug": "how-to-stop-procrastinating",
+                "titel": "How to Stop Procrastinating: 7 Steps and a 2-Minute Plan",
+                "datum": "2026-11-23",
+                "status": "live",
+                "zoekterm": "procrastination",
+                "volume": 135000,
+                "gerelateerd": []
+              },
+              {
+                "slug": "how-to-start-over-in-life",
+                "titel": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+                "datum": "2026-11-24",
+                "status": "live",
+                "zoekterm": "how to start over in life",
+                "volume": 590,
+                "gerelateerd": [
+                  "how-to-stop-procrastinating"
+                ]
+              },
+              {
+                "slug": "i-wasted-another-year",
+                "titel": "I Wasted Another Year: A Fair Review and One Next Step",
+                "datum": "2026-11-25",
+                "status": "live",
+                "zoekterm": "i wasted my life",
+                "volume": 210,
+                "gerelateerd": [
+                  "how-to-start-over-in-life",
+                  "how-to-stop-procrastinating"
+                ]
+              },
+              {
+                "slug": "how-to-get-your-life-together",
+                "titel": "How to Get Your Life Together: A Life Admin Checklist",
+                "datum": "2026-11-26",
+                "status": "concept",
+                "zoekterm": "how to get your life together",
+                "volume": 720,
+                "gerelateerd": [
+                  "how-to-start-over-in-life",
+                  "i-wasted-another-year",
+                  "how-to-stop-procrastinating"
+                ]
+              },
+              {
+                "slug": "how-long-does-it-take-to-form-a-habit",
+                "titel": "How Long Does It Take to Form a Habit? About 66 Days, Not 21",
+                "datum": "2026-11-26",
+                "status": "concept",
+                "zoekterm": "habit formation",
+                "volume": 135000,
+                "gerelateerd": [
+                  "how-to-stop-procrastinating",
+                  "how-to-start-over-in-life",
+                  "i-wasted-another-year"
+                ]
+              }
+            ]
+          }
+        },
+        "/api/bs?site=lc&op=verkoop": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=verkoop",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:47 GMT",
+          "http": 200,
+          "response": {
+            "pdfKnop": false,
+            "perDag": {}
+          }
+        },
+        "/api/zicht?op=stand&site=bookstuffers": {
+          "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=bookstuffers",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:46 GMT",
+          "http": 200,
+          "response": {
+            "ok": true,
+            "dag": "2026-11-26",
+            "sites": {
+              "bookstuffers": {
+                "host": "stockingbooks.com",
+                "laatste": {
+                  "dag": "2026-11-26",
+                  "site": "bookstuffers",
+                  "host": "stockingbooks.com",
+                  "gsc": {
+                    "imp": 0,
+                    "clicks": 0
+                  },
+                  "index": {
+                    "dag": "2026-11-25",
+                    "inSitemap": 17,
+                    "bekeken": 17,
+                    "geindexeerd": 13
+                  },
+                  "aiBots": null,
+                  "zoekvragen": {
+                    "dagen": 1,
+                    "regels": 4
+                  },
+                  "bezoek": null,
+                  "llmPanel": "f926a6cdbe5fbe0a",
+                  "llm": [
+                    {
+                      "vraag": "Where can I print free Christmas word search puzzles?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "Christmas jokes for kids",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "Christmas trivia questions and answers",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "Free printable Christmas coloring pages",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "What are good white elephant gifts under $10?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "What are good stocking stuffers for women?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "What are good stocking stuffers for men who have everything?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "Is there a free Secret Santa generator that does not need emails?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    }
+                  ],
+                  "llmRate": null,
+                  "llmCitatie": {
+                    "model": "perplexity/sonar",
+                    "panel": "f926a6cdbe5fbe0a",
+                    "geslaagd": 0,
+                    "perVraag": [],
+                    "geciteerd": 0,
+                    "rate": null
+                  },
+                  "winnaars": []
+                },
+                "historie": [
+                  {
+                    "dag": "2026-11-26",
+                    "imp": 0,
+                    "clicks": 0,
+                    "geindexeerd": 13,
+                    "llmRate": null,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "f926a6cdbe5fbe0a",
+                      "geslaagd": 0,
+                      "perVraag": [],
+                      "geciteerd": 0,
+                      "rate": null
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-25",
+                    "imp": 0,
+                    "clicks": 0,
+                    "geindexeerd": 11,
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "512c93670cae508b",
+                      "geslaagd": 8,
+                      "perVraag": [
+                        {
+                          "id": "7787c049b90bc59b",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "4b65e326d7b05f2f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "da5375d13d862e0f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "6c3e04e422c1e852",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "4dbaac792645a4d2",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "47af35b4989ef458",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "79df91543fbc51d7",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "438b876797028be8",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-24",
+                    "imp": 0,
+                    "clicks": 0,
+                    "geindexeerd": 1,
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "25202fffca5956b8",
+                      "geslaagd": 8,
+                      "perVraag": [
+                        {
+                          "id": "6c3e04e422c1e852",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "4dbaac792645a4d2",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "47af35b4989ef458",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "79df91543fbc51d7",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "438b876797028be8",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "8c5fef7573e1ec5b",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "522ba70955d17463",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "e8278d8971f9aa5c",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-23",
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "181bd30fa896a9bd",
+                      "geslaagd": 8,
+                      "perVraag": [
+                        {
+                          "id": "79df91543fbc51d7",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "438b876797028be8",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "8c5fef7573e1ec5b",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "522ba70955d17463",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "e8278d8971f9aa5c",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "7787c049b90bc59b",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "4b65e326d7b05f2f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "da5375d13d862e0f",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  }
+                ],
+                "proeven": {
+                  "lopend": 0,
+                  "klaar": [],
+                  "perStatus": {},
+                  "verlengd": 0,
+                  "eerstKlaar": null,
+                  "nietBeoordeeld": [],
+                  "langLopend": []
+                }
+              }
+            }
+          }
+        },
+        "/api/zicht?op=stand&site=lastingchange": {
+          "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=lastingchange",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:36:45 GMT",
+          "http": 200,
+          "response": {
+            "ok": true,
+            "dag": "2026-11-26",
+            "sites": {
+              "lastingchange": {
+                "host": "lastingchange.works",
+                "laatste": {
+                  "dag": "2026-11-26",
+                  "site": "lastingchange",
+                  "host": "lastingchange.works",
+                  "aiBots": null,
+                  "zoekvragen": null,
+                  "bezoek": null,
+                  "llmPanel": "94af3b369c8c22c9",
+                  "llm": [
+                    {
+                      "vraag": "How do I stick to my New Year’s resolutions?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "What is a good habit workbook for the new year?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "How long does it take to form a habit?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    },
+                    {
+                      "vraag": "I did nothing this year, how do I start over in 2027?",
+                      "fout": "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+                    }
+                  ],
+                  "llmRate": null,
+                  "llmCitatie": {
+                    "model": "perplexity/sonar",
+                    "panel": "94af3b369c8c22c9",
+                    "geslaagd": 0,
+                    "perVraag": [],
+                    "geciteerd": 0,
+                    "rate": null
+                  },
+                  "winnaars": []
+                },
+                "historie": [
+                  {
+                    "dag": "2026-11-26",
+                    "llmRate": null,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "94af3b369c8c22c9",
+                      "geslaagd": 0,
+                      "perVraag": [],
+                      "geciteerd": 0,
+                      "rate": null
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-25",
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "94af3b369c8c22c9",
+                      "geslaagd": 4,
+                      "perVraag": [
+                        {
+                          "id": "2f5222f42e0b992e",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "3afce6eee7e68e2f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "fab12185a259b35c",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "a2ab905318b52680",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-24",
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "94af3b369c8c22c9",
+                      "geslaagd": 4,
+                      "perVraag": [
+                        {
+                          "id": "2f5222f42e0b992e",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "3afce6eee7e68e2f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "fab12185a259b35c",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "a2ab905318b52680",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-23",
+                    "llmRate": 0,
+                    "llmCitatie": {
+                      "model": "perplexity/sonar",
+                      "panel": "94af3b369c8c22c9",
+                      "geslaagd": 4,
+                      "perVraag": [
+                        {
+                          "id": "2f5222f42e0b992e",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "3afce6eee7e68e2f",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "fab12185a259b35c",
+                          "geciteerd": false
+                        },
+                        {
+                          "id": "a2ab905318b52680",
+                          "geciteerd": false
+                        }
+                      ],
+                      "geciteerd": 0,
+                      "rate": 0
+                    },
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-22",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-21",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-20",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-19",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-18",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-17",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-16",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-15",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-14",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-13",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null,
+                    "eigenImp": null,
+                    "eigenClicks": null
+                  },
+                  {
+                    "dag": "2026-11-12",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null
+                  },
+                  {
+                    "dag": "2026-11-11",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null
+                  },
+                  {
+                    "dag": "2026-11-10",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null
+                  },
+                  {
+                    "dag": "2026-11-09",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null
+                  },
+                  {
+                    "dag": "2026-11-08",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null,
+                    "googlebot7d": null
+                  },
+                  {
+                    "dag": "2026-11-07",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-06",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-05",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-04",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-03",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-02",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-11-01",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-10-31",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-10-30",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-10-29",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  },
+                  {
+                    "dag": "2026-10-28",
+                    "llmCitatie": null,
+                    "aiBots": null,
+                    "bezoekZoek7d": null,
+                    "bezoekZoekBevestigd7d": null,
+                    "bezoekAI7d": null
+                  }
+                ],
+                "proeven": {
+                  "lopend": 0,
+                  "klaar": [],
+                  "perStatus": {},
+                  "verlengd": 0,
+                  "eerstKlaar": null,
+                  "nietBeoordeeld": [],
+                  "langLopend": []
+                }
+              }
+            }
+          }
+        },
+        "/api/zicht?op=zoekvragen&site=bookstuffers&dagen=10": {
+          "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers&dagen=10",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:37:19 GMT",
+          "http": 200,
+          "response": {
+            "ok": true,
+            "ververst": null,
+            "site": "bookstuffers",
+            "dagen": 10,
+            "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+            "perDag": [
+              {
+                "dag": "2026-11-25",
+                "zoekvragen": 4,
+                "imp": 4,
+                "kliks": 0
+              }
+            ],
+            "zoekvragen": [
+              {
+                "q": "play white elephant",
+                "imp": 1,
+                "kliks": 0,
+                "pos": 83,
+                "eerst": "2026-11-25",
+                "laatst": "2026-11-25",
+                "paginas": [
+                  "/white-elephant-rules"
+                ]
+              },
+              {
+                "q": "random name generator for secret santa",
+                "imp": 1,
+                "kliks": 0,
+                "pos": 38,
+                "eerst": "2026-11-25",
+                "laatst": "2026-11-25",
+                "paginas": [
+                  "/secret-santa-generator"
+                ]
+              },
+              {
+                "q": "white elephant game",
+                "imp": 1,
+                "kliks": 0,
+                "pos": 95,
+                "eerst": "2026-11-25",
+                "laatst": "2026-11-25",
+                "paginas": [
+                  "/white-elephant-rules"
+                ]
+              },
+              {
+                "q": "white elephant rules",
+                "imp": 1,
+                "kliks": 0,
+                "pos": 86,
+                "eerst": "2026-11-25",
+                "laatst": "2026-11-25",
+                "paginas": [
+                  "/white-elephant-rules"
+                ]
+              }
+            ],
+            "aantal": 4
+          }
+        },
+        "/api/zicht?op=zoekvragen&site=lastingchange&dagen=10": {
+          "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=lastingchange&dagen=10",
+          "observed_at_utc": "2026-11-26T13:39:08.783Z",
+          "provider_http_date": "Thu, 26 Nov 2026 13:37:20 GMT",
+          "http": 200,
+          "response": {
+            "ok": true,
+            "ververst": null,
+            "site": "lastingchange",
+            "dagen": 10,
+            "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+            "perDag": [],
+            "zoekvragen": [],
+            "aantal": 0
+          }
+        }
+      },
+      "traffic": {
+        "definition": "Registered page-openings, not unique persons or confirmed organic arrivals",
+        "stockingbooks": 13,
+        "lastingchange": 3,
+        "previous_period_utc": "2026-11-24",
+        "previous_stockingbooks": 42,
+        "previous_lastingchange": 5,
+        "delta_stockingbooks": -29,
+        "delta_lastingchange": -2,
+        "source_breakdown": null,
+        "weekly_average": null,
+        "seven_day_baseline": null,
+        "north_star_progress": null,
+        "top_pages": [
+          {
+            "site": "stockingbooks.com",
+            "path": "/",
+            "openings": 13
+          },
+          {
+            "site": "lastingchange.works",
+            "path": "/",
+            "openings": 3
+          }
+        ]
+      },
+      "amazon": {
+        "raw_redirect_requests": 23,
+        "stockingbooks": 23,
+        "lastingchange": null,
+        "unique_clickers": null,
+        "conversion": null,
+        "organic_sales_attribution": null
+      },
+      "google": {
+        "query_period": "2026-11-25",
+        "stockingbooks_query_rows": {
+          "impressions": 4,
+          "clicks": 0,
+          "rows": 4,
+          "positions": [
+            83,
+            38,
+            95,
+            86
+          ]
+        },
+        "query_rows_not_site_totals": true,
+        "site_cache_conflicts_with_query_rows": true,
+        "lastingchange_queries": null,
+        "index": {
+          "status_day": "2026-11-25",
+          "indexed": 13,
+          "checked": 17,
+          "sitemap": 17
+        },
+        "ai": {
+          "status_day": "2026-11-26",
+          "bookstuffers": null,
+          "lastingchange": null,
+          "reason": "All current panel calls have provider402credit error. Reused existing cached failure, no paid retry."
+        }
+      },
+      "pinterest": {
+        "registered_book_posts": 22,
+        "impressions": null,
+        "organic_outbound_clicks": null,
+        "saves": null,
+        "window": null,
+        "cache_totals": {
+          "clicks": 4,
+          "saves": 9,
+          "not_valid_closed_day_provider_result": true
+        },
+        "provider_access": "No Zernio tools; fresh plugin search no results. Existing direct Pinterest analytics requires authenticated POST and own registered pins, not an authorized Zernio read path; no credentials sought. Not evidence of account disconnection.",
+        "per_pin": "PIN-LEERREGISTER.json plus2026-11-26-pin-overzicht.md"
+      },
+      "sales": {
+        "pdf": {
+          "date": "2026-11-25",
+          "count": null,
+          "checkout_enabled": false,
+          "missing_day_row_not_zero": true
+        },
+        "kdp": {
+          "date": "2026-11-25",
+          "portfolio_royalty_usd": 93.13,
+          "lc_royalty_usd": 9.48,
+          "source": "https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht",
+          "report_observation": "2026-11-26T12:25Z",
+          "definition": "Existing KDP report's retrospective royalty, not organic attributed sales; portfolio includes out-of-scope books",
+          "organic_attribution": null
+        }
+      },
+      "lesson": {
+        "finding": "Reach is scarce and attribution insufficient: four query impressions at positions38to95, and no verified per-pin outbound/landings. More posts or changing CTA cannot yet demonstrate acquisition improvement.",
+        "evidence": "Raw site totals down, GSCqueryrows current,22learningrows without valid provider windows.",
+        "hypothesis": "Structured existing dry-report output plus joint allowed-pin landing rows can distinguish missing measurement from genuinely weak distribution.",
+        "primary_measure": "Working site/source/page/day output and exact pin landing rows, then provider organicoutbound clicks",
+        "control": "Published content/pins and existingcontrols retained"
+      },
+      "implemented_this_round": [
+        {
+          "status": "research_and_measurement_design_only",
+          "path": "2026-11-26-meetcontrole.md"
+        },
+        {
+          "status": "all22learning_snapshots_preserved_and_appended",
+          "path": "PIN-LEERREGISTER.json"
+        }
+      ],
+      "previous_same_day_implementation": {
+        "pr": 15,
+        "status": "live earlier today, not newly deployed by this run",
+        "verified_again": "read-only pinplan response confirms14daycontrol and4uniqueproducts",
+        "traffic_effect": null
+      },
+      "concepts": {
+        "existing_pins": "2026-11-25-batch.md",
+        "existing_lc_checklist": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-get-your-life-together&concept=1",
+        "new_content_published": false
+      },
+      "research": {
+        "primary": "https://onelittleproject.com/christmas-word-search/",
+        "checked_at_utc": "2026-11-26T13:39:08.783Z",
+        "page_date": "2026-11-18",
+        "case_known_from_23nov": true,
+        "new_observation": "Existing ungated print links plus newsletter forms and ownbooklinks, all on same usefulresourcepage",
+        "traffic_numbers": null,
+        "application": "Reuse existing resource/signupUX; retain free onsiteaccess and measure optin separately"
+      },
+      "next_test": {
+        "measurement": "By2026-12-02 first technical correctness; implementation only after exact proposalapproval",
+        "pins": "14to21days since each real publication, sufficient matcheddata;24novpilot8to15dec",
+        "article": "25novlivearticle9to16dec, sufficientdata",
+        "north_star": "7same-definition fullorganicdays first; no invented absolute target/deadline"
+      },
+      "limits": [
+        "No new publication, mainpush, build, Telegram, outreach, ads, paymentchanges or paidcalls.",
+        "No valid source traffic, uniquepeople, pinlandings or attributed organic sales inferred.",
+        "Historical observations preserved; current errors not zero results."
+      ]
     }
   ]
 }
