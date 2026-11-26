@@ -21,12 +21,14 @@
         {
           "v": "[Phone number]",
           "q": "What is your phone number?",
-          "skip": true
+          "skip": true,
+          "weg": "[Phone number] · "
         },
         {
           "v": "[number on your key tag or in your account]",
           "q": "What is your Planet Fitness member number? It is on your key tag or in your account.",
-          "skip": true
+          "skip": true,
+          "weg": "Planet Fitness member number: [number on your key tag or in your account]\n"
         },
         {
           "v": "[address of your home club]",
