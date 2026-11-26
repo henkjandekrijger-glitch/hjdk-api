@@ -20,7 +20,7 @@ import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
 import { cjSleutelZet, cjStand, cjZoek, cjKies, cjFeed, cjNieuweOrder, cjOrders, cjOrderInfo } from '../lib/cj.js';
 import { bjxFeed, bjxStand, bjxNieuweOrder, bjxOrders, bjxBesteld } from '../lib/bjx.js';
-import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, awZoek, awPakketten, logRegel as awLog } from '../lib/awdrop.js';
+import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, awZoek, awPakketten, awAuto, logRegel as awLog } from '../lib/awdrop.js';
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -141,7 +141,8 @@ export default async function handler(req, res) {
       if (op === 'shfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await H.shFeed({ start: q.get('start'), size: q.get('size') })); }
       if (op === 'shorder') { if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' }); const b = typeof req.body === 'object' && req.body ? req.body : JSON.parse(req.body || '{}'); const r = await H.shOrder(b); return res.status(r.ok ? 200 : 400).json(r); }
     }
-    if (op === 'awstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json({ token: await awTokenStand(), keuring: await awKeurLaatste(), orders: await awOrders() }); }
+    if (op === 'awstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json({ token: await awTokenStand(), autoBetalen: await awAuto(), keuring: await awKeurLaatste(), orders: await awOrders() }); }
+    if (op === 'awauto') { if (!beschermd) return res.status(404).send('Niet gevonden'); const z = q.get('zet'); const aan = await awAuto(z === 'ja' || z === 'nee' ? z : undefined); if (z) await awLog('Automatisch betalen van AW-orders: ' + (aan ? 'aan' : 'uit') + ' (Henkjan 26 nov: "ja auto")').catch(() => {}); return res.status(200).json({ ok: true, autoBetalen: aan }); }
     if (op === 'awapi') { if (!beschermd) return res.status(404).send('Niet gevonden'); const pad = String(q.get('pad') || 'user-profile').replace(/[^a-z0-9/_-]/gi, '').slice(0, 80); const params = {}; for (const [k, v] of q.entries()) if (!['op', 'pad'].includes(k)) params[k] = v; const r = await awApi(pad, { params }); return res.status(200).json({ st: r.st, fout: r.fout || null, data: r.data, tekst: r.tekst }); }
     if (op === 'cjtoken') {
       if (!beschermd) return res.status(404).send('Niet gevonden');

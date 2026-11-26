@@ -180,6 +180,8 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 26 nov 2026 13:00 UTC (Henkjan: "Done ja auto . Ga naar CJ"): AW-saldo opgewaardeerd door Henkjan; AW-orders worden nu automatisch van het saldo betaald (op=awauto&zet=ja, kv aw:order:auto, stand in op=awstand). CJ onderzocht: het DE-magazijn heeft geen sieraden (necklace, earrings, bracelet, christmas: 0 producten), alleen wimperkits; uit China 8-18 dagen (4-7 dagen voor ongeveer EUR 9 vracht) plus EUR 3 invoerrecht per pakje. Advies: CJ niet voor sieraden voor Sinterklaas en Kerst.
+
 - 26 nov 2026 11:50 UTC (Henkjan: "Los op !! Zorg voor campagne die veel beter converteert naar adressen !"): op de winactiepagina is PropellerAds doel 1 nu de aanmelding met e-mailadres (winAanmeld, rec.w), de eerste aanraking gaat als doel 2. CPA-doel van 12190717, 12190844 en 12190846 van $0,01 naar $0,50 per adres (was per aanraking, daardoor ~12 bezoekers per uur). Controle: elk uur; $5 zonder adres op een campagne = doel terug naar $0,25.
 
 - 26 nov 2026 06:35 UTC (pa-uurcontrole): nieuwe winactie-campagnes, alleen iOS en 07:00-22:00 UTC (08:00-23:00 NL), ## Logboek (nieuwste bovenaan, één regel per wijziging)
