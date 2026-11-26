@@ -97,5 +97,65 @@
     "working": "After exact codeapproval deploy only this reviewed task once, read pinplan and verify no recent/duplicateASIN, verify actual sharedproviderqueue before any pin publication; no synthetic productiontraffic.",
     "primary_measure": "Eligible unique product candidates, duplicate/cooldown violation count; actual outboundtraffic separately.",
     "traffic": "14to21days after actual approved publishing plus enough matched data; no growth forecast from this repair."
-  }
+  },
+  "additions": [
+    {
+      "observed_at_utc": "2026-11-26T12:44:20.752Z",
+      "type": "approved_PR15_live_and_new_UX_preview",
+      "preserves_original": true,
+      "approval": "Ja akkoord",
+      "deployment": {
+        "merge_sha": "659bdcbb40fbad335aa3ec85f774ff210d23b477",
+        "id": "dpl_GBpKrPYBWfKQayrsmRziAMobTczB",
+        "status": "READY",
+        "verification": {
+          "at": "2026-11-26T12:35:06.240Z",
+          "planCount": 4,
+          "uniqueAsins": 4,
+          "recentViolations": 0,
+          "controle": {
+            "afkoeldagen": 14,
+            "bron": "geregistreerde boekplaatsingen; geen volledige providerplanning",
+            "reservering": false
+          },
+          "bsHealth": {
+            "ok": true,
+            "paginas": 17,
+            "boeken": 44,
+            "fouten": []
+          },
+          "lcHealth": {
+            "ok": true,
+            "pdfKnop": false,
+            "pdfBestand": true,
+            "mail": false,
+            "uitleg": "PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon",
+            "fouten": []
+          }
+        },
+        "tests_passed": 26
+      },
+      "traffic_effect": null,
+      "new_public_content_published": false,
+      "new_concepts": {
+        "ux": "content/dagrapport/2026-11-26-subscribers-ux.html",
+        "research": "content/dagrapport/2026-11-26-subscribers-review-onderzoek.md",
+        "status": "preview_only",
+        "email_sent": false,
+        "subscriber_created": false,
+        "affiliates_activated": false
+      },
+      "lesson": {
+        "evidence": "Both book motor projects return unknown project; current generic Mailmind streams lack book newsletter",
+        "hypothesis": "A useful optional resource offer with separate brand doubleoptin can retain interested readers; untested",
+        "primary_metric": "Confirmed optins per100eligible registered page openings; source/period/control preserved",
+        "next_test": "Backend sender/consent/confirmation/unsubscribe and event correctness before live subscription flow after exact UX approval"
+      },
+      "browser_qa": {
+        "available": false,
+        "reason": "No IAB and empty browser inventory; no rendered screenshots claimed"
+      },
+      "report": true
+    }
+  ]
 }
