@@ -156,6 +156,8 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 
 ## Logboek (nieuwste boven)
 
+- 26 nov 18:27 UTC chat-taniakross: dagkopie 12193513 goedgekeurd en levert (25.051 vertoningen, 65 kliks, $0,11, nog 0 adressen). Oude BEWEZEN 12183102 uitgezet (vandaag 4 adressen voor $1,56 = $0,39 per adres sinds het bod $0,20 is). Nu loopt alleen 12193513.
+
 - 26 nov 14:25 UTC chat-taniakross: dagkopie 12193513 ingediend (118 zones, 6 beste + 2 nieuwe advertenties, knop Luister gratis). Daarna gaat 12183102 uit. Elke dag een nieuwe kopie (Henkjan).
 
 - 26 nov 12:30 UTC tk-dagronde: op Henkjans "Ja doen .Go !" 12183102 bod $0,20 en 82 zones (was 43). Gisteren 7 adressen, lijst 73, Mailmind 62 verstuurd 5 ja 8 stop.
