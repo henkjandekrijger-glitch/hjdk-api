@@ -29,7 +29,7 @@ test('referrer-events en bots zijn verschillende tellers',()=>{
 });
 test('weekvergelijking vraagt volle, niet-overlappende kalenderweken',()=>{
   assert.equal(vergelijkDagen([]).status,'te-weinig-data');
-  const rows=Array.from({length:14},(_,i)=>({dag:'2026-10-'+String(i+1).padStart(2,'0'),clicks:i<7?0:2}));
+  const rows=Array.from({length:14},(_,i)=>({dag:'2026-10-'+String(i+1).padStart(2,'0'),imp:i<7?0:4,clicks:i<7?0:2}));
   const r=vergelijkDagen(rows);assert.equal(r.voor,0);assert.equal(r.na,14);assert.equal(r.procent,null);assert.equal(r.status,'beschrijvend');
   rows[5].dag='2026-09-01';assert.equal(vergelijkDagen(rows).status,'te-weinig-data');
 });

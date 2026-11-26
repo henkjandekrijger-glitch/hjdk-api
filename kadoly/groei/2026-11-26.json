@@ -1,0 +1,135 @@
+{
+  "datum": "2026-11-26",
+  "ronde": "ochtend",
+  "gemeten_op": "2026-11-26T09:44:00Z",
+  "organisch": {
+    "facebook": {
+      "kliks": 48,
+      "echt": 18,
+      "actie": 2,
+      "mandje": 3
+    },
+    "pinterest": {
+      "kliks": 3
+    },
+    "gids": {
+      "kliks": 796,
+      "echt": 1,
+      "actie": 1
+    }
+  },
+  "koop": {
+    "periode": "7 dagen",
+    "bestellingen": 2,
+    "feedFout": null,
+    "bronnen": [
+      {
+        "at": "2026-11-25T07:30:52+00:00",
+        "bedrag": 69.95,
+        "bron": "onbekend"
+      },
+      {
+        "at": "2026-11-19T21:01:24+00:00",
+        "bedrag": 52.91,
+        "bron": "tiktok"
+      }
+    ],
+    "organisch": "Geen organische koop bewezen; onbekende bron blijft onbekend."
+  },
+  "ontdekking": {
+    "product": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [
+        {
+          "url": "https://gids.kadoly.com/rubriek/wonen",
+          "tekst": "Hulp bij kiezen",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/",
+          "tekst": "Kadoly gids: hulp bij kiezen",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/redactie",
+          "tekst": "Redactie",
+          "rel": [],
+          "volgbaar": true
+        }
+      ],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": false
+    },
+    "robots": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": false
+    }
+  },
+  "google": {
+    "gemeten_op": "2026-11-26T06:55:02.046Z",
+    "vergelijking": {
+      "status": "beschrijvend",
+      "voor": 0,
+      "na": 0,
+      "verschil": 0,
+      "procent": null,
+      "eenheid": "klikken",
+      "vertoningen": {
+        "voor": 3,
+        "na": 7,
+        "verschil": 4,
+        "procent": 133.3
+      },
+      "klikken": {
+        "voor": 0,
+        "na": 0,
+        "verschil": 0,
+        "procent": null
+      },
+      "voorPeriode": [
+        "2026-11-10",
+        "2026-11-16"
+      ],
+      "naPeriode": [
+        "2026-11-17",
+        "2026-11-23"
+      ],
+      "reden": "Niet-overlappende weken. Dit bewijst geen oorzakelijk optimalisatie-effect."
+    },
+    "ai": {
+      "status": "ontbreekt",
+      "dag": "2026-11-26",
+      "geslaagd": 0,
+      "geciteerd": null,
+      "reden": "Geen geslaagde actuele vaste-panelmeting; ontbreekt is geen nulscore.",
+      "fouten": [
+        "perplexity/sonar 402 A positive credit balance is required for all requests, including BYOK, so fallback providers remai"
+      ]
+    }
+  },
+  "afweging": [
+    {
+      "actie": "Extra gids of video",
+      "waarde": "Laag zolang echte bezoeken niet stijgen; bestaande rondes draaien al."
+    },
+    {
+      "actie": "Winkelcode en gids-sitemap aanpassen",
+      "waarde": "Hoge mogelijke waarde, maar buiten deze rol; gewone links nu deels uitgevoerd, tv-link en sitemap blijven opvolgpunt."
+    },
+    {
+      "actie": "Pinterestbron op bestaande gidsen herstellen",
+      "waarde": "Klein, gratis en geautoriseerd meetherstel vóór een distributieproef; gekozen."
+    }
+  ],
+  "verwachting": "Een Pinterest-UTM zonder app-referrer wordt voortaan v-pinterest, niet v-direct. Dit verhoogt geen bewezen bezoek of omzet en herstelt geen historische gegevens.",
+  "beperkingen": [
+    "Facebook volgens socialronde nog Meta190; Zernio-connector hier ontbreekt.",
+    "Koopmeting organisch niet door echte organische transactie bewezen; campagneherkomst tot koop niet aangepast.",
+    "AI-panelmeting mislukt met402; geen nulscore en geen geld bijgevuld.",
+    "Gids-pinconcepten en doeladvies wachten op akkoord; pushmeldingen niet bevestigd."
+  ]
+}
