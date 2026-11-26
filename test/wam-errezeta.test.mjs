@@ -70,7 +70,7 @@ test('oproep zoekt andere gedupeerden met één veld vooraan; eigen bewijs blijf
   assert.ok(h.includes('<details class="sources" id="eigen-dossier">'));
   for(const t of ['De betalingen in de bankdocumenten','€40.000,00','€10.000,00','2026-06-22','afwikkelingstekst','gaat eerst naar de redactie']) assert.ok(h.includes(t),t);
   assert.ok(h.includes('Volg deze oproep.</h2>'));
-  assert.ok(home.includes('Oproep aan andere gedupeerden') && home.includes('Wat is er bij jou gebeurd?'));
+  assert.ok(home.includes('Oproep aan andere gedupeerden') && !home.includes('Wat is er bij jou gebeurd?')); // reageren op het dossier zelf
   const graph=schemaVoorPagina('/dossier/errezeta',d.seoTitel,d.kort)['@graph'];
   assert.equal(graph.find(x=>x['@type']==='Article').articleSection,'Oproep aan gedupeerden');
 });
