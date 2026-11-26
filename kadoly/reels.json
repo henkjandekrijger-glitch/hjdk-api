@@ -973,6 +973,22 @@
           "opm": "Facebook-koppeling verlopen (Meta error 190)"
         }
       }
+    },
+    {
+      "id": "u261126led",
+      "soort": "uitleg",
+      "titel": "Led kaars of echte kaars? 4 regels van de brandweer",
+      "gids": "redactie/led-kaarsen-of-echte-kaarsen-veilig-kerst",
+      "url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-led-kaarsen-20261126-bio.mp4",
+      "url_link": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-led-kaarsen-20261126-link.mp4",
+      "url_pin": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-led-kaarsen-20261126-pin.mp4",
+      "pids": [
+        "oc_4173959229243393",
+        "oc_4173959244120065",
+        "oc_4173959247380481",
+        "oc_4174002159157250"
+      ],
+      "bron": "chat (uitlegvideo, VO eleven-v3)"
     }
   ],
   "lerend": {
