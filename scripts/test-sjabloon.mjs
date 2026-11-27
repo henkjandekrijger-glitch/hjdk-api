@@ -47,4 +47,14 @@ ok(Object.values(AANVULLING).every(s => Object.values(s).every(x => (x.faq || []
 const hv = kaal(sjabloonHtml(Object.assign({}, basis, { pillVraag: 'Hoe breed is de nis?' })));
 ok(/<h2>Hoe breed is de nis\?<\/h2><div class="sj-pills">/.test(hv) && !/Twijfel je/.test(hv), 'vraag bij de pills staat als kop');
 ok(/<h2>Twijfel je\? Vraag het<\/h2>/.test(h), 'zonder vraag de gewone kop');
+// advies per mail (taak 3fts1f, lib/adviesmail.js): tweede tekst op de volgknop als proef, schakelaar standaard uit
+const SJ2 = await import('../lib/sjabloon.js'); const js = h0.match(/<script>window\.__SJ[\s\S]*?<\/script>/)[0];
+ok(SJ2.SJ_TEKST.nl.adv === 'Stuur mij dit advies per mail' && SJ2.SJ_TEKST.us.adv === 'Email me this advice' && SJ2.SJ_TEKST.de.adv === 'Schick mir diesen Rat per Mail', 'tweede tekst in NL, EN en DE');
+ok(SJ2.SJ_TEKST.nl.volg === 'Volg {term} in je ochtendmail', 'oude tekst blijft ongewijzigd');
+ok(/AM\.arm===.b.\?C\.t\.adv:C\.t\.volg/.test(js), 'zonder schakelaar (arm null) toont de knop de oude tekst');
+ok(/op=adviestekst/.test(js) && /\.catch\(function\(\)\{return null\}\)/.test(js), 'schakelaar wordt op de server gelezen; een fout geeft de oude tekst');
+ok(/setTimeout\(function\(\)\{r\(null\)\},1500\)/.test(js) && !/a:AM\.a/.test(js), 'de chat wacht hooguit 1500 ms op de proef en stuurt geen antwoord mee naar de server');
+ok(/advHit\('getoond'\)/.test(js) && /advHit\('getikt'\)/.test(js) && /advHit\('adres'\)/.test(js), 'tellen per tekst: getoond, getikt, adres');
+ok(/"adv":"Stuur mij dit advies per mail"/.test(h0), 'tekst staat in de pagina-config');
+try { new Function(js.slice(8, -9)); ok(true, 'client-js is geldig'); } catch (e) { ok(false, 'client-js is geldig: ' + e.message); }
 console.log(fout ? fout + ' fout(en)' : 'alles goed'); process.exit(fout ? 1 : 0);

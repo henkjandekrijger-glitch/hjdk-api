@@ -268,6 +268,7 @@ export default async function handler(req, res) {
       b=b||{};const ip=String(req.headers['x-forwarded-for']||'').split(',')[0].trim();
       const slugC=String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90);
       const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||''),ik:Array.isArray(b.ik)?b.ik.slice(0,3).map(x=>String(x).slice(0,120)):[],pillPad:typeof b.pad==='string'?b.pad.slice(0,200):'',velden:b.velden&&typeof b.velden==='object'?b.velden:null,pc:b.pc?1:0,mmc:String(b.mmc||'').replace(/[^A-Za-z0-9_-]/g,'').slice(0,80),zone:String(b.z||'').replace(/\D/g,'').slice(0,12)}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
+      try{if(rc&&rc.ok&&!(b.test&&beschermd)){const AM=await import('../lib/adviesmail.js');await AM.adviesBewaar(String(b.sid||''),slugC,rc);}}catch{} // antwoord bewaren voor de adviesmail (taak 3fts1f): schakelaar uit = niets, een fout verandert rc niet
       if(rc&&rc.ok&&!rc.geblokt&&!(b.test&&beschermd))await fnStap(req,'vraag',slugC); // funnel per persoon via Clickmind-cookie mmp (18 nov 2026)
       return res.status(200).json(rc);}
     if(op==='reken'){if(req.method!=='POST')return res.status(405).json({ok:false}); // rekenchat (lib/kzux.js kxReken, 19 nov 2026): velden uit de pills als intentie, zonder AI

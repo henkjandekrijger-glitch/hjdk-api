@@ -9,11 +9,18 @@ import {vapid,subHash} from '../lib/push.js';
 import {variant,ronde,leerPagina} from '../lib/keuze-updates-leer.js';
 import {dagelijksOverzicht,overzichtTekst} from '../lib/dagoverzicht.js';
 import {lookNieuw} from '../lib/look.js';
+import {SCHAKELAAR,MAIL,adviesAan,tekstVoor,tel,adviesVerstuur,standTekst,voorbeeldHtml,advVolgLees,UITSLAG} from '../lib/adviesmail.js';
+// op=adviesschakel mag op de beschermde *.vercel.app-host (achter Vercel-inlog) zonder sleutel, zelfde patroon als `beschermd` in fn/mm.js
+const beschermd=req=>/\.vercel\.app$/i.test(String(req.headers['x-forwarded-host']||req.headers.host||'').split(':')[0])&&/\.vercel\.app$/i.test(String(req.headers.host||'').split(':')[0]);
 export const config={api:{bodyParser:{sizeLimit:'8kb'}}};
 export default async function handler(req,res){
  const url=new URL(req.url,'https://keuzehulp.best'),op=url.searchParams.get('op')||'status',host=String(req.headers['x-forwarded-host']||req.headers.host||'').toLowerCase().replace(/^www\./,'').split(':')[0],site=Object.keys(UPDATE_SITES).find(s=>UPDATE_SITES[s].host===host)||(op==='dag'?'kz':null);
  res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');res.setHeader('x-content-type-options','nosniff');
  if(op==='lijst'){res.setHeader('content-type','application/javascript; charset=utf-8');res.setHeader('cache-control','public,max-age=300');return res.status(200).send(LIJST_JS);}
+ // Advies per mail (taak 3fts1f): voorbeeld, stand en schakelaar werken op elke host; de schakelaar staat standaard UIT (lib/adviesmail.js)
+ if(op==='adviesvoorbeeld'){res.setHeader('content-type','text/html; charset=utf-8');return res.status(200).send(await voorbeeldHtml());}
+ if(op==='adviesstand'){const st=await standTekst();if(url.searchParams.get('vorm')==='json')return res.status(200).json(st.json);res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(st.tekst);}
+ if(op==='adviesschakel'){if(!beschermd(req)&&!(await authorizedUpdate(req)))return res.status(401).json({ok:false});const z=url.searchParams.get('zet');if(url.searchParams.get('reset')==='1'){await kv.del(['adv:proef:a','adv:proef:b',UITSLAG,UITSLAG+':slot']);}if(z==='1'||z==='0')await kv.set(SCHAKELAAR,z==='1'?1:0);return res.status(200).json({ok:true,aan:await adviesAan()});}
  if(!site)return res.status(400).json({ok:false});
  const c=textFor(site);let b={};try{b=['confirm','unsub'].includes(op)?{}:(typeof req.body==='string'?(req.body.trim()?JSON.parse(req.body):{}):(req.body||{}));}catch{return res.status(400).json({ok:false});}
  try{
@@ -32,12 +39,19 @@ export default async function handler(req,res){
  if(req.headers.origin&&new URL(req.headers.origin).hostname.replace(/^www\./,'')!==host)return res.status(403).json({ok:false});
  if(/bot|crawl|spider|preview/i.test(String(req.headers['user-agent']||'')))return res.status(204).end();
  const ip=String(req.headers['x-forwarded-for']||req.headers['x-real-ip']||'unknown').split(',')[0],rk='updates:rate:'+createHash('sha256').update(ip+':'+Math.floor(Date.now()/60000)).digest('hex');const n=await kv.incr(rk);if(n===1)await kv.raw(['EXPIRE',rk,'120']);if(n>60)return res.status(429).json({ok:false});
+ if(op==='adviestekst'){const t=await tekstVoor(url.searchParams.get('sid')||'');return res.status(200).json({ok:true,aan:!!t,arm:t?t.arm:null});}
+ if(op==='advvolg'){const t=url.searchParams.get('t')||'',p=await advVolgLees(t),L=MAIL[UPDATE_SITES[site].lang];if(!p||p.site!==site)return res.status(400).send(page(site,c.error,''));const it=(await catalog(site)).find(i=>i.slug===p.slug),term=String(it?(it.term||it.title||it.h1):p.slug).slice(0,60);res.setHeader('content-type','text/html; charset=utf-8');
+  if(req.method!=='POST')return res.status(200).send(page(site,L.volgK(term),'<p>'+esc(L.volgT(term))+'</p><p>'+esc(L.volgB)+'</p><form method="post"><button>'+esc(L.volgK(term))+'</button></form>'));
+  const er='updates:emailrate:'+createHash('sha256').update(p.email).digest('hex');if(await kv.raw(['SET',er,'1','NX','EX','600'])){const j=await journey(site,p.slug,null);await subscribe(j,p.email,'');}
+  return res.status(200).send(page(site,c.pending,'<p><a href="/">'+esc(UPDATE_SITES[site].name)+'</a></p>'));}
  if(op==='config'){const slug=url.searchParams.get('slug')||'__home';const it0=slug==='__home'?null:(await catalog(site)).find(i=>i.slug===slug);if(slug!=='__home'&&!it0)return res.status(404).json({ok:false});const term=String(it0?(it0.term||it0.title||it0.h1):({kz:'onze keuzehulpen',us:'our buying guides',de:'unsere Kaufberater'}[site])).slice(0,60);const j=await journey(site,slug,url.searchParams.get('token'),url.searchParams.get('qa')==='updates'),v=await vapid();const va=j.vid?await variant(site,j.vid):null;return res.status(200).json({ok:true,site,token:j.token,arm:j.arm,copy:c,vapid:v.pub,v:va?{id:va.id,t:va.t,d:va.d,b:va.b,pb:va.pb,pf:!!va.pf,sc:va.sc,pl:va.pl}:null,term});}
  if(req.method!=='POST')return res.status(405).json({ok:false});
  if(op==='volg')return res.status(200).json(await volg(String(b.t||''),site,String(b.slug||''),!!b.uit));
  if(op==='pushmsg'){const h=subHash(String(b.endpoint||'')),p=await kv.get('updates:p:'+h);if(!p?.active||p.site!==site)return res.status(200).json({});return res.status(200).json(await kv.get('updates:pushmsg:'+h)||{});}
  if(op==='return'){const p=await click(String(b.token||''));if(p?.site!==site)return res.status(400).json({ok:false});await click(String(b.token||''),true);return res.status(200).json({ok:true});}
  if(op==='push-stop')return res.status(200).json(await stopPush(site,String(b.endpoint||'')));
+ if(op==='advieshit')return res.status(200).json(await tel(site,String(b.sid||''),String(b.kind||'')));
+ if(op==='adviesmail'){const r=await adviesVerstuur(site,{sid:String(b.sid||''),slug:String(b.slug||''),p:Array.isArray(b.p)?b.p.slice(0,6).map(x=>String(x).slice(0,200)):[],email:String(b.email||'').slice(0,300),website:String(b.website||'')},ip);return res.status(r.ok?200:400).json({ok:r.ok});}
  const j=await kv.get('updates:j:'+String(b.token||''));if(!j||j.site!==site)return res.status(400).json({ok:false});j.token=b.token;
  if(op==='event'){if(['confirmed','push','request'].includes(b.kind))return res.status(400).json({ok:false});return res.status(200).json({ok:true,counted:await event(b.token,b.kind,{scroll:b.scroll})});}
  if(op==='subscribe'){if(b.website||!j.events.cta||Date.now()-j.at<800)return res.status(400).json({ok:false});const er='updates:emailrate:'+createHash('sha256').update(String(b.email||'').toLowerCase()).digest('hex');if(!(await kv.raw(['SET',er,'1','NX','EX','600'])))return res.status(200).json({ok:true});return res.status(200).json(await subscribe(j,b.email,b.zone));}
