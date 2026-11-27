@@ -988,20 +988,15 @@ async function vlBeeld(res, url) {
   const vink = (d, kl) => hEl('div', { width: d, height: d, borderRadius: d, background: kl, alignItems: 'center', justifyContent: 'center' }, [hEl('div', { width: Math.round(d * 0.24), height: Math.round(d * 0.46), borderRight: Math.round(d / 9) + 'px solid #ffffff', borderBottom: Math.round(d / 9) + 'px solid #ffffff', transform: 'rotate(45deg)', marginTop: -Math.round(d * 0.08) })]);
   let el, W, H;
   if (v === 'icon') { W = H = 192; el = hEl('div', { width: 192, height: 192, background: '#1D9BF0', flexDirection: 'column', justifyContent: 'center', padding: '0 34px' }, [0, 1, 2].map(i => hEl('div', { alignItems: 'center', marginTop: i ? 16 : 0 }, [i ? hEl('div', { width: 30, height: 30, borderRadius: 30, border: '5px solid #ffffff' }) : vink(30, '#111827'), hEl('div', { marginLeft: 14, width: i === 1 ? 70 : 88, height: 12, borderRadius: 12, background: '#ffffff' })]))); }
-  else {
-    W = 984; H = 656; const cat = await catalog(); const VL = await import('../lib/verlanglijst.js'); let keuze = VL.kiesProducten(cat.items, (trendKadoly && trendKadoly.pids) || [], 24).slice(t * 3, t * 3 + 3); if (keuze.length < 3) keuze = cat.items.filter(i => i.img && i.t && i.vr !== false).slice(t * 3, t * 3 + 3);
-    const fotos = await Promise.all(keuze.map(async it => { try { const r = await fetch('https://keuzehulp.best/api/shop/beeld/' + encodeURIComponent(it.id) + '/icon.jpg', { signal: AbortSignal.timeout(6000) }); if (!r.ok) return null; const b = Buffer.from(await r.arrayBuffer()); const j = await sharp(b).resize(112, 112, { fit: 'cover' }).jpeg({ quality: 85 }).toBuffer(); return 'data:image/jpeg;base64,' + j.toString('base64'); } catch (e) { return null; } }));
-    const kort = s2 => { s2 = String(s2 || ''); return s2.length > 26 ? s2.slice(0, 25).replace(/\s+\S*$/, '') + '…' : s2; };
-    const rij = (it, i) => hEl('div', { alignItems: 'center', padding: '16px 0', borderTop: i ? '2px solid #E6E8EB' : 'none' }, [fotos[i] ? { type: 'img', props: { src: fotos[i], width: 112, height: 112, style: { borderRadius: 16, objectFit: 'cover' } } } : hEl('div', { width: 112, height: 112, borderRadius: 16, background: '#E8F4FD' }),
-      hEl('div', { flex: 1, marginLeft: 20, fontSize: 28, fontWeight: 500, color: '#0B0D12', lineHeight: 1.25 }, kort(it.t)),
-      i === 0 ? hEl('div', { marginLeft: 12, background: '#111827', color: '#ffffff', fontSize: 24, fontWeight: 800, padding: '10px 18px', borderRadius: 999 }, 'Gekozen') : hEl('div', { marginLeft: 12, width: 52, height: 52, borderRadius: 52, border: '4px solid #111827', alignItems: 'center', justifyContent: 'center', fontSize: 36, fontWeight: 800, color: '#111827' }, '+')]);
-    el = hEl('div', { width: W, height: H, background: '#E8F4FD', fontFamily: 'Inter', padding: 44, alignItems: 'center' }, [
-      hEl('div', { width: 380, flexDirection: 'column', paddingRight: 30 }, [
-        hEl('div', { alignItems: 'center' }, [vink(56, '#1D9BF0'), hEl('div', { marginLeft: 14, fontSize: 34, fontWeight: 800, color: '#0B0D12' }, 'Kadoly')]),
-        hEl('div', { marginTop: 34, fontSize: 52, fontWeight: 800, color: '#0B0D12', lineHeight: 1.1 }, VL_BEELD[t][0]),
-        hEl('div', { marginTop: 16, fontSize: 32, fontWeight: 500, color: '#0B0D12', lineHeight: 1.3 }, VL_BEELD[t][1]),
-        hEl('div', { marginTop: 34, background: '#25D366', color: '#0B0D12', fontSize: 28, fontWeight: 800, padding: '18px 26px', borderRadius: 16, alignSelf: 'flex-start' }, 'Stuur via WhatsApp')]),
-      hEl('div', { flex: 1, flexDirection: 'column', background: '#ffffff', borderRadius: 28, padding: '20px 28px', border: '2px solid #E6E8EB' }, keuze.map(rij))]);
+  else { // 27 nov (Henkjan: "Beetje druk"): rustig, alleen de kop, één regel en vier echte producten; de eerste met een vinkje
+    W = 984; H = 656; const cat = await catalog(); const VL = await import('../lib/verlanglijst.js'); let keuze = VL.kiesProducten(cat.items, (trendKadoly && trendKadoly.pids) || [], 24).slice(t * 4, t * 4 + 4); if (keuze.length < 4) keuze = cat.items.filter(i => i.img && i.t && i.vr !== false).slice(t * 4, t * 4 + 4);
+    const fotos = await Promise.all(keuze.map(async it => { try { const r = await fetch('https://keuzehulp.best/api/shop/beeld/' + encodeURIComponent(it.id) + '/sq.jpg', { signal: AbortSignal.timeout(8000) }); if (!r.ok) return null; const b = Buffer.from(await r.arrayBuffer()); const j = await sharp(b).resize(250, 250, { fit: 'cover' }).jpeg({ quality: 86 }).toBuffer(); return 'data:image/jpeg;base64,' + j.toString('base64'); } catch (e) { return null; } }));
+    const foto = i => hEl('div', { width: 250, height: 250, borderRadius: 22, background: '#ffffff', overflow: 'hidden', position: 'relative', marginLeft: i % 2 ? 18 : 0, marginTop: i > 1 ? 18 : 0 }, [fotos[i] ? { type: 'img', props: { src: fotos[i], width: 250, height: 250, style: { width: 250, height: 250, objectFit: 'cover' } } } : hEl('div', { width: 250, height: 250, background: '#ffffff' }), ...(i === 0 ? [hEl('div', { position: 'absolute', top: 14, right: 14 }, [vink(56, '#111827')])] : [])]);
+    el = hEl('div', { width: W, height: H, background: '#E8F4FD', fontFamily: 'Inter', padding: '0 52px', alignItems: 'center' }, [
+      hEl('div', { width: 380, flexDirection: 'column', paddingRight: 28 }, [
+        hEl('div', { fontSize: 60, fontWeight: 800, color: '#0B0D12', lineHeight: 1.08 }, VL_BEELD[t][0]),
+        hEl('div', { marginTop: 20, fontSize: 32, fontWeight: 500, color: '#0B0D12', lineHeight: 1.3 }, VL_BEELD[t][1])]),
+      hEl('div', { flexDirection: 'column' }, [hEl('div', {}, [foto(0), foto(1)]), hEl('div', {}, [foto(2), foto(3)])])]);
   }
   const png = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: OG_FONTS }).arrayBuffer());
   const out = v === 'icon' ? png : await sharp(png).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
