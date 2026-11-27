@@ -130,3 +130,14 @@ console.log('klaar',h.length,d.projecten.length);
   ok((await D.zetDash(kv,{project:'wam',chat:{naam:'wam-chat',waar:'Tien adressen staan klaar, wacht op de eerste mail.'}})).ok&&!(await D.dashData(kv)).achter.some(x=>x.id==='wam'),'achter weg na stand');
   ok(dg.projecten.some(p=>p.id==='dashboard'),'project dashboard');
   console.log('waar gebleven ok'); }
+
+// te bekijken (27 nov 2026: "Zorg dat dit nooit meer voorkomt bij geen een project"): vraag om ja op posts zonder link = opvallend; met toon = link Bekijk
+{ ok((await D.zetDash(kv,{project:'kadoly',chat:{naam:'kadoly-posts',waar:'Drie posts voor vandaag staan klaar.',wacht:['Ja op de posts van vandaag']}})).ok,'toon zet 1');
+  let dt=await D.dashData(kv);
+  ok(dt.zonderLink.some(x=>x.id==='kadoly')&&dt.opvallend.some(o=>o.naam==='Niet te bekijken'&&o.tekst.includes('Kadoly')),'zonder link opvallend');
+  ok((await D.zetDash(kv,{project:'kadoly',chat:{naam:'kadoly-posts',waar:'Drie posts voor vandaag staan klaar.',wacht:['Ja op de posts van vandaag'],toon:'https://example.com/posts?dag=1'}})).ok,'toon zet 2');
+  dt=await D.dashData(kv); const ht=D.dashHtml(dt);
+  ok(!dt.zonderLink.some(x=>x.id==='kadoly'&&/posts van vandaag/.test(x.tekst))&&dt.wacht.some(w=>w.toon==='https://example.com/posts?dag=1')&&ht.includes('href="https://example.com/posts?dag=1">Bekijk</a>')&&D.bijTekst(dt,'kadoly').includes('Bekijken: https://example.com/posts?dag=1'),'toon link');
+  ok(!(await D.zetDash(kv,{project:'kadoly',chat:{naam:'kadoly-x',waar:'Iets met een slechte link erbij.',toon:'javascript:alert(1)'}})).fout&&(await D.dashData(kv)).projecten.find(p=>p.id==='kadoly').chats.find(c=>c.naam==='kadoly-x').toon==='','toon alleen https');
+  ok(D.bijTekst(dt,'kadoly').includes('Zeg nooit dat je iets niet kunt laten zien'),'regel in bij');
+  console.log('te bekijken ok'); }
