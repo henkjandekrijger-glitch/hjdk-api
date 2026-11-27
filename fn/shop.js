@@ -994,7 +994,7 @@ async function vlBeeld(res, url) {
     const foto = i => hEl('div', { width: 250, height: 250, borderRadius: 22, background: '#ffffff', overflow: 'hidden', position: 'relative', marginLeft: i % 2 ? 18 : 0, marginTop: i > 1 ? 18 : 0 }, [fotos[i] ? { type: 'img', props: { src: fotos[i], width: 250, height: 250, style: { width: 250, height: 250, objectFit: 'cover' } } } : hEl('div', { width: 250, height: 250, background: '#ffffff' }), ...(i === 0 ? [hEl('div', { position: 'absolute', top: 14, right: 14 }, [vink(56, '#111827')])] : [])]);
     el = hEl('div', { width: W, height: H, background: '#E8F4FD', fontFamily: 'Inter', padding: '0 52px', alignItems: 'center' }, [
       hEl('div', { width: 380, flexDirection: 'column', paddingRight: 28 }, [
-        hEl('div', { fontSize: 60, fontWeight: 800, color: '#0B0D12', lineHeight: 1.08 }, VL_BEELD[t][0]),
+        hEl('div', { fontSize: Math.max(...VL_BEELD[t][0].split(' ').map(w => w.length)) > 11 ? 46 : 60, fontWeight: 800, color: '#0B0D12', lineHeight: 1.08 }, VL_BEELD[t][0]), // lange woorden (verlanglijstje) kleiner, zodat ze niet onder de foto's lopen
         hEl('div', { marginTop: 20, fontSize: 32, fontWeight: 500, color: '#0B0D12', lineHeight: 1.3 }, VL_BEELD[t][1])]),
       hEl('div', { flexDirection: 'column' }, [hEl('div', {}, [foto(0), foto(1)]), hEl('div', {}, [foto(2), foto(3)])])]);
   }
