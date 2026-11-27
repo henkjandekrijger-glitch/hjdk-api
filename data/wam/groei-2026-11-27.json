@@ -1,0 +1,181 @@
+{
+  "dag": "2026-11-27",
+  "tijdzone": "America/Curacao",
+  "doel": {
+    "datum": "2026-12-31",
+    "organischeBezoekenPerDag": 1000
+  },
+  "dagen": [
+    {
+      "dag": "2026-11-20",
+      "volledig": false,
+      "bezoeken": 22,
+      "paginaWeergaven": 23,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 22,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-21",
+      "volledig": false,
+      "bezoeken": 26,
+      "paginaWeergaven": 28,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 26,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-22",
+      "volledig": false,
+      "bezoeken": 14,
+      "paginaWeergaven": 16,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 14,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-23",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 13,
+      "botWeergaven": 1,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-24",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 12,
+      "botWeergaven": 14,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-25",
+      "volledig": true,
+      "bezoeken": 315,
+      "paginaWeergaven": 482,
+      "botWeergaven": 125,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 310,
+        "verwijzing": 1,
+        "directOnbekend": 4,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "modal|samen": 1
+      }
+    },
+    {
+      "dag": "2026-11-26",
+      "volledig": true,
+      "bezoeken": 675,
+      "paginaWeergaven": 1150,
+      "botWeergaven": 257,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 662,
+        "verwijzing": 7,
+        "directOnbekend": 6,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "ikook|a": 1,
+        "leger|lknop-b": 2,
+        "leger|nee-blendle": 1
+      }
+    }
+  ],
+  "volledigeDagen": 2,
+  "volledigWeekTotaal": null,
+  "gemiddeldeOrganischVolledigeDagen": 0,
+  "organischeAanmeldratio": null,
+  "gsc": {
+    "gemeten": "2026-11-27",
+    "bekeken": 33,
+    "geindexeerd": 2,
+    "ontdektNietGeindexeerd": 21,
+    "onbekend": 10,
+    "kpn": "onbekend",
+    "ziggo": "ontdekt, momenteel niet geïndexeerd",
+    "klikken": null,
+    "vertoningen": null
+  },
+  "ai": {
+    "naam": "wam-ziggo-20261127",
+    "model": "perplexity/sonar",
+    "gelukt": 1,
+    "vragen": 1,
+    "uitkomst": "Basisantwoord bruikbaar; verdieping met bewijslijst en uitzonderingen."
+  },
+  "aanmelden": {
+    "serverNieuwe26nov": {
+      "ikook": 1,
+      "vasteBlokken": 3,
+      "modal": 0
+    },
+    "organischeRatio": null,
+    "proefRonde": 4,
+    "volgknop": {
+      "aGezien": 53,
+      "bGezien": 53,
+      "aanmeldingen": 0
+    },
+    "besluit": "geen winnaar"
+  },
+  "actieKeuze": {
+    "kandidaten": [
+      "Bestaande Ziggo-URL verdiepen met één concrete vervolgsvraag",
+      "Nieuwe pagina voor elke opzegvariant: overlap en geen ontdekkingswinst",
+      "Externe distributie: vereist gericht eigen aanbod/plaatsingsmandaat, hier geen berichten versturen"
+    ],
+    "gekozen": "Bestaande Ziggo-URL, geen nieuwe zoekingang; GSC-indexstatus als meetbare basis"
+  },
+  "volgendeControle": "2026-12-01"
+}

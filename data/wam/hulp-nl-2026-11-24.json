@@ -163,7 +163,77 @@
       {"vraag": "Moet ik wachten tot het einde van de maand om KPN op te zeggen?", "antwoord": "Na de vaste looptijd kun je volgens ACM ConsuWijzer op ieder moment opzeggen met maximaal één maand opzegtermijn. Die begint direct op de opzegdag. Binnen de vaste looptijd kunnen andere afspraken en kosten gelden."},
       {"vraag": "Wie spreek ik aan als de overstapservice mijn oude abonnement niet stopte?", "antwoord": "Vraag de nieuwe aanbieder om herstel van de beloofde overstap en vergoeding van de extra kosten. ACM ConsuWijzer adviseert ook zelf het oude abonnement snel op te zeggen om verdere kosten te beperken. Bewaar de afspraak en de facturen."}
     ]
+  },
+  "ziggo": {
+    "kop": "Ziggo opgezegd, toch een factuur?",
+    "seoTitel": "Ziggo opzeggen: eindfactuur en apparaten terugsturen | WAM",
+    "titel": "Controleer de einddatum, verrekening en retourlijst",
+    "anker": "na-opzeggen",
+    "bijgewerkt": "2026-11-27",
+    "kort": "Een rekening na opzeggen kan nog een verrekening zijn. Leg de factuur naast je opzegbevestiging.",
+    "antwoord": "Vergelijk de factuurperiode met de bevestigde einddatum. Ziggo brengt verbruik achteraf in rekening en verrekent openstaande kosten en tegoeden op de eindfactuur. Een rekening die volgens de factuuruitleg binnen tien dagen na opzegging volgt, is nog niet de laatste: er volgt een maand later nog een verrekening. Controleer daarnaast de brief of e-mail waarin staat welke geleende apparaten terug moeten.",
+    "actie": {
+      "naam": "Bekijk de officiële Ziggo-factuuruitleg",
+      "url": "https://www.ziggo.nl/klantenservice/abonnement/factuur/uitleg"
+    },
+    "stappenTitel": "Pak deze drie bewijzen erbij",
+    "stappen": [
+      "De opzegbevestiging: noteer de einddatum en welk abonnement of pakketdeel is gestopt.",
+      "De factuur en specificatie: vergelijk periode, verbruik en tegoeden. Vraag Ziggo schriftelijk om uitleg als een post niet aansluit.",
+      "De retourinstructie: controleer welke geleende apparaten worden gevraagd. Bewaar het verzendbewijs tot de ontvangstbevestiging."
+    ],
+    "routes": [
+      {
+        "situatie": "Nog niet opgezegd",
+        "route": "Online of telefonisch opzeggen bij Ziggo",
+        "url": "https://www.ziggo.nl/opzeggen"
+      },
+      {
+        "situatie": "Factuur controleren",
+        "route": "Uitleg en verrekeningen bij Ziggo",
+        "url": "https://www.ziggo.nl/klantenservice/abonnement/factuur/uitleg"
+      },
+      {
+        "situatie": "Apparaten terugsturen",
+        "route": "Actuele retourinstructies en apparatenlijst",
+        "url": "https://www.ziggo.nl/klantenservice/apparaten/terugsturen"
+      }
+    ],
+    "extra": {
+      "kop": "Welke apparaten moeten terug?",
+      "tekst": "Volg de persoonlijke retourlijst van Ziggo. Niet elk oud apparaat hoeft terug; een CI+ Module of smartcard noemt Ziggo expliciet als uitzondering. Ziggo vraagt de betreffende apparaten binnen veertien dagen na wijziging of opzegging terug te sturen. Heb je geen retourdoos, dan mag je een eigen stevige doos met het officiële antwoordnummer gebruiken. Vraag bij een onduidelijke einddatum of retourtermijn meteen om bevestiging."
+    },
+    "noot": "Een latere rekening is op zichzelf geen bewijs van een fout. Binnen de vaste contractperiode kunnen beëindigingskosten spelen. Deze controlelijst bepaalt niet of een afzonderlijke vordering terecht is.",
+    "bronnen": [
+      {
+        "naam": "Ziggo: uitleg over je factuur",
+        "url": "https://www.ziggo.nl/klantenservice/abonnement/factuur/uitleg",
+        "uitleg": "Facturering na opzegging, vooruitbetaald abonnementsgeld, verbruik achteraf en verrekeningen."
+      },
+      {
+        "naam": "Ziggo: apparaten terugsturen",
+        "url": "https://www.ziggo.nl/klantenservice/apparaten/terugsturen",
+        "uitleg": "Persoonlijke retourlijst, termijn, eigen doos, uitzonderingen en verzendbewijs."
+      },
+      {
+        "naam": "Ziggo: abonnement opzeggen",
+        "url": "https://www.ziggo.nl/opzeggen",
+        "uitleg": "Directe opzegroute en mogelijke kosten tijdens de vaste contractperiode."
+      }
+    ],
+    "vragen": [
+      {
+        "vraag": "Ik heb Ziggo opgezegd maar krijg nog een factuur. Is die onterecht?",
+        "antwoord": "Dat volgt niet uit de factuurdatum alleen. Vergelijk de betaalde periode met de bevestigde einddatum en kijk naar verbruik en verrekeningen. Ziggo meldt dat een factuur binnen tien dagen na opzegging nog niet de eindfactuur is."
+      },
+      {
+        "vraag": "Moet ik alle Ziggo-apparaten terugsturen?",
+        "antwoord": "Nee. Controleer de brief of e-mail met de persoonlijke retourlijst. Niet alle oudere apparaten hoeven terug en Ziggo noemt de CI+ Module en smartcard als uitzonderingen. Gebruik de actuele apparatenlijst bij twijfel."
+      },
+      {
+        "vraag": "Wat als ik geen Ziggo-retourdoos heb?",
+        "antwoord": "Volgens Ziggo mag je een eigen stevige doos gebruiken met het officiële retouradres en antwoordnummer. Bewaar het verzendbewijs tot Ziggo de ontvangst bevestigt."
+      }
+    ]
   }
 }
-
-
