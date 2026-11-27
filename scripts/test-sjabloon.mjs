@@ -1,6 +1,6 @@
 // Controle van het nieuwe sjabloon (lib/sjabloon.js): rust, geen grijs, één hoofdknop, geen interne opdracht in beeld.
 // Draai: node scripts/test-sjabloon.mjs
-import { sjabloonHtml, SJ_CSS, kortNaam, zinnen } from '../lib/sjabloon.js';
+import { sjabloonHtml, SJ_CSS, kortNaam, zinnen, zinLijst } from '../lib/sjabloon.js';
 let fout = 0; const ok = (c, m) => { if (!c) { fout++; console.log('FOUT', m); } else console.log('ok  ', m); };
 const basis = { taal: 'nl', host: 'keuzehulp.best', logo: 'keuzehulp', winkel: 'bol', slug: 'vaatwasser', term: 'vaatwasser', h1: 'Welke vaatwasser past bij jou?', title: 'Vaatwasser kiezen', desc: 'x', canonical: 'https://keuzehulp.best/vaatwasser', noindex: true,
   crumbs: [['Keuzehulp', '/keuzehulp'], ['Huishouden', '/keuzehulp/categorie/huishouden'], ['vaatwasser']], bijgewerkt: '2026-11-27', kortKop: 'Onze keuze: Bosch Serie 4.', kort: 'Voor de meeste huishoudens.',
@@ -26,6 +26,8 @@ const zonder = kaal(sjabloonHtml(Object.assign({}, basis, { prods: [], keus: nul
 ok(!/sj-rij/.test(zonder) && !/<table/.test(zonder), 'zonder producten geen lijst, tabel met één keus weg');
 ok(kortNaam('Bosch SMS4HTW00E - Serie 4 - Vaatwasser - Vrijstaand') === 'Bosch SMS4HTW00E', 'korte productnaam');
 ok(zinnen('Eén. Twee. Drie.', 2) === 'Eén. Twee.', 'twee zinnen');
+ok(zinLijst('Meist reicht 1 kWh mit 1.500 bis 2.000 W. Ein Gerät mit 100 W läuft an 1.024 Wh rund 8 Stunden.').length === 2, 'getallen breken geen zin');
+ok(zinnen('Het vermogen ligt tussen 1.200 en 1.700 watt. Kies 4,5 liter.', 1) === 'Het vermogen ligt tussen 1.200 en 1.700 watt.', 'eerste zin met getallen heel');
 const us = sjabloonHtml(Object.assign({}, basis, { taal: 'us', winkel: 'Amazon' }));
 ok(/lang="en"/.test(us) && /See on Amazon/.test(us), 'Engelse teksten op whichtobuy');
 console.log(fout ? fout + ' fout(en)' : 'alles goed'); process.exit(fout ? 1 : 0);
