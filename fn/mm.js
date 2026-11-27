@@ -248,7 +248,7 @@ export default async function handler(req, res) {
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
       const r = await (await import('../lib/cmcamp.js')).gadsInlogLink().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 120) }));
       res.setHeader('cache-control', 'no-store');
-      if (r && r.ok && /^https:\/\/accounts\.google\.com\//.test(String(r.link || ''))) { res.setHeader('location', r.link); return res.status(302).end(); }
+      if (r && r.ok && /^https:\/\/(accounts\.google\.com\/|[a-z0-9.-]+\.vercel\.app\/api\/gads\/auth\/start\?n=[a-f0-9]{32}$)/.test(String(r.link || ''))) { /* de link gaat eerst langs propellerads-mcp (eenmalige nonce), die stuurt door naar Google */ res.setHeader('location', r.link); return res.status(302).end(); }
       return res.status(502).json({ ok: false, fout: (r && r.fout) || 'geen inloglink' });
     }
     if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
