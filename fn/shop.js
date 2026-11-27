@@ -1929,6 +1929,16 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const ua = String(req.headers['user-agent'] || ''); const cron = /vercel-cron/i.test(ua);
       if (!(cron || /\.vercel\.app$/i.test(host) || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET))) return res.status(404).send('Niet gevonden');
       const M = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); const tk = await token(String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || ''), 'https://www.googleapis.com/auth/content');
+      const vormG = url.searchParams.get('vorm'); if (vormG === 'voorstel' || vormG === 'diag') { // taak dxy7ri (27 nov): oorzaak en voorstel voor Henkjan (prijs, merk), alleen lezen; 3 uur bewaard, &vers=1 opnieuw
+        const GV = await import('../lib/gratisvoorstel.js'); const CK = 'kd:gratis:voorstel'; let d = null; if (url.searchParams.get('vers') !== '1') { try { d = await kv.get(CK); } catch (e) {} if (d && Date.now() - d.t > 3 * 3600e3) d = null; }
+        if (!d) { const fouten = []; const vang = (naam, p, leeg) => p.then(x => { if (x && x.fout) fouten.push(naam + ': ' + String(x.fout).slice(0, 80)); return x; }).catch(e => { fouten.push(naam + ': ' + String(e.message || e).slice(0, 80)); return leeg; });
+          const [pr28, dag28, prijs, xml, cat] = await Promise.all([vang('prestaties', M.prestaties(tk, '5876502305', 28), { producten: {} }), vang('per dag', M.prestatiesPerDag(tk, '5876502305', 28), { perDag: {} }), vang('marktprijs', M.prijsAdvies(tk, '5876502305').then(x => Object.assign({}, x, { fout: x.foutBenchmark || null })), { producten: {} }),
+            vang('feed', fetch('https://cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml', { signal: AbortSignal.timeout(25000) }).then(r => r.ok ? r.text() : Promise.reject(new Error('feed ' + r.status))), ''), vang('catalogus', catalog(true), { items: [] })]);
+          const a = GV.analyseer({ prest: pr28.producten || {}, perDag: dag28.perDag || {}, prijs: prijs.producten || {}, feed: GV.leesFeed(xml), cat: (cat && cat.items) || [] });
+          d = { t: Date.now(), at: new Date().toISOString(), fouten, a }; if (!fouten.length) { try { await kv.set(CK, d, { ex: 3 * 3600 }); } catch (e) {} } }
+        res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+        if (vormG === 'diag') return res.status(200).json({ ok: !d.fouten.length, at: d.at, fouten: d.fouten, ...d.a });
+        res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(GV.voorstelHtml(d.a, { at: d.at, fouten: d.fouten })); }
       const [ks, pr] = await Promise.all([M.kanaalStatus(tk, '5876502305').catch(e => ({ fout: String(e.message || e) })), M.prestaties(tk, '5876502305', 7).catch(e => ({ fout: String(e.message || e), producten: {} }))]);
       const g = (ks.perKanaal || {}).FREE_LISTINGS || { goed: 0, wacht: 0, af: 0 }; const mel = ks.meldingenGratis || [];
       const telM = re => mel.filter(([k]) => re.test(k)).reduce((a, [, n]) => a + n, 0);
