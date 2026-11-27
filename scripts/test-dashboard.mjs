@@ -78,3 +78,23 @@ console.log('klaar',h.length,d.projecten.length);
   ok(O.outputTekst(dd.output,'kdp').includes('[mis] PIT BOSS EXACT'),'output tekst los');
   console.log(process.exitCode?'output FOUT':'output ok');
 }
+
+// campagnestand (Henkjan 27 nov 2026: "Ik merk dat dashboard niet op de hoogte is van campagnes laatste status zorg daarvoor")
+{ const C=await import('../lib/campstand.js'); const nu=Date.parse('2026-11-27T12:00:00Z');
+  const pa={budget:{dag:'2026-11-27',grens:100,saldo:2.1,kosten:2.1,omzet:0,stand:'ok',projecten:{WAM:{kosten:0.5,saldo:0.5,test:true,dagen:8,grens:4},'SHOP-LUS':{kosten:0.63,saldo:0.63,test:true,dagen:30,open:'x'},OVERIG:{kosten:0.94,saldo:0.94,test:true}},perNet:{pa:{kosten:2.1,omzet:0,gemeld:'2026-11-27T11:43:45Z',oud:false},mondiad:{kosten:0,omzet:0,oud:false}},
+    winst:[{net:'pa',project:'WAM',cid:'12190793',naam:'WAM INCASSO rekenhulp NL',kosten:0.17,omzet:0},{net:'pa',project:'WAM',cid:'12190794',naam:'WAM ANP fotoclaim NL',kosten:0.13,omzet:0},{net:'pa',project:'OVERIG',cid:'12196034',naam:'[In-Page] KADOLYWIN ZEGEL spaarkaart',kosten:0.85,omzet:0},{net:'pa',project:'SHOP-LUS',cid:'12190846',naam:'[In-Page] SHOP-LUS PAKKET Bureau set',kosten:0.42,omzet:0},{net:'pa',project:'OVERIG',cid:'12182934',naam:'WHICHTOBUY POWER STATION CHAT US',kosten:0.09,omzet:0},{net:'pa',project:'OVERIG',cid:'1',naam:'ONBEKEND iets',kosten:0.05,omzet:0}]},slots:{gebruikt:7,grens:100},tempo:[{t:'2026-11-26T19:57:18Z',cid:'12190846',naam:'[In-Page] SHOP-LUS PAKKET Bureau set winactie',waarom:'tempo'}]};
+  const uur={netten:{propeller:{kliks:221,aangekomen:207,pct:93.7},mondiad:{kliks:0,aangekomen:0,pct:null}},eigen:{projecten:{todayin:{kliks:1894,aanmelding:48,koop:0},'todayin|NL':{kliks:426,aanmelding:7},shop:{kliks:223,aanmelding:0,koop:1}}}};
+  const c=C.campBouw(pa,uur,nu,nu);
+  ok(C.campProject('TODAYIN CURACAO TIER1 NL','TODAYIN')==='curacao'&&C.campProject('x','SHOP-LUS')==='kadoly'&&C.campProject('ONBEKEND','OVERIG')==='campagnes','camp project');
+  ok(c.projecten.wam.campagnes.length===2&&c.projecten.wam.kosten===0.3&&c.projecten.kadoly.campagnes.length===2&&c.projecten.kadoly.kosten===1.27&&c.projecten.keuzehulpen.kosten===0.09&&c.projecten.campagnes.campagnes.length===1,'camp per project');
+  ok(c.projecten.curacao.kliks===1894&&c.projecten.curacao.aanmelding===48&&c.projecten.kadoly.koop===1,'camp clickmind');
+  const rw=C.campRegels(c,'wam'), rc=C.campRegels(c,'campagnes',{wam:'We Are Many',kadoly:'Kadoly'});
+  ok(rw[0]==='Vandaag 2 campagnes met kosten: $0,30, gegarandeerde omzet $0,00.'&&rw[1].startsWith('Testbudget WAM: $0,50 van $4,00 vandaag, testdag 8')&&rw.some(x=>x.includes('12190793'))&&rw[rw.length-1]==='Stand van 27 nov 12:00 UTC.','camp regels wam '+rw[0]);
+  ok(rc[0].startsWith('Vandaag: kosten $2,10')&&rc[1].startsWith('Per netwerk: PropellerAds $2,10')&&rc[2].includes('Kadoly $1,27 (2)')&&rc[2].includes('We Are Many $0,30 (2)')&&rc.some(x=>x.includes('207 van 221 kliks (93,7%)'))&&rc.some(x=>x.startsWith('Starts PropellerAds: 7 van 100')),'camp regels totaal');
+  ok(C.campRegels(c,'tk').length===0&&C.campRegels(null,'kdp',{},'Amazon Ads: x').length===1&&C.campOpvallend(c)===null&&C.campOpvallend(null)===null,'camp leeg');
+  ok(C.campOpvallend(C.campBouw(pa,uur,nu-31*60e3,nu)).tekst.includes('ouder dan 30 minuten')&&C.campOpvallend(C.campBouw({budget:{...pa.budget,stand:'alarm'}},uur,nu,nu)).tekst.includes('Budgetwacht staat op alarm'),'camp opvallend');
+  const kvc={get:async k=>k==='mm:dash:camp'?{t:Date.now()-60e3,pa}:kv.get(k),set:kv.set,raw:kv.raw}; const dc=await D.dashData(kvc); const pw=dc.projecten.find(p=>p.id==='wam'), pc=dc.projecten.find(p=>p.id==='campagnes');
+  ok(dc.campagnes&&dc.campagnes.budget.kosten===2.1&&pw.campagnes.regels.length>=3&&pc.campagnes.regels[0].startsWith('Vandaag: kosten $2,10'),'camp in dashData');
+  ok(D.dashHtml(dc).includes('<h3>Campagnes nu</h3>')&&D.dashTekst(dc,'wam').includes('Campagnes: Vandaag 2 campagnes met kosten')&&!/[\u2014\u2013]/.test(D.dashHtml(dc)),'camp html en tekst');
+  ok(!(await D.dashData(kv)).campagnes,'camp zonder bron');
+  console.log('campagnestand ok'); }
