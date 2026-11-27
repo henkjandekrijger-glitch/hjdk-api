@@ -43,9 +43,9 @@ B = {}
 
 B['B09SWQ8F3S'] = ("""
 body{background:radial-gradient(ellipse at 50% 62%,#5b2bd6 0%,#2a0f73 38%,#0d0433 75%)}
-.t1{top:70px;font:400 150px/0.9 Bebas;color:#ffd23f;letter-spacing:4px}
-.t2{top:215px;font:400 94px/1 Bebas;color:#fff;letter-spacing:3px}.t2 i{font:700 40px Oswald;font-style:normal;color:#ffd23f;vertical-align:28px;margin-right:12px}
-.sub{top:335px;font:500 34px/1.25 Oswald;color:#fff;letter-spacing:.5px;padding:0 100px}
+.t1{top:88px;font:400 136px/0.9 Bebas;color:#ffd23f;letter-spacing:4px}
+.t2{top:222px;font:400 94px/1 Bebas;color:#fff;letter-spacing:3px}.t2 i{font:700 40px Oswald;font-style:normal;color:#ffd23f;vertical-align:28px;margin-right:12px}
+.sub{top:340px;font:500 34px/1.25 Oswald;color:#fff;letter-spacing:.5px;padding:0 100px}
 .sub b{color:#ffd23f}
 .atoom{left:200px;top:470px;width:600px;height:600px}
 .cta{bottom:150px;left:120px;right:120px;background:#ffd23f;color:#1b0a55;font:700 30px/1.15 Oswald;padding:18px 20px;border-radius:14px;text-align:center;text-transform:uppercase;letter-spacing:.5px}
@@ -70,8 +70,8 @@ body{background:radial-gradient(ellipse at 50% 62%,#5b2bd6 0%,#2a0f73 38%,#0d043
 
 B['B09XT6QR79'] = ("""
 body{background:#232a4d}
-.t1{top:80px;left:80px;font:400 220px/.86 Bebas;color:#ffd23f;letter-spacing:2px}
-.huis{left:700px;top:60px;width:230px}
+.t1{top:105px;left:80px;font:400 220px/.86 Bebas;color:#ffd23f;letter-spacing:2px}
+.huis{left:700px;top:80px;width:230px}
 .lijn{top:560px;left:80px;width:840px;height:10px;background:#ffd23f}
 .t2{top:610px;left:80px;font:400 104px/.95 Bebas;color:#fff;letter-spacing:1px}.t2 b{color:#ffd23f;font-weight:400}
 .t3{top:835px;left:80px;font:700 50px/1.1 Oswald;color:#3ee6a8;text-transform:uppercase}
@@ -119,7 +119,7 @@ B['B0B5KV79N1'] = (PERK + """
 
 B['B0DDBTXC9J'] = (PERK + """
 .t0{top:80px;font:700 62px Cinzel;color:#f4d27a;letter-spacing:2px}
-.t1{top:150px;font-size:128px}.sub{top:330px}.ed{bottom:150px}.uitg{bottom:80px}
+.t1{top:150px;font-size:118px}.sub{top:330px}.ed{bottom:150px}.uitg{bottom:80px}
 """, f"""
 <div class="abs c t0">THE DEFINITIVE</div>
 <div class="abs c t1">APOCRYPHA</div>
@@ -134,15 +134,15 @@ B['B0CHL3MH5Q'] = ("""
 body{background:#0b0b0b}
 .foto{left:0;top:560px;width:1000px;height:440px;background:url(%s) center/cover no-repeat}
 .foto:after{content:'';position:absolute;inset:0;background:linear-gradient(#0b0b0b 0%%,rgba(11,11,11,0) 25%%,rgba(11,11,11,0) 75%%,#0b0b0b 100%%)}
-.t0{top:50px;font:400 100px/1 Bebas;color:#fff;letter-spacing:3px}
-.t1{top:130px;font:400 260px/.9 Bebas;color:#ff7a00;letter-spacing:4px;background:linear-gradient(#ffb000,#ff5a00);-webkit-background-clip:text;color:transparent}
-.t2{top:350px;font:400 150px/1 Bebas;color:#fff;letter-spacing:5px}
-.sub{top:508px;font:700 30px/1.25 Oswald;color:#ffb000;text-transform:uppercase;padding:0 90px;text-shadow:0 2px 8px #000}
+.t0{top:72px;font:400 100px/1 Bebas;color:#fff;letter-spacing:3px}
+.t1{top:150px;font:400 260px/.9 Bebas;color:#ff7a00;letter-spacing:4px;background:linear-gradient(#ffb000,#ff5a00);-webkit-background-clip:text;color:transparent}
+.t2{top:368px;font:400 150px/1 Bebas;color:#fff;letter-spacing:5px}
+.sub{top:522px;font:700 30px/1.25 Oswald;color:#ffb000;text-transform:uppercase;padding:0 90px;text-shadow:0 2px 8px #000}
 .badge{left:60px;top:880px;width:190px;height:190px;background:conic-gradient(#ff3b3b,#ffb000,#ffe600,#3ad15a,#2fa7ff,#8a4dff,#ff3bb0,#ff3b3b);box-shadow:0 0 0 8px #0b0b0b}
 .badge div{width:146px;height:146px;border-radius:50%%;background:#0b0b0b;display:flex;flex-direction:column;justify-content:center;color:#fff}
 .badge b{font:400 50px Bebas;color:#ffb000}.badge span{font:700 19px/1.1 Oswald}
-.cta{bottom:120px;left:70px;right:70px;background:#ff5a00;color:#fff;font:400 54px/1 Bebas;letter-spacing:2px;padding:18px;text-align:center;border-radius:10px}
-.naam{bottom:45px;right:70px;font:400 52px Bebas;color:#fff;letter-spacing:3px}
+.cta{bottom:150px;left:70px;right:70px;background:#ff5a00;color:#fff;font:400 54px/1 Bebas;letter-spacing:2px;padding:18px;text-align:center;border-radius:10px}
+.naam{bottom:72px;right:70px;font:400 52px Bebas;color:#fff;letter-spacing:3px}
 """ % img64(D / 'crop/griddle4x.png'), """
 <div class="abs foto"></div>
 <div class="abs c t0">THE OUTDOOR</div>
@@ -165,15 +165,15 @@ def raster(kleur, letters, top, h):
 
 B['B0CZRWNZBB'] = ("""
 body{background:#ff7fae}
-.grid{left:20px;right:20px;top:120px;display:grid;grid-template-columns:repeat(11,1fr);font:600 40px/1.55 Fredoka;color:#ffb3cf;text-align:center}
-.kop{top:0;left:0;right:0;height:110px;background:#e8467f;display:flex;align-items:center;justify-content:center;font:400 78px Bebas;color:#fff;letter-spacing:16px}
-.kaart{left:95px;right:95px;top:175px;height:690px;background:#e8467f;border:10px solid #fff;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.kaart div{font:400 205px/.86 Bebas;color:#fff;letter-spacing:4px;text-align:center}
-.tag{top:890px;font:700 34px/1.2 Oswald;color:#7a0f3a;text-transform:uppercase;letter-spacing:1px}
-.tulp{left:0;right:0;bottom:90px;height:230px}
-.badge{right:30px;top:770px;width:190px;height:190px;transform:rotate(8deg);background:#fff;color:#e8467f;box-shadow:0 0 0 8px #e8467f}
+.grid{left:72px;right:72px;top:180px;display:grid;grid-template-columns:repeat(11,1fr);font:600 40px/1.55 Fredoka;color:#ffb3cf;text-align:center}
+.kop{top:0;left:0;right:0;height:175px;padding-top:62px;background:#e8467f;display:flex;align-items:center;justify-content:center;font:400 78px Bebas;color:#fff;letter-spacing:16px}
+.kaart{left:95px;right:95px;top:225px;height:650px;background:#e8467f;border:10px solid #fff;border-radius:28px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.kaart div{font:400 195px/.86 Bebas;color:#fff;letter-spacing:4px;text-align:center}
+.tag{top:893px;font:700 34px/1.2 Oswald;color:#7a0f3a;text-transform:uppercase;letter-spacing:1px}
+.tulp{left:0;right:0;bottom:150px;height:200px}
+.badge{right:60px;top:770px;width:190px;height:190px;transform:rotate(8deg);background:#fff;color:#e8467f;box-shadow:0 0 0 8px #e8467f}
 .badge b{font:400 82px Bebas}.badge span{font:700 22px Oswald}
-.voet{bottom:0;left:0;right:0;height:90px;background:#e8467f;display:flex;align-items:center;justify-content:center;font:400 44px Bebas;color:#fff;letter-spacing:6px}
+.voet{bottom:0;left:0;right:0;height:155px;padding-bottom:62px;background:#e8467f;display:flex;align-items:center;justify-content:center;font:400 44px Bebas;color:#fff;letter-spacing:6px}
 """, f"""
 <div class="abs grid">{raster(0,0,0,16)}</div>
 <div class="abs kop">LARGE PRINT</div>
@@ -186,14 +186,14 @@ body{background:#ff7fae}
 
 B['B0D5375859'] = ("""
 body{background:#ffe600}
-.t1{top:40px;font:400 290px/.9 Bebas;color:#2f5fd0;letter-spacing:6px;-webkit-text-stroke:6px #0d2a73}
-.t2{top:300px;font:400 205px/.88 Bebas;color:#fff;-webkit-text-stroke:7px #111;letter-spacing:4px}
-.jaar{top:680px;left:70px;font:400 150px Bebas;color:#2f5fd0;-webkit-text-stroke:4px #0d2a73}
-.drie{right:0;top:650px;width:400px;height:200px;background:#9b3fc9;border-radius:100px 0 0 100px;display:flex;align-items:center;justify-content:center;font:400 120px Bebas;color:#fff}
-.lijst{left:70px;right:70px;top:880px;display:flex;gap:14px}
+.t1{top:110px;font:400 260px/.9 Bebas;color:#2f5fd0;letter-spacing:6px;-webkit-text-stroke:6px #0d2a73}
+.t2{top:345px;font:400 205px/.88 Bebas;color:#fff;-webkit-text-stroke:7px #111;letter-spacing:4px}
+.jaar{top:700px;left:70px;font:400 150px Bebas;color:#2f5fd0;-webkit-text-stroke:4px #0d2a73}
+.drie{right:0;top:680px;width:400px;height:200px;background:#9b3fc9;border-radius:100px 0 0 100px;display:flex;align-items:center;justify-content:center;font:400 120px Bebas;color:#fff}
+.lijst{left:70px;right:70px;top:895px;display:flex;gap:14px}
 .lijst div{flex:1;background:#111;color:#ffe600;border-radius:14px;padding:16px 6px;text-align:center;font:700 22px/1.1 Oswald;text-transform:uppercase}
 .lijst b{display:block;font:400 60px Bebas;color:#fff}
-.voet{bottom:0;left:0;right:0;height:120px;background:#2f5fd0;display:flex;align-items:center;justify-content:center;font:400 54px Bebas;color:#fff;letter-spacing:7px}
+.voet{bottom:0;left:0;right:0;height:160px;padding-bottom:58px;background:#2f5fd0;display:flex;align-items:center;justify-content:center;font:400 54px Bebas;color:#fff;letter-spacing:7px}
 """, """
 <div class="abs c t1">9000</div>
 <div class="abs c t2">WORD<br>SEARCH</div>
@@ -205,17 +205,17 @@ body{background:#ffe600}
 
 B['B0D3KBF8MJ'] = ("""
 body{background:linear-gradient(#1eb6e6 0%,#7fd8f5 55%,#bff0ff 100%)}
-.t0{top:50px;font:400 92px/1 Bebas;color:#fff;letter-spacing:3px}
-.t1{top:140px;font:400 250px/.85 Bebas;color:#ffe600;-webkit-text-stroke:5px #0a5d86}
-.t2{top:360px;font:400 92px Bebas;color:#fff;letter-spacing:4px}
-.t3{top:450px;font:400 200px/.9 Bebas;color:#ffe600;-webkit-text-stroke:5px #0a5d86;letter-spacing:3px}
-.t4{top:625px;font:400 70px Bebas;color:#fff;letter-spacing:16px}
+.t0{top:74px;font:400 92px/1 Bebas;color:#fff;letter-spacing:3px}
+.t1{top:162px;font:400 250px/.85 Bebas;color:#ffe600;-webkit-text-stroke:5px #0a5d86}
+.t2{top:380px;font:400 92px Bebas;color:#fff;letter-spacing:4px}
+.t3{top:468px;font:400 200px/.9 Bebas;color:#ffe600;-webkit-text-stroke:5px #0a5d86;letter-spacing:3px}
+.t4{top:642px;font:400 70px Bebas;color:#fff;letter-spacing:16px}
 .zee{left:0;right:0;bottom:0;height:420px}
-.cta{left:90px;right:90px;top:730px;background:#0a5d86;color:#fff;border-radius:14px;padding:16px;text-align:center;font:700 31px/1.2 Oswald;text-transform:uppercase}
+.cta{left:90px;right:90px;top:745px;background:#0a5d86;color:#fff;border-radius:14px;padding:16px;text-align:center;font:700 31px/1.2 Oswald;text-transform:uppercase}
 .cta b{color:#ffe600}
-.badge{right:60px;top:880px;width:180px;height:180px;background:#ffe600;color:#0a5d86;box-shadow:0 0 0 7px #fff}
+.badge{right:75px;top:895px;width:180px;height:180px;background:#ffe600;color:#0a5d86;box-shadow:0 0 0 7px #fff}
 .badge b{font:400 72px Bebas}.badge span{font:700 20px Oswald}
-.naam{bottom:40px;font:400 50px Bebas;color:#fff;letter-spacing:6px}
+.naam{bottom:76px;font:400 50px Bebas;color:#fff;letter-spacing:6px}
 """, """
 <svg class="abs zee" viewBox="0 0 1000 420" preserveAspectRatio="none"><path d="M0 170 Q125 90 250 170 T500 170 T750 170 T1000 170 V420 H0Z" fill="#2a9fd6"/><path d="M0 250 Q125 175 250 250 T500 250 T750 250 T1000 250 V420 H0Z" fill="#0a7fb8"/><path d="M0 330 Q125 265 250 330 T500 330 T750 330 T1000 330 V420 H0Z" fill="#0a5d86"/></svg>
 <div class="abs c t0">CALMING THE STORM</div>
@@ -256,7 +256,7 @@ body:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.18)}
 .hex .c{font:400 110px/.95 Bebas;color:#fff;letter-spacing:2px}
 .hex .d{font:400 34px/1.25 Playfair;font-style:italic;color:#8dff3a;margin-top:18px}
 .ed{top:930px;left:300px;right:300px;background:#8dff3a;color:#0b0b0b;font:400 50px Bebas;letter-spacing:3px;padding:6px;border-radius:40px;text-align:center}
-.rib{bottom:0;left:0;right:0;height:140px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;font:400 72px Bebas;color:#fff;letter-spacing:8px}
+.rib{bottom:0;left:0;right:0;height:175px;padding:0 80px 45px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;font:400 60px Bebas;color:#fff;letter-spacing:5px;white-space:nowrap}
 .rib b{color:#8dff3a;font-weight:400;margin:0 18px}
 """ % img64(D / 'crop/B0DPSS16X3_4x.jpg'), f"""
 <div class="abs ring"></div><div class="abs hex"><div class="a">{sub_boven}</div><div class="b">{t1}</div><div class="c">{t2}</div><div class="d">{onder}</div></div>
@@ -283,21 +283,21 @@ B['B0BFV4C31K'] = (B['B0BFV4C31K'][0].split('body{background:url(')[0] + 'body{b
 TRIM['1080901272'] = (6, 9)
 B['1080901272'] = ("""
 body{background:radial-gradient(ellipse at 50%% 70%%,#123a6b 0%%,#0a1f3d 45%%,#050f22 100%%)}
-.t0{top:70px;font:700 54px Oswald;color:#9fd3ff;letter-spacing:10px}
-.t1{top:140px;font:400 250px/.86 Bebas;color:#fff;letter-spacing:3px}
-.t2{top:575px;font:400 96px Bebas;color:#4fb8ff;letter-spacing:6px}
+.t0{top:98px;font:700 54px Oswald;color:#9fd3ff;letter-spacing:10px}
+.t1{top:165px;font:400 250px/.86 Bebas;color:#fff;letter-spacing:3px}
+.t2{top:595px;font:400 96px Bebas;color:#4fb8ff;letter-spacing:6px}
 .lijn{left:120px;right:120px;height:4px;background:#d9b44a}
-.sub{top:700px;font:500 34px/1.3 Oswald;color:#fff;padding:0 90px}
-.brein{left:60px;right:60px;top:800px;height:430px;background:url(%s) center/cover no-repeat;-webkit-mask-image:radial-gradient(ellipse at center,#000 55%%,transparent 75%%)}
+.sub{top:716px;font:500 34px/1.3 Oswald;color:#fff;padding:0 100px}
+.brein{left:60px;right:60px;top:815px;height:415px;background:url(%s) center/cover no-repeat;-webkit-mask-image:radial-gradient(ellipse at center,#000 55%%,transparent 75%%)}
 .cta{left:80px;right:80px;top:1250px;background:#4fb8ff;color:#050f22;font:700 32px/1.2 Oswald;padding:18px;border-radius:12px;text-align:center;text-transform:uppercase}
-.badge{right:46px;top:760px;width:180px;height:180px;background:#d9b44a;color:#050f22;box-shadow:0 0 0 7px #050f22,0 0 0 11px #d9b44a;transform:rotate(8deg)}
+.badge{right:80px;top:770px;width:180px;height:180px;background:#d9b44a;color:#050f22;box-shadow:0 0 0 7px #050f22,0 0 0 11px #d9b44a;transform:rotate(8deg)}
 .badge b{font:400 70px Bebas}.badge span{font:700 21px Oswald}
-.naam{bottom:52px;font:500 40px Oswald;color:#fff;letter-spacing:10px}
+.naam{bottom:105px;font:500 40px Oswald;color:#fff;letter-spacing:10px}
 """ % img64(D / 'crop/analyze_brein.jpg'), """
 <div class="abs c t0">HOW TO</div>
 <div class="abs c t1">ANALYZE<br>PEOPLE</div>
 <div class="abs c t2">WITH PSYCHOLOGY</div>
-<div class="abs lijn" style="top:683px"></div>
+<div class="abs lijn" style="top:700px"></div>
 <div class="abs c sub">The ultimate guide to speed reading people through body language and behavioral psychology</div>
 <div class="abs brein"></div>
 <div class="badge"><b>2027</b><span>EDITION</span></div>

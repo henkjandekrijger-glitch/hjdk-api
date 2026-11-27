@@ -92,7 +92,7 @@ def achter_html(a, Win, Hin):
 ul{{list-style:none;font:500 46px/1.25 Oswald}}
 li{{display:flex;gap:24px;align-items:flex-start;margin:0 0 30px}}li i{{font-style:normal;flex:0 0 60px;height:60px;border-radius:50%;background:{th[3]};color:{th[4]};display:flex;align-items:center;justify-content:center;font:700 36px Inter}}
 .cta{{background:{th[3]};color:{th[4]};border-radius:16px;padding:28px 32px;font:700 46px/1.15 Oswald;text-transform:uppercase}}
-.noot{{left:{.125*s+70}px;width:{W-.125*s-70-2.7*s}px;bottom:{.125*s+.35*s}px;font:500 26px/1.35 Inter;color:{th[2]}}}
+.noot{{left:{.125*s+70}px;width:{W-.125*s-70-2.7*s}px;bottom:{.125*s+.47*s}px;font:500 26px/1.35 Inter;color:{th[2]}}}
 """
     body = f'<div class="vak"><div class="kop">{kop}</div><ul>{vink}</ul><div class="cta">{cta}</div></div>' + (f'<div class="abs noot">{noot}</div>' if noot else '')
     return f"<!doctype html><html><head><meta charset=utf-8><style>{voor.FONTS}{voor.BASE % (W, H)}{css}</style></head><body>{body}</body></html>", W, H
@@ -102,8 +102,8 @@ def rug_html(a, rug_in, Hin):
     H = 1000; W = max(4, round(1000 * rug_in / Hin))
     tekst = ''
     if k[3] >= 79 and k[5]:
-        fs = min(int(W * .55), 60)
-        tekst = f'<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg);white-space:nowrap;font:400 {fs}px Bebas;letter-spacing:2px;color:{th[7]}">{k[5]} <span style="opacity:.85;margin-left:{fs}px">2027 · {k[4].upper()}</span></div>'
+        fs = min(int(W * .4), 60)
+        tekst = f'<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(90deg);white-space:nowrap;line-height:1;font:400 {fs}px Bebas;letter-spacing:2px;color:{th[7]}">{k[5]} <span style="opacity:.85;margin-left:{fs}px">2027 · {k[4].upper()}</span></div>'
     bg = th[6]
     return f"<!doctype html><html><head><meta charset=utf-8><style>{voor.FONTS}{voor.BASE % (W, H)}body{{background:{bg}}}</style></head><body>{tekst}</body></html>", W, H
 

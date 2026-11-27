@@ -14,6 +14,8 @@ Dus: elke stap die het rendement maximaliseert doe je zelf en meld je daarna (bi
 
 Publish-knoppen in KDP (Publish Your Paperback/Hardcover/Kindle eBook) klikt Claude niet: die klik wordt geblokkeerd (13 nov opnieuw geprobeerd voor de Teens-categorieen). Zet alles klaar als concept en stuur Henkjan de link naar de prijspagina; herinner hem in elke ronde zolang iets wacht.
 
+- 27 nov 2026 LES KDP-DRUKKEURING: tekst op de omslag minstens 0,375 in van elke snijrand (controle kdp/bouw/omslag2027/veilig.py), achtergronden die tot de rand lopen alleen met 'Bleed' en een binnenwerk van trim + 0,125 x 0,25 in. Een afgekeurde update laat de live versie staan, maar prijs en omslag blijven dan hangen. Oude ongepubliceerde titels (2019-2022) niet heractiveren: geen vraag (Keepa) en elke heractivering is een nieuwe inhoudsreview.
+
 ## Schema (UTC; Curacao = UTC-4)
 
 | Ronde | UTC | Curacao | Soort |
