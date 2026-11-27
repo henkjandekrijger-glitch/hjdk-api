@@ -372,27 +372,45 @@ export default async function handler(req, res) {
         const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean);
         if (!given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
         const D = await import('../lib/dashboard.js'); const b = leesJson(req.body) || {};
-        return res.status(200).json(await D.zetDash(kv, b, b.wie || 'project')); }
+        const T = await import('../lib/taken.js'); // de takenlijst (27 nov 2026): zelfde ingang, eigen module
+        return res.status(200).json(T.isTaken(b) && !b.project ? await T.zetTaken(kv, b, b.wie || 'project') : await D.zetDash(kv, b, b.wie || 'project')); }
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; if (b.leerprompt == null) return res.status(400).json({ ok: false, fout: 'leerprompt ontbreekt' }); const u = await D.zetLeerprompt(kv, b.leerprompt, 'Henkjan (dashboard)'); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('leerprompt') === 'vorige') { const u = await D.vorigeLeerprompt(kv); if (!u.ok) return res.status(400).json(u); }
       if (q('vorm') === 'skill') { const t = D.skillTekst(String(q('naam') || '')); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden; overzicht: ' + D.SKILLS.map(s => s.naam).join(', ')); }
       if (q('vorm') === 'leerprompt') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((await D.leesLeerprompt(kv)).tekst + '\n'); }
-      if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
+      const T = await import('../lib/taken.js'); // de takenlijst, Henkjans beslissingen en gewoontes (27 nov 2026)
+      if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? (T.isTaken(b) && !b.project ? await T.zetTaken(kv, b, q('wie') || '') : await D.zetDash(kv, b, q('wie') || '')) : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
+      // wat Henkjan zelf op de pagina doet: taak typen (formulier ?taak=), antwoorden, opruimen, gewoonte aan of uit (?doe=<JSON>); daarna terug naar de pagina met een melding
+      if (q('taak') || q('doe')) { let b = null;
+        if (q('taak')) b = { taak: { tekst: q('taak'), project: q('p'), account: q('acc'), zwaarte: q('zw') } };
+        else { try { b = JSON.parse(q('doe')); } catch (e) {} if (b && b.antwoord && typeof b.antwoord === 'object' && q('tekst')) b.antwoord.tekst = q('tekst'); }
+        const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan') : { ok: false, fout: 'onbekende actie' };
+        const m = !u.ok ? { f: String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
+        res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + (b && b.gewoonte ? '#geleerd' : '#taken')); return res.end(); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
       if (q('archiveer') || q('terug')) { const id = q('archiveer') || q('terug'); const u = await D.zetDash(kv, { project: id, archief: !!q('archiveer') }, 'dashboard'); if (!u.ok) return res.status(400).json(u); melding = { id, aan: !!q('archiveer') }; }
       const d = await D.dashData(kv, { dagen: q('dagen') || q('periode') });
       if (q('vorm') === 'json') return res.status(200).json(d);
       if (q('vorm') === 'output') { const O = await import('../lib/output.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(d.output ? O.outputTekst(d.output, q('project') || '') + '\n' : 'geen output\n'); }
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      if (q('vorm') === 'taken' || q('vorm') === 'vangnet' || q('vorm') === 'aanzetten') { res.setHeader('content-type', 'text/plain; charset=utf-8'); const acc = String(q('account') || ''); return res.status(200).send(q('vorm') === 'taken' ? T.takenTekst(d.taken, acc, d, String(q('taak') || '')) : q('vorm') === 'vangnet' ? T.vangnetTekst(d.taken, acc, d) : T.aanzetTekst(acc)); } // werkwijze voor de oppakker en het vangnet (geplande taken per account)
       if (q('vorm') === 'bij') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.bijTekst(d, String(q('project') || ''))); } // kort: waar Henkjan was gebleven, voor elke beurt van elke chat
       if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
       if (melding) { const a = d.archief.find(x => x.id === melding.id), p = d.projecten.find(x => x.id === melding.id); melding = melding.aan ? { tekst: ((a && a.naam) || melding.id) + ' is gearchiveerd en staat niet meer in het overzicht.', terug: melding.id } : { tekst: ((p && p.naam) || melding.id) + ' staat weer in het overzicht.' }; }
       // waar Verder opent (Henkjan 27 nov 2026: "kiezen tussen chatgpt , claude browser of claude desktop"): ?ai=<keuze> zet het cookie dashai voor dit toestel
       const aiQ = String(q('ai') || ''), aiC = (String(req.headers.cookie || '').match(/(?:^|; )dashai=([a-z]+)/) || [])[1] || '';
       if (D.isAi(aiQ)) res.setHeader('set-cookie', 'dashai=' + aiQ + '; Max-Age=31536000; Path=/; SameSite=Lax; Secure');
-      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding, D.isAi(aiQ) ? aiQ : aiC)); }
+      res.setHeader('content-type', 'text/html; charset=utf-8');
+      if (q('vorm') === 'oud') return res.status(200).send(D.dashHtml(d, melding, D.isAi(aiQ) ? aiQ : aiC)); // het vorige dashboard: leerprompt wijzigen, skills, archief
+      // het ene overzicht met de takenlijst (Henkjan 27 nov 2026: "Ja" op het ontwerp); melding na een tik op de pagina
+      const MELD = { taak: 'Staat in je lijst. Een agent pakt het op.', antw: 'Je antwoord is doorgegeven.', weg1: 'Weggehaald.', terug: 'Teruggezet.', gewoon: 'Aangepast.' }; let meld = null;
+      if (melding) meld = { tekst: melding.tekst, link: melding.terug ? '/dashboard?terug=' + encodeURIComponent(melding.terug) : '', linkTekst: 'Zet terug' };
+      else if (q('f')) meld = { tekst: 'Niet gelukt: ' + String(q('f')).slice(0, 200) };
+      else if (q('m') === 'weg') { const ids = String(q('ids') || '').split(',').filter(Boolean).slice(0, 80); meld = { tekst: ids.length + ' opgeruimd.', terug: ids }; }
+      else if (MELD[q('m')]) meld = { tekst: MELD[q('m')] };
+      const O = await import('../lib/overzicht.js'); return res.status(200).send(O.overzichtHtml(d, { ai: D.isAi(aiQ) ? aiQ : aiC, melding: meld })); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }
