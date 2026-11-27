@@ -177,5 +177,16 @@
     "richting": "minder",
     "bron": "Clickmind-geheugen 27 nov 2026 (vergelijking binnen de eigen campagne, campagnes 12186810, 12186814, 12186816, 12186818, 12190846); voorstel kadoly-zonder-prijs vervallen omdat die campagnes al uit stonden",
     "sterkte": 6
+  },
+  {
+    "id": "propeller-haak-bewijs",
+    "les": "PropellerAds: de haak nieuwsgierig (de meest gebruikte) haalt in ruim 300 advertenties 3 tot 7% minder conversies dan verwacht; bewijs (+22%) en angst (+11%) doen het beter. Vervang bij elke ochtendkopie de zwakste nieuwsgierig-advertenties door bewijs- of angst-varianten, zet ze eerst op een voorstel-link voor Henkjan en meet ze als tweeling.",
+    "media": [
+      "propeller"
+    ],
+    "doelen": "alle",
+    "bron": "Eigen cijfers Clickmind-geheugen 27 nov 2026 (13.483 PropellerAds-advertenties, 1 aug t/m 26 nov) en Henkjan 27 nov 2026: \"Ja doe 1-3\"",
+    "sterkte": 3,
+    "vast": false
   }
 ]

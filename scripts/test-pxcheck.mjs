@@ -15,4 +15,17 @@ const r = await P.radarRonde(kv, {}, async () => ({ ok: true, json: async () => 
 ok(r.ok && r.providers === 1, 'Radar: botaandeel per provider uit de steekproef');
 const st = await P.bronnenStand(kv); ok(st.find(b => b.id === 'proxycheck').aan && st.find(b => b.id === 'radar').providers === 1, 'stand van de bronnen');
 console.log(P.bronnenTekst(st, z).split('\n').slice(0, 4).join('\n'));
+// snelle weg (Henkjan 27 nov: "zo snel mogelijk zodat clik twee niet meer komt")
+const blok = (await kv.get('mm:blok:propeller')) || {};
+ok((blok.zones || []).includes('123') && (blok.details || [])[0].bewijs.snel, 'datacenterklik zet de zone meteen op het blokvoorstel');
+await kv.set('mm:blok:propeller', { zones: ['9'], wachtOpHenkjan: ['55'] });
+const schoon = async () => ({ ok: true, json: async () => ({ '5.5.5.5': { network: { asn: 'AS1136', type: 'Residential' }, detections: { proxy: false, vpn: false, hosting: false } } }) });
+await P.pxSteekproef(kv, { net: 'propeller', zone: '77', ip: '5.5.5.5' }, schoon);
+ok(!((await kv.get('mm:blok:propeller')).zones || []).includes('77'), 'gewone thuisaansluiting blijft open');
+await kv.set('mm:radar:asn', { asn: { '7777': { bot: 92 } } });
+await P.pxSteekproef(kv, { net: 'propeller', zone: '55', ip: '6.6.6.6' }, async () => ({ ok: true, json: async () => ({ '6.6.6.6': { network: { asn: 'AS7777', type: 'Business' }, detections: {} } }) }));
+const b2 = await kv.get('mm:blok:propeller'); ok(b2.zones.includes('55') && !b2.wachtOpHenkjan.includes('55') && b2.zones.includes('9'), 'Radar 92% bot: zone dicht, ook als hij op Henkjan wachtte');
+const vpn = async () => ({ ok: true, json: async () => ({ '8.8.4.4': { network: { asn: 'AS1', type: 'Residential' }, detections: { vpn: true } } }) });
+await P.pxSteekproef(kv, { net: 'propeller', zone: '88', ip: '8.8.4.4' }, vpn); ok(!(await kv.get('mm:blok:propeller')).zones.includes('88'), 'eerste VPN-klik: nog open');
+await P.pxSteekproef(kv, { net: 'propeller', zone: '88', ip: '8.8.4.4' }, vpn); ok((await kv.get('mm:blok:propeller')).zones.includes('88'), 'tweede VPN-klik zonder schone klik: dicht');
 await kv.raw(['FLUSHDB']); process.exit(process.exitCode || 0);
