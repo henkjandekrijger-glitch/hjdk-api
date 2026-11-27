@@ -250,7 +250,9 @@ export default async function handler(req, res) {
       const st = await P.bronnenStand(kv), zones = await P.pxZones(kv, 7);
       if (q('zones')) return res.status(200).json({ ok: true, zones: zones.slice(0, 300) });
       if (q('json')) return res.status(200).json({ ok: true, bronnen: st, zones: zones.filter(z => z.oordeel !== 'te weinig').slice(0, 50) });
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.bronnenTekst(st, zones));
+      const V = await import('../lib/vmodel.js'), M = await kv.get('mm:model:g').catch(() => null); // voorspelmodel per klik: voorspeld tegen echt
+      if (q('model')) return res.status(200).json({ ok: true, model: M ? { t: M.t, p0: M.p0, kal: M.kal, raak: M.raak, raakKliks: M.raakKliks, mag: M.mag, voorspellers: Object.fromEntries(Object.entries(M.w || {}).map(([d, W]) => [d, Object.keys(W).length])) } : null });
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + P.bronnenTekst(st, zones));
     }
     if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
