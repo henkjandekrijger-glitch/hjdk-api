@@ -63,7 +63,7 @@ import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, ser
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
-import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus, zetModalAlias, VORMEN, modalUitkomst, modalPush, zetPushSw } from '../lib/modal.js';
+import { modalBeslis, modalEv, modalMailEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus, zetModalAlias, VORMEN, modalUitkomst, modalPush, zetPushSw } from '../lib/modal.js';
 import { overdracht } from '../lib/overdracht.js';
 import { RT_JS, RT_GO_JS, rtBeslis, leesRt, zetRt, rtStand } from '../lib/retarget.js';
 import { whPixelHtml } from '../lib/whop.js';
@@ -368,7 +368,7 @@ export default async function handler(req, res) {
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       return res.status(200).json(await PF.proefZet(kv, q('site') || 'kadoly', { aan: q('aan') == null ? null : q('aan') === '1', j: q('j') || (req.method === 'POST' ? leesJson(req.body) : null), ronde: q('ronde') === '1' }).catch(e => ({ ok: false, fout: String(e.message || e) })));
     }
-    if (op === 'modal' || op === 'modalev' || op === 'modalmail' || op === 'modalgedrag' || op === 'modalpush') {
+    if (op === 'modal' || op === 'modalev' || op === 'modalmailev' || op === 'modalmail' || op === 'modalgedrag' || op === 'modalpush') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
       if (op === 'modal') {
@@ -377,6 +377,7 @@ export default async function handler(req, res) {
         return res.status(200).json(r);
       }
       if (op === 'modalev') { const r = await modalEv(kv, { mid: q('mid'), e: q('e') }).catch(e => ({ ok: false })); return req.method === 'GET' ? res.status(r.ok ? 200 : 400).json(r) : res.status(204).end(); }
+      if (op === 'modalmailev') { const r = await modalMailEv(kv, { k: q('k'), e: q('e') }).catch(() => ({ ok: false })); return res.status(r.ok ? 200 : r.onbekend ? 404 : 400).json(r); } // welkomstmail van een eigen lijst (lib/modal.js modalMailEv)
       if (op === 'modalgedrag') { if (req.method !== 'POST') return res.status(405).end(); const b = leesJson(req.body) || {}; await modalGedrag(kv, { ...b, tm: b.tm === 1 || b.tm === true }).catch(() => null); return res.status(204).end(); }
       if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
       const j = leesJson(req.body) || {}, srv = serverSignalen(req);
@@ -1079,7 +1080,7 @@ fout=function(t){G.fout++;bt.disabled=false;fo.textContent=t||'Something went wr
 post=function(eigen,nieuw){if(!B.mid){dank();return}fetch(O+'/api/mm/modalmail',{method:'POST',body:JSON.stringify({mid:B.mid,email:inp.value,naam:vn?String(vn.value||'').trim().slice(0,30):'',bewaar:!eigen,tel:nieuw!==false,pg:String(location.href).slice(0,300)}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)dank();else fout(j&&j.fout)})['catch'](function(){fout()})};
 fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.taal==='nl'?'Vul een geldig e-mailadres in.':a.taal==='de'?'Bitte eine gültige E-Mail-Adresse eingeben.':'Please enter a valid email address.');return}bt.disabled=true;fo.style.display='none';
 if(a.doel==='todayin'||a.doel==='kadoly'||a.doel==='motor'){post(0)}else if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
-else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id,volg:a.volg||''})).then(function(ok){if(ok&&(typeof ok!=='object'||ok.ok))post(1,typeof ok==='object'?ok.nieuw!==false:true);else fout()},function(){fout()})})}else post(0)}}
+else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id,volg:a.volg||'',mid:B.mid||''})).then(function(ok){if(ok&&(typeof ok!=='object'||ok.ok))post(1,typeof ok==='object'?ok.nieuw!==false:true);else fout()},function(){fout()})})}else post(0)}}
 if(el)el.appendChild(host);else (D.body||D.documentElement).appendChild(host)}
 /* betaald: op de bedankpagina zet de shop data-cm-betaald (bedrag); dan telt 'koop' bij de laatste beslissing van de afgelopen 7 dagen, ook bij de controlegroep */
 var mk='mmqm';function koop(){if(!D.querySelector('[data-cm-betaald]'))return 0;q(function(){localStorage.removeItem('cmKassa')});var l=(ls(mk)||'').split('|');if(/^[0-9a-f]{12}$/.test(l[0]||'')&&Date.now()-Number(l[1]||0)<7*864e5&&l[2]!=='k'){evMid(l[0],'koop');ls(mk,l[0]+'|'+l[1]+'|k')}return 1}

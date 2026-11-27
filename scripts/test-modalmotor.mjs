@@ -124,5 +124,17 @@ await ok('niemand wegjagen: weg binnen 10 s per vorm en grootte, rem 7 dagen bij
   assert.ok(getoond > 80 && vormen.has('midden') && vormen.has('tab') && !vormen.has('hoek'), getoond + ' ' + [...vormen] + ' ' + Object.keys(n2.rem)); assert.equal(vol, 0, 'vol staat 7 dagen uit'); assert.equal(xl, 0, 'xl staat 7 dagen uit');
   const st = await MT.stand('kadoly', kv); assert.ok(st.lekken.some(l => /vorm vol: jaagt mensen weg: \d+ van de 100 gingen binnen 10 seconden weg/.test(l) && /drempel: 80 tegen 80/.test(l)), st.lekken.join(' | ')); });
 await ok('kerstdag uit de catalogus ligt voor 23 december op een werkdag', async () => { const k = await MT.kerstDag(cfg); assert.ok(/^\d{4}-12-(0[1-9]|1\d|2[0-2])$/.test(k.dag), k.dag); const wd = new Date(k.dag + 'T12:00:00Z').getUTCDay(); assert.ok(wd >= 1 && wd <= 5); });
+await ok('welkomstmail van een eigen lijst telt terug (mailopen, mailklik) zonder adres, eenmaal, alleen bekend adres', async () => {
+  const { createHash } = await import('node:crypto'); const adres = 'lezer@voorbeeld.test', k = createHash('sha256').update(adres).digest('hex').slice(0, 24);
+  assert.equal(M.mailMidSleutel(adres), 'mm:mailmid:' + k, 'zelfde sleutel als de site uitrekent');
+  let c = null; for (let i = 0; i < 400 && !c; i++) { const r = await M.modalBeslis(kv, { site: 'kadolygids', q: 'd' + String(i).padStart(15, '0'), origin: 'https://gids.kadoly.com', pa: '/', pt: 'home', v: 1, uur: 9 }); if (r.mid) c = r; }
+  assert.ok(c, 'beslissing'); await kv.raw(['SET', M.mailMidSleutel(adres), c.mid]);
+  assert.equal((await M.modalMailEv(kv, { k: '0'.repeat(24), e: 'mailopen' })).onbekend, true, 'onbekend adres geweigerd');
+  assert.equal((await M.modalMailEv(kv, { k, e: 'open' })).ok, false, 'alleen de mailsoorten');
+  assert.equal((await M.modalMailEv(kv, { k: 'xyz', e: 'mailopen' })).ok, false, 'k moet 24 hex zijn');
+  const a = await M.modalMailEv(kv, { k, e: 'mailopen' }); assert.ok(a.ok && !a.dubbel); assert.ok((await M.modalMailEv(kv, { k, e: 'mailopen' })).dubbel, 'eenmaal per soort');
+  assert.ok((await M.modalMailEv(kv, { k, e: 'mailklik' })).ok);
+  const h = Object.fromEntries((await M.modalMailEv(kv, { k: '1'.repeat(24), e: 'mailklik' }), [])); const dag = new Date().toISOString().slice(0, 10), t = await kv.raw(['HGETALL', 'mm:md:' + dag]); assert.ok(JSON.stringify(t).includes('|mailklik'), 'teller staat in de dag');
+  assert.equal((await M.modalEv(kv, { mid: c.mid, e: 'mailopen' })).ok, false, 'het openbare modalev kent ze niet (alleen modalmailev)'); });
 globalThis.fetch = echteFetch; try { await kv.raw(['FLUSHDB']); } catch (e) {} if (srv) srv.kill();
 console.log(fout ? fout + ' FOUT(EN)' : 'ALLES GOED'); process.exit(fout ? 1 : 0);
