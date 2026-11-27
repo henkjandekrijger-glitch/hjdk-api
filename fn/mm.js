@@ -192,9 +192,30 @@ export default async function handler(req, res) {
     if (op.startsWith('dist')) { // Clickmind distributie: gerichte reacties, korte links en wat werkt (lib/distlus.js, Henkjan 19 nov 2026)
       const D = await import('../lib/distlus.js'); res.setHeader('cache-control', 'no-store');
       if (op === 'distklik') return await D.klikAntwoord(req, res, q('c'));
-      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), doel: q('doel'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
-      if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n') }));
+      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), soort: q('soort'), doel: q('doel'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
+      if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
+    }
+    if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
+      const C = await import('../lib/cmcamp.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (q('run') === '1') {
+        const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+        if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+        return res.status(200).json(await C.ronde({ dag: q('dag') }));
+      }
+      if (q('labelwerk') === '1') return res.status(200).json(await C.labelWerk(Number(q('n')) || 80));
+      if (q('labels')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); let o = null; try { o = JSON.parse(q('labels')); } catch (e) {} return res.status(200).json(await C.zetLabels(o)); }
+      if (q('campagne')) return res.status(200).json(await C.campagne(q('campagne'), Number(q('dagen')) || 30));
+      return res.status(200).json(await C.leer({ dagen: Number(q('dagen')) || 14, project: q('project') || '', net: q('net') || '' }));
+    }
+    if (op === 'buiten') { // data van buiten per project (lib/buiten.js, Henkjan 26 nov 2026: "data van buiten voor ieder merk en project")
+      const B = await import('../lib/buiten.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (q('run') === '1') {
+        const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+        if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+        return res.status(200).json(await B.ronde({ forceer: q('forceer') === '1', alleen: q('project') ? B.projectId(q('project')) : '' }));
+      }
+      return res.status(200).json(await B.stand(q('project') || ''));
     }
     if (op === 'vroeg' || op === 'vroeguit') { // vroege voorspeller (lib/vroeg.js, Henkjan 23 nov 2026: "Ja doe .")
       const V = await import('../lib/vroeg.js'); res.setHeader('cache-control', 'no-store'); cors(res);
@@ -365,9 +386,13 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(d);
       if (q('vorm') === 'output') { const O = await import('../lib/output.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(d.output ? O.outputTekst(d.output, q('project') || '') + '\n' : 'geen output\n'); }
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      if (q('vorm') === 'bij') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.bijTekst(d, String(q('project') || ''))); } // kort: waar Henkjan was gebleven, voor elke beurt van elke chat
       if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
       if (melding) { const a = d.archief.find(x => x.id === melding.id), p = d.projecten.find(x => x.id === melding.id); melding = melding.aan ? { tekst: ((a && a.naam) || melding.id) + ' is gearchiveerd en staat niet meer in het overzicht.', terug: melding.id } : { tekst: ((p && p.naam) || melding.id) + ' staat weer in het overzicht.' }; }
-      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding)); }
+      // waar Verder opent (Henkjan 27 nov 2026: "kiezen tussen chatgpt , claude browser of claude desktop"): ?ai=<keuze> zet het cookie dashai voor dit toestel
+      const aiQ = String(q('ai') || ''), aiC = (String(req.headers.cookie || '').match(/(?:^|; )dashai=([a-z]+)/) || [])[1] || '';
+      if (D.isAi(aiQ)) res.setHeader('set-cookie', 'dashai=' + aiQ + '; Max-Age=31536000; Path=/; SameSite=Lax; Secure');
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding, D.isAi(aiQ) ? aiQ : aiC)); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }

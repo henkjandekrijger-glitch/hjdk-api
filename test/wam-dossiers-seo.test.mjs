@@ -15,7 +15,7 @@ test('de voorkant opent met concrete dossiers en linkt de reviews als achtergron
   assert.ok(h.includes('href="/bedrijven"'));
   assert.equal((h.match(/class="company"/g) || []).length, 0);
   assert.equal((b.match(/class="company"/g) || []).length, 10);
-  assert.equal((h.match(/data-bedrijf=/g) || []).length, 3);
+  assert.equal((h.match(/data-bedrijf=/g) || []).length, 0); // 26 nov 2026: geen reactieveld per dossier op de voorkant (Henkjan: te veel velden)
   assert.equal((b.match(/data-bedrijf=/g) || []).length, 10);
   assert.equal(DOSSIERLIJST.find(d => d.id === 'hosters').uitgelicht, false);
 });

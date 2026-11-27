@@ -686,9 +686,10 @@ async function land(req, res, url) {
   // in de winkel maar op de actiepagina (lib/kadolywin.js) met één veld en één knop; de regel van 28 okt (geen tussenpagina) gold de route naar de
   // winkel, deze pagina is zelf het doel. Bots gaan nog steeds door direct() (die weert ze). Na de actie loopt de winkelroute via /api/shop/uit.
   const winPa = net === 'pa' && !!code && !bot && KW.loopt();
+  let zegelPa = false; if (winPa && (camp || q.get('zegel') === '1')) { try { zegelPa = q.get('zegel') === '1' || ZEGEL_CAMPS.includes(String(camp)) || !!(await kv.raw(['SISMEMBER', 'kd:zegel:camps', String(camp)])); } catch (e) {} } // 26 nov: spaarzegel-campagnes landen op de zegelpagina (lijst kd:zegel:camps)
   if (code && !winPa) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
-    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), Object.assign({ c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, winPa ? { w: 1 } : {}), { ex: 7 * 86400 }); } catch (e) {} }
+    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), Object.assign({ c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, winPa ? { w: 1 } : {}, zegelPa ? { zg: 1 } : {}), { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
       if (zone) keys.push('sh-' + net + '-z' + zone + '-view'); if (cr) keys.push('sh-' + net + '-a' + cr + '-view'); if (camp) keys.push('sh-' + net + '-k' + camp + '-view');
       if (zone) { keys.push('sh-' + net + '-z' + zone + '-hv'); try { await kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]); await kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)]); } catch (e) {} }
@@ -728,10 +729,11 @@ var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/api/shop/uit"]');if(!a||a.dataset.k)return;a.dataset.k=1;window.__kk=1;a.href=a.getAttribute('href')+'&h='+(mens?1:0)+'&ms='+(Date.now()-t0)},true)})();</script>
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
+  if (zegelPa) return res.status(200).send(KW.zegelPagina({ code, uitHref: uit(pid, 'zegel'), look: look(ACC, { dark: false }), gid: process.env.WAM_GOOGLE_CLIENT_ID || '' }));
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
     const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: (u => /iPhone|iPad/.test(u) ? 'ios' : /Android/.test(u) ? 'android' : 'desktop')(String(req.headers['user-agent'] || '')) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
     const pot = keus.kans === 'aan' || keus.mtekst === 'b' ? await KW.potGrootte(kv).catch(() => 0) : 0;
-    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus, pot })); }
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus, pot, gid: process.env.WAM_GOOGLE_CLIENT_ID || '' })); }
   return res.status(200).send(html);
 }
 
@@ -740,15 +742,29 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 async function winAanmeld(req, res) {
   res.setHeader('cache-control', 'no-store'); if (req.method !== 'POST') return res.status(405).json({ ok: false });
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
-  const email = String(b.email || '').trim().toLowerCase(); if (!/^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i.test(email) || email.length > 120) return res.status(400).json({ ok: false, fout: 'email' });
+  let email = String(b.email || '').trim().toLowerCase(), gv = false;
+  if (b.cred) { const g = await googleMail(b.cred); if (!g) { try { await inc(['sh-win-gfout']); } catch (e) {} return res.status(400).json({ ok: false, fout: 'google' }); } email = g; gv = true; } // 26 nov: aanmelden met één tik via Google One Tap
+  if (!/^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i.test(email) || email.length > 120) return res.status(400).json({ ok: false, fout: 'email' });
   if (isBot(req.headers['user-agent'])) return res.status(200).json({ ok: true });
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null; if (code) { try { rec = await kv.get(K.rec(code)); } catch (e) {} } const net = rec ? rec.s : 'x';
   try { const MM = await import('../lib/mailmind.js'); if (await MM.geblokkeerd(email)) return res.status(200).json({ ok: true }); } catch (e) {}
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
   const MT = await import('../lib/modalmotor.js');
+  if (b.soort === 'zegel') { // spaarzegel-campagne: belofte spaarkaart (3 van de 5 zegels, welkom in lib/modalmotor.js), niet in de winactie
+    const r = await MT.aanmelden('kadoly', { email, belofte: 'spaarkaart', waar: 'zegel-' + net + (rec && rec.z ? '-z' + rec.z : '') + (gv ? '-google' : ''), arm: 'zegel', site: 'go', ms: b.ms, website: b.website, direct: gv,
+      toestemming: 'Spaarzegels go.kadoly.com' + (gv ? ', met Google (adres door Google bevestigd)' : ', bevestigd via de link in de mail') + ': e-mailadres voor de spaarkaart (3 van de 5 zegels) en de mail van Kadoly met sieraden en cadeautips; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
+    if (r.ok && r.direct) { try { const KN = await import('../lib/kadoly-nieuws.js'); const bs = await KN.bevestig(r.direct); if (bs) r.al = true; } catch (e) {} }
+    if (r.ok && rec && rec.w && net === 'pa' && rec.c && !rec.conv && !rec.t && PB.pa) { let st = 0; try { const rr = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)), { signal: AbortSignal.timeout(2500) }); st = rr.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; await inc(['sh-pa-conv', 'sh-zegel-pb' + (st || 0)]); }
+    if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail', 'sh-zegel-mail', 'sh-d' + D8() + '-zegel-mail' + (gv ? '-g' : '')]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
+      await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {}
+      if (!rec.t && rec.k) { try { const { campUitkomst } = await import('../lib/doelketen.js'); await campUitkomst(kv, net, rec.k, 'aanmelding'); } catch (e) {} } }
+    if (!r.ok) { try { await inc(['sh-zegel-fout', 'sh-zegel-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
+    return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout, mee: !!(r.ok && r.al) || undefined });
+  }
   const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : '') + (b.bron === 'modal' ? '-modal' : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
-    toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
+    direct: gv, toestemming: gv ? 'Winactie go.kadoly.com, Doe mee met Google: e-mailadres (door Google bevestigd) voor de winactie en de mail van Kadoly met sieraden en cadeautips; tekst bij de knop: Je doet mee en krijgt de mail van Kadoly met sieraden en cadeautips; afmelden met één klik.' : 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
   if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
+  if (r.ok && r.direct) { try { const KN = await import('../lib/kadoly-nieuws.js'); const bs = await KN.bevestig(r.direct); if (bs) r.al = true; } catch (e) {} r.google = true; } // Google bevestigde het adres: meteen bevestigd, naBevestig zet het in de pot van deze week
   if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} }
   if (r.ok && code) { try { await KW.keusMail(kv, code); if (b.bron === 'modal') await KW.keusTel(kv, code, 'mm'); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && rec.w && net === 'pa' && rec.c && !rec.conv && !rec.t && PB.pa) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const rr = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = rr.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; await inc(['sh-pa-conv', 'sh-d' + D8() + '-pa-conv', 'sh-pa-winconv', 'sh-pa-pb' + (st || 0)].concat(rec.z ? ['sh-pa-z' + rec.z + '-conv'] : [])); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } // doel 1 = adres (26 nov)
@@ -756,7 +772,15 @@ async function winAanmeld(req, res) {
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {}
     if (!rec.t && rec.k) { try { const { campUitkomst } = await import('../lib/doelketen.js'); await campUitkomst(kv, net, rec.k, 'aanmelding'); } catch (e) {} } } // 26 nov: het adres telt ook bij de campagne in Clickmind (doelketen, uitkomst-ingreep)
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
-  return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout });
+  if (gv) { try { await inc(['sh-win-google', 'sh-d' + D8() + '-win-google' + (r.ok ? '' : '-fout')]); } catch (e) {} }
+  return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout, mee: !!(r.ok && r.al) || undefined });
+}
+// Google One Tap: Google controleert het token (tokeninfo); alleen een bevestigd adres voor onze client telt (zelfde client als We Are Many, env WAM_GOOGLE_CLIENT_ID)
+async function googleMail(cred) {
+  const cid = process.env.WAM_GOOGLE_CLIENT_ID; if (!cid || !cred) return null; let j = null;
+  try { const r = await fetch('https://oauth2.googleapis.com/tokeninfo?id_token=' + encodeURIComponent(String(cred).slice(0, 4000)), { signal: AbortSignal.timeout(8000) }); j = r.ok ? await r.json() : null; } catch (e) {}
+  if (!j || j.aud !== cid || !/^(https:\/\/)?accounts\.google\.com$/.test(String(j.iss || '')) || String(j.email_verified) !== 'true' || Number(j.exp) * 1000 < Date.now()) return null;
+  const m = String(j.email || '').trim().toLowerCase(); return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(m) ? m : null;
 }
 
 // ---------------- cadeau-keuzehulpen (keuzehulp.best/cadeau/<gids>) ----------------
@@ -824,6 +848,7 @@ async function uitgang(req, res, url) {
 async function baken(req, res) {
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
   if ((b.e === 'mtoon' || b.e === 'mweg') && !isBot(req.headers['user-agent'])) { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c) { try { await KW.keusTel(kv, c, b.e === 'mtoon' ? 't' : 'mx'); } catch (x) {} } return res.status(204).end(); } // winactie: vertrekmodal getoond of weggeklikt
+  if (/^z?g(toon|tik|nee|fout)$|^zveld$/.test(String(b.e || ''))) { if (!isBot(req.headers['user-agent'])) { try { await inc(['sh-win-' + b.e, 'sh-d' + D8() + '-win-' + b.e]); if (b.e === 'gtik') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c) await KW.keusVeld(kv, c); } } catch (x) {} } return res.status(204).end(); } // winactie: Google-knop getoond, getikt, One Tap weggeklikt of fout
   if (b.e === 'veld') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c && !isBot(req.headers['user-agent'])) { try { await KW.keusVeld(kv, c); } catch (x) {} } return res.status(204).end(); } // winactie: tik in het e-mailveld = vroeg signaal voor het leren
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const e = b.e === 'mens' ? 'mens' : b.e === 'eng' ? 'eng' : '';
   if (!e || isBot(req.headers['user-agent'])) return res.status(204).end();
@@ -905,6 +930,24 @@ async function pixel(req, res, url) {
 const MATEN = { g: [1200, 1200, 'contain'], icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'], mg: [984, 656, 'contain'], ig: [1080, 1350, 'contain'], sq: [1080, 1080, 'contain'] }; // mg: MGID 3:2, minstens 492x328; ig: Instagram/Facebook 4:5, sq: vierkant (16 nov, Kadoly sociale posts)
 const OG_FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
 const hEl = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
+// Spaarzegel-campagne (Henkjan 26 nov 2026: "Test een campagne over de spaarzegels . En dat ze ze als eerste krijgen 5 op een kaart is vol . Zij krijgen er meteen 3"):
+// een spaarkaart met 3 van de 5 zegels. v=icon (192x192, één zegel) of img (984x656, kaart); t = regel onder de kaart (0-3).
+const ZEGEL_CAMPS = ['12196034']; // PA-campagnes die op de zegelpagina landen (12196034: SHOP-LUS ZEGEL spaarkaart, 26 nov 2026, CPA-doel $0,50, $10/dag, $30 totaal)
+const ZEGEL_REGEL = ['Kaart vol = gratis cadeau', 'Nog 2 en je kiest een cadeau', 'Je krijgt er meteen 3', 'Als eerste sparen bij Kadoly'];
+async function zegelBeeld(res, url) {
+  const v = url.searchParams.get('v') === 'icon' ? 'icon' : 'img', t = Math.max(0, Math.min(3, Number(url.searchParams.get('t')) || 0));
+  const zegel = (vol, d) => hEl('div', { width: d, height: d, borderRadius: d, alignItems: 'center', justifyContent: 'center', background: vol ? '#111111' : '#ffffff', border: vol ? 'none' : `${Math.round(d / 18)}px dashed #111111`, color: '#ffffff', fontSize: Math.round(d * 0.5), fontWeight: 800 }, vol ? 'K' : '');
+  let el, W, H;
+  if (v === 'icon') { W = H = 192; el = hEl('div', { width: 192, height: 192, alignItems: 'center', justifyContent: 'center', background: '#f3ece3', fontFamily: 'Inter' }, [zegel(true, 150)]); }
+  else { W = 984; H = 656; el = hEl('div', { width: W, height: H, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#f3ece3', fontFamily: 'Inter' }, [
+    hEl('div', { fontSize: 44, fontWeight: 800, color: '#111111' }, 'Jouw spaarkaart bij Kadoly'),
+    hEl('div', { marginTop: 40, background: '#ffffff', borderRadius: 36, padding: '40px 44px', border: '6px solid #111111' }, [0, 1, 2, 3, 4].map(i => hEl('div', { marginLeft: i ? 26 : 0 }, [zegel(i < 3, 132)]))),
+    hEl('div', { marginTop: 36, fontSize: 64, fontWeight: 800, color: '#111111' }, '3 van de 5 zegels'),
+    hEl('div', { marginTop: 10, fontSize: 40, fontWeight: 500, color: '#111111' }, ZEGEL_REGEL[t])]); }
+  const png = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: OG_FONTS }).arrayBuffer());
+  const out = v === 'icon' ? png : await sharp(png).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
+  res.setHeader('content-type', v === 'icon' ? 'image/png' : 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=604800, s-maxage=604800'); return res.end(out);
+}
 async function plaatje(req, res, url) {
   const cat = await catalog(); const it = cat.items.find(i => i.id === pidOk(url.searchParams.get('p'))); const m = MATEN[String(url.searchParams.get('t') || 'icon').replace(/\.(jpe?g|png|webp)$/i, '')] || MATEN.icon; // /api/shop/beeld/<pid>/<t>.jpg: MGID wil een link die op .jpg eindigt
   if (!it || !it.img) { res.statusCode = 404; return res.end('onbekend product'); }
@@ -1160,6 +1203,7 @@ export default async function handler(req, res) {
       const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
       const lk = await kv.get('hjdk:shop:catsynclock'); if (lk && Date.now() - lk < 600000) return res.status(200).json({ ok: true, overgeslagen: 'net gedaan' }); await kv.set('hjdk:shop:catsynclock', Date.now(), { ex: 600 });
       const c = await sync(); return res.status(200).json({ ok: true, producten: c.items.length, metDatum: c.items.filter(i => i.l > 0).length }); }
+    if (op === 'zegelbeeld') return await zegelBeeld(res, url); // 26 nov: beelden voor de spaarzegel-campagne (icon 192x192, img 984x656)
     if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
@@ -1176,7 +1220,7 @@ export default async function handler(req, res) {
       if (op === 'winloting') return res.status(200).json(await KW.loting(kv, dag, { opnieuw: url.searchParams.get('opnieuw') === '1' }));
       if (url.searchParams.get('leer') === '1') return res.status(200).json(await KW.leermoment(kv));
       const d8 = D8(); const tel = async k => Number(await kv.get('c:' + k).catch(() => 0)) || 0;
-      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout'), proef: await KW.proefStand(kv, { alle: url.searchParams.get("alle") === "1" }) }); }
+      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout'), campagnes: await (async () => { const o = {}; for (const k of String(url.searchParams.get('k') || '12190846,12195955,12195435,12190717,12196034').split(',').filter(x => /^\d{5,10}$/.test(x)).slice(0, 12)) o[k] = { bezoek: await tel('sh-pa-k' + k + '-view'), mens: await tel('sh-pa-k' + k + '-mens'), adressen: await tel('sh-pa-k' + k + '-mail') }; return o; })(), zegel: { adressen: await tel('sh-zegel-mail'), vandaag: await tel('sh-d' + d8 + '-zegel-mail'), vandaagGoogle: await tel('sh-d' + d8 + '-zegel-mail-g'), knopGetoond: await tel('sh-win-zgtoon'), googleTik: await tel('sh-win-zgtik'), veldTik: await tel('sh-win-zveld'), fout: await tel('sh-zegel-fout') }, google: { getoond: await tel('sh-win-gtoon'), tik: await tel('sh-win-gtik'), aanmeldingen: await tel('sh-win-google'), fout: await tel('sh-win-gfout') }, proef: await KW.proefStand(kv, { alle: url.searchParams.get("alle") === "1" }) }); }
     if (op === 'b') return await baken(req, res);
     if (op === 'hb') return await hulpBaken(req, res);
     if (op === 'hulp') return await hulp(req, res, url);
@@ -1762,9 +1806,9 @@ export default async function handler(req, res) {
       const vg = async fn => { try { return await fn(); } catch (e) { return null; } };
       if (op === 'gmcbeeld.csv') { // aanvullende bron: alleen de testproducten (en hun varianten) met een nieuwe hoofdfoto
         let ids = []; await vg(async () => { const rr = await fetch('https://cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml', { signal: AbortSignal.timeout(25000) }); if (rr.ok) ids = [...(await rr.text()).matchAll(/<g:id>\s*(?:<!\[CDATA\[)?([^<\]]+?)(?:\]\]>)?\s*<\/g:id>/g)].map(m => m[1].trim()); });
-        const rij = ['id,image_link'];
-        for (const p of FOTOTEST.paren) { const fotoUrl = 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); }
-        { const D = await import('../lib/kadolydraag.js'); for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); if (!st || st.oordeel !== 'goed') continue; const fotoUrl = 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.' + (/\.png$/.test(st.pad) ? 'png' : 'jpg') + '?d=' + st.n; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); } }
+        const rij = ['id,image_link']; const bm = (await vg(() => kv.get('kd:gmcblob'))) || {}; // 27 nov: vaste JPEG-bestanden in Blob (Google meldde 'Invalid image format' op de /api/shop/beeld-adressen)
+        for (const p of FOTOTEST.paren) { const fotoUrl = bm[p.t] || 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); }
+        { const D = await import('../lib/kadolydraag.js'); for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); if (!st || st.oordeel !== 'goed') continue; const fotoUrl = bm[p.t + ':d' + st.n] || 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.' + (/\.png$/.test(st.pad) ? 'png' : 'jpg') + '?d=' + st.n; const alle = ids.filter(id => id === p.t || id.startsWith(p.t + '-')); for (const id of (alle.length ? alle : [p.t])) rij.push(id + ',' + fotoUrl); } }
         res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(rij.join('\n') + '\n'); }
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       res.setHeader('cache-control', 'no-store');
@@ -1790,6 +1834,16 @@ export default async function handler(req, res) {
       }
       const { token } = await import('../lib/gsc.js'); const M = await import('../lib/merchant.js');
       const tk = await token(String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || ''), 'https://www.googleapis.com/auth/content');
+      if (url.searchParams.get('gmcblob')) { let m = null; try { m = JSON.parse(url.searchParams.get('gmcblob')); } catch (e) {} if (!m || typeof m !== 'object' || !Object.values(m).every(v => /^https:\/\/raw\.githubusercontent\.com\/henkjandekrijger-glitch\/hjdk-api\/media\/gmc\/[\w.-]+\.jpg$/.test(String(v)))) return res.status(400).json({ ok: false, fout: 'kaart' }); await kv.set('kd:gmcblob', m); return res.status(200).json({ ok: true, kd_gmcblob: m }); }
+      if (url.searchParams.get('blob') === '1') { // 27 nov: testbeelden als vaste openbare JPEG in Blob (wit vlak, max 1600 px, sRGB), adres in kv kd:gmcblob; gmcbeeld.csv wijst ernaar
+        const { put } = await import('@vercel/blob'); const sharp = (await import('sharp')).default; const D = await import('../lib/kadolydraag.js'); const bm = (await vg(() => kv.get('kd:gmcblob'))) || {}; const uit = [];
+        const doe = async (sleutel, pid, bron) => { const r = await fetch(bron, { signal: AbortSignal.timeout(20000) }).catch(() => null); if (!r || !r.ok) { uit.push({ sleutel, fout: 'bron ' + (r ? r.status : '-') }); return; }
+          const jpg = await sharp(Buffer.from(await r.arrayBuffer())).flatten({ background: '#ffffff' }).resize(1600, 1600, { fit: 'inside', withoutEnlargement: true }).toColourspace('srgb').jpeg({ quality: 88, progressive: false, chromaSubsampling: '4:2:0' }).toBuffer();
+          if (url.searchParams.get('b64') === '1') { uit.push({ sleutel, bytes: jpg.length, b64: jpg.toString('base64') }); return; } // de Blob-store is privé: beelden gaan als vaste bestanden naar de media-branch op GitHub
+          const x = await put('kadoly/gmc/' + sleutel.replace(/[^a-z0-9_]/gi, '-') + '.jpg', jpg, { access: 'public', contentType: 'image/jpeg', addRandomSuffix: true }); bm[sleutel] = x.url; uit.push({ sleutel, url: x.url, bytes: jpg.length }); };
+        for (const p of FOTOTEST.paren) { try { await doe(p.t, p.t, 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i); } catch (e) { uit.push({ sleutel: p.t, fout: String(e && e.message || e).slice(0, 160), token: !!process.env.BLOB_READ_WRITE_TOKEN }); } }
+        for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); if (!st || st.oordeel !== 'goed') continue; await vg(() => doe(p.t + ':d' + st.n, p.t, 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.' + (/\.png$/.test(st.pad) ? 'png' : 'jpg') + '?d=' + st.n)); }
+        if (url.searchParams.get('b64') !== '1') await kv.set('kd:gmcblob', bm); return res.status(200).json({ ok: true, beelden: uit }); }
       if (url.searchParams.get('zet') === '1') return res.status(200).json(await M.labelBron(tk, '5876502305', { uri: 'https://go.kadoly.com/api/shop/gmcbeeld.csv', naam: 'Kadoly fototest', voorop: true }));
       const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i]));
       if (url.searchParams.get('kies') === '1') { // kandidaten: sieraden en wonen met de meeste vertoningen in Google (14 dagen)

@@ -933,6 +933,17 @@
           "status": "overgeslagen",
           "opm": "Facebook-koppeling verlopen (Meta error 190)"
         }
+      },
+      "gemeten": {
+        "instagram": {
+          "dag": "2026-11-27",
+          "weergaven": 7,
+          "bereik": 3,
+          "likes": 0,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
+        }
       }
     },
     {
@@ -971,6 +982,17 @@
         "facebook": {
           "status": "overgeslagen",
           "opm": "Facebook-koppeling verlopen (Meta error 190)"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "dag": "2026-11-27",
+          "weergaven": 4,
+          "bereik": 2,
+          "likes": 0,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
         }
       }
     },
@@ -1012,7 +1034,124 @@
           "tijdvak": "19:30",
           "status": "gepland"
         }
+      },
+      "gemeten": {
+        "tiktok": {
+          "dag": "2026-11-27",
+          "weergaven": 73,
+          "likes": 1
+        },
+        "instagram": {
+          "dag": "2026-11-27",
+          "weergaven": 9,
+          "bereik": 7
+        },
+        "youtube": {
+          "dag": "2026-11-27",
+          "weergaven": 9,
+          "likes": 1
+        }
       }
+    },
+    {
+      "id": "n261127a",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261127a.mp4",
+      "pids": [
+        "oc_4251974379864065",
+        "oc_4251974639484929"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Lapis Lazuli Armband met Bronzen Bangles voor Mannen & Vrouwen (brons)\n2. Lapis Lazuli Schild Hanger Ketting in verguld zilver (zilver)\nZet je nummer in de reacties.\n\nLink in bio, zoek op LanLivia.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "Welke kleur kies jij: brons of zilver? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-27",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b09432dbce55be3a62e6556",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "tiktok": {
+          "zernio_id": "6b09432dbce55be3a62e6556",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b09432dbce55be3a62e6556",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/nm6zm"
+        },
+        "facebook": {
+          "zernio_id": "6b09432dbce55be3a62e6556",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/9gc5x"
+        },
+        "pinterest": {
+          "zernio_id": "6b09432dbce55be3a62e6556",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://kadoly.com/product/oc_4251974379864065?lang=nl&utm_source=pinterest&utm_medium=video&utm_campaign=v-n261127a"
+        }
+      }
+    },
+    {
+      "id": "n261127b",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261127b.mp4",
+      "pids": [
+        "oc_4173958207569921",
+        "oc_4173958219907073",
+        "oc_4173958223560705"
+      ],
+      "tekst": "3 favorieten van Soeji:\n1. Handgeweven Bananenvezel Wasmand met Deksel\n2. Handgemaakt Rain Tree Houten Kruk met Rieten Zitting\n3. Ronde Geweven Wasmand Groot Waterhyacint\nWelke kies jij?\n\nLink in bio, zoek op Soeji.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Soeji. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-27",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b09432d357376e394d9d4d6",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "tiktok": {
+          "zernio_id": "6b09432d357376e394d9d4d6",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b09432d357376e394d9d4d6",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/8qzf4"
+        },
+        "facebook": {
+          "zernio_id": "6b09432d357376e394d9d4d6",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/r8d9m"
+        },
+        "pinterest": {
+          "zernio_id": "6b09432d357376e394d9d4d6",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "https://kadoly.com/product/oc_4173958207569921?lang=nl&utm_source=pinterest&utm_medium=video&utm_campaign=v-n261127b"
+        }
+      }
+    },
+    {
+      "id": "n261127c",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261127c.mp4",
+      "pids": [
+        "oc_4174004879048705",
+        "oc_4174004648525825",
+        "oc_4174005119090689"
+      ],
+      "tekst": "3 finds voor in huis:\n1. Blauwe Glazen Decoratieve Vis op Metalen Stand 16.5x7x36cm\n2. Fotografie Flatlay Bord Papier Licht 40x40 cm\n3. Zwart & Goud Acrylaat Connect 4 Spel\nWelke kies jij?\n\nLink in bio, zoek op Kadoly.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "3 finds voor in huis. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -1061,7 +1200,8 @@
       "2026-11-25: Facebook-koppeling in Zernio verlopen (Meta error 190 sinds 24 nov 23:34 UTC), dus vandaag alleen Instagram: 08:30 al voorbij (ronde 09:42 NL), 15:30 n261125b (finds, muurdecoratie Housevitamin) en 21:00 n261125a (set, LanLivia zilveren sieraden; set wint op Clickmind: n261124b sokken 4 echt en 1 mandje, n261118a 2 echt). IG-weergaven per video blijven 3 tot 5; te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261125a-c).",
       "2026-11-26: 08:30 al voorbij (ronde 09:44 NL), dus 2 op Instagram: 15:30 n261126a (finds, tafel; past bij kerstdiner) en 21:00 n261126c (set, GLAM & GLORY sieraden; set is de beste soort: n261124b Green-goose 4 echt, 1 mandje, 12 IG-weergaven, en 21:00 geeft de meeste weergaven). Facebook nog verlopen, YouTube niet gekoppeld. IG-weergaven 25 nov laag: n261125a 7, n261125b 4. 3 nieuwe video's uit kadoly-video toegevoegd.",
       "2026-11-26: Henkjan: '4 platformen iedere dag mix van nuttig en gewoon product hq vids kort . Altijd links en CTAs niks intypen'. Soort uitleg erbij (1 per dag, kadoly/video-uitleg.md), TikTok en Pinterest erbij, 'zoek op' eruit: biolink toont de video-producten.",
-      "2026-11-26: Henkjan: 19:30 NL voor alle platforms is 'niet ideale tijd'. Uitlegvideo's per platform: YouTube 18:00, Instagram 20:30, TikTok 21:00, Pinterest 21:30 NL; schuift elke zondag op Clickmind-kliks per 1000 weergaven."
+      "2026-11-26: Henkjan: 19:30 NL voor alle platforms is 'niet ideale tijd'. Uitlegvideo's per platform: YouTube 18:00, Instagram 20:30, TikTok 21:00, Pinterest 21:30 NL; schuift elke zondag op Clickmind-kliks per 1000 weergaven.",
+      "2026-11-27: eerste dag op 5 platforms (IG, FB weer gezond, TikTok, YouTube, Pinterest-videopin). 08:30 al voorbij (ronde 09:45 NL), dus 2 per platform: 15:30 n261127a (kleurkeuze, LanLivia lapis lazuli) en 21:00 n261127b (set, Soeji; set blijft de beste soort: n261124b 4 echt en 1 mandje). Uitlegvideo led-kaarsen 26 nov: TikTok 73 weergaven tegen IG 9 en YT 9, TikTok geeft verreweg het meeste bereik. IG productreels 26 nov 4 tot 7 weergaven. Pinterest meldt 0 voor alle pins; vermoedelijk nog niet gesynct, niet als 0 vastgelegd. CTA's 'zoek op' vervangen door 'Tik op de link in ons profiel' (TT/IG) en korte Clickmind-links (YT/FB)."
     ],
     "uitleg_tijd": {
       "youtube": "18:00",

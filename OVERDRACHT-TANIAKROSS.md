@@ -3,6 +3,16 @@
 Bijgewerkt: vrijdag 20 november 2026, 15:15 UTC (11:15 Curaçao), door chat-taniakross.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
 
+Bijgewerkt 27 nov 2026 12:00 UTC door tk-chat. Dit blok gaat voor op oudere tekst hieronder.
+
+- **Doel:** 1.000 adressen voor 31 dec 2026. Stand 80. Nodig 27 per dag: Mailmind rond 17 (150 mails x 12% ja) plus PropellerAds rond 10.
+- **Oordeel hoger bod: nee.** Bod $0,20 gaf op 26 nov 3 adressen voor $1,44 ($0,48 per adres); $0,05 tot $0,06 gaf 11 tot 12 per dag voor $0,03 tot $0,06. Hoger bieden koopt duurdere kliks, niet meer adressen. **Het bod van de TK-lijn is $0,06**, ook voor elke dagkopie.
+- **Fout van 26 nov en het slot daarop (Henkjan: "Dit mag nooit meer gebeuren zorg daarvoor"):** dagkopie 12193513 stond op $0,01 terwijl de tool "bod 0.2" meldde (het getal uit het verzoek); de voorganger ging uit en er kwam geen adres meer. Sinds 27 nov zit het slot in de connector (propellerads-mcp, lib/bodcheck.mjs): elke kopie-tool meldt het bod dat PropellerAds teruggeeft, `bod_van_bron: true` geeft de dagkopie meteen het bod van de bron, en `update_campaign` weigert het stoppen van een campagne zolang zijn opvolger op dezelfde link lager biedt. Nalezen: tool `bod_controle`. Maak elke dagkopie met `bod_van_bron: true` en schrijf alleen een bod op dat je in dat antwoord las.
+- **Dagvenster (Henkjans ja, 27 nov):** 12193513 koopt van 07:00 tot 22:00 Nederlandse tijd (was 14:00 tot 05:00: de nacht erbij, de ochtend gemist). Een kopie neemt dit venster over; controleer het na elke kopie (campagnetijd is -5).
+- **Mailmind (Henkjans akkoord, 27 nov):** bij deze toestemmingsmail telt een stop niet meer als rem (`stopIsAntwoord` in lib/tkmc.js; de rem op bounces blijft: 8% halveren, onder 5% groeien). Tempo terug op 80 per dag, +25 per dag naar 150. Was door 15 stops op 86 mails naar 20 gezakt terwijl 12% ja zei.
+- **Vercel simpele-site (Henkjans ja, 27 nov):** NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin. Ze gelden vanaf de eerstvolgende uitrol. Vanaf dan gaat het voorbeeld van de weekmail naar Tania en Henkjan (cron 14:30 UTC, naar de lijst pas na Nu versturen), kan het nieuwe ochtendverslag uit (adressen uit de code naar RAPPORT_AAN) en kan het venster naar de Mailmind-modal.
+- **Google (Henkjan 27 nov: "breng structuur aan zodat googlers juiste structuur zien van haar en niet een random tekst uit de site"):** de homepage heeft al Person, WebSite en de rest in JSON-LD. Het lek zit in de zichtbare tekst: de eerste lopende tekst is de inleiding van de podcast, de omschrijving is 198 tekens (te lang) en het menu wijst naar ankers in plaats van pagina's. Voorstel ligt bij Henkjan (eerst zien, dan live): korte regel wie Tania is bovenaan, omschrijving onder 155 tekens, data-nosnippet op podcasttekst, menu en aanmeldvenster, ProfilePage erbij. Open vraag: mag "Boekingen via Theaterbureau de Mannen" uit de omschrijving.
+
 Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagne opgesplitst in BEWEZEN (12183102) en VERKENNER (12168319) met een dagelijkse leerronde (zie 7). De Mailchimp-adressen (zie 10) zijn nog niet besproken.
 
 ## 1. Wat het is
