@@ -1834,14 +1834,16 @@ export default async function handler(req, res) {
       }
       const { token } = await import('../lib/gsc.js'); const M = await import('../lib/merchant.js');
       const tk = await token(String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || ''), 'https://www.googleapis.com/auth/content');
+      if (url.searchParams.get('gmcblob')) { let m = null; try { m = JSON.parse(url.searchParams.get('gmcblob')); } catch (e) {} if (!m || typeof m !== 'object' || !Object.values(m).every(v => /^https:\/\/raw\.githubusercontent\.com\/henkjandekrijger-glitch\/hjdk-api\/media\/gmc\/[\w.-]+\.jpg$/.test(String(v)))) return res.status(400).json({ ok: false, fout: 'kaart' }); await kv.set('kd:gmcblob', m); return res.status(200).json({ ok: true, kd_gmcblob: m }); }
       if (url.searchParams.get('blob') === '1') { // 27 nov: testbeelden als vaste openbare JPEG in Blob (wit vlak, max 1600 px, sRGB), adres in kv kd:gmcblob; gmcbeeld.csv wijst ernaar
         const { put } = await import('@vercel/blob'); const sharp = (await import('sharp')).default; const D = await import('../lib/kadolydraag.js'); const bm = (await vg(() => kv.get('kd:gmcblob'))) || {}; const uit = [];
         const doe = async (sleutel, pid, bron) => { const r = await fetch(bron, { signal: AbortSignal.timeout(20000) }).catch(() => null); if (!r || !r.ok) { uit.push({ sleutel, fout: 'bron ' + (r ? r.status : '-') }); return; }
           const jpg = await sharp(Buffer.from(await r.arrayBuffer())).flatten({ background: '#ffffff' }).resize(1600, 1600, { fit: 'inside', withoutEnlargement: true }).toColourspace('srgb').jpeg({ quality: 88, progressive: false, chromaSubsampling: '4:2:0' }).toBuffer();
+          if (url.searchParams.get('b64') === '1') { uit.push({ sleutel, bytes: jpg.length, b64: jpg.toString('base64') }); return; } // de Blob-store is privé: beelden gaan als vaste bestanden naar de media-branch op GitHub
           const x = await put('kadoly/gmc/' + sleutel.replace(/[^a-z0-9_]/gi, '-') + '.jpg', jpg, { access: 'public', contentType: 'image/jpeg', addRandomSuffix: true }); bm[sleutel] = x.url; uit.push({ sleutel, url: x.url, bytes: jpg.length }); };
         for (const p of FOTOTEST.paren) { try { await doe(p.t, p.t, 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.jpg?i=' + p.i); } catch (e) { uit.push({ sleutel: p.t, fout: String(e && e.message || e).slice(0, 160), token: !!process.env.BLOB_READ_WRITE_TOKEN }); } }
         for (const p of DRAAGTEST.paren) { const st = await vg(() => D.stand(p.t)); if (!st || st.oordeel !== 'goed') continue; await vg(() => doe(p.t + ':d' + st.n, p.t, 'https://go.kadoly.com/api/shop/beeld/' + p.t + '/g.' + (/\.png$/.test(st.pad) ? 'png' : 'jpg') + '?d=' + st.n)); }
-        await kv.set('kd:gmcblob', bm); return res.status(200).json({ ok: true, beelden: uit }); }
+        if (url.searchParams.get('b64') !== '1') await kv.set('kd:gmcblob', bm); return res.status(200).json({ ok: true, beelden: uit }); }
       if (url.searchParams.get('zet') === '1') return res.status(200).json(await M.labelBron(tk, '5876502305', { uri: 'https://go.kadoly.com/api/shop/gmcbeeld.csv', naam: 'Kadoly fototest', voorop: true }));
       const cat = await catalog(); const naam = Object.fromEntries(cat.items.map(i => [i.id, i]));
       if (url.searchParams.get('kies') === '1') { // kandidaten: sieraden en wonen met de meeste vertoningen in Google (14 dagen)
