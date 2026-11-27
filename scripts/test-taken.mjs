@@ -78,17 +78,30 @@ S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2
 ok(!(await T.zetTaken(kv, { antwoord: { gewoonte: g.gewoonte, tekst: 'Ja' } }, 'oppakker', nu)).ok, 'agent kan gewoonte niet aanzetten');
 u = await T.zetTaken(kv, { antwoord: { gewoonte: g.gewoonte, tekst: 'Ja' } }, 'Henkjan', nu + 2 * dg + uur, HJ); ok(u.gewoonte.status === 'proactief', 'ja: voortaan zelf');
 S.clear(); await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + 2 * uur); ok((await T.leesTaken(kv, nu + 2 * dg + 2 * uur)).taken.some(x => x.gewoonte === g.gewoonte && x.bron === 'gewoonte'), 'gewoonte wordt taak');
+// 10b. herinnering vanaf een datum die vanzelf afgaat als het account zich aanmeldt; testregel verlengen wordt een taak
+const th = await T.zetTaken(kv, { taak: { tekst: 'Herinnering andere account', project: 'dashboard' } }, 'dashboard-chat', nu);
+u = await T.zetTaken(kv, { taakzet: { id: th.taak, vraag: 'Zet de oppakker aan in je andere Claude-account', advies: 'Log in op claude.ai met je andere account en open de link', handeling: true, vanaf: '2026-11-30', klaarBij: 'aanzet|claude-1', toon: 'https://hjdk-api-henq.vercel.app/api/mm/dashboard?vorm=aanzetlink&account=claude-1' } }, '', nu); ok(u.ok && u.soort === 'handeling', 'herinnering');
+ok(!(await T.zetTaken(kv, { antwoord: { testregel: 'TODAYIN', sluit: '2026-11-28T16:30:00.000Z', tekst: 'Verleng 10 dagen' } }, 'oppakker', nu)).ok, 'testregel alleen Henkjan');
+u = await T.zetTaken(kv, { antwoord: { testregel: 'TODAYIN', sluit: '2026-11-28T16:30:00.000Z', tekst: 'Verleng 10 dagen' } }, 'Henkjan', nu, HJ); s = await T.leesTaken(kv, nu);
+ok(u.taak && /budget_regel_open/.test(s.taken.find(x => x.id === u.taak).tekst) && s.weg['regel|TODAYIN|2026-11-28T16:30:00.000Z'], 'verleng wordt taak');
+u = await T.zetTaken(kv, { antwoord: { testregel: 'SHOP-LUS', sluit: '2026-11-28T16:30:00.000Z', tekst: 'Laat sluiten' } }, 'Henkjan', nu, HJ); ok(u.ok && !u.taak, 'laat sluiten: geen taak');
+ok(/claude-1/.test(T.aanzetChat('claude-1')), 'opdracht ander account');
 // 11. werkwijze, opdrachten en pagina
 s = await T.leesTaken(kv, nu + 3 * dg);
 const tt = T.takenTekst(s, 'claude-1', d0); ok(/Mandaat A/.test(tt) && /herzie/.test(tt) && /"zelf"/.test(tt) && /vorm=ja/.test(tt), 'werkwijze met mandaat'); ok(/vraagpoort/i.test(T.vangnetTekst(s, 'claude-1', d0)) && /Mandaat A/.test(T.poortTekst()), 'vangnet en poorttekst');
 ok(T.oppakPrompt('claude-1').includes('"pak"') && /claude-2/.test(T.aanzetTekst('claude-2')), 'opdrachten');
 const d = { gemaakt: new Date(nu + 3 * dg).toISOString(), vandaag: '2026-11-30', taken: s, wacht: [{ id: 'kadoly', naam: 'Kadoly', chat: 'kadoly-chat', t: new Date(nu).toISOString(), tekst: 'Resend zit vol: zeg "weg" of "upgrade"', toon: '', soort: '' }, { id: 'nexy', naam: 'Nexy', chat: 'nexy-chat', t: new Date(nu).toISOString(), tekst: 'Mag de proef 10 dagen langer?', advies: 'Ja, $0,06 per adres', bijJa: 'loopt door', bijNee: 'stopt', soort: 'stil', stilT: new Date(nu + 3 * dg + 5 * uur).toISOString(), keuzes: ['Ja', 'Nee'] }],
   achter: [], opvallend: [], geld: { perMunt: [] }, agenda: [], archief: [], projecten: [{ id: 'kadoly', naam: 'Kadoly', pct: 20, nu: 3, doelgetal: 15, eenheid: 'aankopen', open: [], chats: [], log: [], verder: 'https://claude.ai/new?q=x', output: { items: [] } }] };
+d.vol = { camp: { regels: [{ sleutel: 'OVERIG', sluit: new Date(nu + 3 * dg + 20 * uur).toISOString(), dagen: 20, kosten: 4.01, open: '2026-11-26: Ja weer aanzetten' }, { sleutel: 'MYLEVEL', sluit: new Date(nu + 9 * dg).toISOString(), dagen: 12, kosten: 1, open: 'x' }] } };
 let html = overzichtHtml(d, { ai: 'browser', toestel: false });
 ok(html.includes('id="koppel"') && html.includes('name="koppel"') && html.includes('name="code"'), 'koppelblok zonder toestel');
 html = overzichtHtml(d, { ai: 'browser', toestel: true, melding: { tekst: '2 opgeruimd.', terug: ['a', 'b'] } });
 ok(!html.includes('id="koppel"') && html.includes('Advies:') && html.includes('Zeg je niets, dan gaat het advies') && html.includes('>Upgrade<') && html.includes('Ongedaan maken'), 'kaarten met advies en stil akkoord');
 ok(html.indexOf('Resend zit vol') < html.indexOf('Mag de proef 10 dagen langer'), 'stil akkoord onderaan');
+ok(html.includes('Testregel OVERIG sluit') && html.includes('>Verleng 10 dagen<') && !html.includes('Testregel MYLEVEL'), 'kaart testregel alleen kort voor sluiten');
+ok(!overzichtHtml(Object.assign({}, d, { gemaakt: '2026-11-27T20:00:00.000Z' }), { toestel: true }).includes('Zet de oppakker aan in je andere Claude-account'), 'herinnering pas vanaf maandag');
+ok(overzichtHtml(Object.assign({}, d, { gemaakt: '2026-11-30T13:00:00.000Z' }), { toestel: true }).includes('Zet de oppakker aan in je andere Claude-account'), 'herinnering op maandag');
+await T.zetTaken(kv, { aanzet: { account: 'claude-1' } }, '', nu + 3 * dg); ok((await T.leesTaken(kv, nu + 3 * dg)).taken.find(x => x.id === th.taak).status === 'klaar', 'herinnering vanzelf af na aanzetten');
 ok(!html.includes('/dashboard?doe=') && !/method="get"/.test(html) && !/[—–]/.test(html) && !/undefined|NaN|\[object/.test(html), 'alles POST, geen streepjes of undefined');
 ok(overzichtHtml({ gemaakt: new Date(nu).toISOString(), vandaag: '2026-11-27', projecten: [] }).includes('Overzicht'), 'leeg rendert');
 console.log(process.exitCode ? 'taken: FOUT' : 'taken ok');
