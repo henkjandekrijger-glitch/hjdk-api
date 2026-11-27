@@ -18,7 +18,7 @@ def rand(src, i, clip, flip):
     im = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
     for f in flip:
         im = im.transpose(f)
-    b = io.BytesIO(); im.save(b, 'PNG')
+    b = io.BytesIO(); im.save(b, 'JPEG', quality=90)
     return b.getvalue()
 
 def zet_bleed(inp, uit):

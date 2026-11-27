@@ -11,3 +11,7 @@
 
 # Merkendeelconcepten blijven uitsluitend ter beoordeling, niet op productie.
 /docs/kadoly-groei-review/
+
+# grote boekbestanden, niet nodig voor de site
+kdp/bouw/omslag2027/omslag/
+kdp/bouw/mom/
