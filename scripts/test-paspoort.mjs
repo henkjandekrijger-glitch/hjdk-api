@@ -203,10 +203,10 @@ const bk = await P.briefing({ medium: 'propeller', project: 'kadoly', doel: 'koo
 ok(bk.research.some(x => x.id === 'kadoly-prijs-1126'), 'les over prijs in de advertentie staat als startkennis in de briefing van advertenties');
 
 // oude dagen uit het archief tellen mee (cm:campdagen), ook buiten de laatste 45 dagen; ouder dan 120 dagen niet
-const oudDag = dag(nu - 60 * DAG), heelOud = dag(nu - 130 * DAG);
+const oudDag = dag(nu - 118 * DAG), heelOud = dag(nu - 410 * DAG);
 await kv.set('cm:camp:' + oudDag, [camp('555', 'TODAYIN CURACAO OUD | In-Page | CPA 0.01', 'todayin', [cr('o1', '¿Playa o ciudad hoy?', 'vraag', 100, 9)], { echt: 10, actie: 2, aanmelding: 1, dialoog: 0, koop: 0, bezoek: 90 }, 'https://todayin.email/?lang=es')]);
 await kv.set('cm:camp:' + heelOud, [camp('556', 'TODAYIN CURACAO HEEL OUD', 'todayin', [cr('o2', 'Te oud', 'vraag', 100, 9)], { echt: 1 }, 'https://todayin.email/')]);
 await kv.raw(['SADD', 'cm:campdagen', oudDag, heelOud]); await kv.del('ps:stand');
 await P.ronde({});
-ok(!!(await P.lees('ad:propeller:o1')) && !(await P.lees('ad:propeller:o2')), 'een ingehaalde dag van 60 dagen terug telt mee, ouder dan 120 dagen niet');
+ok(!!(await P.lees('ad:propeller:o1')) && !(await P.lees('ad:propeller:o2')), 'een ingehaalde dag van 118 dagen terug telt mee, ouder dan 400 dagen niet');
 if (!process.env.LAAT) await kv.raw(["FLUSHDB"]); process.exit(process.exitCode || 0);
