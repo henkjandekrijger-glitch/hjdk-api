@@ -2871,6 +2871,10 @@
       "destination": "/api/shop?op=land&p=:p"
     },
     {
+      "source": "/winactie",
+      "destination": "/api/shop?op=winorg"
+    },
+    {
       "source": "/verlanglijst",
       "destination": "/api/shop?op=lijst"
     },
