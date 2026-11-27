@@ -359,6 +359,10 @@
     {
       "path": "/api/mm?op=campagnes&inhaal=1",
       "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/mm?op=bronnen&run=1",
+      "schedule": "29 6 * * *"
     }
   ],
   "rewrites": [

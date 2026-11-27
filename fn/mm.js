@@ -244,6 +244,14 @@ export default async function handler(req, res) {
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.standTekst(st) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(P.standHtml(st, CSS));
     }
+    if (op === 'bronnen') { // databronnen van Clickmind (lib/pxcheck.js, Henkjan 27 nov 2026): stand, per zone, en de dagelijkse Radar-ronde
+      const P = await import('../lib/pxcheck.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (q('run') === '1') return res.status(200).json(await P.radarRonde(kv));
+      const st = await P.bronnenStand(kv), zones = await P.pxZones(kv, 7);
+      if (q('zones')) return res.status(200).json({ ok: true, zones: zones.slice(0, 300) });
+      if (q('json')) return res.status(200).json({ ok: true, bronnen: st, zones: zones.filter(z => z.oordeel !== 'te weinig').slice(0, 50) });
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.bronnenTekst(st, zones));
+    }
     if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
       const r = await (await import('../lib/cmcamp.js')).gadsInlogLink().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 120) }));
