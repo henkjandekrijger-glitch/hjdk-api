@@ -3,7 +3,7 @@
 Eerste versie: vrijdag 20 november 2026 door chat-taniakross. Laatst bijgewerkt: vrijdag 27 november 2026, 12:30 UTC, door tk-chat2. Begin bij deel 0.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
 
-## 0. START HIER (27 nov 2026, 13:10 UTC, door tk-chat2)
+## 0. START HIER (27 nov 2026, 13:40 UTC, door tk-chat2)
 
 Dit deel gaat voor op alles eronder. Alleen dit deel lezen: `/api/wtb?op=tkoverdracht&deel=kort`.
 
@@ -26,14 +26,19 @@ Henkjan 27 nov: "goede overdracht die chat staat nu uit moet allemaal centraal i
 | Lijst | simpele-site `/api/lijst?a=stand` | vanzelf |
 | Campagnes van vandaag | kaart Campagnes op het dashboard | vanzelf |
 
-### Stand 27 nov 13:10 UTC
+### Stand 27 nov 13:40 UTC
 
-- Lijst 80 van 1.000. Nodig rond 27 per dag tot 31 dec; er komen er rond 7 per dag bij.
+- Lijst 83 van 1.000. Nodig rond 27 per dag tot 31 dec; er komen er rond 7 per dag bij.
 - PropellerAds: alleen 12193513 loopt, bod $0,06, dagvenster 07:00 tot 22:00 NL (beide 27 nov hersteld door tk-chat). Oordeel 28 nov: levert hij weer rond 10 adressen per dag onder $0,06.
 - Mailmind tk-mailchimp: 80 per dag, een stop remt niet meer, bounces wel. Eerste leermoment (94 mails): gmail en hotmail 30 verstuurd, 5 ja, 1 stop, 0 bounces; eigen domeinen 29, 4 ja, 10 stops, 2 bounces; provider 23, 0 ja, 2 bounces; score 3: 18 verstuurd, 0 ja, 3 bounces. Onderwerp: nog geen winnaar (o0 7 ja op 51, o1 4 op 43).
 - Mailmind slimmer en veilig voor Gmail (Henkjans ja, 27 nov): bakkeuze per kenmerk met bounce en stop erin, de bank en de dagrem. Code lib/mailmind-bak.js, uitleg in sectie 10. Live sinds 27 nov rond 13:00 UTC (Henkjan: "ja push").
 - Vercel simpele-site: NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin (27 nov, zelfde adressen als de code al gebruikte). Ze gelden vanaf de eerstvolgende productie-uitrol.
 - **Live gezet 27 nov 12:57 UTC in één uitrol (dpl_PLxypyXyKihPEj8rxNwvSbqVLwC9), op Henkjans "ja en ja":** het artikel van 27 nov "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json, geschreven door tk-chat2 omdat de Claude-taak niet leverde) en de Google-weergave van de homepage van tk-chat (api/_google.js en api/page.js: omschrijving van 151 tekens, ProfilePage, data-nosnippet, boeken via Dorien). Nagekeken: de homepage is regel voor regel gelijk aan het goedgekeurde voorbeeld, de stand toont het artikel van vandaag. Met deze uitrol gelden ook de drie variabelen. Nog te doen voor Google: herindexering van de homepage aanvragen in Search Console en de proef melden in ZICHT.
+- **Live gezet 27 nov 13:30 UTC (dpl_BkdnGz2ZRK65pUdZ65qNWeh3Zxcc; dit is nu de bestandslijst om op te bouwen), twee dingen op Henkjans woord:**
+  1. De agenda van Tania is uit beeld (Henkjan: "Haal die agenda tool van de site bij tania . die leidt erg af ad zijkant en op mobiel ook ."). Dat is Tania's eigen onderdeel in haar homepage: de ladder rechts (.ag-rail), de knop op de telefoon (.ag-fab) en het paneel (.ag-veil, .ag-panel). Haar bestand blijft zoals het is (haar script zoekt die elementen, dus ze blijven in de pagina); onderaan tk-extra.css staat één regel die ze verbergt (sha c240e31d806db80b53a550ab0dc53e241590c039). Haar AGENDA voedt nog steeds de dagcarrousel, /optredens en de mail. Terugzetten: die regel weghalen.
+  2. Het videovenster voor betaald verkeer heeft variant pv niet meer (Henkjan: "Zorg dat die campagne WEL gaat opleveren"). Cijfers tot 27 nov, herkomst betaald: pv (formulier onder de video, geen vraag bij sluiten) 11 adressen op 1.199 vensters, 0,9%; pv2 en pv3 samen 49 op 2.311, 2,1%. De vraag bij sluiten (moment dicht) gaf 36 van de 70 adressen. Nu krijgt iedereen pv2 of pv3 (lijst.js, sha bb2c593489ed25d84e94462a26308ccda96c953a). Verwacht: ruim een vijfde meer adressen per klik. Oordeel 4 dec: adressen per venster van pv2 en pv3 in /api/lijst?a=stand (perHerkomst.betaald.moment); de slechtste gaat er dan uit. Teksten in dat venster leren zelf: g2 (verrassing) 35 op 1.797, p1 15 op 1.024, g1 5 op 464, g3 1 op 225.
+  - In lijst.js zit ook al de code voor de link onder het aanmeldvenster; die doet niets tot de server hem meegeeft (zie Wacht op Henkjan). api/lijst.js is live nog de oude (sha fe59883366b115410f296bcdb815c31b3e929549). api/_intern/overdracht.html op de site zelf is voor deze twee wijzigingen niet bijgewerkt (dat kost een volledige upload); deze overdracht is de bron.
+  - simpele-site heeft geen repo: elke wijziging in een bestaand bestand kost een volledige upload van dat bestand in de uitrol (lijst.js, api/lijst.js en tk-extra.css zijn elk rond 30.000 tekens). Bundel dus wijzigingen per bestand, en neem een bestand dat al eens geupload is mee per sha.
 - **Regel voor elke uitrol van simpele-site:** neem de bestandslijst van de laatste productie-uitrol en zet alleen je eigen bestanden erbij (per sha of inline). Nooit de lijst van een voorbeeld: dan haalt het ene voorbeeld het andere weer weg. Niet promoten: een voorbeeldbouw mist UPLOAD_KEY. Bestanden die al in een voorbeeld zaten kun je per sha meenemen.
 
 ### Alles wat vanzelf draait
@@ -94,17 +99,19 @@ Lees eerst de skill campagnes-henkjan (tool campagne_skill van de PropellerAds-c
 
 Niets van 27 nov staat nog open: om 12:53 UTC zei Henkjan ja op alle vier (pushen naar hjdk-api, artikel live, Google-weergave live, de twee taken ook in het tweede account). De afloop staat in het werklog van tk-chat2. Nieuwe vragen aan Henkjan staan als planregel "Wacht op Henkjan:" op het dashboard.
 
-Loopt nog (27 nov, Henkjan bij het aanmeldvenster "Hoor het als Tania weer optreedt", tekst m4): "Moet ook gaan over podcast etc . Om de andere week een volgende . En kijk HIER naar de laatste . Kijk of luister ." Voorstel van tk-chat2, aan Henkjan getoond, live na zijn ja:
+**Wacht op Henkjans ja: de nieuwe tekst van het aanmeldvenster** (27 nov, Henkjan bij het venster "Hoor het als Tania weer optreedt", tekst m4: "Moet ook gaan over podcast etc . Om de andere week een volgende . En kijk HIER naar de laatste . Kijk of luister ."). Het voorbeeld staat klaar en is aan Henkjan getoond: dpl_4g2u6fYPs86RURGUMNKt79jNJtqX, https://simpele-site-5dz4m6lbo-henq.vercel.app/?tklijst=m4 (deellink maken met get_access_to_vercel_url). Nagekeken op het voorbeeld: a=kies&toon=m4 geeft de nieuwe tekst en `laatst` naar /podcast/francis-sling.
 
-- api/lijst.js, MAIL.m4 wordt: kicker "Podcast en concerten", titel "Hoor het als Tania iets nieuws heeft", tekst "Om de week een nieuw gesprek in haar podcast A Kross …. En haar concerten en voorstellingen, zodra ze bekend zijn." De zin "Afmelden kan altijd met één klik." gaat uit de tekst van m3, m4 en p2: hij staat al in de kleine regel eronder.
-- Onder de tekst van elk mailvenster een link naar de nieuwste aflevering: "Kijk of luister nu: Tania met <laatste gast>" naar /podcast/<gast>. De server geeft hem mee in a=kies als `laatst: {tekst, href}` (uit podcastStand: `laatsteHref`), niet bij betaald verkeer of het videovenster (daar telt alleen het adres). De browser (lijst.js, kaart) zet hem als `p.tkl__l` onder de tekst en telt de klik (klik, k lijst, x laatste).
-- In hetzelfde bestand gaat het antwoordadres naar de variabele: `const ANTWOORD = process.env.LIJST_ANTWOORD || undefined`. Daarna staat er geen persoonlijk adres meer in api/lijst.js en kan het inline uitgerold worden.
+- api/lijst.js (nieuw, sha e965a17ce2e9596b44922fcf980a995c9a258c6b, al geupload): MAIL.m4 wordt kicker "Podcast en concerten", titel "Hoor het als Tania iets nieuws heeft", tekst "Om de week een nieuw gesprek in haar podcast A Kross …. En haar concerten en voorstellingen, zodra ze bekend zijn." De zin "Afmelden kan altijd met één klik." gaat uit de tekst van m3, m4 en p2: hij staat al in de kleine regel eronder.
+- Onder de tekst van elk mailvenster een link naar de nieuwste aflevering: "Kijk of luister nu: Tania met <laatste gast>" naar /podcast/<gast> (uit de slug van de gast; g.href is de link naar buiten). De server geeft hem mee in a=kies als `laatst: {tekst, href}`, niet bij betaald verkeer of het videovenster (daar telt alleen het adres). De browser (lijst.js, kaart; staat al live) zet hem als `p.tkl__l` onder de tekst en telt de klik (klik, k lijst, x laatste).
+- In hetzelfde bestand gaat het antwoordadres naar de variabele: `const ANTWOORD = process.env.LIJST_ANTWOORD || undefined`.
+- **Live zetten na zijn ja:** één productie-uitrol op de bestandslijst van de laatste productie-uitrol, met api/lijst.js per sha e965a17ce2e9596b44922fcf980a995c9a258c6b. Niets inline nodig. Daarna nakijken: https://simpele-site-henq.vercel.app/api/lijst?a=kies&toon=m4&bron=direct moet `laatst` geven.
 
 ### Eerstvolgende stappen, op volgorde
 
 1. Mailmind-bakkeuze is live (proefronde 27 nov 13:02 UTC: 83% naar gmail en hotmail, niets naar score 3, bank 0:r3). Oordeel na 100 mails naar gratis adressen: ja boven 12%, bounces onder 3%.
 1b. Herindexering van de homepage aanvragen in Search Console en de Google-weergave als proef melden in ZICHT.
-1c. Aanmeldvenster: na Henkjans ja de nieuwe tekst en de link naar de nieuwste aflevering live (zie hierboven).
+1c. Aanmeldvenster: na Henkjans ja de nieuwe tekst en de link live (zie Wacht op Henkjan; één uitrol per sha).
+1d. Campagne laten opleveren (Henkjan 27 nov: "Zorg dat die campagne WEL gaat opleveren komt nieuwe CM aan ."; CM gelezen als Clickmind). Stand 27 nov 13:20 UTC: 14.358 vertoningen, 95 kliks, 1 adres, $0,06. De dagronde van 27 nov haalde zone 9819976 van de witte lijst (113 kliks, geen adres) en maakte geen dagkopie, omdat de campagne nog geen dag op het goede bod draait (26 nov liep de kopie op $0,01). Gedaan aan de pagina: variant pv eruit (zie Stand). Eerstvolgende: 28 nov de dagkopie (verse start), elke dag de slechtste advertenties eruit en nieuwe erin, en zones erbij als het tempo onder 500 kliks per dag blijft. Bod en budget blijven van Henkjan.
 2. 28 nov: levert 12193513 weer rond 10 adressen per dag onder $0,06.
 3. Adressen uit api/rapport.js, api/lijst.js en api/_push.js naar de variabelen (RAPPORT_AAN, LIJST_ANTWOORD). Daarna kunnen die bestanden inline uitgerold worden: nieuw ochtendverslag, Barcelona-embed naar youtube.com, venster naar de Mailmind-modal.
 4. De rest staat in sectie 11.
