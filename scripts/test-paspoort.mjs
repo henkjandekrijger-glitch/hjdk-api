@@ -28,12 +28,15 @@ const dagCamps = () => [
   camp('222', 'WAM SAMEN NL | In-Page | CPA 0.01', 'wam', [cr('b1', 'Sta je er alleen voor?', 'vraag', 150, 12), cr('b2', 'Wij zijn met velen', 'persoonlijk', 150, 3), cr('b3', 'Zeg je loterij op', 'voordeel', 150, 4), cr('b4', 'Incasso? Reken het na', 'vraag', 150, 11)], { echt: 100, actie: 0, aanmelding: 30, dialoog: 0, koop: 0, bezoek: 500 }, 'https://wearemany.now/samen'),
   camp('333', '[In-Page] SHOP-LUS PAKKET Bureau set | NL iOS | CPA 0.01', 'kadoly', [cr('c1', 'Sinterklaas voor hem', 'voordeel', 250, 0), cr('c2', 'Houten kaart, €99,95', 'getal', 250, 0)], { echt: 40, actie: 0, aanmelding: 0, dialoog: 0, koop: 0, bezoek: 400 }, 'https://go.kadoly.com/shop?bundel=pbureau'),
 ];
-for (let i = 1; i <= 3; i++) await kv.set('cm:camp:' + dag(nu - i * DAG), dagCamps());
+const kopie = () => camp('444', 'TODAYIN CURACAO CO VE | In-Page | CPA 0.01 | kopie 111', 'todayin', [cr('k1', '¿Qué playa hoy en Curaçao?', 'vraag', 200, 20), cr('k2', 'Lo mejor de Curaçao', 'voordeel', 200, 4), cr('k3', 'Mapa de playas', 'voordeel', 200, 6), cr('k4', 'Eventos de hoy', 'voordeel', 200, 6)], { echt: 200, actie: 0, aanmelding: 30, dialoog: 0, koop: 0, bezoek: 700 }, 'https://todayin.email/?lang=es');
+for (let i = 1; i <= 3; i++) await kv.set('cm:camp:' + dag(nu - i * DAG), [...dagCamps(), kopie()]);
 // posts (zoals lib/distlus.js ze bewaart)
 const post = (id, project, kanaal, tekst, haak, imp, kliks, store, extra = {}) => ({ id, t: iso(nu - 5 * DAG), dag: dag(nu - 5 * DAG), project, kanaal, plek: 'eigen account', onderwerp: 'gemiste oproep', taal: 'en', soort: 'tekst-link', metLink: true, doel: 'https://nexy.now/missed-calls', code: 'bcdfg', tekst, status: 'geplaatst', kliks, scans: 0, uitkomsten: [], store, stats: { imp, likes: 3, reacties: 1, delen: 0 }, ai: { haak, emotie: 'herkenning', doelgroep: 'zzp', belofte: 'nooit meer missen' }, ...extra });
 const posts = [post('aaaaaaaaaa01', 'nexy', 'x', 'Missed a client call again? Here is what it cost me.', 'probleem', 4000, 40, 6), post('aaaaaaaaaa02', 'nexy', 'x', 'Missed 3 calls yesterday. One was a $2k job.', 'probleem', 4000, 44, 7), post('aaaaaaaaaa03', 'nexy', 'x', 'Another missed call, another lost client?', 'probleem', 4000, 38, 5),
   post('aaaaaaaaaa04', 'nexy', 'x', 'Nexy is a messenger with an AI assistant.', 'belofte', 4000, 6, 0), post('aaaaaaaaaa05', 'nexy', 'x', 'Try our new app today.', 'belofte', 4000, 5, 0), post('aaaaaaaaaa06', 'nexy', 'x', 'We built an assistant for your phone.', 'belofte', 4000, 4, 1),
   post('aaaaaaaaaa07', 'nexy', 'linkedin', 'Freelancers lose jobs to voicemail.', 'cijfer', 2000, 10, 1, { doelsoort: 'klik' })];
+const kaal = (id, plek, kliks, tekst = '') => ({ id, t: iso(nu - 5 * DAG), dag: dag(nu - 5 * DAG), project: 'nexy', kanaal: 'anders', plek, onderwerp: '/v/voicemail-alternative', taal: 'en', soort: 'tekst-link', metLink: true, doel: 'https://nexy.now/v/voicemail-alternative', code: 'bcdfh', tekst, status: 'geplaatst', kliks, scans: 0, uitkomsten: [] });
+posts.push(kaal('bbbbbbbbbb01', 'bluesky', 6, 'Voicemail is where calls go to die.'), kaal('bbbbbbbbbb02', 'bluesky', 5), kaal('bbbbbbbbbb03', 'bluesky', 0), kaal('bbbbbbbbbb04', 'bluesky', 0), kaal('bbbbbbbbbb05', 'bluesky', 0), kaal('bbbbbbbbbb06', 'threads', 0));
 for (const p of posts) { await kv.set('dist:r:' + p.id, p); await kv.raw(['LPUSH', 'dist:lijst', p.id]); }
 // video's en mails
 const VM = await import('../lib/videomind.js');
@@ -44,8 +47,8 @@ for (const m of [mail('0000000000a1', { uitkomst: 'antwoord' }), mail('000000000
 
 // ---- ronde ----
 const r = await P.ronde({});
-ok(r.ok && r.bronnen.advertenties.stukken === 14 && r.bronnen.posts.stukken === 7 && r.bronnen.videos.stukken === 2 && r.bronnen.mails.stukken === 2, 'ronde laadt 14 advertenties, 7 posts, 2 video\'s en 2 mails (privé en concept niet) ' + JSON.stringify(r.bronnen));
-ok(r.fouten.length === 0 && r.nieuw === 25, 'geen fouten, 25 nieuwe stukken ' + JSON.stringify(r.fouten));
+ok(r.ok && r.bronnen.advertenties.stukken === 18 && r.bronnen.posts.stukken === 13 && r.bronnen.videos.stukken === 2 && r.bronnen.mails.stukken === 2, 'ronde laadt 18 advertenties, 13 posts, 2 video\'s en 2 mails (privé en concept niet) ' + JSON.stringify(r.bronnen));
+ok(r.fouten.length === 0 && r.nieuw === 35, 'geen fouten, 35 nieuwe stukken ' + JSON.stringify(r.fouten));
 const a1 = await P.lees('ad:propeller:a1');
 ok(a1 && a1.cijfers.kliks === 600 && a1.cijfers.doel === 72 && a1.medium === 'propeller' && a1.voor.project === 'curacao' && a1.doel.soort === 'aanmelding' && a1.doel.afgeleid && a1.plek === 'in-page push' && a1.voor.publiek === 'co,ve' && a1.voor.pagina === 'todayin.email' && a1.ouder === 'camp:propeller:111', 'advertentie: cijfers opgeteld over 3 dagen, paspoort compleet');
 ok(a1.inhoud.haak === 'vraag' && a1.inhoud.vorm.vraag === 'ja', 'advertentie: haak en vorm');
@@ -61,17 +64,31 @@ const vid = await P.lees('video:ml-cdl-2'); ok(vid.status === 'gepland' && vid.d
 const st = await P.stand({ vers: true });
 const uitslag = async id => (P.oordelen(await P.alle({})).find(x => x.id === id) || {}).oordeel;
 ok((await uitslag('ad:propeller:a1')).uitslag === 'raak' && (await uitslag('ad:propeller:a5')).uitslag === 'mis', 'oordeel: vraag-advertentie raak, voordeel-advertentie mis ' + JSON.stringify(await uitslag('ad:propeller:a1')));
-ok(st.tel.stukken === 25 && st.tel.raak >= 3 && st.tel.mis >= 3, 'stand telt raak en mis ' + JSON.stringify(st.tel));
+ok(st.tel.stukken === 35 && st.tel.families === 32 && st.tel.raak >= 3 && st.tel.mis >= 3, 'stand telt raak en mis ' + JSON.stringify(st.tel));
 ok(st.lessen.some(l => l.medium === 'propeller' && l.doel === 'aanmelding' && l.kenmerk === 'haak' && l.waarde === 'vraag' && l.oordeel === 'werkt') && st.lessen.some(l => l.kenmerk === 'haak' && l.waarde === 'voordeel' && l.oordeel === 'werkt niet'), 'les: haak vraag werkt, haak voordeel werkt niet');
 ok(st.tegenRegel.some(x => x.id === 'ad:propeller:c2' && /prijs/.test(x.regel)), 'advertentie met prijs staat onder tegen een vaste regel');
 ok(st.poort.some(p => p.pagina === 'go.kadoly.com/shop' && p.kliks === 1500), 'uitkomstpoort: 1.500 kliks naar een pagina zonder uitkomst ' + JSON.stringify(st.poort));
-ok(st.tel.afgeleid === 21, 'telt stukken zonder eigen doel (' + st.tel.afgeleid + ')');
-ok(/GEHEUGEN VAN CLICKMIND/.test(P.standTekst(st)) && /<h1>25 stukken/.test(P.standHtml(st, 'body{}')), 'tekst en pagina');
+ok(st.tel.afgeleid === 31 && st.tel.zonderTekst === 5, 'telt stukken zonder eigen doel (' + st.tel.afgeleid + ')');
+ok(/GEHEUGEN VAN CLICKMIND/.test(P.standTekst(st)) && /<h1>35 stukken/.test(P.standHtml(st, 'body{}')), 'tekst en pagina');
+
+// ---- eerlijk vergelijken: binnen de eigen campagne, kopieën als één familie, geen 'verkopen' zonder verkoopmeting ----
+const o1 = await uitslag('ad:propeller:a1'), ok1 = await uitslag('ad:propeller:k1');
+ok(o1.kopieen === 2 && ok1.kopieen === 2 && o1.fam === ok1.fam && /2 keer ingezet/.test(o1.waarom) && /conversies tegen/.test(o1.waarom) && !/verkopen|aanmeldingen/.test(o1.waarom), 'zelfde tekst in twee campagnes is één familie: ' + o1.waarom);
+ok((await uitslag('ad:propeller:c1')).uitslag === 'geen meting per stuk', 'advertentie zonder conversies van het netwerk krijgt geen oordeel');
+ok(P.meet({ betaald: true, doel: { soort: 'koop' }, cijfers: { kliks: 100, koop: 5 } }) === null, 'betaald zonder netwerkconversies: geen meting per advertentie (eigen verkopen naar rato zeggen niets per advertentie)');
+const bl = await P.lees('post:bbbbbbbbbb01'), th = await P.lees('post:bbbbbbbbbb06');
+ok(bl.medium === 'bluesky' && th.medium === 'threads', 'kanaal anders: medium uit de plek (bluesky, threads)');
+ok(P.projectId('tk-mailchimp') === 'tk' && P.projectId('wam-volg') === 'wam' && P.projectId('awin-aanmelding') === 'awin-aanmelding' && P.projectId('todayin') === 'curacao', 'projectnamen met een bekend voorvoegsel');
+const ob = await uitslag('post:bbbbbbbbbb01');
+ok(ob.uitslag === 'raak' && ob.voorlopig === true && /voorlopig op kliks/.test(ob.waarom), 'post zonder store-tikken: voorlopig oordeel op kliks: ' + ob.waarom);
+const bb = await P.briefing({ medium: 'bluesky', project: 'nexy' });
+ok(bb.voorlopig && bb.zonderTekst === 4 && /tekst niet gemeld/.test(bb.tekst), 'briefing: voorlopig signaal en melding van stukken zonder tekst');
+ok(st.perMedium.bluesky && st.perMedium.bluesky.kliks === 11 && st.perMedium.propeller.conv > 0, 'per medium: kliks en conversies');
 
 // ---- briefing ----
 const br = await P.briefing({ medium: 'propeller', project: 'wam', doel: 'aanmelding' });
 ok(br.ok && br.vast.some(x => x.id === 'ads-verkooptekst') && br.vast.some(x => x.id === 'boodschap-klopt'), 'briefing: vaste regels voor advertenties');
-ok(br.laatste.length === 4 && /MELD JE STUK/.test(br.tekst), 'briefing: eerdere stukken van dit project en meldadres');
+ok(br.laatste.length === 4 && br.families === 4 && /MELD JE STUK/.test(br.tekst), 'briefing: eerdere stukken van dit project en meldadres');
 ok(br.elders.some(l => l.kenmerk === 'getal in de tekst' || l.kenmerk === 'haak' || l.kenmerk === 'opening'), 'briefing: kruisbestuiving uit alle projecten op dit medium ' + JSON.stringify(br.elders.map(l => l.kenmerk + '=' + l.waarde)));
 ok(br.research.some(x => x.id === 'uitkomst-op-pagina' && /nog niet/.test(x.stand)), 'briefing: research als startkennis met stand');
 const bx = await P.briefing({ medium: 'x', project: 'nexy' });

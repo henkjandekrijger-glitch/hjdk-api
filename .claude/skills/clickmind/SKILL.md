@@ -16,7 +16,8 @@ Henkjan 27 nov 2026: "Clikmind moet altijd medium meenemen waarop en waarvoor en
 - Research is een voorsprong, geen wet. Eigen cijfers gaan voor; de briefing zegt per researchregel of eigen data hem bevestigt of tegenspreekt. Nieuwe research of een vaste regel van Henkjan zet je met bron in `data/stuk-priors.json`.
 - Geef het doel altijd mee: `doelsoort=<doel>` bij `op=distmaak`, `doelsoort` bij een video in Videomind, `?op=stuk&campagne=<netwerk>:<id>&doel=<doel>` na het aanmaken van een campagne. Een los stuk meld je met `?op=stuk&j={"medium":"...","project":"...","doel":"...","titel":"...","tekst":"...","haak":"...","pagina":"https://..."}`; zonder medium, project en doel wordt het geweigerd.
 - Lezen: `https://hjdk-api-henq.vercel.app/geheugen` (pagina voor Henkjan), `/api/mm/stukken?vorm=tekst` (voor chats). De ronde loopt mee met de crons van het campagne-archief en Videomind; nu draaien: `/api/mm/stukken?run=1`.
-- Oordeel per stuk tegen soortgenoten (zelfde medium en doel): raak, mis of gemiddeld vanaf 60 kliks of 500 vertoningen. Lessen per kenmerk (haak, emotie, opening, vraag, getal, lengte, prijs, knoptekst, vorm) tellen pas als ze aantoonbaar van het gemiddelde afwijken.
+- Oordeel eerlijk: een advertentie telt tegen wat je binnen zijn eigen campagne mocht verwachten, een post, video of mail binnen zijn project en medium. Dezelfde tekst in kopieën van een campagne telt als één stuk. Bij advertenties gaat het om de conversies die het netwerk per advertentie meldt (het doel waarop de campagne biedt); noem dat conversies, niet verkopen. Lessen per kenmerk (haak, emotie, opening, vraag, getal, lengte, prijs, knoptekst, vorm, onderwerp) tellen pas als ze aantoonbaar van de verwachting afwijken.
+- Meld bij een post altijd de tekst (`tekst=` bij `op=distmaak`). Zonder tekst kan Clickmind niets leren van die post; de pagina telt ze.
 - Het geheugen meet, oordeelt en adviseert. Het wijzigt geen campagne en plaatst niets.
 
 ## Waar kijken
