@@ -20,7 +20,7 @@ ok(!A.check(Object.assign({}, C, { live: undefined }), null, nu).ok && A.check(O
 
 // 2. zonder goedgekeurde week: nog niets live, concept wordt een vraag met voorbeeld in zijn lijst
 ok(!(await A.leesLive(kv)), 'nog niets live');
-let u = await A.zetConcept(kv, C, 'test', nu); ok(u.ok && /^https:\/\/adsfair\.xyz\/\?concept=[a-z0-9]{12}$/.test(u.voorbeeld), 'concept met voorbeeldlink');
+let u = await A.zetConcept(kv, C, 'test', nu); ok(u.ok && /^https:\/\/keuzehulp\.best\/api\/mm\/adsfair\?vorm=pagina&concept=[a-z0-9]{12}$/.test(u.voorbeeld), 'concept met voorbeeldlink');
 let s = await T.leesTaken(kv, nu), x = s.taken.find(y => y.id === u.taak);
 ok(x && x.status === 'jij' && x.soort === 'ja' && x.toon === u.voorbeeld && x.project === 'adsfair' && x.actie.concept === u.concept, 'vraag in zijn lijst: zijn ja, met voorbeeld');
 const html = A.pagina((await A.leesConcept(kv)), { concept: 'test' });
@@ -41,6 +41,7 @@ await T.zetTaken(kv, { antwoord: { id: u.taak, tekst: 'Ja' } }, 'Henkjan', nu + 
 const L = await A.leesLive(kv); s = await T.leesTaken(kv, nu); x = s.taken.find(y => y.id === u.taak);
 ok(L && L.week === '2026-W48' && L.besluit && !(await A.leesConcept(kv)) && x.status === 'klaar' && /Live op adsfair\.xyz/.test(x.resultaat), 'Ja: live, besluit erbij, concept weg, taak klaar');
 ok(T.jaStand(s, L.besluit).telt === true, 'bewijs van zijn ja telt');
+ok(s.taken.some(y => y.project === 'adsfair' && y.status === 'wacht' && y.tekst.includes(A.OMZET_DPL)), 'eerste Ja: taak om adsfair.xyz om te zetten');
 const p = A.pagina(L, {}); ok(/Week 48 · 23 to 29 November 2026/.test(p) && /id="live"/.test(p) && p.includes('curacao.day') && p.includes('Google Play →') && !/[–—]/.test(p) && !/todayin/i.test(p), 'pagina: week, overzicht, geen streepjes of oude namen');
 ok(/"@type":"FAQPage"/.test(p) && /canonical/.test(p) && /track\.js/.test(p), 'pagina: json-ld, canonical, meting');
 ok(/## Live products/.test(A.llms(L)) && A.updatesPagina({ [L.week]: L }, L.live).includes('Weekly updates'), 'llms en archief');
