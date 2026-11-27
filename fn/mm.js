@@ -446,7 +446,7 @@ export default async function handler(req, res) {
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; const u = await O.zetOversight(kv, b, b.wie || ''); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b ? await O.zetOversight(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON>, zie ?vorm=tekst' }; return res.status(u.ok ? 200 : 400).json(u); }
-      const s = await O.ovStand(kv, 14);
+      const s = await O.ovStand(kv, 14); s.bezoek = await O.ovBezoek(kv, 14).catch(() => null);
       if (q('vorm') === 'json') return res.status(200).json(s);
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(O.ovTekst(s) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(O.ovHtml(s, CSS)); }
