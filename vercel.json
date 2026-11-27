@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/keuze-tools?tool=intentie&op=chatanalyse&ronde=1",
+      "schedule": "17 6 * * *"
+    },
+    {
       "path": "/api/bs?op=dagrapport",
       "schedule": "13 12 * * *"
     },
@@ -3232,7 +3236,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!robots\\.txt$|cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:uit$|b$|px$|win$|winvoorwaarden$|productcheck$|bundel|pakketten|pakkethtml|gmclabels|gmcbeeld|ttvideo|ttfeed|chatgpt|beeld/|prijslijst|tlogo)|shop$|o$|o/[a-z0-9]{2,5}$|winactie$|verlanglijst$|verlanglijst/[A-Za-z0-9_-]{1,20}$).+)",
+      "source": "/((?!robots\\.txt$|cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:uit$|b$|px$|win$|winvoorwaarden$|productcheck$|bundel|pakketten|pakkethtml|gmclabels|gmcbeeld|ttvideo|ttfeed|chatgpt|beeld/|prijslijst|tlogo|lijst$)|api/keuze-tools$|shop$|o$|o/[a-z0-9]{2,5}$|winactie$|verlanglijst$|verlanglijst/[A-Za-z0-9_-]{1,20}$).+)",
       "has": [
         {
           "type": "host",
