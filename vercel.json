@@ -2825,6 +2825,16 @@
       "destination": "/api/mm?op=dashboard"
     },
     {
+      "source": "/geheugen",
+      "has": [
+        {
+          "type": "host",
+          "value": "hjdk-api-henq.vercel.app"
+        }
+      ],
+      "destination": "/api/mm?op=stukken"
+    },
+    {
       "source": "/api/mm/:op",
       "destination": "/api/mm?op=:op"
     },
@@ -3169,7 +3179,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 300,
-      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,data/wam/**,OVERDRACHT-*.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,docs/curacao-bedrijven-groei.md}"
+      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,data/stuk-priors.json,data/zicht-priors.json,data/wam/**,OVERDRACHT-*.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,docs/curacao-bedrijven-groei.md}"
     }
   },
   "redirects": [

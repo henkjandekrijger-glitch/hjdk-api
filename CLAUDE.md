@@ -110,6 +110,16 @@ De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op verc
 - Bedrijvengids alleen in NL en EN in Google (Henkjan 18 nov 2026: "Los op vind oorzaak", na −92% Google-vertoningen vanaf 15 nov): bedrijfs- en soortpagina's in DE, ES en PT zijn noindex,follow en staan niet in hreflang (`lib/cur.js` GIDS_INDEX_TALEN); ze gaven sinds 1 nov 588 vertoningen en 4 kliks op 13.665 pagina's. Zet geen nieuwe automatisch vertaalde gidspagina's zonder eigen inhoud in Google. Waarom en hoe terug: `lib/werking.js`, proef cd-gids-kern-nl-en-1118.
 - Vaste regels (de controle bewaakt ze): geen Plus Code, telefoon leesbaar, geen "nog geen" of nullen, geen blok twee keer, de chat van de site en geen los vraagveld, knoppen in het eerste scherm van 360x640, contrast 4,5 in licht en donker, pagina korter dan 2.800 px, namen niet in HOOFDLETTERS, tijden op één regel.
 
+## Alles wat de deur uit gaat: eerst de briefing, dan het paspoort (Henkjan, 27 nov 2026)
+
+"Clikmind moet altijd medium meenemen waarop en waarvoor en welk doel er gepost wordt en van ieder vorige bericht of alle vorige berichten leren", "Moet ook alle ad copy en creatives meenemen !!!!!  Dus content en creatives ." en "Ook altijd vast bestaande research inladen zonder dat we daar ons vooleidig door laten leiden maar kan data voorsprong geven".
+
+- Geldt voor elk project en elk medium: advertentietekst en beeld, posts, reacties, video's, mails, pins, paginakoppen.
+- Vóór je iets maakt: lees `https://hjdk-api-henq.vercel.app/api/mm/briefing?medium=<medium>&project=<id>&doel=<doel>` (web_fetch_vercel_url; een cron in een ander project met de gedeelde team-sleutel). Bouw voort op wat werkt, herhaal niet wat mis was of wat er al staat, en neem minstens één ding mee dat elders werkt en hier nog niet is geprobeerd.
+- Elk stuk krijgt een paspoort: medium (waarop), project en pagina (waarvoor) en doel (koop, aanmelding, store, antwoord, actie, echt, klik, reactie of bereik). Geef het doel mee: `doelsoort=` bij `op=distmaak`, `doelsoort` bij Videomind, `/api/mm?op=stuk&campagne=<netwerk>:<id>&doel=` na het aanmaken van een campagne, of meld een los stuk met `/api/mm?op=stuk&j=<JSON>`. Zonder doel telt een stuk op de pagina als zonder eigen doel.
+- Research geeft een voorsprong maar beslist niet: eigen cijfers gaan voor. Nieuwe research of een vaste regel van Henkjan staat met bron in `data/stuk-priors.json`.
+- Het geheugen met alle stukken, oordelen (raak, mis) en lessen: `https://hjdk-api-henq.vercel.app/geheugen` (tekst: `/api/mm/stukken?vorm=tekst`). Code `lib/paspoort.js`, test `KV_REDIS_URL=redis://127.0.0.1:<poort> node scripts/test-paspoort.mjs`. Een nieuwe motor die iets de deur uit stuurt (posts, pins, mail in aantallen) laadt zijn stukken hier in: een functie `stukUit...` en een regel in `ronde()`.
+
 ## Nooit vastlopen (Henkjan 20 nov 2026: "Ik moet iets in prompt zeggen dat er altijd checks zijn en nooit lang hangen in mogelijke fout")
 
 - Bouw je iets (pagina, chat, campagne, lus), bouw dan in dezelfde stap de controle die meet of het doet wat het moet, met een drempel waarop het zelf ingrijpt. Draaien is niet hetzelfde als werken.

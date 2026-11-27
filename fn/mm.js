@@ -33,6 +33,7 @@
 //   /api/mm/cc[?deel=voorstel|wachtrij][&dag=]   Creator Connections: stand, campagnevoorstellen en accepteerwachtrij (lib/cc.js, beschermde host)
 //   /api/mm/cc  POST { soort, rijen }            de aanbiedingenlijst voeden vanuit de ingelogde Associates-pagina (beschermde host)
 //   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
+//   /api/mm/stukken[?vorm=tekst|json][&run=1]   geheugen van alles wat de deur uit ging, met paspoort (medium, waarvoor, doel), oordeel en lessen; /api/mm/briefing?medium=&project=&doel= lezen vóór je iets maakt; /api/mm?op=stuk&j=<JSON> een stuk melden (lib/paspoort.js; beschermde host of team-sleutel)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
 //   /api/mm/lookalike?project=todayin&land=us   lookalikes op uitkomst (lib/lookalike.js; openbaar, alleen zone-nummers)
@@ -192,16 +193,45 @@ export default async function handler(req, res) {
     if (op.startsWith('dist')) { // Clickmind distributie: gerichte reacties, korte links en wat werkt (lib/distlus.js, Henkjan 19 nov 2026)
       const D = await import('../lib/distlus.js'); res.setHeader('cache-control', 'no-store');
       if (op === 'distklik') return await D.klikAntwoord(req, res, q('c'));
-      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), soort: q('soort'), doel: q('doel'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
+      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), soort: q('soort'), doel: q('doel'), doelsoort: q('doelsoort'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
       if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
+    }
+    if (op === 'stuk' || op === 'stukken' || op === 'briefing') { // paspoort en geheugen (lib/paspoort.js, Henkjan 27 nov 2026): één register voor alles wat de deur uit gaat, met medium, waarvoor en doel
+      const P = await import('../lib/paspoort.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''), given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
+      const sleutel = given.some(g => [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean).includes(g)); /* andere projecten lezen en melden met de gedeelde team-sleutel */
+      if (!(isCron || beschermd(req) || sleutel)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host of de team-sleutel' });
+      if (op === 'briefing') { // lezen vóór je iets maakt: ?medium=&project=&doel=[&vorm=json]
+        const b = await P.briefing({ medium: q('medium'), project: q('project'), doel: q('doel'), dagen: Math.min(180, Number(q('dagen')) || 90) }); if (!b.ok) return res.status(400).json(b);
+        if (q('vorm') === 'json') return res.status(200).json(b);
+        res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(b.tekst + '\n');
+      }
+      if (op === 'stuk') { // één stuk melden of lezen; ?campagne=<net>:<id>&doel= zet het doel van een hele campagne vast
+        if (q('campagne')) { const r = await P.zetCampDoel(q('campagne'), q('doel')); return res.status(r.ok ? 200 : 400).json(r); }
+        const b = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j'));
+        if (!b && q('id')) return res.status(200).json((await P.lees(q('id'))) || { ok: false, fout: 'onbekend id' });
+        if (!b) return res.status(400).json({ ok: false, fout: 'geef j=<JSON> of POST JSON: {"medium":"...","project":"...","doel":"...","titel":"...","tekst":"...","haak":"...","pagina":"https://...","plek":"...","publiek":"..."}', media: Object.keys(P.MEDIA), doelen: P.DOELEN });
+        delete b.bron; const r = await P.zet(b, { streng: ['hand', 'ad', 'post', 'video', 'mail'] }); /* met de hand melden kan alleen met een volledig paspoort */
+        return res.status(r.ok ? 200 : 400).json(r);
+      }
+      if (q('run') === '1') return res.status(200).json(await P.ronde({ dagen: Math.min(120, Number(q('dagen')) || 45) }));
+      if (q('streng') != null) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); return res.status(200).json(await P.zetStreng(q('streng'))); }
+      const st = await P.stand({ vers: q('vers') === '1' });
+      if (q('vorm') === 'json') return res.status(200).json(st);
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.standTekst(st) + '\n'); }
+      const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(P.standHtml(st, CSS));
     }
     if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
       const C = await import('../lib/cmcamp.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       if (q('run') === '1') {
         const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
         if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
-        return res.status(200).json(await C.ronde({ dag: q('dag') }));
+        const cr = await C.ronde({ dag: q('dag') });
+        /* het geheugen loopt mee met deze cron (lib/paspoort.js): alle creatives, posts, video's en mails opnieuw inladen en oordelen */
+        if (isCron) cr.geheugen = await import('../lib/paspoort.js').then(P => P.ronde({})).then(g => ({ stukken: g.stukken, nieuw: g.nieuw, raak: g.raak, mis: g.mis, fouten: g.fouten })).catch(e => ({ fout: String(e && e.message || e).slice(0, 160) }));
+        return res.status(200).json(cr);
       }
       if (q('labelwerk') === '1') return res.status(200).json(await C.labelWerk(Number(q('n')) || 80));
       if (q('labels')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); let o = null; try { o = JSON.parse(q('labels')); } catch (e) {} return res.status(200).json(await C.zetLabels(o)); }

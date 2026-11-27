@@ -25,7 +25,10 @@ export default async function handler(req, res) {
   const txt = (s, code = 200) => { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(code).send(s); };
   try {
     if (op === 'skill') { const t = leesSkill('videomind'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
-    if (op === 'ronde') { if (!cron(req) && !beschermd(req) && !sleutel(req)) return res.status(403).json({ ok: false }); return res.status(200).json(await V.ronde({ droog: q.droog === '1' })); }
+    if (op === 'ronde') { if (!cron(req) && !beschermd(req) && !sleutel(req)) return res.status(403).json({ ok: false }); const vr = await V.ronde({ droog: q.droog === '1' });
+      /* het geheugen van Clickmind loopt mee met deze cron (lib/paspoort.js), hooguit eens per 5 uur */
+      if (q.droog !== '1') vr.geheugen = await import('../lib/paspoort.js').then(P => P.ronde({ rem: 5 })).then(g => g.overgeslagen ? { overgeslagen: g.overgeslagen } : { stukken: g.stukken, nieuw: g.nieuw, raak: g.raak, mis: g.mis }).catch(e => ({ fout: String(e && e.message || e).slice(0, 160) }));
+      return res.status(200).json(vr); }
     if (!beschermd(req) && !sleutel(req)) return res.status(403).send('alleen via de beschermde vercel.app-host of met de team-sleutel; de skill is openbaar: ?op=skill');
     if (op === 'zet') { const x = json(q, b); if (x === undefined || x === null) return res.status(400).json({ ok: false, fout: 'json=<video of lijst>; velden: id, project, platform, vorm, titel, onderwerp, pagina, haak, lengte, at, zid, link, net, camp' });
       const l = Array.isArray(x) ? x : Array.isArray(x.videos) ? x.videos : null; const r = l ? await V.zetVeel(l) : await V.zet(x); return res.status(r.ok ? 200 : 400).json(r); }

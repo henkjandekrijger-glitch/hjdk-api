@@ -7,6 +7,18 @@ description: "Gebruik bij alles rond Clickmind, Henkjans systeem dat van elke kl
 
 Clickmind (naam van Henkjan, 14 okt 2026) leert van elke advertentieklik en elk bezoek op zijn eigen sites. Code: repo henkjandekrijger-glitch/hjdk-api (api/mm.js, lib/mensmeter.js, lib/wissel.js, lib/leer.js, lib/terug.js, lib/modal.js). Vercel-project hjdk-api (prj_xAWlThjvk5VfU9AMN8GGI8LrdOSF, team team_9EYxyAU5QDExrrrOSKamefJT), deploy vanaf main. Schrijf kort, in gewoon Nederlands, met cijfers.
 
+## Paspoort en geheugen: eerst de briefing, dan maken, dan melden (27 nov 2026)
+
+Henkjan 27 nov 2026: "Clikmind moet altijd medium meenemen waarop en waarvoor en welk doel er gepost wordt en van ieder vorige bericht of alle vorige berichten leren", "Moet ook alle ad copy en creatives meenemen" en "Ook altijd vast bestaande research inladen zonder dat we daar ons vooleidig door laten leiden maar kan data voorsprong geven". Code `lib/paspoort.js`, test `scripts/test-paspoort.mjs`.
+
+- Alles wat de deur uit gaat is een stuk met een paspoort: medium (waarop), voor (project, pagina, publiek) en doel (koop, aanmelding, store, antwoord, actie, echt, klik, reactie, bereik). Geldt voor advertentietekst en beeld, posts, reacties, video's en mails.
+- Vóór je iets maakt: lees de briefing `https://hjdk-api-henq.vercel.app/api/mm/briefing?medium=<medium>&project=<id>&doel=<doel>` (web_fetch_vercel_url). Daar staan de vaste regels, wat hier aantoonbaar werkt en niet, de beste en slechtste stukken, wat elders werkt en hier nog niet is geprobeerd (neem er minstens één mee), de startkennis uit research en de laatste stukken (herhaal die niet).
+- Research is een voorsprong, geen wet. Eigen cijfers gaan voor; de briefing zegt per researchregel of eigen data hem bevestigt of tegenspreekt. Nieuwe research of een vaste regel van Henkjan zet je met bron in `data/stuk-priors.json`.
+- Geef het doel altijd mee: `doelsoort=<doel>` bij `op=distmaak`, `doelsoort` bij een video in Videomind, `?op=stuk&campagne=<netwerk>:<id>&doel=<doel>` na het aanmaken van een campagne. Een los stuk meld je met `?op=stuk&j={"medium":"...","project":"...","doel":"...","titel":"...","tekst":"...","haak":"...","pagina":"https://..."}`; zonder medium, project en doel wordt het geweigerd.
+- Lezen: `https://hjdk-api-henq.vercel.app/geheugen` (pagina voor Henkjan), `/api/mm/stukken?vorm=tekst` (voor chats). De ronde loopt mee met de crons van het campagne-archief en Videomind; nu draaien: `/api/mm/stukken?run=1`.
+- Oordeel per stuk tegen soortgenoten (zelfde medium en doel): raak, mis of gemiddeld vanaf 60 kliks of 500 vertoningen. Lessen per kenmerk (haak, emotie, opening, vraag, getal, lengte, prijs, knoptekst, vorm) tellen pas als ze aantoonbaar van het gemiddelde afwijken.
+- Het geheugen meet, oordeelt en adviseert. Het wijzigt geen campagne en plaatst niets.
+
 ## Waar kijken
 
 - Geld eerst (13 nov): https://hjdk-api-henq.vercel.app/api/geld — per project $ uit, $ waard (uitkomsten x de munt lib/waarde.js, Redis mm:waarde, instellen met de Opslaan-knop op die pagina), verspild en wat Clickmind deed. Begin elke analyse hier.

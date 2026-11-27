@@ -1,0 +1,131 @@
+[
+  {
+    "id": "per-medium",
+    "les": "Maak elk stuk voor het medium waar het op komt: eigen vorm, lengte en opening per platform. Nooit dezelfde tekst overal.",
+    "media": "organisch",
+    "doelen": "alle",
+    "bron": "Henkjan, 21 nov 2026: \"Maak posts altijd voor het medium niet zomaar een tekstje . Maak het lerend voor het medium .\" en 27 nov 2026: \"altijd op maat per platform zorg dat dat in clickmind vergrendeld is\"",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "ads-verkooptekst",
+    "les": "Advertentietekst is echte verkooptekst met een sterke knoptekst. Geen kale productnaam, geen levertijd en geen prijs in de advertentie.",
+    "media": "betaald",
+    "doelen": "alle",
+    "kenmerk": "prijs",
+    "waarde": "ja",
+    "richting": "minder",
+    "bron": "Henkjan, vaste regel voor advertentieteksten; data/whop-ctr.json: \"geen prijzen (Henkjan 29 okt)\"",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "boodschap-klopt",
+    "les": "Advertentie en landingspagina zeggen hetzelfde: dezelfde belofte en dezelfde woorden bovenaan de pagina.",
+    "media": "betaald",
+    "doelen": "alle",
+    "bron": "Henkjan, vaste regel: de advertentie moet nauw aansluiten op de landingspagina",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "snel-uit-vaak-nieuw",
+    "les": "Een advertentie die niet presteert gaat snel uit en er komen vaak nieuwe, betere voor in de plaats. Advertenties maken kost niets, slechte advertenties kosten geld.",
+    "media": "betaald",
+    "doelen": "alle",
+    "bron": "Henkjan, 23 nov 2026: \"Ad moet veel sneller uit\" en \"je moet echt betere ads maken en vaker . Ads maken kost niks slechte ads kosten geld\"",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "meta-ctr-1",
+    "les": "Meta-advertentie: onder 1% CTR na 300 vertoningen gaat hij uit en komt er een nieuwe.",
+    "media": ["meta"],
+    "doelen": "alle",
+    "bron": "data/whop-ctr.json, Henkjan 19 nov 2026: \"Als CTR niet boven 1% kill en nieuwe ad .\"",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "alleen-feiten",
+    "les": "Teksten gebruiken alleen feiten die op de productpagina of landingspagina staan. Niets verzinnen: geen cijfers, reviews of resultaten.",
+    "media": "alle",
+    "doelen": "alle",
+    "bron": "data/whop-bewezen.json en data/whop-varianten.json (\"Alleen feiten die op de productpagina staan\"); leerprompt dashboard: \"Verzin niets\"",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "uitkomst-op-pagina",
+    "les": "Stuur geen verkeer naar een pagina waar niets aan te melden of te kopen valt. De chatlijnen hadden op 26 nov 1.018 kliks, ruim 80% echte mensen, 43% deed een actie en er was geen enkele uitkomst.",
+    "media": "betaald",
+    "doelen": ["koop", "aanmelding"],
+    "bron": "Clickmind-overdracht, doelketen, les 26 nov 2026 (lib/overdracht.js)",
+    "sterkte": 4
+  },
+  {
+    "id": "echt-is-geen-aanmelder",
+    "les": "Echte mensen zijn nog geen aanmelders of kopers. Beoordeel een stuk op de uitkomst (aanmelding, verkoop), niet op 'echt mens'.",
+    "media": "betaald",
+    "doelen": ["koop", "aanmelding"],
+    "bron": "Clickmind-overdracht, 18 okt 2026 (zone 11261241: 93 echte mensen op todayin, 0 aanmeldingen) en les 13 nov 2026 (leerde op 'echt mens' en greep bijna niet in)",
+    "sterkte": 4
+  },
+  {
+    "id": "push-prijsband",
+    "les": "Kopers via push kopen artikelen van ongeveer $15 tot $25. Een aanbod waar de producten vooral boven $40 kosten verkoopt via push niet, hoeveel kliks er ook komen.",
+    "media": ["propeller", "mondiad", "richads", "mgid"],
+    "doelen": ["koop"],
+    "bron": "Clickmind Amazon-lessen 16 okt 2026 (lib/termles.js; skill campagnes-henkjan, regel Prijs)",
+    "sterkte": 4
+  },
+  {
+    "id": "gericht-reageren",
+    "les": "Reageer je onder een post of vraag van iemand anders: alleen volkomen gericht op wat diegene vraagt, vaak zelfs zonder link. Een link alleen als hij het antwoord beter maakt.",
+    "media": ["reddit", "facebook", "forum", "quora", "x", "linkedin", "nieuwssite", "tripadvisor"],
+    "doelen": "alle",
+    "kenmerk": "soort",
+    "bron": "Henkjan, 19 nov 2026 (lib/distlus.js): \"Alleen volkomen gericht replyen vaak zelfs niet met link .\"",
+    "sterkte": 4,
+    "vast": true
+  },
+  {
+    "id": "klachten-als-haak",
+    "les": "Klachten over concurrenten (reviews met 1 of 2 sterren) zijn goede haken voor posts en video's: begin bij het probleem dat mensen zelf al noemen.",
+    "media": "organisch",
+    "doelen": "alle",
+    "kenmerk": "haak",
+    "waarde": "probleem",
+    "richting": "meer",
+    "bron": "lib/buiten.js, 26 nov 2026 (aanname bij de bouw, nog niet met eigen cijfers gemeten)",
+    "sterkte": 2
+  },
+  {
+    "id": "geen-valse-haast",
+    "les": "Geen valse haast en geen beloning voor kopen. Een datum of voorraad noem je alleen als hij klopt.",
+    "media": "alle",
+    "doelen": "alle",
+    "bron": "Vaste regel van de lerende modal (skill clickmind: \"geen valse haast, geen beloning voor kopen\")",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "geen-nullen",
+    "les": "Toon nooit nul groei of nultellers. Is er niets te melden, laat de regel dan weg.",
+    "media": ["site", "mail"],
+    "doelen": "alle",
+    "bron": "Henkjan, vaste regel (CLAUDE.md: \"geen 'nog geen' of nullen\")",
+    "sterkte": 5,
+    "vast": true
+  },
+  {
+    "id": "echte-foto",
+    "les": "Bij een nieuws- of artikelblok hoort een echte foto. Een getekende illustratie alleen als er geen foto te vinden is.",
+    "media": ["site", "mail"],
+    "doelen": "alle",
+    "bron": "Henkjan, 22 nov 2026: \"Laat hier een foto zien niet dit ... alleen in noodgeval dit als geen pic te vinden\"",
+    "sterkte": 5,
+    "vast": true
+  }
+]

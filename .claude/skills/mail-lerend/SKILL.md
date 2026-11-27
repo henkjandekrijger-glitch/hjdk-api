@@ -9,6 +9,7 @@ Mailmind is de naam van het geheel (Henkjan 25 nov 2026: "Ik wil een intelligent
 
 - **De regels (POST-lus, hieronder):** elke losse mail van een chat gaat eerst langs de regels, wordt gemeld en pas na Henkjans "verstuur" verstuurd.
 - **De motor (lib/mailmind.js):** alles wat in aantallen gaat (een lijst, werving, opvolging). Overzicht: https://hjdk-api-henq.vercel.app/api/post?op=mailmind, per stroom &s=<stroom>.
+- **Het geheugen van Clickmind (27 nov 2026):** elke verstuurde mail van de POST-lus staat met onderwerpregel en uitkomst (nooit het adres, geen privémail) in het ene geheugen naast advertenties, posts en video's. De briefing `https://hjdk-api-henq.vercel.app/api/mm/briefing?medium=mail&project=<id>` zet de regels van de POST-lus en wat eerdere mails van dit project deden bij elkaar.
 
 ## De Mailmind-motor
 
