@@ -4,6 +4,39 @@ Live: https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht (Vercel-inlog; i
 
 Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na elke stap een regel in het werklog (`/api/mm/handover?log=<tekst>&wie=kdp-<jouw chat>`) en zet nieuwe kennis in kdp/rapport.md (draaiboek) en zo nodig hier. Commit met expliciete bestandsnamen, eerst `git pull --rebase`, push naar main.
 
+## START HIER (voor elke nieuwe chat; bijgewerkt 27 nov 2026 door kdp-chat, Henkjan: "Wat je niet begrijpt van overdracht ed voeg toe zodat volgende overdracht wel gaat kloppen")
+
+**Lezen.** De hele overdracht is ~170.000 tekens en past niet in één web_fetch. Lees in deze volgorde:
+1. `/api/wtb?op=kdpoverdracht&deel=kort`: deze START HIER-sectie, sectie 0 (plan en stand per stap) en de laatste 8 KDP-werklogregels (ingekort). Genoeg om te beginnen.
+2. Alleen als je het nodig hebt: `&deel=overdracht` (dit hele bestand), `&deel=rapport` (draaiboek kdp/rapport.md, cijfers per ronde), `&deel=wachtrij` (nieuwe boeken), `&deel=wedstrijd` (boekwedstrijd), `&deel=log` (20 werklogregels voluit). Zonder `deel` krijg je alles achter elkaar (te groot voor een chat; sla op als bestand en grep).
+3. Stand en planning met datums: `/api/mm/dashboard?vorm=tekst&project=kdp`. Die planning is leidend voor "wat nu".
+
+**Wat kan waar.**
+| Wat | Cloud-chat (claude.ai/code, deze repo) | Ronde met Chrome (Henkjans Mac, Claude in Chrome) |
+|---|---|---|
+| KDP-royalty per boek en land, Amazon Ads lezen of wijzigen | NEE: geen browser met Amazon-login, geen Ads API-sleutel | JA (KDP via fetch, zie TIP's in kdp/rapport.md) |
+| Oordelen op de 40%-regel | Alleen op cijfers die al in het werklog staan (ronde A schrijft ze elke ochtend); zeg dat erbij en laat de volgende ronde met Chrome bevestigen | JA, met verse cijfers |
+| Overdracht, rapport, wachtrij, code, bouwen van boeken (binnenwerk, omslag), reviewlinks, gidsen | JA, en pushen kan | Pushen lukt vanuit een geplande taak meestal niet; schrijf dan in het werklog |
+| Dashboard en werklog bijwerken | JA (Vercel-tool) | JA |
+| Keepa-rang | Connector staat er, maar sinds 18 nov "No active API plan" | idem |
+Een cloud-chat zonder Chrome doet dus: oordelen op werklogcijfers, plan en overdracht, boeken bouwen, reviews en organisch; en laat elke klik in KDP of Ads als opdracht voor de eerstvolgende ronde achter (in sectie 0 en het werklog, met "ronde A <datum>: ...").
+
+**Wie draait de rondes.** Ronde A (06:20 UTC), B (12:20), C (17:20) en D (22:20) zijn geplande taken in het account met Chrome op Henkjans computer; zie sectie 0 onder "Rondes" voor de ids. Ze zijn niet zichtbaar of te wijzigen vanuit een cloud-chat in een ander account. Losse oordeel-taken (bijv. "PIT BOSS: 40%-regel handhaven", "Apocrypha VS: oordeel na 7 dagen") hangen aan sessie session_018fX8wVRvYzXXcTu4rMFhXp (kdp-hoofdchat).
+
+**Koersen om de 40%-regel te rekenen** (bij benadering, genoeg voor een oordeel; de ronde mag de dagkoers gebruiken): CA$1 = US$0,70 (rapport: CA$14,22 = $10), A$1 = US$0,65, GBP 1 = US$1,27, EUR 1 = US$1,05. KDP-royalty staat al in USD (preferredCurrency USD).
+
+**Royalty per verkoop (voor "hoeveel ads mag een verkoop kosten")**: Teens CA ~US$3,35 (CA$4,78), Teens AU ~US$2,27, Teens VS $9,99 = max CPC $0,16 (geen ads), Enoch AU ~US$4,21, PIT BOSS paperback $5,05 ($17,99), Lasting Change paperback $9,48 bij $19,99 (de prijs nu; bij $24,99 $12,48, sectie 7a), Definitive Apocrypha $5,49. Details in sectie 5 en kdp/rapport.md.
+
+**Let op bij KDP-cijfers.** Een ad-aankoop staat vaak pas 1-2 dagen later in KDP (26 nov: ad-aankoop Teens AU A$15,11, KDP AU $0). Reken bij een oordeel dus ook met de ad-verkopen die nog niet in KDP staan, en zeg welke van de twee je gebruikt.
+
+**Bijschrijven.**
+- Dashboard: `"klaar"` zoekt een open planregel waarvan de tekst begint met wat je meegeeft. Geef een kort uniek stuk ("Oordeel Australië"), niet de hele regel: een lange tekst met % of diakrieten matcht soms niet (27 nov: fout "geen open planregel gevonden").
+- Werklog: `wie=kdp-<chat>` (kdp-chat, kdp-rondes, kdp-hoofdchat, kdp-statuscheck, kdp-reviews), hoogstens ~1.500 tekens per regel.
+- Output met intentie melden in dezelfde beurt (CLAUDE.md, `"output":{...}`).
+- Git: CLAUDE.md zegt pushen naar main (Vercel rolt uit; één push per afgeronde taak). Geeft de omgeving je een eigen sessiebranch, push daar ook naar, anders blijft de stophook klagen.
+
+**Waar staan de oordelen.** De vaste tabel met alle lopende oordelen en hun regel staat in sectie 6; de datums in de planning van het dashboard. Nieuwe uitkomst = in sectie 0 bij de stap (of sectie 6) + werklog + dashboard `klaar` en zo nodig `erbij`.
+
 ## 0. Plan boekenplank (24 nov 2026, Henkjan: "Ok we werken je plann uit Zorg dat er een overdracht op vercel staat bij de boeken site zodat ik onafh van accounts kan werken .")
 
 Dit is het werkplan voor de hele plank. Elk account en elke chat werkt hieruit: lees deze sectie, kijk bij "Stand per stap" wat open staat, doe de bovenste open stap, zet de uitkomst terug in deze sectie (zelfde commit) en een regel in het werklog (`/api/mm/handover?log=...&wie=kdp-<chat>`).

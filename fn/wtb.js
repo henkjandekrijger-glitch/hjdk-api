@@ -248,7 +248,12 @@ export default async function handler(req, res) {
     const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };
     let log = []; try { log = ((await kv.raw(['LRANGE', 'mm:handover:log', 0, 299])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(x => x && /^kdp/i.test(String(x.wie || ''))).slice(0, 20); } catch (e) {}
     const kop = '# KDP-overdracht, live ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n\n## Werklog KDP (nieuwste boven, uit /api/mm/handover)\n\n' + (log.length ? log.map(x => '- ' + String(x.t).slice(0, 16).replace('T', ' ') + ' ' + x.wie + ': ' + x.tekst).join('\n') : '- (nog geen regels)') + '\n\n---\n\n';
-    const md = kop + lees('OVERDRACHT-KDP.md') + '\n\n---\n\n' + lees('kdp/rapport.md') + '\n\n---\n\n' + lees('kdp/wachtrij.md') + '\n\n---\n\n' + lees('kdp/boekwedstrijd.md');
+    const deel = String(q.get('deel') || ''); const ov = lees('OVERDRACHT-KDP.md'); // deel: kort | overdracht | rapport | wachtrij | wedstrijd | log (27 nov 2026: alles samen ~170k tekens, past niet in een chat)
+    const stuk = (t, van, tot) => { const a = t.indexOf(van); if (a < 0) return ''; const b = tot ? t.indexOf(tot, a + van.length) : -1; return t.slice(a, b < 0 ? undefined : b); };
+    let md;
+    if (deel === 'kort') md = '# KDP-overdracht KORT, live ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC (meer: &deel=overdracht|rapport|wachtrij|wedstrijd|log)\n\n' + stuk(ov, '## START HIER', '## 1. Doel') + '\n---\n\n## Werklog KDP, laatste 8 (ingekort; voluit met &deel=log)\n\n' + log.slice(0, 8).map(x => '- ' + String(x.t).slice(0, 16).replace('T', ' ') + ' ' + x.wie + ': ' + String(x.tekst).slice(0, 700)).join('\n');
+    else if (deel === 'overdracht') md = ov; else if (deel === 'rapport') md = lees('kdp/rapport.md'); else if (deel === 'wachtrij') md = lees('kdp/wachtrij.md'); else if (deel === 'wedstrijd') md = lees('kdp/boekwedstrijd.md'); else if (deel === 'log') md = kop;
+    else md = '> Te groot voor een chat? Begin met ?op=kdpoverdracht&deel=kort\n\n' + kop + ov + '\n\n---\n\n' + lees('kdp/rapport.md') + '\n\n---\n\n' + lees('kdp/wachtrij.md') + '\n\n---\n\n' + lees('kdp/boekwedstrijd.md');
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(md);
   }
   if (op === 'tkoverdracht') { // overdracht taniakross.media voor een ander account (Henkjan 20 nov 2026: "Zet overdracht op vercel zodat ik verder kan in ander account . Grondige overdracht !!")
