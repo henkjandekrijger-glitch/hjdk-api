@@ -166,5 +166,16 @@
     "bron": "Henkjan, 22 nov 2026: \"Laat hier een foto zien niet dit ... alleen in noodgeval dit als geen pic te vinden\"",
     "sterkte": 5,
     "vast": true
+  },
+  {
+    "id": "kadoly-prijs-1126",
+    "les": "Prijs in de advertentietekst (Kadoly, PropellerAds In-Page, 25 en 26 nov 2026, 5 campagnes): evenveel kliks per vertoning, maar 16 conversies tegen 24 verwacht binnen dezelfde campagne (33% minder). De prijsadvertentie in de winactie kreeg 0 conversies op 182 kliks. Nog niet hard; de vaste regel blijft: geen prijs.",
+    "media": "betaald",
+    "doelen": "alle",
+    "kenmerk": "prijs in de tekst",
+    "waarde": "ja",
+    "richting": "minder",
+    "bron": "Clickmind-geheugen 27 nov 2026 (vergelijking binnen de eigen campagne, campagnes 12186810, 12186814, 12186816, 12186818, 12190846); voorstel kadoly-zonder-prijs vervallen omdat die campagnes al uit stonden",
+    "sterkte": 6
   }
 ]

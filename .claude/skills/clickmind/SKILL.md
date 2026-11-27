@@ -35,6 +35,7 @@ Henkjan 27 nov 2026: "Clikmind moet altijd medium meenemen waarop en waarvoor en
 
 - Nieuwe advertentieteksten of een proef zet je op een link voor Henkjan: `/api/mm?op=voorstel&j={"titel":"...","project":"...","medium":"...","uitleg":"...","kosten":"...","meten":"...","stop":"...","items":[{"campagne":"<id>","campagneNaam":"...","oudId":"...","oudTitel":"...","oudTekst":"...","titel":"...","tekst":"...","cta":"...","variant":"native|trend","waarom":"..."}]}` (POST mag ook). Het antwoord geeft `https://hjdk-api-henq.vercel.app/voorstel?id=<id>`; zet die als `toon` in je stand.
 - Een advertentietekst met een prijs of levertijd wordt geweigerd. Plaatsen pas na zijn ja: `?op=voorstel&id=<id>&besluit=ja`, en na het plaatsen `besluit=geplaatst`.
+- Kijk vóór een advertentievoorstel de live stand na (campagne aan, oude advertentie aan). Het geheugen loopt een dag achter. Een voorstel voor campagnes die vandaag niet lopen wordt geweigerd; kan een voorstel niet meer, sluit het met `besluit=vervallen&notitie=<waarom>`. Les van 27 nov 2026: het voorstel kadoly-zonder-prijs ging over campagnes die die ochtend al uit stonden.
 
 ## Waar kijken
 

@@ -189,4 +189,16 @@ const vz = await TR.zetVoorstel({ titel: 'Kadoly: zonder prijs naast met prijs',
 ok(vz.ok && vz.stukken === 1 && vz.geweigerd.length === 1 && /prijs/.test(vz.geweigerd[0]) && /\/voorstel\?id=/.test(vz.link), 'voorstel: tekst met prijs of levertijd geweigerd, de rest staat op een link');
 ok(!(await TR.besluitVoorstel(vz.id, 'geplaatst')).ok && (await TR.besluitVoorstel(vz.id, 'ja', { wie: 'henkjan' })).ok && (await TR.besluitVoorstel(vz.id, 'geplaatst')).ok && (await TR.leesVoorstel(vz.id)).status === 'geplaatst', 'voorstel: plaatsen kan alleen na Henkjans ja');
 const vv = await TR.leesVoorstel(vz.id); ok(/De kaart waar hij uren naar kijkt/.test(TR.voorstelHtml(vv, 'body{}')) && /Houten kaart, €99,95/.test(TR.voorstelHtml(vv, 'body{}')) && /NIEUW: De kaart/.test(TR.voorstelTekst(vv)) && /Voorstellen/.test(TR.voorstelHtml(null, 'body{}', [vv])), 'voorstel: pagina toont nieuw naast nu, en de lijst');
+
+// live-check van een advertentievoorstel (27 nov 2026): geen vraag aan Henkjan over campagnes die vandaag niet lopen
+await kv.set('mm:dash:camp', { t: Date.now(), pa: { budget: { winst: [{ cid: '111', naam: 'TODAYIN CURACAO CO VE', net: 'propeller', kosten: 0.4 }], projecten: {} } } });
+const vd = await TR.zetVoorstel({ titel: 'Dood', project: 'kadoly', medium: 'propeller', items: [{ campagne: '333', campagneNaam: 'SHOP-LUS PAKKET', oudId: 'ad:propeller:c2', titel: 'Cadeau voor hem geregeld', tekst: 'Houten kaart van NL' }] });
+ok(!vd.ok && /loopt vandaag/.test(vd.fout), 'voorstel voor een campagne die vandaag niet loopt wordt geweigerd: ' + vd.fout);
+const vm = await TR.zetVoorstel({ titel: 'Half', project: 'curacao', medium: 'propeller', items: [{ campagne: '111', campagneNaam: 'TODAYIN', oudId: 'ad:propeller:a1', titel: 'Wat doe je vandaag op Curacao?', tekst: 'Vraag het de chat' }, { campagne: '333', campagneNaam: 'SHOP-LUS', titel: 'Cadeau voor hem geregeld', tekst: 'Houten kaart van NL' }] });
+const vmv = await TR.leesVoorstel(vm.id);
+ok(vm.ok && /1 stukken/.test(vm.let) && vmv.items[0].loopt === true && vmv.items[1].loopt === false && /LOOPT NIET/.test(TR.voorstelTekst(vmv)), 'voorstel met een deel dat niet loopt: staat erbij, de rest mag');
+await kv.del('mm:dash:camp');
+ok((await TR.besluitVoorstel(vm.id, 'vervallen', { notitie: 'Campagnes staan uit.' })).ok && /Vervallen\. Campagnes staan uit\./.test(TR.voorstelTekst(await TR.leesVoorstel(vm.id))), 'voorstel sluiten als vervallen, met de reden erbij');
+const bk = await P.briefing({ medium: 'propeller', project: 'kadoly', doel: 'koop' });
+ok(bk.research.some(x => x.id === 'kadoly-prijs-1126'), 'les over prijs in de advertentie staat als startkennis in de briefing van advertenties');
 if (!process.env.LAAT) await kv.raw(["FLUSHDB"]); process.exit(process.exitCode || 0);
