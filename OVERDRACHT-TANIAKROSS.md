@@ -332,9 +332,43 @@ Henkjan 27 nov 13:38 UTC: "Optimaliseer verder voor Google en LLM vindbaarheid .
 **Nodig van Henkjan en Tania.** Ja op het plan, een uur van Tania voor stap 3, haar bio-links en het kennispaneel (stap 1), en Dorien of Speakers Academy (stap 4).
 
 **Werkafspraak.** tk-chat doet alleen dit plan. Elke uitrol van simpele-site gaat eerst als voorbeeld, op de bestandslijst van de laatste productie-uitrol, live op Henkjans ja, en wordt vooraf in het werklog gemeld.
+
+### Kansen in AI in haar vak: meting 27 nov 15:04 UTC
+
+Henkjan 27 nov 14:59 UTC: "Vind op demandradar kansen in LLMs om naar Tania om te buigen of te landen als er op gezocht wordt wel met de juiste antwoorden natuurlijk en in haar branche . Longtail rond podcast , zingen, Concerten . Enz er zijn duizenden koren bijv in NL ."
+
+Meting: gatscan `tk-branche-1127` (ZICHT, Perplexity, 36 echte vragen over koren, zingen, concerten, podcast en dagvoorzitter; opnieuw draaien met dezelfde vragen geeft het verloop). In de vaste AI-gatenlijst van Demand Radar (`gaps?latest=1`, 91 koopvragen) staat niets uit haar vak.
+
+- Tania wordt genoemd bij 4 van de 36 vragen: bekendste Nederlandse operazangeressen, mezzosopranen, zangeressen uit Curaçao en musici uit Curaçao. taniakross.media wordt bij geen van de 36 als bron aangehaald.
+- Open gaten waar Tania een juist antwoord is (feiten van haar eigen pagina /dagvoorzitter):
+  - Dagvoorzitter die Nederlands, Engels, Spaans en Papiaments spreekt: AI "kan geen dagvoorzitter vinden die aantoonbaar alle vier spreekt". Tania presenteert in precies die vier (Talen op een rij).
+  - Bekende Nederlander die dagvoorzitter is en ook zingt: AI noemt Paul de Munnik. Tania: The Art of Healing, Erasmus Universiteit 2026, voorzitter met muzikaal intermezzo.
+  - Dagvoorzitter voor muziek en gezondheid: AI noemt Michelle Willemsen. Tania: Paleissymposium Music and Mind, Music as Medicine, 2025.
+  - Dagvoorzitter voor Caribisch Nederland of het Koninkrijk: AI noemt Lisette Wellens.
+- Open gaten in haar vak:
+  - Papiamentse of Caribische liederen voor een koor: één bron met drie titels (waaronder van podcastgasten Levi Silvanie en Izaline Calister), of Jamaicaanse volksliedjes.
+  - Inzingoefeningen voor een koor en hoger leren zingen: alleen Engelse bronnen.
+  - Solist of workshop voor een koor, operazangeres boeken voor een gala: boekingssites (evenses.com, artiest.nu); Tania ontbreekt.
+  - Podcast over Curaçao, met Caribische makers, over nation building: A Kross ontbreekt; de bron is steeds Apple Podcasts.
+  - Nederlandstalige radio op Curaçao: Middagmagazine ontbreekt.
+  - Carmen in het buitenland en de winnaar van The Masked Singer: Tania ontbreekt.
+- Waar AI zijn antwoorden haalt: sprekersbureaus (quality-bookings.nl, sprekershuys.nl, despreker.nl, showbird.com), linkedin.com, podcasts.apple.com, Wikipedia, evenses.com, artiest.nu. Daar moet het antwoord staan, in de woorden van de vraag.
+- Voorstel, wacht op Henkjan: (1) de dagvoorzittervragen letterlijk met antwoord op /dagvoorzitter, in Tania's LinkedIn en in het profiel bij het bureau; (2) "Tania voor koren": pagina Papiamentse liederen voor koren met uitspraak door Tania, wekelijks "Inzingen met Tania" per mail (een dirigent die zich aanmeldt bereikt een heel koor, dus ook een route naar de lijst) en een boekpagina voor solist en workshop als Tania dat doet; (3) omschrijving van A Kross op Apple Podcasts en Spotify in de woorden van de vraag; (4) pagina over Middagmagazine; (5) Carmen en The Masked Singer als feit op /vragen.
+- Zoekvolume uit bestaande thema's, NL per maand: dagvoorzitter 480 en dagvoorzitter inhuren 180; kan iedereen leren zingen met varianten rond 800 (thema stemcoach); muziek bij begrafenis, uitvaart en crematie ruim 1.400 (thema muziek-medicijn); masked singer winnaars rond 300 met België.
+- Koren hebben nog geen cijfers in Demand Radar. Nieuw thema voor repo demand_radar, `api/zoekvraag.js`, in THEMA (tk-chat kreeg in deze sessie geen schrijftoegang tot die repo; staat als taak in Henkjans lijst). Zonder `vrij`: de data wordt gekocht zodra de dagrem ruimte heeft, hooguit $0,45.
+
+```js
+  // taniakross.media, 27 nov 2026 (Henkjan: "Longtail rond podcast , zingen, Concerten . Enz er zijn duizenden koren bijv in NL ."): wat koren, dirigenten en zangers zoeken.
+  'tk-koren': { naam: 'Koren, zingen en concerten (longtail taniakross.media)', markten: ['NL', 'BE'], max: 0.45, bron: 'suggest',
+    ow: [['ruis', /songtekst|lyrics|akkoorden|chords|karaoke|mp3|download|kleurplaat|puzzel|kruiswoord/], ['koor zoeken en beginnen', /koor zoeken|koor in de buurt|bij een koor|koor gezocht|koorleden|auditie|koor beginnen|koor oprichten/], ['repertoire en liederen', /repertoire|liederen|liedjes|kerstliederen|meerstemmig|arrangement|bladmuziek|papiaments|antilliaans|caribisch/], ['inzingen en techniek', /inzing|stemoefening|opwarm|ademsteun|ademhaling|zangtechniek|hoog zingen|hoger zingen|vals zingen|zuiver zingen/], ['stemsoort', /stemsoort|stembereik|sopraan|\balt\b|tenor|bariton|\bbas\b/], ['dirigent, workshop en solist', /dirigent|workshop|masterclass|koordag|scratch|solist|zangeres boeken|operazangeres boeken/], ['concert', /concert|kerstconcert|passion|requiem|messiah|uitvoering/], ['podcast', /podcast/]],
+    zaden: ['koor repertoire', 'inzingen koor', 'inzingoefeningen', 'stemoefeningen zingen', 'ademsteun zingen', 'workshop voor koor', 'koor workshop zang', 'solist voor koor', 'kerstconcert koor', 'meerstemmig zingen', 'hoger leren zingen', 'vals zingen', 'welke stemsoort heb ik', 'stembereik testen', 'koor zoeken', 'koordirigent gezocht', 'papiamentse liedjes', 'antilliaanse liedjes', 'operazangeres boeken', 'zangeres boeken kerst', 'podcast klassieke muziek', 'podcast curacao', 'scratch koor', 'koordag'],
+    regex: '(koor|koren|koorzang|inzing|stemoefening|ademsteun|zangtechniek|meerstemmig|stemsoort|stembereik|sopraan|bariton|dirigent|solist|kerstconcert|scratch|leren zingen|hoger zingen|vals zingen|zuiver zingen|papiamentse lied|antilliaanse lied|operazangeres boeken|zangeres boeken|podcast klassiek|podcast curacao|podcast opera)' },
+```
 <!-- vind -->
 
 ## Logboek (nieuwste boven)
+
+- 27 nov 15:15 UTC tk-chat: kansen in AI gemeten in Tania's vak (gatscan tk-branche-1127, 36 vragen bij Perplexity): genoemd bij 4, site bij geen enkele aangehaald, grootste gat de dagvoorzitter in vier talen. Uitkomst, voorstel "Tania voor koren" en het nieuwe Demand Radar-thema tk-koren staan in sectie 13.
 
 - 27 nov 14:00 UTC tk-chat: Google-weergave live nagekeken (omschrijving 151 tekens, 4 JSON-LD-blokken geldig, voetregel met Dorien en de nieuwste podcast) en als proef gemeld in ZICHT (tk-google-weergave-1127). Plan voor zoekverkeer in sectie 13, los te lezen met `deel=vind`, wacht op Henkjans ja. tk-chat doet alleen vindbaarheid.
 
