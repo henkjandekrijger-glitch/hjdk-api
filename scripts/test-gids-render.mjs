@@ -15,6 +15,7 @@ import * as openaifeed from '../lib/openaifeed.js';
 import * as ontdekking from '../lib/gids-ontdekking.js';
 import * as binnenkort from '../lib/binnenkort.js';
 import * as gidsbeeld from '../lib/gidsbeeld.js';
+import * as llmgat from '../lib/gids-llmgat.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
 for(let k=0;k<140;k++)catalog.push({id:'oc_extra'+k,t:(k%2?'Mok':'Dinerbord')+' test '+k,vr:true,p:k+1,vk:3,c:'keuken',s:'servies',lt:3,l:Date.now()});
@@ -34,6 +35,7 @@ stubs['../lib/tvrekenhulp.js']=tvreken;
 stubs['../lib/gids-ontdekking.js']=ontdekking;
 stubs['../lib/binnenkort.js']=binnenkort;
 stubs['../lib/gidsbeeld.js']=gidsbeeld;
+stubs['../lib/gids-llmgat.js']=llmgat;
 // Groepscadeaus horen niet bij deze SSR-proef; geen opslag, mail of betaalverkeer.
 stubs['../lib/groepscadeau.js']={gcLijst:()=>[],gcLlms:()=>'',LIVE:new Set(),gcOp:()=>{throw Error('Geen groepscadeau-acties in gidstest');}};
 const imports=[];
@@ -391,3 +393,15 @@ assert.ok(bewijs.bamboeBedMatch({t:'Bamboe dekbedovertrek groen'}));
 for(const t of ['Bamboe wasmand','Bamboe lamp','Bamboe borstel','Kunstbamboeplant'])assert.ok(!bewijs.bamboeBedMatch({t}));
 for(const q of ['slug=onderzoek-en-bronnen','op=llms','op=llmsfull']){const b=(await render(q)).body;assert.ok(b.includes('BCSI'));assert.ok(b.includes('dp_2698'));assert.ok(b.includes(bewijs.BRONNEN.oekoCheck26.url));}
 console.log('26nov: fysieke tv-grenzen en exportbeperkingen, passende beddengoedmatches, bronhub/LLM en actuele retourkosten geslaagd.');
+
+// 27nov: titelvarianten mogen echte vazen niet uitsluiten of een merk als productsoort lezen.
+for(const t of ['Firenza flesvaas','Glazen vaasje','Bloemenvaas melkpak','Swirl bloemenvase','Boekvaas geel','Keramische laarsvaas','Mozaïekvaas','Buikvaas','Envelopvaas'])assert.ok(bewijs.vaasMatch({t}),t);
+for(const t of ['Dienblad van Vase The World','Boekstandaard van Vase The World','Ivory Ornament voor Elegante Decoratievaas The World','Hoes voor flesvaas','Vaasreiniger','Kunstbloemen met vaas','Plantenvaas met standaard'])assert.ok(!bewijs.vaasMatch({t}),t);
+const v27=bewijs.ONDERZOEK.find(p=>p.id==='vaas-verse-bloemen');
+const vp27=bewijs.onderzoekPagina(v27,[{id:'oc_4174003315474433',t:'Firenza flesvaas'},{id:'oc_4173958203981825',t:'Sakra vaasje'}],()=> '€20',()=> 'schatting');
+assert.ok(vp27.includes('42 cm'));assert.ok(vp27.includes('1,51 kg'));assert.ok(vp27.includes('binnenvaas'));assert.ok(vp27.includes('Geen eigen gebruiks- of laboratoriumtest'));
+assert.ok(bewijs.bronLink({id:'oc_4173959227211777',t:'Lichtbruine Houten Lamp met Frosted Glas - Tavellio'}).includes('/onderzoek-tafellamp-lumen'));
+const l27=bewijs.ONDERZOEK.find(p=>p.id==='tafellamp-lumen');
+const lp27=bewijs.onderzoekPagina(l27,[{id:'oc_4173959227211777',t:'Quin houten lamp'}],()=> '€20',()=> 'schatting');assert.ok(lp27.includes('Lichtbron niet inbegrepen'));assert.ok(lp27.includes('kabel 2 meter'));assert.ok(lp27.includes('geen accu'));
+for(const op of ['slug=onderzoek-en-bronnen','op=llms','op=llmsfull']){const b=(await render(op)).body;assert.ok(b.includes('Sakra'));assert.ok(b.includes('Quin'));assert.ok(b.includes(bewijs.BRONNEN.vaas27.url));assert.ok(b.includes(bewijs.BRONNEN.licht27.url));}
+console.log('27nov: vaastitels, merk-/accessoireuitsluitingen, drie exacte makerchecks en bronhub/LLM-export geslaagd.');
