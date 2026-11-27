@@ -148,7 +148,7 @@ async function page(m, it, all, req) {
     const prods = ps.slice(0, 3).map((p, i) => ({ naam: SJ.kortNaam(p.title), rol: i === 0 ? m.s.pick : m.s.alt, prijs: geld(p), sterren: p.rating != null ? String(p.rating) : '', url: p.url }));
     const k0 = ps[0]; const q0s = q0 ? q0.options.map(o => o.label).slice(0, 3) : [];
     const gtxt = Array.isArray(it.guide) ? it.guide.join(' ') : typeof it.guide === 'string' ? it.guide : '';
-    const letop = (gtxt.replace(/<[^>]+>/g, '').match(/[^.!?]+[.!?]+/g) || []).map(x => x.trim()).filter(x => x.length > 25 && x.length < 170).slice(0, 3);
+    const letop = (gtxt.replace(/<[^>]+>/g, '').match(/[^.!?]+[.!?]+/g) || []).map(x => x.trim()).filter(x => x.length > 25 && x.length < 170 && !/^(That|This|These|Then|Also|And|But|So|Das|Dies|Dann|Auch|Und|Aber|So)\b/.test(x)).slice(0, 3);
     return { sj: SJ.sjabloonHtml({ taal: T, host: m.host, logo: m.id === 'us' ? 'whichtobuy' : 'kaufberater', winkel: 'Amazon', slug: it.slug, term: it.term || it.title, h1: it.title || it.h1, title: it.seoTitle || it.h1, desc: it.metaDesc, canonical: base + '/' + it.slug, noindex: true, jsonld: ld,
       crumbs: [[m.name, '/'], [it.cat, catPad(m, it.cat)]], bijgewerkt: upd, zoekUrl: adv.link,
       kortKop: k0 ? SJ.KEUS_LABEL[T] + ': ' + SJ.kortNaam(k0.title) + '.' : '', kort: SJ.zinnen(Array.isArray(it.kort) ? it.kort.join(' ') : it.kort, 2), keus: k0 ? { naam: SJ.kortNaam(k0.title), prijs: geld(k0), url: k0.url } : null,
