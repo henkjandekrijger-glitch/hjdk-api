@@ -15,6 +15,8 @@ const a = analyseer({
   feed, cat: [{ id: 'a', t: 'Lamp A', b: 'Lumo', mg: 30 }, { id: 'b', t: 'Vaas B', b: 'Kadoly', mg: 3 }, { id: 'c', t: 'Plaid C', b: 'Lucca', mg: 20 }, { id: 'd', t: 'Duur D', b: '', mg: 10 }]
 });
 ok(a.reeks.gratisVert28 === 3 && a.reeks.eersteDagMetGratisVertoning === '2026-11-02', 'reeks per dag');
+ok(a.reeks.gratisVertPerProduct28 === 12 && a.reeks.gratisKliks28 === 1 && /Per product meldt Google maar 12 van deze 3/.test(voorstelHtml(a)), 'totaal per dag en het deel per product staan er allebei');
+ok(/dat zijn er nu geen/.test(voorstelHtml(analyseer({ feed, cat: [] }))) && !/dat zijn er nu geen/.test(voorstelHtml(a)), 'geen merkvoorstel als de winkel geen ander merk kent');
 ok(a.prijs.bak.duurder.n === 1 && a.prijs.bak.gelijk.n === 1 && a.prijs.bak.goedkoper.n === 1 && a.prijs.bak.duurder.gv === 10, 'prijsbakken tellen elk product uit feed of cijfers een keer');
 const ra = a.prijs.rijen.find(r => r.id === 'a'), rd = a.prijs.rijen.find(r => r.id === 'd');
 ok(ra.advies === 'naar marktprijs' && ra.nieuw === 39.95 && ra.margeNieuw === 9.95, 'naar markt met marge na verlaging');
