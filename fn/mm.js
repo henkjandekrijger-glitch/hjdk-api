@@ -244,6 +244,13 @@ export default async function handler(req, res) {
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.standTekst(st) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(P.standHtml(st, CSS));
     }
+    if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
+      if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
+      const r = await (await import('../lib/cmcamp.js')).gadsInlogLink().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 120) }));
+      res.setHeader('cache-control', 'no-store');
+      if (r && r.ok && /^https:\/\/accounts\.google\.com\//.test(String(r.link || ''))) { res.setHeader('location', r.link); return res.status(302).end(); }
+      return res.status(502).json({ ok: false, fout: (r && r.fout) || 'geen inloglink' });
+    }
     if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
       const C = await import('../lib/cmcamp.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       if (q('inhaal')) { // historie inhalen (lib/cmcamp.js inhaal): cron elke 5 minuten, starten op de beschermde host met &van=&tot=
