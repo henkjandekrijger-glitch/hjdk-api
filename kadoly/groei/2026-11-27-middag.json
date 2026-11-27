@@ -1,0 +1,367 @@
+{
+  "datum": "2026-11-27",
+  "ronde": "middag",
+  "gemeten_op": "2026-11-27T17:40:00Z",
+  "ochtendupdate": "Geen update voor 27 november gevonden in de actuele groeioverdracht. Werk van andere chats en de bestaande rondes apart gecontroleerd.",
+  "organisch": {
+    "facebook": {
+      "kliks": 49,
+      "echt": 19,
+      "acties": 2,
+      "mandjes": 3,
+      "delta_sinds_vorige_middag": {
+        "kliks": 1,
+        "echt": 1,
+        "mandjes": 0
+      }
+    },
+    "pinterest": {
+      "kliks_clickmind": 3
+    },
+    "youtube": {
+      "kliks": 2
+    },
+    "gids": {
+      "doorsturen": 1175,
+      "echt": 1,
+      "acties": 1,
+      "extra_sinds_vorige_middag": 302
+    },
+    "periode": "Kanaaltotalen cumulatief sinds 16 november, geen weektotalen; doorsturen zijn geen bezoekers."
+  },
+  "koop": {
+    "bestellingen_7dagen": 1,
+    "organisch_bevestigd": 0,
+    "werkelijk_organisch": "onbekend door ontbrekende herkomst",
+    "bronnen": [
+      {
+        "at": "2026-11-25T07:30:52+00:00",
+        "bedrag": 69.95,
+        "bron": "onbekend"
+      }
+    ],
+    "verschil": "De TikTok-aankoop van 19 november valt buiten het huidige 7-dagenvenster. Geen nieuwe daling of terugbetaling uit het verschil afgeleid."
+  },
+  "google": {
+    "gemetenOm": "2026-11-27T06:55:02.148Z",
+    "vergelijking": {
+      "status": "beschrijvend",
+      "voor": 0,
+      "na": 0,
+      "verschil": 0,
+      "procent": null,
+      "eenheid": "klikken",
+      "vertoningen": {
+        "voor": 3,
+        "na": 8,
+        "verschil": 5,
+        "procent": 166.7
+      },
+      "klikken": {
+        "voor": 0,
+        "na": 0,
+        "verschil": 0,
+        "procent": null
+      },
+      "voorPeriode": [
+        "2026-11-11",
+        "2026-11-17"
+      ],
+      "naPeriode": [
+        "2026-11-18",
+        "2026-11-24"
+      ],
+      "reden": "Niet-overlappende weken. Dit bewijst geen oorzakelijk optimalisatie-effect."
+    }
+  },
+  "ai": {
+    "status": "panelmeting",
+    "dag": "2026-11-27",
+    "model": "perplexity/sonar",
+    "panel": "975b998d0f00b267",
+    "geslaagd": 8,
+    "geciteerd": 0,
+    "rate": 0,
+    "reden": "Bestaande ZICHT-dagmeting, apart van de vroegere immutable gids-snapshot; vast model/vragenpanel, geen alle-LLMs-meting."
+  },
+  "winkel": {
+    "product_status": 200,
+    "gidslinks": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [
+        {
+          "url": "https://gids.kadoly.com/dressoir",
+          "tekst": "Lees de hele gids: Dressoir, tv-meubel of ladekast: welke past bij jouw muur?",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/",
+          "tekst": "Kadoly gids: hulp bij kiezen",
+          "rel": [],
+          "volgbaar": true
+        },
+        {
+          "url": "https://gids.kadoly.com/redactie",
+          "tekst": "Redactie",
+          "rel": [],
+          "volgbaar": true
+        }
+      ],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": false
+    },
+    "robots_status": 200,
+    "robots": {
+      "bron": "server-HTML en robots-tekst; geen bewijs van zichtbaarheid of indexering",
+      "gidsLinks": [],
+      "gidsLinksAfgekapt": false,
+      "gidsSitemapInRobots": true
+    },
+    "specifieke_tv_rekenhulplink": false
+  },
+  "gids": {
+    "status": 200,
+    "canonical": "https://gids.kadoly.com/tv-meubel-breedte-berekenen",
+    "pinterest_broncode_aanwezig": true
+  },
+  "redactie_led": {
+    "titel": "Led kaarsen of echte kaarsen: wat is veiliger met kerst?",
+    "datum": "2026-11-26",
+    "lezers": 5,
+    "herkomst": {
+      "kadoly": 3,
+      "pinterest": 2
+    },
+    "t15": 3,
+    "t60": 1,
+    "s50": 3,
+    "s90": 3,
+    "links": {
+      "1": 1
+    },
+    "productKliks": 0,
+    "ai": "generic"
+  },
+  "afweging": [
+    {
+      "actie": "Meer algemene gidsen en pins maken",
+      "waarde": "Laag zolang indexering en herkomst niet hard zijn; bestaande gids- en socialrondes doen dit al.",
+      "kosten": "Extra bouwtijd en mogelijk dubbel werk",
+      "keuze": false
+    },
+    {
+      "actie": "Geplande verlanglijst, AI-gaten en indexingreep zelf opnieuw bouwen",
+      "waarde": "Potentieel hoog maar ligt al bij andere chats; verlanglijst al live, nieuwe indexingreep heeft eigen voorstel.",
+      "kosten": "Dubbel werk of nieuw akkoord",
+      "keuze": false
+    },
+    {
+      "actie": "Bestaande gidspins in het leergeheugen opnemen en voorkomen dat hun verkoopdoel bij import verdwijnt",
+      "waarde": "Direct meetbaar intern gebrek, gratis en omkeerbaar; bestaande publicaties worden niet herhaald.",
+      "kosten": "Kleine codewijziging, zes regressies, één uitrol",
+      "keuze": true
+    }
+  ],
+  "geleverd": {
+    "verwachting": "De twee bestaande pins zijn vindbaar met tekst, beeld en eigen koopdoel; volgende import behoudt dat doel. Geen verkeers- of omzetstijging door administratie verondersteld.",
+    "runtime": "stukUitZernio geeft geen universeel klikdoel meer mee; schoon behoudt het makersdoel of leidt projectdoel af.",
+    "tests": "Zes regressies, rooktest inclusief commentaarcheck en routercheck geslaagd. Bestaande paspoort-suite met Redis niet uitgevoerd; de nieuwe regressies gebruiken geen Redis/netwerk."
+  },
+  "gidspins": [
+    {
+      "id": "6b083a2d58833ba789e0e2f8",
+      "status": "published",
+      "content": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+      "title": "Tv-meubel voor 65 inch: bereken welke breedte past",
+      "scheduled_for": "2026-11-26T18:45:00.000Z",
+      "timezone": "UTC",
+      "published_at": "2026-11-26T18:45:58.163Z",
+      "media_urls": [
+        "https://go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids&tk=65%20inch%20tv%3F&u=144%20cm&e=breed%20beeld%20bij%2016%3A9&r=Bereken%20je%20meubelbreedte&g=Zonder%20rand.%20Meet%20ook%20je%20tv-voet%2C%20diepte%20en%20draagvermogen."
+      ],
+      "targets": [
+        {
+          "platform": "pinterest",
+          "account_id": "6afb8a5d86e8bb18f844fc95",
+          "username": "kadolyshop",
+          "status": "published",
+          "post_url": "https://www.pinterest.com/pin/271060471319766759/"
+        }
+      ],
+      "analytics": {
+        "post_id": "6b083a2d58833ba789e0e2f8",
+        "content": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+        "status": "published",
+        "published_at": "2026-11-26T18:45:58.163Z",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        },
+        "platforms": [
+          {
+            "platform": "pinterest",
+            "username": "kadolyshop",
+            "status": "published",
+            "post_url": "https://www.pinterest.com/pin/271060471319766759/",
+            "sync_status": "synced",
+            "metrics": {
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "engagement_rate": 0
+            }
+          }
+        ]
+      },
+      "paspoort_id": "pin:z-6b083a2d58833ba789e0e2f8",
+      "paspoort": {
+        "id": "pin:z-6b083a2d58833ba789e0e2f8",
+        "bron": "hand",
+        "t": "2026-11-26T18:45:58.163Z",
+        "dag": "2026-11-26",
+        "medium": "pinterest",
+        "betaald": false,
+        "soort": "pin",
+        "plek": "zernio kadolyshop",
+        "voor": {
+          "project": "kadoly",
+          "pagina": "gids.kadoly.com/tv-meubel-breedte-berekenen",
+          "publiek": "nl"
+        },
+        "doel": {
+          "soort": "koop",
+          "getal": null,
+          "op": "",
+          "afgeleid": false
+        },
+        "inhoud": {
+          "titel": "Tv-meubel voor 65 inch: bereken welke breedte past",
+          "tekst": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+          "cta": "Bereken je meubelbreedte",
+          "beeld": "https://go.kadoly.com/api/shop/beeld/dp_1022/g.jpg?s=gids&tk=65%20inch%20tv%3F&u=144%20cm&e=breed%20beeld%20bij%2016%3A9&r=Bereken%20je%20meubelbreedte&g=Zonder%20rand.%20Meet%20ook%20je%20tv-voet%2C%20diepte%20en%20draagvermogen.",
+          "haak": "vraag over maat",
+          "emotie": "",
+          "belofte": "",
+          "vorm": {
+            "lengte": "meer dan 40 woorden",
+            "vraag": "nee",
+            "getal": "ja",
+            "spreker": "anders",
+            "opening": "getal",
+            "prijs": "nee",
+            "emoji": "nee"
+          }
+        },
+        "ouder": "",
+        "naam": "Tv-meubel voor 65 inch: bereken welke breedte past",
+        "status": "geplaatst",
+        "wie": "kadoly-groei",
+        "variant": "native",
+        "trend": "",
+        "paar": "",
+        "laatst": "",
+        "cijfers": {
+          "vert": 0,
+          "kliks": 0,
+          "inzet": 0,
+          "t": "2026-11-27T17:46:22.942Z"
+        },
+        "eerst": "2026-11-27T17:46:22.942Z"
+      },
+      "bestemming_bedoeld": "https://gids.kadoly.com/tv-meubel-breedte-berekenen?utm_source=pinterest&utm_medium=organic_social&utm_campaign=gids-tv-20261125"
+    },
+    {
+      "id": "6b083a2d58833ba789e0e2ff",
+      "status": "scheduled",
+      "content": "Een lege woning of woon je er nog? Vergelijk echte planten en kunstplanten voor home staging. De gids helpt kiezen op plek, maat en onderhoud, met actuele producten en hun beperkingen.",
+      "title": "Planten bij home staging: echt of kunst kiezen",
+      "scheduled_for": "2026-11-28T18:45:00.000Z",
+      "timezone": "UTC",
+      "media_urls": [
+        "https://go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids&tk=Echt%20of%20kunst%3F&u=Groen%20in%20een%20lege%20woning&e=Kies%20op%20plek%2C%20maat%20en%20onderhoud&r=Bekijk%20de%20plantenkeuze&g=Afgebeeld%3A%20Raphis%20kunstplant%20van%20150%20cm.%20Geen%20eigen%20producttest."
+      ],
+      "targets": [
+        {
+          "platform": "pinterest",
+          "account_id": "6afb8a5d86e8bb18f844fc95",
+          "username": "kadolyshop",
+          "status": "pending"
+        }
+      ],
+      "analytics": null,
+      "paspoort_id": "pin:z-6b083a2d58833ba789e0e2ff",
+      "paspoort": {
+        "id": "pin:z-6b083a2d58833ba789e0e2ff",
+        "bron": "hand",
+        "t": "2026-11-28T18:45:00.000Z",
+        "dag": "2026-11-28",
+        "medium": "pinterest",
+        "betaald": false,
+        "soort": "pin",
+        "plek": "zernio kadolyshop",
+        "voor": {
+          "project": "kadoly",
+          "pagina": "gids.kadoly.com/planten-home-staging",
+          "publiek": "nl"
+        },
+        "doel": {
+          "soort": "koop",
+          "getal": null,
+          "op": "",
+          "afgeleid": false
+        },
+        "inhoud": {
+          "titel": "Planten bij home staging: echt of kunst kiezen",
+          "tekst": "Een lege woning of woon je er nog? Vergelijk echte planten en kunstplanten voor home staging. De gids helpt kiezen op plek, maat en onderhoud, met actuele producten en hun beperkingen.",
+          "cta": "Bekijk de plantenkeuze",
+          "beeld": "https://go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids&tk=Echt%20of%20kunst%3F&u=Groen%20in%20een%20lege%20woning&e=Kies%20op%20plek%2C%20maat%20en%20onderhoud&r=Bekijk%20de%20plantenkeuze&g=Afgebeeld%3A%20Raphis%20kunstplant%20van%20150%20cm.%20Geen%20eigen%20producttest.",
+          "haak": "keuze echt of kunst",
+          "emotie": "",
+          "belofte": "",
+          "vorm": {
+            "lengte": "15 tot 40 woorden",
+            "vraag": "ja",
+            "getal": "nee",
+            "spreker": "anders",
+            "opening": "zin",
+            "prijs": "nee",
+            "emoji": "nee"
+          }
+        },
+        "ouder": "",
+        "naam": "Planten bij home staging: echt of kunst kiezen",
+        "status": "gepland",
+        "wie": "kadoly-groei",
+        "variant": "native",
+        "trend": "",
+        "paar": "",
+        "laatst": "",
+        "cijfers": null,
+        "eerst": "2026-11-27T17:46:24.087Z"
+      },
+      "bestemming_bedoeld": "https://gids.kadoly.com/planten-home-staging?utm_source=pinterest&utm_medium=organic_social&utm_campaign=gids-planten-20261125"
+    }
+  ],
+  "grenzen": [
+    "Geen extra pin of video geplaatst; plantenplanning van andere ronde op 28 november 18:45 UTC behouden.",
+    "Pinbestemming uit makerslog; get_post toont geen link-/bordveld. Uitgaande pinlink en behoud van oorspronkelijke pin-campagne tot koop niet bevestigd.",
+    "Platformimpressies en klikcijfers van de tv-pin zijn gesynchroniseerd maar nog geen 24 uur oud. Geen winnaar of mislukking uit afgeleid.",
+    "Geen geld, mail, nieuw kanaal of zichtbare vorm. Bouwkosten niet apart uit te lezen. Pushmeldingen onbekend.",
+    "Google- en AI-cijfers komen uit bestaande rondes; geen betaalde meting gestart."
+  ],
+  "volgende": "28 november: indexbesluit via gidsronde, gepubliceerde tv-pin na 24 uur en plantpin na 18:45 UTC controleren. Campagneherkomst tot koop blijft apart open."
+}

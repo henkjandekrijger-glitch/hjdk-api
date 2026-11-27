@@ -1,11 +1,11 @@
 {
   "datum": "2026-11-25",
-  "status": "gepland",
+  "status": "deels_gepubliceerd",
   "publiceren": true,
   "concepten": [
     {
       "id": "gids-tv-20261125",
-      "status": "gepland",
+      "status": "gepubliceerd",
       "vorm": "Pinterest-gidspin",
       "bord": "Wonen en decoratie",
       "titel": "Tv-meubel voor 65 inch: bereken welke breedte past",
@@ -32,7 +32,10 @@
         "breedte": 1000,
         "hoogte": 1500,
         "visueel_gecontroleerd": true
-      }
+      },
+      "gepubliceerd": "2026-11-26T18:45:58.163Z",
+      "publieke_link": "https://www.pinterest.com/pin/271060471319766759/",
+      "paspoort_id": "pin:z-6b083a2d58833ba789e0e2f8"
     },
     {
       "id": "gids-planten-20261125",
@@ -52,7 +55,7 @@
       "regel": "Bekijk de plantenkeuze",
       "grens": "Afgebeeld: Raphis kunstplant van 150 cm. Geen eigen producttest.",
       "zernio_id": "6b083a2d58833ba789e0e2ff",
-      "gepland": "2026-11-27T18:45:00Z",
+      "gepland": "2026-11-28T18:45:00Z",
       "beeld": "go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids",
       "platformvalidatie": {
         "valid": true,
@@ -63,14 +66,16 @@
         "breedte": 1000,
         "hoogte": 1500,
         "visueel_gecontroleerd": true
-      }
+      },
+      "planningsnotitie": "Door bestaande socialronde gewijzigd; groei heeft de planning niet verplaatst.",
+      "paspoort_id": "pin:z-6b083a2d58833ba789e0e2ff"
     }
   ],
   "publicatievoorwaarden": [
     "Akkoord ontvangen op 26 november; geen nieuwe toestemming nodig voor deze twee concrete pins.",
     "Actuele bronfoto's en beschikbaarheid hercontroleren; definitieve 1000x1500-afbeeldingen exporteren uit de getoonde opmaak.",
     "Pinterest-UTM bron en campagne doormeting controleren zonder echte gebruikerssignalen na te bootsen.",
-    "Huidig plafond van drie pins per dag behouden; geen dubbel ingeplande producten of gidsen."
+    "Actuele socialopdracht volgen; deze twee pins niet opnieuw plaatsen. Het latere Pinterest-tempo is door Henkjan afzonderlijk verhoogd."
   ],
   "metingen": {
     "momenten": [
@@ -78,7 +83,7 @@
       "7 dagen"
     ],
     "rechter": "echte bezoeken, productkliks, mandjes, koop; Pinterestbereik apart",
-    "beperking": "Pinterestbron op gids werkt. Get_post bevestigt planning en media, maar geeft geen bord/linkveld. Pin-campagne tot koop niet bewezen: gidsuit gebruikt gids als campagne. Publicatie en uitgaande pinlink na geplande tijden controleren."
+    "beperking": "Pinterestbron op gids werkt. Tv-pin gepubliceerd met openbare pinlink, planten gepland op 28 november. Get_post geeft geen bord of uitgaande link. Beoogde bestemming uit makerslog, behoud van pin-campagne tot koop niet bewezen. Beide bestaande pins met tekst, beeld en koopdoel in Clickmind; registratie is geen extra publicatie."
   },
   "goedkeuring": {
     "datum": "2026-11-26",
@@ -88,5 +93,6 @@
   "publicatie_bevestigd": false,
   "blokkade": null,
   "planning_bevestigd": true,
-  "planning_gecontroleerd_op": "2026-11-26T17:46:00Z"
+  "planning_gecontroleerd_op": "2026-11-27T17:40:00Z",
+  "deels_gepubliceerd": true
 }
