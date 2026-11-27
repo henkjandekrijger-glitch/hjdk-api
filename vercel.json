@@ -3192,6 +3192,32 @@
       ]
     },
     {
+      "source": "/api/mm/adsfair",
+      "has": [
+        {
+          "type": "query",
+          "key": "vorm",
+          "value": "(pagina|updates|llms)"
+        }
+      ],
+      "missing": [
+        {
+          "type": "query",
+          "key": "concept"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "all"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
       "source": "/verzekeringen",
       "headers": [
         {

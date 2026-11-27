@@ -450,6 +450,7 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(s);
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(O.ovTekst(s) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(O.ovHtml(s, CSS)); }
+    if (op === 'adsfair') { const A = await import('../lib/adsfair.js'); return A.adsfairHandler(req, res, kv, { beschermd, q, leesJson }); } // adsfair.xyz: pagina, weekupdate en goedkeuring (27 nov 2026, lib/adsfair.js)
     if (op === 'dashboard') { // dashboard voor alle projecten (Henkjan 25 nov 2026): doel, voortgang, planning, overdracht en logboek per project; ?zet=<JSON> werkt bij, ?vorm=json|tekst, ?project=<id>
       if (req.method === 'POST' && !beschermd(req)) { // projecten zetten hun eigen voortgang bij vanuit de cloud (Henkjan 25 nov: "onafh comp en account"): alleen zet, met de gedeelde team-sleutel
         const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
