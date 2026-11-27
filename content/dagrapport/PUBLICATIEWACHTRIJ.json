@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-27T12:24:32.640Z",
+  "updated_at_utc": "2026-11-27T19:40:31.871Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -896,6 +896,15 @@
         "20261125-free-trivia",
         "20261125-seven-day-reset"
       ]
+    },
+    {
+      "at_utc": "2026-11-27T19:40:31.871Z",
+      "bookpinsUit": true,
+      "source": "op=pinplan andop=pinstand;centralhandover task4qiye9",
+      "new_post_ids": [],
+      "approval_preserved": true,
+      "reason": "Newerbookchannelstop;nootheraccount,bypass,old3caporreauthorizationquestion.",
+      "provider_health": "healthy"
     }
   ]
 }

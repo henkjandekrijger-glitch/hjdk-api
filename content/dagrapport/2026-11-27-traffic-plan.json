@@ -250,5 +250,15 @@
       "remaining_task": "obiwrz",
       "not_proof_of_traffic": true
     }
+  ],
+  "round_additions": [
+    {
+      "at_utc": "2026-11-27T19:40:31.871Z",
+      "channel_pause": "bookpinsUit=true; do not publish bookpins onKadoly until explicitnewchanneldecision. Priorapprovalsretained,goal160stillnotforecast.",
+      "metrics": "Closed26Nov16vs25Nov16;organic0registered;no7dayorganicbaseline.",
+      "actual_improvement": "Existingmenpinpassportmetadatafixed,notpost/sitechange.",
+      "prepared": "https://hjdk-api-henq.vercel.app/voorstel?id=boeken-quiz-uitleg-1127",
+      "next": "Use existingClickmindreview; maintain siteconceptandmeasurementwork; no unapprovednewchannel."
+    }
   ]
 }

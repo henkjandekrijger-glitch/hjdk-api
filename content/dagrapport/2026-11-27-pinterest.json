@@ -172,6 +172,190 @@
           "next_test": "Repair the route and confirm a known non-production tracking test without inflating site traffic; then real verified closed-window provider data."
         }
       ]
+    },
+    {
+      "at_utc": "2026-11-27T19:40:31.871Z",
+      "round": "pinterest",
+      "closed_utc": {
+        "droog": true,
+        "waargenomen": "2026-11-27T19:35:00.137Z",
+        "dag": {
+          "meetdag": "2026-11-26",
+          "meetperiode": {
+            "vanaf": "2026-11-26T00:00:00.000Z",
+            "totExclusief": "2026-11-27T00:00:00.000Z"
+          },
+          "site": {
+            "bs": {
+              "paginaOpeningen": 14,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 14
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 14
+                }
+              ],
+              "amazonVerzoeken": 43
+            },
+            "lc": {
+              "paginaOpeningen": 2,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 2
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 2
+                }
+              ],
+              "amazonVerzoeken": null
+            }
+          },
+          "amazonVerzoeken": 43,
+          "pdfVerkoop": null,
+          "leesstatus": {
+            "bs:tel:2026-11-26": "gelezen",
+            "bs:klik:2026-11-26": "gelezen",
+            "bs:gosrc:2026-11-26": "gelezen",
+            "verkoop": "ontbreekt"
+          }
+        },
+        "vorige": {
+          "meetdag": "2026-11-25",
+          "meetperiode": {
+            "vanaf": "2026-11-25T00:00:00.000Z",
+            "totExclusief": "2026-11-26T00:00:00.000Z"
+          },
+          "site": {
+            "bs": {
+              "paginaOpeningen": 13,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 13
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 13
+                }
+              ],
+              "amazonVerzoeken": 23
+            },
+            "lc": {
+              "paginaOpeningen": 3,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 3
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 3
+                }
+              ],
+              "amazonVerzoeken": null
+            }
+          },
+          "amazonVerzoeken": 23,
+          "pdfVerkoop": null,
+          "leesstatus": {
+            "bs:tel:2026-11-25": "gelezen",
+            "bs:klik:2026-11-25": "gelezen",
+            "bs:gosrc:2026-11-25": "gelezen",
+            "verkoop": "ontbreekt"
+          }
+        },
+        "definitie": "Geregistreerde bronopeningen, geen unieke personen. Paginatotalen bevatten ook intern doorbladeren. Amazonverzoeken zijn ruwe redirects, geen verkoop.",
+        "beperkingen": [
+          "Ontbrekende bron of site is onbekend, geen expliciete nul.",
+          "Geen gezamenlijke per-pin landingmeting of conversiepercentage.",
+          "Alleen bekende publieke paginapaden worden getoond."
+        ]
+      },
+      "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+      "pinplan": {
+        "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinplan&n=4",
+        "response": {
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "boekpinsUit": true,
+          "pins": [],
+          "reden": "boekpins staan uit voor dit account (kv bs:pinuit); plaats niets",
+          "controle": {
+            "afkoeldagen": 14,
+            "bron": "geregistreerde boekplaatsingen; geen volledige providerplanning",
+            "reservering": false
+          }
+        }
+      },
+      "publication": {
+        "new_post_ids": [],
+        "reason": "Fresh bookpinsUit=true plus central content handover task4qiye9,no Englishbookpins onKadoly; prior authorizations preserved but not executed around stop. Accounthealthy,notdisconnected. No accountsubstitution.",
+        "shared_scheduled": [
+          {
+            "id": "6b083a2d58833ba789e0e2ff",
+            "at": "2026-11-28T18:45:00.000Z"
+          },
+          {
+            "id": "6b09432d357376e394d9d4d6",
+            "at": "2026-11-27T20:00:00.000Z"
+          }
+        ],
+        "instagram": "29totalposts returned, no verified bookReel in this set;1shared20UTCSoeji scheduled,unchanged.",
+        "queue_scope": "Old23Novbatch alreadycomplete. Shown26Novresourcebatch held, not missingrepeatapproval."
+      },
+      "metrics": {
+        "per_post_checked": 26,
+        "synced": 10,
+        "pending": 7,
+        "errors": 9,
+        "synced_subset": {
+          "impressions": 96,
+          "saves": 7,
+          "outgoing_organic": null,
+          "definition": "Notdaytotal;unknownwindow,changingcohort,notgrowth"
+        },
+        "pinoutcome_written": false,
+        "account_day": "Zernioaccount25Nov12imp2saves1genericclick;26Nov0returned for6posts; mixedaccount/cohort/activitysemanticsunconfirmed,notbooks-onlytraffic. AnalyticsdashboardtoolINVALID_ARGUMENT; alternativeget_account_analyticsreadused,noaccountdisconnectclaim.",
+        "website_per_pin": null
+      },
+      "learning": {
+        "largest_leak": "No verified organic landing/outbound join, plus channelpaused.56Clickminditems/46families versus26publishedpins reveals overlappingimports; countsandpreliminarygenericclicklessons notproof.",
+        "hypothesis": "Complete same-window outbound+landing measurement and relevant audience are required before selecting a trafficwinner; more repeated posts cannot establish that.",
+        "control": "All existing pins and sitecontrols kept; no public experiment changed.",
+        "review": "Technical routecheck after approved deployment; existing24Novpins8to15Dec,25Novarticle9to16Dec plus adequate data. No restartclock for unchanged oldpins."
+      },
+      "executed": [
+        {
+          "change": "ExistingmanualmenpinClickmindpassport title/destination/board repaired fromalreadyverifiedmetadata",
+          "id": "bookpin:6b05f9fdacf4072f8e620181",
+          "check": "op=stuk readbefore/write/readback200,existingIDnieuwfalse,cijfersnull,pinunchanged"
+        }
+      ],
+      "concept": {
+        "id": "boeken-quiz-uitleg-1127",
+        "url": "https://hjdk-api-henq.vercel.app/voorstel?id=boeken-quiz-uitleg-1127",
+        "status": "conceptnotlive",
+        "check": {
+          "status": 200,
+          "hasNewText": true
+        },
+        "text": "Split into teams of two to four. This quiz has 40 questions in four rounds: 11 on songs and movies, 5 on Santa and his reindeer, 16 on history and traditions, and 8 easy questions for kids. Read one round at a time, let teams write their answers, then reveal the answers before the next round.",
+        "source": "LivequizHTML rounds11/5/16/8andFAQtenperround,27Nov",
+        "prior_draft": "Refines existing25NovquizFAQconcept with currentverifiedcounts andsharedviewlink; not a newarticle or discovery."
+      },
+      "research": {
+        "shared_reused": "27NovDrawnames/Pinterestprimaryanalysis from2026-11-27-traffic-plan.json,not claimednewresearch; no paidcalls. Newplatformbriefinghasdecortrends,notautomaticallyrelevantUSbooktrend.",
+        "no_new_unseen_social_creatives": true
+      },
+      "next": "NextclosedUTCdaycompare;keepbookspause;reviewexistingClickmindproposalwithoutrebuildingit;FAQonlyafterexactapproval.",
+      "log_links": [
+        "content/dagrapport/2026-11-27-pin-overzicht.md",
+        "content/dagrapport/2026-11-27-zernio-snapshots.json"
+      ]
     }
   ]
 }
