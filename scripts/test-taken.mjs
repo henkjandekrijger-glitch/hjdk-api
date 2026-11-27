@@ -60,6 +60,9 @@ s = await T.leesTaken(kv, nu + 3 * dg + 6 * uur);
 const tt = T.takenTekst(s, 'claude-1', d0); ok(/HARDE GRENZEN/.test(tt) && /"pak"/.test(tt) && /haiku/.test(tt), 'takenTekst'); ok(/recent_chats/.test(T.vangnetTekst(s, 'claude-1', d0)), 'vangnetTekst');
 ok(/claude-2/.test(T.aanzetTekst('claude-2')) && T.oppakPrompt('claude-1').includes('"pak"') && T.oppakPrompt('claude-1', 'abc').includes('taak=abc'), 'opdrachten');
 ok(T.isTaken({ taak: 'x' }) && !T.isTaken({ project: 'kdp', nu: 1 }), 'isTaken');
+// aanzetten: alleen een account dat zich aanmeldde wordt bewaakt; uit haalt het weer weg
+ok((await T.zetTaken(kv, { aanzet: { account: 'claude-1' } }, '', nu + 3 * dg)).aanzet === 'claude-1' && !(await T.zetTaken(kv, { aanzet: { account: 'chatgpt' } }, '', nu)).ok, 'aanzet');
+await T.zetTaken(kv, { aanzet: { account: 'claude-2' } }, '', nu); ok((await T.leesTaken(kv, nu)).accounts['aan|claude-2'], 'aan 2'); await T.zetTaken(kv, { aanzet: { account: 'claude-2', uit: true } }, '', nu); ok(!(await T.leesTaken(kv, nu)).accounts['aan|claude-2'], 'uit 2');
 // het ene overzicht: rendert met taken, antwoordknoppen, opruimen en zonder gedachtestreepjes of lege tellers
 await T.zetTaken(kv, { taak: { tekst: 'Wacht nog op een agent — met streepje' } }, 'Henkjan', nu + 3 * dg + 6 * uur);
 await T.zetTaken(kv, { taakzet: { id: (await T.leesTaken(kv, nu + 3 * dg + 6 * uur)).taken.find(x => x.status === 'bezig').id, vraag: 'Mag dit door?', keuzes: ['Ja', 'Nee'] } }, '', nu + 3 * dg + 6 * uur);
@@ -71,5 +74,7 @@ ok(html.includes('Wat moet er gebeuren?') && html.includes('name="taak"') && htm
 ok(html.includes('data-s="jij"') && html.includes('data-s="wacht"') && html.includes('data-s="klaar"') && html.includes('>Upgrade<') && html.includes('>Weg<'), 'rijen en knoppen');
 ok(html.includes('Ongedaan maken') && html.includes('alles wat klaar is') && html.includes('Bekijk het eerst') && html.includes('Geleerd van jou'), 'opruimen en geleerd');
 ok(!/[—–]/.test(html) && !/>0 (bezig|wacht|klaar)/.test(html) && !/undefined|NaN|\[object/.test(html), 'geen streepjes, nullen of undefined');
+ok(html.includes('<b>Oppakker Claude 1</b>') && html.includes('<b>Vangnet Claude 1</b>') && !html.includes('Oppakker Claude 2'), 'bewaking alleen voor wie aan staat');
+const laat = overzichtHtml(Object.assign({}, d, { gemaakt: new Date(nu + 6 * dg).toISOString() })); ok(/Stil<\/b><span><b>Oppakker Claude 1/.test(laat) && /Stil<\/b><span><b>Vangnet Claude 1/.test(laat), 'stil als ze niet lopen');
 ok(overzichtHtml({ gemaakt: new Date(nu).toISOString(), vandaag: '2026-11-27', projecten: [] }).includes('Overzicht'), 'leeg rendert');
 console.log(process.exitCode ? 'taken: FOUT' : 'taken ok');

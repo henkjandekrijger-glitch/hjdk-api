@@ -387,7 +387,7 @@ export default async function handler(req, res) {
         if (q('taak')) b = { taak: { tekst: q('taak'), project: q('p'), account: q('acc'), zwaarte: q('zw') } };
         else { try { b = JSON.parse(q('doe')); } catch (e) {} if (b && b.antwoord && typeof b.antwoord === 'object' && q('tekst')) b.antwoord.tekst = q('tekst'); }
         const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan') : { ok: false, fout: 'onbekende actie' };
-        const m = !u.ok ? { f: String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
+        const m = !u.ok ? { f: q('taak') ? 'typ in een paar woorden wat er moet gebeuren' : String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
         res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + (b && b.gewoonte ? '#geleerd' : '#taken')); return res.end(); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
       if (q('archiveer') || q('terug')) { const id = q('archiveer') || q('terug'); const u = await D.zetDash(kv, { project: id, archief: !!q('archiveer') }, 'dashboard'); if (!u.ok) return res.status(400).json(u); melding = { id, aan: !!q('archiveer') }; }
