@@ -21,11 +21,21 @@ d=await D.dashData(kv);ok(!d.projecten.some(p=>p.id==='wam')&&d.archief.some(a=>
 const h2=D.dashHtml(d,{tekst:'x',terug:'wam'});ok(h2.includes('?terug=wam')&&h2.includes('<b>Archief</b>')&&!h2.includes('id="wam"'),'archief html');ok(h2.includes('?archiveer=kdp'),'archiveerknop');ok(!D.dashTekst(d).includes('## We Are Many'),'archief tekst');
 ok((await D.zetDash(kv,{project:'wam',archief:false})).ok,'terug');d=await D.dashData(kv);ok(d.projecten.some(p=>p.id==='wam')&&!d.archief.length,'terug in overzicht');
 const c=d.projecten.find(p=>p.id==='clickmind');ok(c&&c.nu===2.3&&c.pct===46,'clickmind live '+(c&&c.nu));ok(c.advies&&!c.doel,'advies geen doel');
-const kk=d.projecten.find(p=>p.id==='kdp');ok(kk.verder.startsWith('https://claude.ai/code/new?q=')&&kk.verder.includes('&repo=henkjandekrijger-glitch%2Fhjdk-api')&&kk.verder.length<2500,'verder kdp '+kk.verder.length);ok(decodeURIComponent(kk.verder).includes('project=kdp'),'verder inhoud');
+const kk=d.projecten.find(p=>p.id==='kdp');ok(kk.verder.startsWith('https://claude.ai/new?q=')&&!kk.verder.includes('claude.ai/code')&&decodeURIComponent(kk.verder).includes('Repo henkjandekrijger-glitch/hjdk-api')&&kk.verder.length<2500,'verder kdp '+kk.verder.length);ok(decodeURIComponent(kk.verder).includes('project=kdp'),'verder inhoud');
 ok(d.projecten.find(p=>p.id==='tk').verder.startsWith('https://claude.ai/new?q='),'verder zonder repo');
 ok(!(await D.zetDash(kv,{project:'kdp',claude:'https://evil.example/x'})).ok,'claude url geweigerd');ok((await D.zetDash(kv,{project:'kdp',claude:'https://claude.ai/project/abc-123'})).ok,'claude url');
 ok((await D.dashData(kv)).projecten.find(p=>p.id==='kdp').verder.startsWith('https://claude.ai/project/abc-123?q='),'verder project');
 ok(D.dashHtml(d).includes('Verder in Claude'),'knop');
+// kiezen waar het opent (Henkjan 27 nov 2026): Claude browser, ChatGPT of Claude desktop
+const dk=await D.dashData(kv), pk=dk.projecten.find(p=>p.id==='tk'), hb=D.dashHtml(dk), hc=D.dashHtml(dk,null,'chatgpt'), hd=D.dashHtml(dk,null,'desktop');
+ok(hb.includes('Opent in <b>Claude browser</b>')&&hb.includes('href="?ai=chatgpt"')&&hb.includes('href="?ai=desktop"')&&!hb.includes('claude.ai/code/new'),'keuze standaard');
+ok(D.dashHtml(dk,null,'constructor').includes('<b>Claude browser</b>')&&D.aiKeuze('x')==='browser'&&!D.isAi('toString'),'keuze onbekend');
+ok(hc.includes('<b>ChatGPT</b>')&&hc.includes('Verder in ChatGPT')&&hc.includes('href="https://chatgpt.com/?q=')&&hc.includes('Vraag in ChatGPT')&&hc.includes('var AIK="chatgpt"')&&!hc.includes('href="https://claude.ai/new'),'keuze chatgpt');
+ok(hd.includes('<b>Claude desktop</b>')&&hd.includes('Verder in Claude desktop')&&hd.includes('href="claude://claude.ai/new?q=')&&hd.includes('var AIK="desktop"'),'keuze desktop');
+const ug=D.aiUrl(pk,'chatgpt'), tg=decodeURIComponent(ug.split('?q=')[1]);ok(ug.length<3100&&tg.includes('Doel: ')&&tg.includes('Je kunt mijn dashboard niet zelf lezen')&&!tg.includes('web_fetch_vercel_url'),'chatgpt opdracht '+ug.length);
+ok(dk.projecten.every(p=>D.aiUrl(p,'chatgpt').length<3100&&D.aiUrl(p,'chatgpt','x'.repeat(900)).length<3100),'chatgpt link kort');
+ok(D.aiUrl(pk,'desktop')===pk.verder.replace('https://','claude://')&&D.aiUrl(dk.projecten.find(p=>p.id==='kdp'),'desktop').startsWith('claude://claude.ai/project/abc-123?q='),'desktop link');
+ok(!/[—–]/.test(hc+hd),'streepjes keuze');
 ok(D.LEERPROMPT.length>2500&&D.LEERPROMPT.length<9000&&!/[—–]/.test(D.LEERPROMPT),'leerprompt '+D.LEERPROMPT.length);
 ok((await D.dashData(kv)).leerprompt.tekst===D.LEERPROMPT,'leerprompt standaard');ok(!(await D.zetLeerprompt(kv,'kort')).ok,'leerprompt te kort');
 ok((await D.zetLeerprompt(kv,'NIEUW '+'x'.repeat(300))).ok,'leerprompt zet');let dl=await D.dashData(kv);ok(dl.leerprompt.tekst.startsWith('NIEUW')&&dl.leerprompt.heeftVorige,'leerprompt gelezen');
@@ -98,3 +108,25 @@ console.log('klaar',h.length,d.projecten.length);
   ok(D.dashHtml(dc).includes('<h3>Campagnes nu</h3>')&&D.dashTekst(dc,'wam').includes('Campagnes: Vandaag 2 campagnes met kosten')&&!/[\u2014\u2013]/.test(D.dashHtml(dc)),'camp html en tekst');
   ok(!(await D.dashData(kv)).campagnes,'camp zonder bron');
   console.log('campagnestand ok'); }
+
+// waar Henkjan was gebleven, per chat (27 nov 2026: "zorg dat dat wel altijd zo is en dat ik dus ook met meerder chats kan aansturen op een project")
+{ ok(!(await D.zetDash(kv,{project:'kdp',chat:{naam:'kdp-ads',waar:'kort'}})).ok&&!(await D.zetDash(kv,{project:'kdp',chat:{waar:'Lang genoeg maar zonder naam'}})).ok&&!(await D.zetDash(kv,{project:'bestaatniet',chat:{naam:'x',waar:'Lang genoeg voor de controle'}})).ok,'chat fout');
+  const u1=await D.zetDash(kv,{project:'kdp',chat:{naam:'KDP Ads',waar:'Bod PIT BOSS teruggezet naar $0,75 en de bleeders zijn uit.',wacht:['Ja of nee op de boekkalender','  '],volgende:'Oordeel Australie op 28 nov',link:'https://claude.ai/chat/abc-123',sinds:'2026-11-26T10:00:00Z'}});
+  ok(u1.ok&&u1.chat==='kdp-ads'&&u1.wacht===1&&u1.t==='2026-11-26T10:00:00.000Z','chat zet '+JSON.stringify(u1));
+  ok((await D.zetDash(kv,{project:'kdp',chat:{naam:'kdp-boeken',waar:'Binnenwerk Teens staat klaar voor upload.',link:'https://evil.example/x'}})).ok,'chat 2');
+  let dg=await D.dashData(kv); const pk=dg.projecten.find(p=>p.id==='kdp');
+  ok(pk.chats.length===2&&pk.chats[0].naam==='kdp-boeken'&&pk.chats[0].link===''&&pk.chats[1].link==='https://claude.ai/chat/abc-123'&&pk.chats[1].wacht.length===1,'chats per project');
+  ok(dg.wacht.length===1&&dg.wacht[0].id==='kdp'&&dg.wacht[0].tekst==='Ja of nee op de boekkalender','wacht op henkjan');
+  const hg=D.dashHtml(dg), hgd=D.dashHtml(dg,null,'desktop');
+  ok(hg.includes('<h2>Wacht op jou</h2>')&&hg.includes('<h3>Waar je was gebleven</h3>')&&hg.includes('<b>Wacht op jou:</b> Ja of nee op de boekkalender')&&hg.includes('data-kopie="Zet nu de stand van KDP-boeken')&&hg.includes('href="https://claude.ai/chat/abc-123"')&&hgd.includes('href="claude://claude.ai/chat/abc-123"')&&!/[—–]/.test(hg),'gebleven html');
+  const tg=D.dashTekst(dg,'kdp'), bg=D.bijTekst(dg,'kdp');
+  ok(tg.includes('Gebleven [kdp-ads, ')&&tg.includes('| Wacht op Henkjan: Ja of nee op de boekkalender | Daarna: Oordeel Australie op 28 nov')&&D.dashTekst(dg).includes('WACHT OP HENKJAN'),'gebleven tekst');
+  ok(bg.startsWith('BIJ: KDP-boeken (kdp)')&&bg.includes('Gebleven [kdp-boeken')&&bg.includes('"chat":{"naam"')&&bg.includes('STAND kdp')&&bg.length<3500&&D.bijTekst(dg,'x').startsWith('Onbekend project'),'bij '+bg.length);
+  ok(D.haalTekst(pk).includes('STAND kdp')&&D.haalTekst(pk).includes('?zet={"project":"kdp","chat"'),'haal');
+  ok(D.startTekst(dg).includes('vorm=bij&project=<id>')&&decodeURIComponent(pk.verder).includes('vorm=bij&project=kdp')&&pk.verder.length<2500,'bij in opdrachten '+pk.verder.length);
+  ok((await D.zetDash(kv,{project:'kdp',chat:{naam:'kdp-boeken',waar:'Alles is geupload en gepubliceerd.',klaar:true}})).ok&&(await D.dashData(kv)).projecten.find(p=>p.id==='kdp').chats[0].klaar===true,'chat klaar');
+  log.unshift({t:new Date(Date.now()-36e5).toISOString(),wie:'wam-chat',tekst:'vers werk zonder stand'}); dg=await D.dashData(kv);
+  ok(dg.achter.some(x=>x.id==='wam')&&!dg.achter.some(x=>x.id==='kdp')&&dg.opvallend.some(o=>o.naam==='Waar je was'&&o.tekst.includes('We Are Many')),'achter '+JSON.stringify(dg.achter));
+  ok((await D.zetDash(kv,{project:'wam',chat:{naam:'wam-chat',waar:'Tien adressen staan klaar, wacht op de eerste mail.'}})).ok&&!(await D.dashData(kv)).achter.some(x=>x.id==='wam'),'achter weg na stand');
+  ok(dg.projecten.some(p=>p.id==='dashboard'),'project dashboard');
+  console.log('waar gebleven ok'); }

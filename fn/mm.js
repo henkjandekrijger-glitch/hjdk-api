@@ -386,9 +386,13 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(d);
       if (q('vorm') === 'output') { const O = await import('../lib/output.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(d.output ? O.outputTekst(d.output, q('project') || '') + '\n' : 'geen output\n'); }
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      if (q('vorm') === 'bij') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.bijTekst(d, String(q('project') || ''))); } // kort: waar Henkjan was gebleven, voor elke beurt van elke chat
       if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
       if (melding) { const a = d.archief.find(x => x.id === melding.id), p = d.projecten.find(x => x.id === melding.id); melding = melding.aan ? { tekst: ((a && a.naam) || melding.id) + ' is gearchiveerd en staat niet meer in het overzicht.', terug: melding.id } : { tekst: ((p && p.naam) || melding.id) + ' staat weer in het overzicht.' }; }
-      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding)); }
+      // waar Verder opent (Henkjan 27 nov 2026: "kiezen tussen chatgpt , claude browser of claude desktop"): ?ai=<keuze> zet het cookie dashai voor dit toestel
+      const aiQ = String(q('ai') || ''), aiC = (String(req.headers.cookie || '').match(/(?:^|; )dashai=([a-z]+)/) || [])[1] || '';
+      if (D.isAi(aiQ)) res.setHeader('set-cookie', 'dashai=' + aiQ + '; Max-Age=31536000; Path=/; SameSite=Lax; Secure');
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d, melding, D.isAi(aiQ) ? aiQ : aiC)); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }
