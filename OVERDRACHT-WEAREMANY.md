@@ -7,6 +7,11 @@ Henkjan 27 nov: "Zorg dat spam er niet in kan komen". Aanleiding: drie keer de R
 - Meldingen op /start (op=dmeld, nu ook alleen vanaf de eigen site): een getypte bedrijfsnaam gaat langs nepNaam (willekeurige letters, toetsenbordgeklop, ander schrift; afkortingen als KPN, NS, VGZ en rechtsvormen als GmbH blijven goed). Een naam die we niet kennen toetst Haiku eerst met een vraag van één woord (antwoord 30 dagen bewaard; bij storing of volle dagrem telt de naam mee). De pagina vraagt dan de naam zoals op de factuur. Ook een naam die de AI uit een verhaal leest gaat langs nepNaam; onzintekst gaat niet naar de AI.
 - Opruimen: elk uur in op=leer (veld spam in de uitkomst) wijst ruimSpam wachtende reacties af die de wering als spam ziet en haalt nepnamen met hoogstens 3 melders uit wmn:tel en wmn:naam; meer melders blijven staan onder laten. Los: op=dspam op de beschermde host, droog tenzij &schrijf=1.
 - Controle: tellers spamreactie, spamnaam en spamtekst per dag in op=dstand (vandaag); vanaf 30 per dag een lek. Tests: test/wam-spam.test.mjs.
+- Eerste opruimronde 27 nov: de 3 Russische reacties afgewezen, Fvdg en Ygicuc7 uit de telling; wachtrij en bedrijvenlijst leeg.
+
+## Search Console (27 november 2026)
+
+Henkjan 27 nov: Search Console doet Claude zelf, geen stap voor hem. Een DNS-TXT op wearemany.now werd in de chat geweigerd, dus eigendom via de meta-tag, net als curacao.day: `/api/gsc?op=verifieer&methode=META&site=wearemany.now` (beschermde host) zet de code in kv wmn:gscmeta en de voorkant (p=nl) zet hem in de kop; daarna dezelfde link met `&doe=1`: verifieert, maakt Henkjan mede-eigenaar, voegt https://wearemany.now/ toe aan Search Console en dient sitemap.xml in. Het serviceaccount seo-leerlus leest daarna mee, zodat ZICHT en de dagronde vertoningen en kliks kunnen meten.
 
 ## Dagronde 26 november 2026: KPN en eerste volledige meetdag
 
