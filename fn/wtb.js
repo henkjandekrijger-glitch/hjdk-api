@@ -142,6 +142,19 @@ async function page(m, it, all, req) {
     ...(it.decisionKind === 'boek' ? boekLd(it) : []),
     ...(it.decisionKind === 'dienst' ? dienstLd(it) : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
+  if (new URL(req.url, 'http://x').searchParams.get('sjabloon') === '2' && it.decisionKind !== 'boek') { // nieuw sjabloon (lib/sjabloon.js, 27 nov 2026): voorbeeld, noindex
+    const SJ = await import('../lib/sjabloon.js'); const T = m.id === 'de' ? 'de' : 'us'; const ps = (adv.products || []).filter(p => p && p.url && p.title);
+    const geld = p => p.price != null ? (p.priceText || m.money(p.price)) : '';
+    const prods = ps.slice(0, 3).map((p, i) => ({ naam: SJ.kortNaam(p.title), rol: i === 0 ? m.s.pick : m.s.alt, prijs: geld(p), sterren: p.rating != null ? String(p.rating) : '', url: p.url }));
+    const k0 = ps[0]; const q0s = q0 ? q0.options.map(o => o.label).slice(0, 3) : [];
+    const gtxt = Array.isArray(it.guide) ? it.guide.join(' ') : typeof it.guide === 'string' ? it.guide : '';
+    const letop = (gtxt.replace(/<[^>]+>/g, '').match(/[^.!?]+[.!?]+/g) || []).map(x => x.trim()).filter(x => x.length > 25 && x.length < 170).slice(0, 3);
+    return { sj: SJ.sjabloonHtml({ taal: T, host: m.host, logo: m.id === 'us' ? 'whichtobuy' : 'kaufberater', winkel: 'Amazon', slug: it.slug, term: it.term || it.title, h1: it.title || it.h1, title: it.seoTitle || it.h1, desc: it.metaDesc, canonical: base + '/' + it.slug, noindex: true, jsonld: ld,
+      crumbs: [[m.name, '/'], [it.cat, catPad(m, it.cat)]], bijgewerkt: upd, zoekUrl: adv.link,
+      kortKop: k0 ? SJ.KEUS_LABEL[T] + ': ' + SJ.kortNaam(k0.title) + '.' : '', kort: SJ.zinnen(Array.isArray(it.kort) ? it.kort.join(' ') : it.kort, 2), keus: k0 ? { naam: SJ.kortNaam(k0.title), prijs: geld(k0), url: k0.url } : null,
+      prods, pills: q0s, situaties: [], letop, faq: faqZonderDubbel(it.faq || []).slice(0, 5), verder: rel.slice(0, 3).map(r => [r.title, '/' + r.slug]),
+      meet: { site: m.id === 'us' ? 'whichtobuy' : 'kaufberater', hitPage: 'wtb-' + m.id + '-' + it.slug + '-page', hitClk: 'wtb-' + m.id + '-' + it.slug + '-clk', hitClkAll: 'wtb-' + m.id + '-clk', hitVraag: 'wtb-' + m.id + '-sj-vraag', hitVolg: 'wtb-' + m.id + '-sj-volg', hitMail: 'wtb-' + m.id + '-sj-mail' } }) };
+  }
   const KZ = await import('./kz.js'); // opmaak van outname.now, zelfde als keuzehulp.best (18 nov 2026)
   const body = `${KZ.OV3_CSS}<div class="ov gids"><div class="hero"><p class="crumbs"><a href="/">${esc(m.name)}</a> › <a href="${esc(catPad(m, it.cat))}">${esc(it.cat)}</a></p><p class="ov-eb" style="margin-top:22px"><i></i>${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="kz-meta">${upd ? `${esc(s.updated)} <time datetime="${esc(upd)}">${esc(datumW(m, upd))}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p><p class="ov-lead lead">${esc(it.intro)}</p></div>
 <div class="answer">${antwoordBlok(it.kort, { bronLabel: m.id === 'de' ? 'Quellen' : 'Sources' })}</div>
@@ -328,5 +341,6 @@ export default async function handler(req, res) {
     if (op0 && op0.code === 301) { res.setHeader('location', 'https://' + m.host + '/' + op0.naar); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); }
     if (op0) { res.setHeader('x-robots-tag', 'noindex'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(410).send(shell(m, { title: '410: ' + m.name, desc: '', path: '/', body: `<h1>${m.id === 'de' ? 'Dieser Ratgeber wurde entfernt' : 'This guide has been removed'}</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); } }
   await count(m, req, q, it.slug);
-  return send(await page(m, it, all, req), it.term);
+  const pg = await page(m, it, all, req); if (pg && pg.sj) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(pg.sj); }
+  return send(pg, it.term);
 }
