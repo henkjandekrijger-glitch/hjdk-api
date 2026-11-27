@@ -7,7 +7,7 @@
       "pagina_id": "61596079596846",
       "account_id": "6afafaf7446856cecd87324f",
       "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)",
-      "status": "2026-11-26: nog steeds token ongeldig (Meta error 190) sinds 24 nov 23:34 UTC, needsReconnect; Henkjan moet opnieuw koppelen"
+      "status": "2026-11-27: healthy, canPost, needsReconnect false"
     },
     "instagram": {
       "handle": "kadoly.shop",
@@ -29,7 +29,14 @@
       "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
     },
     "youtube": {
-      "status": "2026-11-26: niet in Zernio-profiel Kadoly"
+      "handle": "henkjandekrijger",
+      "account_id": "6b08384bff3a28e7d1bf3f5c",
+      "status": "2026-11-27: healthy in Zernio-profiel Kadoly"
+    },
+    "tiktok": {
+      "handle": "kadoly.com",
+      "account_id": "6b0843e70e9a0994700ea737",
+      "status": "2026-11-27: healthy"
     }
   },
   "lerend": {
@@ -811,6 +818,84 @@
       "status": "gepland",
       "bord": "Wonen en decoratie",
       "code": "gids-planten-20261125"
+    },
+    {
+      "tijd": "2026-11-27T09:15:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4174005947219969",
+      "tijdvak": "10:15",
+      "via": "zernio",
+      "zernio_id": "6b09434ceb0d827d24cc3321",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1127-sieraad"
+    },
+    {
+      "tijd": "2026-11-27T10:30:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "mandje",
+      "pid": "oc_4174003366658049",
+      "tijdvak": "11:30",
+      "via": "zernio",
+      "zernio_id": "6b09434deb0d827d24cc3327",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1127-mandje"
+    },
+    {
+      "tijd": "2026-11-27T11:45:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "mandje",
+      "pid": "oc_4173957639913473",
+      "tijdvak": "12:45",
+      "via": "zernio",
+      "zernio_id": "6b09434deb0d827d24cc332c",
+      "status": "gepland",
+      "bord": "Hobby en creatief",
+      "code": "pin-1127-mandje2"
+    },
+    {
+      "tijd": "2026-11-27T13:00:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "nieuw",
+      "pid": "oc_4173958842400769",
+      "tijdvak": "14:00",
+      "via": "zernio",
+      "zernio_id": "6b09434e357376e394d9d598",
+      "status": "gepland",
+      "bord": "Cadeau-ideeën",
+      "code": "pin-1127-nieuw"
+    },
+    {
+      "tijd": "2026-11-27T15:45:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "wonen",
+      "pid": "oc_4174004466548737",
+      "tijdvak": "16:45",
+      "via": "zernio",
+      "zernio_id": "6b09434fbce55be3a62e65d7",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1127-wonen"
+    },
+    {
+      "tijd": "2026-11-27T17:15:00Z",
+      "dag": "2026-11-27",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4254790000459777",
+      "tijdvak": "18:15",
+      "via": "zernio",
+      "zernio_id": "6b09434f00765536dd3f5cbf",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1127-sieraad2"
     }
   ]
 }
