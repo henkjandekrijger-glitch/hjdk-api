@@ -1,0 +1,2770 @@
+{
+ "net": "mgid",
+ "bron": "MGID-connector, opgehaald 2026-11-27",
+ "munt": "EUR",
+ "opmerking": "Account in euro (MGID account: wallet.currency eur, teaser_stats currency eur); bedragen zijn NIET omgerekend. conv = kopen (buying, overal 0); bod = klikprijs van de eerste advertentie, eenheid afgeleid uit kosten per klik (priceOfClick 3 = EUR 0,03); interesse en besluit zijn de MGID-conversiedoelen. Advertenties staan alleen er als MGID ze nog kent; van 12512703 ontbreken verwijderde advertenties (campagne-cijfers zijn volledig, de som van de creatives niet).",
+ "dagen": {
+  "2026-10-14": [
+   {
+    "id": "12512703",
+    "naam": "MYLEVEL TYPING US mobile CPA 13okt",
+    "vert": 7573,
+    "kliks": 520,
+    "kosten": 15.6,
+    "conv": 0,
+    "interesse": 8,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&s={click_id}&b={teaser_id}&src={source_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28160900",
+      "titel": "Free Typing Speed Test: See Your WPM In 60 Seconds",
+      "tekst": "One minute of typing shows your speed and accuracy. Free, no sign-up.",
+      "beeld": "http://imghosts.com/t/2026-10/997116/612e2528ed16e7e3c4599db30ed45fe6.png",
+      "cta": "Try now",
+      "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&s={click_id}&b={teaser_id}&src={source_id}",
+      "vert": 191,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161302",
+      "titel": "How Fast Do You Type On Your Phone? Free 1-Minute Test",
+      "tekst": "Type with your thumbs for 1 minute, see your words per minute. No sign-up.",
+      "beeld": "http://imghosts.com/t/2026-10/997116/7526392f136b566f726d2ef49c089001.png",
+      "cta": "Get started",
+      "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&src={source_id}&s={click_id}&b={teaser_id}",
+      "vert": 2446,
+      "kliks": 179,
+      "kosten": 5.37,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512708",
+    "naam": "2026-10-13 PRAISY native US-GB mobiel CPA test",
+    "vert": 9318,
+    "kliks": 378,
+    "kosten": 17.39,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid content native",
+     "landing": "https://spel.todayin.email/v?src=mgid&campaign=mg-praisy&zone={widget_id}&creative={teaser_id}&subid={click_id}&land=US",
+     "boden": [
+      {
+       "bod": 0.05,
+       "landen": [
+        "us",
+        "gb"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28160963",
+      "titel": "What Do Your Friends Love Most About You? Find Out Anonymously",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/9db83b6c5889ca4d7507ea910b151990.png",
+      "cta": "Try for free",
+      "landing": "https://spel.todayin.email/v?src=mgid&campaign=mg-praisy&zone={widget_id}&creative={teaser_id}&subid={click_id}&land=US",
+      "vert": 2626,
+      "kliks": 100,
+      "kosten": 4.6,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28160964",
+      "titel": "Compliments Only: Let Your Group Chat Pick Your Badge",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/862131244c6e5048403a67546c42dc86.png",
+      "cta": "Get started",
+      "landing": "https://spel.todayin.email/v?src=mgid&campaign=mg-praisy&zone={widget_id}&creative={teaser_id}&subid={click_id}&land=US",
+      "vert": 3739,
+      "kliks": 153,
+      "kosten": 7.038,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28160965",
+      "titel": "Kindest? Funniest? Your Friends Vote, Anonymously. Only Nice Titles",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/d0455cad06dff4a4ed45fc6d2ad6312d.png",
+      "cta": "Check it out",
+      "landing": "https://spel.todayin.email/v?src=mgid&campaign=mg-praisy&zone={widget_id}&creative={teaser_id}&subid={click_id}&land=US",
+      "vert": 2953,
+      "kliks": 125,
+      "kosten": 5.75,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512712",
+    "naam": "BOEKEN US kerst product 14okt",
+    "vert": 11120,
+    "kliks": 656,
+    "kosten": 20.34,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161037",
+      "titel": "The Gift For Dads Who Grill: 1500 Pit Boss Smoker Recipes",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/e47758750531dc74a72c6276fac8646b.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+      "vert": 875,
+      "kliks": 59,
+      "kosten": 1.829,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161038",
+      "titel": "Pit Boss Owner On Your List? The Cookbook With 445 Reviews",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/189a3f26c38a5e93b506f491b0cd2d0e.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+      "vert": 1406,
+      "kliks": 69,
+      "kosten": 2.139,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161039",
+      "titel": "A Christmas Gift Kids Love: Bible Stories To Color By Number",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/df28b0782e4d1483832a4315ca663a5f.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0D2KZGWYJ?tag=bk-bcn-20&ascsubtag=mg-{widget_id}",
+      "vert": 1260,
+      "kliks": 71,
+      "kosten": 2.201,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161041",
+      "titel": "Christmas Gift For Mom: 1000-Word Large Print Puzzle Book",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/62bf648bafc5a97e2471dc75fda58421.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0CZRWNZBB?tag=bk-mws-20&ascsubtag=mg-{widget_id}",
+      "vert": 1299,
+      "kliks": 100,
+      "kosten": 3.1,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161042",
+      "titel": "Grandma Loves Word Search? A Large Print Gift Under $10",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/73f85f1e3572ab5dbe907a6f9c1d6673.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0CZRWNZBB?tag=bk-mws-20&ascsubtag=mg-{widget_id}",
+      "vert": 1223,
+      "kliks": 75,
+      "kosten": 2.325,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161043",
+      "titel": "Nostalgic Gift For Grandparents: 50s To 80s Word Search",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/4ef141c45b419ba9b0400230e3007529.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0GYZGW9J7?tag=bk-gmws-20&ascsubtag=mg-{widget_id}",
+      "vert": 1319,
+      "kliks": 63,
+      "kosten": 1.953,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161044",
+      "titel": "Remember The 60s? A Large Print Puzzle Gift Full Of Memories",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/c9ec1d571a8e5ea6409cea54d30cbeed.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0GYZGW9J7?tag=bk-gmws-20&ascsubtag=mg-{widget_id}",
+      "vert": 1212,
+      "kliks": 66,
+      "kosten": 2.046,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161045",
+      "titel": "The Stocking Stuffer Teens Actually Read: 408 Weird Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/6c5b3cd1a81333007bd6f0bb23bec1b6.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0DJQLBM75?tag=bk-sst-20&ascsubtag=mg-{widget_id}",
+      "vert": 1298,
+      "kliks": 74,
+      "kosten": 2.294,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161046",
+      "titel": "The Funny Fact Book Teens Can't Put Down, Under $10",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/6a5d5b53d51e2cd3ad9dfe7cf79330ab.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0DJQLBM75?tag=bk-sst-20&ascsubtag=mg-{widget_id}",
+      "vert": 1228,
+      "kliks": 79,
+      "kosten": 2.449,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512713",
+    "naam": "BOEKEN CA kerst product 14okt",
+    "vert": 41341,
+    "kliks": 490,
+    "kosten": 17.64,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.ca/dp/B0DJQLBM75?ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.04,
+       "landen": [
+        "ca"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161149",
+      "titel": "The Stocking Stuffer Teens Actually Read: 408 Weird Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/326e55c6c5bb7f19516d1b64ccd35cb0.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DJQLBM75?ascsubtag=mg-{widget_id}",
+      "vert": 16494,
+      "kliks": 164,
+      "kosten": 5.904,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161150",
+      "titel": "Stocking Stuffer For Adults: Mind-Blowing Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/b508553336da2d7630e7569343dd8a02.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DJQS1K5Z?ascsubtag=mg-{widget_id}",
+      "vert": 10909,
+      "kliks": 165,
+      "kosten": 5.94,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161151",
+      "titel": "White Elephant Gift Winner: 400 Dad Jokes",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/3e18954c7da9c9e8a9ff3370d0c1e860.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DK3CSYXW?ascsubtag=mg-{widget_id}",
+      "vert": 13938,
+      "kliks": 161,
+      "kosten": 5.796,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512721",
+    "naam": "AMZ DE 14okt | weihnachtsgeschenke fuer frauen | bl-de07-21 | MGID",
+    "vert": 10775,
+    "kliks": 156,
+    "kosten": 4.84,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.de/s?k=weihnachtsgeschenke+f%C3%BCr+frauen&tag=bl-de07-21&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161132",
+      "titel": "Weihnachtsgeschenke für Frauen, die wirklich ankommen",
+      "tekst": "Beliebte Geschenkideen mit guten Bewertungen im Überblick",
+      "beeld": "http://imghosts.com/t/2026-10/997116/23e45c1006cb5a86329b8f335de96f1e.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=weihnachtsgeschenke+f%C3%BCr+frauen&tag=bl-de07-21&ascsubtag=mg-{widget_id}",
+      "vert": 5444,
+      "kliks": 52,
+      "kosten": 1.612,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161133",
+      "titel": "Noch kein Geschenk für sie? Mit diesen Ideen liegen Sie richtig",
+      "tekst": "Geschenkideen für Frauen zu Weihnachten 2026",
+      "beeld": "http://imghosts.com/t/2026-10/997116/b6d24fa44dd0ebd2f96e2e5fbe114a9a.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=weihnachtsgeschenke+f%C3%BCr+frauen&tag=bl-de07-21&ascsubtag=mg-{widget_id}",
+      "vert": 5331,
+      "kliks": 104,
+      "kosten": 3.224,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512722",
+    "naam": "AMZ DE 14okt | winterstiefel damen wasserdicht | bl-de08-21 | MGID",
+    "vert": 22493,
+    "kliks": 229,
+    "kosten": 7.1,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161134",
+      "titel": "Wasserdichte Winterstiefel für Damen: warm gefüttert",
+      "tekst": "Die beliebtesten Modelle für diesen Winter vergleichen",
+      "beeld": "http://imghosts.com/t/2026-10/997116/d3ad1cfc3f9429138c550d5d9003d8e3.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+      "vert": 12298,
+      "kliks": 136,
+      "kosten": 4.216,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161135",
+      "titel": "Kalte Füße im Winter? Diese Stiefel halten warm und trocken",
+      "tekst": "Gefütterte Damen-Winterstiefel im Vergleich",
+      "beeld": "http://imghosts.com/t/2026-10/997116/dae8c1e11e6504a24708c62fe8f31667.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+      "vert": 10195,
+      "kliks": 93,
+      "kosten": 2.883,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512723",
+    "naam": "AMZ US 14okt | christmas gifts for women | bl-t06-20 | MGID",
+    "vert": 8056,
+    "kliks": 530,
+    "kosten": 16.43,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161136",
+      "titel": "Christmas Gifts For Women She'll Actually Use",
+      "tekst": "Popular gift ideas with great reviews",
+      "beeld": "http://imghosts.com/t/2026-10/997116/937c7dda6ab1b875f6cb957946f12931.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+      "vert": 4021,
+      "kliks": 258,
+      "kosten": 7.998,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161137",
+      "titel": "Still Need A Gift For Her? Start With These Ideas",
+      "tekst": "Christmas gift ideas for women, 2026",
+      "beeld": "http://imghosts.com/t/2026-10/997116/d3e0d8d3203a08d3ce3e0610f56bfa92.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+      "vert": 4035,
+      "kliks": 272,
+      "kosten": 8.432,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   }
+  ],
+  "2026-10-15": [
+   {
+    "id": "12512703",
+    "naam": "MYLEVEL TYPING US mobile CPA 13okt",
+    "vert": 72,
+    "kliks": 2,
+    "kosten": 0.06,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&s={click_id}&b={teaser_id}&src={source_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28160900",
+      "titel": "Free Typing Speed Test: See Your WPM In 60 Seconds",
+      "tekst": "One minute of typing shows your speed and accuracy. Free, no sign-up.",
+      "beeld": "http://imghosts.com/t/2026-10/997116/612e2528ed16e7e3c4599db30ed45fe6.png",
+      "cta": "Try now",
+      "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&s={click_id}&b={teaser_id}&src={source_id}",
+      "vert": 13,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161302",
+      "titel": "How Fast Do You Type On Your Phone? Free 1-Minute Test",
+      "tekst": "Type with your thumbs for 1 minute, see your words per minute. No sign-up.",
+      "beeld": "http://imghosts.com/t/2026-10/997116/7526392f136b566f726d2ef49c089001.png",
+      "cta": "Get started",
+      "landing": "https://mylevel.today/typing-test?c=mg12512703&z={widget_id}&src={source_id}&s={click_id}&b={teaser_id}",
+      "vert": 25,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512712",
+    "naam": "BOEKEN US kerst product 14okt",
+    "vert": 521,
+    "kliks": 4,
+    "kosten": 0.12,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161037",
+      "titel": "The Gift For Dads Who Grill: 1500 Pit Boss Smoker Recipes",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/e47758750531dc74a72c6276fac8646b.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+      "vert": 20,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161038",
+      "titel": "Pit Boss Owner On Your List? The Cookbook With 445 Reviews",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/189a3f26c38a5e93b506f491b0cd2d0e.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0BKRPL5JX?tag=bk-pbx-20&ascsubtag=mg-{widget_id}",
+      "vert": 44,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161039",
+      "titel": "A Christmas Gift Kids Love: Bible Stories To Color By Number",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/df28b0782e4d1483832a4315ca663a5f.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0D2KZGWYJ?tag=bk-bcn-20&ascsubtag=mg-{widget_id}",
+      "vert": 83,
+      "kliks": 1,
+      "kosten": 0.031,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161041",
+      "titel": "Christmas Gift For Mom: 1000-Word Large Print Puzzle Book",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/62bf648bafc5a97e2471dc75fda58421.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0CZRWNZBB?tag=bk-mws-20&ascsubtag=mg-{widget_id}",
+      "vert": 31,
+      "kliks": 1,
+      "kosten": 0.031,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161042",
+      "titel": "Grandma Loves Word Search? A Large Print Gift Under $10",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/73f85f1e3572ab5dbe907a6f9c1d6673.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0CZRWNZBB?tag=bk-mws-20&ascsubtag=mg-{widget_id}",
+      "vert": 35,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161043",
+      "titel": "Nostalgic Gift For Grandparents: 50s To 80s Word Search",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/4ef141c45b419ba9b0400230e3007529.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0GYZGW9J7?tag=bk-gmws-20&ascsubtag=mg-{widget_id}",
+      "vert": 48,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161044",
+      "titel": "Remember The 60s? A Large Print Puzzle Gift Full Of Memories",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/c9ec1d571a8e5ea6409cea54d30cbeed.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0GYZGW9J7?tag=bk-gmws-20&ascsubtag=mg-{widget_id}",
+      "vert": 34,
+      "kliks": 1,
+      "kosten": 0.031,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161045",
+      "titel": "The Stocking Stuffer Teens Actually Read: 408 Weird Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/6c5b3cd1a81333007bd6f0bb23bec1b6.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0DJQLBM75?tag=bk-sst-20&ascsubtag=mg-{widget_id}",
+      "vert": 163,
+      "kliks": 1,
+      "kosten": 0.031,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161046",
+      "titel": "The Funny Fact Book Teens Can't Put Down, Under $10",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/6a5d5b53d51e2cd3ad9dfe7cf79330ab.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/dp/B0DJQLBM75?tag=bk-sst-20&ascsubtag=mg-{widget_id}",
+      "vert": 63,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512713",
+    "naam": "BOEKEN CA kerst product 14okt",
+    "vert": 1549,
+    "kliks": 11,
+    "kosten": 0.4,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.ca/dp/B0DJQLBM75?ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.04,
+       "landen": [
+        "ca"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161149",
+      "titel": "The Stocking Stuffer Teens Actually Read: 408 Weird Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/326e55c6c5bb7f19516d1b64ccd35cb0.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DJQLBM75?ascsubtag=mg-{widget_id}",
+      "vert": 651,
+      "kliks": 2,
+      "kosten": 0.072,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161150",
+      "titel": "Stocking Stuffer For Adults: Mind-Blowing Facts",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/b508553336da2d7630e7569343dd8a02.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DJQS1K5Z?ascsubtag=mg-{widget_id}",
+      "vert": 390,
+      "kliks": 6,
+      "kosten": 0.216,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161151",
+      "titel": "White Elephant Gift Winner: 400 Dad Jokes",
+      "tekst": "",
+      "beeld": "http://imghosts.com/t/2026-10/997116/3e18954c7da9c9e8a9ff3370d0c1e860.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.ca/dp/B0DK3CSYXW?ascsubtag=mg-{widget_id}",
+      "vert": 508,
+      "kliks": 3,
+      "kosten": 0.108,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512722",
+    "naam": "AMZ DE 14okt | winterstiefel damen wasserdicht | bl-de08-21 | MGID",
+    "vert": 608,
+    "kliks": 2,
+    "kosten": 0.06,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161134",
+      "titel": "Wasserdichte Winterstiefel für Damen: warm gefüttert",
+      "tekst": "Die beliebtesten Modelle für diesen Winter vergleichen",
+      "beeld": "http://imghosts.com/t/2026-10/997116/d3ad1cfc3f9429138c550d5d9003d8e3.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+      "vert": 295,
+      "kliks": 2,
+      "kosten": 0.062,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161135",
+      "titel": "Kalte Füße im Winter? Diese Stiefel halten warm und trocken",
+      "tekst": "Gefütterte Damen-Winterstiefel im Vergleich",
+      "beeld": "http://imghosts.com/t/2026-10/997116/dae8c1e11e6504a24708c62fe8f31667.jpeg",
+      "cta": "Jetzt ansehen",
+      "landing": "https://www.amazon.de/s?k=winterstiefel+damen+wasserdicht&tag=bl-de08-21&ascsubtag=mg-{widget_id}",
+      "vert": 313,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12512723",
+    "naam": "AMZ US 14okt | christmas gifts for women | bl-t06-20 | MGID",
+    "vert": 154,
+    "kliks": 1,
+    "kosten": 0.03,
+    "conv": 0,
+    "interesse": 0,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "us"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28161136",
+      "titel": "Christmas Gifts For Women She'll Actually Use",
+      "tekst": "Popular gift ideas with great reviews",
+      "beeld": "http://imghosts.com/t/2026-10/997116/937c7dda6ab1b875f6cb957946f12931.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+      "vert": 84,
+      "kliks": 1,
+      "kosten": 0.031,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28161137",
+      "titel": "Still Need A Gift For Her? Start With These Ideas",
+      "tekst": "Christmas gift ideas for women, 2026",
+      "beeld": "http://imghosts.com/t/2026-10/997116/d3e0d8d3203a08d3ce3e0610f56bfa92.jpeg",
+      "cta": "Shop now",
+      "landing": "https://www.amazon.com/s?k=christmas+gifts+for+women&tag=bl-t06-20&ascsubtag=mg-{widget_id}",
+      "vert": 70,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   }
+  ],
+  "2026-11-04": [
+   {
+    "id": "12534206",
+    "naam": "SHOP-LUS MGID 2026-11-04 A | wonen en sfeer | 5 producten | NL native",
+    "vert": 97990,
+    "kliks": 200,
+    "kosten": 15.49,
+    "conv": 0,
+    "interesse": 72,
+    "besluit": 4,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337409",
+      "titel": "Donkere avonden, warm licht: deze zwarte lantaarn maakt het knus",
+      "tekst": "Strak zwart metaal voor je kaarsen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/8f59f58017156005712c4f8e38d6ac77.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 675,
+      "kliks": 3,
+      "kosten": 0.15,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337410",
+      "titel": "Kaarslicht maakt het thuis. Zo haal je sfeer in huis",
+      "tekst": "Moderne lantaarn van Mica Decorations",
+      "beeld": "http://imghosts.com/t/2026-11/997116/6d65b65cb3fdde2e2a066c18c199bd6b.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3104,
+      "kliks": 12,
+      "kosten": 0.93,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337411",
+      "titel": "Witte glazen kerstballen voor een rustige, chique kerstboom",
+      "tekst": "Een complete set voor de hele boom",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7207d6cb24a94c2f2b0586e63e2fd5c9.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 9522,
+      "kliks": 30,
+      "kosten": 2.34,
+      "conv": 0,
+      "interesse": 13,
+      "besluit": 0
+     },
+     {
+      "id": "28337412",
+      "titel": "Boom al uit de doos? Maak hem dit jaar stijlvol in wit glas",
+      "tekst": "Glazen kerstballen van Mica",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d7b28ea01c2c052cc68f8476a2706d11.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 7113,
+      "kliks": 23,
+      "kosten": 1.78,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28337413",
+      "titel": "Een lamp zonder snoer: zacht licht op elke plek die je wilt",
+      "tekst": "Gouden draadloze tafellamp Milou",
+      "beeld": "http://imghosts.com/t/2026-11/997116/3fa3d169ef6fa2b2ea75486943a7751f.jpeg",
+      "cta": "Ontdek meer",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3634,
+      "kliks": 15,
+      "kosten": 1.14,
+      "conv": 0,
+      "interesse": 8,
+      "besluit": 0
+     },
+     {
+      "id": "28337500",
+      "titel": "Geen stopcontact nodig: deze gouden lamp geeft overal sfeer",
+      "tekst": "Oplaadbaar, ook buiten te gebruiken",
+      "beeld": "http://imghosts.com/t/2026-11/997116/175c5cdb28ead723613badda1756c894.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3680,
+      "kliks": 15,
+      "kosten": 1.14,
+      "conv": 0,
+      "interesse": 6,
+      "besluit": 0
+     },
+     {
+      "id": "28337501",
+      "titel": "Planten naar binnen? Geef ze een strakke antraciet pot",
+      "tekst": "Doppio, van gerecycled plastic",
+      "beeld": "http://imghosts.com/t/2026-11/997116/5ff430d248d7f915f0e21428fed37ed3.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 16688,
+      "kliks": 18,
+      "kosten": 1.41,
+      "conv": 0,
+      "interesse": 8,
+      "besluit": 2
+     },
+     {
+      "id": "28337502",
+      "titel": "Strak en rustig groen: de bloempot die overal bij past",
+      "tekst": "Modern design in antraciet",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d20d5ac9ee0f36e93920f83d57a92487.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 4075,
+      "kliks": 13,
+      "kosten": 1.04,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28337503",
+      "titel": "Liever planten dan bloemen? Deze orchideeën bloeien langer",
+      "tekst": "Roze orchideeën met een succulent",
+      "beeld": "http://imghosts.com/t/2026-11/997116/80ea49b019007315f59ba522eb851420.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 40885,
+      "kliks": 35,
+      "kosten": 2.77,
+      "conv": 0,
+      "interesse": 14,
+      "besluit": 0
+     },
+     {
+      "id": "28337504",
+      "titel": "Een cadeau dat blijft bloeien: roze orchideeën in een mooie set",
+      "tekst": "Plantenset Gradience van Kolibri",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9905369db453c13dfd5aaad8c0c2a775.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 8614,
+      "kliks": 36,
+      "kosten": 2.79,
+      "conv": 0,
+      "interesse": 11,
+      "besluit": 2
+     }
+    ]
+   },
+   {
+    "id": "12534207",
+    "naam": "SHOP-LUS MGID 2026-11-04 B | cadeau en keuken | 5 producten | NL native",
+    "vert": 53162,
+    "kliks": 101,
+    "kosten": 6.83,
+    "conv": 0,
+    "interesse": 42,
+    "besluit": 1,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337414",
+      "titel": "Ontbijt op bed met stijl: een grote rieten serveertray",
+      "tekst": "Mooi als dienblad en als decoratie",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b430116aebece46cd2845c2b5ada7d51.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 532,
+      "kliks": 5,
+      "kosten": 0.25,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337429",
+      "titel": "Je reizen aan de muur: een houten wereldkaart om zelf te maken",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7fa0c7bb4466e18a86e07bdb93cc7048.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 533,
+      "kliks": 1,
+      "kosten": 0.05,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 1
+     },
+     {
+      "id": "28337430",
+      "titel": "Even genieten bij de kraan: vegan handzeep met hout en salie",
+      "tekst": "Luxe dispenser voor op het aanrecht",
+      "beeld": "http://imghosts.com/t/2026-11/997116/db3227c6fd112d6419cdd5e35d860291.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 19453,
+      "kliks": 21,
+      "kosten": 1.55,
+      "conv": 0,
+      "interesse": 6,
+      "besluit": 0
+     },
+     {
+      "id": "28337431",
+      "titel": "Rust op je bureau: een houten penhouder in Japans design",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9a2d3a085d6d0bbf69b4b4c96a0f8ea4.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1327,
+      "kliks": 7,
+      "kosten": 0.43,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28337522",
+      "titel": "Gasten over de vloer? Serveer alles op deze rieten tray",
+      "tekst": "Handgemaakt riet van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/0fec4fb95ff5285bcf129d4cd6cc5fc2.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 768,
+      "kliks": 7,
+      "kosten": 0.56,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337525",
+      "titel": "Cadeau voor elke reisliefhebber: de wereld in hout",
+      "tekst": "Houten wereldkaart als blikvanger",
+      "beeld": "http://imghosts.com/t/2026-11/997116/28172a086c5016ff1693316ebcc5d910.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 5575,
+      "kliks": 20,
+      "kosten": 1.33,
+      "conv": 0,
+      "interesse": 15,
+      "besluit": 0
+     },
+     {
+      "id": "28337528",
+      "titel": "Klein luxe cadeau: handzeep met de geur van hout en salie",
+      "tekst": "Vegan, van Housevitamin",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a36c39d97a85582230f5e96139607a89.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 10045,
+      "kliks": 16,
+      "kosten": 1.01,
+      "conv": 0,
+      "interesse": 6,
+      "besluit": 0
+     },
+     {
+      "id": "28337530",
+      "titel": "Pennen overal? Deze houten penhouder ruimt je bureau op",
+      "tekst": "Strak Japans design in hout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/104604dfa27e8de988a48df37ad5c1f7.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1542,
+      "kliks": 6,
+      "kosten": 0.36,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337531",
+      "titel": "Boodschappen met stijl: deze raffia tas is met de hand geweven",
+      "tekst": "Voor markt, stad en strand",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b91f351cfdb68260407a4cd9426f9bdc.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 13387,
+      "kliks": 18,
+      "kosten": 1.29,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534584",
+    "naam": "SHOP-LUS MGID 2026-11-04 C | bouwen en puzzelen | 5 producten | NL native",
+    "vert": 48963,
+    "kliks": 78,
+    "kosten": 6.24,
+    "conv": 0,
+    "interesse": 35,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.12,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28340661",
+      "titel": "Bouw zelf een houten diepzeeverkenner die echt beweegt",
+      "tekst": "Cadeau voor knutselaars en puzzelaars",
+      "beeld": "http://imghosts.com/t/2026-11/997116/28fe51e9a3762875cb027e66101c4474.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2804,
+      "kliks": 7,
+      "kosten": 0.56,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28340662",
+      "titel": "Een muziekdoos die je zelf bouwt: het circus speelt echt",
+      "tekst": "Houten bouwpakket voor tieners",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b48ecd2492334131394308039018a215.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004436271105&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1090,
+      "kliks": 5,
+      "kosten": 0.4,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28340663",
+      "titel": "Draai aan de slinger en de jungle komt tot leven",
+      "tekst": "Houten muziekdoos om zelf te bouwen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/09a7457dd6cf79a999874f07bdc70a7e.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004434321409&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2301,
+      "kliks": 5,
+      "kosten": 0.4,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     },
+     {
+      "id": "28340664",
+      "titel": "Een houten schildpad om samen in elkaar te zetten",
+      "tekst": "Eco-vriendelijk berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/76bc054f6ac91e933c14d96abdba45f4.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004320108545&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2778,
+      "kliks": 3,
+      "kosten": 0.24,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28340665",
+      "titel": "Bouw een piepklein bakkerijtje met echte details",
+      "tekst": "Miniatuurhuisje om zelf te maken",
+      "beeld": "http://imghosts.com/t/2026-11/997116/56e6d00d4e33a3ecefc080fe7e6dbaea.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004478328833&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1760,
+      "kliks": 8,
+      "kosten": 0.64,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28340666",
+      "titel": "Sinterklaas al geregeld? Een houten bouwpakket dat beweegt",
+      "tekst": "Diepzeeverkenner om zelf te bouwen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/e35d2bfca55e615d6003272c82eb8cb1.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 243,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28340667",
+      "titel": "Cadeau met een melodie: bouw je eigen houten muziekdoos",
+      "tekst": "Circus Troupe, van berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/5a08819c517f507304cb5cebc064ff08.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004436271105&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2461,
+      "kliks": 13,
+      "kosten": 1.04,
+      "conv": 0,
+      "interesse": 8,
+      "besluit": 0
+     },
+     {
+      "id": "28340668",
+      "titel": "Uren puzzelplezier: een jungle muziekdoos van hout",
+      "tekst": "Leuk voor in de schoen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/37cc1da82d1e4fa10d1993cfc2907825.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004434321409&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 7092,
+      "kliks": 11,
+      "kosten": 0.88,
+      "conv": 0,
+      "interesse": 6,
+      "besluit": 0
+     },
+     {
+      "id": "28340669",
+      "titel": "Schermvrij spelen: een houten bouwpuzzel voor de hele familie",
+      "tekst": "Schildpad van berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/cd521ddd3a3fdbee82897288e8863485.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004320108545&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 27781,
+      "kliks": 20,
+      "kosten": 1.6,
+      "conv": 0,
+      "interesse": 9,
+      "besluit": 0
+     },
+     {
+      "id": "28340677",
+      "titel": "Het perfecte knutselcadeau: een eigen miniatuur bakkerij",
+      "tekst": "Voor jonge en volwassen knutselaars",
+      "beeld": "http://imghosts.com/t/2026-11/997116/f49011e36bab011f55c9f4ed532ad858.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004478328833&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 653,
+      "kliks": 6,
+      "kosten": 0.48,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534692",
+    "naam": "TODAYIN CURACAO NL DE US MGID | native | 4nov | CPA = aanmelding",
+    "vert": 28691,
+    "kliks": 53,
+    "kosten": 1.59,
+    "conv": 0,
+    "interesse": 27,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid content native",
+     "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de",
+        "us",
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28341641",
+      "titel": "Cruising To Curaçao? Pick Your Ship And Get Your Day Plan",
+      "tekst": "On the morning you dock: what's on, how busy it is, sea and weather.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/283e1686f0e2d1510a79a3eac6ed4bdb.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 2697,
+      "kliks": 11,
+      "kosten": 0.33,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341643",
+      "titel": "Your Ship Docks In Willemstad. Here Is What's On That Day",
+      "tekst": "Pick your ship. Free day plan for Curaçao in your inbox.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9fb4479cc9ba190048f91dc99c3103b2.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 3220,
+      "kliks": 7,
+      "kosten": 0.21,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341665",
+      "titel": "Naar Curaçao? Weet elke dag wat er op het eiland te doen is",
+      "tekst": "Elke ochtend nieuws, weer, zee en uitgaan in je mail. Gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7877084e720ee87f5ad20d4e538f2392.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 6008,
+      "kliks": 6,
+      "kosten": 0.18,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28341666",
+      "titel": "Nach Curaçao? Jeden Morgen wissen, was auf der Insel los ist",
+      "tekst": "Wetter, Meer, Nachrichten und Tipps. Kostenlos per Mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a36ef9619284312172b32f1088571a6.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 1377,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28341668",
+      "titel": "Going To Curaçao? Know What's On Before You Land",
+      "tekst": "Every morning: news, weather, sea and what to do. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/facb752427e9f95873e9c10a9b27814f.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=en&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 1037,
+      "kliks": 3,
+      "kosten": 0.09,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     },
+     {
+      "id": "28341670",
+      "titel": "Curaçao vandaag: wat er speelt, het weer en waar het rustig is",
+      "tekst": "Voor wie gaat of er al is. Elke ochtend gratis in je mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a83371d20c7d2f960b97f5f7a320470.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 5035,
+      "kliks": 7,
+      "kosten": 0.21,
+      "conv": 0,
+      "interesse": 7,
+      "besluit": 0
+     },
+     {
+      "id": "28341672",
+      "titel": "Curaçao heute: Wetter, Meer und was los ist",
+      "tekst": "Für alle, die hinfliegen oder schon dort sind. Jeden Morgen gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/e697f9703a944a0358961474129876ac.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 1219,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28341673",
+      "titel": "Curaçao Shore Day: What To Do Near The Cruise Pier",
+      "tekst": "Pick your ship and get that day's plan by email. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a839f0174bb714e20a21cab387366130.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 2717,
+      "kliks": 7,
+      "kosten": 0.21,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28343073",
+      "titel": "Welke Curaçao past bij jou? Doe de test in 3 tikken",
+      "tekst": "Krijg gratis je eigen reisplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/ecf9cb0b747e226b197db91aedc42bad.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 3258,
+      "kliks": 8,
+      "kosten": 0.24,
+      "conv": 0,
+      "interesse": 11,
+      "besluit": 0
+     },
+     {
+      "id": "28343085",
+      "titel": "Welches Curaçao passt zu dir? Teste es in 3 Klicks",
+      "tekst": "Kostenlos: dein eigener Reiseplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a47269f8cfeecf09ab5eac80a6f9925d.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 2120,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     }
+    ]
+   }
+  ],
+  "2026-11-05": [
+   {
+    "id": "12534206",
+    "naam": "SHOP-LUS MGID 2026-11-04 A | wonen en sfeer | 5 producten | NL native",
+    "vert": 97717,
+    "kliks": 220,
+    "kosten": 19.56,
+    "conv": 0,
+    "interesse": 91,
+    "besluit": 1,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337409",
+      "titel": "Donkere avonden, warm licht: deze zwarte lantaarn maakt het knus",
+      "tekst": "Strak zwart metaal voor je kaarsen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/8f59f58017156005712c4f8e38d6ac77.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1762,
+      "kliks": 10,
+      "kosten": 0.88,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28337410",
+      "titel": "Kaarslicht maakt het thuis. Zo haal je sfeer in huis",
+      "tekst": "Moderne lantaarn van Mica Decorations",
+      "beeld": "http://imghosts.com/t/2026-11/997116/6d65b65cb3fdde2e2a066c18c199bd6b.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1407,
+      "kliks": 2,
+      "kosten": 0.16,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337411",
+      "titel": "Witte glazen kerstballen voor een rustige, chique kerstboom",
+      "tekst": "Een complete set voor de hele boom",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7207d6cb24a94c2f2b0586e63e2fd5c9.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6474,
+      "kliks": 26,
+      "kosten": 2.24,
+      "conv": 0,
+      "interesse": 10,
+      "besluit": 0
+     },
+     {
+      "id": "28337412",
+      "titel": "Boom al uit de doos? Maak hem dit jaar stijlvol in wit glas",
+      "tekst": "Glazen kerstballen van Mica",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d7b28ea01c2c052cc68f8476a2706d11.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 5583,
+      "kliks": 21,
+      "kosten": 1.92,
+      "conv": 0,
+      "interesse": 11,
+      "besluit": 0
+     },
+     {
+      "id": "28337413",
+      "titel": "Een lamp zonder snoer: zacht licht op elke plek die je wilt",
+      "tekst": "Gouden draadloze tafellamp Milou",
+      "beeld": "http://imghosts.com/t/2026-11/997116/3fa3d169ef6fa2b2ea75486943a7751f.jpeg",
+      "cta": "Ontdek meer",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 7435,
+      "kliks": 51,
+      "kosten": 4.68,
+      "conv": 0,
+      "interesse": 26,
+      "besluit": 0
+     },
+     {
+      "id": "28337500",
+      "titel": "Geen stopcontact nodig: deze gouden lamp geeft overal sfeer",
+      "tekst": "Oplaadbaar, ook buiten te gebruiken",
+      "beeld": "http://imghosts.com/t/2026-11/997116/175c5cdb28ead723613badda1756c894.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 636,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337501",
+      "titel": "Planten naar binnen? Geef ze een strakke antraciet pot",
+      "tekst": "Doppio, van gerecycled plastic",
+      "beeld": "http://imghosts.com/t/2026-11/997116/5ff430d248d7f915f0e21428fed37ed3.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6875,
+      "kliks": 27,
+      "kosten": 2.44,
+      "conv": 0,
+      "interesse": 8,
+      "besluit": 0
+     },
+     {
+      "id": "28337502",
+      "titel": "Strak en rustig groen: de bloempot die overal bij past",
+      "tekst": "Modern design in antraciet",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d20d5ac9ee0f36e93920f83d57a92487.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 53495,
+      "kliks": 54,
+      "kosten": 4.76,
+      "conv": 0,
+      "interesse": 17,
+      "besluit": 1
+     },
+     {
+      "id": "28337503",
+      "titel": "Liever planten dan bloemen? Deze orchideeën bloeien langer",
+      "tekst": "Roze orchideeën met een succulent",
+      "beeld": "http://imghosts.com/t/2026-11/997116/80ea49b019007315f59ba522eb851420.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6122,
+      "kliks": 13,
+      "kosten": 1.08,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337504",
+      "titel": "Een cadeau dat blijft bloeien: roze orchideeën in een mooie set",
+      "tekst": "Plantenset Gradience van Kolibri",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9905369db453c13dfd5aaad8c0c2a775.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 7928,
+      "kliks": 16,
+      "kosten": 1.4,
+      "conv": 0,
+      "interesse": 10,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534207",
+    "naam": "SHOP-LUS MGID 2026-11-04 B | cadeau en keuken | 5 producten | NL native",
+    "vert": 90184,
+    "kliks": 164,
+    "kosten": 16.32,
+    "conv": 0,
+    "interesse": 46,
+    "besluit": 3,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337414",
+      "titel": "Ontbijt op bed met stijl: een grote rieten serveertray",
+      "tekst": "Mooi als dienblad en als decoratie",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b430116aebece46cd2845c2b5ada7d51.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2508,
+      "kliks": 8,
+      "kosten": 0.8,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28337429",
+      "titel": "Je reizen aan de muur: een houten wereldkaart om zelf te maken",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7fa0c7bb4466e18a86e07bdb93cc7048.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1184,
+      "kliks": 4,
+      "kosten": 0.44,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337430",
+      "titel": "Even genieten bij de kraan: vegan handzeep met hout en salie",
+      "tekst": "Luxe dispenser voor op het aanrecht",
+      "beeld": "http://imghosts.com/t/2026-11/997116/db3227c6fd112d6419cdd5e35d860291.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3939,
+      "kliks": 16,
+      "kosten": 1.64,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 1
+     },
+     {
+      "id": "28337431",
+      "titel": "Rust op je bureau: een houten penhouder in Japans design",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9a2d3a085d6d0bbf69b4b4c96a0f8ea4.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 26024,
+      "kliks": 13,
+      "kosten": 1.12,
+      "conv": 0,
+      "interesse": 7,
+      "besluit": 1
+     },
+     {
+      "id": "28337432",
+      "titel": "Een tas met karakter: handgeweven raffia die jaren meegaat",
+      "tekst": "Herbruikbare tote van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9301f32fee6bc0e2666b00f75fafae01.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 8340,
+      "kliks": 14,
+      "kosten": 1.48,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 1
+     },
+     {
+      "id": "28337522",
+      "titel": "Gasten over de vloer? Serveer alles op deze rieten tray",
+      "tekst": "Handgemaakt riet van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/0fec4fb95ff5285bcf129d4cd6cc5fc2.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 13572,
+      "kliks": 11,
+      "kosten": 1.16,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337525",
+      "titel": "Cadeau voor elke reisliefhebber: de wereld in hout",
+      "tekst": "Houten wereldkaart als blikvanger",
+      "beeld": "http://imghosts.com/t/2026-11/997116/28172a086c5016ff1693316ebcc5d910.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 11802,
+      "kliks": 30,
+      "kosten": 2.84,
+      "conv": 0,
+      "interesse": 10,
+      "besluit": 0
+     },
+     {
+      "id": "28337528",
+      "titel": "Klein luxe cadeau: handzeep met de geur van hout en salie",
+      "tekst": "Vegan, van Housevitamin",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a36c39d97a85582230f5e96139607a89.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6743,
+      "kliks": 31,
+      "kosten": 3.36,
+      "conv": 0,
+      "interesse": 9,
+      "besluit": 0
+     },
+     {
+      "id": "28337530",
+      "titel": "Pennen overal? Deze houten penhouder ruimt je bureau op",
+      "tekst": "Strak Japans design in hout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/104604dfa27e8de988a48df37ad5c1f7.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 4940,
+      "kliks": 9,
+      "kosten": 0.88,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337531",
+      "titel": "Boodschappen met stijl: deze raffia tas is met de hand geweven",
+      "tekst": "Voor markt, stad en strand",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b91f351cfdb68260407a4cd9426f9bdc.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 4291,
+      "kliks": 7,
+      "kosten": 0.8,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28351656",
+      "titel": "Elke markt, elk terras: een handgeweven raffia tas die alles draagt",
+      "tekst": "Met de hand gemaakt, van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/f961574211e705e26cd22e9fd42f5658.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 5120,
+      "kliks": 15,
+      "kosten": 1.28,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28351657",
+      "titel": "Strak en groen in huis: een antraciet bloempot van gerecycled plastic",
+      "tekst": "Doppio, modern en licht",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d4c4640cada033861d55bb48d2e41873.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1721,
+      "kliks": 6,
+      "kosten": 0.52,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534584",
+    "naam": "SHOP-LUS MGID 2026-11-04 C | bouwen en puzzelen | 5 producten | NL native",
+    "vert": 100907,
+    "kliks": 160,
+    "kosten": 18.22,
+    "conv": 0,
+    "interesse": 58,
+    "besluit": 1,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.12,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28340661",
+      "titel": "Bouw zelf een houten diepzeeverkenner die echt beweegt",
+      "tekst": "Cadeau voor knutselaars en puzzelaars",
+      "beeld": "http://imghosts.com/t/2026-11/997116/28fe51e9a3762875cb027e66101c4474.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 73162,
+      "kliks": 83,
+      "kosten": 10.5,
+      "conv": 0,
+      "interesse": 31,
+      "besluit": 0
+     },
+     {
+      "id": "28340662",
+      "titel": "Een muziekdoos die je zelf bouwt: het circus speelt echt",
+      "tekst": "Houten bouwpakket voor tieners",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b48ecd2492334131394308039018a215.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004436271105&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2808,
+      "kliks": 6,
+      "kosten": 0.72,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28340663",
+      "titel": "Draai aan de slinger en de jungle komt tot leven",
+      "tekst": "Houten muziekdoos om zelf te bouwen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/09a7457dd6cf79a999874f07bdc70a7e.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004434321409&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1772,
+      "kliks": 3,
+      "kosten": 0.24,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28340664",
+      "titel": "Een houten schildpad om samen in elkaar te zetten",
+      "tekst": "Eco-vriendelijk berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/76bc054f6ac91e933c14d96abdba45f4.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004320108545&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 572,
+      "kliks": 3,
+      "kosten": 0.32,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28340665",
+      "titel": "Bouw een piepklein bakkerijtje met echte details",
+      "tekst": "Miniatuurhuisje om zelf te maken",
+      "beeld": "http://imghosts.com/t/2026-11/997116/56e6d00d4e33a3ecefc080fe7e6dbaea.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004478328833&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 4940,
+      "kliks": 12,
+      "kosten": 1.24,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28340666",
+      "titel": "Sinterklaas al geregeld? Een houten bouwpakket dat beweegt",
+      "tekst": "Diepzeeverkenner om zelf te bouwen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/e35d2bfca55e615d6003272c82eb8cb1.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004477607938&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 235,
+      "kliks": 3,
+      "kosten": 0.32,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28340667",
+      "titel": "Cadeau met een melodie: bouw je eigen houten muziekdoos",
+      "tekst": "Circus Troupe, van berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/5a08819c517f507304cb5cebc064ff08.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004436271105&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3234,
+      "kliks": 7,
+      "kosten": 0.6,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28340668",
+      "titel": "Uren puzzelplezier: een jungle muziekdoos van hout",
+      "tekst": "Leuk voor in de schoen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/37cc1da82d1e4fa10d1993cfc2907825.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004434321409&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3883,
+      "kliks": 4,
+      "kosten": 0.4,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28340669",
+      "titel": "Schermvrij spelen: een houten bouwpuzzel voor de hele familie",
+      "tekst": "Schildpad van berkenhout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/cd521ddd3a3fdbee82897288e8863485.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004320108545&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6038,
+      "kliks": 20,
+      "kosten": 2.04,
+      "conv": 0,
+      "interesse": 10,
+      "besluit": 1
+     },
+     {
+      "id": "28340677",
+      "titel": "Het perfecte knutselcadeau: een eigen miniatuur bakkerij",
+      "tekst": "Voor jonge en volwassen knutselaars",
+      "beeld": "http://imghosts.com/t/2026-11/997116/f49011e36bab011f55c9f4ed532ad858.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004478328833&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3885,
+      "kliks": 17,
+      "kosten": 1.64,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28351658",
+      "titel": "Even niets moeten: bouw zelf een houten muziekdoos die echt speelt",
+      "tekst": "Houten bouwpakket met echt speelwerk",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b5757cc9f98d23bfbf39a1c0e5f6469a.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-c&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174004436271105&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 378,
+      "kliks": 2,
+      "kosten": 0.2,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534692",
+    "naam": "TODAYIN CURACAO NL DE US MGID | native | 4nov | CPA = aanmelding",
+    "vert": 11598,
+    "kliks": 27,
+    "kosten": 0.81,
+    "conv": 0,
+    "interesse": 25,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid content native",
+     "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de",
+        "us",
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28341641",
+      "titel": "Cruising To Curaçao? Pick Your Ship And Get Your Day Plan",
+      "tekst": "On the morning you dock: what's on, how busy it is, sea and weather.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/283e1686f0e2d1510a79a3eac6ed4bdb.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 950,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341643",
+      "titel": "Your Ship Docks In Willemstad. Here Is What's On That Day",
+      "tekst": "Pick your ship. Free day plan for Curaçao in your inbox.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9fb4479cc9ba190048f91dc99c3103b2.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 1843,
+      "kliks": 5,
+      "kosten": 0.15,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341665",
+      "titel": "Naar Curaçao? Weet elke dag wat er op het eiland te doen is",
+      "tekst": "Elke ochtend nieuws, weer, zee en uitgaan in je mail. Gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7877084e720ee87f5ad20d4e538f2392.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 2173,
+      "kliks": 7,
+      "kosten": 0.21,
+      "conv": 0,
+      "interesse": 7,
+      "besluit": 0
+     },
+     {
+      "id": "28341666",
+      "titel": "Nach Curaçao? Jeden Morgen wissen, was auf der Insel los ist",
+      "tekst": "Wetter, Meer, Nachrichten und Tipps. Kostenlos per Mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a36ef9619284312172b32f1088571a6.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 971,
+      "kliks": 5,
+      "kosten": 0.15,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28341668",
+      "titel": "Going To Curaçao? Know What's On Before You Land",
+      "tekst": "Every morning: news, weather, sea and what to do. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/facb752427e9f95873e9c10a9b27814f.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=en&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 744,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28341670",
+      "titel": "Curaçao vandaag: wat er speelt, het weer en waar het rustig is",
+      "tekst": "Voor wie gaat of er al is. Elke ochtend gratis in je mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a83371d20c7d2f960b97f5f7a320470.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 651,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28341672",
+      "titel": "Curaçao heute: Wetter, Meer und was los ist",
+      "tekst": "Für alle, die hinfliegen oder schon dort sind. Jeden Morgen gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/e697f9703a944a0358961474129876ac.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 509,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     },
+     {
+      "id": "28341673",
+      "titel": "Curaçao Shore Day: What To Do Near The Cruise Pier",
+      "tekst": "Pick your ship and get that day's plan by email. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a839f0174bb714e20a21cab387366130.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 670,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28343073",
+      "titel": "Welke Curaçao past bij jou? Doe de test in 3 tikken",
+      "tekst": "Krijg gratis je eigen reisplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/ecf9cb0b747e226b197db91aedc42bad.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 940,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     },
+     {
+      "id": "28343085",
+      "titel": "Welches Curaçao passt zu dir? Teste es in 3 Klicks",
+      "tekst": "Kostenlos: dein eigener Reiseplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a47269f8cfeecf09ab5eac80a6f9925d.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 2147,
+      "kliks": 3,
+      "kosten": 0.09,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     }
+    ]
+   }
+  ],
+  "2026-11-06": [
+   {
+    "id": "12534206",
+    "naam": "SHOP-LUS MGID 2026-11-04 A | wonen en sfeer | 5 producten | NL native",
+    "vert": 25300,
+    "kliks": 38,
+    "kosten": 3.26,
+    "conv": 0,
+    "interesse": 22,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337409",
+      "titel": "Donkere avonden, warm licht: deze zwarte lantaarn maakt het knus",
+      "tekst": "Strak zwart metaal voor je kaarsen",
+      "beeld": "http://imghosts.com/t/2026-11/997116/8f59f58017156005712c4f8e38d6ac77.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2711,
+      "kliks": 3,
+      "kosten": 0.24,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28337410",
+      "titel": "Kaarslicht maakt het thuis. Zo haal je sfeer in huis",
+      "tekst": "Moderne lantaarn van Mica Decorations",
+      "beeld": "http://imghosts.com/t/2026-11/997116/6d65b65cb3fdde2e2a066c18c199bd6b.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003419430913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 22,
+      "kliks": 2,
+      "kosten": 0.2,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337411",
+      "titel": "Witte glazen kerstballen voor een rustige, chique kerstboom",
+      "tekst": "Een complete set voor de hele boom",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7207d6cb24a94c2f2b0586e63e2fd5c9.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1710,
+      "kliks": 10,
+      "kosten": 0.8,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28337412",
+      "titel": "Boom al uit de doos? Maak hem dit jaar stijlvol in wit glas",
+      "tekst": "Glazen kerstballen van Mica",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d7b28ea01c2c052cc68f8476a2706d11.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003397361666&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1098,
+      "kliks": 2,
+      "kosten": 0.16,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337413",
+      "titel": "Een lamp zonder snoer: zacht licht op elke plek die je wilt",
+      "tekst": "Gouden draadloze tafellamp Milou",
+      "beeld": "http://imghosts.com/t/2026-11/997116/3fa3d169ef6fa2b2ea75486943a7751f.jpeg",
+      "cta": "Ontdek meer",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 6932,
+      "kliks": 15,
+      "kosten": 1.384,
+      "conv": 0,
+      "interesse": 10,
+      "besluit": 0
+     },
+     {
+      "id": "28337500",
+      "titel": "Geen stopcontact nodig: deze gouden lamp geeft overal sfeer",
+      "tekst": "Oplaadbaar, ook buiten te gebruiken",
+      "beeld": "http://imghosts.com/t/2026-11/997116/175c5cdb28ead723613badda1756c894.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173959243857921&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 28,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337501",
+      "titel": "Planten naar binnen? Geef ze een strakke antraciet pot",
+      "tekst": "Doppio, van gerecycled plastic",
+      "beeld": "http://imghosts.com/t/2026-11/997116/5ff430d248d7f915f0e21428fed37ed3.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2101,
+      "kliks": 3,
+      "kosten": 0.24,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337502",
+      "titel": "Strak en rustig groen: de bloempot die overal bij past",
+      "tekst": "Modern design in antraciet",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d20d5ac9ee0f36e93920f83d57a92487.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 7125,
+      "kliks": 2,
+      "kosten": 0.16,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337503",
+      "titel": "Liever planten dan bloemen? Deze orchideeën bloeien langer",
+      "tekst": "Roze orchideeën met een succulent",
+      "beeld": "http://imghosts.com/t/2026-11/997116/80ea49b019007315f59ba522eb851420.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2934,
+      "kliks": 1,
+      "kosten": 0.08,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337504",
+      "titel": "Een cadeau dat blijft bloeien: roze orchideeën in een mooie set",
+      "tekst": "Plantenset Gradience van Kolibri",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9905369db453c13dfd5aaad8c0c2a775.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-a&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958884671489&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 639,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534207",
+    "naam": "SHOP-LUS MGID 2026-11-04 B | cadeau en keuken | 5 producten | NL native",
+    "vert": 30919,
+    "kliks": 50,
+    "kosten": 4.81,
+    "conv": 0,
+    "interesse": 26,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid product native",
+     "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+     "boden": [
+      {
+       "bod": 0.08,
+       "landen": [
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28337414",
+      "titel": "Ontbijt op bed met stijl: een grote rieten serveertray",
+      "tekst": "Mooi als dienblad en als decoratie",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b430116aebece46cd2845c2b5ada7d51.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 593,
+      "kliks": 4,
+      "kosten": 0.4,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337429",
+      "titel": "Je reizen aan de muur: een houten wereldkaart om zelf te maken",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7fa0c7bb4466e18a86e07bdb93cc7048.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 224,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337430",
+      "titel": "Even genieten bij de kraan: vegan handzeep met hout en salie",
+      "tekst": "Luxe dispenser voor op het aanrecht",
+      "beeld": "http://imghosts.com/t/2026-11/997116/db3227c6fd112d6419cdd5e35d860291.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 458,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337431",
+      "titel": "Rust op je bureau: een houten penhouder in Japans design",
+      "tekst": "Van Wooden Amsterdam",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9a2d3a085d6d0bbf69b4b4c96a0f8ea4.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1669,
+      "kliks": 11,
+      "kosten": 1.12,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28337432",
+      "titel": "Een tas met karakter: handgeweven raffia die jaren meegaat",
+      "tekst": "Herbruikbare tote van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9301f32fee6bc0e2666b00f75fafae01.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 4256,
+      "kliks": 6,
+      "kosten": 0.6,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28337522",
+      "titel": "Gasten over de vloer? Serveer alles op deze rieten tray",
+      "tekst": "Handgemaakt riet van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/0fec4fb95ff5285bcf129d4cd6cc5fc2.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958188548097&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 3,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28337525",
+      "titel": "Cadeau voor elke reisliefhebber: de wereld in hout",
+      "tekst": "Houten wereldkaart als blikvanger",
+      "beeld": "http://imghosts.com/t/2026-11/997116/28172a086c5016ff1693316ebcc5d910.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957649006593&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 5093,
+      "kliks": 17,
+      "kosten": 1.72,
+      "conv": 0,
+      "interesse": 5,
+      "besluit": 0
+     },
+     {
+      "id": "28337528",
+      "titel": "Klein luxe cadeau: handzeep met de geur van hout en salie",
+      "tekst": "Vegan, van Housevitamin",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a36c39d97a85582230f5e96139607a89.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174002184486913&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 14841,
+      "kliks": 8,
+      "kosten": 0.64,
+      "conv": 0,
+      "interesse": 6,
+      "besluit": 0
+     },
+     {
+      "id": "28337530",
+      "titel": "Pennen overal? Deze houten penhouder ruimt je bureau op",
+      "tekst": "Strak Japans design in hout",
+      "beeld": "http://imghosts.com/t/2026-11/997116/104604dfa27e8de988a48df37ad5c1f7.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173957639913473&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1131,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28337531",
+      "titel": "Boodschappen met stijl: deze raffia tas is met de hand geweven",
+      "tekst": "Voor markt, stad en strand",
+      "beeld": "http://imghosts.com/t/2026-11/997116/b91f351cfdb68260407a4cd9426f9bdc.jpeg",
+      "cta": "Shop nu",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 1,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28351656",
+      "titel": "Elke markt, elk terras: een handgeweven raffia tas die alles draagt",
+      "tekst": "Met de hand gemaakt, van Soeji",
+      "beeld": "http://imghosts.com/t/2026-11/997116/f961574211e705e26cd22e9fd42f5658.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4173958158581761&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 2434,
+      "kliks": 3,
+      "kosten": 0.208,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     },
+     {
+      "id": "28351657",
+      "titel": "Strak en groen in huis: een antraciet bloempot van gerecycled plastic",
+      "tekst": "Doppio, modern en licht",
+      "beeld": "http://imghosts.com/t/2026-11/997116/d4c4640cada033861d55bb48d2e41873.jpeg",
+      "cta": "Bekijk het",
+      "landing": "https://keuzehulp.best/shop?utm_source=mgid&utm_medium=native&utm_campaign=mg-b&clickid={click_id}&zoneid={widget_id}&creativeid={teaser_id}&campaignid={campaign_id}&p=oc_4174003462815745&arm=d&src={source}&srcid={source_id}&cat={category_id}&cpc={click_price}&geo={geo_region}",
+      "vert": 216,
+      "kliks": 1,
+      "kosten": 0.12,
+      "conv": 0,
+      "interesse": 2,
+      "besluit": 0
+     }
+    ]
+   },
+   {
+    "id": "12534692",
+    "naam": "TODAYIN CURACAO NL DE US MGID | native | 4nov | CPA = aanmelding",
+    "vert": 4022,
+    "kliks": 15,
+    "kosten": 0.45,
+    "conv": 0,
+    "interesse": 10,
+    "besluit": 0,
+    "munt": "EUR",
+    "instellingen": {
+     "formaat": "mgid content native",
+     "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+     "boden": [
+      {
+       "bod": 0.03,
+       "landen": [
+        "de",
+        "us",
+        "nl"
+       ]
+      }
+     ]
+    },
+    "creatives": [
+     {
+      "id": "28341641",
+      "titel": "Cruising To Curaçao? Pick Your Ship And Get Your Day Plan",
+      "tekst": "On the morning you dock: what's on, how busy it is, sea and weather.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/283e1686f0e2d1510a79a3eac6ed4bdb.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 163,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341643",
+      "titel": "Your Ship Docks In Willemstad. Here Is What's On That Day",
+      "tekst": "Pick your ship. Free day plan for Curaçao in your inbox.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/9fb4479cc9ba190048f91dc99c3103b2.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 897,
+      "kliks": 6,
+      "kosten": 0.18,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341665",
+      "titel": "Naar Curaçao? Weet elke dag wat er op het eiland te doen is",
+      "tekst": "Elke ochtend nieuws, weer, zee en uitgaan in je mail. Gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/7877084e720ee87f5ad20d4e538f2392.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 631,
+      "kliks": 4,
+      "kosten": 0.12,
+      "conv": 0,
+      "interesse": 4,
+      "besluit": 0
+     },
+     {
+      "id": "28341666",
+      "titel": "Nach Curaçao? Jeden Morgen wissen, was auf der Insel los ist",
+      "tekst": "Wetter, Meer, Nachrichten und Tipps. Kostenlos per Mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a36ef9619284312172b32f1088571a6.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 369,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341668",
+      "titel": "Going To Curaçao? Know What's On Before You Land",
+      "tekst": "Every morning: news, weather, sea and what to do. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/facb752427e9f95873e9c10a9b27814f.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=en&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 236,
+      "kliks": 2,
+      "kosten": 0.06,
+      "conv": 0,
+      "interesse": 3,
+      "besluit": 0
+     },
+     {
+      "id": "28341670",
+      "titel": "Curaçao vandaag: wat er speelt, het weer en waar het rustig is",
+      "tekst": "Voor wie gaat of er al is. Elke ochtend gratis in je mail.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/4a83371d20c7d2f960b97f5f7a320470.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 84,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28341672",
+      "titel": "Curaçao heute: Wetter, Meer und was los ist",
+      "tekst": "Für alle, die hinfliegen oder schon dort sind. Jeden Morgen gratis.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/e697f9703a944a0358961474129876ac.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 149,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28341673",
+      "titel": "Curaçao Shore Day: What To Do Near The Cruise Pier",
+      "tekst": "Pick your ship and get that day's plan by email. Free.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a839f0174bb714e20a21cab387366130.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/curacao/en/cruise?cruise=1&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 237,
+      "kliks": 0,
+      "kosten": 0,
+      "conv": 0,
+      "interesse": 0,
+      "besluit": 0
+     },
+     {
+      "id": "28343073",
+      "titel": "Welke Curaçao past bij jou? Doe de test in 3 tikken",
+      "tekst": "Krijg gratis je eigen reisplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/ecf9cb0b747e226b197db91aedc42bad.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=nl&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 272,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     },
+     {
+      "id": "28343085",
+      "titel": "Welches Curaçao passt zu dir? Teste es in 3 Klicks",
+      "tekst": "Kostenlos: dein eigener Reiseplan als PDF.",
+      "beeld": "http://imghosts.com/t/2026-11/997116/a47269f8cfeecf09ab5eac80a6f9925d.jpeg",
+      "cta": "Learn more",
+      "landing": "https://todayin.email/?lang=de&c=mgid&s={click_id}&z={widget_id}&b={teaser_id}&cid={campaign_id}",
+      "vert": 984,
+      "kliks": 1,
+      "kosten": 0.03,
+      "conv": 0,
+      "interesse": 1,
+      "besluit": 0
+     }
+    ]
+   }
+  ]
+ }
+}

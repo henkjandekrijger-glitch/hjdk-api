@@ -264,17 +264,21 @@ export default async function handler(req, res) {
       if (q('inhaal')) { // historie inhalen (lib/cmcamp.js inhaal): cron elke 5 minuten, starten op de beschermde host met &van=&tot=
         const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
         if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
-        if (q('stand')) return res.status(200).json(await kv.get('cm:inhaal').catch(() => null) || { ok: true, leeg: true });
-        return res.status(200).json(await C.inhaal({ van: q('van'), tot: q('tot') }));
+        const alleen = q('alleen') || ''; // één netwerk (bijv. mondiad) met eigen toestand cm:inhaal:<net>; de gewone cm:inhaal blijft onaangeroerd
+        if (alleen && !C.NETTEN.includes(String(alleen).toLowerCase())) return res.status(400).json({ ok: false, fout: 'alleen = ' + C.NETTEN.join(' | ') });
+        if (q('stand')) return res.status(200).json(await kv.get(alleen ? 'cm:inhaal:' + String(alleen).toLowerCase() : 'cm:inhaal').catch(() => null) || { ok: true, leeg: true });
+        if (alleen || (q('van') && q('tot'))) return res.status(200).json(await C.inhaal({ van: q('van'), tot: q('tot'), alleen }));
+        return res.status(200).json(await C.inhaalCron()); // cron: eerst de gewone inhaal, daarna de netwerk-inhaal die nog loopt
       }
       if (q('run') === '1') {
         const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
         if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
-        const cr = await C.ronde({ dag: q('dag') });
+        const cr = await C.ronde({ dag: q('dag'), alleen: q('alleen') || undefined });
         /* het geheugen loopt mee met deze cron (lib/paspoort.js): alle creatives, posts, video's en mails opnieuw inladen en oordelen */
-        if (isCron) cr.geheugen = await import('../lib/paspoort.js').then(P => P.ronde({})).then(g => ({ stukken: g.stukken, nieuw: g.nieuw, raak: g.raak, mis: g.mis, fouten: g.fouten })).catch(e => ({ fout: String(e && e.message || e).slice(0, 160) }));
+        if (isCron && !q('alleen')) cr.geheugen = await import('../lib/paspoort.js').then(P => P.ronde({})).then(g => ({ stukken: g.stukken, nieuw: g.nieuw, raak: g.raak, mis: g.mis, fouten: g.fouten })).catch(e => ({ fout: String(e && e.message || e).slice(0, 160) }));
         return res.status(200).json(cr);
       }
+      if (q('leg')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); return res.status(200).json(await C.leg(q('leg'))); } // netwerk met de sleutel elders: data/camp-historie/<net>.json inleggen
       if (q('labelwerk') === '1') return res.status(200).json(await C.labelWerk(Number(q('n')) || 80));
       if (q('labels')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); let o = null; try { o = JSON.parse(q('labels')); } catch (e) {} return res.status(200).json(await C.zetLabels(o)); }
       if (q('campagne')) return res.status(200).json(await C.campagne(q('campagne'), Number(q('dagen')) || 30));
