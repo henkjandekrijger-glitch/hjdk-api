@@ -9,13 +9,14 @@ const kv = { get: async () => null, set: async () => {}, raw: async a => { const
 const ok = (c, n) => { if (!c) { console.log('FOUT', n); process.exitCode = 1; } };
 const nu = Date.parse('2026-11-27T20:00:00Z'), HJ = { henkjan: true };
 const live = [['Nexy', 'https://nexy.works'], ['Kadoly', 'https://kadoly.com'], ['curacao.day', 'https://curacao.day'], ['GoonFree', 'https://play.google.com/store/apps/details?id=x']].map(([naam, url]) => ({ naam, url, wat: 'Een regel over ' + naam + ' die lang genoeg is.' }));
-const C = { kop: 'You and AI is live and Kadoly opens a new collection this week.', updates: [{ project: 'You and AI', tekst: 'Went live with a morning overview of AI news.', link: 'https://youandai.now' }, { project: 'Kadoly', tekst: 'A new collection is on the front page now.', link: 'https://kadoly.com' }], live };
+const C = { kop: 'You and AI is live and Kadoly opens a new collection this week.', tekst: 'This week AdsFair launched a new daily service and made its shop and guides easier to find. The full list of what runs now stands below, and this page says every week what changed.', live };
 
 // 1. controle
 ok(A.check(C, null, nu).ok && A.check(C, null, nu).v.week === '2026-W48', 'concept goed, week vanzelf');
 ok(!A.check(Object.assign({}, C, { kop: 'Kadoly — nieuw deze week, echt waar' }), null, nu).ok, 'gedachtestreepje geweigerd');
-ok(/intern woord/.test(A.check(Object.assign({}, C, { updates: [C.updates[0], { project: 'Kadoly', tekst: 'Clickmind meet nu elke klik op de shop.', link: 'https://kadoly.com' }] }), null, nu).fout), 'intern woord geweigerd');
-ok(!A.check(Object.assign({}, C, { updates: [C.updates[0], { project: 'Kadoly', tekst: 'Zonder link maar lang genoeg', link: 'http://kadoly.com' }] }), null, nu).ok, 'alleen https');
+ok(/intern woord/.test(A.check(Object.assign({}, C, { tekst: C.tekst + ' Clickmind measures every click now on all of our sites.' }), null, nu).fout), 'intern woord geweigerd');
+ok(!A.check(Object.assign({}, C, { updates: [{ project: 'Kadoly', tekst: 'Regels per site mogen niet meer', link: 'https://kadoly.com' }] }), null, nu).ok, 'geen regels per site meer');
+ok(!A.check(Object.assign({}, C, { live: [live[0], live[1], { naam: 'X', wat: 'Een regel die lang genoeg is voor de lijst.', url: 'http://x.com' }] }), null, nu).ok, 'alleen https');
 ok(!A.check(Object.assign({}, C, { live: undefined }), null, nu).ok && A.check(Object.assign({}, C, { live: undefined }), { live }, nu).ok, 'zonder live: de lijst van vorige week');
 
 // 2. zonder goedgekeurde week: nog niets live, concept wordt een vraag met voorbeeld in zijn lijst
@@ -42,7 +43,7 @@ const L = await A.leesLive(kv); s = await T.leesTaken(kv, nu); x = s.taken.find(
 ok(L && L.week === '2026-W48' && L.besluit && !(await A.leesConcept(kv)) && x.status === 'klaar' && /Live op adsfair\.xyz/.test(x.resultaat), 'Ja: live, besluit erbij, concept weg, taak klaar');
 ok(T.jaStand(s, L.besluit).telt === true, 'bewijs van zijn ja telt');
 ok(s.taken.some(y => y.project === 'adsfair' && y.status === 'wacht' && y.tekst.includes(A.OMZET_DPL)), 'eerste Ja: taak om adsfair.xyz om te zetten');
-const p = A.pagina(L, {}); ok(/Week 48 · 23 to 29 November 2026/.test(p) && /id="live"/.test(p) && p.includes('curacao.day') && p.includes('Google Play →') && !/[–—]/.test(p) && !/todayin/i.test(p), 'pagina: week, overzicht, geen streepjes of oude namen');
+const p = A.pagina(L, {}); ok(/Week 48 · 23 to 29 November 2026/.test(p) && p.includes('<p class="p">This week AdsFair launched') && /id="live"/.test(p) && p.includes('curacao.day') && p.includes('Google Play →') && !/[–—]/.test(p) && !/todayin/i.test(p), 'pagina: week, overzicht, geen streepjes of oude namen');
 ok(/"@type":"FAQPage"/.test(p) && /canonical/.test(p) && /track\.js/.test(p), 'pagina: json-ld, canonical, meting');
 ok(/## Live products/.test(A.llms(L)) && A.updatesPagina({ [L.week]: L }, L.live).includes('Weekly updates'), 'llms en archief');
 
