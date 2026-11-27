@@ -72,7 +72,7 @@ Elke link naar Amazon gaat via /go/<ASIN>. Die redirect wordt geteld per boek en
 - PDF-verkoop via Paddle ($9). De knop staat uit tot PADDLE_API_KEY in Vercel (hjdk-api) staat. Mail aan kopers via Resend: de sleutel staat nog niet in hjdk-api.
 
 ### Pinterest
-- Account kadolyshop (Kadoly), via Zernio. Zernio account-id 6afb8a5d86e8bb18f844fc95.
+- Account kadolyshop (Kadoly), via Zernio. Zernio account-id 6afb8a5d86e8bb18f844fc95. Sinds 27 nov 2026 met schakelaar (Henkjan: geen boekpins meer op het Kadoly-account): lees vóór elke pinronde `op=pinplan`; staat daar `boekpinsUit: true`, plaats dan niets en kies geen ander account. Stand en omzetten: `/api/bs?op=pinschakel` (beschermde host). De boeken hebben nog geen eigen Pinterest-account.
 - Borden (lib/bspin.js BORD): we (white elephant), sok (stocking stuffers), lc (Lasting Change), bijbel.
 - 17 haken (lib/bspin.js HAKEN). Elke haak is een invalshoek met een eigen beeld van 1000x1500 (/pin/<ASIN>-<haak>.png).
 - Lerend: pinPlan kiest op kliks plus 0,3 keer saves per pin, met wat toeval voor nieuwe haken.
@@ -246,7 +246,7 @@ Plak dit als eerste bericht:
 
 ## Logboek (nieuwste bovenaan)
 
-- 2026-11-27, taak 4qiye9: schakelaar voor de boekenpinronde gebouwd. `/api/bs?op=pinschakel&uit=1` (beschermde host) zet kv bs:pinuit; dan geeft `op=pinplan` geen boekpins meer voor het Kadoly-account (account 6afb8a5d86e8bb18f844fc95), `uit=0` zet het terug, standaard uit (gedrag ongewijzigd). Stand: `op=pinstand` en `op=pinplan` tonen `boekpinsUit`. Lijst voor Henkjans ja: `/api/bs?op=pinlijst`. De schakelaar is niet omgezet; de boekenronde moet bij `boekpinsUit` niets plaatsen of een ander account kiezen.
+- 2026-11-27, oppakker taak 4qiye9 (Henkjan 27 nov, 'voer alles door': geen Engelse boekpins meer op het Kadoly-Pinterestaccount): schakelaar voor de boekenpinronde. `/api/bs?op=pinschakel&uit=1` (beschermde host) zet kv bs:pinuit; dan geeft `op=pinplan` een lege lijst met `boekpinsUit: true` en een reden. `uit=0` zet het terug, zonder `uit=` lees je alleen de stand. De ronde die pint (externe taak die `op=pinplan` leest): staat `boekpinsUit` op true, plaats dan niets op Pinterest en kies geen ander account; de boeken hebben geen eigen Pinterest-account tot Henkjan er een koppelt (dan `ACCOUNT` en `BORD` in lib/bspin.js aanpassen en de schakelaar terugzetten). Stand sinds 22 nov: 26 boekpins, 4 uitgaande kliks, 12 saves, 95 vertoningen. Lijst voor Henkjans ja op weghalen: `/api/bs?op=pinlijst`; er is niets verwijderd.
 
 - 2026-11-23, content-Codex: Henkjan geeft met 'yes' akkoord op de getoonde Amazonknoppen. Uitrol van precies die versie via PR #11; code en bestaande /go-meting blijven gelijk aan de gecontroleerde preview. Productie en beide gezondheidscontroles worden na uitrol gecontroleerd; geen gemeten klik- of verkoopwinst geclaimd.
 
