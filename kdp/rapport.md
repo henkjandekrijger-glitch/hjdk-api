@@ -128,7 +128,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 
 ## ROI en ROAS (Henkjan 16 nov: "HOu mn ROI in de gaten en de ROAS !!")
 
-- ROAS = ad-omzet / ad-kosten (ACOS = 1 / ROAS). Break-even ROAS = prijs / royalty: daaronder kost elke ad-verkoop meer dan hij oplevert. Doel-ROAS (margeregel, ads hoogstens 40% van de royalty) = 2,5 x break-even.
+- ROAS = ad-omzet / ad-kosten (ACOS = 1 / ROAS). Break-even ROAS = prijs / royalty: daaronder kost elke ad-verkoop meer dan hij oplevert. Doel-ROAS (margeregel, ads hoogstens 40% van de royalty) = 2,5 x break-even. Uitzonderingen tot 31 dec: Teens hoogstens 60% van de Teens-royalty (Henkjan 27 nov: "Ja om ranking nu te verbeteren voor echte kerst aan kopen ."), PIT BOSS hoogstens 55% over 7 dagen (besluit 26 nov).
 - ROI op ads = (royalty uit ad-aankopen - ad-kosten) / ad-kosten; royalty uit ad-aankopen = aantal ad-aankopen x royalty per stuk (tabel hierboven).
 - Max CPC = max ads per verkoop x conversie per klik (nieuw boek zonder reviews ~10%, PIT BOSS in het seizoen 16-23%). Hoger bieden is verlies.
 
