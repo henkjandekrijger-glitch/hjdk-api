@@ -159,6 +159,9 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&a
 const eur = v => '€' + (Number.isInteger(Number(v)) ? String(Number(v)) : Number(v).toFixed(2).replace('.', ','));
 const rows = r => Array.isArray(r) ? r : (r && (r.data || r.items || r.rows)) || [];
 const pidOk = s => { s = String(s || ''); return /^[A-Za-z0-9_-]{3,64}$/.test(s) ? s : ''; };
+// 27 nov: AW-pakketten (lib/awdrop.js AW_PAKKETTEN) als bestemming van organische links (b=<slug>), met het eerste onderdeel als pid voor de meting; hoeken op kadoly.com (h=<slug>)
+const AW_ORG = { 'rookritueel-set': 'AW-RBowl-12', 'edelstenen-set': 'AW-GemPt-27', 'meditatie-set-klankschaal': 'AW-TIB-150' };
+const hoekPad = s => { s = String(s || ''); return /^(rust-ritueel|met-naam-gravure|stalen-sieraden|kinderkamer|kerstverlichting|verlichting-design)$/.test(s) ? s : ''; };
 const pk = pid => String(pid).toLowerCase().replace(/[^a-z0-9]/g, ''); // product-id als tellersleutel
 const digits = (s, n = 14) => String(s || '').replace(/\D/g, '').slice(0, n);
 const isBot = ua => /bot|crawl|spider|slurp|headless|preview|facebookexternalhit|python|curl|wget|monitor|lighthouse|pingdom/i.test(String(ua || ''));
@@ -1747,30 +1750,33 @@ export default async function handler(req, res) {
       res.setHeader('cache-control', 'no-store'); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(ketenTekst(kt)); } return res.status(200).json(kt); }
     if (op === 'orgkort') { /* 24 nov (Henkjan: "Moeten veel korteren clickmind links zijn", "Voer overal door"): korte link go.kadoly.com/o/<5 tekens> voor k, p, c, b van op=org; dezelfde invoer geeft altijd dezelfde code. ?vorm=tekst geeft alleen de link */
       const k = KAN_ORG[url.searchParams.get('k')] ? url.searchParams.get('k') : ''; if (!k) return res.status(400).json({ ok: false, fout: 'k is een van: ' + Object.keys(KAN_ORG).join(', ') });
-      const b = soortVan(String(url.searchParams.get('b') || '')) ? String(url.searchParams.get('b')) : '', p = b ? '' : pidOk(url.searchParams.get('p')), c = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
+      const b0 = String(url.searchParams.get('b') || ''), b = (soortVan(b0) || AW_ORG[b0]) ? b0 : '', p = b ? '' : pidOk(url.searchParams.get('p')), c = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
       const u = p || b ? '' : gidsPad(url.searchParams.get('u')); // 26 nov: u = pad op gids.kadoly.com (uitlegvideo's)
-      const sleutel = 'org:kortv:' + createHash('sha1').update([k, p, c, b].concat(u ? [u] : []).join('|')).digest('hex').slice(0, 20);
+      const h = p || b || u ? '' : hoekPad(url.searchParams.get('h')); // 27 nov: h = hoek op kadoly.com (/categorie/<h>), zoals rust-ritueel
+      const sleutel = 'org:kortv:' + createHash('sha1').update([k, p, c, b].concat(u ? [u] : [], h ? ['h:' + h] : []).join('|')).digest('hex').slice(0, 20);
       let code = await kv.get(sleutel);
       if (!code) { for (let i = 0; i < 6 && !code; i++) { let x = ''; const r = randomBytes(5); for (let j = 0; j < 5; j++) x += ORG_ABC[r[j] % ORG_ABC.length]; if (!/[2-9]/.test(x) || await kv.get('org:kort:' + x)) continue; code = x; }
         if (!code) return res.status(503).json({ ok: false, fout: 'geen vrije code' });
-        await kv.set('org:kort:' + code, u ? { k, p, c, b, u } : { k, p, c, b }, { ex: 400 * 86400 }); await kv.set(sleutel, code, { ex: 400 * 86400 }); }
+        await kv.set('org:kort:' + code, Object.assign({ k, p, c, b }, u ? { u } : {}, h ? { h } : {}), { ex: 400 * 86400 }); await kv.set(sleutel, code, { ex: 400 * 86400 }); }
       const kort = 'https://go.kadoly.com/o/' + code; res.setHeader('cache-control', 'no-store');
       if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(kort); }
-      return res.status(200).json({ ok: true, kort, code, k, p, c, b, u }); }
+      return res.status(200).json({ ok: true, kort, code, k, p, c, b, u, h }); }
     if (op === 'org' && url.searchParams.get('kort')) { /* korte link: /o/<kanaal> = profiel- of biolink van dat kanaal, /o/<code> = opgeslagen k, p, c, b */
       const kc = String(url.searchParams.get('kort')).toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 5);
       const v = KAN_ORG[kc] ? { k: kc, c: 'bio' } : await kv.get('org:kort:' + kc).catch(() => null);
       if (!v) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); res.setHeader('cache-control', 'no-store'); return res.end(); }
-      for (const n of ['k', 'p', 'c', 'b', 'u']) { if (v[n]) url.searchParams.set(n, v[n]); else url.searchParams.delete(n); } }
+      for (const n of ['k', 'p', 'c', 'b', 'u', 'h']) { if (v[n]) url.searchParams.set(n, v[n]); else url.searchParams.delete(n); } }
     if (op === 'org') { // 16 nov (Henkjan: "zorg dat alles via clickmind loopt"): organische kanalen (k = fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb) naar een product via Clickmind, zodat de keten tot betaald per kanaal (org:d:<dag>) en per post (c, org:p:<post>) gemeten wordt. Linkvoorbeelden (Facebook, WhatsApp, Pinterest ...) gaan door zonder klik te tellen, anders geen titel en foto in de post.
       const KAN = KAN_ORG;
-      const k = KAN[url.searchParams.get('k')] ? url.searchParams.get('k') : 'x'; const pk = soortVan(String(url.searchParams.get('b') || '')); const pid = pk ? pk.kern[0] : pidOk(url.searchParams.get('p')); /* b = pakket (21 nov), naar kadoly.com/pakket/<slug>; 22 nov: commentaar stond voor de rest van de regel, waardoor post en ua niet bestonden en elke organische link 'post is not defined' gaf */
+      const k = KAN[url.searchParams.get('k')] ? url.searchParams.get('k') : 'x'; const bq = String(url.searchParams.get('b') || ''), pk = soortVan(bq) || (AW_ORG[bq] ? { slug: bq, kern: [AW_ORG[bq]] } : null); const pid = pk ? pk.kern[0] : pidOk(url.searchParams.get('p')); /* b = pakket (21 nov), naar kadoly.com/pakket/<slug>; 22 nov: commentaar stond voor de rest van de regel, waardoor post en ua niet bestonden en elke organische link 'post is not defined' gaf */
       const post = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); const ua = String(req.headers['user-agent'] || '');
       const tel = veld => laterAf(Promise.all([kv.raw(['HINCRBY', 'org:d:' + DAY(), k + '|' + veld, '1']), kv.raw(['EXPIRE', 'org:d:' + DAY(), String(120 * 86400)])]).catch(() => {}));
       const kaal = 'https://kadoly.com/' + (pk ? 'pakket/' + pk.slug + '?' : pid ? 'product/' + encodeURIComponent(pid) + '?lang=nl&' : '?') + 'utm_source=' + KAN[k] + '&utm_medium=social&utm_campaign=' + encodeURIComponent(post || 'profiel');
       if (/facebookexternalhit|facebot|twitterbot|pinterest|linkedinbot|slackbot|whatsapp|telegrambot|discordbot|redditbot|embedly|skypeuripreview|applebot|bytespider|tiktok/i.test(ua) && !/mobile safari|instagram|fban|fbav/i.test(ua)) { tel('voorbeeld'); res.statusCode = 302; res.setHeader('location', kaal); res.setHeader('cache-control', 'no-store'); return res.end(); }
       const gu = pid ? '' : gidsPad(url.searchParams.get('u'));
       const bot = isBot(ua); if (!bot) { tel(pid ? 'uit' : gu ? 'gids' : 'profiel'); if (post && gu) laterAf(Promise.all([kv.raw(['HINCRBY', 'org:p:' + post, 'gids', '1']), kv.raw(['EXPIRE', 'org:p:' + post, String(180 * 86400)]), kv.raw(['SADD', 'org:posts', post])]).catch(() => {})); if (post && pid) laterAf(Promise.all([kv.raw(['HINCRBY', 'org:p:' + post, pid, '1']), kv.raw(['EXPIRE', 'org:p:' + post, String(180 * 86400)]), kv.raw(['SADD', 'org:posts', post])]).catch(() => {})); }
+      const hk = pid || gu ? '' : hoekPad(url.searchParams.get('h')); // 27 nov: hoek op kadoly.com (Rust & ritueel), klik geteld per kanaal en per post
+      if (hk) { if (!bot) { tel('hoek'); if (post) laterAf(Promise.all([kv.raw(['HINCRBY', 'org:p:' + post, 'hoek', '1']), kv.raw(['EXPIRE', 'org:p:' + post, String(180 * 86400)]), kv.raw(['SADD', 'org:posts', post])]).catch(() => {})); } res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/categorie/' + hk + '?lang=nl&utm_source=' + KAN[k] + '&utm_medium=video&utm_campaign=' + encodeURIComponent(post || 'profiel')); res.setHeader('cache-control', 'no-store'); return res.end(); }
       if (gu) { res.statusCode = 302; res.setHeader('location', 'https://gids.kadoly.com/' + gu + '?utm_source=' + KAN[k] + '&utm_medium=video&utm_campaign=' + encodeURIComponent(post || 'profiel')); res.setHeader('cache-control', 'no-store'); return res.end(); } // 26 nov: uitlegvideo naar het gidsartikel, klik geteld per kanaal en per post
       if (!pid && post === 'bio' && !bot) return await bioPagina(res, k); // 26 nov (Henkjan: "niks intypen"): biolink toont de producten en uitleg uit de laatste video's, één tik
       if (!pid) { res.statusCode = 302; res.setHeader('location', kaal); res.setHeader('cache-control', 'no-store'); return res.end(); }
