@@ -101,6 +101,18 @@ De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). D
 
 Aanvullende werking van de avondronde: docs/keuzehulpen-groei-werking-2026-11-23.md. De oude volledige overdracht blijft intact; lees ook deze wijzigingsnotitie en het levende werklog.
 
+## 5c. Elke dag UX en vindbaarheid (27 november 2026)
+
+Henkjan, 27 nov 2026: "Ja en optimaliseer dagelijks voor UX en Organische vindbaarheid zet dat ook in dashboard ." Sinds die dag hebben alle productkeuzehulpen op de drie sites één sjabloon (`lib/sjabloon.js`, controle `node scripts/test-sjabloon.mjs`; terugval per site: kv `kz:sjabloon:uit` of `wtb:sjabloon:uit` op 1, of `?sjabloon=1`). De dagronde doet elke dag, na stap 2:
+
+1. **UX-controle, 3 pagina's per dag** (één per site, elke dag andere; begin bij wat de meeste bezoekers had): haal ze op met web_fetch_vercel_url (`https://hjdk-api-henq.vercel.app/api/kz?slug=<slug>`, `/api/wtb?m=us&slug=<slug>`, `/api/wtb?m=de&slug=<slug>`). Moet kloppen: één eerste keus met prijs en één zwarte knop, de 3 beste met prijs, hoogstens 3 pills die bij de pagina passen, geen interne zin in beeld, geen grijs, geen dubbele producten in de tabel, geen losse zinnen bij "Waar je op let", FAQ zonder "niet gevonden". Fout in de data: repareer de data (kort antwoord, uitleg, FAQ). Fout in het sjabloon: repareer `lib/sjabloon.js` en draai de test.
+2. **Chat**: stel op één pagina per site de eerste pill via `POST /api/keuze-tools?tool=intentie&op=chat` (of in Chrome). Het antwoord moet één product noemen dat op de pagina staat. Lees `/api/keuze-tools?tool=intentie&op=chatanalyse`: de vraag met de meeste "weet niet" krijgt een antwoord in de data van die pagina.
+3. **Lekken in de pagina**: winkelkliks per 100 bezoekers per site (tellers `hjdk6-kz-<slug>-clk`, `wtb-<m>-<slug>-clk`, chat `*-sj-vraag`, volgen `*-sj-volg`, aanmelden `*-sj-mail`). Het blok met de grootste val is het lek van vandaag (leerlus, B = MAP); één verbetering per dag, eerst in de data, dan in het sjabloon.
+4. **Vindbaarheid**: `/api/gsc?op=paginas&host=<host>&dagen=28` per site: wat steeg, wat zakte. In Search Console (Chrome, Henkjans Gmail is eigenaar van alle drie de domeinen) per dag hoogstens 5 indexeringsverzoeken per domein voor pagina's die het sterkst zijn en nog niet in Google staan; nooit voor dunne of verborgen pagina's. Een zoekvraag op plek 4 tot 20: titel met de zoekterm voorop en de vraag letterlijk als eerste FAQ. IndexNow voor elke gewijzigde pagina.
+5. **Vastleggen op het dashboard** (project keuzehulpen): `nu` = zoekbezoeken per dag, één regel in het werklog met `wie=keuzehulpen-dagronde` (wat er gerepareerd is, welk lek, wat er ingediend is) en de stand met `chat.naam` `keuzehulpen-dagronde`. Geen nullen melden.
+
+Stopregel: staat er in het werklog al een regel van `keuzehulpen-dagronde` met de datum van vandaag, dan is de ronde gedaan.
+
 ## 5a. Onderwerpkeuze die leert (23 november 2026)
 
 Lees data/keuzehulpen-groei/potenties-2026-11-23.json voor de bevroren eerste rangorde, bronnen, tegenbewijs en ontwikkelopdracht. Begin bij thuisbatterij met stekker en de bestaande Marstek/HomeWizard/Anker-vergelijking (NL), daarna balkonopslag achteraf in DE en pompnoodstroom in de VS. Alle kandidaten bestaan al; controleer steeds de actuele catalogus en sitemap. Maak geen tweede pagina voor dezelfde keuzevraag.

@@ -142,14 +142,15 @@ async function page(m, it, all, req) {
     ...(it.decisionKind === 'boek' ? boekLd(it) : []),
     ...(it.decisionKind === 'dienst' ? dienstLd(it) : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
-  if (new URL(req.url, 'http://x').searchParams.get('sjabloon') === '2' && it.decisionKind !== 'boek') { // nieuw sjabloon (lib/sjabloon.js, 27 nov 2026): voorbeeld, noindex
+  const sjQ = new URL(req.url, 'http://x').searchParams.get('sjabloon'); const sjUit = sjQ === '1' || !!(await kv.get('wtb:sjabloon:uit').catch(() => null)); // terugval: ?sjabloon=1 of kv wtb:sjabloon:uit
+  if ((sjQ === '2' || !sjUit) && !it.decisionKind && !adv.decision) { // nieuw sjabloon (lib/sjabloon.js), live sinds 27 nov 2026; boek-, dienst- en beslisgidsen houden hun eigen opzet
     const SJ = await import('../lib/sjabloon.js'); const T = m.id === 'de' ? 'de' : 'us'; const ps = (adv.products || []).filter(p => p && p.url && p.title);
     const geld = p => p.price != null ? (p.priceText || m.money(p.price)) : '';
     const prods = ps.slice(0, 3).map((p, i) => ({ naam: SJ.kortNaam(p.title), rol: i === 0 ? m.s.pick : m.s.alt, prijs: geld(p), sterren: p.rating != null ? String(p.rating) : '', url: p.url }));
     const k0 = ps[0]; const q0s = q0 ? q0.options.map(o => o.label).slice(0, 3) : [];
     const gtxt = Array.isArray(it.guide) ? it.guide.join(' ') : typeof it.guide === 'string' ? it.guide : '';
     const letop = (gtxt.replace(/<[^>]+>/g, '').match(/[^.!?]+[.!?]+/g) || []).map(x => x.trim()).filter(x => x.length > 25 && x.length < 170 && !/^(That|This|These|Then|Also|And|But|So|Das|Dies|Dann|Auch|Und|Aber|So)\b/.test(x)).slice(0, 3);
-    return { sj: SJ.sjabloonHtml({ taal: T, host: m.host, logo: m.id === 'us' ? 'whichtobuy' : 'kaufberater', winkel: 'Amazon', slug: it.slug, term: it.term || it.title, h1: it.title || it.h1, title: it.seoTitle || it.h1, desc: it.metaDesc, canonical: base + '/' + it.slug, noindex: true, jsonld: ld,
+    return { sj: SJ.sjabloonHtml({ taal: T, host: m.host, logo: m.id === 'us' ? 'whichtobuy' : 'kaufberater', winkel: 'Amazon', slug: it.slug, term: it.term || it.title, h1: it.title || it.h1, title: it.seoTitle || it.h1, desc: it.metaDesc, canonical: base + '/' + (DUN && DUN.naar ? DUN.naar : it.slug), noindex: sjQ === '2' || !!(DUN && !DUN.naar), jsonld: ld,
       crumbs: [[m.name, '/'], [it.cat, catPad(m, it.cat)]], bijgewerkt: upd, zoekUrl: adv.link,
       kortKop: k0 ? SJ.KEUS_LABEL[T] + ': ' + SJ.kortNaam(k0.title) + '.' : '', kort: SJ.zinnen(Array.isArray(it.kort) ? it.kort.join(' ') : it.kort, 2), keus: k0 ? { naam: SJ.kortNaam(k0.title), prijs: geld(k0), url: k0.url } : null,
       prods, pills: q0s, situaties: [], letop, faq: faqZonderDubbel(it.faq || []).slice(0, 5), verder: rel.slice(0, 3).map(r => [r.title, '/' + r.slug]),
@@ -341,6 +342,6 @@ export default async function handler(req, res) {
     if (op0 && op0.code === 301) { res.setHeader('location', 'https://' + m.host + '/' + op0.naar); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); }
     if (op0) { res.setHeader('x-robots-tag', 'noindex'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(410).send(shell(m, { title: '410: ' + m.name, desc: '', path: '/', body: `<h1>${m.id === 'de' ? 'Dieser Ratgeber wurde entfernt' : 'This guide has been removed'}</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); } }
   await count(m, req, q, it.slug);
-  const pg = await page(m, it, all, req); if (pg && pg.sj) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(pg.sj); }
+  const pg = await page(m, it, all, req); if (pg && pg.sj) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', q.get('sjabloon') ? 'no-store' : 'public, max-age=0, must-revalidate'); if (/noindex/.test(pg.sj.slice(0, 3000))) res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(pg.sj); }
   return send(pg, it.term);
 }

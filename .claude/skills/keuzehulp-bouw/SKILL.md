@@ -178,6 +178,10 @@ De link "Jouw ervaring" (`lib/ervaring.js`) laat bezoekers reageren en hun conta
 
 ## 6. Volgorde van een pagina
 
+**Sinds 27 november 2026 één sjabloon voor alle productkeuzehulpen** (`lib/sjabloon.js`, Henkjan: "We gaan alles opschonen . En consistent make" en "Ja"). Volgorde: kruimelpad, de vraag als H1, één regel met datum en "geen betaalde plaatsing", de eerste keus met prijs en één zwarte knop, de 3 beste, de chat (hoogstens 3 pills, één antwoord met één winkelknop, één aanbod om te volgen), één situatietabel, waar je op let (3 punten), FAQ, verder kiezen (3 links), voet in één regel. Geen stappenplan, tafel, haken, onthouden, delen, pop-up of losse proeven op deze pagina's. Lettergroottes 13, 16, 22 en 32, diktes 400 en 700. Controle: `node scripts/test-sjabloon.mjs`. Wat hieronder over de oude pagina en de chatproeven staat, geldt alleen nog voor pagina's die niet door het sjabloon gaan (boek-, dienst- en beslisgidsen).
+
+Oude volgorde (voor pagina's buiten het sjabloon):
+
 1. Kruimelpad "Keuzehulp › …".
 2. Bovenregel: alleen "Keuzehulp X", hoogstens 40 tekens.
 3. H1.
