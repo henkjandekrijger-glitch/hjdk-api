@@ -151,5 +151,27 @@
     "Provider generic clicks not verified outbound",
     "No new social publication in this round; wrapper lacks correct destination/board fields"
   ],
-  "next_check": "29Nov first execution/source checkpoint; daily existing rhythm remains;2Dec measurement;5Dec closed4Dec result."
+  "next_check": "29Nov first execution/source checkpoint; daily existing rhythm remains;2Dec measurement;5Dec closed4Dec result.",
+  "additions": [
+    {
+      "at_utc": "2026-11-27T13:37:51.129Z",
+      "topic": "Clickmind memory applied",
+      "source": "content/dagrapport/2026-11-27-clickmind.json",
+      "registered": 34,
+      "publications": 0,
+      "metrics_written": false,
+      "lessons": [
+        {
+          "evidence": "Before briefing0contentpieces;after30Pinterestpieces with explicitly assigned goal;34total contentpieces.",
+          "lesson": "Old published books were not represented in the new memory; existingcopy/creative history is now reusable.",
+          "limitation": "8oldpin destinations not freshly verified, left blank; goal/evidence kept distinct."
+        },
+        {
+          "evidence": "No outbound metric definition in current provider snapshots; kans() defaultsmissing to0.",
+          "lesson": "Never feed incomplete numeric snapshots into traffic comparisons.",
+          "next_test": "Repair the route and confirm a known non-production tracking test without inflating site traffic; then real verified closed-window provider data."
+        }
+      ]
+    }
+  ]
 }

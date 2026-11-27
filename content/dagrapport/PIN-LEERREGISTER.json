@@ -5,7 +5,7 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-27T12:24:32.640Z",
+  "updated_at_utc": "2026-11-27T13:37:51.129Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
@@ -313,6 +313,18 @@
         "owner": "kadolyshop",
         "destination": "https://bookstuffers.com/white-elephant-rules?utm_source=pinterest&utm_content=20261122-we-regels-1zjm",
         "publication_time": "2026-11-22T18:11:47.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b03305e0c584efce0d64de2",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b03305e0c584efce0d64de2"
       }
     },
     {
@@ -471,7 +483,19 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DJQLBM75-sok-tiener.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b033065c4d17d4a0f103be1",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b033065c4d17d4a0f103be1"
+      }
     },
     {
       "id": "20261122-enoch-wat-79n1",
@@ -768,6 +792,18 @@
         "owner": "kadolyshop",
         "destination": "https://bookstuffers.com/book-of-enoch?utm_source=pinterest&utm_content=20261122-enoch-wat-79n1",
         "publication_time": "2026-11-22T18:11:57.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b03306970f37227beb16166",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b03306970f37227beb16166"
       }
     },
     {
@@ -1065,6 +1101,18 @@
         "owner": "kadolyshop",
         "destination": "https://bookstuffers.com/apocrypha?utm_source=pinterest&utm_content=20261122-apo-14-xc9j",
         "publication_time": "2026-11-22T18:12:02.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b03306ec4d17d4a0f103bf2",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b03306ec4d17d4a0f103bf2"
       }
     },
     {
@@ -1235,7 +1283,19 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DNDQZ3G3-we-ruzie.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b0344b6783be3b4addd3e43",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b0344b6783be3b4addd3e43"
+      }
     },
     {
       "id": "20261122-sok-haar-mssk",
@@ -1532,6 +1592,18 @@
         "owner": "kadolyshop",
         "destination": "https://bookstuffers.com/stocking-stuffers?utm_source=pinterest&utm_content=20261122-sok-haar-mssk#for-her",
         "publication_time": "2026-11-22T19:38:38.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b0344ba9978cd4d9a1ca580",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b0344ba9978cd4d9a1ca580"
       }
     },
     {
@@ -1829,6 +1901,18 @@
         "owner": "kadolyshop",
         "destination": "https://bookstuffers.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261122-we-dad-syxw",
         "publication_time": "2026-11-22T19:38:43.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b0344bf56bdc437db134475",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b0344bf56bdc437db134475"
       }
     },
     {
@@ -1999,7 +2083,19 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DMP31FSP-sok-gids-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b0344c49978cd4d9a1ca59e",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b0344c49978cd4d9a1ca59e"
+      }
     },
     {
       "id": "20261123-sok-puzzel-prd9",
@@ -2274,6 +2370,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_content=20261123-sok-puzzel-prd9",
         "publication_time": "2026-11-23T19:39:38.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b049678d511266d6a856bec",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b049678d511266d6a856bec"
       }
     },
     {
@@ -2556,6 +2664,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
         "publication_time": "2026-11-23T19:39:41.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b04967b5d67d2299ad22eb9",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b04967b5d67d2299ad22eb9"
       }
     },
     {
@@ -2838,6 +2958,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
         "publication_time": "2026-11-23T19:39:44.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b04967fd511266d6a856c13",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b04967fd511266d6a856c13"
       }
     },
     {
@@ -3113,6 +3245,18 @@
         "owner": "kadolyshop",
         "destination": "https://lastingchange.works/?utm_source=pinterest&utm_content=20261123-lc-jaar-1l5j",
         "publication_time": "2026-11-23T19:39:47.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b049681d511266d6a856c28",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b049681d511266d6a856c28"
       }
     },
     {
@@ -3267,7 +3411,19 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DNCLDHD6-ss-gen.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b05e7df7a6d18398505d60a",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05e7df7a6d18398505d60a"
+      }
     },
     {
       "id": "20261124-sok-gids-haar-lklt",
@@ -3482,6 +3638,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/stocking-stuffers-for-women?utm_source=pinterest&utm_content=20261124-sok-gids-haar-lklt",
         "publication_time": "2026-11-24T19:39:19.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b05e7e46cf47dfab007ad2f",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05e7e46cf47dfab007ad2f"
       }
     },
     {
@@ -3697,6 +3865,18 @@
         "owner": "kadolyshop",
         "destination": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-66-1l5j",
         "publication_time": "2026-11-24T19:39:23.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b05e7e952ad165c265fa790",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05e7e952ad165c265fa790"
       }
     },
     {
@@ -3912,6 +4092,18 @@
         "owner": "kadolyshop",
         "destination": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261124-lc-stappen-1l5j",
         "publication_time": "2026-11-24T19:39:28.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b05e7ec6cf47dfab007ad4b",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05e7ec6cf47dfab007ad4b"
       }
     },
     {
@@ -4134,6 +4326,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
         "publication_time": "2026-11-24T20:54:16.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b05f89c3ea213a32f7d5a66",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05f89c3ea213a32f7d5a66"
       }
     },
     {
@@ -4296,7 +4500,19 @@
       "verified_media_urls": [
         "https://media.zernio.com/media/1795553786180_79140876bf87bb5e_B0HRGNJ7CY-sok-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b05f9fdacf4072f8e620181",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b05f9fdacf4072f8e620181"
+      }
     },
     {
       "id": "20261125-enoch-wat-79n1",
@@ -4487,6 +4703,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/book-of-enoch?utm_source=pinterest&utm_content=20261125-enoch-wat-79n1",
         "publication_time": "2026-11-25T19:39:43.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b07397bcb651a6eadc070bb",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b07397bcb651a6eadc070bb"
       }
     },
     {
@@ -4678,6 +4906,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261125-we-dad-syxw",
         "publication_time": "2026-11-25T19:39:54.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b073986be3f02dcc0ff44d7",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b073986be3f02dcc0ff44d7"
       }
     },
     {
@@ -4869,6 +5109,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/apocrypha?utm_source=pinterest&utm_content=20261125-apo-14-xc9j",
         "publication_time": "2026-11-25T19:40:12.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b073998b436184d7f495f0b",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b073998b436184d7f495f0b"
       }
     },
     {
@@ -5044,7 +5296,19 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DK3CSYXW-sok-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b0739a3be3f02dcc0ff4563",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b0739a3be3f02dcc0ff4563"
+      }
     },
     {
       "id": null,
@@ -5096,7 +5360,19 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b088afe6edb5e8d51c8b5eb",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b088afe6edb5e8d51c8b5eb"
+      }
     },
     {
       "id": null,
@@ -5148,7 +5424,19 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T12:24:32.640Z"
+      "last_checked_at_utc": "2026-11-27T12:24:32.640Z",
+      "clickmind": {
+        "id": "bookpin:6b088af9810e459fa7791c82",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b088af9810e459fa7791c82"
+      }
     },
     {
       "id": null,
@@ -5208,6 +5496,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261126-we-onder10-1k5z",
         "publication_time": "2026-11-26T19:39:36.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b088af5e1654dc25d265332",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b088af5e1654dc25d265332"
       }
     },
     {
@@ -5268,6 +5568,18 @@
         "owner": "kadolyshop",
         "destination": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261126-we-ideeen-28jz",
         "publication_time": "2026-11-26T19:39:32.000Z"
+      },
+      "clickmind": {
+        "id": "bookpin:6b088af06edb5e8d51c8b5af",
+        "registered_at_utc": "2026-11-27T13:37:51.129Z",
+        "medium": "pinterest",
+        "project": "content",
+        "goal": "klik",
+        "status": "geplaatst",
+        "copy_and_media_registered": true,
+        "metrics_uploaded": false,
+        "reason": "No complete verified organic OUTBOUND_CLICK plus matched impression window; never substitute generic provider clicks or missing zero.",
+        "read_url": "https://hjdk-api-henq.vercel.app/api/mm?op=stuk&id=bookpin%3A6b088af06edb5e8d51c8b5af"
       }
     }
   ]

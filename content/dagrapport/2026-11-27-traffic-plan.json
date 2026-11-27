@@ -234,5 +234,21 @@
       "status": "shown_batch_execution_requested_20261127_not_published",
       "approval_basis": "Current execute-plan instruction following shown batch; preserve exact assets/copy, no new unseen bulk"
     }
+  ],
+  "clickmind_additions": [
+    {
+      "at_utc": "2026-11-27T13:37:51.129Z",
+      "request": "Ik heb clickmind verbeterd ga dat inzetten voor deze content.",
+      "registered": 34,
+      "published_pins_in_register": 26,
+      "live_article_heads": 3,
+      "pin_concepts": 4,
+      "reel_concepts": 1,
+      "new_publications": 0,
+      "live_briefing": "https://hjdk-api-henq.vercel.app/api/mm/briefing?medium=pinterest&project=content&doel=klik",
+      "details": "content/dagrapport/2026-11-27-clickmind.json",
+      "remaining_task": "obiwrz",
+      "not_proof_of_traffic": true
+    }
   ]
 }

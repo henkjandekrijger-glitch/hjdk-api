@@ -1,0 +1,380 @@
+{
+  "observed_at_utc": "2026-11-27T13:37:51.129Z",
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "Pinterest books kadolyshop",
+    "Instagram books kadoly.shop"
+  ],
+  "user_instruction": "Ik heb clickmind verbeterd ga dat inzetten voor deze content.",
+  "execution": {
+    "registered_total": 34,
+    "existing_published_pins": 26,
+    "existing_live_lc_heads_and_descriptions": 3,
+    "existing_pin_concepts": 4,
+    "existing_reel_concepts": 1,
+    "new_posts_published": 0,
+    "new_articles_published": 0,
+    "site_changes": 0,
+    "modal_changes": 0,
+    "mail_sent": 0,
+    "extra_paid_calls": 0,
+    "existing_tasks_updated": [
+      "Automation_78bd50f1177c819187c97dbc4098ab6e",
+      "Automation_8802f2dd9b548191980419acd21da2c3"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm/dashboard?vorm=skill&naam=clickmind",
+      "definition": "Live skill27Nov,brief first,own goal,medium,copy,image,prior research."
+    },
+    {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm/briefing?medium=pinterest&project=content&doel=klik&vorm=json",
+      "before": 0,
+      "after": 30,
+      "definition": "26placed+4concept pins, not30publications; no winner or measured website traffic."
+    },
+    {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm?op=stukken&vers=1&vorm=json",
+      "content_pieces": 34,
+      "derived_goal": 0,
+      "definition": "Registration count only, not output traffic. Aggregate missing numeric display must not be interpreted as observed zero."
+    },
+    {
+      "path": "content/dagrapport/PIN-LEERREGISTER.json",
+      "branch": "codex/content-dagboek",
+      "head": "e7eaf6e4d6176202f5095b5b6cd7b0aa6b1277d2",
+      "blob": "e52441f94cf93efd8cc627ffbf211f61de4a919c",
+      "definition": "Original snapshots preserved, no historic numbers overwritten."
+    },
+    {
+      "path": "lib/paspoort.js",
+      "ref": "main",
+      "blob": "ce61a5497c654e8e2dd06c71cf404712664bcaf2",
+      "definition": "schoon strips unknown fields,keeps metadata and optional numbers; kans normalizes absent clicks to0."
+    },
+    {
+      "path": "lib/distlus.js",
+      "ref": "main",
+      "blob": "04deb802062818748c3606d5864814cf7cb27efa",
+      "definition": "DOELEN lacks both currentbookdomains; maak with text schedules AIlabeling, so not called."
+    },
+    {
+      "path": "lib/bs.js and lib/lcfunnel.js",
+      "definition": "cm.js already included with bookstuffers/lastingchange site IDs, not newly installed."
+    },
+    {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm/modalbeheer?site=bookstuffers",
+      "http": 200,
+      "domains": [
+        "bookstuffers.com"
+      ],
+      "control_fraction": 0.1,
+      "period": null,
+      "definition": "Existing lifetime/unknown-period modal rows are not today's traffic or subscriber totals. No settings changed."
+    },
+    {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm/modalbeheer?site=lastingchange",
+      "http": 404,
+      "definition": "Unknown config for this exact site ID,notproof of absent script or broken whole Clickmind."
+    }
+  ],
+  "metric_safeguard": {
+    "numbers_written_to_passports": false,
+    "reason": "Genericclicksareunverifiedoutbound;no matched confirmed websiteclick metric. Even impressions-only would turn absent clicks into0 in current kans(), hence no partial cijfersexport.",
+    "pin_landing_join": null,
+    "late_metrics": "Only send complete verified matching windows; provider impressions/saves remain in separate snapshots.",
+    "minimum_evidence": "Clickmind thresholds500impressions/60clicks do not replace our14to21days and matching board/topic/age."
+  },
+  "remaining_dependencies": {
+    "dashboard_task": "obiwrz",
+    "publication_wrapper": "Zernio wrapper still lacks Pinterestboard/destinationfields,not an account or approval failure",
+    "tracked_book_links": "Bookdomainallowlist and safe routing require smallest reviewed repair; current /m rewrite leads to mail code, not proven valid dist route; do not invent operational URLs.",
+    "signup": "No LCconfig found; existing subscriberUX remainspreview; no activation/email implied."
+  },
+  "passports": [
+    {
+      "id": "bookpin:6b03305e0c584efce0d64de2",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-22T18:11:48.079Z"
+    },
+    {
+      "id": "bookpin:6b033065c4d17d4a0f103be1",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-22T18:11:52.586Z"
+    },
+    {
+      "id": "bookpin:6b03306970f37227beb16166",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-22T18:11:57.788Z"
+    },
+    {
+      "id": "bookpin:6b03306ec4d17d4a0f103bf2",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-22T18:12:02.901Z"
+    },
+    {
+      "id": "bookpin:6b0344b6783be3b4addd3e43",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-22T19:38:34.357Z"
+    },
+    {
+      "id": "bookpin:6b0344ba9978cd4d9a1ca580",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-22T19:38:38.599Z"
+    },
+    {
+      "id": "bookpin:6b0344bf56bdc437db134475",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-22T19:38:43.497Z"
+    },
+    {
+      "id": "bookpin:6b0344c49978cd4d9a1ca59e",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-22T19:38:47.021Z"
+    },
+    {
+      "id": "bookpin:6b049678d511266d6a856bec",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-23T19:39:39.054Z"
+    },
+    {
+      "id": "bookpin:6b04967b5d67d2299ad22eb9",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-23T19:39:42.100Z"
+    },
+    {
+      "id": "bookpin:6b04967fd511266d6a856c13",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-23T19:39:45.169Z"
+    },
+    {
+      "id": "bookpin:6b049681d511266d6a856c28",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-23T19:39:48.379Z"
+    },
+    {
+      "id": "bookpin:6b05e7df7a6d18398505d60a",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-24T19:39:15.178Z"
+    },
+    {
+      "id": "bookpin:6b05e7e46cf47dfab007ad2f",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-24T19:39:20.434Z"
+    },
+    {
+      "id": "bookpin:6b05e7e952ad165c265fa790",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-24T19:39:24.246Z"
+    },
+    {
+      "id": "bookpin:6b05e7ec6cf47dfab007ad4b",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-24T19:39:28.690Z"
+    },
+    {
+      "id": "bookpin:6b05f89c3ea213a32f7d5a66",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-24T20:54:16.973Z"
+    },
+    {
+      "id": "bookpin:6b05f9fdacf4072f8e620181",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-24T20:56:31.789Z"
+    },
+    {
+      "id": "bookpin:6b07397bcb651a6eadc070bb",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-25T19:39:43.777Z"
+    },
+    {
+      "id": "bookpin:6b073986be3f02dcc0ff44d7",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-25T19:39:54.507Z"
+    },
+    {
+      "id": "bookpin:6b073998b436184d7f495f0b",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-25T19:40:13.311Z"
+    },
+    {
+      "id": "bookpin:6b0739a3be3f02dcc0ff4563",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-25T19:40:23.516Z"
+    },
+    {
+      "id": "bookpin:6b088afe6edb5e8d51c8b5eb",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-26T19:39:45.452Z"
+    },
+    {
+      "id": "bookpin:6b088af9810e459fa7791c82",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": false,
+      "source_original_publication_date": "2026-11-26T19:39:41.626Z"
+    },
+    {
+      "id": "bookpin:6b088af5e1654dc25d265332",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-26T19:39:37.175Z"
+    },
+    {
+      "id": "bookpin:6b088af06edb5e8d51c8b5af",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "geplaatst",
+      "destination_verified": true,
+      "source_original_publication_date": "2026-11-26T19:39:33.155Z"
+    },
+    {
+      "id": "bookdraft:20261126-free-secret-santa",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "concept",
+      "destination_verified": true,
+      "source_original_publication_date": null
+    },
+    {
+      "id": "bookdraft:20261125-free-coloring",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "concept",
+      "destination_verified": true,
+      "source_original_publication_date": null
+    },
+    {
+      "id": "bookdraft:20261125-free-trivia",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "concept",
+      "destination_verified": true,
+      "source_original_publication_date": null
+    },
+    {
+      "id": "bookdraft:20261125-seven-day-reset",
+      "medium": "pinterest",
+      "goal": "klik",
+      "status": "concept",
+      "destination_verified": true,
+      "source_original_publication_date": null
+    },
+    {
+      "id": "bookdraft:20261125-ig-men",
+      "medium": "instagram",
+      "goal": "klik",
+      "status": "concept",
+      "destination_verified": true,
+      "source_original_publication_date": null
+    },
+    {
+      "id": "bookpage:how-to-stop-procrastinating",
+      "medium": "site",
+      "goal": "actie",
+      "status": "geplaatst",
+      "publication_date_precision": "day"
+    },
+    {
+      "id": "bookpage:how-to-start-over-in-life",
+      "medium": "site",
+      "goal": "actie",
+      "status": "geplaatst",
+      "publication_date_precision": "day"
+    },
+    {
+      "id": "bookpage:i-wasted-another-year",
+      "medium": "site",
+      "goal": "actie",
+      "status": "geplaatst",
+      "publication_date_precision": "day"
+    }
+  ],
+  "lessons": [
+    {
+      "evidence": "Before briefing0contentpieces;after30Pinterestpieces with explicitly assigned goal;34total contentpieces.",
+      "lesson": "Old published books were not represented in the new memory; existingcopy/creative history is now reusable.",
+      "limitation": "8oldpin destinations not freshly verified, left blank; goal/evidence kept distinct."
+    },
+    {
+      "evidence": "No outbound metric definition in current provider snapshots; kans() defaultsmissing to0.",
+      "lesson": "Never feed incomplete numeric snapshots into traffic comparisons.",
+      "next_test": "Repair the route and confirm a known non-production tracking test without inflating site traffic; then real verified closed-window provider data."
+    }
+  ],
+  "next_check": "Next15:37Curaçao publishinground reads Clickmindbriefing first; existing09:15report includes outcome versus goal. Technical join reviewed taskobiwrz, no growth asserted."
+}
