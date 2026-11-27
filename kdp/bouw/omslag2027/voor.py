@@ -274,6 +274,37 @@ B['B0DR5Z8SLL'] = (B['B0DR5Z8SLL'][0].replace('B0DPSS16X3', 'B0DR5Z8SLL') + '.he
 # eigen achtergrondfoto voor de bloeddrukkookboek
 B['B0DR5Z8SLL'] = (B['B0DR5Z8SLL'][0].split('body{background:url(')[0] + 'body{background:url(' + img64(D / 'crop/B0DR5Z8SLL_4x.jpg') + ') center/cover}' + B['B0DR5Z8SLL'][0].split(') center/cover}', 1)[1], B['B0DR5Z8SLL'][1])
 
+# 27 nov 2026 (Henkjan: "Maak 2027 versie"): Lean and Green in de kook-stijl met de eigen groentefoto, Analyze People (6x9) in eigen stijl.
+B['B0BFV4C31K'] = kook('+1500 days of fueling hacks and lean and green recipes', 'LEAN AND<br>GREEN', 'COOKBOOK',
+                       'Burn fat, lose weight and manage your figure',
+                       'FOR BEGINNERS <b>·</b> 1500 DAYS')
+B['B0BFV4C31K'] = (B['B0BFV4C31K'][0].split('body{background:url(')[0] + 'body{background:url(' + img64(D / 'crop/lean_bg.jpg') + ') center/cover}' + B['B0BFV4C31K'][0].split(') center/cover}', 1)[1] + '.hex .b{font-size:150px}', B['B0BFV4C31K'][1])
+
+TRIM['1080901272'] = (6, 9)
+B['1080901272'] = ("""
+body{background:radial-gradient(ellipse at 50%% 70%%,#123a6b 0%%,#0a1f3d 45%%,#050f22 100%%)}
+.t0{top:70px;font:700 54px Oswald;color:#9fd3ff;letter-spacing:10px}
+.t1{top:140px;font:400 250px/.86 Bebas;color:#fff;letter-spacing:3px}
+.t2{top:575px;font:400 96px Bebas;color:#4fb8ff;letter-spacing:6px}
+.lijn{left:120px;right:120px;height:4px;background:#d9b44a}
+.sub{top:700px;font:500 34px/1.3 Oswald;color:#fff;padding:0 90px}
+.brein{left:60px;right:60px;top:800px;height:430px;background:url(%s) center/cover no-repeat;-webkit-mask-image:radial-gradient(ellipse at center,#000 55%%,transparent 75%%)}
+.cta{left:80px;right:80px;top:1250px;background:#4fb8ff;color:#050f22;font:700 32px/1.2 Oswald;padding:18px;border-radius:12px;text-align:center;text-transform:uppercase}
+.badge{right:46px;top:760px;width:180px;height:180px;background:#d9b44a;color:#050f22;box-shadow:0 0 0 7px #050f22,0 0 0 11px #d9b44a;transform:rotate(8deg)}
+.badge b{font:400 70px Bebas}.badge span{font:700 21px Oswald}
+.naam{bottom:52px;font:500 40px Oswald;color:#fff;letter-spacing:10px}
+""" % img64(D / 'crop/analyze_brein.jpg'), """
+<div class="abs c t0">HOW TO</div>
+<div class="abs c t1">ANALYZE<br>PEOPLE</div>
+<div class="abs c t2">WITH PSYCHOLOGY</div>
+<div class="abs lijn" style="top:683px"></div>
+<div class="abs c sub">The ultimate guide to speed reading people through body language and behavioral psychology</div>
+<div class="abs brein"></div>
+<div class="badge"><b>2027</b><span>EDITION</span></div>
+<div class="abs cta">Know what people think before they say it</div>
+<div class="abs c naam">EMOTIONAL PATHWAY</div>
+""")
+
 if __name__ == '__main__':
     from playwright.sync_api import sync_playwright
     dsf = float(sys.argv[1]) if len(sys.argv) > 1 else 1
