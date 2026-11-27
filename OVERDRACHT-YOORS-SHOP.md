@@ -119,6 +119,28 @@ Overdracht van de kadoly-shopify-chat (23 nov). Henkjan wil een eerste verkoop v
   9. **Klachten van concurrenten als haak.** buiten.js levert reviews met 1 of 2 sterren (kapot aangekomen, verzendkosten pas bij de kassa). Posts beginnen bij dat probleem, met het antwoord van Kadoly: verzending zit in de prijs, 14 dagen retour.
   10. **Pinterest opschonen.** Alleen Kadoly op het Kadoly-account (de KDP-boekpins weg), en haken die er nog niet waren ('uitdaging', 'n vragen', volgens de briefing). 3 pins per dag, en Clickmind leert per haak.
 
+### Kadoly, 27 nov 2026 14:30 UTC: wacht op Henkjans ja
+- **Verlanglijst om door te sturen** staat live maar is nog nergens gelinkt: https://go.kadoly.com/verlanglijst. Na zijn ja: een knop 'Zet op mijn verlanglijst' op elke productpagina (TAAK voor de winkel, ?add=<pid>), links vanuit de video's met soort verlanglijst en vanuit de bedanktschermen van de winactie en de zegels.
+- **Zondagmail aan alle deelnemers.** De winactiepagina belooft "Zondag hoor je of je gewonnen hebt", maar er gaat alleen een mail naar de winnaar. Concept (versturen via de lijst van Kadoly, zondag na de trekking van 20.00 uur):
+
+  > **Onderwerp:** Uitslag winactie zondag 29 november
+  >
+  > Hoi,
+  >
+  > Vanavond om 20.00 uur hebben we geloot uit alle deelnemers van deze week. De winnaar heeft van ons een mail gekregen. Was jij het niet? Dan maak je volgende week weer kans.
+  >
+  > **[Doe mee voor zondag 6 december]** (één tik, je lot staat dan klaar)
+  >
+  > Voor elke vriend die via jou meedoet krijg je een extra kans, tot 5.
+  >
+  > Op de verlanglijst van onze deelnemers: [de 3 cadeaus die deze week het vaakst bekeken werden, uit Clickmind, elk met foto en knop]
+  >
+  > Maak je eigen verlanglijst voor Sinterklaas en stuur hem door: go.kadoly.com/verlanglijst
+  >
+  > Groet, Henkjan van Kadoly. Vragen? Antwoord op deze mail of app 06 55395630. Afmelden kan met één klik.
+
+  Na zijn ja te bouwen: de knop 'Doe mee voor zondag 6 december' zet het lot met één tik klaar (link met het abonnee-token, geen invullen), versturen via Mailmind als stroom, meten wie weer meedoet.
+
 ### Kadoly, 24 nov 2026 (kadoly-shopify-chat)
 - Budget voor de sieradencampagne (TikTok, Facebook via Whop, Pinterest via Zernio).
 - Black Friday: A (niet meedoen, met verhaal) of B (extreme aanbieding).
