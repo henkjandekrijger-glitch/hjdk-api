@@ -181,6 +181,13 @@ async function vlBesteld(code, pid, v) { // bestelling via /o?c=vl<code> (pxVerw
   await inc(['sh-vl-besteld', 'sh-d' + d8 + '-vl-besteld']); if (ct) { try { await kv.incrMany([['c:sh-vl-omzet', ct], ['c:sh-d' + d8 + '-vl-omzet', ct]]); } catch (e) {} }
   await vlEv(l.pf, 'besteld'); const g = l.gp && l.gp[pid]; if (g) await vlEv(g, 'besteld');
 }
+async function vlPaStap(cm, ev) { // stap op de verlanglijst van een betaalde klik (cm = klikcode): tellers per campagne, plek en advertentie; kies = de conversie naar PropellerAds
+  cm = String(cm || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (!cm || !/^(kies|wa|kopieer|mail|lijst)$/.test(ev)) return; let rec = null; try { rec = await kv.get(K.rec(cm)); } catch (e) {} if (!rec || !rec.vl || rec.t) return;
+  const net = rec.s, st = ev === 'wa' || ev === 'kopieer' || ev === 'mail' ? 'deel' : ev, keys = []; rec.vs = rec.vs || {}; if (rec.vs[st]) return; rec.vs[st] = Date.now();
+  keys.push('sh-' + net + '-vl' + st, 'sh-d' + D8() + '-' + net + '-vl' + st); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-vl' + st); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-vl' + st); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-vl' + st);
+  if (ev === 'kies' && net === 'pa' && rec.c && !rec.conv && PB.pa) { let s2 = 0; try { const r = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)), { signal: AbortSignal.timeout(2500) }); s2 = r.status; } catch (x) {} rec.conv = Date.now(); rec.pb = s2; keys.push('sh-pa-conv', 'sh-d' + D8() + '-pa-conv', 'sh-pa-vlpb' + (s2 || 0)); if (rec.z) keys.push('sh-pa-z' + rec.z + '-conv'); }
+  await inc(keys); try { await kv.set(K.rec(cm), rec, { ex: 7 * 86400 }); } catch (e) {}
+}
 const sadd = async (key, ...members) => { const m = members.filter(Boolean).map(String); if (!m.length) return; try { await kv.raw(['SADD', key, ...m]); } catch (e) {} };
 const smembers = async key => { try { return (await kv.raw(['SMEMBERS', key])) || []; } catch (e) { return []; } };
 async function log(e) { try { const l = (await kv.get(K.log)) || []; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.log, l.slice(0, 500)); } catch (x) {} }
@@ -702,16 +709,19 @@ async function land(req, res, url) {
   // 25 nov 2026 (Henkjan: "ik wil mails verzamelen met prop ads . Dus zorg dat je CTA daar top is", keuze "Winactie"): PropellerAds landt niet meer
   // in de winkel maar op de actiepagina (lib/kadolywin.js) met één veld en één knop; de regel van 28 okt (geen tussenpagina) gold de route naar de
   // winkel, deze pagina is zelf het doel. Bots gaan nog steeds door direct() (die weert ze). Na de actie loopt de winkelroute via /api/shop/uit.
-  const winPa = net === 'pa' && !!code && !bot && KW.loopt();
+  // 27 nov 2026 (Henkjan: "Maak ook prop ads camp met dit verhaal van de verlanglijst ."): vl=1 in de link of de campagne in kd:vl:camps landt op de verlanglijst (302 naar /verlanglijst, geen tussenpagina); conversie = eerste zelf gekozen cadeau (vlPaStap)
+  let vlPa = false; if (net === 'pa' && !!code && !bot) { try { vlPa = q.get('vl') === '1' || (!!camp && !!(await kv.raw(['SISMEMBER', 'kd:vl:camps', String(camp)]))); } catch (e) {} }
+  const winPa = net === 'pa' && !!code && !bot && !vlPa && KW.loopt();
   let zegelPa = false; if (winPa && (camp || q.get('zegel') === '1')) { try { zegelPa = q.get('zegel') === '1' || ZEGEL_CAMPS.includes(String(camp)) || !!(await kv.raw(['SISMEMBER', 'kd:zegel:camps', String(camp)])); } catch (e) {} } // 26 nov: spaarzegel-campagnes landen op de zegelpagina (lijst kd:zegel:camps)
-  if (code && !winPa) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
+  if (code && !winPa && !vlPa) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
-    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), Object.assign({ c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, winPa ? { w: 1 } : {}, zegelPa ? { zg: 1 } : {}), { ex: 7 * 86400 }); } catch (e) {} }
+    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), Object.assign({ c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, winPa ? { w: 1 } : {}, zegelPa ? { zg: 1 } : {}, vlPa ? { vl: 1 } : {}), { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
       if (zone) keys.push('sh-' + net + '-z' + zone + '-view'); if (cr) keys.push('sh-' + net + '-a' + cr + '-view'); if (camp) keys.push('sh-' + net + '-k' + camp + '-view');
       if (zone) { keys.push('sh-' + net + '-z' + zone + '-hv'); try { await kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]); await kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)]); } catch (e) {} }
       await inc(keys); await uurTel(kv, net, 'view'); await sadd(K.set('p'), pid, ...meer.map(m => m.id)); if (zone) await sadd(K.set('z', net), zone); if (cr) await sadd(K.set('a', net), cr); if (camp) await sadd(K.set('k', net), camp); }
   }
+  if (vlPa) { res.setHeader('cache-control', 'no-store'); res.setHeader('location', '/verlanglijst?bron=pa&cm=' + code); return res.status(302).end(); }
   const uit = (id, pos) => '/api/shop/uit?p=' + encodeURIComponent(id) + (code ? '&c=' + code : '') + '&pos=' + pos;
   const kaart = (it, i) => `<a class="pc" href="${esc(uit(it.id, 'g' + (i + 1)))}"><img src="${esc(it.img)}" alt="" loading="lazy" width="460" height="460"><span class="pt">${esc(it.t)}</span><span class="pp">${it.pf ? 'vanaf ' : ''}${esc(eur(it.p))}</span></a>`;
   const titel = held.t + ' | Kadoly';
@@ -881,7 +891,7 @@ async function baken(req, res) {
   // "echt mens" op de shop). Bots raken de shop nog steeds niet: doorsturen vraagt een echte tik (zie uitgang).
   // 26 nov (Henkjan: "Zorg voor campagne die veel beter converteert naar adressen !"): op de winactiepagina is doel 1 bij PropellerAds de aanmelding
   // met e-mailadres (zie winAanmeld), zodat het CPA-doel op adressen leert; de eerste aanraking gaat als doel 2 (echt mens).
-  if (e === 'mens' && rec.w && net === 'pa' && rec.c && !rec.pe && !rec.t && PB.pa) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)) + '&goal=2', { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (x) {} rec.pe = Date.now(); keys.push('sh-pa-echt2', 'sh-d' + D8() + '-pa-echt2', 'sh-pa-pbe' + (st || 0)); }
+  if (e === 'mens' && (rec.w || rec.vl) && net === 'pa' && rec.c && !rec.pe && !rec.t && PB.pa) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)) + '&goal=2', { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (x) {} rec.pe = Date.now(); keys.push('sh-pa-echt2', 'sh-d' + D8() + '-pa-echt2', 'sh-pa-pbe' + (st || 0)); }
   else if (e === 'mens' && rec.c && !rec.conv && !rec.t && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'md' ? '&payout=0' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (x) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv'); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
   await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (x) {}
   return res.status(204).end();
@@ -966,6 +976,33 @@ async function zegelBeeld(res, url) {
     hEl('div', { marginTop: 40, background: '#ffffff', borderRadius: 36, padding: '40px 44px', border: '6px solid #111111' }, [0, 1, 2, 3, 4].map(i => hEl('div', { marginLeft: i ? 26 : 0 }, [zegel(i < 3, 132)]))),
     hEl('div', { marginTop: 36, fontSize: 64, fontWeight: 800, color: '#111111' }, '3 van de 5 zegels'),
     hEl('div', { marginTop: 10, fontSize: 40, fontWeight: 500, color: '#111111' }, ZEGEL_REGEL[t])]); }
+  const png = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: OG_FONTS }).arrayBuffer());
+  const out = v === 'icon' ? png : await sharp(png).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
+  res.setHeader('content-type', v === 'icon' ? 'image/png' : 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=604800, s-maxage=604800'); return res.end(out);
+}
+// Beelden voor de PropellerAds-campagne van de verlanglijst (27 nov 2026): links de belofte van de landingspagina, rechts een lijstje met echte
+// Kadoly-producten (eerste regel 'Gekozen'), in de Kadoly-stijl. t = 0..3 (tekst en producten), v=icon voor het icoon. Foto's worden vooraf opgehaald.
+const VL_BEELD = [['Mijn verlanglijstje', 'voor Sinterklaas en Kerst'], ['Geen dubbele cadeaus', 'Je familie ziet wat al gekozen is'], ['Tik aan wat je wilt', 'en stuur je lijst via WhatsApp'], ['Jouw lijst, hun verrassing', 'Zij kiezen, jij ziet niets']];
+async function vlBeeld(res, url) {
+  const v = url.searchParams.get('v') === 'icon' ? 'icon' : 'img', t = Math.max(0, Math.min(3, Number(url.searchParams.get('t')) || 0));
+  const vink = (d, kl) => hEl('div', { width: d, height: d, borderRadius: d, background: kl, alignItems: 'center', justifyContent: 'center' }, [hEl('div', { width: Math.round(d * 0.24), height: Math.round(d * 0.46), borderRight: Math.round(d / 9) + 'px solid #ffffff', borderBottom: Math.round(d / 9) + 'px solid #ffffff', transform: 'rotate(45deg)', marginTop: -Math.round(d * 0.08) })]);
+  let el, W, H;
+  if (v === 'icon') { W = H = 192; el = hEl('div', { width: 192, height: 192, background: '#1D9BF0', flexDirection: 'column', justifyContent: 'center', padding: '0 34px' }, [0, 1, 2].map(i => hEl('div', { alignItems: 'center', marginTop: i ? 16 : 0 }, [i ? hEl('div', { width: 30, height: 30, borderRadius: 30, border: '5px solid #ffffff' }) : vink(30, '#111827'), hEl('div', { marginLeft: 14, width: i === 1 ? 70 : 88, height: 12, borderRadius: 12, background: '#ffffff' })]))); }
+  else {
+    W = 984; H = 656; const cat = await catalog(); const VL = await import('../lib/verlanglijst.js'); let keuze = VL.kiesProducten(cat.items, (trendKadoly && trendKadoly.pids) || [], 24).slice(t * 3, t * 3 + 3); if (keuze.length < 3) keuze = cat.items.filter(i => i.img && i.t && i.vr !== false).slice(t * 3, t * 3 + 3);
+    const fotos = await Promise.all(keuze.map(async it => { try { const r = await fetch('https://keuzehulp.best/api/shop/beeld/' + encodeURIComponent(it.id) + '/icon.jpg', { signal: AbortSignal.timeout(6000) }); if (!r.ok) return null; const b = Buffer.from(await r.arrayBuffer()); const j = await sharp(b).resize(112, 112, { fit: 'cover' }).jpeg({ quality: 85 }).toBuffer(); return 'data:image/jpeg;base64,' + j.toString('base64'); } catch (e) { return null; } }));
+    const kort = s2 => { s2 = String(s2 || ''); return s2.length > 26 ? s2.slice(0, 25).replace(/\s+\S*$/, '') + '…' : s2; };
+    const rij = (it, i) => hEl('div', { alignItems: 'center', padding: '16px 0', borderTop: i ? '2px solid #E6E8EB' : 'none' }, [fotos[i] ? { type: 'img', props: { src: fotos[i], width: 112, height: 112, style: { borderRadius: 16, objectFit: 'cover' } } } : hEl('div', { width: 112, height: 112, borderRadius: 16, background: '#E8F4FD' }),
+      hEl('div', { flex: 1, marginLeft: 20, fontSize: 28, fontWeight: 500, color: '#0B0D12', lineHeight: 1.25 }, kort(it.t)),
+      i === 0 ? hEl('div', { marginLeft: 12, background: '#111827', color: '#ffffff', fontSize: 24, fontWeight: 800, padding: '10px 18px', borderRadius: 999 }, 'Gekozen') : hEl('div', { marginLeft: 12, width: 52, height: 52, borderRadius: 52, border: '4px solid #111827', alignItems: 'center', justifyContent: 'center', fontSize: 36, fontWeight: 800, color: '#111827' }, '+')]);
+    el = hEl('div', { width: W, height: H, background: '#E8F4FD', fontFamily: 'Inter', padding: 44, alignItems: 'center' }, [
+      hEl('div', { width: 380, flexDirection: 'column', paddingRight: 30 }, [
+        hEl('div', { alignItems: 'center' }, [vink(56, '#1D9BF0'), hEl('div', { marginLeft: 14, fontSize: 34, fontWeight: 800, color: '#0B0D12' }, 'Kadoly')]),
+        hEl('div', { marginTop: 34, fontSize: 52, fontWeight: 800, color: '#0B0D12', lineHeight: 1.1 }, VL_BEELD[t][0]),
+        hEl('div', { marginTop: 16, fontSize: 32, fontWeight: 500, color: '#0B0D12', lineHeight: 1.3 }, VL_BEELD[t][1]),
+        hEl('div', { marginTop: 34, background: '#25D366', color: '#0B0D12', fontSize: 28, fontWeight: 800, padding: '18px 26px', borderRadius: 16, alignSelf: 'flex-start' }, 'Stuur via WhatsApp')]),
+      hEl('div', { flex: 1, flexDirection: 'column', background: '#ffffff', borderRadius: 28, padding: '20px 28px', border: '2px solid #E6E8EB' }, keuze.map(rij))]);
+  }
   const png = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: OG_FONTS }).arrayBuffer());
   const out = v === 'icon' ? png : await sharp(png).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
   res.setHeader('content-type', v === 'icon' ? 'image/png' : 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=604800, s-maxage=604800'); return res.end(out);
@@ -1253,7 +1290,7 @@ export default async function handler(req, res) {
         const t = async k => num(await kv.get('c:' + k).catch(() => 0)); const d8 = D8(); return res.status(200).json({ ok: true, open: await t('sh-vl-open'), gemaakt: await t('sh-vl-maak'), viaLijst: await t('sh-vl-maak-van'), bekeken: await t('sh-vl-view'), ikKoop: await t('sh-vl-koop'), gebruik: { zoeken: await t('sh-vl-b-zoek'), categorie: await t('sh-vl-b-cat'), toonAlles: await t('sh-vl-b-alles'), naarChat: await t('sh-vl-b-chat'), uitChatOpLijst: await t('sh-vl-b-chatadd'), lijstGeopend: await t('sh-vl-b-lijst'), whatsapp: await t('sh-vl-b-wa'), kopieer: await t('sh-vl-b-kopieer'), mailOpen: await t('sh-vl-b-mailopen'), gemaild: await t('sh-vl-mail'), uitMailGeopend: await t('sh-vl-mailklik'), geopendDoorFamilie: await t('sh-vl-zie') }, openVia: { menu: await t('sh-vl-open-menu'), voorpagina: await t('sh-vl-open-home'), productpagina: await t('sh-vl-open-product') }, vandaag: { open: await t('sh-d' + d8 + '-vl-open'), gemaakt: await t('sh-d' + d8 + '-vl-maak'), bekeken: await t('sh-d' + d8 + '-vl-view'), menu: await t('sh-d' + d8 + '-vl-open-menu'), voorpagina: await t('sh-d' + d8 + '-vl-open-home'), productpagina: await t('sh-d' + d8 + '-vl-open-product'), gemaild: await t('sh-d' + d8 + '-vl-mail') }, kliksNaarProduct: 'op=orgstand, kanaal whatsapp, post vl<code>', keten: await L.vlStand(kv, 7), tekst: '/api/shop?op=lijst&stand=1&vorm=tekst', proef: '/api/mm/proefstand?site=kadolyvl&vorm=tekst' }); }
       res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
       const ev = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 10); // 27 nov: gebruik van zoeken, categorieën en chat op de verlanglijst
-      if (ev) { if (!bot && /^(zoek|cat|alles|chat|chatadd|wa|kopieer|lijst|mailopen|kies)$/.test(ev)) await inc(['sh-vl-b-' + ev, 'sh-d' + D8() + '-vl-b-' + ev]); return res.status(204).end(); }
+      if (ev) { if (!bot && /^(zoek|cat|alles|chat|chatadd|wa|kopieer|lijst|mailopen|kies)$/.test(ev)) { await inc(['sh-vl-b-' + ev, 'sh-d' + D8() + '-vl-b-' + ev]); if (url.searchParams.get('cm')) await vlPaStap(url.searchParams.get('cm'), ev); } return res.status(204).end(); }
       const ids = String(url.searchParams.get('ids') || '').slice(0, 900); // bewaarde lijst compleet terug: producten buiten de eerste 120 (productpagina, zoeken)
       if (ids) { const cat = await catalog(); return res.status(200).json({ ok: true, items: VL.kaartenVoor(cat.items, ids) }); }
       const zq = String(url.searchParams.get('zoek') || '').slice(0, 60); // zoeken in de hele winkel (lib/verlanglijst.js zoekProducten)
@@ -1278,7 +1315,7 @@ export default async function handler(req, res) {
           const KN = await import('../lib/kadoly-nieuws.js'); if (!(await KN.mailKlaar())) return res.status(503).json({ ok: false, fout: 'Mailen lukt nu even niet. Kopieer de link.' });
           const m = VL.lijstMail({ lijst: oud, items: cat.items, code: bc, sl: bs, host: String(req.headers['x-forwarded-host'] || req.headers.host || 'go.kadoly.com').split(':')[0], bedrijf: KN.KADOLY_BEDRIJF });
           try { await KN.stuurMails([{ to: [mail], subject: m.onderwerp, html: KN.mailSchil(m) }], 'vl-mail-' + bc + '-' + d8 + '-' + n1); } catch (e) { return res.status(502).json({ ok: false, fout: 'Mailen lukt nu even niet. Kopieer de link.' }); }
-          await inc(['sh-vl-mail', 'sh-d' + d8 + '-vl-mail']); if (!oud.pf && VL.pfVan(b.pf)) { oud.pf = vlKern(VL.pfVan(b.pf)); await kv.set('kd:vl:' + bc, oud, { ex: 120 * 86400 }); } await vlEv(oud.pf, 'deel'); return res.status(200).json({ ok: true, code: bc, feest: oud.feest }); }
+          await inc(['sh-vl-mail', 'sh-d' + d8 + '-vl-mail']); if (b.cm) await vlPaStap(b.cm, 'mail'); if (!oud.pf && VL.pfVan(b.pf)) { oud.pf = vlKern(VL.pfVan(b.pf)); await kv.set('kd:vl:' + bc, oud, { ex: 120 * 86400 }); } await vlEv(oud.pf, 'deel'); return res.status(200).json({ ok: true, code: bc, feest: oud.feest }); }
         if (bc && bs) { const oud = await kv.get('kd:vl:' + bc).catch(() => null); if (oud && oud.sl && oud.sl === createHash('sha256').update('vl|' + bs).digest('hex').slice(0, 32)) {
           Object.assign(oud, { pids: x.pids, naam: x.naam || oud.naam }); if (!oud.pf && VL.pfVan(b.pf)) oud.pf = vlKern(VL.pfVan(b.pf)); await kv.set('kd:vl:' + bc, oud, { ex: 120 * 86400 }); if (b.deel) await vlEv(oud.pf, 'deel'); return res.status(200).json({ ok: true, code: bc, feest: oud.feest }); } }
         let code = ''; for (let i = 0; i < 6 && !code; i++) { let c = ''; const r = randomBytes(7); for (let j = 0; j < 7; j++) c += ORG_ABC[r[j] % ORG_ABC.length]; if (!(await kv.get('kd:vl:' + c).catch(() => null))) code = c; }
@@ -1294,7 +1331,8 @@ export default async function handler(req, res) {
       const keuze = VL.kiesProducten(cat.items, (trendKadoly && trendKadoly.pids) || [], 120), add = pidOk(url.searchParams.get('add')); if (add && !keuze.some(i => i.id === add)) { const it = cat.items.find(i => i.id === add); if (it && it.img) keuze.unshift(it); } // add=<pid>: vanaf een productpagina (knop Zet op mijn verlanglijst)
       let chat = ''; try { const KX = await import('../lib/kzux.js'); chat = KX.kzuxBlok({ taal: 'kadoly', site: 'kzuxkadoly', slug: 'verlanglijst', term: 'je verlanglijst', vragen: ['Wat zet ik op mijn lijst onder 25 euro?', 'Iets voor mijn hobby'], geenVolg: true, geenPillflow: true, geenGeheugen: true, kop: 'Weet je het niet? Vraag Kadoly', wie: 'Kadoly', t: { tik: '' }, ph: 'Bijvoorbeeld: ik lees graag, tot 40 euro' }); } catch (e) {} // de lerende chat van Kadoly (Henkjan 27 nov: "EN ook de chat natuurlijk")
       const vb = String(url.searchParams.get('pv') || ''), pf = bot || VL.voorbeeldV(vb) ? null : await vlPf(req, url, res); if (pf && pf.via && /^(menu|home|product)$/.test(bron)) await vlEv(pf, 'tik'); // pv=<a-d>: voorbeeld van een versie, telt niet mee
-      return res.status(200).send(VL.maakPagina({ items: keuze, van: String(url.searchParams.get('van') || '').replace(/[^a-z0-9]/gi, '').slice(0, 8), start: add ? [add] : [], chat, pf, voorbeeld: vb })); }
+      return res.status(200).send(VL.maakPagina({ items: keuze, van: String(url.searchParams.get('van') || '').replace(/[^a-z0-9]/gi, '').slice(0, 8), start: add ? [add] : [], chat, pf, voorbeeld: vb, cm: String(url.searchParams.get('cm') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14) })); }
+    if (op === 'vlbeeld') return await vlBeeld(res, url); // 27 nov: beelden voor de verlanglijst-campagne (icon 192x192, img 984x656)
     if (op === 'zegelbeeld') return await zegelBeeld(res, url); // 26 nov: beelden voor de spaarzegel-campagne (icon 192x192, img 984x656)
     if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
