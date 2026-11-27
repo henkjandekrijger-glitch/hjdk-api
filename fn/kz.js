@@ -1168,6 +1168,9 @@ ${rest.length ? `<h2 class="ov-h">Alle andere keuzehulpen ${esc(naam)}</h2><div 
     if (!slug) return home(res, req);
     if (slug === 'deals') return dealsPage(req, res);
     const item = await getItem(slug, !!process.env.HJDK_TOKEN && url.searchParams.get('preview') === process.env.HJDK_TOKEN); if (!item) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(404).send(shell('Niet gevonden', '', '<div class="hero"><h1>Deze keuzehulp bestaat (nog) niet</h1><p><a href="/keuzehulp">Bekijk alle keuzehulpen →</a></p></div>')); }
+    { const KWL = await import('../lib/kwaliteit.js'); const all0 = await allItems(); const op0 = await KWL.opruimen('kz', item.slug, url.searchParams, s => all0.some(i => i.slug === s)); // opschonen 27 nov 2026 (lib/kwaliteit.js)
+      if (op0 && op0.code === 301) { res.setHeader('location', '/' + op0.naar); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); }
+      if (op0) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(410).send(shell('Opgeheven', '', '<div class="hero"><h1>Deze keuzehulp is opgeheven</h1><p><a href="/keuzehulp">Bekijk alle keuzehulpen →</a></p></div>')); } }
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }

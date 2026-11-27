@@ -253,6 +253,17 @@ export default async function handler(req, res) {
       const m = 'https://keuzehulp.best/chirurgie/sitemap.xml', ingediend = await submitSitemap(prop, m, oidc), info = await sitemapInfo(prop, oidc).catch(e => ({ fout: String(e.message || e) }));
       return res.status(200).json({ ok: true, eigendom: prop, scope: 'https://keuzehulp.best/chirurgie', sitemap: m, ingediend, info });
     }
+    if (op === 'eigenaar') { // 27 nov 2026 (Henkjan: "Moet wel toegang hebben"): zijn eigen Google-account als eigenaar bij de domeinen die het serviceaccount verifieerde, zodat hij en Claude in zijn Chrome Search Console kunnen gebruiken (URL-inspectie, indexering aanvragen). Zonder &doe=1 alleen kijken.
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const { token } = await import('../lib/gsc.js'); const tv = await token(oidc, 'https://www.googleapis.com/auth/siteverification'); const SV = 'https://www.googleapis.com/siteVerification/v1/';
+      const wie = String(url.searchParams.get('wie') || 'henkjandekrijger@gmail.com').toLowerCase(); if (!/^[a-z0-9._%+-]+@(gmail\.com|adsfair\.xyz|yoo\.rs)$/.test(wie)) return res.status(400).json({ ok: false, fout: 'alleen eigen adressen' });
+      const doel = String(url.searchParams.get('sites') || 'keuzehulp.best,whichtobuy.best,kaufberater.best').split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
+      const l = await fetch(SV + 'webResource', { headers: { authorization: 'Bearer ' + tv } }); const lj = await l.json().catch(() => ({})); const items = lj.items || [];
+      const uit = {}; for (const d of doel) { const it = items.find(i => i.site && (i.site.identifier === d || i.site.identifier === 'https://' + d + '/' || i.site.identifier === 'https://www.' + d + '/'));
+        if (!it) { uit[d] = { gevonden: false }; continue; } const ow = Array.from(new Set([...(it.owners || []), wie]));
+        if (url.searchParams.get('doe') !== '1') { uit[d] = { gevonden: true, id: it.site.identifier, eigenaren: (it.owners || []).length, alEigenaar: (it.owners || []).includes(wie) }; continue; }
+        const u = await fetch(SV + 'webResource/' + encodeURIComponent(it.id), { method: 'PUT', headers: { authorization: 'Bearer ' + tv, 'content-type': 'application/json' }, body: JSON.stringify({ site: it.site, owners: ow }) }); const uj = await u.json().catch(() => ({})); uit[d] = { status: u.status, alEigenaar: (uj.owners || []).includes(wie), fout: u.ok ? null : uj }; }
+      return res.status(200).json({ ok: l.ok, wie, resultaat: uit, alle: items.map(i => i.site && i.site.identifier) }); }
     if (op === 'verifieer') { // 30 okt (Henkjan: "optimaliseer extreem voor SEO en LLM en Google shopping"): kadoly.com als domein in Search Console via een DNS-TXT, daarna Merchant Center-website claimen. Stap 1 zonder &doe=1: geeft de TXT-regel. Stap 2 met &doe=1: verifieert en voegt sc-domain toe.
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const site = String(url.searchParams.get('site') || '').toLowerCase(); if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(site)) return res.status(400).json({ ok: false, fout: 'site=domein' });

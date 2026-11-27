@@ -323,6 +323,9 @@ export default async function handler(req, res) {
   const it = all.find(i => i.slug === path.slice(1));
   if (!it) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(shell(m, { title: '404: ' + m.name, desc: '', path: '/', body: `<h1>404</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); }
   if (it.tool) { res.setHeader('location', 'https://' + m.host + '/' + it.slug); return res.status(308).end(); }
+  { const KWL = await import('../lib/kwaliteit.js'); const op0 = await KWL.opruimen(m.id, it.slug, q, s => all.some(i => i.slug === s)); // opschonen 27 nov 2026 (lib/kwaliteit.js)
+    if (op0 && op0.code === 301) { res.setHeader('location', 'https://' + m.host + '/' + op0.naar); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); }
+    if (op0) { res.setHeader('x-robots-tag', 'noindex'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(410).send(shell(m, { title: '410: ' + m.name, desc: '', path: '/', body: `<h1>${m.id === 'de' ? 'Dieser Ratgeber wurde entfernt' : 'This guide has been removed'}</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); } }
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
