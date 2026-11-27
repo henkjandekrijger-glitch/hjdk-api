@@ -3,7 +3,7 @@
 Eerste versie: vrijdag 20 november 2026 door chat-taniakross. Laatst bijgewerkt: vrijdag 27 november 2026, 12:30 UTC, door tk-chat2. Begin bij deel 0.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
 
-## 0. START HIER (27 nov 2026, 12:30 UTC, door tk-chat2)
+## 0. START HIER (27 nov 2026, 13:10 UTC, door tk-chat2)
 
 Dit deel gaat voor op alles eronder. Alleen dit deel lezen: `/api/wtb?op=tkoverdracht&deel=kort`.
 
@@ -26,15 +26,15 @@ Henkjan 27 nov: "goede overdracht die chat staat nu uit moet allemaal centraal i
 | Lijst | simpele-site `/api/lijst?a=stand` | vanzelf |
 | Campagnes van vandaag | kaart Campagnes op het dashboard | vanzelf |
 
-### Stand 27 nov 12:30 UTC
+### Stand 27 nov 13:10 UTC
 
 - Lijst 80 van 1.000. Nodig rond 27 per dag tot 31 dec; er komen er rond 7 per dag bij.
 - PropellerAds: alleen 12193513 loopt, bod $0,06, dagvenster 07:00 tot 22:00 NL (beide 27 nov hersteld door tk-chat). Oordeel 28 nov: levert hij weer rond 10 adressen per dag onder $0,06.
 - Mailmind tk-mailchimp: 80 per dag, een stop remt niet meer, bounces wel. Eerste leermoment (94 mails): gmail en hotmail 30 verstuurd, 5 ja, 1 stop, 0 bounces; eigen domeinen 29, 4 ja, 10 stops, 2 bounces; provider 23, 0 ja, 2 bounces; score 3: 18 verstuurd, 0 ja, 3 bounces. Onderwerp: nog geen winnaar (o0 7 ja op 51, o1 4 op 43).
 - Mailmind slimmer en veilig voor Gmail (Henkjans ja, 27 nov): bakkeuze per kenmerk met bounce en stop erin, de bank en de dagrem. Code lib/mailmind-bak.js, uitleg in sectie 10. Live sinds 27 nov rond 13:00 UTC (Henkjan: "ja push").
 - Vercel simpele-site: NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin (27 nov, zelfde adressen als de code al gebruikte). Ze gelden vanaf de eerstvolgende productie-uitrol.
-- Dagartikel 27 nov: de Claude-taak leverde niet. tk-chat2 schreef "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json), als voorbeeld uitgerold (dpl_HHhjJ7ur4zJ7NqtkrKA52dwr6GuZ, geen productie) en aan Henkjan getoond. Live na zijn ja; anders plaatst de terugval om 15:07 UTC een eigen artikel en wordt dit het stuk van de volgende dag.
-- **Twee voorbeelden van simpele-site wachten op Henkjans ja, gemaakt door twee chats.** (a) Artikel 27 nov: dpl_HHhjJ7ur4zJ7NqtkrKA52dwr6GuZ, nieuw bestand data/mm/2026-11-27-klankschalen.json. (b) Google-weergave van de homepage, van tk-chat op Henkjans aanwijzingen: dpl_CKWGXPCWquzGUk2nENFaTd4s5FGk, nieuw api/_google.js (sha daa2ef6ea214405d2cae1b20f7207e143215845a) en gewijzigd api/page.js (sha c91810eac140d3d9563e889de46aef232a9fd63c); uitleg in het werklog van 27 nov 12:08 UTC. **Live zetten doe je nooit op de bestandslijst van een voorbeeld:** neem de lijst van de laatste productie-uitrol en zet alleen de bestanden van dat ene voorbeeld erbij (per sha, uit list_deployment_files van het voorbeeld). Anders haalt het ene voorbeeld het andere weer weg. Niet promoten: een voorbeeldbouw mist UPLOAD_KEY. Na de Google-weergave: herindexering aanvragen in Search Console en de proef melden in ZICHT.
+- **Live gezet 27 nov 12:57 UTC in één uitrol (dpl_PLxypyXyKihPEj8rxNwvSbqVLwC9), op Henkjans "ja en ja":** het artikel van 27 nov "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json, geschreven door tk-chat2 omdat de Claude-taak niet leverde) en de Google-weergave van de homepage van tk-chat (api/_google.js en api/page.js: omschrijving van 151 tekens, ProfilePage, data-nosnippet, boeken via Dorien). Nagekeken: de homepage is regel voor regel gelijk aan het goedgekeurde voorbeeld, de stand toont het artikel van vandaag. Met deze uitrol gelden ook de drie variabelen. Nog te doen voor Google: herindexering van de homepage aanvragen in Search Console en de proef melden in ZICHT.
+- **Regel voor elke uitrol van simpele-site:** neem de bestandslijst van de laatste productie-uitrol en zet alleen je eigen bestanden erbij (per sha of inline). Nooit de lijst van een voorbeeld: dan haalt het ene voorbeeld het andere weer weg. Niet promoten: een voorbeeldbouw mist UPLOAD_KEY. Bestanden die al in een voorbeeld zaten kun je per sha meenemen.
 
 ### Alles wat vanzelf draait
 
@@ -46,12 +46,14 @@ Dezelfde lijst staat op het dashboard onder "Draait vanzelf" (veld taken van pro
 | Ochtendverslag | Vercel-cron simpele-site, `/api/rapport` | 11:00 UTC | mail bij Tania en Henkjan | runtime-fouten van simpele-site (get_runtime_errors) |
 | Weekmail-voorbeeld | Vercel-cron simpele-site, `/api/nieuwsbrief` | 14:30 UTC, alleen als de vorige mail 6 dagen oud is en er een nieuwe aflevering of gast is | voorbeeld bij Tania en Henkjan; naar de lijst pas na Nu versturen | NB_VOORBEELD_AAN nakijken, sectie 6 |
 | Dagartikel | Claude-taak trig_01GBsTSx84bciUTnNr7qnpe1, in het andere Claude-account | 10:37 UTC | `artikelVandaag` in `/api/mmart?op=stand`; regel tk-dagartikel | terugval hieronder; of een chat voert Taak A uit |
+| Dagartikel, reserve | Claude-taak trig_01Enpb2outQNGeq1zYr6bJ4h, in het tweede account (dat van tk-chat2) | 11:37 UTC | `artikelVandaag`; regel tk-dagartikel | stopt zelf als er al een artikel staat |
 | Dagartikel terugval | Vercel-cron simpele-site, `/api/mmart?op=dag` | 15:07 UTC | regel tk-dagartikel-gateway | wachtrij op? Vul WACHTRIJ in api/mmart.js aan |
-| TK dagronde adressen | Claude-taak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3, in het andere Claude-account | 08:17 Curaçao (12:17 UTC) | regel tk-dagronde van vandaag | geen terugval: een chat voert Taak B uit |
+| TK dagronde adressen | Claude-taak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3, in het andere Claude-account | 08:17 Curaçao (12:17 UTC) | regel tk-dagronde van vandaag | de reserve hieronder |
+| TK dagronde, reserve | Claude-taak trig_0119rmetMryqU13DoAEU7e6X, in het tweede account (dat van tk-chat2) | 09:17 Curaçao (13:17 UTC) | regel tk-dagronde van vandaag | stopt zelf als de ronde al gedaan is; anders voert een chat Taak B uit |
 | Budgetwacht en uurwacht | Vercel-cron propellerads-mcp en Clickmind | elk uur | kaart Campagnes op het dashboard | zie CLAUDE.md |
 | Tellers en logboek van de site | Vercel-cron simpele-site, `/api/rollup` en `/api/logboek?scan=1` | elke 15 minuten | ochtendverslag heeft cijfers | runtime-fouten |
 
-De twee Claude-taken hangen aan één account. Dit account (tk-chat2) kan ze niet zien of wijzigen. Draait dat account niet (limiet bereikt, uitgezet), dan valt de dagronde stil en schrijft de terugval het artikel. Voorstel aan Henkjan (27 nov, wacht op zijn ja): dezelfde twee taken ook in het tweede account, een uur later, met als eerste stap "staat het werk van vandaag al in het werklog of in de stand, stop dan". Zo doet het niet uit welk account loopt en gebeurt er niets dubbel.
+De twee Claude-taken staan sinds 27 nov in beide accounts (Henkjan: "Ja"). In het tweede account lopen ze een uur later en beginnen ze met een stopregel: staat het artikel van vandaag er al, of staat er vandaag al een regel tk-dagronde in het werklog, dan stoppen ze zonder iets te doen. Zo maakt het niet uit welk account loopt en gebeurt er niets dubbel. De taken in het tweede account dragen alleen de verwijzing naar Taak A en Taak B hieronder. Een account kan de taken van het andere niet zien of wijzigen.
 
 ### Opdrachten van de Claude-taken (dit is de bron)
 
@@ -59,7 +61,7 @@ Zet in de geplande taak zelf alleen de verwijzing, zodat elk account dezelfde te
 
 > Lees met web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht&deel=kort en voer Taak A (of Taak B) precies uit. Nederlands, kort, zuinig met tokens. Vraag niets; kies bij twijfel de veiligste optie.
 
-De taken in het andere account dragen nog hun eigen tekst van 26 nov. Wie daar bij kan, vervangt die door de verwijzing.
+De taken in het eerste account (10:37 UTC en 08:17 Curaçao) dragen nog hun eigen tekst van 26 nov en hebben geen stopregel. Wie daar bij kan, vervangt die door de verwijzing en zet de stopregel erin.
 
 **Taak A: dagartikel Muziek als medicijn**
 
@@ -92,11 +94,17 @@ Lees eerst de skill campagnes-henkjan (tool campagne_skill van de PropellerAds-c
 
 Niets van 27 nov staat nog open: om 12:53 UTC zei Henkjan ja op alle vier (pushen naar hjdk-api, artikel live, Google-weergave live, de twee taken ook in het tweede account). De afloop staat in het werklog van tk-chat2. Nieuwe vragen aan Henkjan staan als planregel "Wacht op Henkjan:" op het dashboard.
 
-Loopt nog (27 nov, Henkjan bij het aanmeldvenster "Hoor het als Tania weer optreedt"): "Moet ook gaan over podcast etc . Om de andere week een volgende . En kijk HIER naar de laatste . Kijk of luister ." De teksten staan in api/lijst.js (MAIL, m1 tot m4); eerst als voorbeeld laten zien, dan live.
+Loopt nog (27 nov, Henkjan bij het aanmeldvenster "Hoor het als Tania weer optreedt", tekst m4): "Moet ook gaan over podcast etc . Om de andere week een volgende . En kijk HIER naar de laatste . Kijk of luister ." Voorstel van tk-chat2, aan Henkjan getoond, live na zijn ja:
+
+- api/lijst.js, MAIL.m4 wordt: kicker "Podcast en concerten", titel "Hoor het als Tania iets nieuws heeft", tekst "Om de week een nieuw gesprek in haar podcast A Kross …. En haar concerten en voorstellingen, zodra ze bekend zijn." De zin "Afmelden kan altijd met één klik." gaat uit de tekst van m3, m4 en p2: hij staat al in de kleine regel eronder.
+- Onder de tekst van elk mailvenster een link naar de nieuwste aflevering: "Kijk of luister nu: Tania met <laatste gast>" naar /podcast/<gast>. De server geeft hem mee in a=kies als `laatst: {tekst, href}` (uit podcastStand: `laatsteHref`), niet bij betaald verkeer of het videovenster (daar telt alleen het adres). De browser (lijst.js, kaart) zet hem als `p.tkl__l` onder de tekst en telt de klik (klik, k lijst, x laatste).
+- In hetzelfde bestand gaat het antwoordadres naar de variabele: `const ANTWOORD = process.env.LIJST_ANTWOORD || undefined`. Daarna staat er geen persoonlijk adres meer in api/lijst.js en kan het inline uitgerold worden.
 
 ### Eerstvolgende stappen, op volgorde
 
-1. Mailmind-bakkeuze live, daarna proefronde (`&ronde=1&droog=1`: bijna alles naar gmail en hotmail, niets naar score 3). Oordeel na 100 mails naar gratis adressen: ja boven 12%, bounces onder 3%.
+1. Mailmind-bakkeuze is live (proefronde 27 nov 13:02 UTC: 83% naar gmail en hotmail, niets naar score 3, bank 0:r3). Oordeel na 100 mails naar gratis adressen: ja boven 12%, bounces onder 3%.
+1b. Herindexering van de homepage aanvragen in Search Console en de Google-weergave als proef melden in ZICHT.
+1c. Aanmeldvenster: na Henkjans ja de nieuwe tekst en de link naar de nieuwste aflevering live (zie hierboven).
 2. 28 nov: levert 12193513 weer rond 10 adressen per dag onder $0,06.
 3. Adressen uit api/rapport.js, api/lijst.js en api/_push.js naar de variabelen (RAPPORT_AAN, LIJST_ANTWOORD). Daarna kunnen die bestanden inline uitgerold worden: nieuw ochtendverslag, Barcelona-embed naar youtube.com, venster naar de Mailmind-modal.
 4. De rest staat in sectie 11.
