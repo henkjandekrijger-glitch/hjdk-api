@@ -246,6 +246,8 @@ Plak dit als eerste bericht:
 
 ## Logboek (nieuwste bovenaan)
 
+- 2026-11-27, content-oppakker (taak obiwrz, branch claude/boeken-clickmind-meetbaar, niet op main): stockingbooks.com en lastingchange.works in lib/distlus.js DOELEN, zodat op=distmaak voor een pin of artikelkop een korte link <domein>/m/<code> geeft (rewrite /m/:code zonder host-voorwaarde bestond al, live gecontroleerd: beide domeinen geven op een onbekende code de 404 van de klikroute). UTM blijft, mmc per klik erbij. Mail- en postcodes kunnen niet meer botsen. Paspoort: onbekende uitkliks tellen niet meer als 0 (alleen vertoningen = geen meting). Test scripts/test-boeken-clickmind.mjs. Pinmotor nog niet omgezet: wacht op Henkjans ja met docs/voorstel-boeken-clickmind.md.
+
 - 2026-11-23, content-Codex: Henkjan geeft met 'yes' akkoord op de getoonde Amazonknoppen. Uitrol van precies die versie via PR #11; code en bestaande /go-meting blijven gelijk aan de gecontroleerde preview. Productie en beide gezondheidscontroles worden na uitrol gecontroleerd; geen gemeten klik- of verkoopwinst geclaimd.
 
 - 2026-11-23, content-Codex: op Henkjans verduidelijking 'Amazonknoppen prominenter' een visueel voorstel gemaakt. Gedeelde zwarte Amazonknop met pijl, minimumhoogte 56px, volle breedte op mobiel en een expliciete knop op iedere boekkaart. Dezelfde stijl werkt automatisch door in nieuwe boekblokken en LC-artikelen; PDF-knop en /go-meetroute blijven behouden. Geen klikvolumes als publiek bewijs getoond. Dit is een ontwerpwijziging, geen bewezen klik- of verkoopwinst. Eerst preview, nog niet op main/live.
