@@ -122,4 +122,71 @@ await P.stand({ vers: true }); const pc = await P.poortCheck('https://go.kadoly.
 ok(pc.dicht === true && pc.kliks === 1500 && pc2.dicht === false, 'uitkomstpoort: bestemming zonder uitkomst is dicht, een pagina met aanmeldingen open');
 const blok = await P.dashBlok(); ok(blok && /stukken met paspoort/.test(blok.regels[0]), 'dashboardregel: ' + blok.regels[0]);
 if (process.env.TOON) { console.log('\n' + (await P.briefing({ medium: 'x', project: 'nexy' })).tekst + '\n\n' + (await P.briefing({ medium: 'propeller', project: 'wam', doel: 'aanmelding' })).tekst + '\n\n' + P.standTekst(await P.stand({ vers: true }))); }
-await kv.raw(['FLUSHDB']); process.exit(process.exitCode || 0);
+
+// ---- stap 7 (27 nov 2026): pins, modal, paginaproef, sneller uit, opruimen, native en trend, voorstel ----
+await kv.set('bs:pinlog', [{ id: '20261125-we-dad-syxw', haak: 'we-dad', a: 'B0DK3CSYXW', post: 'p1', t: iso(nu - 2 * DAG), m: { klik: 4, saves: 2, imp: 300 } }, { id: '20261125-bestaatniet', haak: 'geen-haak', a: 'B0DK3CSYXW', t: iso(nu - 2 * DAG) }]);
+await kv.set('hjdk:pin-direct:records', { 'nl:airfryer:0': { status: 'published', at: nu - 2 * DAG, title: 'Welke airfryer past bij jou?', target: 'https://keuzehulp.best/airfryer?utm_source=pinterest', board: 'Keuzehulpen · Keuken', pinId: '123' }, 'nl:stofzuiger:1': { status: 'uncertain', at: nu, title: 'x' } });
+await kv.del('ps:stand'); const r7 = await P.ronde({});
+ok(r7.bronnen.pins && r7.bronnen.pins.stukken === 2 && !r7.bronnen.pins.fout, 'ronde laadt 2 pins (boek en keuzehulp; onbekende haak en onbevestigde pin niet) ' + JSON.stringify(r7.bronnen.pins));
+const pb = await P.lees('pin:bs-20261125-we-dad-syxw'), pk = await P.lees('pin:kz-nl.airfryer.0');
+ok(pb && pb.medium === 'pinterest' && pb.soort === 'pin' && pb.voor.project === 'content' && pb.cijfers.kliks === 4 && pb.cijfers.vert === 300 && /dad jokes/i.test(pb.inhoud.titel) && pb.voor.pagina === 'stockingbooks.com/white-elephant-gifts-under-10', 'boekpin: tekst uit de haak, cijfers van Pinterest');
+ok(pk && pk.voor.project === 'keuzehulpen' && pk.inhoud.titel.startsWith('Welke airfryer') && pk.cijfers == null && P.meet(pk) === null, 'keuzehulp-pin: staat in het geheugen, zonder cijfers geen meting (telt niet als nul)');
+const md = P.stukkenUitModalData([{ site: 'kadoly', taal: 'nl', domeinen: ['kadoly.com'], armen: [{ id: 'ctrl', soort: 'geen' }, { id: 'mail1', soort: 'email', titel: 'Elke week een cadeautip', tekst: 'Eén mail per week', knop: 'Stuur mij tips' }], varianten: { mail1: [{ vid: 'v1', titel: 'Nooit meer een cadeau vergeten', tekst: 'Wij denken mee', knop: 'Ja graag' }, { vid: 'v2', uit: true, titel: 'weg' }] } }],
+  { 'kadoly|mail1~v0': { toon: 500, klik: 40, aanmelding: 5 }, 'kadoly|mail1~v1': { toon: 500, klik: 60, aanmelding: 20 }, 'kadoly|mail1~v2': { toon: 90 } });
+ok(md.length === 2 && md[0].id === 'modal:kadoly.mail1.v0' && md[1].doel === 'aanmelding' && md[1].cijfers.aanmelding === 20 && md[1].ouder === 'modal:kadoly.mail1' && md[1].cta === 'Ja graag', 'modal: elke getoonde variant van een arm is een stuk met doel aanmelding (uitgezette variant niet)');
+const pf = P.stukkenUitProefStand({ ok: true, site: 'wmn', waarde: { tik: 1, deel: 20, meld: 40, aanmelding: 100 }, factoren: [{ id: 'lknop', pagina: 'voorkant', wat: 'Knop van het aansluitblok', versies: [{ id: 'a', naam: 'Ik doe mee', gezien: 400, stappen: { tik: 50, aanmelding: 12 } }, { id: 'b', naam: 'Sluit me aan', gezien: 0, stappen: {} }] }, { id: 'vkop', uit: true, versies: [{ id: 'a', naam: 'Dit zoeken we uit.', gezien: 900, stappen: {} }] }] });
+ok(pf.length === 1 && pf[0].id === 'proef:wmn.lknop.a' && pf[0].project === 'wam' && pf[0].doel === 'aanmelding' && pf[0].cijfers.vert === 400 && pf[0].cijfers.aanmelding === 12 && pf[0].cijfers.kliks === 50 && pf[0].soort === 'paginakop', 'paginaproef: versie als stuk met de diepste stap als doel (onderdeel dat uit staat niet)');
+for (const b of [...md, ...pf]) await P.zet(b);
+const om = P.oordelen(await P.alle({})).find(x => x.id === 'modal:kadoly.mail1.v1');
+ok(om && om.oordeel && /aanmeldingen tegen/.test(om.oordeel.waarom || '') && om.oordeel.uitslag === 'raak', 'modalvariant telt tegen zijn eigen arm: ' + JSON.stringify(om && om.oordeel));
+
+// sneller uit: hard mis binnen de eigen campagne, liep de laatste 3 dagen nog
+const st7 = await P.stand({ vers: true });
+ok(st7.uit.length >= 1 && st7.uit.every(x => x.net === 'propeller' && /^\d+$/.test(x.campagne) === true && x.index <= 50 && x.verwacht >= 3 && x.bezoeken >= 100 && x.sinds) && !st7.uit.some(x => x.advertentie === 'a1'), 'uit-lijst: alleen advertenties die hard mis zijn ' + JSON.stringify(st7.uit.map(x => x.advertentie + ' ' + x.conversies + '/' + x.verwacht)));
+const ua = await P.uitAds('propeller'); ok(ua.length === st7.uit.length && ua[0].campagne && ua[0].advertentie && ua[0].bron === 'geheugen' && (await P.uitAds('mondiad')).length === 0, 'uitAds: zelfde vorm als de lijst van de vroege voorspeller, per netwerk');
+const oudeAds = P.oordelen(await P.alle({})).map(x => x.bron === 'ad' ? Object.assign({}, x, { laatst: dag(nu - 9 * DAG) }) : x);
+ok(P.uitKandidaten(P.oordelen(oudeAds)).length === 0, 'uit-lijst: een advertentie die al 9 dagen niet meer loopt staat er niet op');
+ok(/OP DE UIT-LIJST VANUIT HET GEHEUGEN/.test(P.standTekst(st7)) && /Gaat uit/.test(P.standHtml(st7, 'body{}')) && (await P.dashBlok()).regels.some(x => /uit-lijst/.test(x)), 'uit-lijst staat op de pagina, in de tekst en op het dashboard');
+const lj = await P.lijst({ project: 'kadoly', regel: true });
+ok(lj.ok && lj.stukken.some(x => x.id === 'ad:propeller:c2' && x.regel.includes('prijs in de advertentie') && x.campagne === 'camp:propeller:333') && !lj.stukken.some(x => x.id === 'ad:propeller:c1'), 'lijst: stukken tegen een vaste regel opvragen');
+
+// opruimen: uit een bron, binnen het laadvenster, 14 dagen niet meer gezien
+await P.zet({ id: 'post:dddddddddd01', bron: 'post', medium: 'x', project: 'nexy', tekst: 'Bestaat niet meer in de bron', t: iso(nu - 6 * DAG) }); await P.zet({ id: 'post:dddddddddd02', bron: 'post', medium: 'x', project: 'nexy', tekst: 'Nog kort geleden gezien', t: iso(nu - 6 * DAG) });
+await kv.raw(['HSET', 'ps:gezien', 'post:dddddddddd01', dag(nu - 20 * DAG), 'post:dddddddddd02', dag(nu - 5 * DAG)]);
+ok((await P.ruimOp({ bronnen: { posts: { stukken: 0, fout: 'bron stuk' } } })).weg === 0 && !!(await P.lees('post:dddddddddd01')), 'opruimen: een bron die niet gelezen kon worden ruimt niets op');
+const ro = await P.ruimOp({ bronnen: { posts: { stukken: 13 } } });
+ok(ro.weg === 1 && !(await P.lees('post:dddddddddd01')) && !!(await P.lees('post:dddddddddd02')) && !!(await P.lees(h2.id)) && !!(await P.lees('modal:kadoly.mail1.v0')), 'opruimen: alleen het stuk dat 14 dagen niet meer in zijn bron stond; met de hand gemeld en modal blijven');
+
+// native en trend
+const TR = await import('../lib/trend.js');
+ok(!(await TR.zetTrend({ medium: 'x', items: [{ wat: 'kort', bron: 'https://x.com/a' }] })).ok && !(await TR.zetTrend({ medium: 'x', items: [{ wat: 'Threads waarin iemand een rekening laat zien doen het goed', bron: 'gehoord' }] })).ok, 'trend zonder inhoud of zonder bron geweigerd (niets verzinnen)');
+const tz = await TR.zetTrend({ medium: 'x', wie: 'test', items: [{ wat: 'Posts die openen met een concreet bedrag dat iemand verloor krijgen deze week de meeste reposts', vorm: 'open met het bedrag, daarna één zin wat er gebeurde', voorbeeld: 'Lost a $2k job to voicemail.', bron: 'https://example.com/x-trends-week-48' }] });
+const tx = await TR.leesTrend('x');
+ok(tz.ok && tz.erbij === 1 && tx.vers && tx.items.length === 1 && tx.items[0].vorm.startsWith('open met'), 'trend melden en lezen: vers');
+await kv.set('ps:trend:bluesky', { medium: 'bluesky', items: [{ id: 'o1', wat: 'Oude trend van vijf dagen terug op Bluesky', bron: 'https://example.com/b', t: iso(nu - 5 * DAG) }, { id: 'o2', wat: 'Trend van twintig dagen terug', bron: 'https://example.com/c', t: iso(nu - 20 * DAG) }] });
+const tb = await TR.leesTrend('bluesky'); ok(!tb.vers && tb.items.length === 1, 'trend ouder dan 3 dagen is niet vers, ouder dan 14 dagen vervalt');
+const tv = await TR.zetTrend({ medium: 'tiktok', wie: 'test', items: [{ wat: 'Unboxing zonder stem met alleen geluid van papier loopt extreem goed bij cadeaus', maat: '2,1 mln weergaven in 5 dagen', voorbeeld: 'https://www.tiktok.com/@x/video/1', bron: 'https://example.com/tiktok-trends' }] });
+const tt = await TR.leesTrend('tiktok'); ok(tv.ok && tv.videomind === 1 && tt.vers && tt.items[0].maat.startsWith('2,1 mln') && (await VM.trends({ platform: 'tiktok' })).trends.length === 1, 'videotrend met een getal gaat naar de trendscan van Videomind en staat in de briefing van Clickmind');
+const bx7 = await P.briefing({ medium: 'x', project: 'nexy' }), bb7 = await P.briefing({ medium: 'bluesky', project: 'nexy' }), bp7 = await P.briefing({ medium: 'propeller', project: 'wam', doel: 'aanmelding' });
+ok(/NATIVE EN TREND/.test(bx7.tekst) && /WAT NU GROOT IS OP X/.test(bx7.tekst) && /concreet bedrag/.test(bx7.tekst) && bx7.vast.some(x => x.id === 'native-en-trend'), 'briefing: vaste regel native en trend, met wat nu groot is op X');
+ok(/DE TRENDKENNIS VAN BLUESKY IS OUD/.test(bb7.tekst) && /op=trend/.test(bb7.tekst) && /het best liep/.test(bp7.tekst) && !/op=trend&j/.test(bp7.tekst), 'briefing: oude trendkennis zegt eerst zoeken en melden; een advertentienetwerk gebruikt de eigen winnaars');
+const dn = await D.maak({ project: 'nexy', kanaal: 'x', plek: 'eigen account', onderwerp: 'gemiste oproep', soort: 'tekst-link', doel: 'https://nexy.now/missed-calls', doelsoort: 'store', variant: 'native', tekst: 'Your phone rang 4 times while you were on a job. Nexy answered all 4.' });
+ok(dn.ok && /trend-alternatief/.test(dn.let) && dn.let.includes('paar=' + dn.id) && dn.trend && dn.trend.vers === true, 'distmaak: een native post krijgt de vraag om het trend-alternatief, met de trendkennis erbij');
+const dt = await D.maak({ project: 'nexy', kanaal: 'x', plek: 'eigen account', onderwerp: 'gemiste oproep', soort: 'tekst-link', doel: 'https://nexy.now/missed-calls', doelsoort: 'store', variant: 'trend', trend: 'openen met een concreet bedrag', paar: dn.id, tekst: 'Lost a $2k job to voicemail last week. Now Nexy picks up.' });
+const sn = await P.lees('post:' + dn.id), stt = await P.lees('post:' + dt.id);
+ok(dt.ok && !/trend-alternatief/.test(dt.let || '') && stt.variant === 'trend' && stt.trend === 'openen met een concreet bedrag' && stt.paar === 'post:' + dn.id && sn.variant === 'native' && sn.paar === 'post:' + dt.id, 'tweeling: native en trend zijn aan elkaar gekoppeld in het geheugen');
+const dt2 = await D.maak({ project: 'nexy', kanaal: 'x', doel: 'https://nexy.now/missed-calls', variant: 'trend', tekst: 'Zonder trend en zonder paar.' }); ok(/variant=trend zonder trend=/.test(dt2.let) && /geen paar=/.test(dt2.let), 'trend-alternatief zonder trend of paar krijgt een melding');
+const twS = (id, variant, paar, extra = {}) => Object.assign({ id, betaald: false, bron: 'post', dag: '2026-12-01', status: 'geplaatst', variant, paar }, extra);
+const tw = P.tweeling([twS('n1', 'native', 't1'), twS('t1', 'trend', 'n1'), twS('n2', 'native', ''), twS('n3', 'native', '', { dag: '2026-11-20' }), twS('m1', 'native', '', { bron: 'mail' }), twS('a1', 'native', '', { betaald: true })]);
+ok(tw.sinds === 3 && tw.trend === 1 && tw.met === 1 && tw.zonder === 1, 'tweeling-telling: alleen onbetaalde stukken sinds de regel, zonder mail ' + JSON.stringify(tw));
+const TK = await import('../lib/taken.js'), open7 = async () => (await TK.leesTaken(kv)).taken.filter(x => /^Trendcheck voor Clickmind/.test(x.tekst));
+ok((await open7()).length === 1 && /Bluesky/.test((await open7())[0].tekst), 'de ronde zet zelf één trendtaak voor de platforms zonder verse trendkennis');
+await kv.del('ps:trendtaak'); const tk1 = await TR.trendTaak(['x', 'bluesky']);
+ok(tk1.oud.join() === 'bluesky' && tk1.taak === 'staat al open' && (await open7()).length === 1, 'trendtaak: geen tweede taak zolang er één open staat ' + JSON.stringify(tk1));
+
+// voorstel: Henkjan ziet het eerst; een tekst met prijs wordt geweigerd; plaatsen kan alleen na ja
+const vz = await TR.zetVoorstel({ titel: 'Kadoly: zonder prijs naast met prijs', project: 'kadoly', medium: 'propeller', uitleg: 'Proef.', items: [{ campagne: '333', campagneNaam: 'SHOP-LUS PAKKET', oudId: 'ad:propeller:c2', oudTitel: 'Houten kaart, €99,95', titel: 'De kaart waar hij uren naar kijkt', tekst: 'Houten wereldkaart voor aan de muur', cta: 'Bekijk hem' }, { campagne: '333', campagneNaam: 'SHOP-LUS PAKKET', titel: 'Nu voor €89,95', tekst: 'Morgen in huis' }] });
+ok(vz.ok && vz.stukken === 1 && vz.geweigerd.length === 1 && /prijs/.test(vz.geweigerd[0]) && /\/voorstel\?id=/.test(vz.link), 'voorstel: tekst met prijs of levertijd geweigerd, de rest staat op een link');
+ok(!(await TR.besluitVoorstel(vz.id, 'geplaatst')).ok && (await TR.besluitVoorstel(vz.id, 'ja', { wie: 'henkjan' })).ok && (await TR.besluitVoorstel(vz.id, 'geplaatst')).ok && (await TR.leesVoorstel(vz.id)).status === 'geplaatst', 'voorstel: plaatsen kan alleen na Henkjans ja');
+const vv = await TR.leesVoorstel(vz.id); ok(/De kaart waar hij uren naar kijkt/.test(TR.voorstelHtml(vv, 'body{}')) && /Houten kaart, €99,95/.test(TR.voorstelHtml(vv, 'body{}')) && /NIEUW: De kaart/.test(TR.voorstelTekst(vv)) && /Voorstellen/.test(TR.voorstelHtml(null, 'body{}', [vv])), 'voorstel: pagina toont nieuw naast nu, en de lijst');
+if (!process.env.LAAT) await kv.raw(["FLUSHDB"]); process.exit(process.exitCode || 0);

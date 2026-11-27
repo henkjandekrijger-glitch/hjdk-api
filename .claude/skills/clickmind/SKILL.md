@@ -18,7 +18,23 @@ Henkjan 27 nov 2026: "Clikmind moet altijd medium meenemen waarop en waarvoor en
 - Lezen: `https://hjdk-api-henq.vercel.app/geheugen` (pagina voor Henkjan), `/api/mm/stukken?vorm=tekst` (voor chats). De ronde loopt mee met de crons van het campagne-archief en Videomind; nu draaien: `/api/mm/stukken?run=1`.
 - Oordeel eerlijk: een advertentie telt tegen wat je binnen zijn eigen campagne mocht verwachten, een post, video of mail binnen zijn project en medium. Dezelfde tekst in kopieën van een campagne telt als één stuk. Bij advertenties gaat het om de conversies die het netwerk per advertentie meldt (het doel waarop de campagne biedt); noem dat conversies, niet verkopen. Lessen per kenmerk (haak, emotie, opening, vraag, getal, lengte, prijs, knoptekst, vorm, onderwerp) tellen pas als ze aantoonbaar van de verwachting afwijken.
 - Meld bij een post altijd de tekst (`tekst=` bij `op=distmaak`). Zonder tekst kan Clickmind niets leren van die post; de pagina telt ze.
-- Het geheugen meet, oordeelt en adviseert. Het wijzigt geen campagne en plaatst niets.
+- Het geheugen plaatst niets. Het enige wat het doorgeeft is de uit-lijst: een advertentie die binnen zijn eigen campagne hard mis is (hoogstens de helft van de verwachte conversies bij 3+ verwacht en 100+ kliks, liep de laatste 3 dagen nog) gaat mee in `/api/mm/vroeguit`; de ronde van het netwerk zet hem stil binnen zijn eigen grenzen (nooit onder 4 actief, hoogstens 10 per uur).
+- In het geheugen staan ook de pins (boeken en keuzehulpen), de varianten van de lerende modal en de versies van de paginaproeven. Bestaande stukken met hun oordeel opvragen: `/api/mm/stukken?lijst=1&project=<id>&medium=<medium>[&regel=1][&uitslag=mis]`.
+
+### Native en trend (Henkjan 27 nov 2026)
+
+"Maak inderdaad voor ieder platform alles native EN check er altijd bij wat op dat moment goed werkt en maak daar altijd een alternatief mee . Dus trending of mega op dat plaform die kennis gebruik je ." Code `lib/trend.js`.
+
+- Elk stuk is voor zijn eigen platform gemaakt: nooit dezelfde tekst op twee platforms.
+- Bij elk stuk hoort een tweede versie op wat op dat moment groot is op dat platform. De briefing toont de trendkennis van het platform. Is die oud of leeg: zoek eerst op wat nu groot is (vormen, geluiden, onderwerpen, haken; minstens 2 bronnen van deze week) en meld het met `/api/mm?op=trend&j={"medium":"<platform>","wie":"<chat>","items":[{"wat":"...","vorm":"hoe je het native gebruikt","voorbeeld":"...","maat":"het getal","bron":"https://..."}]}`. Zonder https-bron wordt een trend geweigerd: niets verzinnen. Alles lezen: `/api/mm?op=trend&vorm=tekst`.
+- Meld de twee als tweeling: `variant=native` en `variant=trend` met `trend=<welke trend>` en `paar=<id van de ander>` (bij `op=distmaak`, in Videomind of bij `op=stuk`). Het geheugen leert welke van de twee wint.
+- Een videotrend met een getal gaat vanzelf naar de trendscan van Videomind; de briefing leest beide. Voor advertentienetwerken is de trend wat de laatste 14 dagen bij ons zelf het best liep.
+- De dagronde zet zelf een taak "Trendcheck voor Clickmind" in de takenlijst als een gebruikt platform geen verse trendkennis heeft (3 dagen).
+
+### Voorstel: Henkjan ziet het eerst
+
+- Nieuwe advertentieteksten of een proef zet je op een link voor Henkjan: `/api/mm?op=voorstel&j={"titel":"...","project":"...","medium":"...","uitleg":"...","kosten":"...","meten":"...","stop":"...","items":[{"campagne":"<id>","campagneNaam":"...","oudId":"...","oudTitel":"...","oudTekst":"...","titel":"...","tekst":"...","cta":"...","variant":"native|trend","waarom":"..."}]}` (POST mag ook). Het antwoord geeft `https://hjdk-api-henq.vercel.app/voorstel?id=<id>`; zet die als `toon` in je stand.
+- Een advertentietekst met een prijs of levertijd wordt geweigerd. Plaatsen pas na zijn ja: `?op=voorstel&id=<id>&besluit=ja`, en na het plaatsen `besluit=geplaatst`.
 
 ## Waar kijken
 

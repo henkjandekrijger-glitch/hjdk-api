@@ -2835,6 +2835,16 @@
       "destination": "/api/mm?op=stukken"
     },
     {
+      "source": "/voorstel",
+      "has": [
+        {
+          "type": "host",
+          "value": "hjdk-api-henq.vercel.app"
+        }
+      ],
+      "destination": "/api/mm?op=voorstel"
+    },
+    {
       "source": "/api/mm/:op",
       "destination": "/api/mm?op=:op"
     },

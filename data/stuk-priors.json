@@ -9,6 +9,15 @@
     "vast": true
   },
   {
+    "id": "native-en-trend",
+    "les": "Elk stuk is voor zijn eigen platform gemaakt, nooit dezelfde tekst op twee platforms. Bij elk stuk hoort een tweede versie op wat op dat moment groot is op dat platform (trend-alternatief). Kijk dat eerst na, verzin geen trend, en meld beide als tweeling zodat Clickmind meet welke wint.",
+    "media": "alle",
+    "doelen": "alle",
+    "bron": "Henkjan, 27 nov 2026: \"Maak inderdaad voor ieder platform alles native EN check er altijd bij wat op dat moment goed werkt en maak daar altijd een alternatief mee . Dus trending of mega op dat plaform die kennis gebruik je .\"",
+    "sterkte": 10,
+    "vast": true
+  },
+  {
     "id": "ads-verkooptekst",
     "les": "Advertentietekst is echte verkooptekst met een sterke knoptekst. Geen kale productnaam, geen levertijd en geen prijs in de advertentie.",
     "media": "betaald",
@@ -41,7 +50,9 @@
   {
     "id": "meta-ctr-1",
     "les": "Meta-advertentie: onder 1% CTR na 300 vertoningen gaat hij uit en komt er een nieuwe.",
-    "media": ["meta"],
+    "media": [
+      "meta"
+    ],
     "doelen": "alle",
     "bron": "data/whop-ctr.json, Henkjan 19 nov 2026: \"Als CTR niet boven 1% kill en nieuwe ad .\"",
     "sterkte": 5,
@@ -60,7 +71,10 @@
     "id": "uitkomst-op-pagina",
     "les": "Stuur geen verkeer naar een pagina waar niets aan te melden of te kopen valt. De chatlijnen hadden op 26 nov 1.018 kliks, ruim 80% echte mensen, 43% deed een actie en er was geen enkele uitkomst.",
     "media": "betaald",
-    "doelen": ["koop", "aanmelding"],
+    "doelen": [
+      "koop",
+      "aanmelding"
+    ],
     "bron": "Clickmind-overdracht, doelketen, les 26 nov 2026 (lib/overdracht.js)",
     "sterkte": 4
   },
@@ -68,22 +82,41 @@
     "id": "echt-is-geen-aanmelder",
     "les": "Echte mensen zijn nog geen aanmelders of kopers. Beoordeel een stuk op de uitkomst (aanmelding, verkoop), niet op 'echt mens'.",
     "media": "betaald",
-    "doelen": ["koop", "aanmelding"],
+    "doelen": [
+      "koop",
+      "aanmelding"
+    ],
     "bron": "Clickmind-overdracht, 18 okt 2026 (zone 11261241: 93 echte mensen op todayin, 0 aanmeldingen) en les 13 nov 2026 (leerde op 'echt mens' en greep bijna niet in)",
     "sterkte": 4
   },
   {
     "id": "push-prijsband",
     "les": "Kopers via push kopen artikelen van ongeveer $15 tot $25. Een aanbod waar de producten vooral boven $40 kosten verkoopt via push niet, hoeveel kliks er ook komen.",
-    "media": ["propeller", "mondiad", "richads", "mgid"],
-    "doelen": ["koop"],
+    "media": [
+      "propeller",
+      "mondiad",
+      "richads",
+      "mgid"
+    ],
+    "doelen": [
+      "koop"
+    ],
     "bron": "Clickmind Amazon-lessen 16 okt 2026 (lib/termles.js; skill campagnes-henkjan, regel Prijs)",
     "sterkte": 4
   },
   {
     "id": "gericht-reageren",
     "les": "Reageer je onder een post of vraag van iemand anders: alleen volkomen gericht op wat diegene vraagt, vaak zelfs zonder link. Een link alleen als hij het antwoord beter maakt.",
-    "media": ["reddit", "facebook", "forum", "quora", "x", "linkedin", "nieuwssite", "tripadvisor"],
+    "media": [
+      "reddit",
+      "facebook",
+      "forum",
+      "quora",
+      "x",
+      "linkedin",
+      "nieuwssite",
+      "tripadvisor"
+    ],
     "doelen": "alle",
     "kenmerk": "soort",
     "bron": "Henkjan, 19 nov 2026 (lib/distlus.js): \"Alleen volkomen gericht replyen vaak zelfs niet met link .\"",
@@ -113,7 +146,10 @@
   {
     "id": "geen-nullen",
     "les": "Toon nooit nul groei of nultellers. Is er niets te melden, laat de regel dan weg.",
-    "media": ["site", "mail"],
+    "media": [
+      "site",
+      "mail"
+    ],
     "doelen": "alle",
     "bron": "Henkjan, vaste regel (CLAUDE.md: \"geen 'nog geen' of nullen\")",
     "sterkte": 5,
@@ -122,7 +158,10 @@
   {
     "id": "echte-foto",
     "les": "Bij een nieuws- of artikelblok hoort een echte foto. Een getekende illustratie alleen als er geen foto te vinden is.",
-    "media": ["site", "mail"],
+    "media": [
+      "site",
+      "mail"
+    ],
     "doelen": "alle",
     "bron": "Henkjan, 22 nov 2026: \"Laat hier een foto zien niet dit ... alleen in noodgeval dit als geen pic te vinden\"",
     "sterkte": 5,
