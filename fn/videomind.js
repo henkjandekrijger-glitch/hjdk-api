@@ -5,6 +5,7 @@
 //   GET|POST /api/videomind?op=zet&json=<video of lijst>     video registreren vóór plaatsen (id = utm_content)
 //   GET|POST /api/videomind?op=meting&json={"id":..,"koop":1,"omzet":49,"bron":".."}   eigen meting van een project
 //   GET|POST /api/videomind?op=les&les=<zin met getal>&project=&platform=&bron=
+//   GET  /api/videomind?op=trend[&platform=][&project=][&vorm=json]   wat nu extreem goed loopt per platform (7 dagen); zet met json={platform,project,niche,wat,haak,voorbeeld,maat,bron} of een lijst (27 nov 2026)
 //   GET  /api/videomind?op=ronde[&droog=1]       cron elke 6 uur: Zernio-cijfers en Clickmind-bezoeken bijwerken
 //   GET  /api/videomind?op=seed&project=mylevel   eenmalig de bestaande MyLevel-video's (lib/videomind-seed.js), bestaande regels blijven
 // Schrijven en lezen alleen op de beschermde vercel.app-host, met de gedeelde team-sleutel (x-hjdk-token of Bearer), of als cron.
@@ -35,6 +36,8 @@ export default async function handler(req, res) {
     if (op === 'meting') { const x = json(q, b) || q; const r = await V.meting(x, 'project'); return res.status(r.ok ? 200 : 400).json(r); }
     if (op === 'les') { const r = await V.les(Object.assign({}, q, b || {})); return res.status(r.ok ? 200 : 400).json(r); }
     if (op === 'seed') { if (q.project !== 'mylevel') return res.status(400).json({ ok: false, fout: 'seed alleen voor project=mylevel' }); return res.status(200).json(await V.seed('mylevel')); }
+    if (op === 'trend') { const x = json(q, b); if (x && (x.platform || Array.isArray(x) || x.trends)) { const r = await V.trendZet(x); return res.status(r.ok ? 200 : 400).json(r); }
+      const T = await V.trends({ platform: q.platform || '', project: q.project || '', dagen: Number(q.dagen) || V.TREND_DAGEN }); return q.vorm === 'json' ? res.status(200).json({ ok: true, ...T }) : txt(V.trendTekst(T)); }
     if (op === 'lessen') { const L = await V.lessen({ project: q.project || '', platform: q.platform || '' }); return q.vorm === 'tekst' ? txt(V.lessenTekst(L)) : res.status(200).json({ ok: true, ...L }); }
     if (op === 'stand') { const s = await V.stand({ project: q.project || '', id: q.id || '' }); return q.vorm === 'json' ? res.status(200).json(s) : txt(V.tekst(s)); }
     return res.status(400).json({ ok: false, fout: 'onbekende op; zie ?op=skill' });
