@@ -259,6 +259,7 @@ export default async function handler(req, res) {
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='100k'){const C=await import('../lib/kzchat.js');res.setHeader('cache-control','no-store');return res.status(200).json(await C.i100Stand().catch(()=>({ok:false})));} // doel 100.000 intenties voor 31 dec 2026
+    if(op==='chatanalyse'){if(!beschermd)return res.status(403).json({ok:false,fout:'alleen via de beschermde vercel.app-host'});const A=await import('../lib/chatanalyse.js');const x=await A.chatAnalyse();if(q.get('vorm')==='json')return res.status(200).json(x);res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(A.chatAnalyseTekst(x));} // totale analyse lerende chat (27 nov 2026)
     if(op==='chat'||op==='chatstand'){const C=await import('../lib/kzchat.js'); // intentiechat op alle keuzehulpen (lib/kzchat.js, 16 nov 2026)
       if(op==='chatstand')return res.status(200).json(await C.kzChatStand(beschermd).catch(()=>({ok:false})));
       if(req.method!=='POST'&&!(beschermd&&req.query.v))return res.status(405).json({ok:false}); // GET alleen beschermd, om de chat te testen
