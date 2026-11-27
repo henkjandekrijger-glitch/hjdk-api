@@ -19,6 +19,18 @@ Accounts (Zernio-profiel Kadoly, profile_id `6afaf9820c09220040d746f4`):
 
 Vraag niets; kies bij twijfel de veiligste optie (liever een post minder dan een foute post). Zuinig met tokens. Kadoly is een webshop voor alles, niet alleen cadeaus: presenteer hem nooit als cadeauwinkel.
 
+## Klachten als haak: 3 per week
+
+**UIT tot Henkjans ja op taak hdg2ux; de oppakker zet dit aan.** Zolang dit er staat, doet de socialronde niets met dit blok.
+
+Henkjan 27 nov 2026: "Kadoly klachten van concurrenten als haak". Week 1 staat als voorstel op https://hjdk-api-henq.vercel.app/voorstel?id=vd5986673 (3 haken, elk native en trend).
+- Bron: lees `https://hjdk-api-henq.vercel.app/api/mm?op=buiten&project=kadoly`. Op 27 nov gaf dat 0 klachten (lib/buiten.js heeft voor Kadoly geen `apps`, en zoekt alleen in de Amerikaanse App Store). Zonder klachten in die lijst geldt: haak alleen uit een probleem dat de kopers van cadeaus, sieraden of wonen echt noemen, nooit verzonnen, nooit een concurrent bij naam of een review letterlijk.
+- Vorm: eerste regel of eerste seconde = het probleem; dan het antwoord van Kadoly (verzending zit in de prijs; 14 dagen om te melden, per product staat of het retourlabel gratis is, nooit "gratis retour" als algemene belofte); dan één product dat te koop is, met de link volgens de linkregels hierboven. Geen prijs, geen levertijd, geen gedachtestreepjes.
+- Paspoort: medium, project kadoly, pagina, doel koop. Elke haak als tweeling: `variant=native` en `variant=trend` (trend uit Videomind of `op=trend`, met bron), `paar=<id van de ander>`. Lees eerst de briefing per medium.
+- Dagen: maandag Pinterest (10:30 NL), woensdag YouTube Short (15:30 NL), vrijdag Pinterest (12:15 NL); de trendversie van elke haak de dag erna op hetzelfde platform. Dat telt als de 3 haken per week (6 plaatsingen) en gaat boven het gewone Pinterest-aantal niet uit.
+- Controleer vóór plaatsen de verzend- en retourafspraak van het product; wijkt die af, neem een ander product.
+- Meten: na 7 dagen oordeel raak of mis per stuk op Clickmind-kliks, mandjes en kopen tegen gewone Kadoly-posts van dezelfde weken (utm_campaign `pin-klacht-...` en `v-<id>`).
+
 ## Stappen
 
 **Pinterest-plafond omhoog (Henkjan 26 nov 2026: "Onzin kan veel meer zijn bij pins"):** vanaf 27 nov 8 pins per dag (6 productpins plus 2 gidspins), verspreid over 08:00 tot 23:00 NL, minstens 75 minuten tussen twee pins, over alle vier de borden. Vanaf 1 dec 12 per dag en vanaf 4 dec 15 per dag, zolang Pinterest geen melding of beperking geeft (accountgezondheid in stap 1) en het bereik per pin niet daalt. Gidspins naast productpins, niet in plaats van. De regel 'nooit twee keer hetzelfde product binnen 14 dagen' en 'geen doorstuurlinks' blijven. Dit gaat voor elk eerder plafond van 3 per dag hieronder.

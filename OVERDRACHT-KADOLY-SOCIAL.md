@@ -8,6 +8,10 @@ Live lezen: https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht (met web_
 
 Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron van de werkwijze), `OVERDRACHT-YOORS-SHOP.md` (shop en kassa), `OVERDRACHT-KADOLY-TIKTOK.md` (TikTok en het Clickmind-gezicht) en de algemene handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
+## Logregel 27 november 2026: klachten als haak voorbereid, UIT
+
+Taak hdg2ux: week 1 (3 haken, elk native en trend) staat als voorstel op https://hjdk-api-henq.vercel.app/voorstel?id=vd5986673, niets geplaatst of ingepland. Het vaste ritme staat in `kadoly/taak-social.md` (blok "Klachten als haak: 3 per week") en is UIT tot Henkjans ja. Let op: `op=buiten&project=kadoly` geeft 0 klachten, dus de haken zijn aannames; "14 dagen retour" mag alleen als "14 dagen om te melden, per product staat of het label gratis is".
+
 ## Aanvulling 23 november 2026: goedgekeurde merkproef live
 
 Na "JA allemaal live netjes ." op de getoonde UX heeft groei drie merkontwerpen gepubliceerd: drie stories op Facebook, dezelfde drie op Instagram, en drie pins op Pinterest @kadolyshop (Cadeau-ideeën). Alle zes Zernio-postobjecten zijn Published; alle negen plaatsingen en de openbare links staan in `kadoly/groei/2026-11-23-merken-live.json` en `kadoly/social-log.json`. De bestaande dagronde niet herhaald. De drie bestaande productpins van vandaag zijn in het log van gepland naar gepubliceerd gezet na dashboardcontrole.
