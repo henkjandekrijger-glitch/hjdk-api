@@ -246,6 +246,12 @@ export default async function handler(req, res) {
     }
     if (op === 'campagnes') { // campagne-archief: alle data van de netwerken naast eigen uitkomsten (lib/cmcamp.js, Henkjan 26 nov 2026)
       const C = await import('../lib/cmcamp.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (q('inhaal')) { // historie inhalen (lib/cmcamp.js inhaal): cron elke 5 minuten, starten op de beschermde host met &van=&tot=
+        const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+        if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+        if (q('stand')) return res.status(200).json(await kv.get('cm:inhaal').catch(() => null) || { ok: true, leeg: true });
+        return res.status(200).json(await C.inhaal({ van: q('van'), tot: q('tot') }));
+      }
       if (q('run') === '1') {
         const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
         if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
