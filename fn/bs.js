@@ -11,7 +11,7 @@ import * as LCF from '../lib/lcfunnel.js';
 import * as LCW from '../lib/lcwaarom.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
-import { pinPlan, haakVan, vind, HAKEN, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
+import { pinPlan, pinLijst, haakVan, vind, HAKEN, BORD as PIN_BORD, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
 import { dagRapport, rapportTekst, rapportData, BRON_OK } from '../lib/bsorganisch.js';
 const FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
 const el = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
@@ -215,8 +215,9 @@ export default async function handler(req, res) {
     } catch (e) {
       return stuur(res, 503, 'application/json; charset=utf-8', JSON.stringify({ ok: false, fout: 'Boekhistorie niet beschikbaar; geen kandidaten veilig te controleren.' }), { cache: 'no-store', robots: 'noindex' });
     }
-    if (op === 'pinstand') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, haken: HAKEN.map(h => ({ id: h.id, ...(stand[h.id] || {}) })), laatste: log.slice(-20) }), { cache: 'no-store', robots: 'noindex' });
-    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, pins: pinPlan(stand, { aantal: Math.max(1, Math.min(8, +q.get('n') || 4)), log }), controle: { afkoeldagen: 14, bron: 'geregistreerde boekplaatsingen; geen volledige providerplanning', reservering: false } }), { cache: 'no-store', robots: 'noindex' });
+    const pinUit = !!((await kv.get('bs:pinuit').catch(() => null)) || {}).t;
+    if (op === 'pinstand') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, boekpinsUit: pinUit, haken: HAKEN.map(h => ({ id: h.id, ...(stand[h.id] || {}) })), laatste: log.slice(-20) }), { cache: 'no-store', robots: 'noindex' });
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, boekpinsUit: pinUit, pins: pinPlan(stand, { aantal: Math.max(1, Math.min(8, +q.get('n') || 4)), log, uit: pinUit }), reden: pinUit ? 'boekpins staan uit voor dit account (kv bs:pinuit); plaats niets' : undefined, controle: { afkoeldagen: 14, bron: 'geregistreerde boekplaatsingen; geen volledige providerplanning', reservering: false } }), { cache: 'no-store', robots: 'noindex' });
   }
   if (op === 'pinlog' || op === 'pinuitkomst') {
     if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
@@ -232,6 +233,24 @@ export default async function handler(req, res) {
     }
     await kv.set('bs:pinlog', log.slice(-500)); await kv.set('bs:pinstand', stand);
     return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, stand }), { cache: 'no-store' });
+  }
+  // Schakelaar boekpins op het Kadoly-account: ?op=pinschakel&uit=1 (geen boekpins meer), &uit=0 (zoals voorheen), zonder uit= alleen de stand.
+  if (op === 'pinschakel') {
+    if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
+    if (q.get('uit') === '1') await kv.set('bs:pinuit', { t: new Date().toISOString() }); else if (q.get('uit') === '0') await kv.del(['bs:pinuit']);
+    const uit = !!((await kv.get('bs:pinuit').catch(() => null)) || {}).t;
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ ok: true, account: PIN_ACCOUNT, boekpinsUit: uit, uitleg: uit ? 'pinplan geeft geen boekpins meer voor dit account' : 'pinplan werkt zoals voorheen' }), { cache: 'no-store', robots: 'noindex' });
+  }
+  // Lijst voor Henkjans ja op weghalen: alle boekpins op het Kadoly-account uit het pinlogboek. Verwijdert niets.
+  if (op === 'pinlijst') {
+    if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
+    const log = (await kv.get('bs:pinlog').catch(() => null)) || [], lijst = pinLijst(log), uit = !!((await kv.get('bs:pinuit').catch(() => null)) || {}).t;
+    if (q.get('vorm') === 'json') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, boekpinsUit: uit, aantal: lijst.length, pins: lijst }), { cache: 'no-store', robots: 'noindex' });
+    const e = t => String(t == null ? '' : t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const bordNaam = { we: 'White elephant', sok: 'Stocking stuffers', lc: 'Lasting Change', bijbel: 'Bijbel' };
+    const rij = p => `<tr><td>${e(p.datum)}</td><td>${e(p.titel)}<br><small>${e(p.boek)}</small></td><td>${e(bordNaam[p.bord] || p.bord)}</td><td><a href="${e(p.link)}">${e(p.link.replace(/^https:\/\//, '').split('?')[0])}</a></td><td>${p.post ? e(p.post) : ''}</td><td>${p.klik == null ? 'n.v.t.' : e(p.klik + ' kl, ' + p.saves + ' sv, ' + p.imp + ' vt')}</td></tr>`;
+    const html = `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Boekpins op Kadoly Pinterest</title><style>body{font:16px/1.4 system-ui;margin:16px;color:#111;background:#fff}h1{font-size:24px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #111;padding:6px;text-align:left;vertical-align:top;font-size:16px}small{font-size:13px}a{color:#111}</style><h1>Boekpins op het Kadoly-Pinterestaccount</h1><p>Account kadolyshop. Totaal ${lijst.length} boekpins in het pinlogboek van de boekenronde, allemaal geplaatst; ingepland in Zernio staat nu niets (controle 27 nov). Boekpins staan voor nieuwe plaatsingen ${uit ? '<b>UIT</b>' : 'nog AAN'}. Er is niets verwijderd. Weghalen kan pas na jouw ja.</p><table><tr><th>Datum</th><th>Titel</th><th>Bord</th><th>Link</th><th>Zernio-post</th><th>Cijfers</th></tr>${lijst.map(rij).join('')}</table>`;
+    return stuur(res, 200, 'text/html; charset=utf-8', html, { cache: 'no-store', robots: 'noindex' });
   }
   // Klik naar Amazon (Henkjan 22 nov 2026: "Lerende modal voor naar amz te sturen"): één 302 zonder tussenpagina, telt de klik per boek per dag
   // (bs:klik:<dag> hash ASIN -> n, 60 dagen) zodat de modal en de pagina's op echte doorkliks leren. Alleen ASIN's van de eigen plank.

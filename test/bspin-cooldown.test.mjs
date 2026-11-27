@@ -67,3 +67,14 @@ test('route geeft de volledige gedeelde historie aan de selectie en reserveert n
   assert.equal(r.status,200); assert.deepEqual(passed.log,history); assert.equal(passed.aantal,3);
   assert.equal(r.body.controle.afkoeldagen,14); assert.equal(r.body.controle.reservering,false);
 });
+test('schakelaar: vlag uit = plan zoals nu, vlag aan = geen boekpins meer naar het Kadoly-account', async () => {
+  assert.ok(pinPlan({}, { nu, rnd: () => 0 }).length > 0);
+  assert.deepEqual(pinPlan({}, { nu, rnd: () => 0, uit: false }), pinPlan({}, { nu, rnd: () => 0 }));
+  assert.deepEqual(pinPlan({}, { nu, rnd: () => 0, uit: true }), []);
+  const kv = { get: async key => key === 'bs:pinuit' ? { t: 'x' } : key === 'bs:pinlog' ? [] : {} };
+  const r = await runRoute(kv, 'pinplan', respond, {}, new URLSearchParams(), 'account', HAKEN, (s, o) => pinPlan(s, o));
+  assert.deepEqual(r.body.pins, []); assert.equal(r.body.boekpinsUit, true);
+  const kv2 = { get: async key => key === 'bs:pinlog' ? [] : {} };
+  const r2 = await runRoute(kv2, 'pinplan', respond, {}, new URLSearchParams(), 'account', HAKEN, (s, o) => pinPlan(s, o));
+  assert.equal(r2.body.boekpinsUit, false); assert.ok(r2.body.pins.length > 0);
+});

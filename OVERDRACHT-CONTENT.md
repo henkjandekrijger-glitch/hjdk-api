@@ -246,6 +246,8 @@ Plak dit als eerste bericht:
 
 ## Logboek (nieuwste bovenaan)
 
+- 2026-11-27, taak 4qiye9: schakelaar voor de boekenpinronde gebouwd. `/api/bs?op=pinschakel&uit=1` (beschermde host) zet kv bs:pinuit; dan geeft `op=pinplan` geen boekpins meer voor het Kadoly-account (account 6afb8a5d86e8bb18f844fc95), `uit=0` zet het terug, standaard uit (gedrag ongewijzigd). Stand: `op=pinstand` en `op=pinplan` tonen `boekpinsUit`. Lijst voor Henkjans ja: `/api/bs?op=pinlijst`. De schakelaar is niet omgezet; de boekenronde moet bij `boekpinsUit` niets plaatsen of een ander account kiezen.
+
 - 2026-11-23, content-Codex: Henkjan geeft met 'yes' akkoord op de getoonde Amazonknoppen. Uitrol van precies die versie via PR #11; code en bestaande /go-meting blijven gelijk aan de gecontroleerde preview. Productie en beide gezondheidscontroles worden na uitrol gecontroleerd; geen gemeten klik- of verkoopwinst geclaimd.
 
 - 2026-11-23, content-Codex: op Henkjans verduidelijking 'Amazonknoppen prominenter' een visueel voorstel gemaakt. Gedeelde zwarte Amazonknop met pijl, minimumhoogte 56px, volle breedte op mobiel en een expliciete knop op iedere boekkaart. Dezelfde stijl werkt automatisch door in nieuwe boekblokken en LC-artikelen; PDF-knop en /go-meetroute blijven behouden. Geen klikvolumes als publiek bewijs getoond. Dit is een ontwerpwijziging, geen bewezen klik- of verkoopwinst. Eerst preview, nog niet op main/live.
