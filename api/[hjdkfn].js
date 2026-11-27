@@ -14,6 +14,7 @@ const FN = {
   gads: () => import('../fn/gads.js'),
   geld: () => import('../fn/geld.js'),
   gids: () => import('../fn/gids.js'),
+  goonfree: () => import('../fn/goonfree.js'),
   gsc: () => import('../fn/gsc.js'),
   home: () => import('../fn/home.js'),
   "keuze-leerlus": () => import('../fn/keuze-leerlus.js'),
