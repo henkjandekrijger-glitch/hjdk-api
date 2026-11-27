@@ -2871,6 +2871,14 @@
       "destination": "/api/shop?op=land&p=:p"
     },
     {
+      "source": "/verlanglijst",
+      "destination": "/api/shop?op=lijst"
+    },
+    {
+      "source": "/verlanglijst/:l",
+      "destination": "/api/shop?op=lijst&l=:l"
+    },
+    {
       "source": "/",
       "has": [
         {
