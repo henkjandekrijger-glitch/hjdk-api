@@ -104,4 +104,21 @@ ok(overzichtHtml(Object.assign({}, d, { gemaakt: '2026-11-30T13:00:00.000Z' }), 
 await T.zetTaken(kv, { aanzet: { account: 'claude-1' } }, '', nu + 3 * dg); ok((await T.leesTaken(kv, nu + 3 * dg)).taken.find(x => x.id === th.taak).status === 'klaar', 'herinnering vanzelf af na aanzetten');
 ok(!html.includes('/dashboard?doe=') && !/method="get"/.test(html) && !/[—–]/.test(html) && !/undefined|NaN|\[object/.test(html), 'alles POST, geen streepjes of undefined');
 ok(overzichtHtml({ gemaakt: new Date(nu).toISOString(), vandaag: '2026-11-27', projecten: [] }).includes('Overzicht'), 'leeg rendert');
+// 12. terug met "niet": het account dat de taak niet kan doen krijgt hem niet opnieuw; kan geen actief account het, dan staat hij bij Henkjan
+const n0 = nu + 5 * dg, vind = async (i, t) => (await T.leesTaken(kv, t)).taken.find(x => x.id === i);
+await T.zetTaken(kv, { pak: { account: 'claude-1', max: 3 } }, '', n0); // claude-1 pakte net op: telt als actief
+u = await T.zetTaken(kv, { taak: { tekst: 'Thema toevoegen in een repo waar niet elk account bij kan', project: 'tk', zwaarte: 'licht' } }, 'Henkjan', n0 + 1, HJ); const nid = u.taak;
+u = await T.zetTaken(kv, { pak: { account: 'claude-2', max: 3, id: nid } }, '', n0 + 2); ok(u.taken.length === 1, 'niet: claude-2 pakt');
+u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, niet: true, reden: 'geen schrijftoegang tot de repo' } }, '', n0 + 3); let nx = await vind(nid, n0 + 3);
+ok(u.ok && nx.status === 'wacht' && nx.niet.join() === 'claude-2' && /niet claude-2/.test(T.takenTekst(await T.leesTaken(kv, n0 + 3), 'claude-1', d0)), 'niet: terug in de lijst, niet voor claude-2');
+ok((await T.zetTaken(kv, { pak: { account: 'claude-2', max: 3, id: nid } }, '', n0 + 4)).taken.length === 0, 'niet: claude-2 krijgt hem niet opnieuw');
+ok((await T.zetTaken(kv, { pak: { account: 'claude-1', max: 3, id: nid } }, '', n0 + 5)).taken.length === 1, 'niet: claude-1 krijgt hem wel');
+u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, niet: true, reden: 'ook geen schrijftoegang tot de repo' } }, '', n0 + 6); nx = await vind(nid, n0 + 6);
+ok(u.soort === 'handeling' && nx.status === 'jij' && nx.soort === 'handeling' && /Geen account kan deze taak doen: ook geen schrijftoegang/.test(nx.vraag) && !nx.niet, 'niet: geen account kan het, dus bij Henkjan');
+await T.zetTaken(kv, { antwoord: { id: nid, tekst: 'Gedaan' } }, 'Henkjan', n0 + 7, HJ);
+ok((await T.zetTaken(kv, { pak: { account: 'claude-2', max: 3, id: nid } }, '', n0 + 8)).taken.length === 1, 'niet: na Gedaan mag elk account weer');
+u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, reden: 'onduidelijk' } }, '', n0 + 9); nx = await vind(nid, n0 + 9); ok(nx.status === 'wacht' && !nx.niet, 'terug zonder niet blijft voor elk account');
+u = await T.zetTaken(kv, { pak: { account: 'claude-2', max: 3, id: nid } }, '', n0 + 4 * uur); // vier uur later: claude-1 is stil, alleen claude-2 pakt nog op
+u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, niet: true, reden: 'geen browser met inlog' } }, '', n0 + 4 * uur + 1); nx = await vind(nid, n0 + 4 * uur + 1);
+ok(nx.status === 'jij' && nx.soort === 'handeling', 'niet: het andere account is stil, dus meteen bij Henkjan');
 console.log(process.exitCode ? 'taken: FOUT' : 'taken ok');
