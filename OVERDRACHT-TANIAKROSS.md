@@ -12,6 +12,7 @@ Dit deel gaat voor op alles eronder. Alleen dit deel lezen: `/api/wtb?op=tkoverd
 Henkjan 27 nov: "goede overdracht die chat staat nu uit moet allemaal centraal in dashboard staan zodat geen miscomms" en "zorg voor goede overdracht met iedere taak of schedule".
 
 - Er werkt één chat tegelijk aan TK. Op 27 nov werkten er twee tegelijk in twee accounts (tk-chat en tk-chat2): dubbel werk en twee keer dezelfde vragen aan Henkjan. tk-chat staat uit op Henkjans woord. tk-chat2 is eigenaar tot een volgende chat het overneemt.
+- Eén uitzondering sinds 27 nov 13:38 UTC (Henkjan in tk-chat: "Optimaliseer verder voor Google en LLM vindbaarheid . Geef me plan hier ."): tk-chat doet alleen vindbaarheid (Google, AI, Demand Radar). Plan en stand staan in sectie 13, los te lezen op `/api/wtb?op=tkoverdracht&deel=vind`. Campagne, Mailmind, dagartikel, aanmeldvenster en elke uitrol van simpele-site blijven bij tk-chat2; tk-chat meldt een uitrol eerst in het werklog.
 - Overnemen: lees dit deel en het werklog bovenaan. Staat er in het laatste uur een regel van een andere chat, schrijf dan eerst één regel in het werklog (wie=tk-<naam>: "ik neem TK over" of "ik doe alleen X") en doe niets wat daar al staat.
 - Nooit twee uitrollen van simpele-site tegelijk. Een uitrol neemt de bestandslijst van de vorige over, dus het nieuwe bestand van een ander valt weg. Kijk vlak voor je uitrolt met list_deployments of er een nieuwere productie-uitrol is en neem die lijst.
 - Een open vraag aan Henkjan is een planregel op het dashboard die begint met "Wacht op Henkjan:". Zijn ja schrijf je in het werklog met zijn eigen woorden erbij. Zo ziet de volgende chat wat gevraagd is en wat beantwoord.
@@ -33,7 +34,7 @@ Henkjan 27 nov: "goede overdracht die chat staat nu uit moet allemaal centraal i
 - Mailmind tk-mailchimp: 80 per dag, een stop remt niet meer, bounces wel. Eerste leermoment (94 mails): gmail en hotmail 30 verstuurd, 5 ja, 1 stop, 0 bounces; eigen domeinen 29, 4 ja, 10 stops, 2 bounces; provider 23, 0 ja, 2 bounces; score 3: 18 verstuurd, 0 ja, 3 bounces. Onderwerp: nog geen winnaar (o0 7 ja op 51, o1 4 op 43).
 - Mailmind slimmer en veilig voor Gmail (Henkjans ja, 27 nov): bakkeuze per kenmerk met bounce en stop erin, de bank en de dagrem. Code lib/mailmind-bak.js, uitleg in sectie 10. Live sinds 27 nov rond 13:00 UTC (Henkjan: "ja push").
 - Vercel simpele-site: NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin (27 nov, zelfde adressen als de code al gebruikte). Ze gelden vanaf de eerstvolgende productie-uitrol.
-- **Live gezet 27 nov 12:57 UTC in één uitrol (dpl_PLxypyXyKihPEj8rxNwvSbqVLwC9), op Henkjans "ja en ja":** het artikel van 27 nov "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json, geschreven door tk-chat2 omdat de Claude-taak niet leverde) en de Google-weergave van de homepage van tk-chat (api/_google.js en api/page.js: omschrijving van 151 tekens, ProfilePage, data-nosnippet, boeken via Dorien). Nagekeken: de homepage is regel voor regel gelijk aan het goedgekeurde voorbeeld, de stand toont het artikel van vandaag. Met deze uitrol gelden ook de drie variabelen. Nog te doen voor Google: herindexering van de homepage aanvragen in Search Console en de proef melden in ZICHT.
+- **Live gezet 27 nov 12:57 UTC in één uitrol (dpl_PLxypyXyKihPEj8rxNwvSbqVLwC9), op Henkjans "ja en ja":** het artikel van 27 nov "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json, geschreven door tk-chat2 omdat de Claude-taak niet leverde) en de Google-weergave van de homepage van tk-chat (api/_google.js en api/page.js: omschrijving van 151 tekens, ProfilePage, data-nosnippet, boeken via Dorien). Nagekeken: de homepage is regel voor regel gelijk aan het goedgekeurde voorbeeld, de stand toont het artikel van vandaag. Met deze uitrol gelden ook de drie variabelen. De proef staat in ZICHT (tk-google-weergave-1127, lib/zicht.js). Herindexering en het vervolg voor Google en AI: sectie 13 (tk-chat).
 - **Live gezet 27 nov 13:30 UTC (dpl_BkdnGz2ZRK65pUdZ65qNWeh3Zxcc; dit is nu de bestandslijst om op te bouwen), twee dingen op Henkjans woord:**
   1. De agenda van Tania is uit beeld (Henkjan: "Haal die agenda tool van de site bij tania . die leidt erg af ad zijkant en op mobiel ook ."). Dat is Tania's eigen onderdeel in haar homepage: de ladder rechts (.ag-rail), de knop op de telefoon (.ag-fab) en het paneel (.ag-veil, .ag-panel). Haar bestand blijft zoals het is (haar script zoekt die elementen, dus ze blijven in de pagina); onderaan tk-extra.css staat één regel die ze verbergt (sha c240e31d806db80b53a550ab0dc53e241590c039). Haar AGENDA voedt nog steeds de dagcarrousel, /optredens en de mail. Terugzetten: die regel weghalen.
   2. Het videovenster voor betaald verkeer heeft variant pv niet meer (Henkjan: "Zorg dat die campagne WEL gaat opleveren"). Cijfers tot 27 nov, herkomst betaald: pv (formulier onder de video, geen vraag bij sluiten) 11 adressen op 1.199 vensters, 0,9%; pv2 en pv3 samen 49 op 2.311, 2,1%. De vraag bij sluiten (moment dicht) gaf 36 van de 70 adressen. Nu krijgt iedereen pv2 of pv3 (lijst.js, sha bb2c593489ed25d84e94462a26308ccda96c953a). Verwacht: ruim een vijfde meer adressen per klik. Oordeel 4 dec: adressen per venster van pv2 en pv3 in /api/lijst?a=stand (perHerkomst.betaald.moment); de slechtste gaat er dan uit. Teksten in dat venster leren zelf: g2 (verrassing) 35 op 1.797, p1 15 op 1.024, g1 5 op 464, g3 1 op 225.
@@ -109,7 +110,7 @@ Niets van 27 nov staat nog open: om 12:53 UTC zei Henkjan ja op alle vier (pushe
 ### Eerstvolgende stappen, op volgorde
 
 1. Mailmind-bakkeuze is live (proefronde 27 nov 13:02 UTC: 83% naar gmail en hotmail, niets naar score 3, bank 0:r3). Oordeel na 100 mails naar gratis adressen: ja boven 12%, bounces onder 3%.
-1b. Herindexering van de homepage aanvragen in Search Console en de Google-weergave als proef melden in ZICHT.
+1b. Vindbaarheid (Google, AI, Demand Radar) doet tk-chat: plan en stand in sectie 13 (`/api/wtb?op=tkoverdracht&deel=vind`), wacht op Henkjans ja. De Google-weergave is als proef gemeld in ZICHT (tk-google-weergave-1127).
 1c. Aanmeldvenster: na Henkjans ja de nieuwe tekst en de link live (zie Wacht op Henkjan; één uitrol per sha).
 1d. Campagne laten opleveren (Henkjan 27 nov: "Zorg dat die campagne WEL gaat opleveren komt nieuwe CM aan ."; CM gelezen als Clickmind). Stand 27 nov 13:20 UTC: 14.358 vertoningen, 95 kliks, 1 adres, $0,06. De dagronde van 27 nov haalde zone 9819976 van de witte lijst (113 kliks, geen adres) en maakte geen dagkopie, omdat de campagne nog geen dag op het goede bod draait (26 nov liep de kopie op $0,01). Gedaan aan de pagina: variant pv eruit (zie Stand). Eerstvolgende: 28 nov de dagkopie (verse start), elke dag de slechtste advertenties eruit en nieuwe erin, en zones erbij als het tempo onder 500 kliks per dag blijft. Bod en budget blijven van Henkjan.
 2. 28 nov: levert 12193513 weer rond 10 adressen per dag onder $0,06.
@@ -280,7 +281,46 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 9. Boekingscontact op de site controleren met Henkjan (9).
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
+<!-- vind -->
+## 13. Vindbaarheid: plan voor Google en AI (27 nov 2026, tk-chat)
+
+Henkjan 27 nov 13:38 UTC: "Optimaliseer verder voor Google en LLM vindbaarheid . Geef me plan hier . Ik wil veel meer organische verkeer dan nu gebruik demand radar ." Status: plan gegeven, wacht op zijn ja. Niets van dit plan gaat live zonder dat hij het eerst zag.
+
+**Stand 27 nov (nulmeting)**
+
+- Bezoek uit zoek, 7 dagen: 31 (Google 15, Bing 13). Uit AI: geen. Search Console: 2.707 vertoningen en 80 kliks.
+- "tania kross": plek 6, 1.033 vertoningen, 31 kliks (31 okt tot 26 nov). Ruim driekwart van alle vertoningen is haar naam of een schrijfwijze ervan.
+- De daling van het totaal in Search Console (6.600 naar 2.700) is de tv-piek van eind oktober die uit het venster schuift (31 okt: 283 vertoningen op één dag). Per dag groeit het: van 6 tot 9 zoekvragen per dag begin november naar 25 tot 30 nu.
+- Perplexity (4 vragen): noemt Tania bij 3, haalt de site aan bij 2.
+- Demand Radar, thema taniakross, zoekers per maand: tania kross 2.400 in NL (8.100 in een tv-maand), podium klassiek 5.400, operazangeres nederland 2.400, izaline calister 880, samira rafaela 590, dagvoorzitter 480 en dagvoorzitter inhuren 180, mezzosopraan 480, mezzo soprano 12.100 in de VS.
+
+**Al gedaan, niet opnieuw doen**
+
+- Engelse Wikipedia wijst sinds 9 nov naar de site, NL-Wikipedia en Wikidata sinds 20 nov. taniakross.nl en taniakross.com sturen door (308, pad blijft). De plek op haar naam bleef 6 (was 6,5).
+- /podium-klassiek en de mezzopagina's zijn proef tot 18 dec (tk-podiumklassiek-1120, tk-mezzo-arias-1120), de gastprofielen tot 5 dec (tk-gastprofielen-1031): tot die datum niet wijzigen. De Google-weergave van de homepage is proef tk-google-weergave-1127.
+- De techniek staat (api/seo.js, a=zicht): robots, sitemap met beelden en video, IndexNow, hreflang nl, en, es, /vragen, /pers, llms.txt.
+
+**Plan, grootste winst eerst**
+
+1. Plek 1 op haar naam. Links naar de site vanaf plekken met gezag: Theaterbureau de Mannen, NPO en NTR (Podium Klassiek), Curaçao.nu, Speakers Academy na de deal, zalen waar ze optreedt. Link in de bio van al haar socials en YouTube, sameAs YouTube en Facebook in home.js (open punt 6 in sectie 11). Kennispaneel van Google claimen (alleen Tania kan dat). Oude adressen van de vorige sites die nu doodlopen opvangen. Verwachting: van plek 6 naar de top 3 is ongeveer vier keer zoveel kliks op haar naam.
+2. Elke podcastgast is een zoekwoord. Op de dag van de aflevering: video met hoofdstukken, vijf uitspraken, vragen uit het gesprek, en de gast vragen te delen en te linken. De pagina's van Izaline Calister en Samira Rafaela krijgen nog geen vertoning.
+3. "Tania zingt het voor" en "Vraag het Tania". Eén opname van een uur: 30 korte antwoorden op echte zoekvragen, met 20 seconden zang waar het kan. Elk antwoord wordt een pagina, een YouTube Short en een fragment voor Instagram, via Videomind. De Engelse mezzopagina staat na een week op plek 19 en op "voice example" op plek 5. Op de mezzopagina's zelf plaatsen na 18 dec.
+4. Dagvoorzitter wordt een boekpagina: titel met "inhuren", bel- en mailknop bovenaan, antwoord op wat een dagvoorzitter doet en kost. Nu heeft de pagina geen knop en krijgt hij op geen enkele dagvoorzitter-zoekvraag een vertoning. Vraag aan Henkjan: gaat de aanvraag naar Dorien of naar Speakers Academy.
+5. Echte menupagina's (Podcast, Optredens, Dagvoorzitter, Boeken) voor sitelinks onder haar naam, en de pagina's die nog niet in Google staan aanmelden (laatste meting 30 van 50; de sitemap telt nu 67 adressen).
+6. AI-meting elke week: 12 echte vragen bij 4 AI's via Demand Radar (gaps?ask=), per vraag invullen wat ontbreekt.
+7. Persoonlijke vragen (gezin, leeftijd; samen rond 500 zoekers per maand): Tania kiest zelf wat ze in één zin op /vragen beantwoordt.
+8. Muziek als medicijn blijft elke dag lopen; onderwerpen uit Demand Radar (thema muziek-medicijn).
+
+**Doel en meting.** Van 80 kliks naar 400 kliks per 28 dagen op 31 dec. Elke maandag één regel: kliks, plek op haar naam, aanmeldingen uit zoek. Voor de 1.000 adressen blijven Mailmind en de campagne de hoofdroute; zoekverkeer levert dit jaar tientallen adressen.
+
+**Nodig van Henkjan en Tania.** Ja op het plan, een uur van Tania voor stap 3, haar bio-links en het kennispaneel (stap 1), en Dorien of Speakers Academy (stap 4).
+
+**Werkafspraak.** tk-chat doet alleen dit plan. Elke uitrol van simpele-site gaat eerst als voorbeeld, op de bestandslijst van de laatste productie-uitrol, live op Henkjans ja, en wordt vooraf in het werklog gemeld.
+<!-- vind -->
+
 ## Logboek (nieuwste boven)
+
+- 27 nov 14:00 UTC tk-chat: Google-weergave live nagekeken (omschrijving 151 tekens, 4 JSON-LD-blokken geldig, voetregel met Dorien en de nieuwste podcast) en als proef gemeld in ZICHT (tk-google-weergave-1127). Plan voor zoekverkeer in sectie 13, los te lezen met `deel=vind`, wacht op Henkjans ja. tk-chat doet alleen vindbaarheid.
 
 - 26 nov 18:27 UTC chat-taniakross: dagkopie 12193513 goedgekeurd en levert (25.051 vertoningen, 65 kliks, $0,11, nog 0 adressen). Oude BEWEZEN 12183102 uitgezet (vandaag 4 adressen voor $1,56 = $0,39 per adres sinds het bod $0,20 is). Nu loopt alleen 12193513.
 
