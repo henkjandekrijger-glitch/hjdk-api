@@ -11,6 +11,8 @@ Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na 
 2. Alleen als je het nodig hebt: `&deel=overdracht` (dit hele bestand), `&deel=rapport` (draaiboek kdp/rapport.md, cijfers per ronde), `&deel=wachtrij` (nieuwe boeken), `&deel=wedstrijd` (boekwedstrijd), `&deel=log` (20 werklogregels voluit). Zonder `deel` krijg je alles achter elkaar (te groot voor een chat; sla op als bestand en grep).
 3. Stand en planning met datums: `/api/mm/dashboard?vorm=tekst&project=kdp`. Die planning is leidend voor "wat nu".
 
+**Afsluiten, altijd (Henkjan 27 nov 2026: "Ok zet op nexy.now/o en blijf dat doen ."):** elke ronde en elke chat die KDP-werk afrondt zet "Boeken vandaag" bovenaan Oversight bij (nexy.now/o stuurt daarheen): `https://hjdk-api-henq.vercel.app/oversight?zet={"kdp":{...}}` met verkoop van vandaag per boek (KDP Reports, Dashboard, Today), gedaan, wacht en volgende. Vorm en voorbeeld: kdp/rapport.md, STATUS OP NEXY.NOW/O, en `/oversight?vorm=tekst` bovenaan. Ouder dan 10 uur staat onder Opvallend op het dashboard.
+
 **Wat kan waar.**
 | Wat | Cloud-chat (claude.ai/code, deze repo) | Ronde met Chrome (Henkjans Mac, Claude in Chrome) |
 |---|---|---|
