@@ -269,6 +269,10 @@
       "schedule": "47 4 * * *"
     },
     {
+      "path": "/api/shop?op=gratisstand",
+      "schedule": "13 7 * * *"
+    },
+    {
       "path": "/api/dp?op=nacht",
       "schedule": "53 4 * * *"
     },
