@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-27T12:23:44.036Z",
+  "owner": "content",
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "Pinterest books kadolyshop",
+    "Instagram books kadoly.shop"
+  ],
+  "authorization": {
+    "request": "Maak een plan voor 10 x zoveel verkeer komende vrijdag en vertel dat aan https://nexy.now/d en voer het uit.",
+    "deadline_interpretation": "Friday 4 December 2026, America/Curacao",
+    "execution": "Execute previously shown source-report repair and shown resource batch; unseen public content and other settings remain first-see. No advertisements, outreach, mail or payment changes."
+  },
+  "goal": {
+    "deadline": "2026-12-04",
+    "window": "2026-12-04T00:00:00Z/2026-12-05T00:00:00Z",
+    "metric": "Registered site/source page-openings, not unique people",
+    "baseline_day": "2026-11-26",
+    "baseline": 16,
+    "baseline_sites": {
+      "stockingbooks": 14,
+      "lastingchange": 2
+    },
+    "target": 160,
+    "current": 16,
+    "previous_day": 16,
+    "gap": 144,
+    "forecast": null,
+    "warning": "10x working target on observed proxy, not a forecast or verified unique human visits. Source classification includes repeated/internal openings with remembered session source. Organic growth is separately reported; current registered organic baseline is zero, so an organic multiplier is not calculable."
+  },
+  "organic": {
+    "baseline_day": "2026-11-26",
+    "registered": 0,
+    "per_site": {
+      "stockingbooks": 0,
+      "lastingchange": 0
+    },
+    "source_read_status": "Both source hashes read successfully. All observed arrivals classified direct. Tracking completeness and human/bot distinctions remain unproven.",
+    "north_star_30x": "Keep existing NOORDSTER.json unchanged. Seven comparable full days still required.",
+    "primary_distribution_metric": "Verified organic outbound Pinterest clicks",
+    "site_followup": "Registered site/source openings separately; never inferred per-pin landings.",
+    "sales": "KDP and raw Amazon requests are not organically attributed sales."
+  },
+  "diagnosis": [
+    {
+      "evidence": "26Nov 14+2 versus25Nov13+3=16 both days; all direct/homepage. No registered organic site arrivals despite many bookposts.",
+      "leak": "Distribution is not demonstrably producing measured organic site traffic; distinguish limited reach/clicks from attribution loss.",
+      "action": "Live source report first, then traffic-oriented resource distribution; validate UTM/referrer logic without production synthetic counts."
+    },
+    {
+      "evidence": "Available publish_post_now/schedule_post schemas expose content/media/title/accounts, no Pinterest boardId or destination link.",
+      "leak": "Correct clickable Pinterest destinations cannot be set through this publishing wrapper.",
+      "action": "Keep exact approval and ready payloads; use a proven existing capable route when available. Do not publish to an unknown default board or without destination. Account is healthy, not disconnected."
+    },
+    {
+      "evidence": "14/26 per-post requests returned INVALID_ARGUMENT;10synced,2pending. Generic clicks not confirmed OUTBOUND_CLICK; post windows unspecified.",
+      "leak": "Daily learnings cannot identify an outgoing-click winner.",
+      "action": "Preserve every prior snapshot; append actual statuses/null reason for every pin. Resolve provider semantics/read failures; do not fabricate pinuitkomst."
+    }
+  ],
+  "options_compared": [
+    {
+      "option": "Existing free seasonal resources with exact shown creatives and direct URLs",
+      "value": "Best near-term traffic hypothesis; already useful destinations, low production cost",
+      "certainty": "Low until verified outbound data",
+      "cost": "No paid calls; publishing route repair needed",
+      "decision": "Priority1"
+    },
+    {
+      "option": "Existing search-result page improvement for large Christmas word search",
+      "value": "Already a relevant query at reported position9 on26Nov; low evidence volume",
+      "certainty": "Low, one impression is insufficient",
+      "cost": "One substantive update with UX preview; organic SEO judgment14to21days",
+      "decision": "Priority2, not a guaranteed one-week lift"
+    },
+    {
+      "option": "More broad giftbook promotions/new SEO articles",
+      "value": "No demonstrated site arrivals from current repetitive book promotion",
+      "certainty": "Unproven",
+      "cost": "More content and exposure requirements",
+      "decision": "Do not pursue bulk as substitute for traffic"
+    },
+    {
+      "option": "Subscribers/own audience through existing Clickmind/Mailmind UX",
+      "value": "Potential retained distribution, not instant acquisition",
+      "certainty": "No live approved signup flow yet",
+      "cost": "Use existing UX preview; validate consent/integration, no sends",
+      "decision": "Prepare alongside, no claim of subscriber growth"
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-11-27",
+      "actions": [
+        "Deploy and verify shown PR16 once, preserving existing cron.",
+        "Update dashboard and existing recurring tasks.",
+        "Audit all26bookpin snapshots and shared planning.",
+        "Prepare exact shown four resource-pin payloads; publish only through route preserving account/board/link and check actual provider receipt."
+      ],
+      "status": "Source report live verified;26pins read; publication wrapper limitation recorded; zero new posts claimed."
+    },
+    {
+      "date": "2026-11-28",
+      "actions": [
+        "Validate current landing/source code with isolated synthetic tests that do not call production counters.",
+        "Investigate existing Clickmind route for per-pin join; smallest fix preview if needed.",
+        "Prepare substantive large-print wordsearch usability improvement on existing page, with full UX before live."
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "actions": [
+        "First checkpoint: compare closed27/28Nov using identical definitions; every pin receives observation/lesson/next choice.",
+        "Review distribution execution; if correct pins are not live, treat publication route as highest blocker, not content shortage.",
+        "Show next unique resource batch only when it has a useful real destination; retain control pins."
+      ]
+    },
+    {
+      "date": "2026-11-30/2026-12-01",
+      "actions": [
+        "Execute exact approved useful content as soon as route supports correct destination, space around other Kadoly posts.",
+        "Prepare up to4distinct pin concepts/day only when useful; one book Reel/day concept with honest CTA, not generic caption-link claim.",
+        "One substantive StockingBooks update preview/day; LC at most1useful concept/day, preserve all live slugs."
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "actions": [
+        "Second checkpoint: measurement works or concrete provider errors documented. Read7closed days only if definitions match; no invented organic baseline.",
+        "Focus next production on topic/format signals with actual matched exposure; missing outbound remains exploratory.",
+        "No winning hook declared on low/unknown data; no volume increase from posting count alone."
+      ]
+    },
+    {
+      "date": "2026-12-03/2026-12-04",
+      "actions": [
+        "Finish approved distribution and landing improvements; no last-day duplicate flood.",
+        "Report actual gap to160, sources, uncertainty and posts contributing verifiably.",
+        "Do not relabel direct or internal/bot openings as organic to achieve goal."
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "actions": [
+        "Final closed4DecUTC result versus26NovUTC: total, per-site/source, organic separately, rawAmazon and sales separately.",
+        "Say plainly whether160was reached; document which actions and evidence support next week."
+      ]
+    }
+  ],
+  "daily_rhythm_curacao": {
+    "morning": "09:15, existing automation: closed UTC traffic, gap to target, every pin, one leak, dashboard and visible chat report",
+    "distribution": "15:37, existing automation: read exact queue, health + shared posted/scheduled + board/link/asset checks, execute approved useful resources, prepare unseen next previews",
+    "article": "Existing23:41 article round kept, no new duplicate automation"
+  },
+  "evaluations": {
+    "daily": "Signals and execution only",
+    "content": "14to21days after actual publication with sufficient matched data",
+    "controls": "Existing wordsearch/SecretSanta/bookpins retained, one variable per new hook; not controlled A/B when topic/board/age differ"
+  },
+  "research": {
+    "date": "2026-11-27",
+    "primary_sources": [
+      "https://www.drawnames.com/secret-santa-generator",
+      "https://business.pinterest.com/blog/beginner-pinterest-content-guide/"
+    ],
+    "observation": "Drawnames explicitly allows organizing via email, text or link; relevant recipient sharing is a distribution mechanism. Our existing tool already lets organizer share private match links manually.",
+    "claim_limits": "No verified Drawnames traffic/sales numbers collected; no prediction. Official Pinterest primer(2022) prioritizes quality and relevance over frequency, not a daily optimum.",
+    "application": "Prioritize useful Secret Santa process creative and actual private-link sharing value. No automated messages or outreach. Challenge: links may circulate privately without referrer; UTM classification and real clicks must be tested."
+  },
+  "execution": {
+    "code_pr": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/16",
+    "merge_sha": "4b2e777cfa4b68da88dedfdd7ddd4e511788d635",
+    "production_deployment": "dpl_9UvcYZFgMFaJNEWjW1g6AHGyBFxN",
+    "production_state": "READY",
+    "live_check": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+      "observed_at": "2026-11-27T12:21:16.489Z",
+      "http_status": 200
+    },
+    "tests": "22tests passed plus fn/bs.js syntax; code blobs unchanged versus tested PR; docs resolved with concurrent main preserved.",
+    "dashboard": "https://nexy.now/d",
+    "automation_ids": [
+      "Automation_78bd50f1177c819187c97dbc4098ab6e",
+      "Automation_8802f2dd9b548191980419acd21da2c3"
+    ],
+    "new_published_pins": [],
+    "new_published_articles": [],
+    "publication_reason": "Account healthy. Tool lacks board/destination arguments. No existing remote Zernio posting endpoint found in repo; do not invent endpoint or search keys."
+  },
+  "ready_pin_payloads": [
+    {
+      "id": "20261126-free-secret-santa",
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "board_id": "271060540011963291",
+      "title": "Free Secret Santa Name Generator: Private Links, No Emails Needed",
+      "description": "Draw names for Secret Santa, keep couples apart and set your gift budget. Share each person's private link yourself. Free to use, with no sign-up and no email addresses needed.",
+      "destination": "https://stockingbooks.com/secret-santa-generator?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261126&utm_content=20261126-free-secret-santa",
+      "media_url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-26-media/pin-secret-santa.png",
+      "status": "shown_batch_execution_requested_20261127_not_published",
+      "approval_basis": "Current execute-plan instruction following shown batch; preserve exact assets/copy, no new unseen bulk"
+    },
+    {
+      "id": "20261125-free-coloring",
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "board_id": "271060540011963292",
+      "title": "12 Free Printable Christmas Coloring Pages for Kids",
+      "description": "Choose from 12 free Christmas coloring pages, including a tree, snowman and gingerbread man. Print one page at home for a family activity, classroom or party. No sign-up.",
+      "destination": "https://stockingbooks.com/christmas-coloring-pages?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-free-coloring",
+      "media_url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-25-media/pin-coloring.png",
+      "status": "shown_batch_execution_requested_20261127_not_published",
+      "approval_basis": "Current execute-plan instruction following shown batch; preserve exact assets/copy, no new unseen bulk"
+    },
+    {
+      "id": "20261125-free-trivia",
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "board_id": "271060540011963292",
+      "title": "40 Free Christmas Trivia Questions and Answers to Print",
+      "description": "Try 40 Christmas trivia questions across four rounds, with an easy kids round. Print a question sheet for players and the answers for the quizmaster. Start with this one: in Home Alone, where is the family flying?",
+      "destination": "https://stockingbooks.com/christmas-trivia?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-free-trivia",
+      "media_url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-25-media/pin-trivia.png",
+      "status": "shown_batch_execution_requested_20261127_not_published",
+      "approval_basis": "Current execute-plan instruction following shown batch; preserve exact assets/copy, no new unseen bulk"
+    },
+    {
+      "id": "20261125-seven-day-reset",
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "board_id": "271060540011963293",
+      "title": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+      "description": "Start with three lists: what to keep, what to change and what to work around. This free guide includes a practical seven-day structure and fill-in questions. It helps you plan a first week, without promising a complete life change in seven days.",
+      "destination": "https://lastingchange.works/how-to-start-over-in-life?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-seven-day-reset",
+      "media_url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-25-media/pin-reset.png",
+      "status": "shown_batch_execution_requested_20261127_not_published",
+      "approval_basis": "Current execute-plan instruction following shown batch; preserve exact assets/copy, no new unseen bulk"
+    }
+  ]
+}

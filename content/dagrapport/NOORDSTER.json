@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at_utc": "2026-11-25T11:17:40.111Z",
+  "updated_at_utc": "2026-11-27T12:24:32.640Z",
   "scope": [
     "stockingbooks.com",
     "lastingchange.works",
@@ -63,5 +63,17 @@
       "check": "Eerste inhoudelijk oordeel artikel van25nov met voldoende relevante data. Pins elk vanaf hun eigen publicatiedatum."
     }
   ],
-  "approval": "Bestaande exacte goedkeuringen uitvoeren, nieuwe beelden/copy/sitecode vooraf concreet tonen; geen bulkpublicatietoestemming uit productiedoel."
+  "approval": "Bestaande exacte goedkeuringen uitvoeren, nieuwe beelden/copy/sitecode vooraf concreet tonen; geen bulkpublicatietoestemming uit productiedoel.",
+  "short_term_traffic_plan": {
+    "source": "Henkjan27Novrequest",
+    "deadline": "2026-12-04",
+    "target": 160,
+    "metric": "Registered page-openings closedUTCday, organic separately",
+    "baseline_day": "2026-11-26",
+    "baseline": 16,
+    "current_registered_organic": 0,
+    "organic_multiplier": null,
+    "reference": "content/dagrapport/2026-11-27-traffic-plan.json",
+    "note": "Operational10xproxygoal, not replacement of existing30xorganicambition; not a forecast."
+  }
 }

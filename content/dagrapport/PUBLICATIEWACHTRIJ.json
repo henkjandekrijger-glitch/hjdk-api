@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-26T19:39:03.038Z",
+  "updated_at_utc": "2026-11-27T12:24:32.640Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -738,6 +738,12 @@
         "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
         "https://policy.pinterest.com/en/community-guidelines"
       ]
+    },
+    {
+      "at_utc": "2026-11-27T12:24:32.640Z",
+      "source": "Henkjan current chat: plan10xbycomingFriday,tellnexyandexecute",
+      "scope": "Execution of shown26Nov resource batch as specified in plan, preserving exact assets/copy. No new unseen content approval inferred.",
+      "plan": "content/dagrapport/2026-11-27-traffic-plan.json"
     }
   ],
   "cloud_access_observations": [
@@ -874,6 +880,22 @@
       ],
       "instagram_id": "20261125-ig-men",
       "does_not_change_existing_publication_approvals": true
+    }
+  ],
+  "execution_observations": [
+    {
+      "at_utc": "2026-11-27T12:24:32.640Z",
+      "account_status": "connected and healthy; canPost/canFetchAnalytics true",
+      "provider_posted_and_scheduled_checked": true,
+      "source": "Zernio list_posts limit50 plus live account native posts limit50; no claim of exhaustive all-history inventory",
+      "new_post_ids": [],
+      "status": "No new posting. Available wrapper lacks board/destination parameters; no compatible existing remote repo publishing route found. Approval preserved; no old cap/account-disconnection reason.",
+      "candidates": [
+        "20261126-free-secret-santa",
+        "20261125-free-coloring",
+        "20261125-free-trivia",
+        "20261125-seven-day-reset"
+      ]
     }
   ]
 }

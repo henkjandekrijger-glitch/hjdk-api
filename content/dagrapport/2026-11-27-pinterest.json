@@ -1,0 +1,155 @@
+{
+  "observed_at_utc": "2026-11-27T12:24:32.640Z",
+  "round": "pinterest",
+  "plan": "content/dagrapport/2026-11-27-traffic-plan.json",
+  "measurement": {
+    "droog": true,
+    "waargenomen": "2026-11-27T12:21:16.489Z",
+    "dag": {
+      "meetdag": "2026-11-26",
+      "meetperiode": {
+        "vanaf": "2026-11-26T00:00:00.000Z",
+        "totExclusief": "2026-11-27T00:00:00.000Z"
+      },
+      "site": {
+        "bs": {
+          "paginaOpeningen": 14,
+          "organischeOpeningen": 0,
+          "perBron": {
+            "direct": 14
+          },
+          "paginas": [
+            {
+              "pad": "/",
+              "openingen": 14
+            }
+          ],
+          "amazonVerzoeken": 43
+        },
+        "lc": {
+          "paginaOpeningen": 2,
+          "organischeOpeningen": 0,
+          "perBron": {
+            "direct": 2
+          },
+          "paginas": [
+            {
+              "pad": "/",
+              "openingen": 2
+            }
+          ],
+          "amazonVerzoeken": null
+        }
+      },
+      "amazonVerzoeken": 43,
+      "pdfVerkoop": null,
+      "leesstatus": {
+        "bs:tel:2026-11-26": "gelezen",
+        "bs:klik:2026-11-26": "gelezen",
+        "bs:gosrc:2026-11-26": "gelezen",
+        "verkoop": "ontbreekt"
+      }
+    },
+    "vorige": {
+      "meetdag": "2026-11-25",
+      "meetperiode": {
+        "vanaf": "2026-11-25T00:00:00.000Z",
+        "totExclusief": "2026-11-26T00:00:00.000Z"
+      },
+      "site": {
+        "bs": {
+          "paginaOpeningen": 13,
+          "organischeOpeningen": 0,
+          "perBron": {
+            "direct": 13
+          },
+          "paginas": [
+            {
+              "pad": "/",
+              "openingen": 13
+            }
+          ],
+          "amazonVerzoeken": 23
+        },
+        "lc": {
+          "paginaOpeningen": 3,
+          "organischeOpeningen": 0,
+          "perBron": {
+            "direct": 3
+          },
+          "paginas": [
+            {
+              "pad": "/",
+              "openingen": 3
+            }
+          ],
+          "amazonVerzoeken": null
+        }
+      },
+      "amazonVerzoeken": 23,
+      "pdfVerkoop": null,
+      "leesstatus": {
+        "bs:tel:2026-11-25": "gelezen",
+        "bs:klik:2026-11-25": "gelezen",
+        "bs:gosrc:2026-11-25": "gelezen",
+        "verkoop": "ontbreekt"
+      }
+    },
+    "definitie": "Geregistreerde bronopeningen, geen unieke personen. Paginatotalen bevatten ook intern doorbladeren. Amazonverzoeken zijn ruwe redirects, geen verkoop.",
+    "beperkingen": [
+      "Ontbrekende bron of site is onbekend, geen expliciete nul.",
+      "Geen gezamenlijke per-pin landingmeting of conversiepercentage.",
+      "Alleen bekende publieke paginapaden worden getoond."
+    ]
+  },
+  "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+  "executed": {
+    "code_pr": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/16",
+    "merge_sha": "4b2e777cfa4b68da88dedfdd7ddd4e511788d635",
+    "production_deployment": "dpl_9UvcYZFgMFaJNEWjW1g6AHGyBFxN",
+    "production_state": "READY",
+    "live_check": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+      "observed_at": "2026-11-27T12:21:16.489Z",
+      "http_status": 200
+    },
+    "tests": "22tests passed plus fn/bs.js syntax; code blobs unchanged versus tested PR; docs resolved with concurrent main preserved.",
+    "dashboard": "https://nexy.now/d",
+    "automation_ids": [
+      "Automation_78bd50f1177c819187c97dbc4098ab6e",
+      "Automation_8802f2dd9b548191980419acd21da2c3"
+    ],
+    "new_published_pins": [],
+    "new_published_articles": [],
+    "publication_reason": "Account healthy. Tool lacks board/destination arguments. No existing remote Zernio posting endpoint found in repo; do not invent endpoint or search keys."
+  },
+  "lessons": [
+    {
+      "evidence": "26Nov 14+2 versus25Nov13+3=16 both days; all direct/homepage. No registered organic site arrivals despite many bookposts.",
+      "leak": "Distribution is not demonstrably producing measured organic site traffic; distinguish limited reach/clicks from attribution loss.",
+      "action": "Live source report first, then traffic-oriented resource distribution; validate UTM/referrer logic without production synthetic counts."
+    },
+    {
+      "evidence": "Available publish_post_now/schedule_post schemas expose content/media/title/accounts, no Pinterest boardId or destination link.",
+      "leak": "Correct clickable Pinterest destinations cannot be set through this publishing wrapper.",
+      "action": "Keep exact approval and ready payloads; use a proven existing capable route when available. Do not publish to an unknown default board or without destination. Account is healthy, not disconnected."
+    },
+    {
+      "evidence": "14/26 per-post requests returned INVALID_ARGUMENT;10synced,2pending. Generic clicks not confirmed OUTBOUND_CLICK; post windows unspecified.",
+      "leak": "Daily learnings cannot identify an outgoing-click winner.",
+      "action": "Preserve every prior snapshot; append actual statuses/null reason for every pin. Resolve provider semantics/read failures; do not fabricate pinuitkomst."
+    }
+  ],
+  "controls": {
+    "daily": "Signals and execution only",
+    "content": "14to21days after actual publication with sufficient matched data",
+    "controls": "Existing wordsearch/SecretSanta/bookpins retained, one variable per new hook; not controlled A/B when topic/board/age differ"
+  },
+  "provider_snapshots_file": "content/dagrapport/2026-11-27-zernio-snapshots.json",
+  "limitations": [
+    "No uniquepeople or per-pin landing join",
+    "Provider generic clicks not verified outbound",
+    "No new social publication in this round; wrapper lacks correct destination/board fields"
+  ],
+  "next_check": "29Nov first execution/source checkpoint; daily existing rhythm remains;2Dec measurement;5Dec closed4Dec result."
+}
