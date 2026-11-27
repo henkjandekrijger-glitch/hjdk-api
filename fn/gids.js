@@ -739,6 +739,23 @@ export default async function handler(req, res) {
       if (q.get('f') === 'json') return res.status(200).json(stand);
       return res.status(200).send(kop('Organische groei | Kadoly gids', 'Beheer van metingen en inhoud.', '/', '<meta name="robots" content="noindex,nofollow">') + groeiHtml(stand) + '</main></body></html>');
     }
+    if (op === 'gidsidee') { // 27 nov 2026 (taak wjvssw, Henkjan: "minder pagina's, betere gidsen"): het voorstel met 20 cadeaugidsen en de noindex-regel, alleen op de beschermde host, noindex, niet in de sitemap, niets live
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const GI = await import('../lib/gids-idee.js'); const cat = await catalogus();
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('content-type', 'text/html; charset=utf-8');
+      if (q.get('voorbeeld') === '1') { // de exacte pagina zoals hij live zou komen, zonder hoofdbeeld, tellers en modal
+        let h = await gidsPagina(GI.voorbeeldGids(cat, thuis));
+        h = h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">').replace(/<link rel="canonical"[^>]*>/, '').replace(/<figure[\s\S]*?<\/figure>/, '').replace(/<script src="https:\/\/go\.kadoly\.com\/cm\.js"[^>]*><\/script>/, '').replace(/<script>\(function\(\)\{var g="[^"]*",s=\{\};[\s\S]*?<\/script>/, '');
+        return res.status(200).send(h.replace('<main class="wrap">', '<main class="wrap"><p class="meta"><b>Voorbeeld, nog niet live.</b> Zo komt de pagina op gids.kadoly.com als Henkjan ja zegt. <a href="/api/gids?op=gidsidee">Terug naar het voorstel</a></p>'));
+      }
+      const items = Object.values(cat).filter(i => i && i.id && i.t && i.vr !== false), inGids = new Set(); for (const g of Object.values(GIDSEN)) for (const k of (g.keuze || [])) inGids.add(k.pid);
+      const zonderCheck = items.filter(i => !bronLink(i)), zonder = zonderCheck.filter(i => !inGids.has(i.id)).sort((a, b) => String(a.id).localeCompare(String(b.id)));
+      const voorbeelden = Array.from({ length: Math.min(10, zonder.length) }, (_, n) => zonder[Math.floor(n * zonder.length / 10)]);
+      const stats = { sitemapGids: ((await sitemap()).match(/<url>/g) || []).length, rijen: items.length, metKoopcheck: items.length - zonderCheck.length, zonderKoopcheck: zonderCheck.length, inGidsZonderCheck: zonderCheck.length - zonder.length, zonder: zonder.length, voorbeelden: voorbeelden.map(i => ({ id: i.id, t: String(i.t).slice(0, 70) })) };
+      if (q.get('f') === 'json') { res.setHeader('content-type', 'application/json; charset=utf-8'); return res.status(200).json({ ok: true, stats, gidsen: GI.IDEE.map(d => ({ slug: d.slug, titel: d.titel, max: d.max, producten: d.producten.map(([pid, label]) => { const i = cat[pid]; return { pid, label, naam: i && i.t, prijs: i ? thuis(i) : null, leverbaar: !!(i && i.vr !== false) }; }) })) }); }
+      const lever = i => leveringsBeperking(i) || (N(i.lt) > 0 ? 'bezorging rond ' + nlDatum(leverDatum(i.lt)) : 'levertijd niet opgegeven');
+      return res.status(200).send(kop('Voorstel: minder pagina\'s, betere gidsen | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + GI.ideeHtml({ cat, thuis, euro, esc, lever, stats }) + '</main></body></html>');
+    }
     if (op === 'vraagkansen') { // Henkjan 10 nov 2026: onderwerpen die ChatGPT naar boven haalt en die in de winkel komen. Zoekvraag (Demand Radar) naast aanbod en gidsen. Cron 00:20 UTC met vers=1.
       const { vraagKansen } = await import('../lib/kadoly-vraag.js');
       const r = await vraagKansen({ vers: q.get('vers') === '1', catItems: Object.values(await catalogus()) });
