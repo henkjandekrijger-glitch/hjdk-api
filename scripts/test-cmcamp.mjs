@@ -21,7 +21,7 @@ C.B.md = async (naam, a) => {
     { campaignId: 11, creativeId: 103, creativeTag: 'c3', creativeTitle: 'Nooit getoond', impressions: 0, clicks: 0, spent: 0, conversions: 0 },
     ...Array.from({ length: md.extra }, (_, i) => ({ campaignId: 11, creativeId: 1000 + i, creativeTag: 't' + (1000 + i), creativeTitle: 'Rapport ' + (1000 + i), impressions: 10, clicks: 0, spent: 0.001, conversions: 0 }))] };
   if (naam === 'mondiad_list_campaigns') { md.lijst++; if (md.lijstStuk) throw new Error('lijst eruit'); const pg = md.pag, p = a.page; return { meta: { totalRows: ALLE.length, totalPages: Math.ceil(ALLE.length / pg) }, data: ALLE.slice(p * pg, (p + 1) * pg) }; }
-  if (naam === 'mondiad_get_creative_details') { md.det.push(a.ids.map(String)); if (md.faal && md.faal(a.ids.map(String))) throw new Error('429'); return a.ids.filter(id => !md.weg.has(String(id))).map(id => CRE[id] || { id: Number(id), tag: 't' + id, title: 'Titel ' + id, description: 'Tekst ' + id, image: 'https://img.test/' + id + '.png', icon: 'i', status: 'Active', campaignId: 11 }); }
+  if (naam === 'mondiad_get_creative_details') { md.det.push(a.ids.map(String)); if (md.faal && md.faal(a.ids.map(String))) throw new Error('429'); return a.ids.filter(id => !md.weg.has(String(id))).slice(0, md.cap || 1e9).map(id => CRE[id] || { id: Number(id), tag: 't' + id, title: 'Titel ' + id, description: 'Tekst ' + id, image: 'https://img.test/' + id + '.png', icon: 'i', status: 'Active', campaignId: 11 }); }
   throw new Error('onbekend ' + naam);
 };
 const wis = async () => { await kv.raw(['DEL', 'cm:mdcamps', 'cm:mdcre']); C.mondiadWis(); md.det = []; md.lijst = 0; md.weg = new Set(); md.faal = null; md.lijstStuk = false; md.extra = 0; md.leeg = false; };
@@ -93,6 +93,10 @@ ok(x.campagnes[0].creatives.find(c => c.id === '101').titel === 'Waar is het str
 await wis(); md.weg.add('102'); x = await C.mondiadDag(D, { md: C.B.md }); const c2 = x.campagnes[0].creatives.find(c => c.id === '102');
 ok(c2.titel === 'Open vandaag' && c2.tag === 'c2' && !c2.tekst && !c2.beeld && (await kv.raw(['HGET', 'cm:mdcre', '102'])) === '{"x":1}' && x.campagnes[0].creatives.find(c => c.id === '101').tekst, 'T: id dat niet terugkomt: lege markering, titel en tag uit het rapport');
 const na2 = md.det.length; await C.mondiadDag(D, { md: C.B.md }); ok(md.det.length === na2, 'T: gemarkeerd id wordt niet opnieuw gevraagd');
+// Mondiad geeft minder terug dan gevraagd (grens per aanroep): wat ontbreekt wordt opnieuw gevraagd, niets krijgt ten onrechte de lege markering
+await wis(); md.extra = 120; md.cap = 20; x = await C.mondiadDag(D, { md: C.B.md });
+{ const h = await kv.raw(['HVALS', 'cm:mdcre']); ok(nTekst(x) === 122 && !x.fouten.length && h.length === 122 && !h.some(v => /"x":1/.test(v)) && md.det.every(a => a.length <= 50), 'T: afgekapt antwoord (20 per aanroep): alles alsnog binnen, geen lege markering'); }
+md.cap = 0;
 // tijdsbudget op: eerste regel, creatives met titel uit het rapport
 await wis(); md.extra = 120; x = await C.mondiadDag(D, { md: C.B.md, tijd: -1 });
 ok(x.ok && x.fouten[0] === 'creatives mondiad: tijdsbudget op, 122 advertenties zonder tekst en beeld' && x.campagnes[0].creatives.length === 122 && x.campagnes[0].creatives[0].titel && nTekst(x) === 0 && md.det.length === 0, 'T: tijdsbudget op: eerste regel precies zo, creatives met titel uit het rapport, geen aanroepen');
@@ -159,6 +163,11 @@ ok(r.gewoon && r.netwerk && r.netwerk.rest === 0 && w.klaar && w.gedaan.length =
 const g2 = await kv.get('cm:inhaal'); ok(JSON.stringify({ ...g2, klaar: undefined }) === JSON.stringify({ ...gewoon, klaar: undefined }) && g2.klaar === 'gisteren', 'B: cm:inhaal (de lopende gewone inhaal) is onaangeroerd');
 ok((await kv.raw(['EXISTS', 'cm:inhaal:slot'])) == 0 && (await kv.raw(['EXISTS', 'cm:inhaal:mondiad:slot'])) == 0, 'B: eigen slot per netwerk, geen slot blijft hangen');
 ok((await lees(v2)).some(c => c.net === 'mondiad') && !(await lees(v2)).some(c => c.net === 'propeller'), 'B: ingehaalde dag heeft alleen Mondiad (de gewone inhaal vult de rest)');
+// een nieuwe inhaal start niet zolang er nog een ronde loopt (anders schrijft die ronde zijn oude toestand over de nieuwe heen)
+{ const voor = JSON.stringify(await kv.get('cm:inhaal:mondiad')); await kv.raw(['SET', 'cm:inhaal:mondiad:slot', '1', 'EX', '60']);
+  r = await C.inhaal({ van: dag(30), tot: dag(29), alleen: 'mondiad' });
+  ok(r.ok === false && r.bezig && JSON.stringify(await kv.get('cm:inhaal:mondiad')) === voor, 'B: nieuwe inhaal geweigerd zolang er een ronde loopt, de toestand blijft zoals hij was');
+  await kv.raw(['DEL', 'cm:inhaal:mondiad:slot']); }
 // tijdsbudget voor tekst en beeld op: de dag komt terug in de netwerk-inhaal tot hij compleet is
 { const echtMd = C.B.mondiad, vx = dag(12); let vol = false;
   C.B.mondiad = async d => { const x = await echtMd(d); return vol ? x : { ...x, fouten: ['creatives mondiad: tijdsbudget op, 1 advertenties zonder tekst en beeld'] }; };
