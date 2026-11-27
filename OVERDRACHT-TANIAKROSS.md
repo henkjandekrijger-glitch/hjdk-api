@@ -1,7 +1,105 @@
 # Overdracht taniakross.media (Tania Kross): site, lijst, podcastmail, betaald en organisch
 
-Bijgewerkt: vrijdag 20 november 2026, 15:15 UTC (11:15 Curaçao), door chat-taniakross.
+Eerste versie: vrijdag 20 november 2026 door chat-taniakross. Laatst bijgewerkt: vrijdag 27 november 2026, 12:30 UTC, door tk-chat2. Begin bij deel 0.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
+
+## 0. START HIER (27 nov 2026, 12:30 UTC, door tk-chat2)
+
+Dit deel gaat voor op alles eronder. Alleen dit deel lezen: `/api/wtb?op=tkoverdracht&deel=kort`.
+
+### Eén eigenaar en één plek per soort informatie
+
+Henkjan 27 nov: "goede overdracht die chat staat nu uit moet allemaal centraal in dashboard staan zodat geen miscomms" en "zorg voor goede overdracht met iedere taak of schedule".
+
+- Er werkt één chat tegelijk aan TK. Op 27 nov werkten er twee tegelijk in twee accounts (tk-chat en tk-chat2): dubbel werk en twee keer dezelfde vragen aan Henkjan. tk-chat staat uit op Henkjans woord. tk-chat2 is eigenaar tot een volgende chat het overneemt.
+- Overnemen: lees dit deel en het werklog bovenaan. Staat er in het laatste uur een regel van een andere chat, schrijf dan eerst één regel in het werklog (wie=tk-<naam>: "ik neem TK over" of "ik doe alleen X") en doe niets wat daar al staat.
+- Nooit twee uitrollen van simpele-site tegelijk. Een uitrol neemt de bestandslijst van de vorige over, dus het nieuwe bestand van een ander valt weg. Kijk vlak voor je uitrolt met list_deployments of er een nieuwere productie-uitrol is en neem die lijst.
+- Een open vraag aan Henkjan is een planregel op het dashboard die begint met "Wacht op Henkjan:". Zijn ja schrijf je in het werklog met zijn eigen woorden erbij. Zo ziet de volgende chat wat gevraagd is en wat beantwoord.
+- Een controle die je voor later plant in je chat verdwijnt als de chat stopt. Zet hem ook als planregel met datum op het dashboard.
+
+| Wat | Waar | Wie schrijft |
+|---|---|---|
+| Doel, getal, planning, output, geld, alles wat vanzelf draait | dashboard, project tk (`/api/mm/dashboard?vorm=tekst&project=tk`) | elke chat en ronde, in dezelfde beurt als het werk |
+| Wat er gebeurde en wat er ligt | werklog met wie=tk-... (bovenaan deze overdracht en op het dashboard) | idem |
+| Hoe het werkt, regels, opdrachten van de taken | dit bestand, OVERDRACHT-TANIAKROSS.md in hjdk-api | de chat die iets verandert, in dezelfde commit |
+| Mailmind | `/api/post?op=mailmind&s=tk-mailchimp` (perKenmerk, bank, dagen) | vanzelf |
+| Lijst | simpele-site `/api/lijst?a=stand` | vanzelf |
+| Campagnes van vandaag | kaart Campagnes op het dashboard | vanzelf |
+
+### Stand 27 nov 12:30 UTC
+
+- Lijst 80 van 1.000. Nodig rond 27 per dag tot 31 dec; er komen er rond 7 per dag bij.
+- PropellerAds: alleen 12193513 loopt, bod $0,06, dagvenster 07:00 tot 22:00 NL (beide 27 nov hersteld door tk-chat). Oordeel 28 nov: levert hij weer rond 10 adressen per dag onder $0,06.
+- Mailmind tk-mailchimp: 80 per dag, een stop remt niet meer, bounces wel. Eerste leermoment (94 mails): gmail en hotmail 30 verstuurd, 5 ja, 1 stop, 0 bounces; eigen domeinen 29, 4 ja, 10 stops, 2 bounces; provider 23, 0 ja, 2 bounces; score 3: 18 verstuurd, 0 ja, 3 bounces. Onderwerp: nog geen winnaar (o0 7 ja op 51, o1 4 op 43).
+- Mailmind slimmer en veilig voor Gmail (Henkjans ja, 27 nov): bakkeuze per kenmerk met bounce en stop erin, de bank en de dagrem. Code lib/mailmind-bak.js, uitleg in sectie 10. Live sinds 27 nov rond 13:00 UTC (Henkjan: "ja push").
+- Vercel simpele-site: NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin (27 nov, zelfde adressen als de code al gebruikte). Ze gelden vanaf de eerstvolgende productie-uitrol.
+- Dagartikel 27 nov: de Claude-taak leverde niet. tk-chat2 schreef "Klankschalen en sound healing: werkt het?" (data/mm/2026-11-27-klankschalen.json), als voorbeeld uitgerold (dpl_HHhjJ7ur4zJ7NqtkrKA52dwr6GuZ, geen productie) en aan Henkjan getoond. Live na zijn ja; anders plaatst de terugval om 15:07 UTC een eigen artikel en wordt dit het stuk van de volgende dag.
+- **Twee voorbeelden van simpele-site wachten op Henkjans ja, gemaakt door twee chats.** (a) Artikel 27 nov: dpl_HHhjJ7ur4zJ7NqtkrKA52dwr6GuZ, nieuw bestand data/mm/2026-11-27-klankschalen.json. (b) Google-weergave van de homepage, van tk-chat op Henkjans aanwijzingen: dpl_CKWGXPCWquzGUk2nENFaTd4s5FGk, nieuw api/_google.js (sha daa2ef6ea214405d2cae1b20f7207e143215845a) en gewijzigd api/page.js (sha c91810eac140d3d9563e889de46aef232a9fd63c); uitleg in het werklog van 27 nov 12:08 UTC. **Live zetten doe je nooit op de bestandslijst van een voorbeeld:** neem de lijst van de laatste productie-uitrol en zet alleen de bestanden van dat ene voorbeeld erbij (per sha, uit list_deployment_files van het voorbeeld). Anders haalt het ene voorbeeld het andere weer weg. Niet promoten: een voorbeeldbouw mist UPLOAD_KEY. Na de Google-weergave: herindexering aanvragen in Search Console en de proef melden in ZICHT.
+
+### Alles wat vanzelf draait
+
+Dezelfde lijst staat op het dashboard onder "Draait vanzelf" (veld taken van project tk). Verander je een taak, werk dan beide bij.
+
+| Taak | Waar | Wanneer | Controle dat hij liep | Als hij niet liep |
+|---|---|---|---|---|
+| Mailmind uurronde | Vercel-cron hjdk-api, `/api/post?op=mailmind&ronde=1` | elk uur op :23, verstuurt 9 tot 21 uur NL | `laatsteRonde` in de stand; elke ochtend een regel tk-mailmind | kijk naar wachtOp, de poort (180 per dag, 12 per uur), de dagrem; proef zonder versturen: `&ronde=1&droog=1` |
+| Ochtendverslag | Vercel-cron simpele-site, `/api/rapport` | 11:00 UTC | mail bij Tania en Henkjan | runtime-fouten van simpele-site (get_runtime_errors) |
+| Weekmail-voorbeeld | Vercel-cron simpele-site, `/api/nieuwsbrief` | 14:30 UTC, alleen als de vorige mail 6 dagen oud is en er een nieuwe aflevering of gast is | voorbeeld bij Tania en Henkjan; naar de lijst pas na Nu versturen | NB_VOORBEELD_AAN nakijken, sectie 6 |
+| Dagartikel | Claude-taak trig_01GBsTSx84bciUTnNr7qnpe1, in het andere Claude-account | 10:37 UTC | `artikelVandaag` in `/api/mmart?op=stand`; regel tk-dagartikel | terugval hieronder; of een chat voert Taak A uit |
+| Dagartikel terugval | Vercel-cron simpele-site, `/api/mmart?op=dag` | 15:07 UTC | regel tk-dagartikel-gateway | wachtrij op? Vul WACHTRIJ in api/mmart.js aan |
+| TK dagronde adressen | Claude-taak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3, in het andere Claude-account | 08:17 Curaçao (12:17 UTC) | regel tk-dagronde van vandaag | geen terugval: een chat voert Taak B uit |
+| Budgetwacht en uurwacht | Vercel-cron propellerads-mcp en Clickmind | elk uur | kaart Campagnes op het dashboard | zie CLAUDE.md |
+| Tellers en logboek van de site | Vercel-cron simpele-site, `/api/rollup` en `/api/logboek?scan=1` | elke 15 minuten | ochtendverslag heeft cijfers | runtime-fouten |
+
+De twee Claude-taken hangen aan één account. Dit account (tk-chat2) kan ze niet zien of wijzigen. Draait dat account niet (limiet bereikt, uitgezet), dan valt de dagronde stil en schrijft de terugval het artikel. Voorstel aan Henkjan (27 nov, wacht op zijn ja): dezelfde twee taken ook in het tweede account, een uur later, met als eerste stap "staat het werk van vandaag al in het werklog of in de stand, stop dan". Zo doet het niet uit welk account loopt en gebeurt er niets dubbel.
+
+### Opdrachten van de Claude-taken (dit is de bron)
+
+Zet in de geplande taak zelf alleen de verwijzing, zodat elk account dezelfde tekst uitvoert:
+
+> Lees met web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht&deel=kort en voer Taak A (of Taak B) precies uit. Nederlands, kort, zuinig met tokens. Vraag niets; kies bij twijfel de veiligste optie.
+
+De taken in het andere account dragen nog hun eigen tekst van 26 nov. Wie daar bij kan, vervangt die door de verwijzing.
+
+**Taak A: dagartikel Muziek als medicijn**
+
+1. Stand: `https://simpele-site-henq.vercel.app/api/mmart?op=stand`. Staat `artikelVandaag` er al: stop, geen log, geen bericht. Loopt er volgens list_deployments (project simpele-site) net een uitrol van een ander, wacht tot die klaar is.
+2. Onderwerp: de grootste vraag zonder artikel uit `https://demandradar-ivory.vercel.app/api/zoekvraag?thema=muziek-medicijn` (één keer ophalen). Niet een onderwerp uit `laatste` en niet uit `wachtrijOver` (die zijn van de terugval). Gedaan tot en met 27 nov: slapen, binaural beats, studeren, klankschalen. Volgende kandidaten: muziek tegen angst en stress, wat is muziektherapie, helende frequenties, zingen is gezond.
+3. Bronnen: twee of drie bronnen die je zelf leest, een overzichtsstudie of meta-analyse eerst, dan een proef (Cochrane, PubMed, PMC). Elk getal in het artikel staat in een bron die je las.
+4. Schrijf `data/mm/<datum>-<onderwerp>.json` in de vorm van het laatste artikel (ophalen: `https://simpele-site-henq.vercel.app/data/mm/2026-11-27-klankschalen.json` of het artikel van 26 nov): `datum`, en voor `nl` en `en`: `slug`, `titel` (zoekterm voorop, hooguit 70 tekens), `beschrijving` (hooguit 155), `h1`, `antwoord` (het antwoord in 4 tot 6 zinnen met de belangrijkste getallen), `delen` (`{kop, p: [...]}` of `{kop, lijst: [...]}`), `vragen` (`[[vraag, antwoord]]`, 4 of 5 echte zoekvragen), `bronnen` (`[[naam, url]]`).
+5. De lat (Henkjan 26 nov, "briljant"): een haak in de eerste alinea, getallen in mensentaal (van 45 naar 35, geen effectmaten), een deel "Hoe zeker is dit?" dat zegt wat we niet weten, een lijst "Vanavond doen" met wat je zelf kunt doen en wanneer je naar de huisarts gaat. Geen gedachtestreepjes, geen HTML, geen verzonnen feiten. Zelftoets voor je uitrolt: haak, mensentaal, hoe zeker, vanavond doen, elk getal in een gelezen bron, NL en EN gelijk. Eén punt niet gehaald: herschrijven.
+6. Uitrollen: mcp__Vercel__create_deployment met name en project simpele-site, target production, files = elk src-bestand uit list_deployment_files van de laatste productie-uitrol als `{file, sha}` (pad zonder `src/`) plus het nieuwe bestand inline (encoding utf-8). Geen ander bestand inline.
+7. Controle: uitrol READY; `/muziek-als-medicijn/<slug>` en `/en/music-as-medicine/<slug>` op simpele-site-henq.vercel.app geven 200 met de h1 en `id="dossier"`; de stand toont `artikelVandaag`.
+8. Werklog: `/api/mm/handover?log=<datum, titel, zoekvraag met volume, bronnen, uitrol-id>&wie=tk-dagartikel`. Drie regels aan Henkjan met de link.
+
+In een chat met Henkjan erbij: eerst het idee en het stuk laten zien (uitrol zonder target is een voorbeeld; deellink met get_access_to_vercel_url), live na zijn ja. De geplande taak plaatst zelf (Henkjan 24 nov: "vul dit iedere dag aan met een artikel").
+
+**Taak B: TK dagronde adressen (PropellerAds)**
+
+Lees eerst de skill campagnes-henkjan (tool campagne_skill van de PropellerAds-connector); die regels gaan voor.
+
+1. Werklog: staat er vandaag al een regel tk-dagronde, stop dan. De ronde is gedaan.
+2. Cijfers: gisteren en vandaag per campagne (daily_report), de lopende TK-campagne per zone en per advertentie over 3 dagen (zone_stats, creative_stats), Clickmind-zones (`/api/mm/zones`: wit, zwart), de lijststand en de Mailmind-stand.
+3. Zones: een zone met 80 of meer kliks zonder adres gaat van de witte lijst (zones_erbij_uitsluiten). Een zone die Clickmind wit noemt of die een adres gaf mag erbij.
+4. Advertenties: 300 of meer kliks en minder dan de helft van de gemiddelde conversie van de campagne: uit.
+5. Dagkopie: één verbeterde kopie per dag met kopie_met_verse_creatives (de beste advertenties plus 2 nieuwe, knop in het Nederlands van hooguit 15 tekens, `bod_van_bron: true`). Lees het veld bod in het antwoord: $0,06. Controleer het dagvenster (07:00 tot 22:00 NL, campagnetijd is -5) en de witte lijst. De voorganger gaat pas uit als de kopie op $0,06 staat en vertoningen krijgt. Eén live TK-campagne. Draait de lopende campagne minder dan een dag op zijn huidige bod en venster, maak dan geen kopie: één wijziging per dag, anders is niet te zien wat werkte.
+6. Bod en budget: $0,06 voor de hele lijn, $10 per dag. Wijzigen alleen op Henkjans woord. Een hoger bod kocht duurdere kliks, niet meer adressen ($0,20 gaf $0,48 per adres).
+7. Mailmind meelezen, niets wijzigen: ja, stops en bounces van gisteren, wat op de bank staat, of de dagrem viel.
+8. Dashboard: planregels af en erbij. Werklog met wie=tk-dagronde: adressen gisteren per bron, kosten per adres, leden, wat er veranderde, wat de controle van morgen is.
+9. Rapport aan Henkjan in hooguit 6 regels.
+
+### Wacht op Henkjan
+
+Niets van 27 nov staat nog open: om 12:53 UTC zei Henkjan ja op alle vier (pushen naar hjdk-api, artikel live, Google-weergave live, de twee taken ook in het tweede account). De afloop staat in het werklog van tk-chat2. Nieuwe vragen aan Henkjan staan als planregel "Wacht op Henkjan:" op het dashboard.
+
+Loopt nog (27 nov, Henkjan bij het aanmeldvenster "Hoor het als Tania weer optreedt"): "Moet ook gaan over podcast etc . Om de andere week een volgende . En kijk HIER naar de laatste . Kijk of luister ." De teksten staan in api/lijst.js (MAIL, m1 tot m4); eerst als voorbeeld laten zien, dan live.
+
+### Eerstvolgende stappen, op volgorde
+
+1. Mailmind-bakkeuze live, daarna proefronde (`&ronde=1&droog=1`: bijna alles naar gmail en hotmail, niets naar score 3). Oordeel na 100 mails naar gratis adressen: ja boven 12%, bounces onder 3%.
+2. 28 nov: levert 12193513 weer rond 10 adressen per dag onder $0,06.
+3. Adressen uit api/rapport.js, api/lijst.js en api/_push.js naar de variabelen (RAPPORT_AAN, LIJST_ANTWOORD). Daarna kunnen die bestanden inline uitgerold worden: nieuw ochtendverslag, Barcelona-embed naar youtube.com, venster naar de Mailmind-modal.
+4. De rest staat in sectie 11.
 
 Bijgewerkt 27 nov 2026 12:00 UTC door tk-chat. Dit blok gaat voor op oudere tekst hieronder.
 
@@ -12,6 +110,8 @@ Bijgewerkt 27 nov 2026 12:00 UTC door tk-chat. Dit blok gaat voor op oudere teks
 - **Mailmind (Henkjans akkoord, 27 nov):** bij deze toestemmingsmail telt een stop niet meer als rem (`stopIsAntwoord` in lib/tkmc.js; de rem op bounces blijft: 8% halveren, onder 5% groeien). Tempo terug op 80 per dag, +25 per dag naar 150. Was door 15 stops op 86 mails naar 20 gezakt terwijl 12% ja zei.
 - **Vercel simpele-site (Henkjans ja, 27 nov):** NB_VOORBEELD_AAN, LIJST_ANTWOORD en RAPPORT_AAN staan erin. Ze gelden vanaf de eerstvolgende uitrol. Vanaf dan gaat het voorbeeld van de weekmail naar Tania en Henkjan (cron 14:30 UTC, naar de lijst pas na Nu versturen), kan het nieuwe ochtendverslag uit (adressen uit de code naar RAPPORT_AAN) en kan het venster naar de Mailmind-modal.
 - **Google (Henkjan 27 nov: "breng structuur aan zodat googlers juiste structuur zien van haar en niet een random tekst uit de site"):** de homepage heeft al Person, WebSite en de rest in JSON-LD. Het lek zit in de zichtbare tekst: de eerste lopende tekst is de inleiding van de podcast, de omschrijving is 198 tekens (te lang) en het menu wijst naar ankers in plaats van pagina's. Voorstel ligt bij Henkjan (eerst zien, dan live): korte regel wie Tania is bovenaan, omschrijving onder 155 tekens, data-nosnippet op podcasttekst, menu en aanmeldvenster, ProfilePage erbij. Open vraag: mag "Boekingen via Theaterbureau de Mannen" uit de omschrijving.
+
+<!-- einde kort -->
 
 Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagne opgesplitst in BEWEZEN (12183102) en VERKENNER (12168319) met een dagelijkse leerronde (zie 7). De Mailchimp-adressen (zie 10) zijn nog niet besproken.
 
@@ -134,6 +234,7 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 - **Toestemming:** alleen wie ja zegt komt op de lijst: knop op taniakross.media/blijf/<tok> (bevestigt met JavaScript, dus linkscanners zetten niets aan) of "ja" terugmailen. Dan POST naar /api/lijst?a=aan met p=mailchimp-<variant>; de gewone welkomstmail volgt (bij een Barcelona-variant v=g1). Stop: taniakross.media/stop/<tok> en List-Unsubscribe. Niets doen = nooit meer mailen.
 - **Rewrite** in simpele-site/vercel.json: /blijf/:t en /stop/:t naar keuzehulp.best/api/post?op=tkmc&t=:t&w=ja|stop.
 - **Leren:** twee varianten tegelijk, Thompson op ja per verstuurde mail. Elke 20 verstuurde mails een leermoment: een variant met 20+ verstuurd die voor 80% de slechtste is gaat eruit, de volgende komt erbij; na 60 per variant zonder duidelijke winnaar valt de laagste toch af. Zes varianten klaar (o0 vraag plus podcast, o1 met Barcelona als cadeau, o2 "Lang niets van Tania Kross gehoord", o3 podcast voorop, o4 heel kort, o5 "We ruimen de lijst op" met Barcelona). Daarna uitdagers via op=mailmind&s=tk-mailchimp&uitdager={"o":..,"t":..}; de TK-dagronde leest de antwoorden (op=mailmind&s=tk-mailchimp&leer=1) en schrijft er een als de rij opraakt.
+- **Welke adressen eerst (27 nov, Henkjan: "zorg dat mail mind slimmer wordt en mijn account gmail niet gekilld", lib/mailmind-bak.js):** elk kenmerk van een bak leert mee (score, soort adres, jaar), de keuze is de kans op ja min 3 keer de kans op een bounce en een half keer die op een stop, en een kenmerk met 15 of meer mails en 10% of meer bounces gaat op de bank (27 nov: score 3). Op de cijfers van 27 nov gaat 87% naar gmail en hotmail (was 66%), 6% naar eigen domeinen (was 23%) en niets naar score 3 (was 6%). Dagrem: 4 of meer bounces vandaag en 6% of meer van wat vandaag uitging, dan vandaag niets meer. Stand: `perKenmerk` en `bank` in de stand; test `node scripts/test-mailmind-bak.mjs`. Zet de bank of de dagrem niet uit om het tempo te halen: het Gmail-account van Henkjan gaat voor het doel.
 - **Volume:** start 40 per dag; bounce onder 5% en stop onder 3% over 7 dagen (vanaf 40 mails): +10 per 2 dagen, tot 180; bounce 8% of stop 5%: halveren. Elke mail wordt gemeld in de POST-lus (project tk-mailchimp).
 - **Stand:** /api/post?op=mailmind&s=tk-mailchimp (per variant, per bak, mailbox, lekken), voorbeeld van de echte mail: /api/post?op=tkmc&voorbeeld=1 (beschermde host hjdk-api-henq.vercel.app).
 - **Live sinds 25 nov 13:55 UTC** (Henkjan: "Verstuur en zorg voor updates hier en in dashboard ."): LIVE in lib/tkmc.js op true en /api/post?op=mailmind&s=tk-mailchimp&zet=1&aan=1. Uitzetten: &zet=1&aan=0.

@@ -261,7 +261,8 @@ export default async function handler(req, res) {
     const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };
     let log = []; try { log = ((await kv.raw(['LRANGE', 'mm:handover:log', 0, 299])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(x => x && /taniakross|^tk-/i.test(String(x.wie || ''))).slice(0, 20); } catch (e) {}
     const kop = '# taniakross.media-overdracht, live ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n\n## Werklog taniakross (nieuwste boven, uit /api/mm/handover)\n\n' + (log.length ? log.map(x => '- ' + String(x.t).slice(0, 16).replace('T', ' ') + ' ' + x.wie + ': ' + x.tekst).join('\n') : '- (nog geen regels)') + '\n\n---\n\n';
-    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(kop + lees('OVERDRACHT-TANIAKROSS.md'));
+    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); const heel = lees('OVERDRACHT-TANIAKROSS.md'), kortDeel = heel.split('<!-- einde kort -->')[0]; // ?deel=kort: alleen START HIER (eigenaar, stand, taken met hun opdracht, wat op Henkjan wacht); het geheel is te lang voor een geplande taak
+    return res.status(200).send(kop + (q.get('deel') === 'kort' ? kortDeel + '\n\nHet geheel (werking per onderdeel, oudere standen, logboek): /api/wtb?op=tkoverdracht\n' : heel));
   }
   const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
   const path = '/' + String(q.get('slug') || '');
