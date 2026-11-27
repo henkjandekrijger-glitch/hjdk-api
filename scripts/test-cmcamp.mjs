@@ -8,18 +8,23 @@ const ok = (c, n) => { if (!c) { console.log('FOUT', n); process.exitCode = 1; }
 const dag = i => new Date(Date.now() - i * 864e5).toISOString().slice(0, 10), D = dag(2), D1 = dag(3), D2 = dag(4);
 
 // ---- nagemaakte netwerken ----
-let md = { calls: 0, meta: 0, stuk: false };
+let md = { calls: 0, lijst: 0, det: [], stuk: false, pag: 500, weg: new Set(), faal: null, lijstStuk: false, extra: 0, leeg: false };
+const CRE = { 101: { id: 101, tag: 'c1', title: 'Waar is het strand?', description: 'Vraag het de chat', image: 'https://img.test/a.png', icon: 'i.png', status: 'Active', campaignId: 11 }, 102: { id: 102, tag: 'c2', title: 'Open vandaag', description: 'Wie is nu open', image: null, icon: 'icon_2.png', status: 'Active', campaignId: 11 } };
+const ALLE = [{ id: 11, name: 'x', status: 'Running', bid: 0.15, bidType: 'CPA', dailyBudget: 10, url: 'https://todayin.email/?c=md[campaignid]', countryTargeting: ['NL'], adType: ['CLASSIC_PUSH'], startDate: '2026-11-01' }, { id: 12, name: 'y', status: 'Paused', bid: 0.2, bidType: 'CPC', dailyBudget: 5, url: 'https://wam.test/', countryTargeting: ['US', 'DE'], adType: ['IN_PAGE_PUSH', 'CLASSIC_PUSH'], startDate: 'onbekend' }];
 C.B.md = async (naam, a) => {
   md.calls++; if (md.stuk) throw new Error('Mondiad ligt eruit');
-  if (naam === 'mondiad_campaign_report' && a.breakdown === 'CAMPAIGN') return { meta: { totalPages: 1 }, data: [{ campaignId: 11, campaignName: 'TODAYIN CURACAO NL | CLASSIC PUSH', impressions: 3000, clicks: 40, spent: 0.1234, conversions: 3 }, { campaignId: 12, campaignName: 'WAM SAMEN NL | push', impressions: 10, clicks: 0, spent: 0, conversions: 0 }] };
+  if (naam === 'mondiad_campaign_report' && a.breakdown === 'CAMPAIGN') return md.leeg ? { meta: { totalPages: 1 }, data: [] } : { meta: { totalPages: 1 }, data: [{ campaignId: 11, campaignName: 'TODAYIN CURACAO NL | CLASSIC PUSH', impressions: 3000, clicks: 40, spent: 0.1234, conversions: 3 }, { campaignId: 12, campaignName: 'WAM SAMEN NL | push', impressions: 10, clicks: 0, spent: 0, conversions: 0 }] };
   if (naam === 'mondiad_campaign_report') return { meta: { totalPages: 1 }, data: [ // twee rijen voor creative 101 (per carrier): optellen
     { campaignId: 11, creativeId: 101, creativeTag: 'c1', creativeTitle: 'Waar is het strand?', carrierName: 'Wi-Fi/Wired', impressions: 1000, clicks: 10, spent: 0.03, conversions: 1 },
     { campaignId: 11, creativeId: 101, creativeTag: 'c1', creativeTitle: 'Waar is het strand?', carrierName: 'Mobile', impressions: 500, clicks: 10, spent: 0.02, conversions: 0 },
-    { campaignId: 11, creativeId: 102, creativeTag: 'c2', creativeTitle: 'Open vandaag', carrierName: 'Wi-Fi/Wired', impressions: 1500, clicks: 20, spent: 0.0734, conversions: 2 }] };
-  if (naam === 'mondiad_get_creatives_by_campaign') { md.meta++; return [{ id: 101, tag: 'c1', title: 'Waar is het strand?', description: 'Vraag het de chat', image: 'https://img.test/a.png', icon: 'i.png', status: 'Active', campaignId: 11 }, { id: 102, tag: 'c2', title: 'Open vandaag', description: 'Wie is nu open', image: null, icon: 'icon_2.png', status: 'Active', campaignId: 11 }]; }
-  if (naam === 'mondiad_get_campaign_details') return [{ id: 11, name: 'x', status: 'Running', bid: 0.15, bidType: 'CPA', dailyBudget: 10, url: 'https://todayin.email/?c=md[campaignid]', countryTargeting: ['NL'], adType: ['CLASSIC_PUSH'] }];
+    { campaignId: 11, creativeId: 102, creativeTag: 'c2', creativeTitle: 'Open vandaag', carrierName: 'Wi-Fi/Wired', impressions: 1500, clicks: 20, spent: 0.0734, conversions: 2 },
+    { campaignId: 11, creativeId: 103, creativeTag: 'c3', creativeTitle: 'Nooit getoond', impressions: 0, clicks: 0, spent: 0, conversions: 0 },
+    ...Array.from({ length: md.extra }, (_, i) => ({ campaignId: 11, creativeId: 1000 + i, creativeTag: 't' + (1000 + i), creativeTitle: 'Rapport ' + (1000 + i), impressions: 10, clicks: 0, spent: 0.001, conversions: 0 }))] };
+  if (naam === 'mondiad_list_campaigns') { md.lijst++; if (md.lijstStuk) throw new Error('lijst eruit'); const pg = md.pag, p = a.page; return { meta: { totalRows: ALLE.length, totalPages: Math.ceil(ALLE.length / pg) }, data: ALLE.slice(p * pg, (p + 1) * pg) }; }
+  if (naam === 'mondiad_get_creative_details') { md.det.push(a.ids.map(String)); if (md.faal && md.faal(a.ids.map(String))) throw new Error('429'); return a.ids.filter(id => !md.weg.has(String(id))).map(id => CRE[id] || { id: Number(id), tag: 't' + id, title: 'Titel ' + id, description: 'Tekst ' + id, image: 'https://img.test/' + id + '.png', icon: 'i', status: 'Active', campaignId: 11 }); }
   throw new Error('onbekend ' + naam);
 };
+const wis = async () => { await kv.raw(['DEL', 'cm:mdcamps', 'cm:mdcre']); C.mondiadWis(); md.det = []; md.lijst = 0; md.weg = new Set(); md.faal = null; md.lijstStuk = false; md.extra = 0; md.leeg = false; };
 let pa = [{ id: '900', naam: 'TODAYIN CURACAO ES | In-Page', kliks: 50, kosten: 0.5, vert: 5000, conv: 4, instellingen: { formaat: 61, landing: 'https://todayin.email/?lang=es' }, creatives: [{ id: 'p1', titel: '¿Qué playa hoy?', tekst: 'Pregunta', vert: 5000, kliks: 50, kosten: 0.5, conv: 4 }] }];
 let tt = { ok: true, campagnes: [] };
 C.B.propeller = async () => ({ ok: true, campagnes: pa.map(c => ({ net: 'propeller', ...c, project: 'todayin' })) });
@@ -31,31 +36,80 @@ C.B.geheugen = async () => ({ stukken: 0 });
 const N = x => Number(x) || 0;
 const lees = async d => (await kv.get('cm:camp:' + d)) || [];
 const van = (l, net) => l.filter(c => c.net === net);
+const nTekst = x => x.campagnes[0].creatives.filter(c => c.tekst).length;
 
 // ---- A: Mondiad met advertenties ----
 let r = await C.ronde({ dag: D });
 let l = await lees(D), m11 = van(l, 'mondiad');
 ok(r.ok && m11.length === 1 && m11[0].id === '11', 'A: alleen Mondiad-campagnes met kosten of kliks (12 zonder niets valt weg)');
-ok(m11[0].creatives.length === 2 && m11[0].kliks === 40 && m11[0].kosten === 0.1234 && m11[0].vert === 3000 && m11[0].conv === 3, 'A: campagne met creatives, vier decimalen kosten');
+ok(m11[0].creatives.length === 2 && m11[0].kliks === 40 && m11[0].kosten === 0.1234 && m11[0].vert === 3000 && m11[0].conv === 3, 'A: campagne met creatives (103 zonder vertoningen valt weg), vier decimalen kosten');
 const c101 = m11[0].creatives.find(c => c.id === '101'), c102 = m11[0].creatives.find(c => c.id === '102');
-ok(c101 && c101.kliks === 20 && c101.vert === 1500 && Math.abs(c101.kosten - 0.05) < 1e-9 && c101.tekst === 'Vraag het de chat' && c101.beeld === 'https://img.test/a.png' && c101.titel === 'Waar is het strand?', 'A: rijen per carrier opgeteld, tekst en beeld uit get_creatives');
+ok(c101 && c101.kliks === 20 && c101.vert === 1500 && Math.abs(c101.kosten - 0.05) < 1e-9 && c101.tekst === 'Vraag het de chat' && c101.beeld === 'https://img.test/a.png' && c101.titel === 'Waar is het strand?', 'A: rijen per carrier opgeteld, tekst en beeld uit get_creative_details');
 ok(c102 && c102.beeld === 'icon_2.png' && c102.tag === 'c2', 'A: zonder image het icoon');
-const i11 = m11[0].instellingen; ok(i11.formaat === 'classic push' && i11.biedmodel === 'CPA' && i11.boden[0].bod === 0.15 && i11.boden[0].landen[0] === 'nl' && i11.dagbudget === 10 && /todayin/.test(i11.landing), 'A: instellingen uit campaign_details');
+ok(!('landing' in c101) && !('cta' in c101) && !('landing' in c102) && !('cta' in c102), 'A: geen landing en geen lege cta op de Mondiad-creative');
+const i11 = m11[0].instellingen; ok(i11.formaat === 'classic push' && i11.biedmodel === 'CPA' && i11.boden[0].bod === 0.15 && i11.boden[0].landen[0] === 'nl' && i11.dagbudget === 10 && /todayin/.test(i11.landing) && i11.gestart === '2026-11-01', 'A: instellingen uit mondiad_list_campaigns');
 ok(m11[0].project === 'todayin' && m11[0].eigen && 'echt' in m11[0].eigen && van(l, 'propeller').length === 1, 'A: project en eigen uitkomsten erbij, PropellerAds ernaast');
-const metaNa1 = md.meta; await C.ronde({ dag: D });
-ok(md.meta === metaNa1 && (await kv.get('cm:mdcr:11')).cr['101'], 'A: creatives en instellingen uit kv, niet opnieuw opgehaald');
+ok(md.lijst === 1 && md.det.length === 1 && md.det[0].join() === '101,102' && (await kv.raw(['HLEN', 'cm:mdcre'])) == 2 && (await kv.raw(['TTL', 'cm:mdcamps'])) > 80000, 'A: één lijstaanroep en één batch voor beide advertenties; kaart 24 uur in kv');
+const ttl = await kv.raw(['TTL', 'cm:mdcre']); ok(ttl > 59 * 86400 && ttl <= 60 * 86400, 'A: hash cm:mdcre verloopt na 60 dagen');
+const opgeslagen = JSON.parse(await kv.raw(['HGET', 'cm:mdcre', '101'])); ok(opgeslagen.titel === 'Waar is het strand?' && !('landing' in opgeslagen), 'A: hash bewaart {tag,titel,tekst,beeld}');
+const callsNa1 = md.calls; await C.ronde({ dag: D });
+ok(md.det.length === 1 && md.lijst === 1 && md.calls === callsNa1 + 2, 'A: tweede ronde: niets opnieuw opgehaald (alleen de twee rapporten van de dag)');
+C.mondiadWis(); await C.ronde({ dag: D }); ok(md.det.length === 1 && md.lijst === 1, 'A: ook zonder geheugen in de module komen kaart en hash uit kv');
 const stukken = P.stukkenUitCampagnes([{ dag: D, camps: l }]);
-ok(stukken.some(s => s.medium === 'mondiad' && /Vraag het de chat/.test(s.tekst) && s.id === 'ad:mondiad:101'), 'D: paspoort laadt de Mondiad-creatives (medium mondiad)');
+ok(stukken.some(s => s.medium === 'mondiad' && /Vraag het de chat/.test(s.tekst) && s.id === 'ad:mondiad:101' && /todayin/.test(s.pagina)), 'D: paspoort laadt de Mondiad-creatives (medium mondiad, pagina uit de instellingen)');
 
-// ---- tijdsbudget: zonder tijd blijft de creative staan met de titel uit het rapport ----
-await kv.raw(['DEL', 'cm:mdcr:11']);
-const t = await C.mondiadDag(D, { md: C.B.md, tijd: -1 });
-ok(t.ok && t.campagnes[0].creatives.length === 2 && t.campagnes[0].creatives[0].titel && t.campagnes[0].creatives[0].tekst === '' && t.fouten.some(f => /tijdsbudget/.test(f)), 'A: tijdsbudget op: creatives met titel uit het rapport, zonder tekst');
-// een fout bij tekst en beeld wordt kort onthouden en laat de creative staan
-await kv.raw(['DEL', 'cm:mdcr:11']); const echt = C.B.md; let faal = 0;
-const m2 = await C.mondiadDag(D, { md: async (n, a) => { if (/get_/.test(n)) { faal++; throw new Error('429'); } return echt(n, a); } });
-ok(m2.ok && m2.campagnes[0].creatives.length === 2 && faal === 2 && (await kv.get('cm:mdcr:11')).fout && (await kv.raw(['TTL', 'cm:mdcr:11'])) <= 900, 'A: fout bij tekst of instellingen: creatives blijven, fout 15 minuten onthouden');
-await kv.raw(['DEL', 'cm:mdcr:11']);
+// ---- instellingen uit de lijst ----
+await wis(); md.pag = 1; let x = await C.mondiadDag(D, { md: C.B.md });
+ok(md.lijst === 2 && x.campagnes[0].instellingen.formaat === 'classic push', 'I: lijst met twee pagina\'s: beide gelezen');
+md.pag = 500; await kv.raw(['DEL', 'cm:mdcamps']); C.mondiadWis(); md.lijst = 0;
+const z = await C.mondiadDag(D, { md: C.B.md }); const k = await kv.get('cm:mdcamps');
+ok(md.lijst === 1 && k.k['12'].f === 'in page push+classic push' && JSON.stringify(k.k['12'].l) === '["us","de"]' && k.k['12'].g === undefined && k.k['11'].g === '2026-11-01' && z.ok, 'I: kaart: formaat met +, landen klein, gestart alleen als datum');
+const lang = ALLE[0].url; ALLE[0].url = 'https://x.test/' + 'a'.repeat(400); await kv.raw(['DEL', 'cm:mdcamps']); C.mondiadWis();
+ok((await C.mondiadDag(D, { md: C.B.md })).campagnes[0].instellingen.landing.length === 300, 'I: landing op 300 tekens'); ALLE[0].url = lang;
+// campagne ontbreekt in de kaart: alleen verversen als de kaart ouder is dan een uur
+await kv.set('cm:mdcamps', { t: Date.now() - 1000, k: { 99: { f: 'x' } } }, { ex: 3600 }); C.mondiadWis(); md.lijst = 0;
+x = await C.mondiadDag(D, { md: C.B.md }); ok(md.lijst === 0 && x.campagnes[0].instellingen.formaat === '', 'I: kaart jonger dan een uur: niet verversen, campagne zonder instellingen');
+await kv.set('cm:mdcamps', { t: Date.now() - 2 * 36e5, k: { 99: { f: 'x' } } }, { ex: 3600 }); C.mondiadWis();
+x = await C.mondiadDag(D, { md: C.B.md }); ok(md.lijst === 1 && x.campagnes[0].instellingen.formaat === 'classic push', 'I: kaart ouder dan een uur met een ontbrekende campagne: één keer verversen');
+md.lijst = 0; await C.mondiadDag(D, { md: C.B.md }); ok(md.lijst === 0, 'I: daarna uit het geheugen');
+await wis(); md.lijstStuk = true; x = await C.mondiadDag(D, { md: C.B.md });
+ok(x.ok && x.campagnes[0].instellingen.formaat === '' && x.campagnes[0].instellingen.landing === '' && x.fouten.some(f => /campagnelijst/.test(f)) && x.campagnes[0].creatives.length === 2, 'I: lijst faalt: lege instellingen, één regel in fouten, creatives blijven');
+// de ronde neemt de oude instellingen over als de lijst faalt
+const DI = dag(40); await kv.set('cm:camp:' + DI, [{ net: 'mondiad', id: '11', naam: 'TODAYIN CURACAO NL | CLASSIC PUSH', project: 'todayin', kosten: 0.1, kliks: 40, instellingen: { formaat: 'classic push', landing: 'https://oud.test/' }, creatives: [] }], {});
+r = await C.ronde({ dag: DI, alleen: 'mondiad' }); ok(van(await lees(DI), 'mondiad')[0].instellingen.landing === 'https://oud.test/', 'I: ronde houdt de oude instellingen als de lijst faalt');
+
+// ---- tekst en beeld in batches ----
+await wis(); md.extra = 120; x = await C.mondiadDag(D, { md: C.B.md });
+ok(md.det.map(a => a.length).join() === '50,50,22' && x.campagnes[0].creatives.length === 122 && nTekst(x) === 122 && !x.fouten.length, 'T: 122 advertenties in stukken van 50 (50, 50, 22), allemaal met tekst');
+const na = md.det.length; x = await C.mondiadDag(D, { md: C.B.md }); ok(md.det.length === na && nTekst(x) === 122, 'T: tweede ronde haalt niets opnieuw op');
+md.extra = 130; x = await C.mondiadDag(D, { md: C.B.md }); ok(md.det.length === na + 1 && md.det[na].length === 10 && nTekst(x) === 132, 'T: een volgende dag haalt alleen de nieuwe advertenties op');
+// een stuk faalt: opnieuw in twee helften
+await wis(); md.extra = 120; md.faal = ids => ids.length > 25; x = await C.mondiadDag(D, { md: C.B.md });
+ok(x.ok && nTekst(x) === 122 && !x.fouten.length && md.det.map(a => a.length).join() === '50,25,25,50,25,25,22', 'T: stuk faalt: opnieuw in twee helften, die slagen');
+await wis(); md.extra = 120; md.faal = ids => ids.length > 1 && ids.includes('101'); x = await C.mondiadDag(D, { md: C.B.md });
+ok(x.ok && nTekst(x) === 97 && x.campagnes[0].creatives.length === 122 && x.fouten.length === 1 && /overgeslagen/.test(x.fouten[0]) && md.det.length === 5, 'T: een helft faalt ook: die 25 overgeslagen met één regel in fouten, de rest klaar');
+ok(x.campagnes[0].creatives.find(c => c.id === '101').titel === 'Waar is het strand?' && (await kv.raw(['HLEN', 'cm:mdcre'])) == 97, 'T: overgeslagen advertentie houdt de titel uit het rapport en komt niet in de hash');
+// een id dat niet terugkomt (verwijderde advertentie): gemarkeerd, niet opnieuw gevraagd
+await wis(); md.weg.add('102'); x = await C.mondiadDag(D, { md: C.B.md }); const c2 = x.campagnes[0].creatives.find(c => c.id === '102');
+ok(c2.titel === 'Open vandaag' && c2.tag === 'c2' && !c2.tekst && !c2.beeld && (await kv.raw(['HGET', 'cm:mdcre', '102'])) === '{"x":1}' && x.campagnes[0].creatives.find(c => c.id === '101').tekst, 'T: id dat niet terugkomt: lege markering, titel en tag uit het rapport');
+const na2 = md.det.length; await C.mondiadDag(D, { md: C.B.md }); ok(md.det.length === na2, 'T: gemarkeerd id wordt niet opnieuw gevraagd');
+// tijdsbudget op: eerste regel, creatives met titel uit het rapport
+await wis(); md.extra = 120; x = await C.mondiadDag(D, { md: C.B.md, tijd: -1 });
+ok(x.ok && x.fouten[0] === 'creatives mondiad: tijdsbudget op, 122 advertenties zonder tekst en beeld' && x.campagnes[0].creatives.length === 122 && x.campagnes[0].creatives[0].titel && nTekst(x) === 0 && md.det.length === 0, 'T: tijdsbudget op: eerste regel precies zo, creatives met titel uit het rapport, geen aanroepen');
+// tijdsbudget raakt halverwege op: wat al binnen is blijft
+{ let t = 0; const klok = () => t; const echt = C.B.md; await wis(); md.extra = 120;
+  x = await C.mondiadDag(D, { md: async (n, a) => { const u = await echt(n, a); if (n === 'mondiad_get_creative_details') t += 20; return u; }, tijd: 30, nu: klok });
+  ok(md.det.length === 2 && nTekst(x) === 100 && x.fouten[0] === 'creatives mondiad: tijdsbudget op, 22 advertenties zonder tekst en beeld', 'T: tijdsbudget halverwege op: twee stukken binnen, 22 over'); }
+// Mondiad zonder kosten of kliks: geen rapport per creative, geen lijst
+await wis(); md.leeg = true; md.calls = 0; x = await C.mondiadDag(D, { md: C.B.md });
+ok(x.ok && !x.campagnes.length && md.calls === 1 && md.lijst === 0, 'T: geen kosten of kliks: alleen het rapport per campagne, geen rapport per creative');
+await wis();
+
+// ---- ronde alleen=mondiad zonder iets: niets wegschrijven ----
+{ const DL = dag(30); md.leeg = true; const rl = await C.ronde({ dag: DL, alleen: 'mondiad' });
+  ok(JSON.stringify(rl) === JSON.stringify({ ok: true, dag: DL, alleen: 'mondiad', per_netwerk: {}, nieuwe_labels: 0, fouten: [] }) && (await kv.get('cm:camp:' + DL)) === null && (await kv.raw(['SISMEMBER', 'cm:campdagen', DL])) == 0, 'R: alleen=mondiad zonder campagnes en zonder oude dag: niets weggeschreven');
+  await kv.set('cm:camp:' + DL, [{ net: 'mondiad', id: '11', naam: 'TODAYIN CURACAO NL | CLASSIC PUSH', project: 'todayin', kosten: 0.1, kliks: 40, creatives: [] }], {}); await C.ronde({ dag: DL, alleen: 'mondiad' });
+  ok(Array.isArray(await kv.get('cm:camp:' + DL)) && (await lees(DL)).length === 0, 'R: staat er wel een oude Mondiad-campagne en meldt het netwerk er nu geen, dan loopt de ronde door (dag wordt leeg)'); md.leeg = false; await kv.raw(['DEL', 'cm:camp:' + DL]); }
 
 // ---- B: alleen laat andere netwerken staan ----
 pa = [{ id: '901', naam: 'ANDERE CAMPAGNE', kliks: 1, kosten: 0.01, creatives: [] }];
@@ -107,7 +161,7 @@ ok((await kv.raw(['EXISTS', 'cm:inhaal:slot'])) == 0 && (await kv.raw(['EXISTS',
 ok((await lees(v2)).some(c => c.net === 'mondiad') && !(await lees(v2)).some(c => c.net === 'propeller'), 'B: ingehaalde dag heeft alleen Mondiad (de gewone inhaal vult de rest)');
 // tijdsbudget voor tekst en beeld op: de dag komt terug in de netwerk-inhaal tot hij compleet is
 { const echtMd = C.B.mondiad, vx = dag(12); let vol = false;
-  C.B.mondiad = async d => { const x = await echtMd(d); return vol ? x : { ...x, fouten: ['creatives mondiad: tijdsbudget op, 1 campagnes zonder tekst en beeld'] }; };
+  C.B.mondiad = async d => { const x = await echtMd(d); return vol ? x : { ...x, fouten: ['creatives mondiad: tijdsbudget op, 1 advertenties zonder tekst en beeld'] }; };
   r = await C.inhaal({ van: vx, tot: vx, alleen: 'mondiad' }); ok(r.rest === 1 && !r.klaar && (await lees(vx)).some(c => c.net === 'mondiad'), 'B: tijdsbudget op: de dag staat erin maar blijft in de netwerk-inhaal');
   vol = true; r = await C.inhaal({ alleen: 'mondiad' }); ok(r.rest === 0 && !!r.klaar, 'B: volgende poging zonder tekort: dag klaar');
   C.B.mondiad = echtMd; }
