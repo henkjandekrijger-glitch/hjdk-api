@@ -1,5 +1,6 @@
 import { sbBlock, SB_SCRIPT } from '../lib/sharedby-terug.js';
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
+import { vulAan } from '../lib/aanvulling.js';
 import { HUISSTIJL_CSS, FAVICON, voetEenRegel, chatErbij } from '../lib/huisstijl.js';
 import { leesbaarBlok, antwoordBlok } from '../lib/leesbaar.js';
 import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
@@ -149,7 +150,7 @@ async function allItems(withFuture) {
   const seen = {}; const out = [];
   const ov = {}; extra.forEach(v => { if (v.override) ov[v.slug] = v; });
   extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it1 = !it0.tool && ov[it0.slug] ? vastTerug(it0, Object.assign({}, it0, ov[it0.slug])) : it0; const it = Array.isArray(it1.faq) && it1.faq.length > 1 ? Object.assign({}, it1, { faq: faqZonderDubbel(it1.faq) }) : it1; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; const c2 = catVan(it); out.push(c2 !== it.cat ? Object.assign({}, it, { cat: c2 }) : it); } });
-  return out;
+  return vulAan('nl', out); // aanvulling uit de repo (lib/aanvulling.js, dagronde keuzehulpen)
 }
 export { allItems }; // ook gebruikt door het intentiemodel (lib/intentmodel.js)
 async function getItem(slug, withFuture) { const all = await allItems(withFuture); return all.find(i => i.slug === slug) || null; }
@@ -596,7 +597,7 @@ async function page(item, res, req) {
     const html2 = SJ.sjabloonHtml({ taal: 'nl', host: 'keuzehulp.best', logo: 'keuzehulp', winkel: 'bol', slug: item.slug, term: item.term || item.title, h1: item.title, title: kzTitle(item), desc: item.metaDesc || item.kort || item.intro, canonical: DUN && DUN.naar ? base + pathOf(req, '/keuzehulp/' + DUN.naar) : url, noindex: q.get('sjabloon') === '2' || !!(DUN && !DUN.naar) || kernDicht(await kernNu(), item.slug), ldHtml: ld,
       crumbs: [['Keuzehulp', '/keuzehulp'], [item.cat, '/keuzehulp/categorie/' + catSlug(item.cat)], [item.term || item.title]], bijgewerkt: item.updatedAt || item.publishAt || UPDATED,
       kortKop: k0 ? SJ.KEUS_LABEL.nl + ': ' + SJ.kortNaam(k0.title) + '.' : '', kort: SJ.zinnen(item.kort, 2), keus: k0 ? { naam: SJ.kortNaam(k0.title), prijs: eur(k0.price), was: k0.strike && k0.strike > k0.price ? eur(k0.strike) : '', url: k0.url } : null,
-      prods, pills: q0s, situaties: sitR, letop, faq: (item.faq || []).slice(0, 5), verder: rel.slice(0, 3).map(i => [i.title, '/' + i.slug]),
+      prods, pills: q0s, pillVraag: q0 ? q0.q : '', situaties: sitR, letop, faq: item.faq || [], verder: rel.slice(0, 3).map(i => [i.title, '/' + i.slug]),
       meet: { site: 'keuzehulp', hitPage: 'hjdk6-kz-' + item.slug + '-page', hitClk: 'hjdk6-kz-' + item.slug + '-clk', hitClkAll: 'hjdk6-kz-clk', hitVraag: 'hjdk6-kz-sj-vraag', hitVolg: 'hjdk6-kz-sj-volg', hitMail: 'hjdk6-kz-sj-mail', conv: postback ? { pb: postback, c: code } : null } });
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', clickid || src || q.get('sjabloon') ? 'no-store' : 'public, max-age=600'); if (/noindex/.test(html2.slice(0, 3000))) res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(html2.replace('</body>', '<div class="wrap">' + sbBlock('nl',item.title,url) + '</div>' + SB_SCRIPT + '</body>'));
   }

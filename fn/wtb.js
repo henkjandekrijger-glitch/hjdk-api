@@ -154,7 +154,7 @@ async function page(m, it, all, req) {
     return { sj: SJ.sjabloonHtml({ taal: T, host: m.host, logo: m.id === 'us' ? 'whichtobuy' : 'kaufberater', winkel: 'Amazon', slug: it.slug, term: it.term || it.title, h1: it.title || it.h1, title: it.seoTitle || it.h1, desc: it.metaDesc, canonical: base + '/' + (DUN && DUN.naar ? DUN.naar : it.slug), noindex: sjQ === '2' || !!(DUN && !DUN.naar), jsonld: ld,
       crumbs: [[m.name, '/'], [it.cat, catPad(m, it.cat)]], bijgewerkt: upd, zoekUrl: adv.link,
       kortKop: k0 ? SJ.KEUS_LABEL[T] + ': ' + SJ.kortNaam(k0.title) + '.' : '', kort: SJ.zinnen(Array.isArray(it.kort) ? it.kort.join(' ') : it.kort, 2), keus: k0 ? { naam: SJ.kortNaam(k0.title), prijs: geld(k0), url: k0.url } : null,
-      prods, pills: q0s, situaties: [], letop, faq: faqZonderDubbel(it.faq || []).slice(0, 5), verder: rel.slice(0, 3).map(r => [r.title, '/' + r.slug]),
+      prods, pills: q0s, pillVraag: q0 ? q0.q : '', situaties: [], letop, faq: faqZonderDubbel(it.faq || []), verder: rel.slice(0, 3).map(r => [r.title, '/' + r.slug]),
       meet: { site: m.id === 'us' ? 'whichtobuy' : 'kaufberater', hitPage: 'wtb-' + m.id + '-' + it.slug + '-page', hitClk: 'wtb-' + m.id + '-' + it.slug + '-clk', hitClkAll: 'wtb-' + m.id + '-clk', hitVraag: 'wtb-' + m.id + '-sj-vraag', hitVolg: 'wtb-' + m.id + '-sj-volg', hitMail: 'wtb-' + m.id + '-sj-mail' } }) };
   }
   const KZ = await import('./kz.js'); // opmaak van outname.now, zelfde als keuzehulp.best (18 nov 2026)
@@ -302,6 +302,12 @@ export default async function handler(req, res) {
       out.sites[m.id === 'us' ? 'whichtobuy' : 'kaufberater'] = { host: m.host, ...st, boekgidsen: gidsen };
     }
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
+  }
+  if (op === 'indexnow' && q.get('u')) { // gewijzigde gidsen melden bij IndexNow (dagronde keuzehulpen, 27 nov 2026): ?m=us|de&u=slug1,slug2; alleen bestaande gidsen, hooguit 10, alleen via de beschermde host
+    res.setHeader('cache-control', 'no-store'); if (!/\.vercel\.app$/i.test(String(req.headers.host || ''))) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+    const al = new Set((await items(m)).map(x => x.slug)); const urls = [...new Set(String(q.get('u')).split(',').map(x => x.trim()).filter(x => al.has(x)))].slice(0, 10).map(x => 'https://' + m.host + '/' + x);
+    if (!urls.length) return res.status(200).json({ ok: false, fout: 'geen bestaande gids' });
+    const st = await indexnow(m, urls); await log({ m: m.id, wat: 'indexnow-dagronde', n: urls.length, indexnow: st }); return res.status(200).json({ ok: st >= 200 && st < 300, status: st, urls });
   }
   if (op === 'indexnow-boeken') { // boekgidsen (lib/kdp-guides.js) melden bij Bing/IndexNow; Bing voedt ChatGPT-zoeken en Copilot. Hooguit eens per 6 uur.
     res.setHeader('cache-control', 'no-store'); const sl = 'hjdk:wtb:' + m.id + ':indexnow-boeken'; if (await kv.get(sl).catch(() => null)) return res.status(200).json({ ok: true, overgeslagen: 'al gemeld in de laatste 6 uur' });

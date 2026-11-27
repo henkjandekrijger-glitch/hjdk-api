@@ -30,4 +30,21 @@ ok(zinLijst('Meist reicht 1 kWh mit 1.500 bis 2.000 W. Ein Gerät mit 100 W läu
 ok(zinnen('Het vermogen ligt tussen 1.200 en 1.700 watt. Kies 4,5 liter.', 1) === 'Het vermogen ligt tussen 1.200 en 1.700 watt.', 'eerste zin met getallen heel');
 const us = sjabloonHtml(Object.assign({}, basis, { taal: 'us', winkel: 'Amazon' }));
 ok(/lang="en"/.test(us) && /See on Amazon/.test(us), 'Engelse teksten op whichtobuy');
+// dagronde 27 nov 2026: FAQ-volgorde, JSON-LD alleen zichtbare vragen, aanvulling uit de repo
+const vijf = Array.from({ length: 7 }, (_, i) => ({ q: 'Vraag ' + i + '?', a: 'Antwoord ' + i + '.' })).concat([{ q: 'Zoekvraag?', a: 'Uit Search Console.', bron: 'search-console' }]);
+const ldObj = { '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: 'x' }, { '@type': 'FAQPage', mainEntity: vijf.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] };
+const hf = sjabloonHtml(Object.assign({}, basis, { faq: vijf, jsonld: ldObj })); const ldUit = JSON.parse(hf.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+const fq = ldUit['@graph'].find(n => n['@type'] === 'FAQPage').mainEntity.map(x => x.name); const zichtbaar = [...kaal(hf).matchAll(/<summary>([^<]*)<\/summary>/g)].map(x => x[1]);
+ok(fq.length === 5 && fq.every((q, i) => q === zichtbaar[i]), 'JSON-LD FAQ = de zichtbare vragen (' + fq.length + ')');
+ok(zichtbaar[0] === 'Zoekvraag?', 'vraag uit Search Console staat eerst');
+const hh = sjabloonHtml(Object.assign({}, basis, { faq: vijf, ldHtml: '<script type="application/ld+json">' + JSON.stringify(ldObj) + '</script>' }));
+ok(JSON.parse(hh.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'][1].mainEntity.length === 5, 'ook via ldHtml (keuzehulp.best)');
+const { vulAan, AANVULLING } = await import('../lib/aanvulling.js');
+const sl = Object.keys(AANVULLING.de)[0]; const va = vulAan('de', [{ slug: sl, faq: [{ q: 'Alt?', a: 'x' }] }, { slug: 'ander', faq: [] }]);
+ok(va[0].faq.length === 2 && va[0].faq[0].voor && va[1].faq.length === 0, 'aanvulling komt vooraan bij de juiste pagina');
+ok(vulAan('de', va)[0].faq.length === 2, 'aanvulling niet dubbel');
+ok(Object.values(AANVULLING).every(s => Object.values(s).every(x => (x.faq || []).every(f => f.bron && /^https:\/\//.test(f.bron) && !/[\u2013\u2014]/.test(f.a)))), 'aanvulling: elke vraag met bron, geen gedachtestreepjes');
+const hv = kaal(sjabloonHtml(Object.assign({}, basis, { pillVraag: 'Hoe breed is de nis?' })));
+ok(/<h2>Hoe breed is de nis\?<\/h2><div class="sj-pills">/.test(hv) && !/Twijfel je/.test(hv), 'vraag bij de pills staat als kop');
+ok(/<h2>Twijfel je\? Vraag het<\/h2>/.test(h), 'zonder vraag de gewone kop');
 console.log(fout ? fout + ' fout(en)' : 'alles goed'); process.exit(fout ? 1 : 0);
