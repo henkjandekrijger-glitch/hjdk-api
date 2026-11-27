@@ -60,6 +60,10 @@ ORGANISCH in elke ronde: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/a
 4. Iets wat het rendement verhoogt en nu kan: doen.
 5. Rapport in hooguit 7 regels: verkoop vandaag, kosten vandaag, ROI (ROAS per boek met ads tegen break-even, totaal), ORGANISCH (boekstand: bezoek uit zoek en AI, Amazon-kliks uit de boekgidsen, nieuw in Google), wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
 
+### STATUS OP NEXY.NOW/O (elke ronde, A tot en met D, en elke chat die KDP-werk afrondt)
+Henkjan 27 nov 2026: "Ok zet op nexy.now/o en blijf dat doen ." nexy.now/o stuurt door naar Oversight (https://hjdk-api-henq.vercel.app/oversight); bovenaan staat "Boeken vandaag". Zet aan het eind van elke ronde de stand bij (Vercel-tool web_fetch_vercel_url), ook als er niets veranderde:
+`https://hjdk-api-henq.vercel.app/oversight?zet={"kdp":{"tot":"<tijd Curacao>","bedrag":<royalty vandaag tot nu, KDP Reports Dashboard Today>,"stuks":<bestellingen>,"per":[{"boek":"Teens","stuks":7,"bedrag":19.03}],"gemiddeld":<7-daags gemiddelde van het dashboard>,"ads":<advertentiekosten vandaag tot nu, als bekend>,"gedaan":["<wat vandaag gedaan is, gewone taal>"],"wacht":["<wat op KDP of Henkjan wacht>"],"volgende":["<eerstvolgende oordeel of stap met datum>"],"wie":"kdp-ronde-<a|b|c|d>"}}` (JSON URL-gecodeerd). Ronde A zet de verkoop van gisteren erbij in "gedaan" als eerste regel. Kort, geen nullen, geen getallenbrij. Is de stand ouder dan 10 uur, dan zet het dashboard hem onder Opvallend.
+
 ## KERSTPLAN naar $1000/dag (Henkjan 15 nov: "We moeten naar 1000 per dag maak een plan asap !")
 
 Vorig jaar (KDP Royalties Estimator): 15 nov-25 dec 2025 $11.084 (gem. $270/dag, beste dagen half dec $600-700). 1-15 nov 2025 $1.156 tegen 1-15 nov 2026 $191 (17%).
