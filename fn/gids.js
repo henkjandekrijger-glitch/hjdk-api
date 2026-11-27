@@ -22,6 +22,7 @@ import { bronScript, groeiRonde, groeiStand, groeiHtml, actueleAiStand } from '.
 import { BINNENKORT, BINNENKORT_SLUGS, bkInhoud, bkJsonLd, bkLlms, bkIndex } from '../lib/binnenkort.js'; // nog niet leverbare onderwerpen met vraag (25 nov 2026)
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 import * as RED from '../lib/kadoly-redactie.js'; // redactie: elke dag een artikel (19 nov 2026)
+import * as LG from '../lib/gids-llmgat.js'; // AI-gaten cadeauvragen, schakelaar uit tot Henkjans ja (27 nov 2026, taak o9w904)
 import * as GB from '../lib/gidsbeeld.js'; // hoofdbeeld per pagina, ook voor Google Afbeeldingen (25 nov 2026)
 import { kzuxBlok } from '../lib/kzux.js'; // de lerende chat van de keuzehulpen, geleend (19 nov 2026)
 
@@ -50,6 +51,8 @@ async function catalogus() {
   CAT = m; CAT_AT = Date.now(); return m;
 }
 let CAT_BRON = null;
+let LG_AAN = false, LG_AT = 0; // kv-vlag gk:llmgat:aan, 60 s onthouden; zonder kv of bij een fout: uit
+async function llmGatAan() { if (Date.now() - LG_AT < 60000) return LG_AAN; try { const v = await kv.get(LG.VLAG); LG_AAN = v === true || v === 1 || v === '1'; } catch (e) { LG_AAN = false; } LG_AT = Date.now(); return LG_AAN; }
 let LEVEND = null;
 const BK_OPEN = () => BINNENKORT_SLUGS.filter(x => !GIDSEN[x]); // binnenkort-pagina's zonder gewone gids (25 nov 2026)
 const LEVENDE = () => GIDS_IDS.filter(id => !LEVEND || LEVEND.has(id));
@@ -380,8 +383,9 @@ async function beeldMaak(f) { // PNG van het hoofdbeeld van pagina f
   if (/^redactie-/.test(f)) { const a = RED.ART[f.slice(9)]; if (!a) return null; const pids = []; for (const b of a.blokken || []) if (b.producten) { try { for (const i of RED.kiesProducten(cat, b.producten, thuis)) pids.push(i.id); } catch (e) {} } return (pids.length ? await GB.collage(pids) : null) || GB.illustratie('kaart', a.h1); }
   return null;
 }
-async function gidsPagina(g) {
+async function gidsPagina(g, geforceerd) {
   const cat = await catalogus();
+  g = LG.toepas(g, { aan: geforceerd || await llmGatAan(), cat, thuis, euro, toegestaan: aanbevelingToegestaan });
   const items = g.keuze.map(k => { const i = cat[k.pid]; if (!i || i.vr === false || !aanbevelingToegestaan(i)) return null; return Object.assign({}, k, { naam: k.naam || i.t, prijs: N(i.p), verzending: i.fs ? 0 : N(i.vk), lt: N(i.lt) || 0, img: i.img || '', merk: i.b || '' }); }).filter(Boolean);
   const perPid = {}; items.forEach(x => { perPid[x.pid] = x; });
   // volgorde leert van de lezers: na 60 weergaven telt de klikkans per product (met voorkennis voor de redactievolgorde), daarvoor de redactievolgorde
@@ -400,7 +404,7 @@ async function gidsPagina(g) {
   return kop(g.titel, g.beschrijving, '/' + g.slug, ogImg + `<script type="application/ld+json">${ldJson(g, items, A)}</script>` + (A && A.n ? NW_CSS : '')) +
     `<article><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Kadoly gids</a> › ${esc(g.h1)}</nav><p class="kicker"><span class="live-dot"></span>${esc(g.kicker)}</p><h1>${esc(g.h1)}</h1>
 <p class="meta kz-meta">Door de redactie van Kadoly · bijgewerkt <time datetime="${esc(g.bijgewerkt)}">${esc(datumNl(g.bijgewerkt))}</time> · prijs en levertijd van vandaag</p>${BB.fig}
-<div class="answer lead si-ant"><p class="si-ant-k">Kort antwoord</p>${items.length ? `<div class="si-keus">${items.slice(0, 3).map((x, i) => `<a href="/naar/${encodeURIComponent(x.pid)}?g=${encodeURIComponent(g.slug)}&amp;b=kort" rel="nofollow"><span class="l">${esc(x.label)}</span><b>${esc(x.naam)}</b><span class="p">${euro(x.prijs + x.verzending)}${x.lt ? ` · in huis ${esc(nlDatum(leverDatum(x.lt)))}` : ''}</span><i aria-hidden="true">→</i></a>`).join('')}</div><p class="si-ant-v">Alle prijzen inclusief btw en verzending. Hieronder per keuze waarom, en waar je op let.</p>` : `<p>${esc(g.kort)}</p>`}</div>
+<div class="answer lead si-ant"><p class="si-ant-k">Kort antwoord</p>${g.llmOpening ? `<p class="si-ant-open">${esc(g.llmOpening)}</p>` : ''}${items.length ? `<div class="si-keus">${items.slice(0, 3).map((x, i) => `<a href="/naar/${encodeURIComponent(x.pid)}?g=${encodeURIComponent(g.slug)}&amp;b=kort" rel="nofollow"><span class="l">${esc(x.label)}</span><b>${esc(x.naam)}</b><span class="p">${euro(x.prijs + x.verzending)}${x.lt ? ` · in huis ${esc(nlDatum(leverDatum(x.lt)))}` : ''}</span><i aria-hidden="true">→</i></a>`).join('')}</div><p class="si-ant-v">Alle prijzen inclusief btw en verzending. Hieronder per keuze waarom, en waar je op let.</p>` : `<p>${esc(g.kort)}</p>`}</div>
 <h2 id="keuze">Onze keuze</h2>${items.map((x, i) => productKaart(x, g.slug, 'keuze', i === 0, i + 1)).join('')}
 ${rijen ? `<h2 id="situatie">${esc(g.tabelKop || 'Welke past bij jouw situatie?')}</h2><dl class="rows">${rijen}</dl>` : ''}
 ${items.length ? `<h2 id="weten">Wat je moet weten</h2><ul class="si-punt">${String(g.kort || '').split(/(?<=[.!?])\s+(?=[A-ZÀ-Ý0-9])/).map(z => z.trim()).filter(Boolean).map(z => `<li>${esc(z)}</li>`).join('')}</ul>` : ''}
@@ -755,6 +759,20 @@ export default async function handler(req, res) {
       if (q.get('f') === 'json') { res.setHeader('content-type', 'application/json; charset=utf-8'); return res.status(200).json({ ok: true, stats, gidsen: GI.IDEE.map(d => ({ slug: d.slug, titel: d.titel, max: d.max, producten: d.producten.map(([pid, label]) => { const i = cat[pid]; return { pid, label, naam: i && i.t, prijs: i ? thuis(i) : null, leverbaar: !!(i && i.vr !== false) }; }) })) }); }
       const lever = i => leveringsBeperking(i) || (N(i.lt) > 0 ? 'bezorging rond ' + nlDatum(leverDatum(i.lt)) : 'levertijd niet opgegeven');
       return res.status(200).send(kop('Voorstel: minder pagina\'s, betere gidsen | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + GI.ideeHtml({ cat, thuis, euro, esc, lever, stats }) + '</main></body></html>');
+    }
+    if (op === 'llmgat' || op === 'llmgatzet') { // 27 nov 2026 (taak o9w904): AI-gaten cadeauvragen. Alleen op de beschermde host, noindex, niets live tot Henkjans ja
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
+      if (op === 'llmgatzet') { const aan = q.get('aan') === '1'; await kv.set(LG.VLAG, aan ? 1 : 0); LG_AT = 0; return res.status(200).json({ ok: true, aan, let_op: 'gids.kadoly.com toont dit na hooguit 60 seconden per instantie, en na het verlopen van de paginacache' }); }
+      const cat = await catalogus(), aan = await llmGatAan();
+      if (q.get('voorbeeld')) { const g0 = GIDSEN[q.get('voorbeeld')]; if (!g0 || !LG.GATEN.find(x => x.slug === g0.slug)) return res.status(404).send('Niet gevonden');
+        let h = await gidsPagina(g0, true);
+        h = h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">').replace(/<link rel="canonical"[^>]*>/, '');
+        res.setHeader('content-type', 'text/html; charset=utf-8');
+        return res.status(200).send(h.replace('<main class="wrap">', '<main class="wrap"><p class="meta"><b>Voorbeeld, nog niet live.</b> Zo ziet de gids eruit met het gat gevuld. <a href="/api/gids?op=llmgat">Terug naar het voorstel</a></p>')); }
+      if (q.get('f') === 'json') return res.status(200).json({ ok: true, aan, dag: LG.GEMETEN_DAG, gaten: LG.GATEN.map(d => ({ slug: d.slug, vraag: d.vraag, meting: d.meting, opening: LG.vul(d.opening, cat, thuis, euro, aanbevelingToegestaan), antwoord: LG.vul(d.antwoord, cat, thuis, euro, aanbevelingToegestaan) })) });
+      res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send(kop('Voorstel: 5 cadeauvragen waar AI geen antwoord geeft | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + LG.gatenHtml({ cat, thuis, euro, esc, aan, toegestaan: aanbevelingToegestaan, GIDSEN }) + '</main></body></html>');
     }
     if (op === 'vraagkansen') { // Henkjan 10 nov 2026: onderwerpen die ChatGPT naar boven haalt en die in de winkel komen. Zoekvraag (Demand Radar) naast aanbod en gidsen. Cron 00:20 UTC met vers=1.
       const { vraagKansen } = await import('../lib/kadoly-vraag.js');
