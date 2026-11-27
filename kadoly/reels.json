@@ -1152,6 +1152,154 @@
       "tekst": "3 finds voor in huis:\n1. Blauwe Glazen Decoratieve Vis op Metalen Stand 16.5x7x36cm\n2. Fotografie Flatlay Bord Papier Licht 40x40 cm\n3. Zwart & Goud Acrylaat Connect 4 Spel\nWelke kies jij?\n\nLink in bio, zoek op Kadoly.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
       "tiktok_tekst": "3 finds voor in huis. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "aw-keuze-1",
+      "soort": "kleurkeuze",
+      "variant": "native",
+      "titel": "Rookritueel, edelstenen of klankschaal: welke kies jij?",
+      "url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-keuze-1-20261127-bio.mp4",
+      "url_link": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-keuze-1-20261127-link.mp4",
+      "url_pin": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-keuze-1-20261127-pin.mp4",
+      "pids": [],
+      "pakketten": [
+        {
+          "slug": "rookritueel-set",
+          "naam": "Rookritueel set",
+          "beeld": "https://media.aiku.io/MlKn2c8akmJOw0bbI0ppGkIcvEes0Pe0K_LEps0o0NU/bG9jYWw6Ly9tZWRpYS85Ry80Qy82MFIzMEMxRzZXUks0QzlHLzAyMTNiZWJkLmpwZWc"
+        },
+        {
+          "slug": "edelstenen-set",
+          "naam": "Edelstenen set",
+          "beeld": "https://media.aiku.io/AxlyaG_nA3eUyneGT42URIk4wT6ZktB-Edb_MQZ1Fh0/bG9jYWw6Ly9tZWRpYS85Ry8yRS82MFIzMEMxRzZXVDMyRTlHLzZiODk5NmFlLmpwZWc"
+        },
+        {
+          "slug": "meditatie-set-klankschaal",
+          "naam": "Meditatie set met klankschaal",
+          "beeld": "https://media.aiku.io/r-_Upo8KX4u1XgLXzy0fleFXrVGiYj1GrrBM_z_wrlg/bG9jYWw6Ly9tZWRpYS8xUi8yRC82MFIzMEMxSjc0U0syRDFSLzAwZGE2NmFmLmpwZw"
+        }
+      ],
+      "hoek": "rust-ritueel",
+      "bron": "chat kadoly-shopify-chat (AW-shorts, Henkjan 27 nov)",
+      "gepost": "2026-11-28",
+      "platforms": {
+        "tiktok": {
+          "zernio_id": "6b09efb16cc55ea346b1d314",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "instagram": {
+          "zernio_id": "6b09efb16cc55ea346b1d314",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b09efb16cc55ea346b1d314",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "pinterest": {
+          "zernio_id": "6b09efb16cc55ea346b1d314",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        }
+      }
+    },
+    {
+      "id": "aw-verlang-1",
+      "soort": "verlanglijst",
+      "variant": "trend",
+      "trend": "Verlanglijst-video (YouTube Holiday Shopping Trends 2026: Wishlist plus Christmas 90 mln weergaven)",
+      "paar": "aw-keuze-1",
+      "titel": "Verlanglijst Kerst: 3 sets voor rust in huis",
+      "url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-verlang-1-20261127-bio.mp4",
+      "url_link": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-verlang-1-20261127-link.mp4",
+      "url_pin": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-verlang-1-20261127-pin.mp4",
+      "pids": [],
+      "pakketten": [
+        {
+          "slug": "rookritueel-set",
+          "naam": "Rookritueel set",
+          "beeld": "https://media.aiku.io/MlKn2c8akmJOw0bbI0ppGkIcvEes0Pe0K_LEps0o0NU/bG9jYWw6Ly9tZWRpYS85Ry80Qy82MFIzMEMxRzZXUks0QzlHLzAyMTNiZWJkLmpwZWc"
+        },
+        {
+          "slug": "edelstenen-set",
+          "naam": "Edelstenen set",
+          "beeld": "https://media.aiku.io/AxlyaG_nA3eUyneGT42URIk4wT6ZktB-Edb_MQZ1Fh0/bG9jYWw6Ly9tZWRpYS85Ry8yRS82MFIzMEMxRzZXVDMyRTlHLzZiODk5NmFlLmpwZWc"
+        },
+        {
+          "slug": "meditatie-set-klankschaal",
+          "naam": "Meditatie set met klankschaal",
+          "beeld": "https://media.aiku.io/r-_Upo8KX4u1XgLXzy0fleFXrVGiYj1GrrBM_z_wrlg/bG9jYWw6Ly9tZWRpYS8xUi8yRC82MFIzMEMxSjc0U0syRDFSLzAwZGE2NmFmLmpwZw"
+        }
+      ],
+      "hoek": "rust-ritueel",
+      "bron": "chat kadoly-shopify-chat (AW-shorts, Henkjan 27 nov)",
+      "gepost": "2026-11-28",
+      "platforms": {
+        "tiktok": {
+          "zernio_id": "6b09efc58fc85a387c6d6e7e",
+          "tijdvak": "19:45",
+          "status": "gepland"
+        },
+        "instagram": {
+          "zernio_id": "6b09efc58fc85a387c6d6e7e",
+          "tijdvak": "19:45",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b09efc58fc85a387c6d6e7e",
+          "tijdvak": "19:45",
+          "status": "gepland"
+        },
+        "pinterest": {
+          "zernio_id": "6b09efc58fc85a387c6d6e7e",
+          "tijdvak": "19:45",
+          "status": "gepland"
+        }
+      }
+    },
+    {
+      "id": "aw-rook-1",
+      "soort": "set",
+      "variant": "native",
+      "titel": "Rookritueel set: 5 dingen in één doos",
+      "url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-rook-1-20261127-bio.mp4",
+      "url_link": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-rook-1-20261127-link.mp4",
+      "url_pin": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/kadoly-aw-rook-1-20261127-pin.mp4",
+      "pids": [],
+      "pakketten": [
+        {
+          "slug": "rookritueel-set",
+          "naam": "Rookritueel set",
+          "beeld": "https://media.aiku.io/MlKn2c8akmJOw0bbI0ppGkIcvEes0Pe0K_LEps0o0NU/bG9jYWw6Ly9tZWRpYS85Ry80Qy82MFIzMEMxRzZXUks0QzlHLzAyMTNiZWJkLmpwZWc"
+        }
+      ],
+      "hoek": "rust-ritueel",
+      "bron": "chat kadoly-shopify-chat (AW-shorts, Henkjan 27 nov)",
+      "gepost": "2026-11-29",
+      "platforms": {
+        "tiktok": {
+          "zernio_id": "6b09efc622b48a28cf87f154",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "instagram": {
+          "zernio_id": "6b09efc622b48a28cf87f154",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b09efc622b48a28cf87f154",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        },
+        "pinterest": {
+          "zernio_id": "6b09efc622b48a28cf87f154",
+          "tijdvak": "12:15",
+          "status": "gepland"
+        }
+      }
     }
   ],
   "lerend": {
