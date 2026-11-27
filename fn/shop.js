@@ -1029,6 +1029,14 @@ async function plaatje(req, res, url) {
       const jpg = await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toBuffer();
       res.setHeader('content-type', 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400'); return res.end(jpg);
     }
+    const wTekst = String(url.searchParams.get('w') || '').toUpperCase().replace(/[^A-Z0-9 !]/g, '').trim().slice(0, 14); // 27 nov 2026 (Henkjan: "Ja maar ook beter maken van je creatives !!!"): rood label (WIN, GRATIS KANS) op de productfoto voor de winactie-advertenties; wp=b zet het rechtsonder (kaart: de titel boven blijft vrij)
+    if (wTekst) { const [W, H] = m, onder = url.searchParams.get('wp') === 'b', fs = Math.round(Math.min(W, H) * (wTekst.length > 5 ? 0.11 : 0.17));
+      const foto = 'data:image/jpeg;base64,' + (await sharp(bron).flatten({ background: '#ffffff' }).resize(W, H, { fit: m[2], background: '#ffffff', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+      const el = hEl('div', { width: W, height: H, position: 'relative', fontFamily: 'Inter', background: '#ffffff' }, [{ type: 'img', props: { src: foto, width: W, height: H, style: { position: 'absolute', top: 0, left: 0 } } },
+        hEl('div', Object.assign({ position: 'absolute', right: Math.round(W * 0.04), background: '#C8102E', color: '#ffffff', fontSize: fs, fontWeight: 800, lineHeight: 1, padding: Math.round(fs * 0.32) + 'px ' + Math.round(fs * 0.5) + 'px', borderRadius: Math.round(fs * 0.35) }, onder ? { bottom: Math.round(H * 0.05) } : { top: Math.round(H * 0.05) }), wTekst)]);
+      const png = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: OG_FONTS }).arrayBuffer());
+      const jpg = await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toBuffer();
+      res.setHeader('content-type', 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400'); return res.end(jpg); }
     const out = await sharp(bron).flatten({ background: '#ffffff' }).resize(m[0], m[1], { fit: m[2], background: '#ffffff', position: 'centre' }).jpeg({ quality: 86, mozjpeg: true }).toBuffer();
     res.setHeader('content-type', 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400'); return res.end(out);
   } catch (e) { res.statusCode = 500; return res.end('beeld mislukt: ' + String(e && e.message || e).slice(0, 120)); }
