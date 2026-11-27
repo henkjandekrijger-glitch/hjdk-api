@@ -120,7 +120,7 @@ console.log('klaar',h.length,d.projecten.length);
   const hg=D.dashHtml(dg), hgd=D.dashHtml(dg,null,'desktop');
   ok(hg.includes('<h2>Wacht op jou</h2>')&&hg.includes('<h3>Waar je was gebleven</h3>')&&hg.includes('<b>Wacht op jou:</b> Ja of nee op de boekkalender')&&hg.includes('data-kopie="Zet nu de stand van KDP-boeken')&&hg.includes('href="https://claude.ai/chat/abc-123"')&&hgd.includes('href="claude://claude.ai/chat/abc-123"')&&!/[—–]/.test(hg),'gebleven html');
   const tg=D.dashTekst(dg,'kdp'), bg=D.bijTekst(dg,'kdp');
-  ok(tg.includes('Gebleven [kdp-ads, ')&&tg.includes('| Wacht op Henkjan: Ja of nee op de boekkalender | Daarna: Oordeel Australie op 28 nov')&&D.dashTekst(dg).includes('WACHT OP HENKJAN'),'gebleven tekst');
+  ok(tg.includes('Gebleven [kdp-ads, ')&&tg.includes('| Wacht op Henkjan: Ja of nee op de boekkalender [zonder advies: zet hem door de poort] | Daarna: Oordeel Australie op 28 nov')&&D.dashTekst(dg).includes('WACHT OP HENKJAN'),'gebleven tekst');
   ok(bg.startsWith('BIJ: KDP-boeken (kdp)')&&bg.includes('Gebleven [kdp-boeken')&&bg.includes('"chat":{"naam"')&&bg.includes('STAND kdp')&&bg.length<3500&&D.bijTekst(dg,'x').startsWith('Onbekend project'),'bij '+bg.length);
   ok(D.haalTekst(pk).includes('STAND kdp')&&D.haalTekst(pk).includes('?zet={"project":"kdp","chat"'),'haal');
   ok(D.startTekst(dg).includes('vorm=bij&project=<id>')&&decodeURIComponent(pk.verder).includes('vorm=bij&project=kdp')&&pk.verder.length<2500,'bij in opdrachten '+pk.verder.length);

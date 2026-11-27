@@ -434,11 +434,19 @@ export default async function handler(req, res) {
       const T = await import('../lib/taken.js'); // de takenlijst, Henkjans beslissingen en gewoontes (27 nov 2026)
       // wat Henkjan zelf op de pagina doet: taak typen, antwoorden, opruimen, gewoonte aan of uit. Altijd een POST-formulier (veld taak of doe=<JSON>), nooit een GET-link; daarna terug naar de pagina met een melding
       if (req.method === 'POST') { let fb = req.body; if (Buffer.isBuffer(fb)) fb = fb.toString('utf8'); if (!fb || typeof fb !== 'object') fb = /^\s*\{/.test(String(fb || '')) ? (leesJson(String(fb)) || {}) : Object.fromEntries(new URLSearchParams(String(fb || '')));
+        // zijn toestel (beoordeling 27 nov 2026: "zijn ja is te vervalsen"): koppelen met een code uit zijn Telegram; elke actie die voor zijn ja telt, eist dat toestel
+        const tid = (String(req.headers.cookie || '').match(/(?:^|; )dashhj=([a-f0-9]+)/) || [])[1] || '';
+        const terug = (m, h = '#taken') => { res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + h); return res.end(); };
+        if (fb.koppel != null) { const u = await T.koppelVraag(kv); return terug(u.ok ? { m: 'code' } : { f: u.fout }, '#koppel'); }
+        if (fb.code != null) { const u = await T.koppelCode(kv, fb.code, String(req.headers['user-agent'] || '').slice(0, 80));
+          if (u.ok) res.setHeader('set-cookie', 'dashhj=' + u.id + '; Max-Age=31536000; Path=/; HttpOnly; Secure; SameSite=Strict');
+          return terug(u.ok ? { m: 'gekoppeld' } : { f: u.fout, k: '1' }, '#koppel'); }
+        if ((fb.taak != null || fb.doe != null) && !(await T.toestelOk(kv, tid))) return terug({ f: 'Koppel eerst dit toestel: één keer, met een code uit je Telegram.' }, '#koppel');
         if (fb.taak != null || fb.doe != null) { let b = null;
           if (fb.taak != null) b = { taak: { tekst: String(fb.taak), project: fb.p, account: fb.acc, zwaarte: fb.zw } };
           else { try { b = JSON.parse(String(fb.doe)); } catch (e) {} if (b && b.antwoord && typeof b.antwoord === 'object' && fb.tekst) b.antwoord.tekst = String(fb.tekst); }
-          const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan') : { ok: false, fout: 'onbekende actie' };
-          const m = !u.ok ? { f: fb.taak != null ? 'typ in een paar woorden wat er moet gebeuren' : String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
+          const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan', undefined, { henkjan: true }) : { ok: false, fout: 'onbekende actie' };
+          const m = !u.ok ? { f: fb.taak != null ? 'typ in een paar woorden wat er moet gebeuren' : String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : b.terugdraai ? { m: 'terugdraai' } : { m: 'gewoon' };
           res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + (b && b.gewoonte ? '#geleerd' : '#taken')); return res.end(); } }
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; if (b.leerprompt == null) return res.status(400).json({ ok: false, fout: 'leerprompt ontbreekt' }); const u = await D.zetLeerprompt(kv, b.leerprompt, 'Henkjan (dashboard)'); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('leerprompt') === 'vorige') { const u = await D.vorigeLeerprompt(kv); if (!u.ok) return res.status(400).json(u); }
@@ -451,6 +459,8 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(d);
       if (q('vorm') === 'output') { const O = await import('../lib/output.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(d.output ? O.outputTekst(d.output, q('project') || '') + '\n' : 'geen output\n'); }
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      if (q('vorm') === 'poort') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(T.poortTekst()); } // vraagpoort en mandaten, voor elke chat
+      if (q('vorm') === 'ja') return res.status(200).json(T.jaStand(d.taken || { besluiten: [] }, q('id'))); // alleen telt:true is zijn ja (toestel of stil akkoord)
       if (q('vorm') === 'taken' || q('vorm') === 'vangnet' || q('vorm') === 'aanzetten') { res.setHeader('content-type', 'text/plain; charset=utf-8'); const acc = String(q('account') || ''); return res.status(200).send(q('vorm') === 'taken' ? T.takenTekst(d.taken, acc, d, String(q('taak') || '')) : q('vorm') === 'vangnet' ? T.vangnetTekst(d.taken, acc, d) : T.aanzetTekst(acc)); } // werkwijze voor de oppakker en het vangnet (geplande taken per account)
       if (q('vorm') === 'bij') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.bijTekst(d, String(q('project') || ''))); } // kort: waar Henkjan was gebleven, voor elke beurt van elke chat
       if (q('vorm') === 'start') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.startTekst(d) + '\n'); }
@@ -461,12 +471,13 @@ export default async function handler(req, res) {
       res.setHeader('content-type', 'text/html; charset=utf-8');
       if (q('vorm') === 'oud') return res.status(200).send(D.dashHtml(d, melding, D.isAi(aiQ) ? aiQ : aiC)); // het vorige dashboard: leerprompt wijzigen, skills, archief
       // het ene overzicht met de takenlijst (Henkjan 27 nov 2026: "Ja" op het ontwerp); melding na een tik op de pagina
-      const MELD = { taak: 'Staat in je lijst. Een agent pakt het op.', antw: 'Je antwoord is doorgegeven.', weg1: 'Weggehaald.', terug: 'Teruggezet.', gewoon: 'Aangepast.' }; let meld = null;
+      const MELD = { taak: 'Staat in je lijst. Een agent pakt het op.', antw: 'Je antwoord is doorgegeven.', weg1: 'Weggehaald.', terug: 'Teruggezet.', gewoon: 'Aangepast.', terugdraai: 'Staat in je lijst: een agent draait het terug.', code: 'Code gestuurd naar je Telegram. Vul hem hieronder in.', gekoppeld: 'Dit toestel is gekoppeld. Je kunt nu antwoorden.' }; let meld = null;
       if (melding) meld = { tekst: melding.tekst, link: melding.terug ? '/dashboard?terug=' + encodeURIComponent(melding.terug) : '', linkTekst: 'Zet terug' };
       else if (q('f')) meld = { tekst: 'Niet gelukt: ' + String(q('f')).slice(0, 200) };
       else if (q('m') === 'weg') { const ids = String(q('ids') || '').split(',').filter(Boolean).slice(0, 80); meld = { tekst: ids.length + ' opgeruimd.', terug: ids }; }
       else if (MELD[q('m')]) meld = { tekst: MELD[q('m')] };
-      const O = await import('../lib/overzicht.js'); return res.status(200).send(O.overzichtHtml(d, { ai: D.isAi(aiQ) ? aiQ : aiC, melding: meld })); }
+      const tidG = (String(req.headers.cookie || '').match(/(?:^|; )dashhj=([a-f0-9]+)/) || [])[1] || '';
+      const O = await import('../lib/overzicht.js'); return res.status(200).send(O.overzichtHtml(d, { ai: D.isAi(aiQ) ? aiQ : aiC, melding: meld, toestel: await T.toestelOk(kv, tidG), codeVeld: q('m') === 'code' || q('k') === '1' })); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }

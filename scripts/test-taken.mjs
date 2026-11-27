@@ -1,81 +1,94 @@
-// Test van de takenlijst, Henkjans beslissingen en gewoontes (lib/taken.js) en van het ene overzicht (lib/overzicht.js). Draai: node scripts/test-taken.mjs
+// Test van de takenlijst (lib/taken.js): toestel, vraagpoort met mandaat A en B, stil akkoord, zelf besloten, gewoontes, en het ene overzicht (lib/overzicht.js).
+// Draai: node scripts/test-taken.mjs
 import * as T from '../lib/taken.js';
 import { overzichtHtml } from '../lib/overzicht.js';
 const H = new Map(), S = new Map();
 const kv = { get: async () => null, set: async () => {}, raw: async a => { const [c, k, f, v] = a; const h = H.get(k) || H.set(k, new Map()).get(k);
   if (c === 'HSET') { h.set(f, v); return 1; } if (c === 'HGET') return h.get(f) ?? null; if (c === 'HDEL') return h.delete(f) ? 1 : 0; if (c === 'HGETALL') return [...h.entries()].flat();
-  if (c === 'SET') { if (a.includes('NX') && S.has(k)) return null; S.set(k, f); return 'OK'; } if (c === 'DEL') return S.delete(k) ? 1 : 0; throw new Error('kv ' + c); } };
+  if (c === 'SET') { if (a.includes('NX') && S.has(k)) return null; S.set(k, f); return 'OK'; } if (c === 'GET') return S.get(k) ?? null; if (c === 'DEL') return S.delete(k) ? 1 : 0; throw new Error('kv ' + c); } };
 const ok = (c, n) => { if (!c) { console.log('FOUT', n); process.exitCode = 1; } };
-const nu = Date.parse('2026-11-27T12:00:00Z'), uur = 36e5;
-// taak van Henkjan: in de lijst, als besluit vastgelegd
-let u = await T.zetTaken(kv, { taak: { tekst: 'Maak drie nieuwe advertenties voor Kadoly', project: 'kadoly', zwaarte: 'licht' } }, 'Henkjan', nu); ok(u.ok && u.taak, 'taak'); const id = u.taak;
-ok(!(await T.zetTaken(kv, { taak: { tekst: 'x' } }, 'Henkjan', nu)).ok, 'taak te kort');
-u = await T.zetTaken(kv, { taak: { tekst: 'Alleen voor account twee', account: 'claude-2' } }, 'kdp-chat', nu); const id2 = u.taak;
-let s = await T.leesTaken(kv, nu); ok(s.taken.length === 2 && s.besluiten.length === 1 && s.besluiten[0].soort === 'taak', 'lees');
-// pak: account 1 krijgt alleen wat voor hem mag, een tweede keer niets, account 2 de zijne
-u = await T.zetTaken(kv, { pak: { account: 'claude-1', max: 3 } }, '', nu + 1); ok(u.taken.length === 1 && u.taken[0].id === id && u.taken[0].model === 'haiku', 'pak 1');
-u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2); ok(u.ok && u.taken.length === 0, 'pak leeg');
-ok(!(await T.zetTaken(kv, { pak: { account: 'chatgpt' } }, '', nu)).ok, 'pak chatgpt');
-u = await T.zetTaken(kv, { pak: { account: 'claude-2', max: 1, id: id2 } }, '', nu + 3); ok(u.taken.length === 1 && u.taken[0].id === id2, 'pak één');
-// vraag aan Henkjan: iets om te bekijken zonder link wordt geweigerd
-ok(!(await T.zetTaken(kv, { taakzet: { id, vraag: 'Ja op de drie advertenties?' } }, '', nu + uur)).ok, 'vraag zonder toon');
-u = await T.zetTaken(kv, { taakzet: { id, vraag: 'Ja op de drie advertenties?', keuzes: ['Ja', 'Nee'], toon: 'https://voorbeeld.vercel.app/ads' } }, '', nu + uur); ok(u.status === 'jij', 'vraag');
-u = await T.zetTaken(kv, { antwoord: { id, tekst: 'Ja' } }, 'Henkjan', nu + 3 * uur); ok(u.status === 'wacht', 'antwoord');
-s = await T.leesTaken(kv, nu + 3 * uur); const b2 = s.besluiten.find(b => b.soort === 'antwoord'); ok(b2 && b2.wachtUur === 2 && b2.over.includes('advertenties'), 'besluit antwoord');
-u = await T.zetTaken(kv, { pak: { account: 'claude-2' } }, '', nu + 4 * uur); ok(u.taken.some(x => x.id === id && x.antwoord === 'Ja'), 'pak met antwoord');
-// overname: account 2 geeft geen teken van leven, account 1 neemt over na 90 minuten
-u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 4 * uur + 60e3); ok(u.taken.length === 0, 'nog niet overnemen');
-S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 6 * uur); ok(u.taken.some(x => x.id === id && x.overgenomen === 'claude-2'), 'overname');
-// klaar: resultaat verplicht, besluit krijgt de uitkomst en de output
-ok(!(await T.zetTaken(kv, { taakzet: { id, klaar: true } }, '', nu + 7 * uur)).ok, 'klaar zonder resultaat');
-u = await T.zetTaken(kv, { taakzet: { id, klaar: true, resultaat: 'Drie advertenties staan klaar en lopen mee', link: 'https://voorbeeld.vercel.app/ads', output: 'abc123' } }, '', nu + 7 * uur); ok(u.status === 'klaar', 'klaar');
-s = await T.leesTaken(kv, nu + 7 * uur); ok(s.besluiten.filter(b => b.taak === id).every(b => b.output === 'abc123' && b.klaarT), 'besluit uitkomst');
+const nu = Date.parse('2026-11-27T12:00:00Z'), uur = 36e5, dg = 864e5, HJ = { henkjan: true };
+const VR = { omkeerbaar: false, geld: true, advies: 'Ja: drie ads binnen budget, beste ad nu 2,1% klikratio', bijJa: 'ze gaan morgen live', bijNee: 'ze blijven concept' };
+
+// 1. zijn ja is onvervalsbaar: zonder toestel geen antwoord, opruimen, gewoonte of terugdraaien
+for (const b of [{ antwoord: { id: 'x', tekst: 'Ja' } }, { weg: ['x'] }, { terug: ['x'] }, { gewoonte: { id: 'x', aan: true } }, { terugdraai: 'x' }]) ok(!(await T.zetTaken(kv, b, 'Henkjan', nu)).ok, 'zonder toestel geweigerd: ' + Object.keys(b)[0]);
+let u = await T.zetTaken(kv, { taak: { tekst: 'Maak drie nieuwe advertenties voor Kadoly', project: 'kadoly', zwaarte: 'licht' } }, 'Henkjan', nu, HJ); ok(u.ok && u.taak, 'taak'); const id = u.taak;
+u = await T.zetTaken(kv, { taak: { tekst: 'Van een chat doorgegeven', van: 'henkjan' } }, 'kdp-chat', nu); let s = await T.leesTaken(kv, nu);
+ok(s.taken.find(x => x.id === u.taak).via === 'chat' && s.besluiten.find(b => b.taak === u.taak).via === 'chat' && s.besluiten.find(b => b.taak === id).via === 'toestel', 'via toestel of chat');
+await T.zetTaken(kv, { weg: [u.taak] }, 'Henkjan', nu, HJ);
+// 2. toestel koppelen: code via Telegram, vijf pogingen, cookie-id
+let verstuurd = ''; u = await T.koppelVraag(kv, async t => { verstuurd = t; return true; }, nu); ok(u.ok && /\d{6}/.test(verstuurd), 'code gestuurd');
+ok(!(await T.koppelVraag(kv, async () => true, nu)).ok, 'niet twee codes vlak na elkaar');
+const code = verstuurd.match(/\d{6}/)[0]; ok(!(await T.koppelCode(kv, '000000')).ok, 'foute code');
+u = await T.koppelCode(kv, code, 'iPhone'); ok(u.ok && T.geldigToestel(u.id) && await T.toestelOk(kv, u.id) && !(await T.toestelOk(kv, 'f'.repeat(36))), 'gekoppeld');
+ok(!(await T.koppelCode(kv, code)).ok, 'code maar één keer');
+// 3. pak en vraagpoort
+u = await T.zetTaken(kv, { pak: { account: 'claude-1', max: 3 } }, '', nu + 1); ok(u.taken.length === 1 && u.taken[0].model === 'haiku', 'pak');
+ok(!(await T.zetTaken(kv, { taakzet: { id, vraag: 'Mogen de drie advertenties aan?' } }, '', nu + uur)).ok, 'vraag zonder advies geweigerd');
+ok(!(await T.zetTaken(kv, { taakzet: Object.assign({ id, vraag: 'Mogen de drie advertenties aan?' }, VR) }, '', nu + uur)).ok, 'iets te bekijken zonder toon geweigerd');
+u = await T.zetTaken(kv, { taakzet: { id, vraag: 'Zal ik de oude kopie van de campagne opruimen?', omkeerbaar: true, geld: false, zichtbaar: false, advies: 'Ja, hij loopt al 3 dagen niet', bijJa: 'kopie weg', bijNee: 'blijft staan' } }, '', nu + uur);
+ok(!u.ok && u.mandaat === 'A' && /beslis zelf/.test(u.fout), 'mandaat A: geen vraag');
+u = await T.zetTaken(kv, { taakzet: Object.assign({ id, vraag: 'Mogen de drie advertenties aan?', toon: 'https://voorbeeld.vercel.app/ads' }, VR) }, '', nu + uur); ok(u.ok && u.soort === 'ja', 'vraag met jouw ja');
+u = await T.zetTaken(kv, { antwoord: { id, tekst: 'Ja' } }, 'Henkjan', nu + 3 * uur, HJ); ok(u.status === 'wacht', 'antwoord via toestel');
+s = await T.leesTaken(kv, nu + 3 * uur); const b2 = s.besluiten.find(b => b.soort === 'antwoord' && b.taak === id); ok(b2 && b2.wachtUur === 2 && b2.via === 'toestel', 'besluit antwoord');
+ok(T.jaStand(s, b2.id).telt === true && T.jaStand(s, 'nope').ok === false, 'bewijs van zijn ja');
+// 4. stil akkoord voor omkeerbaar met zichtbaar effect
+u = await T.zetTaken(kv, { taak: { tekst: 'Nieuwe kop op de keuzehulp', project: 'keuzehulpen' } }, 'kz-chat', nu); const id3 = u.taak;
+u = await T.zetTaken(kv, { taakzet: { id: id3, vraag: 'Zal ik de nieuwe kop op de keuzehulp zetten?', omkeerbaar: true, geld: false, zichtbaar: true, advies: 'Ja, de oude kop scoort 0,8% klikratio', bijJa: 'nieuwe kop live', bijNee: 'oude kop blijft', toon: 'https://voorbeeld.vercel.app/kop' } }, '', nu);
+ok(u.ok && u.soort === 'stil' && Date.parse(u.stilT) === nu + 24 * uur, 'stil akkoord na 24 uur');
+ok(await T.stilSweep(kv, nu + 23 * uur) === 0, 'nog niet na 23 uur');
+ok(await T.stilSweep(kv, nu + 25 * uur) === 1, 'na 25 uur'); s = await T.leesTaken(kv, nu + 25 * uur);
+const x3 = s.taken.find(x => x.id === id3), b3 = s.besluiten.find(b => b.taak === id3 && b.soort === 'stil'); ok(x3.status === 'wacht' && /stil akkoord/.test(x3.antwoord) && b3 && T.jaStand(s, b3.id).telt, 'stil ja telt');
+// 5. quotum per project
+for (let i = 0; i < 5; i++) { const t = await T.zetTaken(kv, { taak: { tekst: 'Vraag ' + i, project: 'nexy' } }, 'nexy-chat', nu); await T.zetTaken(kv, { taakzet: Object.assign({ id: t.taak, vraag: 'Budget omhoog voor proef ' + i + '?' }, VR) }, '', nu); }
+const t6 = await T.zetTaken(kv, { taak: { tekst: 'Vraag 6', project: 'nexy' } }, 'nexy-chat', nu); u = await T.zetTaken(kv, { taakzet: Object.assign({ id: t6.taak, vraag: 'Nog een budgetvraag?' }, VR) }, '', nu); ok(!u.ok && /Bundel/.test(u.fout), 'quotum');
+// 6. handeling: alleen hij
+u = await T.zetTaken(kv, { taakzet: { id: t6.taak, vraag: 'Log in op het tweede Claude-account', handeling: true, advies: 'dan pakt dat account ook taken op' } }, '', nu); ok(!u.ok, 'quotum geldt ook voor handeling');
+// 7. overname en klaar
+S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-2' } }, '', nu + 30 * uur); ok(u.taken.some(x => x.id === id && x.antwoord === 'Ja'), 'pak met antwoord');
+ok(!(await T.zetTaken(kv, { taakzet: { id, klaar: true } }, '', nu + 31 * uur)).ok, 'klaar zonder resultaat');
+u = await T.zetTaken(kv, { taakzet: { id, klaar: true, resultaat: 'Drie advertenties lopen', link: 'https://voorbeeld.vercel.app/ads', output: 'abc123' } }, '', nu + 31 * uur); ok(u.status === 'klaar', 'klaar');
+s = await T.leesTaken(kv, nu + 31 * uur);
 const d0 = { projecten: [{ id: 'kadoly', naam: 'Kadoly', output: { items: [{ id: 'abc123', intentie: 'meer kliks', oordeel: '2026-12-04', oordeelNu: { uitslag: 'mis', waarom: 'nu van 3 naar 2' } }] } }] };
-ok(T.besluitStand(s, d0).filter(b => b.taak === id).every(b => b.uitslag === 'mis') && T.lessen(s, d0)[0].includes('1 mis') === false && T.lessen(s, d0)[0].includes('2 mis'), 'oordeel uit output');
-// opruimen en ongedaan maken; klaar verdwijnt vanzelf na een dag
-u = await T.zetTaken(kv, { weg: [id, 'out|x1', 'onzin'] }, 'Henkjan', nu + 8 * uur); ok(u.weg.length === 2, 'weg');
-s = await T.leesTaken(kv, nu + 8 * uur); ok(s.taken.find(x => x.id === id).status === 'weg' && s.weg['out|x1'], 'weg gelezen');
-u = await T.zetTaken(kv, { terug: [id, 'out|x1'] }, 'Henkjan', nu + 8 * uur); s = await T.leesTaken(kv, nu + 8 * uur); ok(s.taken.find(x => x.id === id).status === 'klaar' && !s.weg['out|x1'], 'terug');
-s = await T.leesTaken(kv, nu + 40 * uur); ok(!s.taken.some(x => x.id === id), 'klaar na een dag weg');
-// antwoord op een vraag van een chat: uit de stand, als besluit, en als taak verder (niet bij nee)
-await kv.raw(['HSET', 'mm:dash:chats', 'nexy|nexy-chat', JSON.stringify({ t: new Date(nu).toISOString(), waar: 'Posts staan klaar', wacht: ['Ja op de posts', 'Ja of nee: budget omhoog'], volgende: 'plaatsen', link: '' })]);
-u = await T.zetTaken(kv, { antwoord: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja op de posts', tekst: 'Ja' } }, 'Henkjan', nu + 5 * uur); ok(u.ok && u.taak, 'chatantwoord taak');
-u = await T.zetTaken(kv, { antwoord: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja of nee: budget omhoog', tekst: 'Nee' } }, 'Henkjan', nu + 5 * uur); ok(u.ok && !u.taak, 'nee geen taak');
-ok(!(await T.zetTaken(kv, { antwoord: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja op de posts', tekst: 'Ja' } }, 'Henkjan', nu)).ok, 'dubbel antwoord');
-const st = JSON.parse(await kv.raw(['HGET', 'mm:dash:chats', 'nexy|nexy-chat'])); ok(st.wacht.length === 0 && st.beantwoord.length === 2, 'stand bijgewerkt');
-// gewoonte: drie keer gevraagd binnen 14 dagen = daarna uit zichzelf; dezelfde chat binnen 6 uur telt één keer; uitzetten werkt
-const dg = 864e5; let g = await T.telVraag(kv, { wat: 'Stand van de campagnes tonen', project: 'campagnes', bron: 'chat-a', citaat: 'hoe staan de campagnes' }, nu);
-g = await T.telVraag(kv, { wat: 'stand van de campagnes tonen!', bron: 'chat-a' }, nu + uur); ok(g.keren === 1 && g.status === 'telt', 'zelfde bron telt één keer');
-g = await T.telVraag(kv, { wat: 'Stand van de campagnes tonen', bron: 'chat-b' }, nu + dg); ok(g.keren === 2 && g.status === 'telt', 'twee');
-g = await T.telVraag(kv, { gewoonte: g.gewoonte, wat: 'campagnes', bron: 'vangnet' }, nu + 2 * dg); ok(g.keren === 3 && g.status === 'proactief', 'drie = proactief');
-u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + uur); const gt = u.taken.find(x => x.gewoonte === g.gewoonte); ok(gt && gt.bron === 'gewoonte' && /uit jezelf/.test(gt.tekst), 'gewoonte wordt taak');
-await T.zetTaken(kv, { taakzet: { id: gt.id, klaar: true, resultaat: 'Campagnestand staat in je lijst' } }, '', nu + 2 * dg + 2 * uur);
-u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + 5 * uur); ok(!u.taken.some(x => x.gewoonte === g.gewoonte), 'niet twee keer op een dag');
-S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 3 * dg + 5 * uur); ok(u.taken.some(x => x.gewoonte === g.gewoonte), 'volgende dag weer');
-u = await T.zetTaken(kv, { gewoonte: { id: g.gewoonte, uit: true } }, 'Henkjan', nu + 3 * dg + 6 * uur); ok(u.gewoonte.status === 'uit', 'uit');
-g = await T.telVraag(kv, { gewoonte: g.gewoonte, bron: 'chat-c' }, nu + 4 * dg); ok(g.status === 'uit', 'uit blijft uit');
-// vangnet meldt zich; werkwijze en opdrachten
-ok((await T.zetTaken(kv, { vangnet: { account: 'claude-1', chats: 6, standen: 2 } }, '', nu)).ok, 'vangnet');
-s = await T.leesTaken(kv, nu + 3 * dg + 6 * uur);
-const tt = T.takenTekst(s, 'claude-1', d0); ok(/HARDE GRENZEN/.test(tt) && /"pak"/.test(tt) && /haiku/.test(tt), 'takenTekst'); ok(/recent_chats/.test(T.vangnetTekst(s, 'claude-1', d0)), 'vangnetTekst');
-ok(/claude-2/.test(T.aanzetTekst('claude-2')) && T.oppakPrompt('claude-1').includes('"pak"') && T.oppakPrompt('claude-1', 'abc').includes('taak=abc'), 'opdrachten');
-ok(T.isTaken({ taak: 'x' }) && !T.isTaken({ project: 'kdp', nu: 1 }), 'isTaken');
-// aanzetten: alleen een account dat zich aanmeldde wordt bewaakt; uit haalt het weer weg
-ok((await T.zetTaken(kv, { aanzet: { account: 'claude-1' } }, '', nu + 3 * dg)).aanzet === 'claude-1' && !(await T.zetTaken(kv, { aanzet: { account: 'chatgpt' } }, '', nu)).ok, 'aanzet');
-await T.zetTaken(kv, { aanzet: { account: 'claude-2' } }, '', nu); ok((await T.leesTaken(kv, nu)).accounts['aan|claude-2'], 'aan 2'); await T.zetTaken(kv, { aanzet: { account: 'claude-2', uit: true } }, '', nu); ok(!(await T.leesTaken(kv, nu)).accounts['aan|claude-2'], 'uit 2');
-// het ene overzicht: rendert met taken, antwoordknoppen, opruimen en zonder gedachtestreepjes of lege tellers
-await T.zetTaken(kv, { taak: { tekst: 'Wacht nog op een agent — met streepje' } }, 'Henkjan', nu + 3 * dg + 6 * uur);
-await T.zetTaken(kv, { taakzet: { id: (await T.leesTaken(kv, nu + 3 * dg + 6 * uur)).taken.find(x => x.status === 'bezig').id, vraag: 'Mag dit door?', keuzes: ['Ja', 'Nee'] } }, '', nu + 3 * dg + 6 * uur);
-s = await T.leesTaken(kv, nu + 3 * dg + 6 * uur);
-const d = { gemaakt: new Date(nu + 3 * dg + 6 * uur).toISOString(), vandaag: '2026-11-30', taken: s, wacht: [{ id: 'kadoly', naam: 'Kadoly', chat: 'kadoly-chat', t: new Date(nu).toISOString(), tekst: 'Resend zit vol: zeg "weg" of "upgrade"', toon: 'https://voorbeeld.vercel.app/x' }], achter: [], opvallend: [], geld: { perMunt: [] }, agenda: [], archief: [],
-  projecten: [{ id: 'kadoly', naam: 'Kadoly', wat: 'Cadeaus', pct: 20, nu: 3, doelgetal: 15, eenheid: 'aankopen', open: [{ d: '2026-11-20', t: 'Henkjan: ja op de mail' }], telaat: 1, chats: [], log: [], verder: 'https://claude.ai/new?q=x', output: { items: [{ id: 'o1', dag: '2026-11-30', wat: 'Nieuwe pagina', intentie: 'meer aankopen', t: new Date(nu + 3 * dg).toISOString(), wie: 'kadoly-chat' }] } }] };
-const html = overzichtHtml(d, { ai: 'browser', melding: { tekst: '2 opgeruimd.', terug: ['a', 'b'] } });
-ok(html.includes('Wat moet er gebeuren?') && html.includes('name="taak"') && html.includes('action="/dashboard"'), 'formulier');
-ok(!html.includes('/dashboard?doe=') && !/method="get"/.test(html) && (html.match(/method="post"/g) || []).length > 5, 'elke tik die iets verandert is een POST');
-ok(html.includes('data-s="jij"') && html.includes('data-s="wacht"') && html.includes('data-s="klaar"') && html.includes('>Upgrade<') && html.includes('>Weg<'), 'rijen en knoppen');
-ok(html.includes('Ongedaan maken') && html.includes('alles wat klaar is') && html.includes('Bekijk het eerst') && html.includes('Geleerd van jou'), 'opruimen en geleerd');
-ok(!/[—–]/.test(html) && !/>0 (bezig|wacht|klaar)/.test(html) && !/undefined|NaN|\[object/.test(html), 'geen streepjes, nullen of undefined');
-ok(html.includes('<b>Oppakker Claude 1</b>') && html.includes('<b>Vangnet Claude 1</b>') && !html.includes('Oppakker Claude 2'), 'bewaking alleen voor wie aan staat');
-const laat = overzichtHtml(Object.assign({}, d, { gemaakt: new Date(nu + 6 * dg).toISOString() })); ok(/Stil<\/b><span><b>Oppakker Claude 1/.test(laat) && /Stil<\/b><span><b>Vangnet Claude 1/.test(laat), 'stil als ze niet lopen');
+ok(T.besluitStand(s, d0).filter(b => b.taak === id).every(b => b.uitslag === 'mis') && T.lessen(s, d0)[0].includes('2 mis'), 'oordeel uit output');
+// 8. zelf besloten onder mandaat, terugdraaien door Henkjan
+ok(!(await T.zetTaken(kv, { zelf: { wat: 'kort' } }, 'kz-chat', nu)).ok, 'zelf zonder waarom');
+u = await T.zetTaken(kv, { zelf: { project: 'kdp', wat: 'Oude kopie van campagne 123 opgeruimd', waarom: 'omkeerbaar, gratis, niemand ziet het', terug: 'kopie terugzetten' } }, 'kdp-chat', nu + 32 * uur); const zb = u.besluit;
+s = await T.leesTaken(kv, nu + 32 * uur); ok(T.besluitStand(s, d0).find(b => b.id === zb).uitslag === 'zelf' && T.lessen(s, d0).some(l => /zelf onder je mandaat/.test(l)), 'zelf besloten');
+ok(!(await T.zetTaken(kv, { terugdraai: zb }, 'kdp-chat', nu)).ok, 'terugdraaien alleen Henkjan');
+u = await T.zetTaken(kv, { terugdraai: zb }, 'Henkjan', nu + 33 * uur, HJ); s = await T.leesTaken(kv, nu + 33 * uur); ok(u.taak && s.besluiten.find(b => b.id === zb).teruggedraaid && /Draai terug/.test(s.taken.find(x => x.id === u.taak).tekst), 'teruggedraaid');
+// 9. vragen uit een chatstand: poortChat, herzie, stil akkoord, antwoord via toestel
+const oud = T.poortChat('Ja op de posts', {}, nu); ok(oud.tekst === 'Ja op de posts' && /Oud formaat/.test(oud.melding), 'oude string blijft');
+ok(T.poortChat({ vraag: 'Oude kopie opruimen?', omkeerbaar: true, geld: false, zichtbaar: false, advies: 'ja, loopt niet meer', bijJa: 'weg', bijNee: 'blijft' }, {}, nu).weg, 'chatvraag onder mandaat A');
+const pc = T.poortChat(Object.assign({ vraag: 'Mag de proef 10 dagen langer?' }, VR), {}, nu); ok(pc.meta.soort === 'ja' && pc.meta.eerst, 'chatvraag met poort');
+ok(T.poortChat('Mag de proef 10 dagen langer?', { 'Mag de proef 10 dagen langer?': pc.meta }, nu + uur).meta.soort === 'ja', 'oude string houdt zijn velden');
+await kv.raw(['HSET', 'mm:dash:chats', 'nexy|nexy-chat', JSON.stringify({ t: new Date(nu).toISOString(), waar: 'Posts staan klaar', wacht: ['Ja op de posts', 'Zet het oude concept weg', 'Nieuwe ondertitel op de pagina'], meta: {}, volgende: 'plaatsen', link: '' })]);
+u = await T.zetTaken(kv, { herzie: { project: 'nexy', chat: 'nexy-chat', vraag: 'Zet het oude concept weg', omkeerbaar: true, geld: false, zichtbaar: false, advies: 'Ja, niemand gebruikt het', bijJa: 'weg', bijNee: 'blijft' } }, 'oppakker', nu); ok(u.mandaat === 'A' && u.taak, 'herzie: mandaat A wordt een taak');
+u = await T.zetTaken(kv, { herzie: { project: 'nexy', chat: 'nexy-chat', vraag: 'Nieuwe ondertitel op de pagina', omkeerbaar: true, geld: false, zichtbaar: true, advies: 'Ja, korter en duidelijker', bijJa: 'live', bijNee: 'blijft', toon: 'https://voorbeeld.vercel.app/o' } }, 'oppakker', nu); ok(u.herzien === 'stil', 'herzie: stil akkoord');
+u = await T.zetTaken(kv, { herzie: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja op de posts', omkeerbaar: true, geld: false, publiek: true, advies: 'Ja, op maat per platform', bijJa: 'ze gaan uit', bijNee: 'niets', toon: 'https://nexy.now/api/redactie?merk=nexy&vorm=voorraad' } }, 'oppakker', nu); ok(u.herzien === 'ja', 'herzie: nieuw publiek blijft jouw ja');
+let st = JSON.parse(await kv.raw(['HGET', 'mm:dash:chats', 'nexy|nexy-chat'])); ok(st.wacht.length === 2 && st.afgedaan[0].door === 'mandaat A' && st.meta['Ja op de posts'].soort === 'ja', 'stand na herzie');
+ok(await T.stilSweep(kv, nu + 25 * uur + 6e5) === 1, 'chatvraag stil akkoord'); st = JSON.parse(await kv.raw(['HGET', 'mm:dash:chats', 'nexy|nexy-chat'])); ok(st.wacht.length === 1 && st.beantwoord[0].via === 'stil', 'stil akkoord in de stand');
+u = await T.zetTaken(kv, { antwoord: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja op de posts', tekst: 'Ja' } }, 'Henkjan', nu + 26 * uur, HJ); ok(u.ok && u.taak, 'chatantwoord wordt taak');
+ok(!(await T.zetTaken(kv, { antwoord: { project: 'nexy', chat: 'nexy-chat', vraag: 'Ja op de posts', tekst: 'Ja' } }, 'Henkjan', nu + 26 * uur, HJ)).ok, 'dubbel antwoord');
+// 10. gewoonte: na drie keer eerst een voorstel, pas na zijn ja uit zichzelf
+let g = await T.telVraag(kv, { wat: 'Stand van de campagnes tonen', project: 'campagnes', bron: 'chat-a' }, nu);
+g = await T.telVraag(kv, { wat: 'stand van de campagnes tonen!', bron: 'chat-a' }, nu + uur); ok(g.keren === 1, 'zelfde bron telt één keer');
+g = await T.telVraag(kv, { wat: 'Stand van de campagnes tonen', bron: 'chat-b' }, nu + dg); g = await T.telVraag(kv, { gewoonte: g.gewoonte, bron: 'vangnet' }, nu + 2 * dg); ok(g.status === 'voorstel', 'drie = voorstel');
+S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + uur); ok(!u.taken.some(x => x.gewoonte === g.gewoonte), 'voorstel loopt niet vanzelf');
+ok(!(await T.zetTaken(kv, { antwoord: { gewoonte: g.gewoonte, tekst: 'Ja' } }, 'oppakker', nu)).ok, 'agent kan gewoonte niet aanzetten');
+u = await T.zetTaken(kv, { antwoord: { gewoonte: g.gewoonte, tekst: 'Ja' } }, 'Henkjan', nu + 2 * dg + uur, HJ); ok(u.gewoonte.status === 'proactief', 'ja: voortaan zelf');
+S.clear(); await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + 2 * uur); ok((await T.leesTaken(kv, nu + 2 * dg + 2 * uur)).taken.some(x => x.gewoonte === g.gewoonte && x.bron === 'gewoonte'), 'gewoonte wordt taak');
+// 11. werkwijze, opdrachten en pagina
+s = await T.leesTaken(kv, nu + 3 * dg);
+const tt = T.takenTekst(s, 'claude-1', d0); ok(/Mandaat A/.test(tt) && /herzie/.test(tt) && /"zelf"/.test(tt) && /vorm=ja/.test(tt), 'werkwijze met mandaat'); ok(/vraagpoort/i.test(T.vangnetTekst(s, 'claude-1', d0)) && /Mandaat A/.test(T.poortTekst()), 'vangnet en poorttekst');
+ok(T.oppakPrompt('claude-1').includes('"pak"') && /claude-2/.test(T.aanzetTekst('claude-2')), 'opdrachten');
+const d = { gemaakt: new Date(nu + 3 * dg).toISOString(), vandaag: '2026-11-30', taken: s, wacht: [{ id: 'kadoly', naam: 'Kadoly', chat: 'kadoly-chat', t: new Date(nu).toISOString(), tekst: 'Resend zit vol: zeg "weg" of "upgrade"', toon: '', soort: '' }, { id: 'nexy', naam: 'Nexy', chat: 'nexy-chat', t: new Date(nu).toISOString(), tekst: 'Mag de proef 10 dagen langer?', advies: 'Ja, $0,06 per adres', bijJa: 'loopt door', bijNee: 'stopt', soort: 'stil', stilT: new Date(nu + 3 * dg + 5 * uur).toISOString(), keuzes: ['Ja', 'Nee'] }],
+  achter: [], opvallend: [], geld: { perMunt: [] }, agenda: [], archief: [], projecten: [{ id: 'kadoly', naam: 'Kadoly', pct: 20, nu: 3, doelgetal: 15, eenheid: 'aankopen', open: [], chats: [], log: [], verder: 'https://claude.ai/new?q=x', output: { items: [] } }] };
+let html = overzichtHtml(d, { ai: 'browser', toestel: false });
+ok(html.includes('id="koppel"') && html.includes('name="koppel"') && html.includes('name="code"'), 'koppelblok zonder toestel');
+html = overzichtHtml(d, { ai: 'browser', toestel: true, melding: { tekst: '2 opgeruimd.', terug: ['a', 'b'] } });
+ok(!html.includes('id="koppel"') && html.includes('Advies:') && html.includes('Zeg je niets, dan gaat het advies') && html.includes('>Upgrade<') && html.includes('Ongedaan maken'), 'kaarten met advies en stil akkoord');
+ok(html.indexOf('Resend zit vol') < html.indexOf('Mag de proef 10 dagen langer'), 'stil akkoord onderaan');
+ok(!html.includes('/dashboard?doe=') && !/method="get"/.test(html) && !/[—–]/.test(html) && !/undefined|NaN|\[object/.test(html), 'alles POST, geen streepjes of undefined');
 ok(overzichtHtml({ gemaakt: new Date(nu).toISOString(), vandaag: '2026-11-27', projecten: [] }).includes('Overzicht'), 'leeg rendert');
 console.log(process.exitCode ? 'taken: FOUT' : 'taken ok');
