@@ -376,19 +376,20 @@ export default async function handler(req, res) {
         return res.status(200).json(T.isTaken(b) && !b.project ? await T.zetTaken(kv, b, b.wie || 'project') : await D.zetDash(kv, b, b.wie || 'project')); }
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
+      const T = await import('../lib/taken.js'); // de takenlijst, Henkjans beslissingen en gewoontes (27 nov 2026)
+      // wat Henkjan zelf op de pagina doet: taak typen, antwoorden, opruimen, gewoonte aan of uit. Altijd een POST-formulier (veld taak of doe=<JSON>), nooit een GET-link; daarna terug naar de pagina met een melding
+      if (req.method === 'POST') { let fb = req.body; if (Buffer.isBuffer(fb)) fb = fb.toString('utf8'); if (!fb || typeof fb !== 'object') fb = /^\s*\{/.test(String(fb || '')) ? (leesJson(String(fb)) || {}) : Object.fromEntries(new URLSearchParams(String(fb || '')));
+        if (fb.taak != null || fb.doe != null) { let b = null;
+          if (fb.taak != null) b = { taak: { tekst: String(fb.taak), project: fb.p, account: fb.acc, zwaarte: fb.zw } };
+          else { try { b = JSON.parse(String(fb.doe)); } catch (e) {} if (b && b.antwoord && typeof b.antwoord === 'object' && fb.tekst) b.antwoord.tekst = String(fb.tekst); }
+          const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan') : { ok: false, fout: 'onbekende actie' };
+          const m = !u.ok ? { f: fb.taak != null ? 'typ in een paar woorden wat er moet gebeuren' : String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
+          res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + (b && b.gewoonte ? '#geleerd' : '#taken')); return res.end(); } }
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; if (b.leerprompt == null) return res.status(400).json({ ok: false, fout: 'leerprompt ontbreekt' }); const u = await D.zetLeerprompt(kv, b.leerprompt, 'Henkjan (dashboard)'); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('leerprompt') === 'vorige') { const u = await D.vorigeLeerprompt(kv); if (!u.ok) return res.status(400).json(u); }
       if (q('vorm') === 'skill') { const t = D.skillTekst(String(q('naam') || '')); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden; overzicht: ' + D.SKILLS.map(s => s.naam).join(', ')); }
       if (q('vorm') === 'leerprompt') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((await D.leesLeerprompt(kv)).tekst + '\n'); }
-      const T = await import('../lib/taken.js'); // de takenlijst, Henkjans beslissingen en gewoontes (27 nov 2026)
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? (T.isTaken(b) && !b.project ? await T.zetTaken(kv, b, q('wie') || '') : await D.zetDash(kv, b, q('wie') || '')) : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
-      // wat Henkjan zelf op de pagina doet: taak typen (formulier ?taak=), antwoorden, opruimen, gewoonte aan of uit (?doe=<JSON>); daarna terug naar de pagina met een melding
-      if (q('taak') || q('doe')) { let b = null;
-        if (q('taak')) b = { taak: { tekst: q('taak'), project: q('p'), account: q('acc'), zwaarte: q('zw') } };
-        else { try { b = JSON.parse(q('doe')); } catch (e) {} if (b && b.antwoord && typeof b.antwoord === 'object' && q('tekst')) b.antwoord.tekst = q('tekst'); }
-        const u = b && typeof b === 'object' && T.isTaken(b) ? await T.zetTaken(kv, b, 'Henkjan') : { ok: false, fout: 'onbekende actie' };
-        const m = !u.ok ? { f: q('taak') ? 'typ in een paar woorden wat er moet gebeuren' : String(u.fout || 'fout').slice(0, 160) } : b.taak ? { m: 'taak' } : u.weg ? { m: 'weg', ids: u.weg.join(',') } : u.terug ? { m: 'terug' } : b.antwoord ? { m: b.antwoord.weg ? 'weg1' : 'antw' } : { m: 'gewoon' };
-        res.statusCode = 303; res.setHeader('location', '/dashboard?' + new URLSearchParams(m).toString() + (b && b.gewoonte ? '#geleerd' : '#taken')); return res.end(); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
       if (q('archiveer') || q('terug')) { const id = q('archiveer') || q('terug'); const u = await D.zetDash(kv, { project: id, archief: !!q('archiveer') }, 'dashboard'); if (!u.ok) return res.status(400).json(u); melding = { id, aan: !!q('archiveer') }; }
       const d = await D.dashData(kv, { dagen: q('dagen') || q('periode') });

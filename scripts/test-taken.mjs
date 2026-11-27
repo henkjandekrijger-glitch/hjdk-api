@@ -51,7 +51,7 @@ g = await T.telVraag(kv, { gewoonte: g.gewoonte, wat: 'campagnes', bron: 'vangne
 u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + uur); const gt = u.taken.find(x => x.gewoonte === g.gewoonte); ok(gt && gt.bron === 'gewoonte' && /uit jezelf/.test(gt.tekst), 'gewoonte wordt taak');
 await T.zetTaken(kv, { taakzet: { id: gt.id, klaar: true, resultaat: 'Campagnestand staat in je lijst' } }, '', nu + 2 * dg + 2 * uur);
 u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 2 * dg + 5 * uur); ok(!u.taken.some(x => x.gewoonte === g.gewoonte), 'niet twee keer op een dag');
-u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 3 * dg + 5 * uur); ok(u.taken.some(x => x.gewoonte === g.gewoonte), 'volgende dag weer');
+S.clear(); u = await T.zetTaken(kv, { pak: { account: 'claude-1' } }, '', nu + 3 * dg + 5 * uur); ok(u.taken.some(x => x.gewoonte === g.gewoonte), 'volgende dag weer');
 u = await T.zetTaken(kv, { gewoonte: { id: g.gewoonte, uit: true } }, 'Henkjan', nu + 3 * dg + 6 * uur); ok(u.gewoonte.status === 'uit', 'uit');
 g = await T.telVraag(kv, { gewoonte: g.gewoonte, bron: 'chat-c' }, nu + 4 * dg); ok(g.status === 'uit', 'uit blijft uit');
 // vangnet meldt zich; werkwijze en opdrachten
@@ -71,6 +71,7 @@ const d = { gemaakt: new Date(nu + 3 * dg + 6 * uur).toISOString(), vandaag: '20
   projecten: [{ id: 'kadoly', naam: 'Kadoly', wat: 'Cadeaus', pct: 20, nu: 3, doelgetal: 15, eenheid: 'aankopen', open: [{ d: '2026-11-20', t: 'Henkjan: ja op de mail' }], telaat: 1, chats: [], log: [], verder: 'https://claude.ai/new?q=x', output: { items: [{ id: 'o1', dag: '2026-11-30', wat: 'Nieuwe pagina', intentie: 'meer aankopen', t: new Date(nu + 3 * dg).toISOString(), wie: 'kadoly-chat' }] } }] };
 const html = overzichtHtml(d, { ai: 'browser', melding: { tekst: '2 opgeruimd.', terug: ['a', 'b'] } });
 ok(html.includes('Wat moet er gebeuren?') && html.includes('name="taak"') && html.includes('action="/dashboard"'), 'formulier');
+ok(!html.includes('/dashboard?doe=') && !/method="get"/.test(html) && (html.match(/method="post"/g) || []).length > 5, 'elke tik die iets verandert is een POST');
 ok(html.includes('data-s="jij"') && html.includes('data-s="wacht"') && html.includes('data-s="klaar"') && html.includes('>Upgrade<') && html.includes('>Weg<'), 'rijen en knoppen');
 ok(html.includes('Ongedaan maken') && html.includes('alles wat klaar is') && html.includes('Bekijk het eerst') && html.includes('Geleerd van jou'), 'opruimen en geleerd');
 ok(!/[—–]/.test(html) && !/>0 (bezig|wacht|klaar)/.test(html) && !/undefined|NaN|\[object/.test(html), 'geen streepjes, nullen of undefined');
