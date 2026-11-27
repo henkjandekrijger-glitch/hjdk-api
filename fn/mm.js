@@ -281,7 +281,8 @@ export default async function handler(req, res) {
         return res.status(200).json(cr);
       }
       if (q('leg')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); return res.status(200).json(await C.leg(q('leg'))); } // netwerk met de sleutel elders: data/camp-historie/<net>.json inleggen
-      if (q('labelwerk') === '1') return res.status(200).json(await C.labelWerk(Number(q('n')) || 80));
+      if (q('labelwerk') === '1') return res.status(200).json(await C.labelWerk(Number(q('n')) || 80, q('deel')));
+      if (q('kort')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); return res.status(200).json(await C.zetLabels(C.kortLabels(q('kort')))); }
       if (q('labels')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); let o = null; try { o = JSON.parse(q('labels')); } catch (e) {} return res.status(200).json(await C.zetLabels(o)); }
       if (q('campagne')) return res.status(200).json(await C.campagne(q('campagne'), Number(q('dagen')) || 30));
       return res.status(200).json(await C.leer({ dagen: Number(q('dagen')) || 14, project: q('project') || '', net: q('net') || '' }));

@@ -27,3 +27,22 @@ ok(a.velden.merkKadoly === 2 && a.velden.merkKadolyMetGtin === 1 && a.merk.teCor
 const html = voorstelHtml(a, { at: '2026-11-27', fouten: [] });
 ok(/Lamp A/.test(html) && /€ 39,95/.test(html) && /Lumo/.test(html) && !/—|–/.test(html), 'pagina toont oud naast nieuw, zonder gedachtestreepjes');
 ok(/Niet gelukt: feed/.test(voorstelHtml(a, { fouten: ['feed: 500'] })), 'fouten staan op de pagina');
+
+// taak s397p7: de lijst voor de winkel met elk product met merk Kadoly en een GTIN, en de aanwijzing uit de feed
+import { gtinBegin } from '../lib/gratisvoorstel.js';
+ok(gtinBegin('8712345678906') === '8712345' && gtinBegin('712345678906') === '0712345' && gtinBegin('18712345678903') === '8712345', 'begin van de code als GTIN-13');
+const xml2 = `<item><g:id>k1</g:id><g:title>Lamp K1</g:title><g:brand>Kadoly</g:brand><g:gtin>8712345000011</g:gtin></item>
+<item><g:id>k2</g:id><g:title>Lamp K2</g:title><g:brand>Kadoly</g:brand><g:gtin>8712345000028</g:gtin></item>
+<item><g:id>k3</g:id><g:title>Vaas K3</g:title><g:brand>Kadoly</g:brand><g:gtin>4009999000017</g:gtin></item>
+<item><g:id>k4</g:id><g:title>Kom K4</g:title><g:brand>Kadoly</g:brand></item>
+<item><g:id>m1</g:id><g:title>Pot M1</g:title><g:brand>Mica</g:brand><g:gtin>8712345000035</g:gtin></item>
+<item><g:id>m2</g:id><g:title>Pot M2</g:title><g:brand>Mica</g:brand><g:gtin>8712345000042</g:gtin></item>
+<item><g:id>t1</g:id><g:title>Pot T1</g:title><g:brand>Tavo</g:brand><g:gtin>8712345000059</g:gtin></item>`;
+const a2 = analyseer({ feed: leesFeed(xml2), cat: [], prest: { k3: { bv: 7, gv: 1 } } });
+const ng = a2.merk.nagaan;
+ok(ng.length === 3 && a2.velden.merkKadolyMetGtin === 3 && !ng.some(r => r.id === 'k4'), 'lijst = elk product met merk Kadoly en een GTIN');
+ok(ng[0].id === 'k1' && ng[0].samen === 2 && ng[0].lijktOp[0][0] === 'Mica' && ng[0].lijktOp[0][1] === 2 && ng[0].lijktOp[1][0] === 'Tavo', 'aanwijzing: merk van andere producten met hetzelfde begin, meeste eerst');
+ok(ng[2].id === 'k3' && ng[2].lijktOp.length === 0 && a2.merk.metAanwijzing === 2 && a2.merk.teCorrigeren === 0, 'zonder aanwijzing achteraan, en het is geen voorstel');
+const h2 = voorstelHtml(a2);
+ok(/Na te gaan door de winkel: 3 producten/.test(h2) && /<b>Mica<\/b> \(2\)/.test(h2) && /geen ander merk met dit begin/.test(h2) && /7 \/ 1/.test(h2) && !/—|–/.test(h2), 'pagina toont de lijst met code, aanwijzing en vertoningen');
+ok(!/Na te gaan door de winkel/.test(voorstelHtml({ ...a2, merk: { teCorrigeren: 0, rijen: [] } })), 'oude bewaarde stand zonder lijst geeft geen fout');
