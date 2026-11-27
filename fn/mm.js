@@ -193,8 +193,8 @@ export default async function handler(req, res) {
     if (op.startsWith('dist')) { // Clickmind distributie: gerichte reacties, korte links en wat werkt (lib/distlus.js, Henkjan 19 nov 2026)
       const D = await import('../lib/distlus.js'); res.setHeader('cache-control', 'no-store');
       if (op === 'distklik') return await D.klikAntwoord(req, res, q('c'));
-      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), soort: q('soort'), doel: q('doel'), doelsoort: q('doelsoort'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
-      if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
+      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), soort: q('soort'), doel: q('doel'), doelsoort: q('doelsoort'), haak: q('haak'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
+      if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), haak: q('haak'), doelsoort: q('doelsoort'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
     }
     if (op === 'stuk' || op === 'stukken' || op === 'briefing') { // paspoort en geheugen (lib/paspoort.js, Henkjan 27 nov 2026): één register voor alles wat de deur uit gaat, met medium, waarvoor en doel
@@ -210,6 +210,7 @@ export default async function handler(req, res) {
       }
       if (op === 'stuk') { // één stuk melden of lezen; ?campagne=<net>:<id>&doel= zet het doel van een hele campagne vast
         if (q('campagne')) { const r = await P.zetCampDoel(q('campagne'), q('doel')); return res.status(r.ok ? 200 : 400).json(r); }
+        if (q('poort')) return res.status(200).json(await P.poortCheck(q('poort'))); /* uitkomstpoort: bestemming zonder gemeten aanmelding of verkoop? */
         const b = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j'));
         if (!b && q('id')) return res.status(200).json((await P.lees(q('id'))) || { ok: false, fout: 'onbekend id' });
         if (!b) return res.status(400).json({ ok: false, fout: 'geef j=<JSON> of POST JSON: {"medium":"...","project":"...","doel":"...","titel":"...","tekst":"...","haak":"...","pagina":"https://...","plek":"...","publiek":"..."}', media: Object.keys(P.MEDIA), doelen: P.DOELEN });

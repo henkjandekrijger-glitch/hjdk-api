@@ -112,6 +112,14 @@ ok(dm.ok && dm.paspoort && dm.paspoort.medium === 'x' && dm.paspoort.doel.soort 
 ok(!!(await P.lees('post:' + dm.id)), 'distmaak: stuk staat in het geheugen');
 const dm2 = await D.maak({ project: 'curacao', kanaal: 'reddit', plek: 'r/curacao', onderwerp: 'stranden', tekst: 'Playa Kenepa is rustig op dinsdag.' });
 ok(dm2.ok && dm2.paspoort.doel.afgeleid && /doel van het project/.test(dm2.let), 'distmaak zonder doelsoort: doel van het project en een melding');
+const dz = await D.zet(dm2.id, { haak: 'Tip', doelsoort: 'klik' }); const pz = await P.lees('post:' + dm2.id);
+ok(dz.ok && pz.inhoud.haak === 'tip' && pz.doel.soort === 'klik' && !pz.doel.afgeleid, 'distzet: haak en doel van de maker komen meteen in het geheugen');
+const dm3 = await D.maak({ project: 'nexy', kanaal: 'bluesky', plek: 'bluesky', onderwerp: '/v/x', doel: 'https://nexy.now/v/x' });
+ok(dm3.ok && /geen tekst/.test(dm3.let) && (await P.lees('post:' + dm3.id)).medium === 'bluesky', 'distmaak zonder tekst waarschuwt; kanaal bluesky wordt herkend');
+await D.zet(dm3.id, { tekst: 'Voicemail is where calls go to die.', haak: 'probleem' }); const p3 = await P.lees('post:' + dm3.id);
+ok(p3.inhoud.tekst.startsWith('Voicemail') && p3.inhoud.haak === 'probleem', 'distzet met tekst: de tekst staat direct in het geheugen');
+await P.stand({ vers: true }); const pc = await P.poortCheck('https://go.kadoly.com/shop?bundel=x&clickid=${SUBID}'), pc2 = await P.poortCheck('https://todayin.email/?lang=es');
+ok(pc.dicht === true && pc.kliks === 1500 && pc2.dicht === false, 'uitkomstpoort: bestemming zonder uitkomst is dicht, een pagina met aanmeldingen open');
 const blok = await P.dashBlok(); ok(blok && /stukken met paspoort/.test(blok.regels[0]), 'dashboardregel: ' + blok.regels[0]);
 if (process.env.TOON) { console.log('\n' + (await P.briefing({ medium: 'x', project: 'nexy' })).tekst + '\n\n' + (await P.briefing({ medium: 'propeller', project: 'wam', doel: 'aanmelding' })).tekst + '\n\n' + P.standTekst(await P.stand({ vers: true }))); }
 await kv.raw(['FLUSHDB']); process.exit(process.exitCode || 0);
