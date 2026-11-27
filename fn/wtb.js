@@ -1,3 +1,4 @@
+import { sbBlock, SB_SCRIPT } from '../lib/sharedby-terug.js';
 import { rankUsage, usageDays, dailyUsage } from '../lib/guide-usage.js';
 import { guideAnswers, guideDecision } from '../lib/us-demand-guides.js';
 import { decisionHtml, guideSections } from '../lib/us-demand-view.js';
@@ -177,7 +178,7 @@ function load(){var id=++seq;status.textContent=U.upd;document.getElementById('a
 document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){seq++;q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false')});b.classList.add('on');b.setAttribute('aria-pressed','true');cur[qi]=+b.getAttribute('data-o');var u=new URL(location.href);u.searchParams.set('answers',cur.join('-'));history.replaceState(null,'',u);if(!st){st=1;h('wtb-'+M+'-'+S+'-start');h('wtb-'+M+'-start')}clearTimeout(t);status.textContent=U.upd;document.getElementById('adv').setAttribute('aria-busy','true');t=setTimeout(load,200)})})});
 document.getElementById('share-guide').addEventListener('click',function(){var u=new URL('https://${m.host}/'+S);u.searchParams.set('answers',cur.join('-'));var out=document.getElementById('share-status');if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u.href).then(function(){out.textContent=U.copied},function(){out.textContent=U.copy});else out.textContent=U.copy;h('wtb-'+M+'-'+S+'-share')});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-amz]');if(a){h('wtb-'+M+'-'+S+'-clk');h('wtb-'+M+'-'+S+'-clkd-'+new Date().toISOString().slice(0,10));h('wtb-'+M+'-clk');h('wtb-'+M+'-clkd-'+new Date().toISOString().slice(0,10))}},true);})();</script>`;
-  const html = shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + (DUN && DUN.naar ? DUN.naar : it.slug), og: 'article', image: adv.products[0] && adv.products[0].image, ld, body });
+  const html = shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + (DUN && DUN.naar ? DUN.naar : it.slug), og: 'article', image: adv.products[0] && adv.products[0].image, ld, body: body+sbBlock(m.id==='de'?'de':'en',it.title||it.h1,base+'/'+it.slug)+SB_SCRIPT });
   return DUN && !DUN.naar ? html.replace('content="index,follow,max-snippet:-1,max-image-preview:large"', 'content="noindex,follow"') : html;
 }
 async function home(m, all, o3) {
@@ -342,6 +343,6 @@ export default async function handler(req, res) {
     if (op0 && op0.code === 301) { res.setHeader('location', 'https://' + m.host + '/' + op0.naar); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); }
     if (op0) { res.setHeader('x-robots-tag', 'noindex'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(410).send(shell(m, { title: '410: ' + m.name, desc: '', path: '/', body: `<h1>${m.id === 'de' ? 'Dieser Ratgeber wurde entfernt' : 'This guide has been removed'}</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); } }
   await count(m, req, q, it.slug);
-  const pg = await page(m, it, all, req); if (pg && pg.sj) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', q.get('sjabloon') ? 'no-store' : 'public, max-age=0, must-revalidate'); if (/noindex/.test(pg.sj.slice(0, 3000))) res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(pg.sj); }
+  const pg = await page(m, it, all, req); if (pg && pg.sj) { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', q.get('sjabloon') ? 'no-store' : 'public, max-age=0, must-revalidate'); if (/noindex/.test(pg.sj.slice(0, 3000))) res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(pg.sj.replace('</body>', '<div class="wrap">' + sbBlock(m.id==='de'?'de':'en',it.title||it.h1,'https://'+m.host+'/'+it.slug) + '</div>' + SB_SCRIPT + '</body>')); }
   return send(pg, it.term);
 }
