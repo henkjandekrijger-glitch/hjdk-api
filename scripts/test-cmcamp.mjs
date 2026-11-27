@@ -67,15 +67,22 @@ ok(!(await C.ronde({ dag: D, alleen: 'mgid' })).ok, 'B: alleen=mgid geweigerd (g
 const mg = (id, naam, k) => ({ id, naam, vert: 1000, kliks: 10, kosten: k, conv: 0, munt: 'EUR', instellingen: { formaat: 'mgid product native', landing: 'https://keuzehulp.best/shop', boden: [{ bod: 0.03, landen: ['nl'] }] }, creatives: [{ id: 'm' + id, titel: 'Titel', tekst: 'Tekst van de advertentie', beeld: 'https://img.test/m.jpg', cta: 'Try now', landing: 'https://keuzehulp.best/shop', vert: 1000, kliks: 10, kosten: k, conv: 0 }] });
 const bestand = { net: 'mgid', bron: 'test', munt: 'EUR', dagen: { [D]: [mg('5', 'SHOP-LUS MGID 2026-11-04 A | wonen', 4.5), mg('6', 'TODAYIN CURACAO NL DE US MGID', 1.25)], [D1]: [mg('5', 'SHOP-LUS MGID 2026-11-04 A | wonen', 2)] } };
 r = await C.leg('mgid', { bestand }); l = await lees(D);
-ok(r.ok && r.dagen === 2 && r.kosten_totaal === 7.75 && r.per[D].kosten === 5.75 && van(l, 'mgid').length === 2 && van(l, 'propeller').length === 1 && van(l, 'mondiad').length === 1, 'C: leg(mgid) zet de dagen erin en laat de rest van de dag staan');
-const g5 = van(l, 'mgid').find(c => c.id === '5'); ok(g5.project && g5.merk && g5.eigen && g5.munt === 'EUR' && 'waarde' in g5, 'C: project, merk, eigen uitkomsten, waarde en munt bij de ingelegde campagne');
+ok(r.ok && r.dagen === 2 && r.koers === 1.155 && r.munt === 'USD' && r.munt_bron === 'EUR' && r.kosten_bron_totaal === 7.75 && r.kosten_totaal === 8.95 && r.per[D].kosten === 6.64 && r.per[D].kosten_bron === 5.75 && van(l, 'mgid').length === 2 && van(l, 'propeller').length === 1 && van(l, 'mondiad').length === 1, 'C: leg(mgid) zet de dagen erin en laat de rest van de dag staan');
+const g5 = van(l, 'mgid').find(c => c.id === '5'); ok(g5.project && g5.merk && g5.eigen && 'waarde' in g5, 'C: project, merk, eigen uitkomsten en waarde bij de ingelegde campagne');
+ok(g5.munt === 'USD' && g5.munt_bron === 'EUR' && g5.kosten_bron === 4.5 && g5.kosten === 5.2 && Math.abs(g5.creatives[0].kosten - 5.1975) < 1e-9 && Math.abs(g5.instellingen.boden[0].bod - 0.0347) < 1e-9, 'C: euro\'s omgerekend naar dollars (koers /api/geld), het bedrag in euro blijft in kosten_bron');
 ok((await kv.raw(['SISMEMBER', 'cm:campdagen', D1])) == 1 && (await lees(D1)).length === 1, 'C: dag in cm:campdagen');
 r = await C.ronde({ dag: D }); l = await lees(D);
 ok(van(l, 'mgid').length === 2 && van(l, 'propeller')[0].id === '901', 'C: een volgende ronde laat MGID staan (en haalt de rest opnieuw op)');
 ok(!(await C.leg('propeller')).ok && !(await C.leg('mgid', { bestand: { dagen: null } })).ok, 'C: leg weigert een netwerk dat de ronde zelf ophaalt en een leeg bestand');
 // het echte bestand in de repo
 const echtBestand = await C.leg('mgid').catch(e => ({ ok: false, fout: String(e) }));
-ok(echtBestand.ok && echtBestand.dagen === 5 && Math.abs(echtBestand.kosten_totaal - 193.59) < 0.005 && echtBestand.munt === 'EUR', 'C: data/camp-historie/mgid.json: 5 dagen, som 193,59 EUR');
+ok(echtBestand.ok && echtBestand.dagen === 5 && Math.abs(echtBestand.kosten_bron_totaal - 193.59) < 0.005 && echtBestand.munt_bron === 'EUR' && Math.abs(echtBestand.kosten_totaal - 193.59 * 1.155) < 0.06, 'C: data/camp-historie/mgid.json: 5 dagen, som 193,59 EUR, in dollars 223,60');
+// eerder gemeten uitkomsten blijven staan als de dagtellers verlopen zijn (hier: er zijn geen tellers), bij een campagne die blijft staan en bij een die opnieuw is opgehaald
+{ const DX = dag(20); await kv.set('cm:camp:' + DX, [{ net: 'propeller', id: '901', naam: 'ANDERE CAMPAGNE', project: 'todayin', kosten: 1, kliks: 5, creatives: [], gemeten: true, eigen: { echt: 7, actie: 2, aanmelding: 1, dialoog: 0, koop: 0, bezoek: 9 } }, { net: 'mondiad', id: '11', naam: 'TODAYIN CURACAO NL | CLASSIC PUSH', project: 'todayin', kosten: 0.1, kliks: 40, creatives: [], gemeten: true, eigen: { echt: 3, actie: 0, aanmelding: 0, dialoog: 0, koop: 0, bezoek: 4 } }], {});
+  await C.ronde({ dag: DX, alleen: 'mondiad' }); let lx = await lees(DX);
+  ok(van(lx, 'propeller')[0].eigen.echt === 7 && van(lx, 'propeller')[0].gemeten === true && van(lx, 'mondiad')[0].eigen.echt === 3 && van(lx, 'mondiad')[0].gemeten === true && van(lx, 'mondiad')[0].creatives.length === 2, 'B: eerder gemeten uitkomsten blijven staan als er geen dagtellers meer zijn');
+  await kv.raw(['HSET', 'mm:cu:' + DX, 'mondiad|11|echt', '5']); await C.ronde({ dag: DX, alleen: 'mondiad' }); lx = await lees(DX);
+  ok(van(lx, 'mondiad')[0].eigen.echt === 5 && van(lx, 'propeller')[0].eigen.echt === 7, 'B: zijn er wel tellers, dan gaat de nieuwe telling voor'); }
 
 // ---- een falend Mondiad of TikTok maakt de dag niet leeg ----
 await kv.set('cm:camp:' + D2, [{ net: 'tiktok', id: 'tt-kadoly', naam: 'TikTok Kadoly', project: 'kadoly', kosten: 5, kliks: 9, creatives: [] }, ...m11], {});
@@ -98,10 +105,16 @@ ok(r.gewoon && r.netwerk && r.netwerk.rest === 0 && w.klaar && w.gedaan.length =
 const g2 = await kv.get('cm:inhaal'); ok(JSON.stringify({ ...g2, klaar: undefined }) === JSON.stringify({ ...gewoon, klaar: undefined }) && g2.klaar === 'gisteren', 'B: cm:inhaal (de lopende gewone inhaal) is onaangeroerd');
 ok((await kv.raw(['EXISTS', 'cm:inhaal:slot'])) == 0 && (await kv.raw(['EXISTS', 'cm:inhaal:mondiad:slot'])) == 0, 'B: eigen slot per netwerk, geen slot blijft hangen');
 ok((await lees(v2)).some(c => c.net === 'mondiad') && !(await lees(v2)).some(c => c.net === 'propeller'), 'B: ingehaalde dag heeft alleen Mondiad (de gewone inhaal vult de rest)');
+// tijdsbudget voor tekst en beeld op: de dag komt terug in de netwerk-inhaal tot hij compleet is
+{ const echtMd = C.B.mondiad, vx = dag(12); let vol = false;
+  C.B.mondiad = async d => { const x = await echtMd(d); return vol ? x : { ...x, fouten: ['creatives mondiad: tijdsbudget op, 1 campagnes zonder tekst en beeld'] }; };
+  r = await C.inhaal({ van: vx, tot: vx, alleen: 'mondiad' }); ok(r.rest === 1 && !r.klaar && (await lees(vx)).some(c => c.net === 'mondiad'), 'B: tijdsbudget op: de dag staat erin maar blijft in de netwerk-inhaal');
+  vol = true; r = await C.inhaal({ alleen: 'mondiad' }); ok(r.rest === 0 && !!r.klaar, 'B: volgende poging zonder tekort: dag klaar');
+  C.B.mondiad = echtMd; }
 // ---- D: leer ----
 const lr = await C.leer({ dagen: 14 });
 ok(lr.ontbreekt.some(x => /RichAds/.test(x)) && lr.ontbreekt.some(x => /Clickadu/.test(x)) && lr.ontbreekt.some(x => /MGID: alleen de historie/.test(x)) && !lr.ontbreekt.some(x => /Mondiad/.test(x)), 'D: leer meldt wat echt ontbreekt (RichAds, Clickadu, MGID dagelijks), niet meer Mondiad');
-ok(lr.netwerk === undefined && lr.kenmerken.netwerk.some(x => x.w === 'mondiad') && lr.kenmerken.netwerk.some(x => x.w === 'mgid') && /EUR/.test(lr.let_munt || ''), 'D: leer telt Mondiad en MGID mee en meldt de munt');
+ok(lr.netwerk === undefined && lr.kenmerken.netwerk.some(x => x.w === 'mondiad') && lr.kenmerken.netwerk.some(x => x.w === 'mgid') && !lr.let_munt, 'D: leer telt Mondiad en MGID mee, alles in dollars');
 const stMg = P.stukkenUitCampagnes([{ dag: D, camps: await lees(D) }]);
 ok(stMg.some(s => s.medium === 'mgid' && s.tekst === 'Tekst van de advertentie'), 'D: paspoort laadt ook de MGID-creatives (medium mgid)');
 console.log(process.exitCode ? 'GEFAALD' : 'GESLAAGD');
