@@ -97,6 +97,28 @@ Overdracht van de kadoly-shopify-chat (23 nov). Henkjan wil een eerste verkoop v
 
 ## Open bij Henkjan
 
+### Kadoly, 27 nov 2026 (kadoly-shopify-chat): TikTok, pakketten, winactie en 10 organische voorstellen
+- TikTok (advertiser 7708796437043265537), sinds de start: € 189,99 uitgegeven, 1.137 kliks en 2 verkopen (17 en 19 nov, € 91,36 omzet, ongeveer € 12 marge). Daarna ging er € 40 uit zonder één betaling. SIERADEN NL: 406 kliks, 268 echte mensen, 1 betaalpoging en 0 verkopen. Het account staat sinds de avond van 25 nov op zijn bestedingsgrens (CAMPAIGN_STATUS_BUDGET_EXCEED) en levert dus niets meer. PAKKETTEST ging op 27 nov om 11:18 UTC uit. Advies: niet bijvullen voor verkoop. TikTok organisch laten doorlopen en alleen een video betaald duwen die organisch al scoort.
+- Pakketten: 12 sets van € 68 tot € 132, op geen enkel kanaal verkocht. De pakkettest op TikTok kostte € 14,71 en gaf 133 bezoeken, 63 echte mensen en 0 kassabezoeken. Als winactieprijs werkt de Bureau set wel het best: 10 van de 17 adressen op 26 nov, voor $ 0,41 per adres. Advies: pakketten niet meer als koopadvertentie inzetten. Wel als winactieprijs en als aanbod in de zondagmail aan de winactielijst.
+- Winactie verdubbelen (Henkjan 27 nov: "de win emailadressen verdubbel dat vandaag"; op de vraag om hoger te bieden: "Ja maar ook beter maken van je creatives !!!"):
+  - A 12190846 van CPA-doel $ 0,75 naar $ 1,00.
+  - Nieuwe kopie D2 12199077 met 8 papa-hoeken en een WIN-label op de beelden, op $ 0,75.
+  - Kopie D 12199056 vervangen door D2 en uitgezet.
+  - Polly 12190844 weer aan, als KADOLYWIN.
+  - De prijsadvertentie 'Cadeau voor hem €99,95' (0 adressen op 219 kliks) uitgezet.
+  - Controle om 22:20 UTC (geplande check-in in deze chat): telling tegen gisteren (17 adressen). Kost een adres bij A meer dan $ 0,60, dan gaat A terug naar $ 0,75.
+- 10 organische voorstellen (wachten op Henkjans keuze; advies: begin met 1, 2 en 5):
+  1. **Gratis vermeldingen in Google Shopping repareren.** Alle productfoto's worden afgekeurd met 'Invalid image format' (fototest loopt). Gratis vermeldingen zijn organische verkoop zonder klikkosten. Clickmind ziet ze aan srsltid bij de bestelling.
+  2. **Verlanglijst om door te sturen voor Sinterklaas en Kerst.** De bezoeker zet producten op een lijstje en stuurt dat met één tik via WhatsApp naar familie, en die koopt. Clickmind meet per lijst wie er binnenkomt en wat er gekocht wordt (generatie 2). Moet uiterlijk 30 nov live staan voor 5 dec.
+  3. **Winactie: doorgeven geeft een extra lot.** Wie meedoet, stuurt zijn lot door via een korte Clickmind-link en krijgt een extra lot (niets met kopen). Zo leveren betaalde adressen organische adressen op. Doel: 0,3 nieuw adres per deelnemer.
+  4. **Zondagmail aan de winactielijst** via Mailmind (Gmail beschermd): de winnaar, de prijs van volgende week en de drie cadeaus die deelnemers het meest bekeken (uit Clickmind). Elk stuk krijgt een paspoort (mail, doel koop). Maat: kopen per 100 adressen.
+  5. **Clubs live.** Samen sparen en clubwerving zijn gebouwd: 2.897 clubs, waarvan 213 met adres. Voorstel: 10 clubs per werkdag via Mailmind. Elke club stuurt haar leden met € 2 per aankoop. Wacht op Henkjans go.
+  6. **Betaald test, organisch schaalt.** De winnende haken uit het Clickmind-campagnearchief (nu "Cadeau voor papa?": 1,7% van de kliks wordt een adres) worden elke week 3 video's per platform via Videomind, met utm_content.
+  7. **Minder pagina's, betere gidsen.** De 2.144 dunne productpagina's van de gids zonder eigen inhoud gaan uit de index; daarvoor in de plaats 20 cadeaugidsen voor de feestdagen ('kerstcadeau voor hem onder € 50') met echte producten. Zie het indexbesluit van 28 nov.
+  8. **AI-gaten.** Demand Radar laat zien waar ChatGPT en Perplexity geen goed antwoord geven op cadeauvragen. Die vraag wordt de eerste FAQ en de opening van de gids (ZICHT llm).
+  9. **Klachten van concurrenten als haak.** buiten.js levert reviews met 1 of 2 sterren (kapot aangekomen, verzendkosten pas bij de kassa). Posts beginnen bij dat probleem, met het antwoord van Kadoly: verzending zit in de prijs, 14 dagen retour.
+  10. **Pinterest opschonen.** Alleen Kadoly op het Kadoly-account (de KDP-boekpins weg), en haken die er nog niet waren ('uitdaging', 'n vragen', volgens de briefing). 3 pins per dag, en Clickmind leert per haak.
+
 ### Kadoly, 24 nov 2026 (kadoly-shopify-chat)
 - Budget voor de sieradencampagne (TikTok, Facebook via Whop, Pinterest via Zernio).
 - Black Friday: A (niet meedoen, met verhaal) of B (extreme aanbieding).
@@ -179,6 +201,7 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `fn/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 27 nov 2026 13:30 UTC (kadoly-shopify-chat, Henkjan: "Wat doen we met TT en de pakketten doe grondige analyse . En de win emailadressen verdubbel dat vandaag . Blijf werken aan organisch doe me 10 voorstellen"): analyse TikTok en pakketten (zie Open bij Henkjan, 27 nov). Winactie: A 12190846 naar CPA-doel $1,00, D2 12199077 nieuw (papa-hoeken, WIN-label via /api/shop/beeld/<pid>/<t>.jpg?w=WIN&wp=b, commit ab43fbca), D 12199056 vervangen en uit, Polly 12190844 weer aan (KADOLYWIN), prijsadvertentie 27821797 uit. Winactiepagina in een browser nagelopen: aanmelden werkt in beide Google-standen. Paspoort met doel aanmelding gezet op A, D2 en Polly. Controle 22:20 UTC.
 - 27 nov 2026 08:25 UTC (shop-sieradencontrole): fototest: Google gaf op 26 nov 23:00 en 27 nov 01:00 nog steeds 'Invalid image format' bij alle testproducten, terwijl /api/shop/beeld 200 met geldige PNG/JPEG geeft (live nagekeken). Testbeelden nu als vaste openbare JPEG in Blob (op=fototest&blob=1, wit vlak, max 1600 px, sRGB, kv kd:gmcblob); gmcbeeld.csv wijst daarnaar; bron opnieuw met zet=1. Volgende controle 14:10 UTC. Geen verkoop sinds 25 nov 07:30; 0 winactie-adressen vandaag om 08:10.
 - 27 nov 2026 08:15 UTC (shop-pa-uurcontrole): zegelcampagne 12196034 werd om ~07:45 door de SHOP-LUS-stopregel gestopt na $0,157 (P $0,0276 komt uit oude echt-mens-conversies van 12190717). Hernoemd naar project KADOLYWIN met ijkprijs $0,39 (stop bij $1,17 zonder adres, Henkjans regel) en weer aangezet. B 12195435 ook gestopt door die regel (0 adressen). winstand toont nu per campagne bezoek, mens en adressen plus zegel- en Google-tellers.
 - 26 nov 2026 23:25 UTC (shop-winactie): zegelpagina en welkomstmail van belofte spaarkaart eerlijk als wachtlijst (Henkjan: "die spaartkaart werkt verder nog niet want nog niet gebouwd"): 'Spaarzegels komen naar Kadoly', 3 zegels vastgezet (ssModalStart), sparen met bestellingen start pas als de zegelkaart gebouwd is. Geldt ook voor de modal-arm m-spaar.
