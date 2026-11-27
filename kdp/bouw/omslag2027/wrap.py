@@ -23,6 +23,8 @@ BOEK = {
  'B0CZRWNZBB': ('E8HW2RW0Q7A', (8.5, 11), 'BW_WHITE', 107, 'Golden Years Publishing', "MOM'S WORD SEARCH", 'mom'),
  'B0D5375859': ('J7A0BYZNPBT', (8.5, 11), 'BW_WHITE', 286, 'Golden Memories Publishing', '9000 WORD SEARCH · 3 IN 1', 'geel'),
  'B09XT6QR79': ('WWJH22W4BVX', (8.5, 11), 'BW_WHITE', 46, 'Jose Carlton', '', 'airbnb'),
+ 'B0BFV4C31K': ('PPSW8Y8AF7M', (8.5, 11), 'BW_WHITE', 146, 'Isabella Williams', 'LEAN AND GREEN COOKBOOK', 'kook'),
+ '1080901272': ('JY8QSEZHPN2', (6, 9), 'BW_WHITE', 128, 'Emotional Pathway', 'HOW TO ANALYZE PEOPLE', 'psy'),
 }
 
 # thema: achtergrond, kop-kleur, tekstkleur, accent (vinkjes, CTA-vlak), CTA-tekstkleur, kopfont, rugkleur, rugtekst
@@ -35,6 +37,7 @@ THEMA = {
  'mom': ('#ff7fae', '#fff', '#5a0a2c', '#e8467f', '#fff', "400 120px/.95 Bebas", '#e8467f', '#fff'),
  'geel': ('#ffe600', '#2f5fd0', '#111', '#111', '#ffe600', "400 120px/.95 Bebas", '#2f5fd0', '#fff'),
  'airbnb': ('#232a4d', '#ffd23f', '#fff', '#ffd23f', '#232a4d', "400 120px/.95 Bebas", '#232a4d', '#ffd23f'),
+ 'psy': ('radial-gradient(ellipse at 50% 40%,#123a6b 0%,#0a1f3d 55%,#050f22 100%)', '#4fb8ff', '#fff', '#4fb8ff', '#050f22', "400 110px/.95 Bebas", '#050f22', '#4fb8ff'),
 }
 
 ACHTER = {
@@ -70,6 +73,12 @@ ACHTER = {
     'How short-term rental works without owning property', 'Finding the right rental and the right landlord',
     'Setting up a listing guests want to book', 'A step-by-step plan for a successful business'],
     'Start your short-term rental business in 2027.', ''),
+ 'B0BFV4C31K': ('Lean and green meals, made simple.', [
+    'Lean and green recipes for every day', 'Fueling hacks for busy days', 'Clear steps for beginners', 'Everyday ingredients'],
+    'Start your first lean and green week today.', 'This book is not medical advice. Talk to your doctor before you change your diet.'),
+ '1080901272': ('Read people like an open book.', [
+    'Body language analysis, explained', 'Behavioral psychology in plain English', 'Speed reading people in everyday life',
+    'Practical tips for every conversation'], 'Know what people think before they say it.', ''),
 }
 
 def achter_html(a, Win, Hin):
@@ -106,7 +115,7 @@ def bouw(a, br):
     paneel_w = round(Win * DPI)
     def shot(html, W, H, w_px, h_px):
         pg = br.new_page(viewport={'width': W, 'height': H}, device_scale_factor=w_px / W)
-        pg.set_content(html); pg.wait_for_timeout(300)
+        pg.set_content(html); pg.wait_for_timeout(1500)
         p = D / 'tmp.png'; pg.screenshot(path=str(p)); pg.close()
         return Image.open(p).convert('RGB').resize((w_px, h_px), Image.LANCZOS)
     css, body = voor.B[a]
