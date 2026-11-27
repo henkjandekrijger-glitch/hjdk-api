@@ -234,6 +234,19 @@ export default async function handler(req, res) {
       for (const m of maps) uit[m] = await submitSitemap(prop, m, oidc);
       return res.status(200).json({ ok: true, eigendom: prop, sitemaps: uit });
     }
+    if (op === 'paginas') { // 27 nov 2026 (Henkjan: "kijk ook naar airfryer en batterijen en chirurgie want daar was verkeer"): vertoningen en kliks per pagina per week over hoogstens 180 dagen, gefilterd op een stukje van het adres; alleen lezen, alleen via de beschermde host
+      if (!/\.vercel\.app$/i.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      const host = String(url.searchParams.get('host') || 'keuzehulp.best').replace(/[^a-z0-9.-]/gi, ''); const q = String(url.searchParams.get('q') || '').slice(0, 60); const dagen = Math.min(180, Math.max(14, Number(url.searchParams.get('dagen')) || 120));
+      const l = await sites(oidc); const prop = propFor(l, host); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot ' + host });
+      const eind = new Date(Date.now() - 2 * 864e5).toISOString().slice(0, 10), begin = new Date(Date.now() - (dagen + 2) * 864e5).toISOString().slice(0, 10);
+      const body = { startDate: begin, endDate: eind, dimensions: ['page', 'date'], rowLimit: 25000, ...(q ? { dimensionFilterGroups: [{ filters: [{ dimension: 'page', operator: 'contains', expression: q }] }] } : {}) };
+      const r = await fetch('https://www.googleapis.com/webmasters/v3/sites/' + encodeURIComponent(prop) + '/searchAnalytics/query', { method: 'POST', headers: { authorization: 'Bearer ' + await token(oidc), 'content-type': 'application/json' }, body: JSON.stringify(body) });
+      const j = await r.json().catch(() => ({})); if (!r.ok) return res.status(200).json({ ok: false, fout: 'Search Console ' + r.status });
+      const wk = d => { const t = new Date(d + 'T00:00:00Z'); t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7)); return t.toISOString().slice(0, 10); };
+      const per = {}; for (const x of (j.rows || [])) { const [pg, d] = x.keys; const p0 = per[pg] = per[pg] || { imp: 0, clicks: 0, weken: {} }; p0.imp += x.impressions; p0.clicks += x.clicks; const w = p0.weken[wk(d)] = p0.weken[wk(d)] || [0, 0]; w[0] += x.impressions; w[1] += x.clicks; }
+      const paginas = Object.entries(per).map(([page, v]) => ({ page, imp: v.imp, clicks: v.clicks, weken: Object.fromEntries(Object.entries(v.weken).sort()) })).sort((a, b) => b.imp - a.imp).slice(0, 60);
+      return res.status(200).json({ ok: true, host, prop, q, periode: { begin, eind }, uitleg: 'weken: maandag van de week -> [vertoningen, kliks]', paginas });
+    }
     if (op === 'surgery') { // Surgery verhuisde 18 nov 2026: canonieke sitemap indienen bij sc-domain:keuzehulp.best en alleen /chirurgie rapporteren
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'keuzehulp.best'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot keuzehulp.best', eigendommen: l });
