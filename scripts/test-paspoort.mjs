@@ -209,4 +209,20 @@ await kv.set('cm:camp:' + heelOud, [camp('556', 'TODAYIN CURACAO HEEL OUD', 'tod
 await kv.raw(['SADD', 'cm:campdagen', oudDag, heelOud]); await kv.del('ps:stand');
 await P.ronde({});
 ok(!!(await P.lees('ad:propeller:o1')) && !(await P.lees('ad:propeller:o2')), 'een ingehaalde dag van 118 dagen terug telt mee, ouder dan 400 dagen niet');
+// Zernio (Henkjan 27 nov 2026: "Kijk ook naar whop . Zernio en google ads ."): posts met cijfers, geen dubbele uit postmotor, Videomind of boekenpins
+{
+  const zp = (id, extra = {}) => ({ _id: 'x' + id, latePostId: 'l' + id, status: 'published', platform: 'youtube', mediaType: 'video', content: 'TCF Canada 2026 vraag\nOefen gratis: https://mylevel.today/fr/tcf-canada?utm_source=youtube', publishedAt: '2026-11-27T15:44:54Z', analytics: { views: 120, likes: 3, comments: 1, clicks: 2 }, platforms: [{ platform: 'youtube', accountUsername: 'myleveltoday' }], ...extra });
+  const s1 = P.stukUitZernio(zp(1));
+  ok(s1 && s1.id === 'video:z-l1' && s1.project === 'mylevel' && s1.medium === 'youtube' && s1.cijfers.vert === 120 && s1.cijfers.kliks === 2 && s1.cijfers.inzet === 4, 'Zernio: een short wordt een video-stuk van MyLevel met de cijfers van YouTube');
+  ok(!P.stukUitZernio(zp(2), new Set(['l2'])), 'Zernio: wat Videomind al heeft (zid) telt niet dubbel');
+  ok(!P.stukUitZernio(zp(3, { content: 'Reminder for someone else\nhttps://nexy.now/m/ab12c' })), 'Zernio: een post van de postmotor (Clickmind-link) telt niet dubbel');
+  ok(!P.stukUitZernio(zp(4, { platform: 'pinterest', content: 'Stocking stuffer book https://stockingbooks.com/b/x' })), 'Zernio: boekenpins staan er al via bs:pinlog');
+  const pin = P.stukUitZernio(zp(5, { platform: 'pinterest', mediaType: 'image', content: 'Lapis lazuli armband\nVan LanLivia', platforms: [{ platform: 'pinterest', accountUsername: 'kadolyshop' }] }));
+  ok(pin && pin.bron === 'pin' && pin.project === 'kadoly', 'Zernio: een pin van kadolyshop hoort bij Kadoly');
+  ok(!P.stukUitZernio(zp(6, { content: 'iets zonder project', platforms: [{ platform: 'youtube', accountUsername: 'onbekend' }] })), 'Zernio: zonder herkenbaar project blijft een post erbuiten');
+  process.env.ZERNIO_API_KEY = 'test';
+  let paginas = 0; const haal = async () => { paginas++; return { ok: true, json: async () => ({ posts: [zp(10 + paginas)], pagination: { pages: 2 } }) }; };
+  const l = await P.stukkenUitZernio({ haal });
+  ok(paginas === 2 && l.filter(Boolean).length === 2, 'Zernio: alle pagina\'s worden gelezen');
+}
 if (!process.env.LAAT) await kv.raw(["FLUSHDB"]); process.exit(process.exitCode || 0);
