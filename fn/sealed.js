@@ -113,14 +113,14 @@ export default async function handler(req, res) {
       const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim(), ik = 'gw:ip:' + new Date().toISOString().slice(0, 10) + ':' + ip.replace(/[^0-9a-f.:]/gi, '').slice(0, 45);
       const n = Number(await kv.raw(['INCR', ik]).catch(() => 0)); if (n === 1) await kv.raw(['EXPIRE', ik, 86400]).catch(() => {});
       if (n > 80) return stuur(res, 429, 'application/json', '{"ok":false,"fout":"te veel"}', 'no-store');
-      const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET });
+      const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET, oidc: String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '') });
       return stuur(res, 200, 'application/json', JSON.stringify(await gwStap(kv, b, req, { ai, meld })), 'no-store');
     } catch (e) { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
   if (op === 'gwstand') { res.setHeader('X-Robots-Tag', 'noindex'); return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwStand(kv), null, 1), 'no-store'); }
   if (op === 'gwproef') {
     if (!/\.vercel\.app$/i.test(String(req.headers.host || ''))) return stuur(res, 404, 'application/json', '{}', 'no-store');
-    const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET });
+    const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET, oidc: String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '') });
     return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwProef(ai), null, 1), 'no-store');
   }
   if (op === 'gwpagina') { // dezelfde pagina op de beschermde host, om te bekijken zonder de rewrite van sealedintent.com
