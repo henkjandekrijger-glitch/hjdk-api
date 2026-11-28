@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
-import { dagModel, decemberModel, zetKdpData, voorspelRonde, voorspelStand, voorspelHtml, localDay } from '../lib/kdp-voorspel.js';
+import { dagModel, decemberModel, winstModel, zetKdpData, voorspelRonde, voorspelStand, voorspelHtml, localDay } from '../lib/kdp-voorspel.js';
 import { zetOversight, ovStand, ovHtml, ovTekst } from '../lib/oversight.js';
 const NOW = Date.parse('2026-11-28T14:00:00Z'), DAY = 864e5;
 const shift = n => new Date(Date.parse('2026-11-28T00:00:00Z') + n * DAY).toISOString().slice(0, 10);
@@ -61,6 +61,27 @@ test('month forecast scales each book rather than restoring last year winners', 
   const rows = input().dagen.filter(r => r.dag.startsWith('2026-11'));
   const months = [{ maand: '2025-11', per: [{ boek: 'A', royalty: 1000 }, { boek: 'stopped', royalty: 10000 }] }, { maand: '2025-12', per: [{ boek: 'A', royalty: 2000 }, { boek: 'stopped', royalty: 20000 }] }];
   const m = decemberModel(rows, months, '2026-11-28'); assert.ok(m.bedrag > 0); assert.equal(m.per.some(p => p.boek === 'stopped'), false); assert.ok(m.laag <= m.bedrag && m.hoog >= m.bedrag);
+});
+test('profit never treats missing ad sources or other costs as zero and never subtracts printing twice', () => {
+  const goal = { maand: '2026-12', bedrag: 10000, royaltyPlan: 18000, adsAandeelPlan: .4 };
+  const royalties = [{ dag: '2026-12-01', royalty: 500, afgesloten: true }];
+  const ads = [{ dag: '2026-12-01', kosten: 100, afgesloten: true }];
+  const unknown = winstModel(royalties, ads, [], '2026-12-02', null, goal);
+  assert.equal(unknown.werkelijk.bedrag, null); assert.equal(unknown.werkelijk.dagen, 0);
+  ads[0].volledig = true;
+  assert.equal(winstModel(royalties, ads, [], '2026-12-02', null, goal).werkelijk.bedrag, null);
+  const complete = winstModel(royalties, ads, [{ dag: '2026-12-01', kosten: 0, volledig: true, afgesloten: true }], '2026-12-02', null, goal);
+  assert.equal(complete.werkelijk.bedrag, 400); assert.equal(complete.nogNodig, 9600); assert.equal(complete.nodigPerResterendeDag, 320);
+  assert.equal(complete.plan.ruimteOverigeKosten, 800);
+  assert.equal(winstModel(royalties, ads, [], '2026-11-28', null, goal).werkelijk.bedrag, 0);
+});
+test('profit scenarios use contiguous ad days, label excluded costs and preserve the independent target', () => {
+  const goal = { maand: '2026-12', bedrag: 10000 }, month = { maand: '2026-12', bedrag: 4000 };
+  const ads = Array.from({ length: 7 }, (_, i) => ({ dag: shift(-i - 1), kosten: 10, afgesloten: true }));
+  const w = winstModel([], ads, [], '2026-11-28', month, goal);
+  assert.equal(w.bijdrageRaming.hoog, 3690); assert.equal(w.bijdrageRaming.kostendekkingBevestigd, false);
+  assert.equal(w.bijdrageRaming.kloofMinimaal, 6310); assert.equal(w.vereist[1].royaltyMinimaal, 16666.67);
+  assert.equal(winstModel([], ads.filter(r => r.dag !== shift(-1)), [], '2026-11-28', month, goal).bijdrageRaming, null);
 });
 test('Oversight integration preserves the KDP card and escapes imported text', async () => {
   const kv = memoryKV(); await zetKdpData(kv, input(), NOW);

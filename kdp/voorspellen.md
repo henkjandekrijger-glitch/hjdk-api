@@ -2,6 +2,26 @@
 
 Opdracht Henkjan 28 november 2026: voorspel vandaag en december uit de account- en advertentiedata; zet dit als dagelijkse taak op het dashboard. Leren betekent vinden wat royalty en opbrengst na ads beïnvloedt, en dat voor extra omzet gebruiken.
 
+## Actueel doel: minimaal $10.000 winst in december 2026
+
+Henkjan 28 november: "Ik wil in december minimaal 10k profit hebben." USD, zoals de accountcijfers. Dit vervangt het eerdere decemberdoel in royalty; het doorlopende doel van $200 royalty per dag in januari blijft bestaan. Winst is KDP-royalty minus alle advertenties en overige aan KDP toegerekende kosten. Drukkosten zijn al van royalty af en worden niet nogmaals afgetrokken. Geen omzet uit Associates bij KDP optellen.
+
+Het doel is geen voorspelling. Het rekenpad is $18.000 royalty, hoogstens 40% advertenties op portefeuilleniveau en hoogstens $800 overige kosten: $10.000 winst. Dit verleent geen extra advertentiebudget en vervangt de bestaande boekgrenzen niet. Zonder overige kosten vereist $10.000 winst minimaal $14.286 royalty bij 30% ads, $16.667 bij 40% of $25.000 bij 60%. Overige kosten verhogen die vereiste royalty. De eerste royaltyvoorspelling blijft intact; geen doelgroei bij de raming verzinnen.
+
+Het doel staat in het bestaande dashboard in `winstdoel` met `maand`, `bedrag`, `munt:USD` en optioneel `royaltyPlan`, `adsAandeelPlan`. Het hoofdgetal telt daarna werkelijk gemeten maandwinst, nooit het oude weekgemiddelde van royalty. Vóór december staat er nul met "nog niet begonnen". Tijdens december is volledige winst onbekend zolang voor een afgesloten dag royalty, alle advertenties of overige kosten ontbreken. Toon kostendekking, actueel tekort en benodigde winst per resterende dag. Bewaar toekomstige ramingen buiten het kasboek.
+
+Ronde A levert via `kdpdata` ook `kostendagen`: `{dag,kosten,afgesloten:true,volledig:true,munt:"USD",bron,gezien}` voor overige KDP-kosten, exclusief advertenties en drukkosten. Controleer onder meer productie, redactie, reviewdiensten, software en aan KDP toegerekende uitvoering; leg de toerekening van gedeelde kosten in de bron vast. Alleen na controle is geen kosten nul. Zet op `adsdagen` pas `volledig:true` als alle campagnes, inclusief gepauzeerde/gearchiveerde, en alle gebruikte KDP-adnetwerken zijn meegenomen (ook PropellerAds indien ingezet). Dagtotalen per verzameling vervangen elkaar; geen overlappende perioden optellen. Kosten staan precies één keer in adsdagen of kostendagen. De oorspronkelijke import zonder bevestiging van volledige advertentiedekking blijft een onvolledige bron.
+
+De kaart toont afzonderlijk een scenario van maandroyalty minus het gemeten advertentietempo over 3 en 7 aaneengesloten dagen. Dat zijn gelijkblijvende uitgaven, vóór overige kosten; geen complete winstprognose en geen bewijs dat omzet met dezelfde kosten kan opschalen. Ontbreekt een recente advertentiedag, geen tempo voor die reeks verzinnen. De onafhankelijke royaltyraming blijft daarnaast zichtbaar.
+
+Uitvoering vanaf ronde A van 29 november, naast de bestaande oordelen:
+
+- Werk de bestaande taak `3s4hs7` af: PIT BOSS-drukkosten verklaren, actuele prijs/royalty en editie controleren; daarna één concreet voorstel voor margeherstel met behoud van boekkwaliteit. Bereken het effect op huidig volume apart van het scenario met oud volume. Geen automatische terugkeer naar oude verkopen aannemen. Controle op 30 november.
+- Lasting Change: controleer actuele editie, beschikbaarheid en royalty per exemplaar tegenover december 2025. Controleer de levering van de al aangezette NIEUWJAAR/exact-zoekwoorden (status, land, uitingen en negatieve zoekwoorden). Kies één herstelactie binnen het bestaande mandaat; geen extra bodstap zonder verklaring van uitblijvende levering. Laatste prijsverlaging en volumeverandering los van elkaar toetsen.
+- Teens: oordeel van de bestaande wijzigingen op 30 november blijft staan. Toets extra royalty minus extra kosten; een goede winkel-ROAS, rang of lage CPA alleen is onvoldoende. Gebruik dezelfde boek/marktperiode en houd rekening met vertraagde royalty en attributie. Bescherm bestaande organische verkoop. De nieuwste boekgrenzen en wachttijden blijven leidend.
+
+Vergelijk deze drie hefbomen dagelijks op verwachte extra winst, bewijs en inzet. Eén controleerbare ingreep tegelijk, eigenaar en oordeel in dashboard en werklog. Is het rekenpad niet aannemelijk, meld de resterende kloof in plaats van een hogere raming te presenteren.
+
 ## Stand en uitvoering
 
 Eén kaart, in Boeken vandaag op https://nexy.now/o. Voor chats: `/oversight?vorm=tekst`; alleen de voorspelling en een nieuwe ronde: `/oversight?voorspel=1`. De bestaande KDP-rondes blijven de bron voor ingelogde Amazon-data. Vercel heeft geen Amazon-login of Ads-API-toegang; een cloudronde presenteert oude cijfers nooit als een verse accountmeting.
