@@ -1,3 +1,5 @@
+// Gedeeld gebruiksbeleid blijft aanwezig in elke projectingang, ook met een eigen leerprompt.
+{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--experimental-vm-modules', new URL('./test-gebruikbeleid.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Gebruiksbeleid-controle mislukt'); process.exit(1); } }
 // Rooktest bij elke deploy (npm run build): rendert een paar keuzehulppagina's. Gooit een pagina een fout of een 500, dan faalt de build
 // en blijft de vorige versie live. Aanleiding: 21 nov 2026 gaven alle keuzehulpen 30 minuten een 500 (variabele in commentaar geschoven).
 // Traag of geen antwoord binnen 20 s telt niet als fout: alleen echte fouten houden een deploy tegen.
