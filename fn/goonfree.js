@@ -152,6 +152,7 @@ const minuut = t => new Date(t).toISOString().slice(0, 16).replace(/[-T:]/g, '')
 async function krachtZet(req, res) {
   const b = lijf(req), d = schoon(b.d, 40), k = String(b.k || ''), dag = Math.max(0, Math.min(5000, Number(b.dag) || 0));
   if (!d || !KRACHT.includes(k) || dag < 7) return res.status(400).json({ fout: 'niet geldig' });
+  if (d.startsWith('test-')) return res.json({ ok: true, id: 'test', test: true }); // controles komen niet in de echte lijst
   const n = await kv.incr('gf:kr:n:' + DAG() + ':' + d);
   if (n === 1) await kv.raw(['EXPIRE', 'gf:kr:n:' + DAG() + ':' + d, 172800]).catch(() => {});
   if (n > 10) return res.json({ ok: false, grens: true });
@@ -172,6 +173,7 @@ async function krachtHaal(req, res) {
   for (let i = 0; i < 4; i++) {
     const x = pool[Math.floor(Math.random() * pool.length)];
     const door = d ? await kv.get('gf:kr:door:' + x.id).catch(() => null) : null;
+    if (door && String(door).startsWith('test-')) continue; // testberichten nooit tonen
     if (door && String(door) === d && pool.length > 1) continue;
     return res.json({ id: x.id, k: x.k, dag: x.dag, min: Math.max(1, Math.round((Date.now() - x.t) / 60000)) });
   }
