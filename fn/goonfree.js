@@ -4,6 +4,10 @@
 //   POST ?op=inzicht { d, l, ctx:{...zelfde, week:{drang,gehaald,daling,terugval,checkins}} } -> { t }  weekinzicht: 3 korte zinnen, hoogstens 3 per toestel per dag
 //   POST ?op=ev     { d, e, p, os, v, l } -> { ok }  elke stap in de app telt (Clickmind-principe), tellers per dag, unieke toestellen (HyperLogLog)
 //   GET  ?op=stand[&dagen=7][&vorm=tekst]  tellers per dag voor dashboard en rondes
+//   GET  ?op=wij&f=f1..f6  Samen (Henkjan 28 nov 2026: "Kunnen we app zelf ook laten leren en deze feedback in de app meteen terug geven"):
+//        anonieme cijfers van iedereen voor de fase van de gebruiker: hoeveel mensen nu in die fase zitten, hoeveel % met de knop wint
+//        en hoeveel de drang zakt, piekuren, welke plannen het best standhouden, wat het vaakst voor een terugval kwam.
+//        Alleen tellingen (geen tekst); een getal onder MIN gaat niet mee. 10 minuten in kv bewaard zodat het de app nooit vertraagt.
 // Regels (Henkjan 27 nov 2026): 18+, geen advertenties, nooit NoFap of andermans merknamen; de coach noemt geen andere programma's of gemeenschappen.
 // Kosten: hoogstens 60 coachbeurten per toestel per dag en 4.000 per dag in totaal; daarboven een vaste tip zonder AI.
 import { kv } from '../lib/db.js';
@@ -106,6 +110,69 @@ async function inzicht(req, res) {
   }
 }
 
+// Samen: tellingen per fase (f1 dag 1-3, f2 4-7, f3 8-14, f4 15-30, f5 31-66, f6 67+), per uur, per plan en per hulpmiddel.
+const FASEN = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6'];
+const MIN = 20;
+const fase = x => (FASEN.includes(x) ? x : '');
+const sleutel = x => String(x || '').replace(/[^a-z0-9_]/gi, '').slice(0, 20);
+async function telSamen(e, p, d, dag) {
+  const f = fase(p.f), paren = [];
+  if (e === 'fase' && f && d) { await kv.raw(['PFADD', 'gf:fase:' + dag + ':' + f, d]); await kv.raw(['EXPIRE', 'gf:fase:' + dag + ':' + f, TTL]).catch(() => {}); return; }
+  if (e === 'drang_start') { const u = Number(p.uur); if (u >= 0 && u < 24) paren.push(['gf:uur:' + dag + ':' + Math.floor(u), 1]); }
+  if (e === 'drang_uitkomst' && typeof p.gehaald === 'boolean') {
+    const w = p.gehaald ? 1 : 0, voor = Number(p.voor), na = Number(p.na);
+    if (w) paren.push(['gf:w:' + dag + ':all:won', 1]);
+    if (f) {
+      paren.push(['gf:w:' + dag + ':' + f + ':n', 1]); if (w) paren.push(['gf:w:' + dag + ':' + f + ':won', 1]);
+      if (voor >= 1 && voor <= 10 && na >= 1 && na <= 10) { paren.push(['gf:dl:' + dag + ':' + f + ':n', 1], ['gf:dl:' + dag + ':' + f + ':voor', voor], ['gf:dl:' + dag + ':' + f + ':na', na]); }
+    }
+    const plan = sleutel(p.plan); if (plan) { paren.push(['gf:pl:' + dag + ':' + plan + ':n', 1]); if (w) paren.push(['gf:pl:' + dag + ':' + plan + ':won', 1]); }
+  }
+  if (e === 'terugval' && Array.isArray(p.k)) p.k.slice(0, 8).map(sleutel).filter(Boolean).forEach(k => paren.push(['gf:tr:' + dag + ':' + k, 1]));
+  if (!paren.length) return;
+  const r = await kv.incrMany(paren);
+  await Promise.all(paren.map(([k, n], i) => (Number(r[i]) === n ? kv.raw(['EXPIRE', k, TTL]) : null)).filter(Boolean)).catch(() => {});
+}
+
+const PLANNEN = ['night', 'morning', 'alone', 'weekend', 'bed', 'toilet', 'desk', 'social', 'stress', 'bored', 'lonely', 'tired', 'sad', 'horny'];
+async function wij(req, res) {
+  const f = fase(req.query.f) || 'f1', ck = 'gf:wij:' + f;
+  const oud = await kv.get(ck).catch(() => null);
+  if (oud && oud.t > Date.now() - 600000) return res.json(oud);
+  const dagen = [...Array(14)].map((_, i) => new Date(Date.now() - i * 86400000).toISOString().slice(0, 10));
+  const week = dagen.slice(0, 7);
+  const [nu, iedereen] = await Promise.all([
+    kv.raw(['PFCOUNT', 'gf:fase:' + dagen[0] + ':' + f, 'gf:fase:' + dagen[1] + ':' + f]).catch(() => 0),
+    kv.raw(['PFCOUNT', ...FASEN.flatMap(x => ['gf:fase:' + dagen[0] + ':' + x, 'gf:fase:' + dagen[1] + ':' + x])]).catch(() => 0),
+  ]);
+  const ks = [];
+  week.forEach(d => { ks.push('gf:w:' + d + ':' + f + ':n', 'gf:w:' + d + ':' + f + ':won', 'gf:dl:' + d + ':' + f + ':n', 'gf:dl:' + d + ':' + f + ':voor', 'gf:dl:' + d + ':' + f + ':na'); for (let h = 0; h < 24; h++) ks.push('gf:uur:' + d + ':' + h); PLANNEN.forEach(k => ks.push('gf:tr:' + d + ':' + k)); });
+  dagen.forEach(d => PLANNEN.forEach(k => ks.push('gf:pl:' + d + ':' + k + ':n', 'gf:pl:' + d + ':' + k + ':won')));
+  ks.push('gf:w:' + dagen[0] + ':all:won');
+  const v = await kv.mget(...ks), m = {};
+  ks.forEach((k, i) => { m[k] = Number(v[i]) || 0; });
+  const som = fn => week.reduce((a, d) => a + fn(d), 0);
+  const n = som(d => m['gf:w:' + d + ':' + f + ':n']), won = som(d => m['gf:w:' + d + ':' + f + ':won']);
+  const dn = som(d => m['gf:dl:' + d + ':' + f + ':n']);
+  const uren = [...Array(24)].map((_, h) => som(d => m['gf:uur:' + d + ':' + h]));
+  const urenTot = uren.reduce((a, b) => a + b, 0);
+  const plannen = PLANNEN.map(k => { const pn = dagen.reduce((a, d) => a + m['gf:pl:' + d + ':' + k + ':n'], 0), pw = dagen.reduce((a, d) => a + m['gf:pl:' + d + ':' + k + ':won'], 0); return { k, n: pn, pct: pn ? Math.round((pw / pn) * 100) : 0 }; })
+    .filter(x => x.n >= MIN).sort((a, b) => b.pct - a.pct);
+  const trig = PLANNEN.map(k => ({ k, n: som(d => m['gf:tr:' + d + ':' + k]) })).filter(x => x.n >= MIN).sort((a, b) => b.n - a.n).slice(0, 3).map(x => x.k);
+  const vandaag = m['gf:w:' + dagen[0] + ':all:won'];
+  const uit = { t: Date.now(), f };
+  if (Number(nu) >= MIN) uit.nu = Number(nu);
+  if (Number(iedereen) >= MIN) uit.iedereen = Number(iedereen);
+  if (n >= MIN) uit.winPct = Math.round((won / n) * 100);
+  if (dn >= MIN) { uit.voor = Math.round((som(d => m['gf:dl:' + d + ':' + f + ':voor']) / dn) * 10) / 10; uit.na = Math.round((som(d => m['gf:dl:' + d + ':' + f + ':na']) / dn) * 10) / 10; }
+  if (urenTot >= MIN) uit.piek = uren.indexOf(Math.max(...uren));
+  if (plannen.length) uit.plannen = plannen.slice(0, 5);
+  if (trig.length) uit.triggers = trig;
+  if (vandaag >= MIN) uit.vandaag = vandaag;
+  await kv.set(ck, uit, { ex: 900 }).catch(() => {});
+  return res.json(uit);
+}
+
 async function ev(req, res) {
   const b = lijf(req), e = schoon(b.e, 40).replace(/[^a-z0-9_]/gi, ''), d = schoon(b.d, 40), dag = DAG();
   if (!e) return res.status(400).json({ fout: 'geen e' });
@@ -114,6 +181,7 @@ async function ev(req, res) {
   if (n === 1) await kv.raw(['EXPIRE', k, TTL]).catch(() => {});
   if (d) await kv.raw(['PFADD', 'gf:dev:' + dag, d]).then(() => kv.raw(['EXPIRE', 'gf:dev:' + dag, TTL])).catch(() => {});
   if (e === 'drang_uitkomst' && b.p && typeof b.p.gehaald === 'boolean') await kv.incr('gf:ev:' + dag + ':drang_' + (b.p.gehaald ? 'gehaald' : 'verloren')).catch(() => {});
+  if (b.p && typeof b.p === 'object') await telSamen(e, b.p, d, dag).catch(() => {});
   return res.json({ ok: true });
 }
 
@@ -147,6 +215,7 @@ export default async function handler(req, res) {
     if (op === 'coach' && req.method === 'POST') return await coach(req, res);
     if (op === 'ev' && req.method === 'POST') return await ev(req, res);
     if (op === 'inzicht' && req.method === 'POST') return await inzicht(req, res);
+    if (op === 'wij') return await wij(req, res);
     if (op === 'stand') return await stand(req, res);
     if (op === 'gezond') return res.json({ ok: true, app: 'goonfree', v: 1 });
     return res.status(404).json({ fout: 'onbekende op' });
