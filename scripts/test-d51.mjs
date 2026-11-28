@@ -42,4 +42,9 @@ await X.lees(kv3, { ua: 'y' }, { fetchFn: async () => ({ ok: false, status: 403,
 const st = await X.stand(kv3);
 ja(st.fout['403'] === 1 && /403 Resource key/.test(st.laatsteFout || ''), 'fout bewaard en zichtbaar in de stand');
 
+const kv4 = nepKv(); let modi = [];
+const wissel = async (u, o) => { const lic = !!o.headers['X-51D-License-Key']; modi.push(lic ? 'licentie' : 'resource'); return lic ? { ok: true, json: async () => ({ device: { hardwarevendor: 'Apple', hardwaremodel: 'iPhone' } }) } : { ok: false, status: 400, text: async () => 'not a resource key' }; };
+const r4 = await X.lees(kv4, { ua: 'z' }, { fetchFn: wissel, sleutel: 'lic' });
+ja(r4 && r4.v === 'Apple' && modi.join() === 'resource,licentie' && kv4.m.get('mm:d51modus') === 'licentie', 'licentiesleutel in plaats van resource key: tweede manier werkt en wordt onthouden');
+
 console.log(fout ? fout + ' fout' : 'alles ok (' + ok + ')'); process.exit(fout ? 1 : 0);
