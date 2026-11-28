@@ -2,6 +2,8 @@
 // en blijft de vorige versie live. Aanleiding: 21 nov 2026 gaven alle keuzehulpen 30 minuten een 500 (variabele in commentaar geschoven).
 // Traag of geen antwoord binnen 20 s telt niet als fout: alleen echte fouten houden een deploy tegen.
 import fsRem from 'node:fs';
+// Forecasts must stay immutable and must not train on future/current-day outcomes.
+{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-kdp-voorspel.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'KDP-voorspelcontrole mislukt'); process.exit(1); } }
 // Kostenrem (Henkjan 21 nov 2026: "Zorg dat ook nooit meer een nieuwe kan ontstaan"): een los bestand in api/ is een extra Vercel-functie.
 { const los = fsRem.readdirSync(new URL('../api/', import.meta.url)).filter(f => !['[hjdkfn].js', 'hjdk'].includes(f)); if (los.length) { console.error('Build gestopt: los bestand in api/ (hoort in fn/, zie CLAUDE.md Kosten): ' + los.join(', ')); process.exit(1); } }
 // Syntaxcontrole van elk bestand in lib/ en fn/ (22 nov 2026: een apostrof in een tekst in lib/werking.js brak 10 minuten de overdracht;
@@ -34,3 +36,4 @@ for (const [host, url] of PAG) {
   if (!goed) fout++;
 }
 process.exit(fout ? 1 : 0);
+

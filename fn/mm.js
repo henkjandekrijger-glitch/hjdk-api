@@ -500,10 +500,19 @@ export default async function handler(req, res) {
       res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(t.tekst); }
     if (op === 'oversight') { // Oversight (Henkjan 26 nov 2026): dagelijkse zoekwoordencheck op alle Amazon Ads-campagnes, zodat we nooit aan bleeders uitgeven; kort adres /oversight
       const O = await import('../lib/oversight.js'); res.setHeader('cache-control', 'no-store');
+      // Forecast cron only with the real cron secret. Account data and manual runs retain the existing protected host gate.
+      const forecastCron = !!process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET;
+      if ((q('voorspel') || q('voorspelcheck')) && forecastCron && req.method === 'GET') {
+        const V = await import('../lib/kdp-voorspel.js');
+        if (q('voorspelcheck')) { const s = await V.voorspelStand(kv); const check = { t: new Date().toISOString(), ok: !!s && !s.oud && s.status === 'ok', dag: s?.dag || null, alarmen: s?.alarmen || ['Voorspelling ontbreekt'] }; await kv.set('kdp:voorspel:controle', check); return res.status(200).json(check); }
+        const s = await V.voorspelRonde(kv); return res.status(200).json({ ok: s.status === 'ok', dag: s.dag, status: s.status, alarmen: s.alarmen });
+      }
       if (req.method === 'POST' && !beschermd(req)) { const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
         const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); if (!given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
         const b = leesJson(req.body) || {}; const u = await O.zetOversight(kv, b, b.wie || 'cloud'); return res.status(u.ok ? 200 : 400).json(u); }
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      if (q('voorspeldata')) { const V = await import('../lib/kdp-voorspel.js'); return res.status(200).json(await V.leesVoorspelData(kv)); }
+      if (q('voorspel')) { const V = await import('../lib/kdp-voorspel.js'); const s = await V.voorspelRonde(kv); return res.status(200).json(s); }
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; const u = await O.zetOversight(kv, b, b.wie || ''); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b ? await O.zetOversight(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON>, zie ?vorm=tekst' }; return res.status(u.ok ? 200 : 400).json(u); }
       const s = await O.ovStand(kv, 14); s.bezoek = await O.ovBezoek(kv, 14).catch(() => null);
@@ -1354,3 +1363,4 @@ async function modalKnop(req, res, q) {
     + '</main></body></html>';
   res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(html);
 }
+

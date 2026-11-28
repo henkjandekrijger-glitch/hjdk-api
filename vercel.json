@@ -1,6 +1,14 @@
 {
   "crons": [
     {
+      "path": "/api/mm/oversight?voorspel=1",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/mm/oversight?voorspelcheck=1",
+      "schedule": "5 * * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=intentie&op=chatanalyse&ronde=1",
       "schedule": "17 6 * * *"
     },
@@ -3681,3 +3689,4 @@
     }
   ]
 }
+
