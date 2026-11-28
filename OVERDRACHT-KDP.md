@@ -13,6 +13,13 @@ Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na 
 
 **Afsluiten, altijd (Henkjan 27 nov 2026: "Ok zet op nexy.now/o en blijf dat doen ."):** elke ronde en elke chat die KDP-werk afrondt zet "Boeken vandaag" bovenaan Oversight bij (nexy.now/o stuurt daarheen): `https://hjdk-api-henq.vercel.app/oversight?zet={"kdp":{...}}` met verkoop van vandaag per boek (KDP Reports, Dashboard, Today), gedaan, wacht en volgende. Vorm en voorbeeld: kdp/rapport.md, STATUS OP NEXY.NOW/O, en `/oversight?vorm=tekst` bovenaan. Ouder dan 10 uur staat onder Opvallend op het dashboard.
 
+**Tokens zuinig, rondes (28 nov 2026, Henkjan: "Staat aan op imac maar bijna door tokens heen"):** de rondes op de iMac draaiden 27 nov 07:00 UTC tot 28 nov 13:00 UTC niet omdat dat account door zijn tokens was. Daarom, tot Henkjan anders zegt:
+- Ronde A (06:20 UTC) is de enige volle ronde: verkoop gisteren definitief (Royalties Estimator, datum in het veld typen, en Dashboard op "Yesterday"), kasboek, oordelen van vandaag uit sectie 0, bleedercheck, Oversight.
+- Ronde C (17:20 UTC) doet alleen: KDP Dashboard "Today" lezen, Oversight "Boeken vandaag" bijwerken, boekenplank-status van boeken in review. Geen wijzigingen, behalve een taak die in sectie 0 met de naam ronde C staat.
+- Ronde B (12:20 UTC) en D (22:20 UTC) stoppen meteen na het lezen van dit blok (geen log, geen bericht), tenzij sectie 0 een taak met hun naam heeft.
+- Lees met get_page_text en javascript_tool, niet met schermafbeeldingen. De bleedercheck gaat het snelst via Campaign manager > kaart "Review low-performing targets" > "View targeting data" (alle landen, kliks zonder verkoop, 14 dagen; de kolom Status toont daar ten onrechte "Not delivering").
+- Valkuil: het KDP-dashboard onthoudt de tab "Yesterday". Kijk welke tab onderstreept is voordat je "Today" meldt (27 nov meldde een chat $54,94 voor vandaag; dat was 26 nov).
+
 **Wat kan waar.**
 | Wat | Cloud-chat (claude.ai/code, deze repo) | Ronde met Chrome (Henkjans Mac, Claude in Chrome) |
 |---|---|---|
