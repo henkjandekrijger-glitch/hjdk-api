@@ -519,6 +519,12 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(s);
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(O.ovTekst(s) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(O.ovHtml(s, CSS)); }
+    if (op === 'verder') { // hnkjn.me: per project een chat waar Henkjan nu verder moet (28 nov 2026, lib/verder.js); openbaar, zonder vragen of cijfers
+      const D = await import('../lib/dashboard.js'), V = await import('../lib/verder.js'); const d = await D.dashData(kv, {});
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
+      if (q('chat')) { const p = (d.projecten || []).find(x => x.id === String(q('chat')).toLowerCase()); return p ? res.redirect(302, V.link(p)) : res.redirect(302, '/'); }
+      if (q('vorm') === 'tekst' || /^(curl|python|node|go-http)/i.test(String(req.headers['user-agent'] || ''))) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.verderTekst(d)); }
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(V.verderHtml(d)); }
     if (op === 'adsfair') { const A = await import('../lib/adsfair.js'); return A.adsfairHandler(req, res, kv, { beschermd, q, leesJson }); } // adsfair.xyz: pagina, weekupdate en goedkeuring (27 nov 2026, lib/adsfair.js)
     if (op === 'dashboard') { // dashboard voor alle projecten (Henkjan 25 nov 2026): doel, voortgang, planning, overdracht en logboek per project; ?zet=<JSON> werkt bij, ?vorm=json|tekst, ?project=<id>
       if (req.method === 'POST' && !beschermd(req)) { // projecten zetten hun eigen voortgang bij vanuit de cloud (Henkjan 25 nov: "onafh comp en account"): alleen zet, met de gedeelde team-sleutel

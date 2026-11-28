@@ -379,6 +379,36 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "/api/mm?op=verder"
+    },
+    {
+      "source": "/tekst",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "/api/mm?op=verder&vorm=tekst"
+    },
+    {
+      "source": "/c/:id([a-z0-9-]{2,30})",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "/api/mm?op=verder&chat=:id"
+    },
+    {
       "source": "/robots.txt",
       "has": [
         {
@@ -3689,4 +3719,3 @@
     }
   ]
 }
-
