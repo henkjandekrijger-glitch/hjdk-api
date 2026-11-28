@@ -1386,6 +1386,11 @@ export default async function handler(req, res) {
         try { await KN.stuurMails([{ to: [x.m], subject: m.onderwerp, html: KN.mailSchil(m), headers: MT.lijstKop(cfg, x.s.af) }], 'win-uitslag-' + dag + '-' + x.id); n++; } catch (e) { fout.push(String(e && e.message || e).slice(0, 80)); await kv.raw(['DEL', 'kd:win:uitslag:' + dag + ':' + x.id]).catch(() => {}); } }
       if (n) { for (const k of ['sh-win-uitslag', 'sh-win-uitslag-' + dag]) await kv.raw(['INCRBY', 'c:' + k, String(n)]).catch(() => {}); } return res.status(200).json({ ok: true, dag, verstuurd: n, fouten: fout.slice(0, 5) }); }
     if (op === 'winvoorwaarden') { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 's-maxage=3600'); return res.status(200).send(KW.voorwaardenPagina()); }
+    if (op === 'zegelcamp') { // 28 nov 2026 (Henkjan: "adressen campagne die start iedere dag opnieuw vers"): de dagkopie zet een nieuwe zegelcampagne hier in kd:zegel:camps, anders landt hij op de winactie. Alleen beschermde host. ?id=<campagne> (&weg=1 haalt hem eruit)
+      const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
+      res.setHeader('cache-control', 'no-store'); const id = String(url.searchParams.get('id') || ''); if (id && !/^\d{5,10}$/.test(id)) return res.status(400).json({ ok: false, fout: 'id is geen campagnenummer' });
+      if (id) await kv.raw([url.searchParams.get('weg') === '1' ? 'SREM' : 'SADD', 'kd:zegel:camps', id]);
+      const lijst = await kv.raw(['SMEMBERS', 'kd:zegel:camps']).catch(() => []); return res.status(200).json({ ok: true, vast: ZEGEL_CAMPS, kv: Array.isArray(lijst) ? lijst : [] }); }
     if (op === 'winstand' || op === 'winloting') { // stand en trekking van de winactie, alleen via de beschermde vercel.app-host
       const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
       res.setHeader('cache-control', 'no-store'); const dag = /^\d{4}-\d{2}-\d{2}$/.test(String(url.searchParams.get('dag') || '')) ? url.searchParams.get('dag') : KW.trekking();
