@@ -1094,6 +1094,26 @@
           "status": "gepland",
           "link": "https://kadoly.com/product/oc_4251974379864065?lang=nl&utm_source=pinterest&utm_medium=video&utm_campaign=v-n261127a"
         }
+      },
+      "gemeten": {
+        "dag": "2026-11-28",
+        "youtube": {
+          "weergaven": 238,
+          "likes": 1,
+          "reacties": 1
+        },
+        "tiktok": {
+          "weergaven": 111,
+          "likes": 3
+        },
+        "instagram": {
+          "weergaven": 2,
+          "bereik": 2
+        },
+        "cm": {
+          "kliks": 3,
+          "echt": 1
+        }
       }
     },
     {
@@ -1137,6 +1157,26 @@
           "tijdvak": "21:00",
           "status": "gepland",
           "link": "https://kadoly.com/product/oc_4173958207569921?lang=nl&utm_source=pinterest&utm_medium=video&utm_campaign=v-n261127b"
+        }
+      },
+      "gemeten": {
+        "dag": "2026-11-28",
+        "youtube": {
+          "weergaven": 71,
+          "reacties": 1
+        },
+        "tiktok": {
+          "weergaven": 68,
+          "likes": 1
+        },
+        "instagram": {
+          "weergaven": 7,
+          "bereik": 4,
+          "likes": 1
+        },
+        "cm": {
+          "kliks": 3,
+          "echt": 1
         }
       }
     },
@@ -1300,6 +1340,78 @@
           "status": "gepland"
         }
       }
+    },
+    {
+      "id": "n261128a",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261128a.mp4",
+      "pids": [
+        "oc_4251974857670657",
+        "oc_4251974253150209",
+        "oc_4251972637540353"
+      ],
+      "bron": "kadoly-video",
+      "tekst": "3 favorieten van LanLivia. Welke kies jij?\n\nTik op de link in ons profiel.\n\n#kadoly #sieraden",
+      "tiktok_tekst": "3 favorieten van LanLivia. Welke kies jij? Tik op de link in ons profiel. #kadoly #sieraden",
+      "gepost": "2026-11-28",
+      "platforms": {
+        "tiktok": {
+          "zernio_id": "6b0a946d342c35106ed68927",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "instagram": {
+          "zernio_id": "6b0a946d342c35106ed68927",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "youtube": {
+          "zernio_id": "6b0a946d342c35106ed68927",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/n4ctq",
+          "account_id": "6b0a2ad7553d38831e909d2b"
+        },
+        "facebook": {
+          "zernio_id": "6b0a946d342c35106ed68927",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://go.kadoly.com/o/8qrmd"
+        },
+        "pinterest": {
+          "zernio_id": "6b0a946d342c35106ed68927",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "https://kadoly.com/product/oc_4251974857670657?lang=nl&utm_source=pinterest&utm_medium=video&utm_campaign=v-n261128a",
+          "trend": "stapelen"
+        }
+      }
+    },
+    {
+      "id": "n261128b",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261128b.mp4",
+      "pids": [
+        "oc_4174003491749889",
+        "oc_4173958902349825",
+        "oc_4173958171394049"
+      ],
+      "tekst": "3 finds voor je planten. Welke kies jij?\n\nTik op de link in ons profiel.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Tik op de link in ons profiel. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261128c",
+      "soort": "verlanglijst",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261128c.mp4",
+      "pids": [
+        "oc_4174002171150339",
+        "oc_4173959230275585",
+        "oc_4173959225884673"
+      ],
+      "tekst": "Mijn verlanglijst voor Sinterklaas. Wat staat op die van jou?\n\nTik op de link in ons profiel.\n\n#kadoly #verlichting #wooninspiratie #interieur #homedecor #verlanglijst",
+      "tiktok_tekst": "Mijn verlanglijst voor Sinterklaas. Wat staat op die van jou? Tik op de link in ons profiel. #kadoly #verlichting #wooninspiratie #interieur #homedecor #verlanglijst",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -1349,7 +1461,8 @@
       "2026-11-26: 08:30 al voorbij (ronde 09:44 NL), dus 2 op Instagram: 15:30 n261126a (finds, tafel; past bij kerstdiner) en 21:00 n261126c (set, GLAM & GLORY sieraden; set is de beste soort: n261124b Green-goose 4 echt, 1 mandje, 12 IG-weergaven, en 21:00 geeft de meeste weergaven). Facebook nog verlopen, YouTube niet gekoppeld. IG-weergaven 25 nov laag: n261125a 7, n261125b 4. 3 nieuwe video's uit kadoly-video toegevoegd.",
       "2026-11-26: Henkjan: '4 platformen iedere dag mix van nuttig en gewoon product hq vids kort . Altijd links en CTAs niks intypen'. Soort uitleg erbij (1 per dag, kadoly/video-uitleg.md), TikTok en Pinterest erbij, 'zoek op' eruit: biolink toont de video-producten.",
       "2026-11-26: Henkjan: 19:30 NL voor alle platforms is 'niet ideale tijd'. Uitlegvideo's per platform: YouTube 18:00, Instagram 20:30, TikTok 21:00, Pinterest 21:30 NL; schuift elke zondag op Clickmind-kliks per 1000 weergaven.",
-      "2026-11-27: eerste dag op 5 platforms (IG, FB weer gezond, TikTok, YouTube, Pinterest-videopin). 08:30 al voorbij (ronde 09:45 NL), dus 2 per platform: 15:30 n261127a (kleurkeuze, LanLivia lapis lazuli) en 21:00 n261127b (set, Soeji; set blijft de beste soort: n261124b 4 echt en 1 mandje). Uitlegvideo led-kaarsen 26 nov: TikTok 73 weergaven tegen IG 9 en YT 9, TikTok geeft verreweg het meeste bereik. IG productreels 26 nov 4 tot 7 weergaven. Pinterest meldt 0 voor alle pins; vermoedelijk nog niet gesynct, niet als 0 vastgelegd. CTA's 'zoek op' vervangen door 'Tik op de link in ons profiel' (TT/IG) en korte Clickmind-links (YT/FB)."
+      "2026-11-27: eerste dag op 5 platforms (IG, FB weer gezond, TikTok, YouTube, Pinterest-videopin). 08:30 al voorbij (ronde 09:45 NL), dus 2 per platform: 15:30 n261127a (kleurkeuze, LanLivia lapis lazuli) en 21:00 n261127b (set, Soeji; set blijft de beste soort: n261124b 4 echt en 1 mandje). Uitlegvideo led-kaarsen 26 nov: TikTok 73 weergaven tegen IG 9 en YT 9, TikTok geeft verreweg het meeste bereik. IG productreels 26 nov 4 tot 7 weergaven. Pinterest meldt 0 voor alle pins; vermoedelijk nog niet gesynct, niet als 0 vastgelegd. CTA's 'zoek op' vervangen door 'Tik op de link in ons profiel' (TT/IG) en korte Clickmind-links (YT/FB).",
+      "2026-11-28: 08:30 al voorbij (ronde 09:45 NL); de AW-shorts staan al op 12:15 en 19:45 op TT/IG/YT/Pin, dus 1 erbij om 15:30: n261128a (set, LanLivia sieraden; set blijft de beste soort) op 5 platforms incl. Facebook, YouTube op het eigen kanaal Kadoly. Gisteren: YouTube 309 weergaven (lapis kleurkeuze 238), TikTok 179, Instagram 9, Facebook en Pinterest-video nog geen cijfers. YouTube en TikTok geven 20 tot 30 keer meer weergaven dan Instagram."
     ],
     "uitleg_tijd": {
       "youtube": "18:00",

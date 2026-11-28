@@ -7,7 +7,7 @@
       "pagina_id": "61596079596846",
       "account_id": "6afafaf7446856cecd87324f",
       "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)",
-      "status": "2026-11-27: healthy, canPost, needsReconnect false"
+      "status": "2026-11-28: healthy, canPost, needsReconnect false"
     },
     "instagram": {
       "handle": "kadoly.shop",
@@ -726,7 +726,10 @@
       "zernio_id": "6b069fd5fd27defb6986ecd3",
       "status": "gepland",
       "bord": "Cadeau-ideeën",
-      "code": "pin-1125-mandje"
+      "code": "pin-1125-mandje",
+      "vertoningen": 61,
+      "bewaard": 1,
+      "gemeten": "2026-11-28"
     },
     {
       "tijd": "2026-11-25T14:00:00Z",
@@ -739,7 +742,11 @@
       "zernio_id": "6b069fd69a384db5babfb86e",
       "status": "gepland",
       "bord": "Wonen en decoratie",
-      "code": "pin-1125-wonen"
+      "code": "pin-1125-wonen",
+      "vertoningen": 7,
+      "bewaard": 1,
+      "klikken": 1,
+      "gemeten": "2026-11-28"
     },
     {
       "tijd": "2026-11-25T18:45:00Z",
@@ -752,7 +759,9 @@
       "zernio_id": "6b069fd6fd27defb6986ecec",
       "status": "gepland",
       "bord": "Wonen en decoratie",
-      "code": "pin-1125-nieuw"
+      "code": "pin-1125-nieuw",
+      "vertoningen": 2,
+      "gemeten": "2026-11-28"
     },
     {
       "tijd": "2026-11-26T10:00:00Z",
@@ -765,7 +774,10 @@
       "zernio_id": "6b07f17b1b7a9e6f7bde1fcd",
       "status": "gepland",
       "bord": "Sieraden",
-      "code": "pin-1126-sieraad"
+      "code": "pin-1126-sieraad",
+      "vertoningen": 2,
+      "bewaard": 1,
+      "gemeten": "2026-11-28"
     },
     {
       "tijd": "2026-11-26T14:00:00Z",
@@ -778,7 +790,10 @@
       "zernio_id": "6b07f17c1b7a9e6f7bde1fd3",
       "status": "gepland",
       "bord": "Cadeau-ideeën",
-      "code": "pin-1126-mandje"
+      "code": "pin-1126-mandje",
+      "vertoningen": 22,
+      "bewaard": 1,
+      "gemeten": "2026-11-28"
     },
     {
       "tijd": "2026-11-26T18:45:00Z",
@@ -899,6 +914,86 @@
       "status": "gepland",
       "bord": "Sieraden",
       "code": "pin-1127-sieraad2"
+    },
+    {
+      "tijd": "2026-11-28T09:30:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4254790057590785",
+      "tijdvak": "10:30",
+      "via": "zernio",
+      "zernio_id": "6b0a9435bb1a486b600ef155",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1128-sieraad"
+    },
+    {
+      "tijd": "2026-11-28T12:45:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "haak",
+      "pid": "oc_4173959218839553",
+      "tijdvak": "13:45",
+      "via": "zernio",
+      "zernio_id": "6b0a9446bb1a486b600ef1b7",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1128-vragen",
+      "haak": "n vragen"
+    },
+    {
+      "tijd": "2026-11-28T16:00:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "mandje",
+      "pid": "oc_4173959354744833",
+      "tijdvak": "17:00",
+      "via": "zernio",
+      "zernio_id": "6b0a9447b6be7939f61efead",
+      "status": "gepland",
+      "bord": "Cadeau-ideeën",
+      "code": "pin-1128-mandje"
+    },
+    {
+      "tijd": "2026-11-28T17:15:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "haak",
+      "pid": "oc_4174003395198977",
+      "tijdvak": "18:15",
+      "via": "zernio",
+      "zernio_id": "6b0a9447b6be7939f61efeb3",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1128-uitdaging",
+      "haak": "uitdaging"
+    },
+    {
+      "tijd": "2026-11-28T20:00:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "wonen",
+      "pid": "oc_4174003417645057",
+      "tijdvak": "21:00",
+      "via": "zernio",
+      "zernio_id": "6b0a9448b6be7939f61efec4",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1128-wonen"
+    },
+    {
+      "tijd": "2026-11-28T21:15:00Z",
+      "dag": "2026-11-28",
+      "platform": "pinterest",
+      "soort": "nieuw",
+      "pid": "oc_4251973775228929",
+      "tijdvak": "22:15",
+      "via": "zernio",
+      "zernio_id": "6b0a9448342c35106ed68879",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1128-nieuw"
     }
   ]
 }
