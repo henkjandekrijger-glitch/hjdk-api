@@ -35,10 +35,13 @@
     "seoTitel": "NS geld terug bij vertraging: betaalpas en OV-kaart | WAM",
     "titel": "Kies de aanvraagroute voor jouw vervoerbewijs",
     "anker": "aanvragen",
-    "bijgewerkt": "2026-11-24",
+    "bijgewerkt": "2026-11-28",
     "kort": "Met je betaalpas gereisd? Gebruik het NS-formulier voor vertraging. Met een OV-chipkaart kan het ook via Mijn NS.",
     "antwoord": "Voor een reis met je contactloze betaalpas, creditcard, telefoon of smartwatch verwijst NS naar het online vertragingsformulier. Voor de gewone NS-regeling geldt vanaf 30 minuten vertraging op je bestemming een aanvraagtermijn van drie maanden. De vergoeding hangt af van je vervoerbewijs en de voorwaarden.",
-    "actie": {"naam": "Naar het NS-aanvraagformulier", "url": "https://gtbv-formulier.ns.nl/"},
+    "actie": {
+      "naam": "Naar het NS-aanvraagformulier",
+      "url": "https://gtbv-formulier.ns.nl/"
+    },
     "stappenTitel": "Leg de juiste reisgegevens klaar",
     "stappen": [
       "Noteer je reisdatum, vertrek- en aankomststation en de vertraging op je bestemming. Controleer je check-in en check-uit.",
@@ -47,22 +50,67 @@
       "Heb je een maand na je aanvraag nog niets gehoord? De NS-servicepagina verwijst dan naar de klantenservice. Houd je aanvraag en ontvangstbevestiging bij de hand."
     ],
     "routes": [
-      {"situatie": "Betaalpas, creditcard, telefoon of smartwatch", "route": "Online formulier van NS", "url": "https://gtbv-formulier.ns.nl/"},
-      {"situatie": "OV-chipkaart of OV-pas", "route": "Mijn NS; zonder account het online formulier", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"},
-      {"situatie": "NS-Business Card", "route": "Mijn NS Zakelijk, bij je gemaakte reizen", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"},
-      {"situatie": "Internationaal vervoerbewijs of internationale reis", "route": "De aparte procedure van NS International", "url": "https://www.nsinternational.com/nl/na-de-reis/geld-terug-vragen"}
+      {
+        "situatie": "Betaalpas, creditcard, telefoon of smartwatch",
+        "route": "Online formulier van NS",
+        "url": "https://gtbv-formulier.ns.nl/"
+      },
+      {
+        "situatie": "OV-chipkaart of OV-pas",
+        "route": "Mijn NS; zonder account het online formulier",
+        "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"
+      },
+      {
+        "situatie": "NS-Business Card",
+        "route": "Mijn NS Zakelijk, bij je gemaakte reizen",
+        "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"
+      },
+      {
+        "situatie": "Internationaal vervoerbewijs of internationale reis",
+        "route": "De aparte procedure van NS International",
+        "url": "https://www.nsinternational.com/nl/na-de-reis/geld-terug-vragen"
+      }
     ],
     "noot": "De gewone drempel is 30 minuten. Op de hogesnelheidslijn noemt NS een aparte regeling vanaf 15 minuten. NS noemt ook uitzonderingen, waaronder een vergoeding onder €2,30 en vooraf aangekondigde extra reistijd. Controleer de actuele voorwaarden voor jouw reis.",
     "bronnen": [
-      {"naam": "NS: geld terug bij vertraging", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging", "uitleg": "Aanvraagroutes per vervoerbewijs, termijn van drie maanden en opvolging van je aanvraag."},
-      {"naam": "NS: voorwaarden van de vertragingsregeling", "url": "https://www.ns.nl/binaries/_ht_1754559946332/content/assets/ns-nl/voorwaarden/voorwaarden-geld-terug-bij-vertraging.pdf", "uitleg": "Drempel op de bestemming, geldigheid van het vervoerbewijs en voorwaarden voor restitutie."},
-      {"naam": "NS: welke vergoeding biedt NS?", "url": "https://www.ns.nl/service-en-contact/geld-terug/welke-vergoeding-biedt-ns", "uitleg": "De hoogte van de vergoeding verschilt per vervoerbewijs en vertragingsduur."}
+      {
+        "naam": "NS: geld terug bij vertraging",
+        "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging",
+        "uitleg": "Aanvraagroutes per vervoerbewijs, termijn van drie maanden en opvolging van je aanvraag."
+      },
+      {
+        "naam": "NS: veelgestelde vragen over werk aan het spoor",
+        "url": "https://www.ns.nl/service-en-contact/veelgestelde-vragen-over-werk-aan-het-spoor",
+        "uitleg": "Vergelijking met de aangepaste dienstregeling bij geplande werkzaamheden. De oude PDF-bron gaf bij controle op 28 november een 404; de actuele uitleg is hier en via de hoofdservicepagina te lezen."
+      },
+      {
+        "naam": "NS: welke vergoeding biedt NS?",
+        "url": "https://www.ns.nl/service-en-contact/geld-terug/welke-vergoeding-biedt-ns",
+        "uitleg": "De hoogte van de vergoeding verschilt per vervoerbewijs en vertragingsduur."
+      }
     ],
     "vragen": [
-      {"vraag": "Hoe vraag ik geld terug bij NS-vertraging als ik met mijn betaalpas reisde?", "antwoord": "Gebruik het online formulier Geld terug bij vertraging van NS. Die route geldt ook voor een creditcard, telefoon of smartwatch. Dien de aanvraag binnen drie maanden na de reis in en controleer de voorwaarden voor jouw vervoerbewijs."},
-      {"vraag": "Is 30 minuten vertraging altijd genoeg voor geld terug?", "antwoord": "De gewone NS-regeling begint bij 30 minuten vertraging op de bestemming. Er gelden voorwaarden en uitzonderingen. Voor de hogesnelheidslijn noemt NS een aparte regeling vanaf 15 minuten; internationale reizen hebben een eigen route."},
-      {"vraag": "Hoeveel geld krijg ik terug bij een NS-vertraging?", "antwoord": "Dat hangt af van je vervoerbewijs, abonnement en vertragingsduur. Controleer de actuele vergoedingentabel van NS. Een los kaartje, abonnement en internationale reis hebben niet automatisch dezelfde vergoeding."}
-    ]
+      {
+        "vraag": "Hoe vraag ik geld terug bij NS-vertraging als ik met mijn betaalpas reisde?",
+        "antwoord": "Gebruik het online formulier Geld terug bij vertraging van NS. Die route geldt ook voor een creditcard, telefoon of smartwatch. Dien de aanvraag binnen drie maanden na de reis in en controleer de voorwaarden voor jouw vervoerbewijs."
+      },
+      {
+        "vraag": "Is 30 minuten vertraging altijd genoeg voor geld terug?",
+        "antwoord": "De gewone NS-regeling begint bij 30 minuten vertraging op de bestemming. Er gelden voorwaarden en uitzonderingen. Voor de hogesnelheidslijn noemt NS een aparte regeling vanaf 15 minuten; internationale reizen hebben een eigen route."
+      },
+      {
+        "vraag": "Hoeveel geld krijg ik terug bij een NS-vertraging?",
+        "antwoord": "Dat hangt af van je vervoerbewijs, abonnement en vertragingsduur. Controleer de actuele vergoedingentabel van NS. Een los kaartje, abonnement en internationale reis hebben niet automatisch dezelfde vergoeding."
+      },
+      {
+        "vraag": "Krijg ik geld terug van NS bij geplande werkzaamheden?",
+        "antwoord": "De vooraf geplande langere reistijd geeft volgens NS geen vergoeding. Extra vertraging ten opzichte van de aangepaste Reisplanner kan wel voor een aanvraag meetellen: bij de gewone regeling vanaf 30 minuten. Voor de hogesnelheidslijn en internationale reizen gelden aparte regelingen."
+      }
+    ],
+    "extra": {
+      "kop": "Werkzaamheden: vergelijk met de aangepaste dienstregeling",
+      "tekst": "Vooraf geplande extra reistijd telt volgens NS niet als vertraging voor deze regeling. Bij extra vertraging vergelijk je de aankomst met de aangepaste Reisplanner, niet met de reistijd op een gewone dag. Rekenvoorbeeld, geen echte melding: normaal aankomst 11.00 uur, aangepaste planning 11.20 uur, werkelijk 11.45 uur. Dan is de extra vertraging 25 minuten, niet 45. Bij aankomst om 11.55 uur is dat 35 minuten. Bij de gewone regeling kun je vanaf 30 minuten extra vertraging een aanvraag doen; de overige voorwaarden blijven gelden. Bewaar het reisadvies en je werkelijke aankomsttijd."
+    }
   },
   "flanderijn": {
     "kop": "Brief van Flanderijn ontvangen?",

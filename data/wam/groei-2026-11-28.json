@@ -1,0 +1,183 @@
+{
+  "dag": "2026-11-28",
+  "tijdzone": "America/Curacao",
+  "doel": {
+    "datum": "2026-12-31",
+    "organischPerDag": 1000
+  },
+  "dagen": [
+    {
+      "dag": "2026-11-21",
+      "volledig": false,
+      "bezoeken": 26,
+      "paginaWeergaven": 28,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 26,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-22",
+      "volledig": false,
+      "bezoeken": 14,
+      "paginaWeergaven": 16,
+      "botWeergaven": 0,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 14,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-23",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 13,
+      "botWeergaven": 1,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-24",
+      "volledig": false,
+      "bezoeken": 12,
+      "paginaWeergaven": 12,
+      "botWeergaven": 14,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 12,
+        "verwijzing": 0,
+        "directOnbekend": 0,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {}
+    },
+    {
+      "dag": "2026-11-25",
+      "volledig": true,
+      "bezoeken": 315,
+      "paginaWeergaven": 482,
+      "botWeergaven": 125,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 310,
+        "verwijzing": 1,
+        "directOnbekend": 4,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "modal|samen": 1
+      }
+    },
+    {
+      "dag": "2026-11-26",
+      "volledig": true,
+      "bezoeken": 675,
+      "paginaWeergaven": 1150,
+      "botWeergaven": 257,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 662,
+        "verwijzing": 7,
+        "directOnbekend": 6,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "ikook|a": 1,
+        "leger|lknop-b": 2,
+        "leger|nee-blendle": 1
+      }
+    },
+    {
+      "dag": "2026-11-27",
+      "volledig": true,
+      "bezoeken": 166,
+      "paginaWeergaven": 204,
+      "botWeergaven": 145,
+      "perKanaal": {
+        "organisch": 0,
+        "ai": 0,
+        "betaald": 0,
+        "campagneOnbekend": 161,
+        "verwijzing": 4,
+        "directOnbekend": 1,
+        "internOnbekend": 0
+      },
+      "aanmeldingen": {
+        "vast|a": 1
+      }
+    }
+  ],
+  "dekking": {
+    "volledigeDagen": 3,
+    "weekdagen": 7,
+    "weekTotaal": null,
+    "bezoekenVolledigeDagen": 1156,
+    "aanmeldingenVolledigeDagen": 6,
+    "gemiddeldeOrganischVolledigeDagen": 0
+  },
+  "gsc": {
+    "datum": "2026-11-28",
+    "bekeken": 33,
+    "geindexeerd": 5,
+    "vorigeDag": 2,
+    "ontdektNietGeindexeerd": 22,
+    "onbekend": 6,
+    "ns": "ontdekt, niet geïndexeerd",
+    "klikken": null,
+    "vertoningen": null
+  },
+  "ai": {
+    "naam": "wam-ns-20261128",
+    "model": "perplexity/sonar",
+    "vragen": 1,
+    "gelukt": 1,
+    "conclusie": "basisantwoord bruikbaar, geen groot AI-gat"
+  },
+  "aanmelden": {
+    "gisterenVast": 1,
+    "gisterenModal": 0,
+    "organischeRatio": null,
+    "proefRonde": 4,
+    "aGezien": 149,
+    "bGezien": 138,
+    "bAanmeldingen": 1,
+    "besluit": "geen winnaar"
+  },
+  "afweging": [
+    "Nieuw artikel over synoniem: geen afzonderlijke vraag, onnodige URL",
+    "Bestaande NS-pagina verdiepen en dode bron herstellen: gekozen, klein en direct controleerbaar",
+    "Meer verspreiding: geen berichten plaatsen binnen dit mandaat; bestaand WAM-kanaal niet dupliceren"
+  ],
+  "bronnen": [
+    "https://www.ns.nl/service-en-contact/veelgestelde-vragen-over-werk-aan-het-spoor",
+    "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"
+  ],
+  "volgendeControle": "2026-12-01"
+}
