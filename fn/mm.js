@@ -278,6 +278,7 @@ export default async function handler(req, res) {
         const cr = await C.ronde({ dag: q('dag'), alleen: q('alleen') || undefined });
         /* het geheugen loopt mee met deze cron (lib/paspoort.js): alle creatives, posts, video's en mails opnieuw inladen en oordelen */
         if (isCron && !q('alleen')) cr.geheugen = await import('../lib/paspoort.js').then(P => P.ronde({})).then(g => ({ stukken: g.stukken, nieuw: g.nieuw, raak: g.raak, mis: g.mis, fouten: g.fouten })).catch(e => ({ fout: String(e && e.message || e).slice(0, 160) }));
+        if (isCron && !q('alleen')) cr.labelwacht = await C.labelWacht(); /* werklijst labels: open > 0 zonder open labeltaak = één lichte taak per dag (lib/cmcamp.js labelWacht) */
         return res.status(200).json(cr);
       }
       if (q('leg')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); return res.status(200).json(await C.leg(q('leg'))); } // netwerk met de sleutel elders: data/camp-historie/<net>.json inleggen

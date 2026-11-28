@@ -121,4 +121,19 @@ u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, reden: 'onduidelijk'
 u = await T.zetTaken(kv, { pak: { account: 'claude-2', max: 3, id: nid } }, '', n0 + 4 * uur); // vier uur later: claude-1 is stil, alleen claude-2 pakt nog op
 u = await T.zetTaken(kv, { taakzet: { id: nid, terug: true, niet: true, reden: 'geen browser met inlog' } }, '', n0 + 4 * uur + 1); nx = await vind(nid, n0 + 4 * uur + 1);
 ok(nx.status === 'jij' && nx.soort === 'handeling', 'niet: het andere account is stil, dus meteen bij Henkjan');
+// 13. terug met "nietVoor": te vroeg. Tot dat tijdstip pakt geen account de taak op; daarna weer gewoon. Pak met een id gaat erlangs.
+const v0 = n0 + 6 * uur, straks = new Date(v0 + 12 * uur).toISOString();
+const pakAlles = async (a, t) => { const ids = []; for (let i = 0; i < 20; i++) { const r = await T.zetTaken(kv, { pak: { account: a, max: 3 } }, '', t + i); if (!r.taken.length) break; ids.push(...r.taken.map(x => x.id)); } return ids; };
+u = await T.zetTaken(kv, { taak: { tekst: 'Vervolg dat pas morgenmiddag kan', project: 'kadoly', zwaarte: 'licht' } }, 'kadoly-chat', v0); const vid = u.taak;
+u = await T.zetTaken(kv, { pak: { account: 'claude-2', max: 1, id: vid } }, '', v0 + 1); ok(u.taken.length === 1, 'nietVoor: claude-2 pakt');
+u = await T.zetTaken(kv, { taakzet: { id: vid, terug: true, reden: 'te vroeg', nietVoor: straks } }, '', v0 + 2); nx = await vind(vid, v0 + 2);
+ok(u.ok && u.nietVoor === straks && nx.status === 'wacht' && nx.nietVoor === straks && /niet voor \d{4}-\d\d-\d\d \d\d:\d\d UTC/.test(T.takenTekst(await T.leesTaken(kv, v0 + 2), 'claude-1', d0)), 'nietVoor: terug in de lijst met het tijdstip');
+ok(!(await pakAlles('claude-1', v0 + 3 * uur)).includes(vid) && !(await pakAlles('claude-2', v0 + 3 * uur + 30)).includes(vid), 'nietVoor: geen account krijgt hem te vroeg');
+ok((await pakAlles('claude-2', v0 + 12 * uur + 1)).includes(vid) && !(await vind(vid, v0 + 12 * uur + 40)).nietVoor, 'nietVoor: na het tijdstip weer gewoon op te pakken');
+u = await T.zetTaken(kv, { taakzet: { id: vid, terug: true, reden: 'nog steeds te vroeg', nietVoor: new Date(v0 + 40 * uur).toISOString() } }, '', v0 + 13 * uur);
+ok((await T.zetTaken(kv, { pak: { account: 'claude-1', max: 1, id: vid } }, '', v0 + 13 * uur + 1)).taken.length === 1, 'nietVoor: pak met een id gaat erlangs');
+u = await T.zetTaken(kv, { taakzet: { id: vid, terug: true, reden: 'tijdstip in het verleden', nietVoor: new Date(v0).toISOString() } }, '', v0 + 13 * uur + 2); ok(u.ok && !u.nietVoor && !(await vind(vid, v0 + 13 * uur + 3)).nietVoor, 'nietVoor: een tijdstip in het verleden telt niet');
+u = await T.zetTaken(kv, { taakzet: { id: vid, terug: true, reden: 'te ver weg', nietVoor: new Date(v0 + 60 * dg).toISOString() } }, '', v0 + 13 * uur + 4); ok(!u.nietVoor, 'nietVoor: hooguit 30 dagen vooruit');
+u = await T.zetTaken(kv, { taak: { tekst: 'Nakijken na de trekking van zondag', project: 'kadoly', nietVoor: new Date(v0 + 50 * uur).toISOString() } }, 'kadoly-chat', v0 + 14 * uur); const wid = u.taak;
+ok(u.nietVoor && !(await pakAlles('claude-1', v0 + 20 * uur)).includes(wid) && (await pakAlles('claude-1', v0 + 50 * uur + 1)).includes(wid), 'nietVoor: ook bij een nieuwe taak');
 console.log(process.exitCode ? 'taken: FOUT' : 'taken ok');

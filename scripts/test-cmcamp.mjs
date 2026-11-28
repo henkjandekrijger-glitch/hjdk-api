@@ -190,5 +190,28 @@ ok(lr.ontbreekt.some(x => /RichAds/.test(x)) && lr.ontbreekt.some(x => /Clickadu
 ok(lr.netwerk === undefined && lr.kenmerken.netwerk.some(x => x.w === 'mondiad') && lr.kenmerken.netwerk.some(x => x.w === 'mgid') && !lr.let_munt, 'D: leer telt Mondiad en MGID mee, alles in dollars');
 const stMg = P.stukkenUitCampagnes([{ dag: D, camps: await lees(D) }]);
 ok(stMg.some(s => s.medium === 'mgid' && s.tekst === 'Tekst van de advertentie'), 'D: paspoort laadt ook de MGID-creatives (medium mgid)');
+// ---- L: bewaking van de labelwerklijst (labelWacht) ----
+{ const T = await import('../lib/taken.js'), tk = async () => (await T.leesTaken(kv)).taken.filter(x => /^Clickmind labels:/.test(x.tekst));
+  await kv.raw(['DEL', 'cm:crl:todo', 'cm:crl:taakslot']);
+  let w = await C.labelWacht(); ok(w.open === 0 && w.taak === null && !w.fout && (await tk()).length === 0 && (await kv.raw(['EXISTS', 'cm:crl:taakslot'])) == 0, 'L: open 0: geen taak en geen slot');
+  await kv.raw(['HSET', 'cm:crl:todo', 'aaaaaaaaaaaaaaa1', 'Gratis cadeau voor jou / alleen vandaag', 'aaaaaaaaaaaaaaa2', 'Waar is het strand? / Vraag het de chat', 'aaaaaaaaaaaaaaa3', 'Creative 355150']);
+  w = await C.labelWacht(); let ts = await tk();
+  ok(w.open === 2 && w.taak && !w.fout && ts.length === 1 && ts[0].project === 'clickmind' && ts[0].zwaarte === 'licht' && ts[0].status === 'wacht' && /labelwerk=1/.test(ts[0].tekst) && /&kort=/.test(ts[0].tekst) && /^Clickmind labels: 2 /.test(ts[0].tekst) && ts[0].tekst.length < 800, 'L: open > 0 zonder open labeltaak: precies één lichte taak voor clickmind met labelwerk=1 (Creative-namen tellen niet mee)');
+  ok((await kv.raw(['TTL', 'cm:crl:taakslot'])) > 19 * 3600, 'L: dagslot gezet (20 uur)');
+  await kv.raw(['DEL', 'cm:crl:taakslot']); w = await C.labelWacht(); ok(w.taak === 'staat al open' && (await tk()).length === 1 && (await kv.raw(['EXISTS', 'cm:crl:taakslot'])) == 0, 'L: open labeltaak aanwezig: geen nieuwe taak en geen slot');
+  const id1 = ts[0].id; await T.zetTaken(kv, { taakzet: { id: id1, klaar: true, resultaat: 'Alle teksten gelabeld in de proef.' } }, 'test');
+  ok((await tk()).every(x => x.status === 'klaar'), 'L: voorbereiding: eerste taak staat op klaar');
+  w = await C.labelWacht(); ok(w.taak && (await tk()).length === 2, 'L: taak klaar en nog open: een nieuwe taak (dag erna)');
+  const id2 = (await tk()).find(x => x.status === 'wacht').id; await T.zetTaken(kv, { taakzet: { id: id2, klaar: true, resultaat: 'Alle teksten gelabeld in de proef.' } }, 'test');
+  w = await C.labelWacht(); ok(w.taak === 'vandaag al gezet' && (await tk()).length === 2, 'L: tweede aanroep op dezelfde dag, ook nadat de taak klaar is: geen nieuwe taak');
+  // fouten: nooit een exception
+  const stuk = { raw: async () => { throw new Error('redis eruit'); }, get: async () => { throw new Error('redis eruit'); }, set: async () => { throw new Error('redis eruit'); } };
+  w = await C.labelWacht({ kvx: stuk, open: async () => 3 }); ok(w.open === 3 && w.taak === null && /redis eruit/.test(w.fout), 'L: fout in Redis: geen exception, fout in de uitvoer');
+  w = await C.labelWacht({ open: async () => { throw new Error('hlen stuk'); } }); ok(w.taak === null && /hlen stuk/.test(w.fout), 'L: fout bij het tellen: geen exception');
+  await kv.raw(['DEL', 'cm:crl:taakslot']);
+  w = await C.labelWacht({ open: async () => 3, taken: { leesTaken: async () => { throw new Error('lijst stuk'); }, zetTaken: async () => ({ ok: true }) } }); ok(w.taak === null && /lijst stuk/.test(w.fout) && (await kv.raw(['EXISTS', 'cm:crl:taakslot'])) == 0, 'L: fout in de takenlijst bij lezen: geen exception, geen slot');
+  w = await C.labelWacht({ open: async () => 3, taken: { leesTaken: async () => ({ taken: [] }), zetTaken: async () => ({ ok: false, fout: 'geweigerd' }) } }); ok(w.taak === null && w.fout === 'geweigerd' && (await kv.raw(['EXISTS', 'cm:crl:taakslot'])) == 0, 'L: takenlijst weigert de taak: fout in de uitvoer, slot weer weg zodat de volgende ronde het opnieuw probeert');
+  w = await C.labelWacht({ open: async () => 3, taken: { leesTaken: async () => ({ taken: [] }), zetTaken: async () => { throw new Error('zet stuk'); } } }); ok(w.taak === null && /zet stuk/.test(w.fout) && (await kv.raw(['EXISTS', 'cm:crl:taakslot'])) == 0, 'L: takenlijst gooit een fout bij zetten: geen exception, slot weer weg');
+  await kv.raw(['DEL', 'cm:crl:todo', 'cm:crl:taakslot']); }
 console.log(process.exitCode ? 'GEFAALD' : 'GESLAAGD');
 await kv.raw(['FLUSHDB']); process.exit(process.exitCode || 0);
