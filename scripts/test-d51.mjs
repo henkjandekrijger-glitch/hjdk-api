@@ -47,4 +47,7 @@ const wissel = async (u, o) => { const lic = !!o.headers['X-51D-License-Key']; m
 const r4 = await X.lees(kv4, { ua: 'z' }, { fetchFn: wissel, sleutel: 'lic' });
 ja(r4 && r4.v === 'Apple' && modi.join() === 'resource,licentie' && kv4.m.get('mm:d51modus') === 'licentie', 'licentiesleutel in plaats van resource key: tweede manier werkt en wordt onthouden');
 
+const kv5 = nepKv();
+await X.lees(kv5, { ua: 'q' }, { fetchFn: async () => ({ ok: false, status: 400, text: async () => "'GEHEIMEKEY1234567890ABCDEFGHIJ' could not be read" }), sleutel: 'GEHEIMEKEY1234567890ABCDEFGHIJ' });
+ja(!/GEHEIMEKEY/.test(kv5.m.get('mm:d51laatst') || '') && !/GEHEIMEKEY/.test((await X.stand(kv5)).laatsteFout || ''), 'sleutel nooit in de bewaarde fout of de stand');
 console.log(fout ? fout + ' fout' : 'alles ok (' + ok + ')'); process.exit(fout ? 1 : 0);
