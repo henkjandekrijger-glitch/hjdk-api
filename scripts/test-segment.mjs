@@ -121,6 +121,7 @@ const ctx = cid => ({ cid, pid: 'p1', net: 'propeller', zone: '777', camp: '55',
   const nep = Object.assign({}, ws, { armen: [urlArm, Object.assign({}, amzArm, { variant: '302', p: 'b', m: 'com' })] }); // ook als iemand de controle omzeilt
   await W.wisselKlik(kv, nep, { arm: nep.armen[1], soort: ['nieuw'], vast: true }, ctx('cccc0000cccc0003'));
   ja(!('pbg' in kv.h.get('mm:cid:cccc0000cccc0003')), 'Amazon-arm krijgt nooit een segment, ook niet buiten checkWissel om');
+  ja(!('pbs' in kv.h.get('mm:cid:cccc0000cccc0003')) && !('sub' in kv.h.get('mm:cid:cccc0000cccc0003')), 'Amazon-arm krijgt nooit pbs: geen conversie-postback voor de Amazon-blanket, ook als de wissel pb heeft');
 }
 const zet = (kv, cid, extra = {}) => kv.h.set('mm:cid:' + cid, Object.assign({ t: String(nu), pid: 'p1', wissel: 'seg', arm: 'a', net: 'propeller', zone: '777', camp: '55', tag: '', pbs: 'echt', sub: 'SUB1234567' }, extra));
 { // zonder pbg: postback zoals altijd, eenmaal per klik
