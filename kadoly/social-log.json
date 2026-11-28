@@ -29,10 +29,12 @@
       "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
     },
     "youtube": {
-      "handle": null,
-      "account_id": null,
-      "status": "2026-11-28: geen Kadoly-kanaal in Zernio. Het gekoppelde kanaal 6b08384bff3a28e7d1bf3f5c is Henkjans eigen kanaal (Henkjan de Krijger) en mag niet voor Kadoly (Henkjan 27 nov 2026: \"Nee moet Kadoly gaan heten had apart kanaal voor aan gemaakt !\"). Koppellink voor het Kadoly-kanaal naar Henkjan gestuurd (Zernio-uitnodiging, profiel Kadoly, geldig tot 5 dec). Tot het Kadoly-kanaal hier staat: geen YouTube.",
-      "niet": "6b08384bff3a28e7d1bf3f5c"
+      "handle": "kadolyshop",
+      "kanaal": "Kadoly, https://www.youtube.com/@kadolyshop (UC3Bof3zNKwn9PgF-3pfiaew)",
+      "account_id": "6b0a2ad7553d38831e909d2b",
+      "playlist_rust_ritueel": "PLSBtXYoV_2Ao",
+      "status": "2026-11-28 01:10 UTC: kanaal Kadoly aangemaakt als merkaccount onder henkjandekrijger@gmail.com (naast Nexy Works en Backup of Yoors; @kadoly en @kadoly.shop waren bezet), logo, omschrijving en link kadoly.com gezet, in Zernio-profiel Kadoly gekoppeld. Bij koppelen in Google altijd het merkaccount Kadoly kiezen, niet Henkjan de Krijger bovenaan de lijst.",
+      "niet": "6b08384bff3a28e7d1bf3f5c (Henkjans eigen kanaal Henkjan de Krijger; Henkjan 27 nov 2026: \"Nee moet Kadoly gaan heten had apart kanaal voor aan gemaakt !\"). Blijft alleen gekoppeld voor de meting van de 3 oude Kadoly-Shorts daar."
     },
     "tiktok": {
       "handle": "kadoly.com",
