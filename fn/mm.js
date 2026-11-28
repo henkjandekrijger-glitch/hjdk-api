@@ -35,6 +35,7 @@
 //   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
 //   /api/mm/stukken[?vorm=tekst|json][&run=1]   geheugen van alles wat de deur uit ging, met paspoort (medium, waarvoor, doel), oordeel en lessen; /api/mm/briefing?medium=&project=&doel= lezen vóór je iets maakt; /api/mm?op=stuk&j=<JSON> een stuk melden (lib/paspoort.js; beschermde host of team-sleutel)
 //   /api/mm?op=trend[&j=<JSON>|&medium=|&vorm=tekst]   wat nu groot is per platform (lib/trend.js); /api/mm?op=voorstel[&j=<JSON>|&id=] nieuwe stukken die Henkjan eerst ziet (/voorstel?id=); /api/mm/stukken?lijst=1&project=&medium=&regel=1 stukken met hun oordeel opvragen
+//   /api/mm?op=jacht[&product=mylevel-cdl|mylevel-realestate][&vorm=tekst|&stand=1|&net=propeller]   kopersjacht per product: hypothese met bron, kopersprofiel, jachtlijst en bodadvies (lib/jacht.js; voorstel, net= openbaar voor de netwerkwacht, de rest beschermde host of team-sleutel)
 //   /api/mm?op=adbieb[&project=<id>|&vorm=json]   advertentiebibliotheken van buiten (lib/adbieb.js, Henkjan 27 nov 2026: "Ja bouw 4"): langlopers uit de Meta Ad Library (Zernio) en TikTok-hashtags, trendvideo's en benchmark per project; run=1 de dagronde (cron elk uur van 00:07 tot en met 05:07 UTC), POST of j=<JSON> melding van een chat die het met de MCP-tools ophaalde, zoek=<JSON> de zoektermen per project (beschermde host)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
@@ -279,7 +280,21 @@ export default async function handler(req, res) {
       if (q('omgeving')) return res.status(200).json({ ok: true, omgeving: OS });
       const omt = OS ? OM.standTekst(OS) : '';
       const SG = await import('../lib/segment.js'), sgt = SG.segTekst(await SG.segStand(kv, 1).catch(() => null)); // koopkrachtscore en segmentpostbacks (28 nov 2026)
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (sgt ? sgt + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
+      const JA = await import('../lib/jacht.js'), jat = JA.standTekst(await JA.stand(kv).catch(() => null)); // kopersjacht per product (28 nov 2026): meetgat en hypothese zonder diepe stap
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (sgt ? sgt + '\n\n' : '') + (jat ? jat + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
+    }
+    if (op === 'jacht') { // kopersjacht per product (lib/jacht.js, 28 nov 2026, taak d4rc1s): hypothese met bron, kopersprofiel, jachtlijst; alleen een voorstel
+      const J = await import('../lib/jacht.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      const r = await J.jacht(kv, { product: q('product') || '', dagen: Number(q('dagen')) || undefined, vers: q('vers') === '1' });
+      if (q('net')) return res.status(200).json(J.voorNet(r, String(q('net')).replace(/[^a-z]/g, '').slice(0, 20))); // voor de netwerkwacht, openbaar zoals /api/mm/bewezen (alleen zonenummers)
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''), given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
+      const sleutel = given.some(g => [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean).includes(g));
+      if (!(isCron || beschermd(req) || sleutel)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host of de team-sleutel; de netwerkwacht leest &net=propeller' });
+      const st = await J.stand(kv).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200), alarm: ['stand faalt'], producten: [] }));
+      if (q('stand')) return res.status(200).json(st);
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(J.tekst(r, st)); }
+      return res.status(200).json(Object.assign({}, r, { stand: st }));
     }
     if (op === 'segment' || op === 'voorwie') { // segmenten per product (lib/segment.js, 28 nov 2026, taak dnhwt6): koopkrachtscore, segmentconversie, zoneprofiel per segment
       const S = await import('../lib/segment.js'); res.setHeader('cache-control', 'no-store'); cors(res);

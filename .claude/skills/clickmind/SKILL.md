@@ -58,6 +58,7 @@ Henkjan 27 nov 2026: "Clikmind moet altijd medium meenemen waarop en waarvoor en
 - Geen conversie-postback naar het netwerk voor zones op het blokvoorstel (teller pbbot).
 - Terugbetalingsdossier elke ochtend 05:40 UTC per netwerkdag (PropellerAds EST). PropellerAds dient Clickmind sinds 13 nov zelf in (lib/terugauto.js: mail aan support@propellerads.com van henkjan@todayin.email, Henkjan cc en antwoordadres, alleen sterk bewijs, eenmaal per dag; uit met mm:instelling terugAuto=false). Andere netwerken alleen op Henkjans woord: RichAds 5 dagen, MGID 30.
 - Klikgrens (13 nov): elke nieuwe PropellerAds-campagne en kopie krijgt 1 klik per persoon per 24 uur per advertentie (propellerads-mcp). Wissel met roteer: true geeft een terugkomer binnen 24 uur een arm die hij nog niet zag.
+- Kopersjacht per product (28 nov 2026, lib/jacht.js): hypothese met bron (data/jacht-priors.json), kopersprofiel uit koop > checkout > koopklik > examen tegen alle betaalde bezoeken, en een jachtlijst (exact en variaties, met verloop en bodadvies) voor een aparte campagne per lijn. Lezen: https://hjdk-api-henq.vercel.app/api/mm?op=jacht&vorm=tekst; netwerkwacht &net=propeller; controle &stand=1. Alleen een voorstel.
 - 80/20 (13 nov): bewezen zones op een aparte BEWEZEN-campagne naast de brede; de ochtendronde van propellerads-mcp (05:45 UTC) maakt of ververst die, hoogstens 1 nieuwe per project per dag.
 
 ## De lerende modal
