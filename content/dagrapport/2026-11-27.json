@@ -1,0 +1,801 @@
+{
+  "schema_version": 2,
+  "meetdag": "2026-11-27",
+  "meetperiode": {
+    "vanaf": "2026-11-27T00:00:00.000Z",
+    "totExclusief": "2026-11-28T00:00:00.000Z"
+  },
+  "created_at_utc": "2026-11-28T13:42:35.056Z",
+  "waarnemingstijd": "2026-11-28T13:34:55.978Z",
+  "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+  "measure_definition": "Geregistreerde bronopeningen, geen unieke personen. Paginatotalen bevatten ook intern doorbladeren. Amazonverzoeken zijn ruwe redirects, geen verkoop.",
+  "observations": [
+    {
+      "observed_at_utc": "2026-11-28T13:42:35.056Z",
+      "round": "morning",
+      "site": {
+        "bs": {
+          "paginaOpeningen": 6,
+          "organischeOpeningen": 0,
+          "perBron": {
+            "direct": 5,
+            "overig": 1
+          },
+          "paginas": [
+            {
+              "pad": "/",
+              "openingen": 6
+            }
+          ],
+          "amazonVerzoeken": 38
+        },
+        "lc": {
+          "paginaOpeningen": null,
+          "organischeOpeningen": null,
+          "perBron": null,
+          "paginas": [],
+          "amazonVerzoeken": null
+        }
+      },
+      "combined_page_openings": null,
+      "combined_reason": "LC row missing, so 6 cannot be presented as the combined total.",
+      "previous": {
+        "meetdag": "2026-11-26",
+        "meetperiode": {
+          "vanaf": "2026-11-26T00:00:00.000Z",
+          "totExclusief": "2026-11-27T00:00:00.000Z"
+        },
+        "site": {
+          "bs": {
+            "paginaOpeningen": 14,
+            "organischeOpeningen": 0,
+            "perBron": {
+              "direct": 14
+            },
+            "paginas": [
+              {
+                "pad": "/",
+                "openingen": 14
+              }
+            ],
+            "amazonVerzoeken": 43
+          },
+          "lc": {
+            "paginaOpeningen": 2,
+            "organischeOpeningen": 0,
+            "perBron": {
+              "direct": 2
+            },
+            "paginas": [
+              {
+                "pad": "/",
+                "openingen": 2
+              }
+            ],
+            "amazonVerzoeken": null
+          }
+        },
+        "amazonVerzoeken": 43,
+        "pdfVerkoop": null,
+        "leesstatus": {
+          "bs:tel:2026-11-26": "gelezen",
+          "bs:klik:2026-11-26": "gelezen",
+          "bs:gosrc:2026-11-26": "gelezen",
+          "verkoop": "ontbreekt"
+        }
+      },
+      "comparison": {
+        "stockingbooks": {
+          "current": 6,
+          "previous": 14,
+          "difference": -8,
+          "sources": {
+            "direct": 5,
+            "overig": 1
+          },
+          "organic_registered": 0
+        },
+        "lastingchange": {
+          "current": null,
+          "previous": 2,
+          "difference": null
+        },
+        "combined": {
+          "current": null,
+          "previous": 16,
+          "difference": null
+        },
+        "week_average": null,
+        "reason_week_unavailable": "Fewer than seven complete days with matching source definitions and both sites."
+      },
+      "raw_amazon_requests": {
+        "current": 38,
+        "previous": 43,
+        "definition": "Raw redirect requests, not unique clickers, conversion rate or sales."
+      },
+      "gsc": {
+        "source": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers&dagen=7",
+        "observed_at_utc": "2026-11-28T13:42:35.056Z",
+        "kind": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "per_day": [
+          {
+            "dag": "2026-11-25",
+            "zoekvragen": 11,
+            "imp": 11,
+            "kliks": 0
+          },
+          {
+            "dag": "2026-11-26",
+            "zoekvragen": 9,
+            "imp": 9,
+            "kliks": 0
+          },
+          {
+            "dag": "2026-11-27",
+            "zoekvragen": 10,
+            "imp": 11,
+            "kliks": 0
+          }
+        ],
+        "exact_closed_day": {
+          "dag": "2026-11-27",
+          "zoekvragen": 10,
+          "imp": 11,
+          "kliks": 0
+        },
+        "queries": [
+          {
+            "q": "white elephant rules",
+            "imp": 3,
+            "kliks": 0,
+            "pos": 85,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "christmas word searches",
+            "imp": 2,
+            "kliks": 0,
+            "pos": 64.5,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/free-printable-christmas-word-search"
+            ]
+          },
+          {
+            "q": "secret santa generator text",
+            "imp": 2,
+            "kliks": 0,
+            "pos": 76.5,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "how do you play white elephant game",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 75,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "large print christmas word search",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 75,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/free-printable-christmas-word-search"
+            ]
+          },
+          {
+            "q": "secret santa name generator",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 39,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "secret santa names generator",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 41,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "what are the 14 books of the apocrypha",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 97,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "when was the apocrypha removed",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 55,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "white elphant rules",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 82,
+            "eerst": "2026-11-27",
+            "laatst": "2026-11-27",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "apocrypha bible",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 79,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "draw a secret santa",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 40,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "how to play white elephant",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 69,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "large christmas word search",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 9,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/free-printable-christmas-word-search"
+            ]
+          },
+          {
+            "q": "what are apocryphal books",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 98,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "what books are in the apocrypha",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 91,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "white elephant rule",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 86,
+            "eerst": "2026-11-26",
+            "laatst": "2026-11-26",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "apocrypha books",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 79,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "apocryphal writings",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 93,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "books of the apocrypha",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 88,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "online secret santa picker",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 87,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "play white elephant",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 83,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          },
+          {
+            "q": "random name generator for secret santa",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 38,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "secret santa generator",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 38,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/secret-santa-generator"
+            ]
+          },
+          {
+            "q": "stocking books",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 11,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/all-books"
+            ]
+          },
+          {
+            "q": "the apocrypha of the bible the history of the ancient apocryphal texts left out of the old testament and new testament",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 82,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/apocrypha"
+            ]
+          },
+          {
+            "q": "white elephant game",
+            "imp": 1,
+            "kliks": 0,
+            "pos": 95,
+            "eerst": "2026-11-25",
+            "laatst": "2026-11-25",
+            "paginas": [
+              "/white-elephant-rules"
+            ]
+          }
+        ],
+        "lastingchange_rows": null,
+        "limitations": [
+          "Query rows exclude anonymized queries and are not site totals.",
+          "A previous day can be backfilled; no growth inference from revised query counts.",
+          "Site-level ZICHT cache reports 30 impressions and 0 clicks on 28Nov with no explicit GSC period. Do not assign these to 27Nov or use as daily traffic."
+        ]
+      },
+      "visibility": {
+        "source": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=bookstuffers",
+        "observation_day": "2026-11-28",
+        "stockingbooks": {
+          "index": {
+            "dag": "2026-11-28",
+            "inSitemap": 17,
+            "bekeken": 17,
+            "geindexeerd": 14
+          },
+          "llm_citations": {
+            "model": "perplexity/sonar",
+            "panel": "ac37e9921bfa15cb",
+            "geslaagd": 8,
+            "perVraag": [
+              {
+                "id": "da5375d13d862e0f",
+                "geciteerd": false
+              },
+              {
+                "id": "6c3e04e422c1e852",
+                "geciteerd": false
+              },
+              {
+                "id": "4dbaac792645a4d2",
+                "geciteerd": false
+              },
+              {
+                "id": "47af35b4989ef458",
+                "geciteerd": false
+              },
+              {
+                "id": "79df91543fbc51d7",
+                "geciteerd": false
+              },
+              {
+                "id": "438b876797028be8",
+                "geciteerd": false
+              },
+              {
+                "id": "8c5fef7573e1ec5b",
+                "geciteerd": false
+              },
+              {
+                "id": "522ba70955d17463",
+                "geciteerd": false
+              }
+            ],
+            "geciteerd": 0,
+            "rate": 0
+          }
+        },
+        "lastingchange": {
+          "llm_citations": {
+            "model": "perplexity/sonar",
+            "panel": "94af3b369c8c22c9",
+            "geslaagd": 4,
+            "perVraag": [
+              {
+                "id": "2f5222f42e0b992e",
+                "geciteerd": false
+              },
+              {
+                "id": "3afce6eee7e68e2f",
+                "geciteerd": false
+              },
+              {
+                "id": "fab12185a259b35c",
+                "geciteerd": false
+              },
+              {
+                "id": "a2ab905318b52680",
+                "geciteerd": false
+              }
+            ],
+            "geciteerd": 0,
+            "rate": 0
+          }
+        },
+        "limits": "Index status and sampled AI citations are not website arrivals. SB question panel changed; no before/after inference."
+      },
+      "pinterest": {
+        "source": "Zernio get_post_analytics for all26 register IDs",
+        "observed_at_utc": "2026-11-28T13:42:35.056Z",
+        "aggregate": {
+          "synced": 19,
+          "pending": 7,
+          "errors": 0,
+          "impressions": 187,
+          "saves": 13,
+          "generic_clicks": 5,
+          "organic_outbound_clicks": null,
+          "definition": "Sum of available synced per-post snapshots with unspecified observation windows; not a daily total, matched cohort, unique people or verified organic outbound traffic."
+        },
+        "per_pin_register": "content/dagrapport/PIN-LEERREGISTER.json",
+        "per_pin_visible_overview": "content/dagrapport/2026-11-28-pin-overzicht.md",
+        "wordsearch_timeline": {
+          "postId": "6b05f89c3ea213a32f7d5a66",
+          "timeline": [
+            {
+              "date": "2026-11-25",
+              "platform": "pinterest",
+              "platformPostId": "271060471319715665",
+              "impressions": 0,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-26",
+              "platform": "pinterest",
+              "platformPostId": "271060471319715665",
+              "impressions": 1,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 0,
+              "clicks": 0,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            },
+            {
+              "date": "2026-11-27",
+              "platform": "pinterest",
+              "platformPostId": "271060471319715665",
+              "impressions": 10,
+              "reach": 0,
+              "likes": 0,
+              "comments": 0,
+              "shares": 0,
+              "saves": 1,
+              "clicks": 1,
+              "views": 0,
+              "follows": 0,
+              "completionRate": 0,
+              "profileViews": 0,
+              "websiteClicks": 0,
+              "impressionSources": {},
+              "audienceTypes": {},
+              "audienceCountries": {},
+              "retentionCurve": {},
+              "replays": 0
+            }
+          ]
+        },
+        "timeline_limits": "Provider daily genericclicks and websiteClicks defaults do not establish organic OUTBOUND_CLICK. Do not transfer into pinuitkomst or Clickmind numeric results.",
+        "account_health": {
+          "source": "Zernio accounts_get_account_health",
+          "status": "healthy",
+          "analytics_sync": "ok",
+          "last_synced_at": "2026-11-28T12:01:51.254Z"
+        },
+        "operational_status": "Bookpins on Kadoly stopped by current task4qiye9 since27Nov, confirmed boekpinsUit=true. Not a disconnect or old daily capacity limit. No bypass or new account used.",
+        "posts_read": {
+          "source": "Zernio list_posts",
+          "returned": 50,
+          "reported_total": 63,
+          "complete_shared_schedule_verified": false
+        },
+        "new_posts": 0
+      },
+      "sales": {
+        "pdf": {
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=verkoop",
+          "closed_day": null,
+          "reason": "perDag empty; missing is unknown, PDF checkout remains off."
+        },
+        "kdp": {
+          "source": "https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht&deel=kort",
+          "reported_at": "2026-11-28 12:47 UTC",
+          "report_day": "2026-11-27",
+          "orders": 14,
+          "estimated_royalty_usd": 41.46,
+          "definition": "Latest existing KDP worklog corrected Yesterday-date error; catalogue-wide provider-day sales, timezone not confirmed equal to UTC.",
+          "organically_attributed": null,
+          "scope_match": false,
+          "limits": "Not attributed to these sites or organic distribution, and not aggregated with UTC site traffic."
+        }
+      },
+      "health": {
+        "source": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+        "ok": true,
+        "pdf_checkout": false,
+        "pdf_file": true,
+        "mail": false,
+        "live_articles": [
+          "how-to-stop-procrastinating",
+          "how-to-start-over-in-life",
+          "i-wasted-another-year"
+        ],
+        "article_write_performed": false
+      },
+      "biggest_leak": {
+        "type": "measurement_and_attribution_gap",
+        "evidence": [
+          "Closed27Nov LC daily row missing; combined target metric unavailable.",
+          "All26 Pinterest organic outgoing clicks remain undefined despite19 synced snapshots.",
+          "Current site collector omits utm_content and source/page totals are independent."
+        ],
+        "unknown": "Missing LC row does not identify a broken tracker. Low measured acquisition and attribution loss cannot be distinguished completely.",
+        "hypothesis": "A validated source and per-piece join will make real acquisition measurable; it does not itself create traffic.",
+        "primary_goal": "Verified organic outgoing clicks and registered site/source arrivals, kept separate.",
+        "control": "Retain all existing pins, previous snapshots, live articles and modal10percent control; no new live experiment.",
+        "action_performed": "Eight isolated tests of current main collector, zero production counter calls. Read-only live LC HTML confirms cm.js and LC collector. Reuse existing review branch rather than implement duplicate code.",
+        "next_test": {
+          "technical_deadline": "2026-12-02",
+          "first": "Review and validate existing claude/boeken-clickmind-meetbaar implementation after exact approval. Check end-to-end without polluting production traffic.",
+          "traffic_checkpoint": "2026-11-29",
+          "content_judgment": "14 to21 days after real approved publication plus sufficient comparable data. Not started for new concept."
+        }
+      },
+      "learning": {
+        "proof": "6SB openings, all direct/other; query-level GSC27Nov11 impressions and0clicks.19synced Pinterest snapshots187impressions13saves5genericclicks are not187visitors or5verifiedoutbound.",
+        "lesson": "Posting/saves/indexing do not establish traffic. Preserve unknowns; no traffic winner or 10x progress claim.",
+        "research": "content/dagrapport/2026-11-28-traffic-onderzoek.md"
+      },
+      "actual_changes": {
+        "live_site": [],
+        "published_pins": [],
+        "measurement_qa": {
+          "observed_at_utc": "2026-11-28T13:41:01.386Z",
+          "source": "main lib/bsmeet.js",
+          "blob_sha": "5266a91b44985a44c58ecab01c5305588dd554be",
+          "checks": [
+            {
+              "name": "Pinterest UTM classified as pinterest",
+              "passed": true
+            },
+            {
+              "name": "Google referrer classified as google",
+              "passed": true
+            },
+            {
+              "name": "Internal navigation inherits earlier source",
+              "passed": true
+            },
+            {
+              "name": "No referrer is classified direct, not proven human",
+              "passed": true
+            },
+            {
+              "name": "utm_content is not retained by current collector",
+              "passed": true
+            },
+            {
+              "name": "Each page execution records one opening; no uniqueness deduplication",
+              "passed": true
+            },
+            {
+              "name": "Webdriver is skipped without calling production",
+              "passed": true
+            },
+            {
+              "name": "LC uses its own site identifier",
+              "passed": true
+            }
+          ],
+          "production_counter_requests": 0,
+          "limits": "Executed the exact source with isolated fake browser objects. No real browser, provider attribution, delivery or human-traffic validation. Does not prove why LC daily row is missing.",
+          "largest_gap": "utm_content absent from collector; no per-pin landing join; missing LC day must remain null."
+        },
+        "internal": "Appended26 real provider snapshots, saved two site-concept passports with no numeric outcomes, created noindex review link, updated daybook/dashboard/worklog.",
+        "control_link": "https://hjdk-api-henq.vercel.app/voorstel?id=boeken-ss-link-uitleg-1128",
+        "concept_status": "concept, awaiting exact approval on shown text",
+        "concept_checks": {
+          "http": 200,
+          "noindex": true,
+          "both_texts_present": true,
+          "passport_status": "concept",
+          "passport_metrics": null
+        }
+      },
+      "concepts": {
+        "new": {
+          "id": "boeken-ss-link-uitleg-1128",
+          "medium": "site",
+          "project": "content",
+          "titel": "Secret Santa: voorkom verwarring na opnieuw trekken",
+          "uitleg": "CONCEPT, niets live. Bestaande pagina /secret-santa-generator. Zet één hulpkader direct onder Draw names en boven de deelnemerslinks. Codecontrole: de lijst staat alleen in de pagina; opnieuw trekken wist die lijst, maar oude #r-links blijven hun oude uitslag tonen. Twee formuleringen van dezelfde uitleg, kies één. Dit zijn UX-hypothesen, geen bewezen verkeerstrend. Geen nieuwe knop, opslag, mail, prijs of profielwijziging.",
+          "kosten": "Geen betaalde calls. Alleen conceptopslag; implementatie na exact tekstakkoord.",
+          "meten": "Eerst werking en bronkoppeling toetsen. Daarna Draw names naar deelactie en GSC-kliks op de bestaande URL apart; geen uitgaande boekverkoop afleiden. Controles: overige tools ongewijzigd.",
+          "stop": "Geen live proef zonder akkoord. Inhoud na 14 tot 21 dagen vanaf publicatie en genoeg gelijke data beoordelen. Behoud bestaand 10% modalcontrole; geen modalwijziging.",
+          "wie": "content-dagrapport",
+          "items": [
+            {
+              "campagneNaam": "Bestaande generator, hulpkader",
+              "oudId": "secret-santa-generator",
+              "oudTitel": "Send each person only their own link. Do not open them yourself.",
+              "oudTekst": "Geen waarschuwing dat de lijst niet wordt opgeslagen en oude links na opnieuw trekken geldig blijven.",
+              "titel": "Before you redraw or close this page",
+              "tekst": "Keep this page open until every link is sent. The organizer list is not saved for later. If you draw again, the list on this page is replaced, but links from the earlier draw still work. Send everyone a new link and ask them to ignore the old one.",
+              "variant": "native",
+              "waarom": "Verduidelijkt geverifieerd bestaand gedrag. Geen bezoekersverlies gemeten; geen garantie op extra verkeer."
+            },
+            {
+              "campagneNaam": "Alternatieve formulering, zelfde hulpkader",
+              "oudId": "secret-santa-generator",
+              "titel": "Need to draw again?",
+              "tekst": "Earlier links will still show the earlier matches. Send a new link to every participant and tell them which draw to use. Keep the organizer list somewhere private before closing this page: there is no saved dashboard or automatic resend.",
+              "variant": "native",
+              "waarom": "Vraagopening uit Clickmind als onbewezen UX-hypothese. Geen trendclaim; één variant kiezen, geen gelijktijdige live test."
+            }
+          ]
+        },
+        "existing_lc_preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=goal-setting-worksheet&concept=1",
+        "existing_review_branch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/claude/boeken-clickmind-meetbaar/docs/voorstel-boeken-clickmind.md",
+        "no_old_setup_reannounced": true
+      },
+      "goal": {
+        "deadline": "2026-12-04",
+        "metric": "Registered combined page openings per closed UTC day",
+        "baseline_day": "2026-11-26",
+        "baseline": 16,
+        "target": 160,
+        "current": null,
+        "current_gap": null,
+        "reason": "LC27Nov unknown. No comparable seven-day organic baseline. No forecast or on-track claim.",
+        "end_measurement_available": "2026-12-05"
+      },
+      "limitations": [
+        "Ontbrekende bron of site is onbekend, geen expliciete nul.",
+        "Geen gezamenlijke per-pin landingmeting of conversiepercentage.",
+        "Alleen bekende publieke paginapaden worden getoond."
+      ],
+      "next_step": "First validate attribution and missing-data handling; preserve approved content and stop. Review new UX before live; judge content14to21days after publication. Report next comparable closed day."
+    }
+  ]
+}
