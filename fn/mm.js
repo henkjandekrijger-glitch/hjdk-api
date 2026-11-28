@@ -255,7 +255,10 @@ export default async function handler(req, res) {
       const D5 = await (await import('../lib/d51.js')).stand(kv).catch(() => null); // 51Degrees: opvragingen deze maand en fouten
       if (q('d51')) return res.status(200).json({ ok: true, d51: D5 });
       const d5t = D5 ? '51Degrees: ' + (D5.aan ? 'aan' : 'uit (geen D51_KEY)') + ', ' + D5.dezeMaand + ' van ' + D5.max + ' opvragingen deze maand' + (Object.keys(D5.fout).length ? ', fouten ' + JSON.stringify(D5.fout) + (D5.laatsteFout ? ' laatste: ' + D5.laatsteFout : '') : '') : '';
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + P.bronnenTekst(st, zones));
+      const OM = await import('../lib/omgeving.js'), OS = await OM.stand(kv).catch(() => null); // omgevingsdata (koopkracht, weer, daglicht): dagtellers en pauze
+      if (q('omgeving')) return res.status(200).json({ ok: true, omgeving: OS });
+      const omt = OS ? OM.standTekst(OS) : '';
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + P.bronnenTekst(st, zones));
     }
     if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
