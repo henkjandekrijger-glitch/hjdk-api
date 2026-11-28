@@ -29,7 +29,7 @@ let fout = 0; const ok = (c, m) => { if (!c) { fout++; console.log('FOUT:', m); 
 let beurt = 0;
 const ai = async () => { beurt++; const klaar = beurt >= 3;
   return { txt: 'Hier is het: ' + JSON.stringify({ zeg: 'Fulfilment wordt meestal per order geprijsd. Mail me op jan@voorbeeld.nl of bel 0612345678', vraag: klaar ? '' : beurt === 1 ? 'Wat moet de partner kunnen?' : 'Wanneer wil je starten?', veld: beurt === 1 ? 'eisen' : 'termijn', sleutel: beurt === 1 ? 'eisen' : 'termijn', pills: klaar ? [] : beurt === 1 ? ['Dezelfde dag verzenden', 'Retouren', 'Bijzondere producten'] : ['Binnen zes weken', 'Later', 'Weet ik nog niet'], meer: false, klaar,
-    feiten: [{veld:'inhoud',bewijs:'kleding'}, {veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'doel',bewijs:'verzending uitbesteden'}, {veld:'omvang',bewijs:'1.500 orders per maand'}, {veld:'regio',bewijs:'Zuid-Holland'}],
+    feiten: [{veld:'werk',bewijs:'verzending uitbesteden'}, {veld:'inhoud',bewijs:'kleding'}, {veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'doel',bewijs:'verzending uitbesteden'}, {veld:'omvang',bewijs:'1.500 orders per maand'}, {veld:'regio',bewijs:'Zuid-Holland'}],
     kaart: { richting: 'zoekt', soort: 'fulfilment', titel: 'Webshop zoekt fulfilmentpartner', zoekt: 'Fulfilmentpartner', biedt: '1.500 orders per maand', waar: 'Zuid-Holland', wanneer: 'Binnen 6 weken', budget: '', mits: 'Opslag in Zuid-Holland', niet: 'Zelfde dag verzenden', partijen: [], waarde: 'middel' } }) }; };
 const req = { headers: { 'x-vercel-ip-city': 'Gouda', 'x-vercel-ip-country': 'NL' } };
 const meldingen = []; const meld = async t => meldingen.push(t);
@@ -57,7 +57,7 @@ ok(meldingen.length === 1 && !/koper@webshop/.test(meldingen[0]), 'melding naar 
 
 // aanbodkaart in het netwerk die past
 beurt = 0;
-const ai2 = async () => ({ txt: JSON.stringify({ zeg: 'Duidelijk.', vraag: '', pills: [], klaar: true, feiten:[{veld:'inhoud',bewijs:'kleding'},{veld:'onderwerp',bewijs:'fulfilmentpartner voor webshops'},{veld:'doel',bewijs:'Ik zoek klanten'},{veld:'regio',bewijs:'Zuid-Holland'},{veld:'omvang',bewijs:'1.500 orders per maand'},{veld:'eisen',bewijs:'Dezelfde dag verzenden'}], kaart: { richting: 'heeft', soort: 'fulfilment', titel: 'Fulfilmentbedrijf heeft ruimte', biedt: 'Fulfilmentpartner voor webshops, opslag in Zuid-Holland', waarde: 'middel' } }) });
+const ai2 = async () => ({ txt: JSON.stringify({ zeg: 'Duidelijk.', vraag: '', pills: [], klaar: true, feiten:[{veld:'werk',bewijs:'Dezelfde dag verzenden'},{veld:'inhoud',bewijs:'kleding'},{veld:'onderwerp',bewijs:'fulfilmentpartner voor webshops'},{veld:'doel',bewijs:'Ik zoek klanten'},{veld:'regio',bewijs:'Zuid-Holland'},{veld:'omvang',bewijs:'1.500 orders per maand'},{veld:'eisen',bewijs:'Dezelfde dag verzenden'}], kaart: { richting: 'heeft', soort: 'fulfilment', titel: 'Fulfilmentbedrijf heeft ruimte', biedt: 'Fulfilmentpartner voor webshops, opslag in Zuid-Holland', waarde: 'middel' } }) });
 let r2 = await gwStap(kv, { taal: 'nl', keuze: ['Klanten of opdrachten'], tekst:'Ik ben fulfilmentpartner voor webshops in Zuid-Holland. Ik zoek klanten voor 1.500 orders per maand. Dezelfde dag verzenden is mogelijk. Wij verwerken kleding.' }, req, { ai: ai2, meld });
 ok(r2.klaar && r2.borg === 0, 'aanbodkant: geen borg');
 ok((await gwStap(kv, {sid:r2.sid,actie:'controle'}, req)).ok,'aanbodkaart bevestigd');

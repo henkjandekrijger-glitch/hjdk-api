@@ -30,7 +30,7 @@ function geheugen() {
 }
 const req = { headers: { 'x-vercel-ip-city': 'Willemstad', 'x-vercel-ip-country': 'CW' } };
 const situatie = () => ({ kaart:{richting:'zoekt'}, stappen:[{wie:'bezoeker',zei:'Ik zoek een fulfilmentpartner voor 1500 orders per maand. Ik wil de verzending uitbesteden. Het gaat om kleding.'}], feiten:{}, gevraagd:[], spoor:[] });
-const bewijs = [ {veld:'inhoud',bewijs:'kleding'}, {veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'omvang',bewijs:'1500 orders per maand'}, {veld:'doel',bewijs:'de verzending uitbesteden'} ];
+const bewijs = [ {veld:'werk',bewijs:'verzending uitbesteden'}, {veld:'inhoud',bewijs:'kleding'}, {veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'omvang',bewijs:'1500 orders per maand'}, {veld:'doel',bewijs:'de verzending uitbesteden'} ];
 let s = situatie();
 feitenBij(s,s.stappen[0].zei,{feiten:[...bewijs,{veld:'regio',bewijs:'Nederland'},{veld:'budget',bewijs:'€5.000'}]});
 check('alleen bezoekersbewijs, geen verzonnen locatie of budget',()=>{assert.equal(s.feiten.omvang.waarde,'1500 orders per maand');assert.ok(!s.feiten.regio);assert.ok(!s.feiten.budget);});
@@ -41,7 +41,7 @@ check('logistieke match is nog niet gereed zonder regio/eisen',()=>assert.equal(
 const herstelsituatie=situatie(); herstelsituatie.stappen[0].zei += ' De regio is Zuid-Holland.';
 feitenBij(herstelsituatie,herstelsituatie.stappen[0].zei,{kaart:{waar:'Zuid-Holland',budget:'€5000'}});
 check('letterlijk genoemde regio wordt ook uit kaartveld hersteld',()=>{assert.equal(herstelsituatie.feiten.regio.waarde,'Zuid-Holland');assert.ok(!herstelsituatie.feiten.budget);});
-const prioriteit={...situatie(),n:5,feiten:{onderwerp:{waarde:'fulfilmentpartner'},doel:{waarde:'uitbesteden'},inhoud:{waarde:'kleding'},omvang:{waarde:'1500'},eisen:{waarde:'retouren'}},gevraagd:['onderwerp','omvang','eisen']};
+const prioriteit={...situatie(),n:5,feiten:{onderwerp:{waarde:'fulfilmentpartner'},doel:{waarde:'uitbesteden'},werk:{waarde:'verzending'},inhoud:{waarde:'kleding'},omvang:{waarde:'1500'},eisen:{waarde:'retouren'}},gevraagd:['onderwerp','omvang','eisen']};
 check('essentiële matchvraag gaat aan het eind voor optionele timing',()=>assert.equal(keurVraag({vraag:'Wanneer starten?',veld:'termijn',pills:['Nu','Later']},prioriteit,'nl').veld,'regio'));
 const rol={stappen:[{wie:'bezoeker',zei:'We need an interim operations manager to reduce warehouse delays'}],kaart:{richting:'zoekt'},feiten:{},gevraagd:[]};
 check('een functie in logistiek blijft een personeelsvraag',()=>assert.equal(vraagPlan(rol).profiel,'personeel'));
@@ -50,6 +50,11 @@ feitenBij(doelBewaren,'Wir suchen neue Webshops als Kunden.',{});
 check('expliciet uitgesproken doel blijft behouden zonder extra modelmetadata',()=>assert.equal(doelBewaren.feiten.doel.waarde,'Wir suchen neue Webshops als Kunden'));
 const mistDoel={...situatie(),feiten:{onderwerp:{waarde:'magazijnruimte'},inhoud:{waarde:'kleding'},omvang:{waarde:'1500'},regio:{waarde:'Nederland'},eisen:{waarde:'retouren'}},gevraagd:[]};
 check('een noodzakelijk doel ontbreekt nooit in het vraagplan',()=>assert.ok(vraagPlan(mistDoel).nog_nodig.includes('doel')));
+const soortBewijs={kaart:{richting:'zoekt'},feiten:{},gevraagd:[],stappen:[{wie:'bezoeker',zei:'We need an interim operations manager.'}]};
+feitenBij(soortBewijs,'We need an interim operations manager.',{kaart:{soort:'interim operations manager'}});
+check('de expliciet genoemde functie wordt niet opnieuw uitgevraagd',()=>assert.equal(soortBewijs.feiten.onderwerp.waarde,'interim operations manager'));
+const aanbodScope={...situatie(),kaart:{richting:'heeft',biedt:'Opgeslagen en verzonden'},feiten:{onderwerp:{waarde:'magazijnruimte'},doel:{waarde:'Klanten'},inhoud:{waarde:'kleding'},omvang:{waarde:'100 pallets'},regio:{waarde:'Nederland'},eisen:{waarde:'vaste afname'}},gevraagd:[]};
+check('magazijnruimte impliceert geen inpakken of verzending',()=>{assert.ok(kaartKwaliteit(aanbodScope).mist.includes('werk'));assert.ok(!criteriaKaart(aanbodScope).biedt.includes('verzonden'));assert.equal(keurVraag({veld:'termijn',vraag:'Wanneer?',pills:['Nu','Later']},aanbodScope,'nl').veld,'werk');});
 const hersteld=keurVraag({vraag:'Hoeveel orders?',veld:'omvang',pills:['Klein','Groot']},s,'nl');
 check('dubbele vraag wordt vervangen door een relevant ontbrekend criterium',()=>{assert.equal(hersteld.veld,'regio');assert.ok(hersteld.hersteld);});
 const stuk=keurVraag({vraag:'Waar?',veld:'regio',pills:['Nederland','Nederland']},s,'en');
