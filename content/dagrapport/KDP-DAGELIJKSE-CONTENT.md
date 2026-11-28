@@ -43,3 +43,10 @@ Siteteksten met eigen tokens, nooit AI Gateway. Gebruik gecachte Demand Radar bi
 ## Bewijs dat de taak echt draaide
 
 Elke ronde schrijft bron, meetvenster, uitvoering, controlelink, les, concept/live-status en eerstvolgende toets naar een gedateerde aanvulling op codex/content-dagboek. Behoud oude ref/blob-SHA en waarnemingen. Geef een zichtbaar kort Nederlands resultaat. Werk project kdp op hnkjn.me bij met chat kdp-content, link naar voorbeeld en werkelijk resultaat, zonder het KDP-winstgetal nu te overschrijven met verkeer. Werk ook het centrale log bij met wie=kdp-content. Geen uitvoering claimen op basis van alleen een geplande taak. Een gemiste ronde is zichtbaar als geen verse uitvoerregel; volgende ronde benoemt en handelt die achterstand af zonder dubbel te publiceren.
+
+
+## Uitvoerstand 28 november
+
+De drie genoemde taken zijn bijgewerkt en ingeschakeld, volgende uitvoertijden teruggelezen. PR17 is live (d8537719); beide boekdomeinen accepteren eigen meetlinks en echte302 behoudt UTM/mmc. Botcontroles staan buiten echte klikken en buiten groeicijfers. Dit is geen retroactief herstel van de oude26pins.
+
+Eerste Short is volledig gerenderd en als concept bewaard: kdp-lc-first-week-20261128. Video/copy https://hjdk-api-henq.vercel.app/voorstel?id=kdp-lc-youtube-start-1128 . Media https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/lastingchange-first-week-20261128-concept.mp4 . Lees de volledige metadata in2026-11-28-kdp-content.json. Nog geen kanaal/provider-ID of publicatie. De kanaalaanmaak wacht op het apart gevraagde akkoord op YouTube-voorwaarden. Daarna pas werkelijke kanaal-ID in de workflow zetten. De profielroute https://lastingchange.works/m/9ddv4 is voorbereid, maar nog niet op het kanaal geplaatst. Niet als individuele video-attributie gebruiken.

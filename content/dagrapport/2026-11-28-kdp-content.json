@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-28T16:28:46.520Z",
+  "round": "kdp_content_execution",
+  "authorization": {
+    "request": "Zorg dat je kunt meten dat verkeer; dagelijks nieuwe content onder KDP op hnkjn.me, CM en Videomind vooraf en geleerde terugbrengen; LastingChange YouTube-kanaal nu inrichten, dagelijks Shorts en langer bij potentie.",
+    "publication": "Channel setup requested. New unseen site/video content still first-see. Separate action-time confirmation for accepting YouTube Terms was requested and has no answer yet."
+  },
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "Lasting Change YouTube",
+    "KDP dashboard content child-metrics"
+  ],
+  "observations": [
+    {
+      "observed_at_utc": "2026-11-28T16:28:46.520Z",
+      "changes": {
+        "main_merge": {
+          "pr": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/17",
+          "sha": "d8537719b6501d7098e22d6356da1f6782a0b24b",
+          "status": "merged_and_live",
+          "proof": "Fresh protected op=content has new28Nov handover; new shortlink creation accepted both domains and actual302preserved UTM/source/mmc.",
+          "tests": [
+            "scripts/test-boeken-clickmind.mjs passed against isolated Redis7.2.4",
+            "scripts/test-paspoort.mjs passed against isolated Redis7.2.4",
+            "scripts/test-paspoort-zernio.mjs six regressions passed",
+            "Syntax checks and git diff --check passed"
+          ],
+          "limits": "Existing proposed measurement repair only. No existing pin/article/modal/payment/email/advertisement changed. No retrospective individual pin landings. Complete end-to-end real-human landing not proven by bot request."
+        },
+        "daily_tasks": [
+          {
+            "id": "Automation_8f852e3072108191aef0a233efe2a01c",
+            "title": "KDP: dagelijks artikel verbeteren",
+            "is_enabled": true,
+            "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/Curacao:20261123T234100\nRRULE:FREQ=DAILY;BYHOUR=23;BYMINUTE=41;BYSECOND=0\nEND:VEVENT",
+            "next_run_time": "2026-11-28T23:41:00-04:00",
+            "prompt_updated": true,
+            "environment_selection": "inherited",
+            "environment_status": "Inherited environment details unavailable; task requires cloud connectors/remote source and portable rendering. No claim of a specific provisioned runtime."
+          },
+          {
+            "id": "Automation_8802f2dd9b548191980419acd21da2c3",
+            "title": "KDP: video en distributie",
+            "is_enabled": true,
+            "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/Curacao:20261123T153700\nRRULE:FREQ=DAILY;BYHOUR=15;BYMINUTE=37;BYSECOND=0\nEND:VEVENT",
+            "next_run_time": "2026-11-28T15:37:00-04:00",
+            "prompt_updated": true,
+            "environment_selection": "inherited",
+            "environment_status": "Inherited environment details unavailable; task requires cloud connectors/remote source and portable rendering. No claim of a specific provisioned runtime."
+          },
+          {
+            "id": "Automation_78bd50f1177c819187c97dbc4098ab6e",
+            "title": "KDP: contentverkeer en lessen",
+            "is_enabled": true,
+            "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/Curacao:20261123T091500\nRRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=15;BYSECOND=0\nEND:VEVENT",
+            "next_run_time": "2026-11-29T09:15:00-04:00",
+            "prompt_updated": true,
+            "environment_selection": "inherited",
+            "environment_status": "Inherited environment details unavailable; task requires cloud connectors/remote source and portable rendering. No claim of a specific provisioned runtime."
+          }
+        ],
+        "kdp_dashboard": {
+          "url": "https://hnkjn.me/",
+          "project": "kdp",
+          "chat": "kdp-content",
+          "existing_financial_tasks_preserved": true,
+          "financial_goal_and_nu_unchanged": true,
+          "old_measurement_task": "obiwrz marked done with actual PR/live proof"
+        },
+        "shortlink_QA": {
+          "source": "Existing op=distmaak and real302responses, no production counters fabricated.",
+          "requests": [
+            {
+              "domain": "stockingbooks.com",
+              "id": "8f9b62c7eea9",
+              "link": "https://stockingbooks.com/m/66hwq",
+              "http": 302,
+              "kept_utm": true,
+              "mmc": true,
+              "source": "youtube",
+              "followed_to_page": false
+            },
+            {
+              "domain": "lastingchange.works",
+              "id": "af9e6b53fd33",
+              "link": "https://lastingchange.works/m/pbpw9",
+              "http": 302,
+              "kept_utm": true,
+              "mmc": true,
+              "source": "youtube",
+              "followed_to_page": false
+            }
+          ],
+          "user_agent": "ClickmindVerificationBot/1.0",
+          "project": "kdp-qa",
+          "non_scan_clicks": 0,
+          "status_stayed_concept": true,
+          "real_human_traffic_created": 0,
+          "proof": "op=diststand&project=kdp-qa after requests reports both concepts with0clicks; bot scans separate.",
+          "limits": "Router requests excluding known scanners are not guaranteed unique humans or site arrivals."
+        },
+        "profile_route": {
+          "id": "17c94cd60131",
+          "shortlink": "https://lastingchange.works/m/9ddv4",
+          "destination": "https://lastingchange.works/how-to-start-over-in-life?utm_source=youtube&utm_medium=channel_profile&utm_content=kdp-lc-profile",
+          "status": "prepared_not_in_channel_profile",
+          "attribution": "YouTube channel-profile source only, not a particular Short.",
+          "no_gateway_text_labels": true
+        }
+      },
+      "video": {
+        "id": "kdp-lc-first-week-20261128",
+        "title": "How to Start Over: Keep What Works #Shorts",
+        "project": "kdp",
+        "platform": "youtube",
+        "status": "concept_not_published",
+        "published_at": null,
+        "zernio_id": null,
+        "channel_id": null,
+        "media_url": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/media/lastingchange-first-week-20261128-concept.mp4",
+        "media_commit": "d8283f36d8449c3e05ccd5a5052a8e0da95766a7",
+        "library_file_id": "libfile_fde3_f-5609f10a1fbc8191a4e1ab3201f1bca7_c1a66c7dc6848191a282c0152b9010e3",
+        "library_file_name": "LastingChange_FirstWeek_Short_CONCEPT.mp4",
+        "library_link": "https://chatgpt.com/library?file_id=libfile_fde3_f-5609f10a1fbc8191a4e1ab3201f1bca7_c1a66c7dc6848191a282c0152b9010e3&account_id=personal",
+        "technical": {
+          "duration_seconds": 28.4,
+          "width": 1080,
+          "height": 1920,
+          "video_codec": "h264",
+          "audio_codec": "aac",
+          "subtitles": "10 burned-in English caption segments",
+          "book_cover_source": "https://m.media-amazon.com/images/I/61HnUfIUsHL._SL900_.jpg",
+          "visual_quality_check": "Opening/action/end frame typography inspected, footer spacing corrected and caption frame checked. No public upload."
+        },
+        "script": "Starting over? Don't erase what is working. Make three lists. What do I want to keep? What do I want to change? What can't I change this week? Then choose one small step you control. For example: tonight, compare three course schedules. Not, get a new job by Friday. Seven days is a planning window, not a promise of a new life. Open the free plan from our channel profile.",
+        "caption": "Starting over begins with one clear choice. Try the three-list exercise from our free seven-day reset guide: what to keep, what to change, and what you cannot change this week.\n\nOpen our channel profile for the free plan.\nSeven days is a planning window, not a promise of transformation.\n\n#StartOver #GoalSetting #LastingChange",
+        "source": "https://lastingchange.works/how-to-start-over-in-life",
+        "source_read_status": 200,
+        "clickmind_read_before": true,
+        "videomind_read_before": true,
+        "lessons_applied": [
+          "Set an explicit YouTube title; prior MyLevel uploads mistakenly used first URL line as title.",
+          "Shorts description/comment URLs are not clickable; profile CTA instead, subject to live profile check.",
+          "Repeated link QA/scans are not website visitors.",
+          "Practical example from live source, seven-day plan is a planning window and not an efficacy promise."
+        ],
+        "benchmark": "No published KDP YouTube videos before this draft. No own performance winner or claim this video will outperform.",
+        "trend_status": "Cached general gift-video trends are not proven relevant LC-week trends. Two found start-over videos were older; no current niche trend metric was invented.",
+        "primary_video_measure": "Engaged views and retention at48h/7days on equal age/topic/format, only if provider supplies them.",
+        "primary_traffic_measure": "Verified YouTube-channel registered website arrivals via profile separately; per-Short website clicks unknown.",
+        "review": {
+          "url": "https://hjdk-api-henq.vercel.app/voorstel?id=kdp-lc-youtube-start-1128",
+          "http": 200,
+          "noindex": true,
+          "complete_script_caption_verified": true,
+          "requires_exact_publication_approval": true
+        },
+        "register": {
+          "videomind_registered": true,
+          "placed": 0,
+          "clickmind_id": "video:kdp-lc-first-week-20261128",
+          "clickmind_status": "concept",
+          "numeric_performance": null
+        },
+        "production_costs": {
+          "voice_calls": 1,
+          "route": "existing protected stem route, ElevenLabs voice from own English script",
+          "exact_cost_usd": null,
+          "reason": "Production response returned audio, no exact billing. No text generation through Gateway, no paid Demand Radar/research.",
+          "music": "Own quiet synthesized tone, not third-party audio copied"
+        }
+      },
+      "youtube_setup": {
+        "channel_name": "Lasting Change",
+        "handle": "LastingChangeWorks",
+        "existing_google_owner_verified": true,
+        "account_form": "https://www.youtube.com/account",
+        "form_fields_filled": true,
+        "handle_accepted_by_form": true,
+        "create_button_enabled": true,
+        "created": false,
+        "connected_to_zernio": false,
+        "reason": "Create channel explicitly accepts YouTube Terms of Service. Asked separate action-time confirmation, not received. Button not clicked.",
+        "pending_question": "May I accept the YouTube Terms and create Lasting Change/@LastingChangeWorks?",
+        "next": "On affirmative reply: re-read current UI, create exact channel, verify channel-ID, set reviewed profile route and register matching YouTube account. No other existing channel as substitute."
+      },
+      "traffic_status": {
+        "closed_day": "2026-11-27",
+        "stockingbooks_openings": 6,
+        "previous": 14,
+        "stockingbooks_sources": {
+          "direct": 5,
+          "overig": 1
+        },
+        "stockingbooks_organic_registered": 0,
+        "lastingchange_openings": null,
+        "combined_openings": null,
+        "limits": "No new traffic growth from setup, task edits, tests or video draft."
+      },
+      "next_checks": {
+        "daily": "Next existing15:37Curacao video/distribution run on28Nov;23:41article;09:15morning29Nov.",
+        "video": "48h and7days after actual approved publication; not started.",
+        "content": "14to21days after actual approved publication and sufficient comparable data.",
+        "technical": "Live route factory/redirect confirmed; verify actual arriving event join on real approved route without scanner inflation.",
+        "risk": "Channel terms/creation and exact video approval still pending; independent article/measurement work continues."
+      },
+      "controls": "All26oldbookpins retained, old snapshots intact, no republish. Three live LC articles untouched. Kadoly-bookpin stop remains. Modal10percent control unchanged.",
+      "messages_sent": 0,
+      "ad_budget_payment_changes": 0
+    }
+  ]
+}
