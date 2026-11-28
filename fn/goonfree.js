@@ -4,6 +4,11 @@
 //   POST ?op=inzicht { d, l, ctx:{...zelfde, week:{drang,gehaald,daling,terugval,checkins}} } -> { t }  weekinzicht: 3 korte zinnen, hoogstens 3 per toestel per dag
 //   POST ?op=ev     { d, e, p, os, v, l } -> { ok }  elke stap in de app telt (Clickmind-principe), tellers per dag, unieke toestellen (HyperLogLog)
 //   GET  ?op=stand[&dagen=7][&vorm=tekst]  tellers per dag voor dashboard en rondes
+//   Kracht (Henkjan 28 nov 2026: concurrenten wegblazen met iets wat nog niet vertoond is): echte mensen op het moment zelf.
+//   POST ?op=kracht {d,l,k,dag}  iemand vanaf dag 7 stuurt kracht (vaste zinnen k1..k8, geen vrije tekst, dus veilig); hoogstens 10 per toestel per dag
+//   GET  ?op=kracht&l=nl&d=..  bij de rode knop: het nieuwste bericht van een ander (liefst van de laatste 30 minuten) {id,k,dag,min}
+//   POST ?op=kracht_hielp {id}  de ontvanger won: de afzender hoort dat zijn kracht hielp (helper-therapie: helpen helpt de helper)
+//   GET  ?op=kracht_stand&d=..  {hielp, week, nuZwaar}: hoe vaak jouw kracht hielp en hoeveel mensen het in de laatste 15 minuten zwaar hadden
 //   GET  ?op=wij&f=f1..f6  Samen (Henkjan 28 nov 2026: "Kunnen we app zelf ook laten leren en deze feedback in de app meteen terug geven"):
 //        anonieme cijfers van iedereen voor de fase van de gebruiker: hoeveel mensen nu in die fase zitten, hoeveel % met de knop wint
 //        en hoeveel de drang zakt, piekuren, welke plannen het best standhouden, wat het vaakst voor een terugval kwam.
@@ -121,7 +126,10 @@ const sleutel = x => String(x || '').replace(/[^a-z0-9_]/gi, '').slice(0, 20);
 async function telSamen(e, p, d, dag) {
   const f = fase(p.f), paren = [];
   if (e === 'fase' && f && d) { await kv.raw(['PFADD', 'gf:fase:' + dag + ':' + f, d]); await kv.raw(['EXPIRE', 'gf:fase:' + dag + ':' + f, TTL]).catch(() => {}); return; }
-  if (e === 'drang_start') { const u = Number(p.uur); if (u >= 0 && u < 24) paren.push(['gf:uur:' + dag + ':' + Math.floor(u), 1]); }
+  if (e === 'drang_start') {
+    const u = Number(p.uur); if (u >= 0 && u < 24) paren.push(['gf:uur:' + dag + ':' + Math.floor(u), 1]);
+    const km = 'gf:nu:' + minuut(Date.now()); const n = await kv.incr(km); if (n === 1) await kv.raw(['EXPIRE', km, 3600]).catch(() => {});
+  }
   if (e === 'drang_uitkomst' && typeof p.gehaald === 'boolean') {
     const w = p.gehaald ? 1 : 0, voor = Number(p.voor), na = Number(p.na);
     if (w) paren.push(['gf:w:' + dag + ':all:won', 1]);
@@ -135,6 +143,61 @@ async function telSamen(e, p, d, dag) {
   if (!paren.length) return;
   const r = await kv.incrMany(paren);
   await Promise.all(paren.map(([k, n], i) => (Number(r[i]) === n ? kv.raw(['EXPIRE', k, TTL]) : null)).filter(Boolean)).catch(() => {});
+}
+
+// Kracht: berichten in een lijst per taal, de afzender alleen als sleutel voor de terugmelding.
+const KRACHT = ['k1', 'k2', 'k3', 'k4', 'k5', 'k6', 'k7', 'k8'];
+const taal = x => (['nl', 'en', 'de'].includes(x) ? x : 'en');
+const minuut = t => new Date(t).toISOString().slice(0, 16).replace(/[-T:]/g, '');
+async function krachtZet(req, res) {
+  const b = lijf(req), d = schoon(b.d, 40), k = String(b.k || ''), dag = Math.max(0, Math.min(5000, Number(b.dag) || 0));
+  if (!d || !KRACHT.includes(k) || dag < 7) return res.status(400).json({ fout: 'niet geldig' });
+  const n = await kv.incr('gf:kr:n:' + DAG() + ':' + d);
+  if (n === 1) await kv.raw(['EXPIRE', 'gf:kr:n:' + DAG() + ':' + d, 172800]).catch(() => {});
+  if (n > 10) return res.json({ ok: false, grens: true });
+  const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6), l = taal(b.l);
+  await kv.raw(['LPUSH', 'gf:kr:' + l, JSON.stringify({ id, k, dag, t: Date.now() })]);
+  await kv.raw(['LTRIM', 'gf:kr:' + l, '0', '499']);
+  await kv.set('gf:kr:door:' + id, d, { ex: 30 * 86400 });
+  await kv.incr('gf:ev:' + DAG() + ':kracht_gestuurd').catch(() => {});
+  return res.json({ ok: true, id });
+}
+async function krachtHaal(req, res) {
+  const l = taal(req.query.l), d = schoon(req.query.d, 40);
+  const lijst = (await kv.raw(['LRANGE', 'gf:kr:' + l, '0', '199']).catch(() => [])) || [];
+  const items = lijst.map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(Boolean);
+  if (!items.length) return res.json({});
+  const vers = items.filter(x => Date.now() - x.t < 30 * 60000);
+  const pool = vers.length ? vers : items;
+  for (let i = 0; i < 4; i++) {
+    const x = pool[Math.floor(Math.random() * pool.length)];
+    const door = d ? await kv.get('gf:kr:door:' + x.id).catch(() => null) : null;
+    if (door && String(door) === d && pool.length > 1) continue;
+    return res.json({ id: x.id, k: x.k, dag: x.dag, min: Math.max(1, Math.round((Date.now() - x.t) / 60000)) });
+  }
+  return res.json({});
+}
+async function krachtHielp(req, res) {
+  const b = lijf(req), id = schoon(b.id, 20).replace(/[^a-z0-9]/gi, '');
+  const door = id ? await kv.get('gf:kr:door:' + id).catch(() => null) : null;
+  if (!door) return res.json({ ok: false });
+  const kw = 'gf:kr:hulp:' + door + ':' + DAG();
+  const [, n] = await Promise.all([kv.incr('gf:kr:hulp:' + door), kv.incr(kw)]);
+  if (n === 1) await kv.raw(['EXPIRE', kw, 8 * 86400]).catch(() => {});
+  await kv.incr('gf:ev:' + DAG() + ':kracht_hielp').catch(() => {});
+  return res.json({ ok: true });
+}
+async function krachtStand(req, res) {
+  const d = schoon(req.query.d, 40);
+  const dagen = [...Array(7)].map((_, i) => new Date(Date.now() - i * 86400000).toISOString().slice(0, 10));
+  const minuten = [...Array(15)].map((_, i) => 'gf:nu:' + minuut(Date.now() - i * 60000));
+  const v = await kv.mget(...(d ? ['gf:kr:hulp:' + d, ...dagen.map(x => 'gf:kr:hulp:' + d + ':' + x)] : []), ...minuten);
+  const getal = x => Number(x) || 0;
+  const uit = {};
+  if (d) { uit.hielp = getal(v[0]); uit.week = v.slice(1, 8).reduce((a, x) => a + getal(x), 0); }
+  const nu = v.slice(d ? 8 : 0).reduce((a, x) => a + getal(x), 0);
+  if (nu >= 3) uit.nuZwaar = nu;
+  return res.json(uit);
 }
 
 const PLANNEN = ['night', 'morning', 'alone', 'weekend', 'bed', 'toilet', 'desk', 'social', 'stress', 'bored', 'lonely', 'tired', 'sad', 'horny'];
@@ -219,6 +282,10 @@ export default async function handler(req, res) {
     if (op === 'ev' && req.method === 'POST') return await ev(req, res);
     if (op === 'inzicht' && req.method === 'POST') return await inzicht(req, res);
     if (op === 'wij') return await wij(req, res);
+    if (op === 'kracht' && req.method === 'POST') return await krachtZet(req, res);
+    if (op === 'kracht') return await krachtHaal(req, res);
+    if (op === 'kracht_hielp' && req.method === 'POST') return await krachtHielp(req, res);
+    if (op === 'kracht_stand') return await krachtStand(req, res);
     if (op === 'stand') return await stand(req, res);
     if (op === 'gezond') return res.json({ ok: true, app: 'goonfree', v: 1 });
     return res.status(404).json({ fout: 'onbekende op' });
