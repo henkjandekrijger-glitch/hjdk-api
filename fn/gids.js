@@ -774,6 +774,18 @@ export default async function handler(req, res) {
       res.setHeader('content-type', 'text/html; charset=utf-8');
       return res.status(200).send(kop('Voorstel: 5 cadeauvragen waar AI geen antwoord geeft | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + LG.gatenHtml({ cat, thuis, euro, esc, aan, toegestaan: aanbevelingToegestaan, GIDSEN }) + '</main></body></html>');
     }
+    if (op === 'zoekgids') { // 28 nov 2026 (Henkjan: "Maak hiervoor content zodat we organisch pakken en zet de producten op die pagina . ... Laat me UX zien hier ." en "Kijk vooral ook welke vragen LLMS stellen"): concept-gidsen op zoekvraag en AI-vraag (lib/gidsen-zoek.js). Alleen op de beschermde host, noindex, niets live tot Henkjans ja
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('content-type', 'text/html; charset=utf-8');
+      const ZG = await import('../lib/gidsen-zoek.js'); const cat = await catalogus(); const s = String(q.get('voorbeeld') || '');
+      if (s) { const nieuw = ZG.nieuweGids(s), g0 = nieuw || (ZG.SCHERP[s] && GIDSEN[s]); if (!g0) return res.status(404).send('Niet gevonden');
+        const g1 = ZG.zoekToepas(g0, { vul: LG.vul, cat, thuis, euro, toegestaan: aanbevelingToegestaan }) || g0;
+        let h = await gidsPagina(nieuw ? Object.assign({}, g1, { bronnen: [] }) : g1);
+        h = h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">').replace(/<link rel="canonical"[^>]*>/, '').replace(/<figure[\s\S]*?<\/figure>/, '').replace(/<script src="https:\/\/go\.kadoly\.com\/cm\.js"[^>]*><\/script>/, '').replace(/<script>\(function\(\)\{var g="[^"]*",s=\{\};[\s\S]*?<\/script>/, '');
+        if (nieuw) h = h.replace('<h2 id="bestellen">', ZG.zoekBronnenHtml(nieuw.bronnen, esc) + '\n<h2 id="bestellen">');
+        return res.status(200).send(h.replace('<main class="wrap">', `<main class="wrap"><p class="meta"><b>Voorbeeld, nog niet live.</b> ${nieuw ? 'Nieuwe gids.' : 'Bestaande gids met de AI-vraag als eerste vraag en een eerste keus bovenaan.'} <a href="/api/gids?op=zoekgids">Terug naar het voorstel</a></p>`)); }
+      return res.status(200).send(kop('Voorstel: gidsen op zoekvraag en AI-vraag | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + ZG.zoekHtml({ cat, thuis, euro, esc, GIDSEN }) + '</main></body></html>');
+    }
     if (op === 'vraagkansen') { // Henkjan 10 nov 2026: onderwerpen die ChatGPT naar boven haalt en die in de winkel komen. Zoekvraag (Demand Radar) naast aanbod en gidsen. Cron 00:20 UTC met vers=1.
       const { vraagKansen } = await import('../lib/kadoly-vraag.js');
       const r = await vraagKansen({ vers: q.get('vers') === '1', catItems: Object.values(await catalogus()) });
