@@ -5,7 +5,7 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-27T19:40:31.871Z",
+  "updated_at_utc": "2026-11-28T03:49:50.958Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
@@ -308,6 +308,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03305e0c584efce0d64de2",
+          "published_at_utc": "2026-11-22T18:11:48.079Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.401,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 13,
+          "saves": 1,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -328,7 +348,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DNQ61ZJM-we-regels.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319653361",
@@ -509,6 +529,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b033065c4d17d4a0f103be1",
+          "published_at_utc": "2026-11-22T18:11:52.586Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.401,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -529,7 +569,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DJQLBM75-sok-tiener.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b033065c4d17d4a0f103be1",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -833,6 +873,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03306970f37227beb16166",
+          "published_at_utc": "2026-11-22T18:11:57.788Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.401,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -853,7 +913,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0B5KV79N1-enoch-wat.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319653370",
@@ -1165,6 +1225,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b03306ec4d17d4a0f103bf2",
+          "published_at_utc": "2026-11-22T18:12:02.901Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.401,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -1185,7 +1265,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DDBTXC9J-apo-14.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319653376",
@@ -1378,6 +1458,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344b6783be3b4addd3e43",
+          "published_at_utc": "2026-11-22T19:38:34.357Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "pending",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -1398,7 +1498,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DNDQZ3G3-we-ruzie.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b0344b6783be3b4addd3e43",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -1702,6 +1802,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344ba9978cd4d9a1ca580",
+          "published_at_utc": "2026-11-22T19:38:38.599Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -1722,7 +1842,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DMR1MSSK-sok-haar.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319655654",
@@ -2034,6 +2154,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344bf56bdc437db134475",
+          "published_at_utc": "2026-11-22T19:38:43.497Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -2054,7 +2194,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DK3CSYXW-we-dad.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319655656",
@@ -2247,6 +2387,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0344c49978cd4d9a1ca59e",
+          "published_at_utc": "2026-11-22T19:38:47.021Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 5.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "pending",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -2267,7 +2427,7 @@
       "verified_media_urls": [
         "https://bookstuffers.com/pin/B0DMP31FSP-sok-gids-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b0344c49978cd4d9a1ca59e",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -2549,6 +2709,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b049678d511266d6a856bec",
+          "published_at_utc": "2026-11-23T19:39:39.054Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 4.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 21,
+          "saves": 1,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -2569,7 +2749,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DN65PRD9-sok-puzzel.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319684937",
@@ -2866,6 +3046,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b04967b5d67d2299ad22eb9",
+          "published_at_utc": "2026-11-23T19:39:42.100Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 4.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -2886,7 +3086,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319684940",
@@ -3183,6 +3383,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b04967fd511266d6a856c13",
+          "published_at_utc": "2026-11-23T19:39:45.169Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 4.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 11,
+          "saves": 1,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -3203,7 +3423,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319684942",
@@ -3493,6 +3713,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b049681d511266d6a856c28",
+          "published_at_utc": "2026-11-23T19:39:48.379Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 4.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 8,
+          "saves": 1,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -3513,7 +3753,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0F1SM1L5J-lc-jaar.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319684943",
@@ -3690,6 +3930,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7df7a6d18398505d60a",
+          "published_at_utc": "2026-11-24T19:39:15.178Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -3710,7 +3970,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DNCLDHD6-ss-gen.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b05e7df7a6d18398505d60a",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -3932,6 +4192,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7e46cf47dfab007ad2f",
+          "published_at_utc": "2026-11-24T19:39:20.434Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 17,
+          "saves": 1,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -3952,7 +4232,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DMNGLKLT-sok-gids-haar.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319713890",
@@ -4182,6 +4462,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7e952ad165c265fa790",
+          "published_at_utc": "2026-11-24T19:39:24.246Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -4202,7 +4502,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0F1SM1L5J-lc-66.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319713892",
@@ -4432,6 +4732,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05e7ec6cf47dfab007ad4b",
+          "published_at_utc": "2026-11-24T19:39:28.690Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.341,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -4452,7 +4772,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0F1SM1L5J-lc-stappen.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319713895",
@@ -4689,6 +5009,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05f89c3ea213a32f7d5a66",
+          "published_at_utc": "2026-11-24T20:54:16.973Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.289,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -4709,7 +5049,7 @@
       "verified_media_urls": [
         "https://media.zernio.com/media/1795553433810_03f8479c2b184ccd_2026-11-23-pin-woordzoekers.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319715665",
@@ -4894,6 +5234,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b05f9fdacf4072f8e620181",
+          "published_at_utc": "2026-11-24T20:56:31.789Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 3.287,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "pending",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -4914,7 +5274,7 @@
       "verified_media_urls": [
         "https://media.zernio.com/media/1795553786180_79140876bf87bb5e_B0HRGNJ7CY-sok-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b05f9fdacf4072f8e620181",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -5125,6 +5485,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b07397bcb651a6eadc070bb",
+          "published_at_utc": "2026-11-25T19:39:43.777Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 2.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 0,
+          "saves": 0,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -5146,7 +5526,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0B5KV79N1-enoch-wat.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319741575",
@@ -5351,6 +5731,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b073986be3f02dcc0ff44d7",
+          "published_at_utc": "2026-11-25T19:39:54.507Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 2.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": 0,
+          "saves": 0,
+          "provider_generic_clicks": 0,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "synced",
+          "delta_from_previous": null,
+          "reason": "No explicit same-window outgoing click definition; no performance winner.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -5372,7 +5772,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DK3CSYXW-we-dad.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319741582",
@@ -5577,6 +5977,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b073998b436184d7f495f0b",
+          "published_at_utc": "2026-11-25T19:40:13.311Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 2.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -5598,7 +6018,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DDBTXC9J-apo-14.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319741588",
@@ -5795,6 +6215,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Exposure and saves observed; no verified outgoing website traffic or matched-period winner.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b0739a3be3f02dcc0ff4563",
+          "published_at_utc": "2026-11-25T19:40:23.516Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 2.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
@@ -5816,7 +6256,7 @@
       "verified_media_urls": [
         "https://stockingbooks.com/pin/B0DK3CSYXW-sok-hem.png"
       ],
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b0739a3be3f02dcc0ff4563",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -5896,6 +6336,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b088afe6edb5e8d51c8b5eb",
+          "published_at_utc": "2026-11-26T19:39:45.452Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 1.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -5903,7 +6363,7 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b088afe6edb5e8d51c8b5eb",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -5983,6 +6443,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b088af9810e459fa7791c82",
+          "published_at_utc": "2026-11-26T19:39:41.626Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 1.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -5990,7 +6470,7 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "clickmind": {
         "id": "bookpin:6b088af9810e459fa7791c82",
         "registered_at_utc": "2026-11-27T13:37:51.129Z",
@@ -6070,6 +6550,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b088af5e1654dc25d265332",
+          "published_at_utc": "2026-11-26T19:39:37.175Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 1.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -6077,7 +6577,7 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319768464",
@@ -6165,6 +6665,26 @@
           "delta_reason": "Only matched explicitly defined windows/cumulative snapshots may be subtracted; period not returned.",
           "lesson": "Pending/error is unknown, not zero. No conclusion that the pin was removed.",
           "next_choice": "Keep historical pin and control; no new bookpins on kadolyshop while boekpinsUit=true. Next daily round reread this exact ID and verify metric definition before optimization."
+        },
+        {
+          "observed_at_utc": "2026-11-28T03:47:26.864Z",
+          "source": "Zernio get_post_analytics",
+          "provider_post_id": "6b088af06edb5e8d51c8b5af",
+          "published_at_utc": "2026-11-26T19:39:33.155Z",
+          "publication_precision": "provider timestamp previously verified",
+          "age_days": 1.34,
+          "period": null,
+          "definition": "Per-post provider snapshot with unspecified window. Generic clicks not verified organic OUTBOUND_CLICK.",
+          "impressions": null,
+          "saves": null,
+          "provider_generic_clicks": null,
+          "organic_outbound_clicks": null,
+          "website_per_pin_openings": null,
+          "status": "INVALID_ARGUMENT",
+          "delta_from_previous": null,
+          "reason": "Pending or provider error is unknown, not zero; previous observation preserved.",
+          "lesson": "No reliable individual website contribution or matched-age/topic/board winner established.",
+          "next_choice": "Keep control/history; no new bookpins on Kadoly while boekpinsUit=true. Next daily reading uses same ID and must verify window and outbound semantics before pinuitkomst."
         }
       ],
       "lesson": {
@@ -6172,7 +6692,7 @@
         "next_action": "Nextscheduledround get verified providerwindow and outbound definition, no duplicate publishing"
       },
       "registration_is_not_exact_publication_time": false,
-      "last_checked_at_utc": "2026-11-27T19:40:31.871Z",
+      "last_checked_at_utc": "2026-11-28T03:49:50.958Z",
       "native_recheck": {
         "at": "2026-11-27T19:40:31.871Z",
         "pin_id": "271060471319768463",

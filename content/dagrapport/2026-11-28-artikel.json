@@ -1,0 +1,986 @@
+{
+  "schema_version": 1,
+  "round": "article",
+  "observed_at_utc": "2026-11-28T03:49:50.958Z",
+  "local_workday_curacao": "2026-11-27",
+  "utc_date": "2026-11-28",
+  "reporting_period": {
+    "start": "2026-11-27T00:00:00Z",
+    "end_exclusive": "2026-11-28T00:00:00Z",
+    "definition": "Last fully closed UTC day, not local workday."
+  },
+  "sources": {
+    "dry_report": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1&vorm=json",
+      "http": 200,
+      "response": {
+        "droog": true,
+        "waargenomen": "2026-11-28T03:43:35.535Z",
+        "dag": {
+          "meetdag": "2026-11-27",
+          "meetperiode": {
+            "vanaf": "2026-11-27T00:00:00.000Z",
+            "totExclusief": "2026-11-28T00:00:00.000Z"
+          },
+          "site": {
+            "bs": {
+              "paginaOpeningen": 6,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 5,
+                "overig": 1
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 6
+                }
+              ],
+              "amazonVerzoeken": 38
+            },
+            "lc": {
+              "paginaOpeningen": null,
+              "organischeOpeningen": null,
+              "perBron": null,
+              "paginas": [],
+              "amazonVerzoeken": null
+            }
+          },
+          "amazonVerzoeken": 38,
+          "pdfVerkoop": null,
+          "leesstatus": {
+            "bs:tel:2026-11-27": "gelezen",
+            "bs:klik:2026-11-27": "gelezen",
+            "bs:gosrc:2026-11-27": "gelezen",
+            "verkoop": "ontbreekt"
+          }
+        },
+        "vorige": {
+          "meetdag": "2026-11-26",
+          "meetperiode": {
+            "vanaf": "2026-11-26T00:00:00.000Z",
+            "totExclusief": "2026-11-27T00:00:00.000Z"
+          },
+          "site": {
+            "bs": {
+              "paginaOpeningen": 14,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 14
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 14
+                }
+              ],
+              "amazonVerzoeken": 43
+            },
+            "lc": {
+              "paginaOpeningen": 2,
+              "organischeOpeningen": 0,
+              "perBron": {
+                "direct": 2
+              },
+              "paginas": [
+                {
+                  "pad": "/",
+                  "openingen": 2
+                }
+              ],
+              "amazonVerzoeken": null
+            }
+          },
+          "amazonVerzoeken": 43,
+          "pdfVerkoop": null,
+          "leesstatus": {
+            "bs:tel:2026-11-26": "gelezen",
+            "bs:klik:2026-11-26": "gelezen",
+            "bs:gosrc:2026-11-26": "gelezen",
+            "verkoop": "ontbreekt"
+          }
+        },
+        "definitie": "Geregistreerde bronopeningen, geen unieke personen. Paginatotalen bevatten ook intern doorbladeren. Amazonverzoeken zijn ruwe redirects, geen verkoop.",
+        "beperkingen": [
+          "Ontbrekende bron of site is onbekend, geen expliciete nul.",
+          "Geen gezamenlijke per-pin landingmeting of conversiepercentage.",
+          "Alleen bekende publieke paginapaden worden getoond."
+        ]
+      }
+    },
+    "radar": {
+      "url": "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=jaar-reset&cc=US",
+      "cached_at": "2026-11-23T00:14:01.941Z",
+      "exact_term": {
+        "k": "goal setting worksheet",
+        "v": 2400,
+        "y": -34,
+        "i": null,
+        "c": 1.58,
+        "cp": 80,
+        "o": "doelen",
+        "m": [
+          1900,
+          2400,
+          2400,
+          1300,
+          1300,
+          1600,
+          1900,
+          2400,
+          1900,
+          4400,
+          2900,
+          2400
+        ]
+      },
+      "broad_term": {
+        "k": "goal setting",
+        "v": 165000,
+        "y": 1258,
+        "i": null,
+        "c": 4.41,
+        "cp": 0,
+        "o": "doelen",
+        "m": [
+          201000,
+          450000,
+          135000,
+          135000,
+          201000,
+          550000,
+          74000,
+          22200,
+          14800,
+          22200,
+          12100,
+          12100
+        ]
+      },
+      "usage": "2400 exact estimated monthly US term; synonyms and165000broad term not summed or forecast. Fullmarketread recovered exactmonthseries after firsttop60summary omittedit. Same23Novcache,no newpurchase.",
+      "cost_field_is_historical": 0.1
+    },
+    "article_source": {
+      "path": "lib/lcfunnel.js",
+      "blob": "9ce5514c543535d5c6849cfc935ed56267155f1a",
+      "validation": {
+        "errors": [],
+        "words": 1393,
+        "sections": 7,
+        "questions": 5,
+        "titleLength": 49,
+        "descLength": 141,
+        "source_blob": "9ce5514c543535d5c6849cfc935ed56267155f1a"
+      }
+    },
+    "google": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=lastingchange&dagen=7",
+      "response": {
+        "ok": true,
+        "ververst": null,
+        "site": "lastingchange",
+        "dagen": 7,
+        "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "perDag": [],
+        "zoekvragen": [],
+        "aantal": 0
+      },
+      "interpretation": "No returned query rows is unknown searchreach, not zero site clicks."
+    },
+    "lc_health": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+      "response": {
+        "ok": true,
+        "pdfKnop": false,
+        "pdfBestand": true,
+        "mail": false,
+        "uitleg": "PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon",
+        "fouten": []
+      }
+    }
+  },
+  "traffic": {
+    "stocking": {
+      "day": "2026-11-27",
+      "registered_openings": 6,
+      "previous_day": 14,
+      "per_source": {
+        "direct": 5,
+        "overig": 1
+      },
+      "organic_registered": 0
+    },
+    "lastingchange": {
+      "registered_openings": null,
+      "previous_day": 2,
+      "reason": "No LCsource row; do not treat missing as0."
+    },
+    "combined_current": null,
+    "combined_previous": 16,
+    "raw_amazon_requests": 38,
+    "raw_amazon_previous": 43,
+    "pdf_sales": null,
+    "limitations": [
+      "Openings not unique people",
+      "Raw Amazon requests not clickers/conversion/sales",
+      "LCmissing means combined progress to160not calculable",
+      "No compatible7dayorganicbaseline"
+    ],
+    "target": {
+      "date": "2026-12-04",
+      "registered_openings": 160,
+      "status": "Ambitious working goal, no evidence on track; longterm30xorganic ambition separate."
+    }
+  },
+  "article": {
+    "slug": "goal-setting-worksheet",
+    "title": "Goal Setting Worksheet: One Goal, One Weekly Plan",
+    "status": "concept",
+    "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=goal-setting-worksheet&concept=1",
+    "idea_shown_in_chat": true,
+    "body_file": "content/dagrapport/2026-11-28-goal-setting-worksheet.json",
+    "purpose": "Copyable13promptworksheet plus5reviewquestions and workedexample; distinct resource intent from reset/lifeadmin/habitduration/bookadvice.",
+    "native_format": "SingleEnglishwebsiteguide,not copiedPin/Reel; no fabricated trend endorsement.",
+    "mode_before": "eerst-zien",
+    "mode_after": "eerst-zien",
+    "new_article_this_run": 1,
+    "live_slugs_preserved": [
+      "how-to-stop-procrastinating",
+      "how-to-start-over-in-life",
+      "i-wasted-another-year"
+    ],
+    "server_response": {
+      "http": 200,
+      "status": "concept"
+    },
+    "checks": {
+      "article_validation": {
+        "errors": [],
+        "words": 1393,
+        "sections": 7,
+        "questions": 5,
+        "titleLength": 49,
+        "descLength": 141,
+        "source_blob": "9ce5514c543535d5c6849cfc935ed56267155f1a"
+      },
+      "preview_http": 200,
+      "noindex": "noindex, nofollow",
+      "not_in_live_sitemap": true,
+      "paperback_route": "Existing /api/bs?site=lc&op=go&a=B0F1SM1L5J verified in HTML, not clicked to avoid synthetic redirectcounts",
+      "pdf_checkout": false,
+      "live_put_called": false
+    },
+    "purchase": "Free prompts first. Optionalexistingpaperback only. PDF checkout/kopermail unavailable and unchanged. Existingtemplatebookrating wasn't newlyverified; reviewbeforepublicapproval."
+  },
+  "concurrency": {
+    "start_inventory_slugs": [
+      "how-to-stop-procrastinating",
+      "how-to-start-over-in-life",
+      "i-wasted-another-year",
+      "how-to-get-your-life-together",
+      "how-long-does-it-take-to-form-a-habit",
+      "why-self-improvement-books-dont-work",
+      "goal-setting"
+    ],
+    "end_inventory": [
+      {
+        "slug": "how-to-stop-procrastinating",
+        "titel": "How to Stop Procrastinating: 7 Steps and a 2-Minute Plan",
+        "datum": "2026-11-23",
+        "status": "live",
+        "zoekterm": "procrastination",
+        "volume": 135000,
+        "gerelateerd": []
+      },
+      {
+        "slug": "how-to-start-over-in-life",
+        "titel": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+        "datum": "2026-11-24",
+        "status": "live",
+        "zoekterm": "how to start over in life",
+        "volume": 590,
+        "gerelateerd": [
+          "how-to-stop-procrastinating"
+        ]
+      },
+      {
+        "slug": "i-wasted-another-year",
+        "titel": "I Wasted Another Year: A Fair Review and One Next Step",
+        "datum": "2026-11-25",
+        "status": "live",
+        "zoekterm": "i wasted my life",
+        "volume": 210,
+        "gerelateerd": [
+          "how-to-start-over-in-life",
+          "how-to-stop-procrastinating"
+        ]
+      },
+      {
+        "slug": "how-to-get-your-life-together",
+        "titel": "How to Get Your Life Together: A Life Admin Checklist",
+        "datum": "2026-11-26",
+        "status": "concept",
+        "zoekterm": "how to get your life together",
+        "volume": 720,
+        "gerelateerd": [
+          "how-to-start-over-in-life",
+          "i-wasted-another-year",
+          "how-to-stop-procrastinating"
+        ]
+      },
+      {
+        "slug": "how-long-does-it-take-to-form-a-habit",
+        "titel": "How Long Does It Take to Form a Habit? About 66 Days, Not 21",
+        "datum": "2026-11-26",
+        "status": "concept",
+        "zoekterm": "habit formation",
+        "volume": 135000,
+        "gerelateerd": [
+          "how-to-stop-procrastinating",
+          "how-to-start-over-in-life",
+          "i-wasted-another-year"
+        ]
+      },
+      {
+        "slug": "why-self-improvement-books-dont-work",
+        "titel": "Self Improvement Books: Why They Don't Work and What Does",
+        "datum": "2026-11-27",
+        "status": "concept",
+        "zoekterm": "self improvement books",
+        "volume": 60500,
+        "gerelateerd": [
+          "how-long-does-it-take-to-form-a-habit",
+          "how-to-stop-procrastinating",
+          "how-to-get-your-life-together"
+        ]
+      },
+      {
+        "slug": "goal-setting",
+        "titel": "Goal Setting: How to Set Goals You Actually Reach (5 Steps)",
+        "datum": "2026-11-28",
+        "status": "concept",
+        "zoekterm": "goal setting",
+        "volume": 165000,
+        "gerelateerd": [
+          "how-long-does-it-take-to-form-a-habit",
+          "how-to-stop-procrastinating",
+          "how-to-start-over-in-life"
+        ]
+      },
+      {
+        "slug": "goal-setting-worksheet",
+        "titel": "Goal Setting Worksheet: One Goal, One Weekly Plan",
+        "datum": "2026-11-28",
+        "status": "concept",
+        "zoekterm": "goal setting worksheet",
+        "volume": 2400,
+        "gerelateerd": [
+          "how-to-start-over-in-life",
+          "how-to-stop-procrastinating",
+          "how-to-get-your-life-together"
+        ]
+      }
+    ],
+    "concurrent_new_other_slug": "goal-setting",
+    "detected_during_final_verification": true,
+    "inspection": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=goal-setting&concept=1",
+      "http": 200,
+      "description": "General5stepgoalsettingguide; no copyableworksheet found in headings/paragraphscan."
+    },
+    "decision": "Preserve otherworker draft and all livecontent. Resource sheet and broadguide remain concepts. Do not automaticallypublishboth; review consolidation/internalresourcepath first. This account authoredone,not two."
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.socmot.uni-konstanz.de/sites/default/files/06_Gollwitzer_Sheeran_Implementation_Intentions_And_Goal.pdf",
+      "authors": "Gollwitzer and Sheeran",
+      "year": 2006,
+      "verified": "Authoruniversity publicationpage plus fullPDF firstpages read",
+      "claim": "Situation-responseplanning support, no promised successrate or optimal sessionlength.",
+      "limitations": "Review did not test this worksheet,workbook or weeklyplan."
+    },
+    {
+      "url": "https://www.apa.org/pubs/journals/releases/bul-bul0000025.pdf",
+      "authors": "Harkin and colleagues",
+      "year": 2016,
+      "verified": "FullpublisherPDFabstract andlimitations checked",
+      "claim": "Monitoring interventions improved goalattainment onaverage.",
+      "limitations": "Limitednonhealthdomaincoverage,moderatoruncertainty and possibleexpectationeffects; ourworksheetunvalidated. Publiccopyhas no numeric effectguarantee."
+    }
+  ],
+  "research_shared": {
+    "local_day": "2026-11-27",
+    "reused_maker_case": "Drawnames/Pinterest resource-distribution analysis already in27Novtrafficplan; not a newmakertrafficcase.",
+    "concrete_application": "Usefulfree worksheet beforebookCTA. No newsletter signup, outreach, email or false trafficresult."
+  },
+  "learning": {
+    "largest_leak": "No reliable measured organic arrivals plus LCdaymissing and pausedbookPinterest channel.",
+    "hypothesis": "A useful exactqueryworksheet may win relevant organic searchclicks morecredibly than anotherbroadadvicepage; untested.",
+    "primary_metric": "GSC clicks to exact newURL after approvedpublication",
+    "secondary": "Registered sourceopenings separately; worksheetuse/action only if actualeventsavailable.",
+    "control": "Existing live startover page and siteexperiments keptunchanged; differenttopic means directional comparison,not randomizedAB.",
+    "evaluation": "14to21days after actualapprovedpublication with sufficient comparablequeryexposure; clocknotstartedforconcept.",
+    "technical_check": "ExistingClickmindrouteproposal remains reviewonly; verify workingjoin before perpin attribution."
+  },
+  "pinterest": {
+    "checked": 26,
+    "snapshots": [
+      {
+        "post_id": "6b03305e0c584efce0d64de2",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b03305e0c584efce0d64de2",
+          "content": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+          "status": "published",
+          "published_at": "2026-11-22T18:11:48.079Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 13,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 7.69
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319653361/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 13,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 1,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 7.69
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b033065c4d17d4a0f103be1",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b03306970f37227beb16166",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b03306ec4d17d4a0f103bf2",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b0344b6783be3b4addd3e43",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b0344b6783be3b4addd3e43",
+          "content": "Funny white elephant gift idea under $5: Think and Stink, a 40-page bathroom word search. Flat to wrap, nobody guesses it, and it gets a laugh when it is opened. White elephant gift ideas, gag gift, Yankee swap, Dirty Santa.",
+          "status": "published",
+          "published_at": "2026-11-22T19:38:34.357Z",
+          "sync_status": "pending",
+          "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+          "metrics": {
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 0
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "sync_status": "pending"
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b0344ba9978cd4d9a1ca580",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b0344bf56bdc437db134475",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b0344c49978cd4d9a1ca59e",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b0344c49978cd4d9a1ca59e",
+          "content": "Stocking stuffer ideas for men, dad and husband: useful, edible or funny. The five-slot rule and a budget planner. Featured: Beer Tasting Journal, $4.99.",
+          "status": "published",
+          "published_at": "2026-11-22T19:38:47.021Z",
+          "sync_status": "pending",
+          "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+          "metrics": {
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 0
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "sync_status": "pending"
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b049678d511266d6a856bec",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b049678d511266d6a856bec",
+          "content": "Word Search for Christmas (2 in 1): $4.99, 110 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+          "status": "published",
+          "published_at": "2026-11-23T19:39:39.054Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 21,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 4.76
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319684937/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 21,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 1,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 4.76
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b04967b5d67d2299ad22eb9",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b04967fd511266d6a856c13",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b04967fd511266d6a856c13",
+          "content": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+          "status": "published",
+          "published_at": "2026-11-23T19:39:45.169Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 11,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 9.09
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319684942/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 11,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 1,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 9.09
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b049681d511266d6a856c28",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b049681d511266d6a856c28",
+          "content": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+          "status": "published",
+          "published_at": "2026-11-23T19:39:48.379Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 8,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 12.5
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319684943/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 8,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 1,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 12.5
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b05e7df7a6d18398505d60a",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b05e7e46cf47dfab007ad2f",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b05e7e46cf47dfab007ad2f",
+          "content": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Cozy Christmas Sudoku: Relaxing Easy and Medium, $4.99.",
+          "status": "published",
+          "published_at": "2026-11-24T19:39:20.434Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 17,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 1,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 5.88
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319713890/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 17,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 1,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 5.88
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b05e7e952ad165c265fa790",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b05e7ec6cf47dfab007ad4b",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b05f89c3ea213a32f7d5a66",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b05f9fdacf4072f8e620181",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b05f9fdacf4072f8e620181",
+          "content": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+          "status": "published",
+          "published_at": "2026-11-24T20:56:31.789Z",
+          "sync_status": "pending",
+          "message": "Analytics are being synced from the platform. Please try again in a few moments.",
+          "metrics": {
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 0
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "sync_status": "pending"
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b07397bcb651a6eadc070bb",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b07397bcb651a6eadc070bb",
+          "content": "The Book of Enoch explained: who wrote it, the Watchers and the giants, why Jude 1:14-15 quotes it, why it is not in the Bible, and how 1, 2 and 3 Enoch differ.",
+          "status": "published",
+          "published_at": "2026-11-25T19:39:43.777Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 0
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319741575/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 0,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 0,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b073986be3f02dcc0ff44d7",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "post_id": "6b073986be3f02dcc0ff44d7",
+          "content": "Dad Jokes You Never Asked For: 400 jokes in 103 pages for $8.99. The groan-out-loud white elephant gift for men, dads and coworkers. White elephant gifts for men under $10.",
+          "status": "published",
+          "published_at": "2026-11-25T19:39:54.507Z",
+          "sync_status": "synced",
+          "metrics": {
+            "impressions": 0,
+            "reach": 0,
+            "likes": 0,
+            "comments": 0,
+            "shares": 0,
+            "saves": 0,
+            "clicks": 0,
+            "views": 0,
+            "engagement_rate": 0
+          },
+          "platforms": [
+            {
+              "platform": "pinterest",
+              "username": "kadolyshop",
+              "status": "published",
+              "post_url": "https://www.pinterest.com/pin/271060471319741582/",
+              "sync_status": "synced",
+              "metrics": {
+                "impressions": 0,
+                "reach": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0,
+                "saves": 0,
+                "clicks": 0,
+                "views": 0,
+                "engagement_rate": 0
+              }
+            }
+          ]
+        }
+      },
+      {
+        "post_id": "6b073998b436184d7f495f0b",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b0739a3be3f02dcc0ff4563",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b088afe6edb5e8d51c8b5eb",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b088af9810e459fa7791c82",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b088af5e1654dc25d265332",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      },
+      {
+        "post_id": "6b088af06edb5e8d51c8b5af",
+        "at_utc": "2026-11-28T03:47:26.864Z",
+        "response": {
+          "error_code": "INVALID_ARGUMENT"
+        }
+      }
+    ],
+    "numeric_definition": "Synced impressions/saves kept; pending/errorsnull; genericclicksnotOUTBOUND_CLICK",
+    "state_counts": {
+      "synced": 7,
+      "INVALID_ARGUMENT": 16,
+      "pending": 3
+    },
+    "publication_gate": {
+      "account": "6afb8a5d86e8bb18f844fc95",
+      "boekpinsUit": true,
+      "pins": [],
+      "reden": "boekpins staan uit voor dit account (kv bs:pinuit); plaats niets",
+      "controle": {
+        "afkoeldagen": 14,
+        "bron": "geregistreerde boekplaatsingen; geen volledige providerplanning",
+        "reservering": false
+      }
+    },
+    "new_posts": [],
+    "pinuitkomst_written": false
+  },
+  "clickmind": {
+    "id": "bookdraft:goal-setting-worksheet",
+    "read_before": "unknownid",
+    "write": {
+      "ok": true,
+      "id": "bookdraft:goal-setting-worksheet",
+      "nieuw": true,
+      "paspoort": {
+        "medium": "site",
+        "voor": {
+          "project": "content",
+          "pagina": "lastingchange.works/goal-setting-worksheet",
+          "publiek": "us english adults planning one personal goal"
+        },
+        "doel": {
+          "soort": "actie",
+          "getal": null,
+          "op": "",
+          "afgeleid": false
+        }
+      },
+      "regels": [],
+      "briefing": "https://hjdk-api-henq.vercel.app/api/mm?op=briefing&medium=site&project=content&doel=actie"
+    },
+    "numbers_written": false,
+    "status": "concept",
+    "duplicate_import_warning": "Manualandautomaticbookpinpassports overlap; Clickmindgenericquestionhookclaim notusedasorganicwinner."
+  },
+  "actually_improved_live": [],
+  "concepts_prepared": [
+    "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=goal-setting-worksheet&concept=1"
+  ],
+  "existing_stocking_concept": "27NovquizFAQpreview alreadyprepared; retained,not reported as a newsitechange.",
+  "paid_calls": 0,
+  "new_telegram": 0,
+  "new_outreach": 0,
+  "new_ads": 0,
+  "next": "Review protectedresourceconcept,coordinate broadgoalsettingdraftbeforepublication. Nextcloseddaymeasure; dailytechnicaljoinfollowup;noAmazon/pin/sitegrowth claimfromconcept."
+}
