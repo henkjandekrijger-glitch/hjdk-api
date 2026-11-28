@@ -29,13 +29,13 @@ let fout = 0; const ok = (c, m) => { if (!c) { fout++; console.log('FOUT:', m); 
 let beurt = 0;
 const ai = async () => { beurt++; const klaar = beurt >= 3;
   return { txt: 'Hier is het: ' + JSON.stringify({ zeg: 'Fulfilment wordt meestal per order geprijsd. Mail me op jan@voorbeeld.nl of bel 0612345678', vraag: klaar ? '' : beurt === 1 ? 'Wat moet de partner kunnen?' : 'Wanneer wil je starten?', veld: beurt === 1 ? 'eisen' : 'termijn', sleutel: beurt === 1 ? 'eisen' : 'termijn', pills: klaar ? [] : beurt === 1 ? ['Dezelfde dag verzenden', 'Retouren', 'Bijzondere producten'] : ['Binnen zes weken', 'Later', 'Weet ik nog niet'], meer: false, klaar,
-    feiten: [{veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'doel',bewijs:'verzending uitbesteden'}, {veld:'omvang',bewijs:'1.500 orders per maand'}, {veld:'regio',bewijs:'Zuid-Holland'}],
+    feiten: [{veld:'inhoud',bewijs:'kleding'}, {veld:'onderwerp',bewijs:'fulfilmentpartner'}, {veld:'doel',bewijs:'verzending uitbesteden'}, {veld:'omvang',bewijs:'1.500 orders per maand'}, {veld:'regio',bewijs:'Zuid-Holland'}],
     kaart: { richting: 'zoekt', soort: 'fulfilment', titel: 'Webshop zoekt fulfilmentpartner', zoekt: 'Fulfilmentpartner', biedt: '1.500 orders per maand', waar: 'Zuid-Holland', wanneer: 'Binnen 6 weken', budget: '', mits: 'Opslag in Zuid-Holland', niet: 'Zelfde dag verzenden', partijen: [], waarde: 'middel' } }) }; };
 const req = { headers: { 'x-vercel-ip-city': 'Gouda', 'x-vercel-ip-country': 'NL' } };
 const meldingen = []; const meld = async t => meldingen.push(t);
 
 ok(leesJson('x {"a":1} y').a === 1, 'JSON uit tekst halen');
-let r = await gwStap(kv, { taal: 'nl', keuze: ['Iets inkopen of inhuren'], tekst: 'Ik zoek een fulfilmentpartner voor 1.500 orders per maand in Zuid-Holland. Ik wil de verzending uitbesteden.', open: ['Iets inkopen of inhuren', 'Klanten of opdrachten'] }, req, { ai, meld });
+let r = await gwStap(kv, { taal: 'nl', keuze: ['Iets inkopen of inhuren'], tekst: 'Ik zoek een fulfilmentpartner voor 1.500 orders per maand in Zuid-Holland. Ik wil de verzending uitbesteden. Het gaat om kleding.', open: ['Iets inkopen of inhuren', 'Klanten of opdrachten'] }, req, { ai, meld });
 ok(r.ok && /^[a-f0-9]{24}$/.test(r.sid) && r.vraag && r.pills.length === 3, 'eerste beurt geeft vraag en pills');
 ok(!/jan@voorbeeld|0612345678/.test(r.zeg), 'contactgegevens uit het antwoord gehaald');
 const sid = r.sid;
@@ -57,8 +57,8 @@ ok(meldingen.length === 1 && !/koper@webshop/.test(meldingen[0]), 'melding naar 
 
 // aanbodkaart in het netwerk die past
 beurt = 0;
-const ai2 = async () => ({ txt: JSON.stringify({ zeg: 'Duidelijk.', vraag: '', pills: [], klaar: true, feiten:[{veld:'onderwerp',bewijs:'fulfilmentpartner voor webshops'},{veld:'doel',bewijs:'Ik zoek klanten'},{veld:'regio',bewijs:'Zuid-Holland'},{veld:'omvang',bewijs:'1.500 orders per maand'},{veld:'eisen',bewijs:'Dezelfde dag verzenden'}], kaart: { richting: 'heeft', soort: 'fulfilment', titel: 'Fulfilmentbedrijf heeft ruimte', biedt: 'Fulfilmentpartner voor webshops, opslag in Zuid-Holland', waarde: 'middel' } }) });
-let r2 = await gwStap(kv, { taal: 'nl', keuze: ['Klanten of opdrachten'], tekst:'Ik ben fulfilmentpartner voor webshops in Zuid-Holland. Ik zoek klanten voor 1.500 orders per maand. Dezelfde dag verzenden is mogelijk.' }, req, { ai: ai2, meld });
+const ai2 = async () => ({ txt: JSON.stringify({ zeg: 'Duidelijk.', vraag: '', pills: [], klaar: true, feiten:[{veld:'inhoud',bewijs:'kleding'},{veld:'onderwerp',bewijs:'fulfilmentpartner voor webshops'},{veld:'doel',bewijs:'Ik zoek klanten'},{veld:'regio',bewijs:'Zuid-Holland'},{veld:'omvang',bewijs:'1.500 orders per maand'},{veld:'eisen',bewijs:'Dezelfde dag verzenden'}], kaart: { richting: 'heeft', soort: 'fulfilment', titel: 'Fulfilmentbedrijf heeft ruimte', biedt: 'Fulfilmentpartner voor webshops, opslag in Zuid-Holland', waarde: 'middel' } }) });
+let r2 = await gwStap(kv, { taal: 'nl', keuze: ['Klanten of opdrachten'], tekst:'Ik ben fulfilmentpartner voor webshops in Zuid-Holland. Ik zoek klanten voor 1.500 orders per maand. Dezelfde dag verzenden is mogelijk. Wij verwerken kleding.' }, req, { ai: ai2, meld });
 ok(r2.klaar && r2.borg === 0, 'aanbodkant: geen borg');
 ok((await gwStap(kv, {sid:r2.sid,actie:'controle'}, req)).ok,'aanbodkaart bevestigd');
 r2 = await gwStap(kv, { sid: r2.sid, taal: 'nl', actie: 'kies', keuze: 'staan' }, req, { meld });
