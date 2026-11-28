@@ -15,8 +15,9 @@ ok(/Barcelona komt zo/.test(T.bedankTekst(a, 'ja', 'g1')), 'bedank ja'); ok(/bli
 ok(T.anderTekst(a, 'x@y.nl', { fout: 'x' }) === '', 'ander fout'); ok(/x@y.nl op de lijst/.test(T.anderTekst(a, 'x@y.nl', { lijst: 'erop' })), 'ander ok');
 const j = M.leesAiJson('{"nodig":false,"zeker":true,"antwoord":"","thema":"herinnering","les":"Lezers kennen Tania van Barcelona, mail piet@x.nl"}');
 ok(j.thema === 'herinnering' && !/@/.test(j.les), 'ai json'); ok(M.leesAiJson('{"thema":"gek"}').thema === 'overig', 'thema onbekend');
-const m = T.mailTekst({ n: 'Edith', j: '2017', m: 'e@x.nl' }, { v: T.VARIANTEN[1], tok: 'T', ctx: { ander: true } });
-ok(m.tekst.includes(T.ANDER_ZIN) && m.tekst.indexOf(T.ANDER_ZIN) < m.tekst.indexOf('Henkjan de Krijger'), 'ander-zin in mail');
-ok(!T.mailTekst({ n: 'Edith', j: '2017' }, { v: T.VARIANTEN[1], tok: 'T', ctx: {} }).tekst.includes(T.ANDER_ZIN), 'zonder vlag geen zin');
+const m = T.mailTekst({ n: 'Edith', j: '2017', m: 'e@x.nl' }, { v: T.VARIANTEN[1], tok: 'T', ctx: {} });
+ok(m.tekst.includes(T.ANDER_ZIN) && m.tekst.indexOf(T.ANDER_ZIN) > m.tekst.indexOf('Henkjan de Krijger'), 'ander-zin in mail');
+ok(m.tekst.includes(T.WERK_NU) && !m.tekst.includes(T.WERK_OUD), 'man van Tania');
+ok(T.mailTekst({ n: 'A' }, { v: { o: 'x', t: '{aanhef}\n\nHenkjan de Krijger\n' + T.WERK_OUD + '\n' + T.ANDER_OUD }, tok: 'T', ctx: {} }).tekst.includes(T.WERK_NU), 'oude uitdager omgezet');
 ok(T.STROOM.antwoord && T.STROOM.anderAdres && T.STROOM.jaUitAi && typeof T.STROOM.bedank === 'function', 'stroom');
 console.log(process.exitCode ? 'MISLUKT' : 'test-tkmc-antwoord: alles goed');
