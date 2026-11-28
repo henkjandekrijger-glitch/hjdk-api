@@ -260,7 +260,22 @@ export default async function handler(req, res) {
       const OM = await import('../lib/omgeving.js'), OS = await OM.stand(kv).catch(() => null); // omgevingsdata (koopkracht, weer, daglicht): dagtellers en pauze
       if (q('omgeving')) return res.status(200).json({ ok: true, omgeving: OS });
       const omt = OS ? OM.standTekst(OS) : '';
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
+      const SG = await import('../lib/segment.js'), sgt = SG.segTekst(await SG.segStand(kv, 1).catch(() => null)); // koopkrachtscore en segmentpostbacks (28 nov 2026)
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (sgt ? sgt + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
+    }
+    if (op === 'segment' || op === 'voorwie') { // segmenten per product (lib/segment.js, 28 nov 2026, taak dnhwt6): koopkrachtscore, segmentconversie, zoneprofiel per segment
+      const S = await import('../lib/segment.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (op === 'voorwie') { // tik "Voor wie zoek je?" op de klik (cid = mmc); inert: geen pagina stuurt hem tot Henkjan ja zegt
+        if (req.method === 'OPTIONS') return res.status(204).end();
+        const j = req.method === 'POST' ? (leesJson(req.body) || {}) : { cid: q('cid') || q('mmc'), w: q('w') };
+        const r = await S.voorWie(kv, j).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 120) }));
+        return req.method === 'POST' ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
+      }
+      const st = await S.segStand(kv, Number(q('dagen')) || 1);
+      if (q('uitleg')) return res.status(200).json({ ok: true, KKS: S.KKS, punten: Object.fromEntries(Object.entries(S.PUNTEN).map(([k, v]) => [k, v instanceof RegExp ? String(v) : v])), segmenten: S.SEGMENTEN, uitleg: 'Punten per signaal (eerste hypothese, de lessen in /api/mm/voorspel moeten ze bevestigen); hoog vanaf ' + S.KKS.hoog + ', laag tot en met ' + S.KKS.laag + ', minstens ' + S.KKS.minSignalen + ' signalen.' });
+      const pr = await S.zoneProfiel(kv, { dagen: q('dagen') ? Number(q('dagen')) : 14, prod: q('prod') || '', uit: q('uit') || 'echt', sub: q('sub') === '1', minKliks: Number(q('min')) || undefined });
+      if (q('vorm') === 'json') return res.status(200).json({ ok: true, stand: st, profiel: pr });
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(S.segTekst(st) + '\n\n' + S.profielTekst(pr) + '\n');
     }
     if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
@@ -885,7 +900,7 @@ async function wisselRoute(req, res, url, q) {
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   if ((req.method === 'GET' || req.method === 'HEAD') && !prefetch) {
     const werk = laterAf(Promise.all([
-      verwerkKlik(kv, { cid, pid, nieuw, arm: variant, tag: arm.tag || arm.id, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: arm.k || arm.a || arm.id, doel, p: (arm.p || w.naam), q: netQ(q) }, srv),
+      verwerkKlik(kv, { cid, pid, nieuw, arm: variant, tag: arm.tag || arm.id, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: arm.k || arm.a || arm.id, doel, p: (arm.p || w.naam), q: netQ(q), w: w.naam }, srv), /* w: product voor het zoneprofiel per segment (lib/segment.js) */
       wisselKlik(kv, w, keuze, ctx)
     ]).catch(e => { console.log('mm wissel fout', String(e && e.message || e)); }));
     await Promise.race([werk, new Promise(r => setTimeout(r, 300))]);
