@@ -29,6 +29,13 @@ Per lijn, op de cijfers van gisteren (kopie van gisteren; zie Meten):
 - Twee dagen op rij $0,05 of minder per adres met 5 of meer adressen: doel gehaald. De lijn blijft dagelijks vers op die stap; meld het één keer met de cijfers.
 - Kost een lijn twee dagen op rij meer dan 3 keer zoveel per adres als de goedkoopste lijn en meer dan $0,50: geen kopie meer; melden.
 
+## Kosten per plek (Henkjan 28 nov 2026: "Ben jij ook zo dom met de kosten als andere site of doe jij beter ?")
+
+Les van 25 tot 28 november: $11,84 voor 20 adressen ($0,59 per adres). Alle 20 adressen kwamen van 11 plekken (zones), die samen $5,63 kostten ($0,28 per adres). Ruim 900 andere plekken kostten $6,21 (52%) zonder één adres. De bodtrap keek alleen naar het totaal per campagne; geen regel keek naar wat elke plek kost tegen het doel per adres.
+
+- Clickmind haalt elk uur een plek weg zodra die vandaag $0,05 kostte zonder adres, of $0,02 bij een klikprijs van twee keer het midden (lib/leer.js, `doelPerAdres` in `mm:instelling`). Elke kopie moet daarin staan, anders werkt de regel niet voor die kopie.
+- Plekken met een adres in de eigen telling (winstand `proef.gezien.plek` en `zegelProef.gezien.plek`, veld mail) blokkeer je nooit, ook als PropellerAds daar 0 conversies telt: 9357307 gaf volgens PropellerAds geen adres in A2, maar wel 6 in de eigen telling.
+
 ## Meten (gisteren, per campagne)
 
 1. Kosten: `api_get /adv/statistics?tz=%2B0000&day_from=<gisteren> 00:00:00&day_to=<gisteren> 23:59:59&group_by[]=campaign_id&campaign_id[]=...` (veld `spent`).
@@ -46,6 +53,8 @@ Per lijn, op de cijfers van gisteren (kopie van gisteren; zie Meten):
    Titel hoogstens 30 tekens, omschrijving hoogstens 40, gewoon Nederlands, geen gedachtestreepjes, geen prijs, geen levertijd.
 4. `kopie_met_verse_creatives` met `campaign_id` = de kopie van gisteren, `behouden_ids` = de 6, `nieuwe_creatives` = de 2, `cta` = de knop van de beste, `doel` 8. Naam: dezelfde lijnnaam met `CPA-doel <stap> | <datum> | kopie <bron> | dagkopie 6 beste + 2 nieuw`.
 5. Bod en budget op de kopie: `update_campaign` met `rate` = de stap, `daily_limit` volgens de tabel, `total_limit` 30, en `toestemming_henkjan`: `Henkjan 28 nov 2026: "adressen campagne die start iedere dag opnieuw vers met geleerde en 8 ads met verbeterde creatives tot we op max 5 cent per adres zitten" en 27 nov 2026: "Ja B"`.
+5b. Plekken eruit vóór de start: lees `api_get /adv/statistics` over de laatste 3 dagen met `group_by[]=zone_id` voor alle Kadoly-adrescampagnes (twee pagina's van 500, `order_by=spent` loopt van laag naar hoog). Elke plek die samen $0,02 of meer kostte zonder adres (PropellerAds `conversions` 0 en geen mail in de eigen telling) gaat met `zones_erbij_uitsluiten` op de kopie.
+5c. Doel per adres op de kopie: lees `https://hjdk-api-henq.vercel.app/api/mm/instelling`, neem `doelPerAdres` over, zet de nieuwe id erbij op 0.05, haal de gestopte voorganger eruit en schrijf de hele lijst terug met `/api/mm/instelling?j={"doelPerAdres":{...}}` (j vervangt het hele veld; laat de ids van andere projecten, zoals TK, staan).
 6. Zegelkopie: zet hem in de zegelroute, anders landt hij op de winactie: `https://hjdk-api-henq.vercel.app/api/shop?op=zegelcamp&id=<nieuwe id>`.
 7. Doel vastzetten: `/api/mm?op=stuk&campagne=propeller:<nieuwe id>&doel=aanmelding`.
 8. Voorganger(s) stoppen zodra de kopie status 6 heeft en alle 8 advertenties goedgekeurd zijn (`api_get /adv/campaigns/<id>`: `status` 6, `creatives[].policy_status` 2): `update_campaign status stop` (met `opvolger_lager_bewust: true` als de kopie lager biedt). Nog in de keuring: plan met `send_later` over 45 minuten een vervolg in deze sessie dat stap 8 doet. Bij lijn W stopt ook 12195955 zodra de eerste W-dagkopie loopt.
