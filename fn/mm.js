@@ -519,7 +519,8 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(s);
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(O.ovTekst(s) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(O.ovHtml(s, CSS)); }
-    if (op === 'verder') { // hnkjn.me: per project een chat waar Henkjan nu verder moet (28 nov 2026, lib/verder.js); openbaar, zonder vragen of cijfers
+    if (op === 'verder') { // hnkjn.me: per project een chat waar Henkjan nu verder moet (28 nov 2026, lib/verder.js); alleen achter de Vercel-inlog
+      if (!beschermd(req)) return res.redirect(307, 'https://hjdk-api-henq.vercel.app/api/mm/verder' + (url.search || '')); // nooit openbaar (Henkjan 28 nov: "Nee mag niet openbaar staan . Moet direct tegen vercel inlog aan lopen .")
       const D = await import('../lib/dashboard.js'), V = await import('../lib/verder.js'); const d = await D.dashData(kv, {});
       res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
       if (q('chat')) { const p = (d.projecten || []).find(x => x.id === String(q('chat')).toLowerCase()); return p ? res.redirect(302, V.link(p)) : res.redirect(302, '/'); }
