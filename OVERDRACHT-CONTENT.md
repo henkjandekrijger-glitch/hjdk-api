@@ -1,5 +1,7 @@
 # OVERDRACHT CONTENT EN DISTRIBUTIE
 
+Actueel 28 november: dagelijks content/video en verkeer onder KDP op hnkjn.me; zie de nieuwe sectie onderaan en het gedeelde dagritme op codex/content-dagboek. Bestaande eerst-zien-regels en Kadoly-boekpinstop blijven gelden.
+
 Voor het Claude-account dat Henkjan (Henkjan 23 nov 2026: "Ik ga een account helemaal reserveren voor content en distributie") alleen inzet voor content en distributie: stockingbooks.com, lastingchange.works, Pinterest, de dagelijkse artikelen en de leerlus op organisch verkeer.
 
 Live te lezen, met de stand van vandaag eronder: https://hjdk-api-henq.vercel.app/api/bs?op=content (lees met de Vercel-tool web_fetch_vercel_url; ?format=md voor alleen dit document).
@@ -276,3 +278,14 @@ Henkjan: 'Ja akkoord .' op precies PR15. Deze commit voert die geteste reparatie
 Henkjan vraagt een plan voor 10x verkeer komende vrijdag en uitvoering. Deadline 4 december 2026. Werkdoel: 160 geregistreerde pagina-openingen op die UTC-dag, tegenover 16 op 26 november (14 Stocking Books en 2 Lasting Change). Geen unieke bezoekers; organische bronnen apart. Het doel is ambitie en geen voorspelling. Langetermijn-Noordster en ontbrekende organische zevendaagse baseline blijven apart.
 Uitvoering van eerder getoonde PR16: beschermd op=dagrapport&droog=1&vorm=json geeft de laatste gesloten UTC-dag en vorige dag met bron- en publieke paginatellingen, expliciete meetdefinities en null bij ontbrekende of ongeldige gegevens. Geen Telegram, providerverzoek, IndexNow of schrijfactie vanuit deze JSON-tak. Ruwe Amazonverzoeken blijven afzonderlijk. Geen unieke mensen, conversie, verkoopattributie of per-pinlandingen afleiden. Bestaande tekstcron blijft intact. 22 gerichte tests en syntaxiscontrole slagen; livecontrole volgt na deploy. Huidige main-codeblobs zijn identiek aan de geteste basis; documentconflict opgelost met behoud van de nieuwe main-notities. Git pull --rebase was niet mogelijk door ontbrekende gitmetadata; exacte remote ref en blobs gelezen.
 Het volledige uitvoerplan en dagelijkse waarnemingen staan op codex/content-dagboek; centraal projectdashboard content is bijgewerkt. Nieuwe ongeziene openbare content blijft eerst-zien, bestaande publicaties niet opnieuw plaatsen. Geen advertenties, outreach of betaalde calls.
+
+
+## 28 november 2026: meetbare content onder KDP en Lasting Change-video
+
+Henkjan vraagt: verkeer meetbaar maken, dagelijks nieuwe content met Clickmind, en Lasting Change op YouTube met dagelijks een goede Short en alleen langer bij onderbouwde potentie. De bestaande drie contenttaken zijn bijgewerkt, niet gedupliceerd: 09:15 verkeer, 15:37 video/distributie, 23:41 artikel (America/Curacao). Stand en uitvoering komen onder project kdp op hnkjn.me, terwijl alle bestaande content-paspoorten en dagrecords behouden blijven. Financiële KDP-doelen, bestaande winsttaken en advertenties blijven apart.
+
+Gedeelde werkwijze: content/dagrapport/KDP-DAGELIJKSE-CONTENT.md op branch codex/content-dagboek. Clickmind-briefing vóór ieder stuk, Videomind vóór iedere video; iedere nieuwe versie noemt de toegepaste eerdere les en één toetsbare verbetering. Dagelijks teruglezen, video na 48 uur en 7 dagen; inhoud na 14 tot 21 dagen en voldoende data. Geen prestatiegarantie voor ieder volgend stuk. Nieuwe ongeziene teksten en video's blijven eerst-zien; precies goedgekeurde inhoud uitvoeren. De Kadoly-stop voor Engelse boekpins blijft gelden.
+
+De getoonde meetreparatie van branch claude/boeken-clickmind-meetbaar is op deze opdracht naar actuele main overgenomen: beide boekdomeinen als eigen kortelinkdoel, kruiscontrole tussen mail- en postcodes en onbekende kliks niet meer als kunstmatige nul. Bestaande pinbestemmingen, modal, mailverzending en betaalstatus niet gewijzigd. Tests tegen een geïsoleerde lokale Redis en bestaande Zernio-regressies slagen; productiecontrole wordt pas na uitrol in het centrale werklog vastgelegd. Korte-routeverzoeken zijn geen bewezen unieke menselijke landingen.
+
+Kanaalaanmaak Lasting Change / @LastingChangeWorks: formulier klaar onder Henkjans bestaande Google-account, definitieve stap accepteert YouTube-voorwaarden en vereist apart gevraagd akkoord. Geen kanaal-ID of publicatie verzinnen. Shorts-beschrijvingen/reacties hebben geen klikbare gewone URL; meet de profielroute op kanaalniveau en nooit als zekere individuele Shortklik. Gecontroleerde bron: https://support.google.com/youtube/answer/13748639?hl=en .
