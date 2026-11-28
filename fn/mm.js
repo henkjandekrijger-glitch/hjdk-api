@@ -59,7 +59,7 @@ import { ritme } from '../lib/uurritme.js';
 import { KOOPCHECK_JS } from '../lib/kadolykoopcheck.js';
 import { VL_SITE_JS } from '../lib/verlanglijst.js'; // 27 nov 2026: verlanglijst op kadoly.com (menu, voorpagina, productpagina)
 import { kv } from '../lib/db.js';
-import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo, dcVan, score } from '../lib/mensmeter.js';
+import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo, dcVan, score, netQ } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
@@ -789,7 +789,7 @@ async function goKlik(req, res, url, q) {
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   if ((req.method === 'GET' || req.method === 'HEAD') && !prefetch) {
     const werk = laterAf(Promise.all([
-      verwerkKlik(kv, { cid, pid, nieuw, arm, tag, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: kEff || q('a') || '', doel, p: pre }, serverSignalen(req)),
+      verwerkKlik(kv, { cid, pid, nieuw, arm, tag, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: kEff || q('a') || '', doel, p: pre, q: netQ(q) }, serverSignalen(req)),
       tNaam ? import('../lib/ctrtest.js').then(m => Promise.all(m.telCmds(tNaam, new Date().toISOString().slice(0, 10), cr0, pid).map(c => kv.raw(c)))).catch(() => {}) : null,
       cidKoppel(kv, { cid, pid, arm, tag, net: ctx.net, zone: ctx.zone, camp: ctx.camp })
     ]).catch(e => { console.log('mm go fout', String(e && e.message || e)); }));
@@ -878,7 +878,7 @@ async function wisselRoute(req, res, url, q) {
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   if ((req.method === 'GET' || req.method === 'HEAD') && !prefetch) {
     const werk = laterAf(Promise.all([
-      verwerkKlik(kv, { cid, pid, nieuw, arm: variant, tag: arm.tag || arm.id, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: arm.k || arm.a || arm.id, doel, p: (arm.p || w.naam) }, srv),
+      verwerkKlik(kv, { cid, pid, nieuw, arm: variant, tag: arm.tag || arm.id, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: arm.k || arm.a || arm.id, doel, p: (arm.p || w.naam), q: netQ(q) }, srv),
       wisselKlik(kv, w, keuze, ctx)
     ]).catch(e => { console.log('mm wissel fout', String(e && e.message || e)); }));
     await Promise.race([werk, new Promise(r => setTimeout(r, 300))]);
