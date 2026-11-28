@@ -34,7 +34,7 @@ const req = { headers: { 'x-vercel-ip-city': 'Gouda', 'x-vercel-ip-country': 'NL
 const meldingen = []; const meld = async t => meldingen.push(t);
 
 ok(leesJson('x {"a":1} y').a === 1, 'JSON uit tekst halen');
-let r = await gwStap(kv, { taal: 'nl', keuze: ['Leverancier zoeken'], open: ['Leverancier zoeken', 'Klanten zoeken'] }, req, { ai, meld });
+let r = await gwStap(kv, { taal: 'nl', keuze: ['Iets inkopen of inhuren'], open: ['Iets inkopen of inhuren', 'Klanten of opdrachten'] }, req, { ai, meld });
 ok(r.ok && /^[a-f0-9]{24}$/.test(r.sid) && r.vraag && r.pills.length === 3, 'eerste beurt geeft vraag en pills');
 ok(!/jan@voorbeeld|0612345678/.test(r.zeg), 'contactgegevens uit het antwoord gehaald');
 const sid = r.sid;
@@ -55,22 +55,22 @@ ok(meldingen.length === 1 && !/koper@webshop/.test(meldingen[0]), 'melding naar 
 // aanbodkaart in het netwerk die past
 beurt = 0;
 const ai2 = async () => ({ txt: JSON.stringify({ zeg: 'Duidelijk.', vraag: '', pills: [], klaar: true, kaart: { richting: 'heeft', soort: 'fulfilment', titel: 'Fulfilmentbedrijf heeft ruimte', biedt: 'Fulfilmentpartner voor webshops, opslag in Zuid-Holland', waarde: 'middel' } }) });
-let r2 = await gwStap(kv, { taal: 'nl', keuze: ['Klanten zoeken'] }, req, { ai: ai2, meld });
+let r2 = await gwStap(kv, { taal: 'nl', keuze: ['Klanten of opdrachten'] }, req, { ai: ai2, meld });
 ok(r2.klaar && r2.borg === 0, 'aanbodkant: geen borg');
 r2 = await gwStap(kv, { sid: r2.sid, taal: 'nl', actie: 'kies', keuze: 'staan' }, req, { meld });
 ok(r2.ok && r2.netwerk === 1, 'aanbod vindt de vraag in het netwerk');
 ok((await gwKaart(kv, i, s)).netwerk.length === 1, 'de vraag ziet het aanbod ook');
 
 // reserve zonder AI
-const r3 = await gwStap(kv, { taal: 'en', keuze: ['Find customers'] }, req, { ai: async () => { throw new Error('weg'); }, meld });
+const r3 = await gwStap(kv, { taal: 'en', keuze: ['Customers or work'] }, req, { ai: async () => { throw new Error('weg'); }, meld });
 ok(r3.ok && !r3.ai && r3.vraag && r3.pills.length, 'zonder AI loopt de chat door met een reservevraag');
 { const weg = async () => { const e = new Error('credit op'); e.status = 402; throw e; };
-  let x = await gwStap(kv, { taal: 'nl', keuze: ['Leverancier zoeken'] }, req, { ai: weg }), n = 1;
+  let x = await gwStap(kv, { taal: 'nl', keuze: ['Iets inkopen of inhuren'] }, req, { ai: weg }), n = 1;
   x = await gwStap(kv, { sid: x.sid, taal: 'nl', tekst: 'Fulfilment voor 1500 orders per maand' }, req, { ai: weg }); n++;
   const vragen = new Set();
   while (!x.klaar && n < 10) { vragen.add(x.vraag); x = await gwStap(kv, { sid: x.sid, taal: 'nl', keuze: [x.pills[0]] }, req, { ai: weg }); n++; }
   ok(x.klaar && n <= 6 && vragen.size === n - 2, 'zonder AI: geen herhaalde vraag en klaar binnen 6 beurten');
-  ok(/Fulfilment/.test(x.kaart.zoekt) && x.kaart.waar && x.kaart.wanneer && x.kaart.mits && x.kaart.soort === 'Leverancier zoeken', 'zonder AI: de kaart vult zich uit de antwoorden');
+  ok(/Fulfilment/.test(x.kaart.zoekt) && x.kaart.waar && x.kaart.wanneer && x.kaart.mits && x.kaart.soort === 'Iets inkopen of inhuren', 'zonder AI: de kaart vult zich uit de antwoorden');
   ok(/402 credit op/.test(String((await kv.get('gw:aifout') || {}).fout)), 'zonder AI: de reden staat in gw:aifout'); }
 
 const st = await gwStand(kv);
