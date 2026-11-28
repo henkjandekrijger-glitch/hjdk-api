@@ -3,7 +3,7 @@
 // Traag of geen antwoord binnen 20 s telt niet als fout: alleen echte fouten houden een deploy tegen.
 import fsRem from 'node:fs';
 // Sealed Intent: de vragen, kaartcontrole en menselijke hulproute blijven werken.
-{ const { spawnSync } = await import('node:child_process'); for (const naam of ['test-sealed-kwaliteit.mjs', 'test-sealed-gw.mjs']) { const r = spawnSync(process.execPath, [new URL('./' + naam, import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Sealed Intent-controle mislukt'); process.exit(1); } } }
+{ const { spawnSync } = await import('node:child_process'); for (const naam of ['test-sealed-universeel.mjs', 'test-sealed-kwaliteit.mjs', 'test-sealed-gw.mjs']) { const r = spawnSync(process.execPath, [new URL('./' + naam, import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Sealed Intent-controle mislukt'); process.exit(1); } } }
 // Forecasts must stay immutable and must not train on future/current-day outcomes.
 { const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-kdp-voorspel.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'KDP-voorspelcontrole mislukt'); process.exit(1); } }
 // Kostenrem (Henkjan 21 nov 2026: "Zorg dat ook nooit meer een nieuwe kan ontstaan"): een los bestand in api/ is een extra Vercel-functie.
