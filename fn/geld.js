@@ -3,8 +3,8 @@
 //   ?vorm=json   alles als JSON
 //   ?vers=1      nu opnieuw ophalen (anders hoogstens eens per 5 minuten, de bronnen zijn zwaar)
 //   POST         de munt opslaan (formulier onderaan, of JSON { waarden: { project: { uitkomst: dollars } }, eurUsd })
-// Per project in dollars: uitgegeven (PropellerAds en Mondiad per campagne), opgeleverd (uitkomsten uit Clickmind x de munt uit
-// lib/waarde.js, plus echte Kadoly-verkopen uit de shop zelf), dollar terug per dollar uit, verspild geld en wat Clickmind deed.
+// Per project: advertentiekosten en geschatte uitkomstwaarde. Betaalde Kadoly-orders staan apart; de munt is nooit omzet of winst.
+// Ook een eigen of uit historische verkopen geleerde waarde blijft een schatting. Campagnerendement is zonder toerekening onbekend.
 // Alleen lezen: dit scherm wijzigt nooit campagnes, biedingen, budgetten of instellingen van netwerken.
 import { kv } from '../lib/db.js';
 import { leesWaarde, zetWaarde, ijkWaarde, projectVan, waardeVan, PROJECTEN, PROJECT_NAAM, UITKOMSTEN, UITKOMST_NAAM } from '../lib/waarde.js';
@@ -111,7 +111,7 @@ async function berekenRuw() {
     const f = await kv.get('hjdk:shop:lusfeed'); shop.feedAt = f && f.at ? new Date(f.at).toISOString() : null;
     let kost = null; try { kost = await kv.get('hjdk:shop:kost'); } catch (e) {}
     for (const o of (f && f.orders) || []) {
-      if (!/paid|betaald/i.test(String(o.s || '')) || /^test/i.test(String(o.hj || ''))) continue;
+      if (!/^(paid|betaald)$/i.test(String(o.s || '').trim()) || /^test/i.test(String(o.hj || ''))) continue;
       const d = String(o.at || '').slice(0, 10); if (!D.includes(d)) continue;
       const v = N(o.v), n = Math.max(1, N(o.n)), k = kost && kost[o.p];
       let marge = null; if (k && k.c != null) marge = v / 1.21 - n * N(k.c) - N(k.z) - (0.029 * v + 0.30); else if (k && k.m != null) marge = n * N(k.m);
@@ -174,6 +174,11 @@ async function ruwStand(vers) {
 }
 
 // ---------- samenvatten met de munt (licht, elke keer opnieuw: een nieuwe munt telt meteen) ----------
+function waardeschatting(uit, waarde) {
+  const geschatteWaarde = r2(waarde), waardeNaKosten = r2(waarde - uit), geschatteWaardePerDollar = uit > 0 ? Math.round(100 * waarde / uit) / 100 : null;
+  // Oude JSON-velden blijven leesbaar voor bestaande afnemers, met expliciete betekenis en nieuwe veldnamen ernaast.
+  return { soort: 'geschatte_uitkomstwaarde', geschatteWaarde, waardeNaKosten, geschatteWaardePerDollar, waard: geschatteWaarde, verschil: waardeNaKosten, terugPerDollar: geschatteWaardePerDollar };
+}
 function samenvatting(ruw, munt) {
   const D = ruw.dagen, sl = { vandaag: [D[0]], gisteren: [D[1]], week: D };
   const proj = {};
@@ -183,16 +188,20 @@ function samenvatting(ruw, munt) {
       const t = { echt: 0, actie: 0, aanmelding: 0, lezer: 0, dialoog: 0, koop: 0 }; let pa = 0, md = 0, kliks = 0, bot = 0;
       for (const d of ds) { const u = ruw.uit[p][d]; if (u) { pa += u.pa; md += u.md; kliks += u.kliks; } const x = ruw.tel[p][d]; if (x) for (const k of UITKOMSTEN) t[k] += N(x[k]); bot += N(ruw.pbbot[p][d]); }
       const w = waardeVan(munt, p, t), uitg = pa + md;
-      o[s] = { uit: r2(uitg), pa: r2(pa), md: r2(md), kliks, waard: r2(w.dollar), verschil: r2(w.dollar - uitg), terugPerDollar: uitg > 0 ? Math.round(100 * w.dollar / uitg) / 100 : null, uitkomsten: t, opbouw: w.per, pbbot: bot };
+      o[s] = { uit: r2(uitg), pa: r2(pa), md: r2(md), kliks, ...waardeschatting(uitg, w.dollar), uitkomsten: t, opbouw: w.per, pbbot: bot };
     }
     o.paDag = r2(ruw.uitPaDag[p]);
     proj[p] = o;
   }
-  const tot = {}; for (const s of Object.keys(sl)) { const u = PROJECTEN.reduce((a, p) => a + proj[p][s].uit, 0), w = PROJECTEN.reduce((a, p) => a + proj[p][s].waard, 0); tot[s] = { uit: r2(u), waard: r2(w), verschil: r2(w - u), terugPerDollar: u > 0 ? Math.round(100 * w / u) / 100 : null }; }
+  const tot = {}; for (const s of Object.keys(sl)) { const u = PROJECTEN.reduce((a, p) => a + proj[p][s].uit, 0), w = PROJECTEN.reduce((a, p) => a + proj[p][s].geschatteWaarde, 0); tot[s] = { uit: r2(u), ...waardeschatting(u, w) }; }
   tot.paDag = r2(PROJECTEN.reduce((a, p) => a + proj[p].paDag, 0));
   const sh = ruw.shop, som = o => D.reduce((a, d) => a + N(o[d]), 0);
   const shop = { verkopenVandaag: N(sh.verkopen[D[0]]), verkopen7: som(sh.verkopen), omzetEur7: r2(som(sh.omzetEur)), margeEur7: r2(som(sh.margeEur)), margeBekend: sh.margeBekend, metKenmerk: sh.metKenmerk, feedAt: sh.feedAt, bestellingen: sh.bestellingen, margeUsd7: r2(som(sh.margeEur) * munt.eurUsd) };
-  return { projecten: proj, totaal: tot, shop };
+  const waardering = { soort: 'geschatte_uitkomstwaarde', uitleg: 'Uitkomsten maal een doelwaarde, eigen getal of geleerde waarde. Geen gemeten omzet, winst of rendement.', oudeVelden: { waard: 'geschatteWaarde', verschil: 'waardeNaKosten', terugPerDollar: 'geschatteWaardePerDollar' } };
+  shop.soort = 'betaalde_shopbestellingen'; shop.status = sh.feedAt ? 'gemeten' : 'onbekend'; shop.dekking = 'Alleen de Kadoly-shopfeed; overige projecten niet gemeten.'; shop.campagneRendement = null;
+  if (!sh.feedAt) for (const k of ['verkopenVandaag', 'verkopen7', 'omzetEur7', 'margeEur7', 'margeUsd7', 'margeBekend', 'metKenmerk']) shop[k] = null;
+  else if (!sh.margeBekend) { shop.margeEur7 = null; shop.margeUsd7 = null; }
+  return { projecten: proj, totaal: tot, shop, waardering };
 }
 
 // ---------- weergave ----------
@@ -209,13 +218,13 @@ const MEERV = { echt: ['echt mens', 'echte mensen'], actie: ['actie', 'acties'],
 function oordeelZin(o) {
   const v = o.vandaag, w = o.week;
   let z = o.naam + ': ';
-  if (v.uit > 0 || v.waard > 0) z += 'vandaag ' + usd(v.uit) + ' uit, ' + usd(v.waard) + ' waard. ' + (v.verschil >= 0 ? 'Winst ' : 'Verlies ') + usd(Math.abs(v.verschil)) + '.';
+  if (v.uit > 0 || v.geschatteWaarde > 0) z += 'vandaag ' + usd(v.uit) + ' uit, geschatte waarde ' + usd(v.geschatteWaarde) + '.';
   else z += 'vandaag niets uitgegeven.';
-  if (w.uit > 0 || w.waard > 0) z += ' Zeven dagen: ' + (w.verschil >= 0 ? 'winst ' : 'verlies ') + usd(Math.abs(w.verschil)) + (w.terugPerDollar != null ? ' (' + usd(w.terugPerDollar) + ' terug per dollar)' : '') + '.';
+  if (w.uit > 0 || w.geschatteWaarde > 0) z += ' Zeven dagen: geschatte waarde ' + usd(w.geschatteWaarde) + ', ' + usd(Math.abs(w.waardeNaKosten)) + (w.waardeNaKosten >= 0 ? ' boven' : ' onder') + ' de advertentiekosten.';
   return z;
 }
 function regel(label, x) {
-  return '<div class="rij"><b>' + esc(label) + '</b><span>' + usd(x.uit) + ' uit</span><span>' + usd(x.waard) + ' waard</span><span class="' + (x.verschil >= 0 ? 'plus' : 'min') + '">' + (x.verschil >= 0 ? 'winst ' : 'verlies ') + usd(Math.abs(x.verschil)) + '</span><span>' + (x.terugPerDollar == null ? 'geen uitgaven' : usd(x.terugPerDollar) + ' per $1') + '</span></div>';
+  return '<div class="rij"><b>' + esc(label) + '</b><span>' + usd(x.uit) + ' kosten</span><span>' + usd(x.geschatteWaarde) + ' geschatte waarde</span><span>' + usd(x.waardeNaKosten) + ' waarde min kosten</span><span>' + (x.geschatteWaardePerDollar == null ? 'geen uitgaven' : usd(x.geschatteWaardePerDollar) + ' geschatte waarde per $1') + '</span></div>';
 }
 function opbouwTekst(o, munt, p) {
   const delen = []; for (const u of UITKOMSTEN) { const x = o.opbouw[u]; if (!x) continue; delen.push(getal(x.n) + ' ' + MEERV[u][x.n === 1 ? 0 : 1] + ' × ' + usdKlein(munt.cent[p][u] / 100) + ' = ' + usd(x.dollar)); }
@@ -244,10 +253,17 @@ function pagina(ruw, sam, munt, melding) {
     + '<p><a class="knop" href="/api/mm/clickmind">Clickmind</a><a class="knop" href="/api/geld?vers=1">Nu opnieuw ophalen</a><a class="knop" href="#munt">Waarde per uitkomst</a></p>';
   if (melding) h += '<p class="melding">' + esc(melding) + '</p>';
 
-  h += '<h2>Oordeel per project</h2><ul class="oordeel">' + (actief.length ? actief.map(p => '<li class="' + (P[p].week.uit === 0 && P[p].vandaag.uit === 0 ? 'niets' : P[p].week.verschil >= 0 ? 'goed' : '') + '">' + esc(oordeelZin(P[p])) + '</li>').join('') : '<li class="niets">Geen uitgaven en geen uitkomsten in de laatste zeven dagen.</li>') + '</ul>';
+  h += '<p class="melding">Advertentiekosten zijn gemeten. De waarde van mensen, acties, lezers, aanmeldingen en verkopen volgens de munt is een schatting, ook bij een eigen of geleerd getal. Die schatting is geen omzet, winst of rendement.</p>';
+  const betaald = sam.shop;
+  h += '<h2>Betaalde verkopen apart</h2><div class="kaart">';
+  if (betaald.status === 'gemeten') h += '<p>Kadoly, zeven dagen: ' + getal(betaald.verkopen7) + ' betaalde bestellingen, omzet ' + eur(betaald.omzetEur7) + '. ' + (betaald.margeBekend ? 'Berekende marge ' + eur(betaald.margeEur7) + ' (' + usd(betaald.margeUsd7) + ') op ' + getal(betaald.margeBekend) + ' van ' + getal(betaald.verkopen7) + ' bestellingen, op basis van inkoopprijzen en de kostenberekening.' : 'Marge onbekend.') + '</p>'
+    + '<p>' + getal(betaald.metKenmerk) + ' van ' + getal(betaald.verkopen7) + ' bestellingen hebben een advertentiekenmerk. Rendement per campagne is nog onbekend. Deze omzet wordt niet bij de geschatte waarde opgeteld. Bron: Kadoly-shopfeed, bijgewerkt ' + esc(tijd(betaald.feedAt)) + '. Verkopen van andere projecten zijn hier niet gemeten.</p>';
+  else h += '<p>Betaalde omzet onbekend: er is geen Kadoly-shopfeed beschikbaar. Verkopen van andere projecten zijn hier niet gemeten.</p>';
+  h += '</div>';
+  h += '<h2>Geschatte waarde per project</h2><ul class="oordeel">' + (actief.length ? actief.map(p => '<li class="niets">' + esc(oordeelZin(P[p])) + '</li>').join('') : '<li class="niets">Geen uitgaven en geen uitkomsten in de laatste zeven dagen.</li>') + '</ul>';
 
-  h += '<div class="tot"><div>Vandaag uitgegeven<strong>' + usd(T.vandaag.uit) + '</strong>waard ' + usd(T.vandaag.waard) + '</div><div>Vandaag ' + (T.vandaag.verschil >= 0 ? 'winst' : 'verlies') + '<strong>' + usd(Math.abs(T.vandaag.verschil)) + '</strong>' + (T.vandaag.terugPerDollar == null ? '' : usd(T.vandaag.terugPerDollar) + ' terug per dollar') + '</div>'
-    + '<div>Zeven dagen uitgegeven<strong>' + usd(T.week.uit) + '</strong>waard ' + usd(T.week.waard) + '</div><div>Zeven dagen ' + (T.week.verschil >= 0 ? 'winst' : 'verlies') + '<strong>' + usd(Math.abs(T.week.verschil)) + '</strong>' + (T.week.terugPerDollar == null ? '' : usd(T.week.terugPerDollar) + ' terug per dollar') + '</div></div>'
+  h += '<div class="tot"><div>Vandaag uitgegeven<strong>' + usd(T.vandaag.uit) + '</strong>geschatte waarde ' + usd(T.vandaag.geschatteWaarde) + '</div><div>Vandaag waarde min kosten<strong>' + usd(T.vandaag.waardeNaKosten) + '</strong>saldo van de schatting</div>'
+    + '<div>Zeven dagen uitgegeven<strong>' + usd(T.week.uit) + '</strong>geschatte waarde ' + usd(T.week.geschatteWaarde) + '</div><div>Zeven dagen waarde min kosten<strong>' + usd(T.week.waardeNaKosten) + '</strong>saldo van de schatting</div></div>'
     + '<p>PropellerAds-dag (sinds 05:00 UTC, de dag waarop het budget telt): ' + usd(T.paDag) + ' uitgegeven bij PropellerAds.</p>';
 
   h += '<h2>Per project</h2>';
@@ -255,8 +271,7 @@ function pagina(ruw, sam, munt, melding) {
     const o = P[p];
     h += '<div class="kaart"><h3>' + esc(o.naam) + '</h3>' + regel('Vandaag', o.vandaag) + regel('Gisteren', o.gisteren) + regel('Zeven dagen', o.week)
       + '<p>PropellerAds-dag (sinds 05:00 UTC): ' + usd(o.paDag) + ' uit. Zeven dagen: PropellerAds ' + usd(o.week.pa) + (o.week.md ? ', Mondiad ' + usd(o.week.md) : '') + ', ' + getal(o.week.kliks) + ' betaalde kliks, ' + tal(o.campagnes7, 'campagne', 'campagnes') + ' met uitgaven.</p>'
-      + '<p>Waarde zeven dagen: ' + esc(opbouwTekst(o.week, munt, p)) + '.</p>';
-    if (p === 'kadoly') { const s = sam.shop; h += '<p>Verkopen in de shop (zeven dagen): ' + getal(s.verkopen7) + (s.verkopen7 ? ', omzet ' + eur(s.omzetEur7) + (s.margeBekend ? ', marge uit de inkoopprijzen ' + eur(s.margeEur7) + ' (' + usd(s.margeUsd7) + ')' : '') + '; ' + (s.metKenmerk ? getal(s.metKenmerk) + ' daarvan had een advertentiekenmerk' : 'geen enkele had een advertentiekenmerk, dus of ze uit een advertentie kwamen is niet zeker') : '') + '. De waarde hierboven rekent met ' + usd(munt.cent.kadoly.koop / 100) + ' per verkoop (de munt). Gelezen uit de shop zelf (bijgewerkt ' + esc(tijd(s.feedAt)) + '), want de shop meldt verkopen niet altijd aan Clickmind.</p>'; }
+      + '<p>Opbouw geschatte waarde, zeven dagen: ' + esc(opbouwTekst(o.week, munt, p)) + '.</p>';
     if (o.week.pbbot) h += '<p>Conversies die Clickmind niet aan het netwerk meldde omdat de zone een botzone is: vandaag ' + getal(o.vandaag.pbbot) + ', zeven dagen ' + getal(o.week.pbbot) + '.</p>';
     h += '</div>';
   }
@@ -292,7 +307,7 @@ function pagina(ruw, sam, munt, melding) {
   h += '<h2>Wat nog ontbreekt</h2><div class="kaart"><ul class="lijst">' + mist.map(x => '<li>' + x + '</li>').join('') + '</ul></div>';
 
   // de munt
-  h += '<h2 id="munt">Waarde per uitkomst</h2><p>Wat elke uitkomst je waard is, in dollars. Clickmind rekent dit zelf uit wat er echt verkocht wordt ("door Clickmind"); waar nog geen verkopen zijn, staat de doelwaarde van het project. Overschrijven kan, dan geldt jouw getal. Verkoop is de marge per verkoop, niet de omzet.</p><form method="post" action="/api/geld">';
+  h += '<h2 id="munt">Waarde per uitkomst</h2><p>Geschatte waarde per uitkomst, in dollars. Clickmind kan die uit historische verkopen leren; zonder voldoende verkoopdata geldt de doelwaarde. Ook jouw eigen getal blijft een waardeschatting. Verkoop in de munt is de geschatte marge per verkoop. Betaalde omzet staat apart bovenaan.</p><form method="post" action="/api/geld">';
   for (const p of PROJECTEN) {
     h += '<div class="proj"><h3>' + esc(PROJECT_NAAM[p]) + '</h3><div class="velden">';
     for (const u of UITKOMSTEN) { const c = munt.cent[p][u]; h += '<div><label for="w_' + p + '_' + u + '">' + esc(UITKOMST_NAAM[u]) + '</label><input id="w_' + p + '_' + u + '" name="w.' + p + '.' + u + '" inputmode="decimal" value="' + esc(String(Math.round(c * 100) / 10000).replace('.', ',')) + '"><span class="bron">' + (munt.bron[p][u] === 'eigen' ? 'eigen getal' : munt.bron[p][u] === 'clickmind' ? 'door Clickmind' : 'doelwaarde') + '</span></div>'; }

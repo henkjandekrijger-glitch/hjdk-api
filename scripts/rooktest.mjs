@@ -4,6 +4,8 @@
 // en blijft de vorige versie live. Aanleiding: 21 nov 2026 gaven alle keuzehulpen 30 minuten een 500 (variabele in commentaar geschoven).
 // Traag of geen antwoord binnen 20 s telt niet als fout: alleen echte fouten houden een deploy tegen.
 import fsRem from 'node:fs';
+// Geschatte uitkomstwaarde mag nooit als gemeten winst worden gepresenteerd; controle zonder netwerk of Redis.
+{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-geld.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Clickmind-geldcontrole mislukt'); process.exit(1); } }
 // Sealed Intent: de vragen, kaartcontrole en menselijke hulproute blijven werken.
 { const { spawnSync } = await import('node:child_process'); for (const naam of ['test-sealed-kwaliteit.mjs', 'test-sealed-gw.mjs']) { const r = spawnSync(process.execPath, [new URL('./' + naam, import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Sealed Intent-controle mislukt'); process.exit(1); } } }
 // Forecasts must stay immutable and must not train on future/current-day outcomes.
