@@ -1,0 +1,1635 @@
+{
+ "bron": "Demand Radar zoekvraag, thema sieraden (21 nov 2026) en kadoly-wonen (26 nov 2026), NL en BE, volume per maand",
+ "groepen": {
+  "oorbellen": [
+   [
+    "oorbellen",
+    27100,
+    5400
+   ],
+   [
+    "goud oorbellen",
+    9900,
+    1300
+   ],
+   [
+    "gouden oorbellen",
+    9900,
+    1300
+   ],
+   [
+    "oorbel goud",
+    9900,
+    880
+   ],
+   [
+    "goude oorbel",
+    9900,
+    0
+   ],
+   [
+    "gouden oorbel",
+    9900,
+    0
+   ],
+   [
+    "goudenoorbellen",
+    9900,
+    0
+   ],
+   [
+    "zilveren oorbellen",
+    5400,
+    880
+   ],
+   [
+    "zilveren oorbelletjes",
+    5400,
+    880
+   ],
+   [
+    "zilver oorbel",
+    5400,
+    880
+   ],
+   [
+    "zilver oorbellen",
+    5400,
+    880
+   ],
+   [
+    "oorbellen dames",
+    3600,
+    1900
+   ],
+   [
+    "oorbel dames",
+    3600,
+    1900
+   ],
+   [
+    "zilveren oorbel",
+    5400,
+    0
+   ],
+   [
+    "oorbelletjes zilver",
+    5400,
+    0
+   ],
+   [
+    "oorbel chanel",
+    4400,
+    880
+   ],
+   [
+    "chanel oorbellen",
+    4400,
+    880
+   ],
+   [
+    "my jewellery oorbel",
+    4400,
+    590
+   ],
+   [
+    "zinzi oorbel",
+    4400,
+    0
+   ],
+   [
+    "gouden oorbellen dames",
+    4400,
+    0
+   ]
+  ],
+  "ketting": [
+   [
+    "ketting",
+    18100,
+    4400
+   ],
+   [
+    "kettingen",
+    18100,
+    4400
+   ],
+   [
+    "gouden kettingen",
+    12100,
+    1600
+   ],
+   [
+    "goud ketting",
+    12100,
+    1600
+   ],
+   [
+    "gouden ketting",
+    12100,
+    1600
+   ],
+   [
+    "kettingen goud",
+    12100,
+    1600
+   ],
+   [
+    "ketting goud dames",
+    9900,
+    1000
+   ],
+   [
+    "kettingen dames goud",
+    9900,
+    1000
+   ],
+   [
+    "gouden kettingen dames",
+    9900,
+    1000
+   ],
+   [
+    "gouden dames ketting",
+    9900,
+    1000
+   ],
+   [
+    "sneeuwkettingen",
+    8100,
+    1900
+   ],
+   [
+    "zilver ketting",
+    6600,
+    880
+   ],
+   [
+    "kettingen zilver",
+    6600,
+    880
+   ],
+   [
+    "zilveren ketting",
+    6600,
+    880
+   ],
+   [
+    "kralenkettingen",
+    6600,
+    0
+   ],
+   [
+    "kralen ketting",
+    6600,
+    0
+   ],
+   [
+    "kettingen met kralen",
+    6600,
+    0
+   ],
+   [
+    "ketting dame",
+    6600,
+    0
+   ],
+   [
+    "kettingen dames",
+    6600,
+    0
+   ],
+   [
+    "ketting met kralen",
+    6600,
+    0
+   ]
+  ],
+  "armband": [
+   [
+    "armbanden voor heren",
+    9900,
+    1600
+   ],
+   [
+    "armbanden heren",
+    9900,
+    1600
+   ],
+   [
+    "armband heren",
+    9900,
+    1600
+   ],
+   [
+    "armband voor heren",
+    9900,
+    1600
+   ],
+   [
+    "gouden armbandjes",
+    9900,
+    1000
+   ],
+   [
+    "armbanden goud",
+    9900,
+    1000
+   ],
+   [
+    "gouden armband",
+    9900,
+    1000
+   ],
+   [
+    "dames armbanden goud",
+    9900,
+    1000
+   ],
+   [
+    "gouden armbanden",
+    9900,
+    1000
+   ],
+   [
+    "armbandjes goud",
+    9900,
+    1000
+   ],
+   [
+    "goud armbandje",
+    9900,
+    1000
+   ],
+   [
+    "gouden armband dames",
+    9900,
+    880
+   ],
+   [
+    "dames armband goud",
+    9900,
+    880
+   ],
+   [
+    "gouden armbanden dames",
+    9900,
+    880
+   ],
+   [
+    "armband",
+    8100,
+    1900
+   ],
+   [
+    "armbandje dames goud",
+    9900,
+    0
+   ],
+   [
+    "dames armband",
+    8100,
+    1000
+   ],
+   [
+    "heren armbanden zilver",
+    6600,
+    0
+   ],
+   [
+    "armband heren zilver",
+    6600,
+    0
+   ],
+   [
+    "armbandje heren zilver",
+    6600,
+    0
+   ]
+  ],
+  "ring": [
+   [
+    "ringen goud",
+    9900,
+    1300
+   ],
+   [
+    "gouden ringen dames",
+    8100,
+    720
+   ],
+   [
+    "ring dames goud",
+    8100,
+    720
+   ],
+   [
+    "ringen goud dames",
+    8100,
+    720
+   ],
+   [
+    "gouden ring dames",
+    8100,
+    720
+   ],
+   [
+    "ringen zilver",
+    3600,
+    720
+   ],
+   [
+    "zilver ringen dames",
+    3600,
+    0
+   ],
+   [
+    "ring zilver",
+    3600,
+    0
+   ],
+   [
+    "zilver ring dames",
+    3600,
+    0
+   ],
+   [
+    "zilveren ring dames",
+    3600,
+    0
+   ],
+   [
+    "zilveren ringen dames",
+    3600,
+    0
+   ],
+   [
+    "ringen / zilver",
+    3600,
+    0
+   ],
+   [
+    "heren ringen goud",
+    2900,
+    0
+   ],
+   [
+    "ringen voor dames",
+    0,
+    880
+   ],
+   [
+    "ringen dames",
+    0,
+    880
+   ],
+   [
+    "ringen op maat",
+    0,
+    590
+   ]
+  ],
+  "horloge": [
+   [
+    "herenhorloge",
+    27100,
+    5400
+   ],
+   [
+    "horloge heren",
+    27100,
+    5400
+   ],
+   [
+    "horloge dames",
+    14800,
+    2900
+   ],
+   [
+    "horloge dames goud",
+    8100,
+    880
+   ],
+   [
+    "gouden horloge dames",
+    8100,
+    880
+   ],
+   [
+    "fossil herenhorloge",
+    3600,
+    1300
+   ],
+   [
+    "tudor herenhorloge",
+    3600,
+    1000
+   ],
+   [
+    "casio horloge heren",
+    4400,
+    0
+   ],
+   [
+    "breitling horloge heren",
+    3600,
+    0
+   ],
+   [
+    "herenhorloge tag heuer",
+    3600,
+    0
+   ],
+   [
+    "breitling herenhorloge",
+    3600,
+    0
+   ],
+   [
+    "michael kors horloge dames",
+    3600,
+    0
+   ],
+   [
+    "rolex-horloge heren",
+    2900,
+    590
+   ],
+   [
+    "tissot herenhorloge",
+    0,
+    2400
+   ],
+   [
+    "herenhorloge festina",
+    0,
+    1300
+   ],
+   [
+    "horloge heren festina",
+    0,
+    1300
+   ],
+   [
+    "michael kors herenhorloge",
+    0,
+    1300
+   ],
+   [
+    "garmin horloge dames",
+    0,
+    880
+   ],
+   [
+    "sporthorloge dames",
+    0,
+    880
+   ],
+   [
+    "casio horloge dames",
+    0,
+    880
+   ]
+  ],
+  "lamp": [
+   [
+    "hanglampen",
+    33100,
+    6600
+   ],
+   [
+    "hanglamp",
+    33100,
+    6600
+   ],
+   [
+    "tafellamp",
+    33100,
+    5400
+   ],
+   [
+    "hanglampen eettafel",
+    22200,
+    1900
+   ],
+   [
+    "hanglamp voor eettafel",
+    22200,
+    1900
+   ],
+   [
+    "hanglamp eettafel",
+    22200,
+    1900
+   ],
+   [
+    "eettafellampen",
+    8100,
+    0
+   ],
+   [
+    "hanglamp voor woonkamer",
+    6600,
+    880
+   ],
+   [
+    "woonkamer hanglamp",
+    6600,
+    880
+   ],
+   [
+    "hanglampen voor woonkamer",
+    6600,
+    880
+   ],
+   [
+    "hanglampen woonkamer",
+    6600,
+    880
+   ],
+   [
+    "hanglamp voor slaapkamer",
+    5400,
+    880
+   ],
+   [
+    "oplaadbare lamp",
+    5400,
+    880
+   ],
+   [
+    "hanglamp slaapkamer",
+    5400,
+    880
+   ],
+   [
+    "oplaadbare lampen",
+    5400,
+    880
+   ],
+   [
+    "hanglampen slaapkamer",
+    5400,
+    880
+   ],
+   [
+    "hanglampen voor slaapkamer",
+    5400,
+    880
+   ],
+   [
+    "oplaadbare lampjes",
+    5400,
+    880
+   ],
+   [
+    "tafellamp oplaadbaar",
+    4400,
+    1300
+   ],
+   [
+    "tafellampen oplaadbaar",
+    4400,
+    1300
+   ]
+  ],
+  "bloempot en plantenbak": [
+   [
+    "bloempotten",
+    12100,
+    4400
+   ],
+   [
+    "bloempot",
+    12100,
+    4400
+   ],
+   [
+    "plantenbak buiten",
+    9900,
+    1900
+   ],
+   [
+    "plantenbak",
+    9900,
+    1900
+   ],
+   [
+    "plantenbakken buiten",
+    9900,
+    1900
+   ],
+   [
+    "plantenbakken voor buiten",
+    9900,
+    1900
+   ],
+   [
+    "plantenbak voor buiten",
+    9900,
+    1900
+   ],
+   [
+    "plantenbakken",
+    9900,
+    1900
+   ],
+   [
+    "cortenstaal plantenbak",
+    6600,
+    1600
+   ],
+   [
+    "plantenbakken cortenstaal",
+    6600,
+    1600
+   ],
+   [
+    "bloempotten voor binnen",
+    5400,
+    1000
+   ],
+   [
+    "bloempot voor binnen",
+    5400,
+    1000
+   ],
+   [
+    "bloempot binnen",
+    5400,
+    1000
+   ],
+   [
+    "bloempotten binnen",
+    5400,
+    1000
+   ],
+   [
+    "bloempot voor buiten",
+    4400,
+    1600
+   ],
+   [
+    "bloempotten buiten",
+    4400,
+    1600
+   ],
+   [
+    "bloempot buiten",
+    4400,
+    1600
+   ],
+   [
+    "bloempotten voor buiten",
+    4400,
+    1600
+   ],
+   [
+    "sierpotten binnen",
+    5400,
+    0
+   ],
+   [
+    "plantenbak voor balkon",
+    4400,
+    0
+   ]
+  ],
+  "plantenstandaard": [
+   [
+    "plantenstandaard",
+    6600,
+    1900
+   ],
+   [
+    "plantentafel",
+    5400,
+    590
+   ],
+   [
+    "plantentafeltje",
+    1900,
+    0
+   ]
+  ],
+  "vaas": [
+   [
+    "vaas",
+    14800,
+    2400
+   ],
+   [
+    "tulpenvaas",
+    9900,
+    590
+   ],
+   [
+    "tulpen vaas",
+    9900,
+    590
+   ],
+   [
+    "kogelvaas",
+    6600,
+    0
+   ],
+   [
+    "grote vazen",
+    5400,
+    720
+   ],
+   [
+    "vaas groot",
+    5400,
+    720
+   ],
+   [
+    "grote vaas",
+    5400,
+    720
+   ],
+   [
+    "vazen groot",
+    5400,
+    720
+   ],
+   [
+    "vazen",
+    4400,
+    880
+   ],
+   [
+    "vaasa museum",
+    4400,
+    0
+   ],
+   [
+    "vazen in delfts blauw",
+    2900,
+    0
+   ],
+   [
+    "delftsblauwe vazen",
+    2900,
+    0
+   ],
+   [
+    "delfts blauwe vaas",
+    2900,
+    0
+   ],
+   [
+    "delfts blauw vaas",
+    2900,
+    0
+   ],
+   [
+    "kerstvazen",
+    2900,
+    0
+   ],
+   [
+    "delfts blauwe vaasjes",
+    2900,
+    0
+   ],
+   [
+    "delfts blauw vaasjes",
+    2900,
+    0
+   ],
+   [
+    "vazen delfts blauw",
+    2900,
+    0
+   ],
+   [
+    "delfts blauwe vazen",
+    2900,
+    0
+   ],
+   [
+    "glazen vaas",
+    2400,
+    390
+   ]
+  ],
+  "mand": [
+   [
+    "wasmand",
+    33100,
+    5400
+   ],
+   [
+    "rieten mand",
+    12100,
+    2900
+   ],
+   [
+    "rieten manden",
+    12100,
+    2900
+   ],
+   [
+    "rieten mandjes",
+    9900,
+    2900
+   ],
+   [
+    "opbergmand",
+    6600,
+    1300
+   ],
+   [
+    "wasmanden 3 vakken",
+    6600,
+    720
+   ],
+   [
+    "wasmand 3 vakken",
+    6600,
+    720
+   ],
+   [
+    "wasmand 3 vaks",
+    6600,
+    0
+   ],
+   [
+    "wasmanden",
+    4400,
+    1000
+   ],
+   [
+    "rieten mand met deksel",
+    3600,
+    590
+   ],
+   [
+    "rieten manden deksel",
+    3600,
+    590
+   ],
+   [
+    "rieten mand deksel",
+    3600,
+    590
+   ],
+   [
+    "rieten manden met deksel",
+    3600,
+    590
+   ],
+   [
+    "rieten mandjes met deksel",
+    3600,
+    590
+   ],
+   [
+    "opbergmand met deksel",
+    3600,
+    480
+   ],
+   [
+    "opbergmanden deksel",
+    3600,
+    480
+   ],
+   [
+    "opbergmanden met deksel",
+    3600,
+    480
+   ],
+   [
+    "opbergmand deksel",
+    3600,
+    480
+   ],
+   [
+    "brabantia wasmand",
+    2900,
+    590
+   ],
+   [
+    "rieten wasmand",
+    2900,
+    590
+   ]
+  ],
+  "plaid en deken": [
+   [
+    "plaids",
+    9900,
+    4400
+   ],
+   [
+    "plaid",
+    9900,
+    4400
+   ],
+   [
+    "plaid tartan",
+    2400,
+    2400
+   ],
+   [
+    "plaids tartan",
+    2400,
+    2400
+   ],
+   [
+    "plaids bank",
+    3600,
+    0
+   ],
+   [
+    "plaids voor op bank",
+    3600,
+    0
+   ],
+   [
+    "plaid voor op bank",
+    3600,
+    0
+   ],
+   [
+    "plaid bank",
+    3600,
+    0
+   ],
+   [
+    "plaidoyer",
+    0,
+    590
+   ],
+   [
+    "plaidoyers",
+    0,
+    590
+   ],
+   [
+    "plaid pull",
+    0,
+    480
+   ],
+   [
+    "plaid pour canapé",
+    0,
+    390
+   ],
+   [
+    "plaide",
+    0,
+    390
+   ],
+   [
+    "plaid chauffant",
+    0,
+    390
+   ],
+   [
+    "plaid canapé",
+    0,
+    390
+   ],
+   [
+    "plaid personnalisée",
+    0,
+    390
+   ],
+   [
+    "plaids canapé",
+    0,
+    390
+   ],
+   [
+    "plaid personnalisé",
+    0,
+    390
+   ],
+   [
+    "plaid chauffante",
+    0,
+    390
+   ],
+   [
+    "plaids pour canapés",
+    0,
+    390
+   ]
+  ],
+  "bijzettafel": [
+   [
+    "bijzettafel",
+    40500,
+    6600
+   ],
+   [
+    "bijzettafels",
+    40500,
+    6600
+   ],
+   [
+    "bijzettafeltjes",
+    9900,
+    3600
+   ],
+   [
+    "bijzettafeltje",
+    9900,
+    3600
+   ],
+   [
+    "bijzettafels buiten",
+    8100,
+    1300
+   ],
+   [
+    "bijzettafel buiten",
+    6600,
+    1300
+   ],
+   [
+    "bijzettafeltje buiten",
+    6600,
+    1300
+   ],
+   [
+    "bijzettafeltjes buiten",
+    6600,
+    1300
+   ],
+   [
+    "bijzettafel voor buiten",
+    6600,
+    1300
+   ],
+   [
+    "bijzettafeltje voor buiten",
+    6600,
+    0
+   ],
+   [
+    "bijzettafeltje hout",
+    4400,
+    720
+   ],
+   [
+    "bijzettafels hout",
+    4400,
+    720
+   ],
+   [
+    "houten bijzettafel",
+    4400,
+    720
+   ],
+   [
+    "bijzettafel hout",
+    4400,
+    720
+   ],
+   [
+    "houten bijzettafels",
+    4400,
+    720
+   ],
+   [
+    "bijzettafels bank",
+    3600,
+    0
+   ],
+   [
+    "bijzettafel voor bank",
+    3600,
+    0
+   ],
+   [
+    "bijzettafel bank",
+    3600,
+    0
+   ],
+   [
+    "bijzettafel bij bank",
+    3600,
+    0
+   ],
+   [
+    "bijzettafel bankje",
+    3600,
+    0
+   ]
+  ],
+  "dienblad": [
+   [
+    "dienbladen",
+    9900,
+    1600
+   ],
+   [
+    "dienblad",
+    9900,
+    1600
+   ],
+   [
+    "dienbladen hout",
+    2900,
+    480
+   ],
+   [
+    "dienblad hout",
+    2900,
+    480
+   ],
+   [
+    "houten dienblad",
+    2900,
+    480
+   ],
+   [
+    "houten dienbladen",
+    2900,
+    480
+   ],
+   [
+    "groot dienblad",
+    1900,
+    0
+   ],
+   [
+    "grote dienbladen",
+    1900,
+    0
+   ],
+   [
+    "grote dienblad",
+    1900,
+    0
+   ]
+  ],
+  "lantaarn en windlicht": [
+   [
+    "kandelaar",
+    9900,
+    1600
+   ],
+   [
+    "kandelaars",
+    9900,
+    1600
+   ],
+   [
+    "lantaarn",
+    4400,
+    1300
+   ],
+   [
+    "lantaarns",
+    4400,
+    1300
+   ],
+   [
+    "windlicht",
+    3600,
+    590
+   ],
+   [
+    "lantaarns voor buiten",
+    1900,
+    390
+   ],
+   [
+    "lantaarns buiten",
+    1900,
+    390
+   ],
+   [
+    "joden kandelaar",
+    0,
+    480
+   ],
+   [
+    "joodse kandelaar",
+    0,
+    480
+   ],
+   [
+    "lantaarn buiten",
+    0,
+    390
+   ],
+   [
+    "windlicht voor buiten",
+    0,
+    320
+   ],
+   [
+    "windlicht buiten",
+    0,
+    320
+   ],
+   [
+    "lage kandelaar 6 letters",
+    0,
+    320
+   ],
+   [
+    "windlichten buiten",
+    0,
+    320
+   ],
+   [
+    "windlichten voor buiten",
+    0,
+    320
+   ],
+   [
+    "tafellantaarn buiten",
+    0,
+    320
+   ]
+  ],
+  "kaars": [
+   [
+    "geurkaars",
+    9900,
+    1900
+   ],
+   [
+    "geurkaarsen",
+    9900,
+    1300
+   ],
+   [
+    "sisi maison geurkaarsen",
+    0,
+    390
+   ]
+  ],
+  "orchidee en kunstplant": [
+   [
+    "orchidee",
+    14800,
+    5400
+   ],
+   [
+    "kunstplant",
+    14800,
+    1900
+   ],
+   [
+    "kunstplantjes",
+    14800,
+    1900
+   ],
+   [
+    "kunstplanten",
+    14800,
+    1900
+   ],
+   [
+    "kunstplant#",
+    14800,
+    0
+   ],
+   [
+    "kunstbloemen",
+    9900,
+    1300
+   ],
+   [
+    "boeket kunstbloemen",
+    6600,
+    590
+   ],
+   [
+    "kunstbloemen boeketten",
+    6600,
+    0
+   ],
+   [
+    "orchideeën verzorgen",
+    4400,
+    1600
+   ],
+   [
+    "orchidee verzorgen",
+    4400,
+    1600
+   ],
+   [
+    "orchidee verzorging",
+    4400,
+    1600
+   ],
+   [
+    "kunstbloem boeket",
+    5400,
+    590
+   ],
+   [
+    "kunstbloem boeketten",
+    5400,
+    590
+   ],
+   [
+    "verzorging orchideeën",
+    4400,
+    0
+   ],
+   [
+    "verzorgen van een orchidee",
+    4400,
+    0
+   ],
+   [
+    "kunstplanten voor buiten",
+    3600,
+    720
+   ],
+   [
+    "kunstplant voor buiten",
+    3600,
+    720
+   ],
+   [
+    "kunstplant buiten",
+    3600,
+    720
+   ],
+   [
+    "kunstplanten buiten",
+    3600,
+    720
+   ],
+   [
+    "kunstplanten voor binnen",
+    3600,
+    590
+   ]
+  ],
+  "diffuser en geur": [
+   [
+    "diffuser",
+    14800,
+    3600
+   ],
+   [
+    "diffusers",
+    14800,
+    3600
+   ],
+   [
+    "geurstokjes",
+    12100,
+    2400
+   ],
+   [
+    "aromatherapy diffuser",
+    6600,
+    1900
+   ],
+   [
+    "aroma diffuser",
+    6600,
+    1900
+   ],
+   [
+    "aromatherapy diffusers",
+    6600,
+    0
+   ],
+   [
+    "diffuser aromatic",
+    6600,
+    0
+   ],
+   [
+    "marie-stella-maris geurstokjes",
+    3600,
+    0
+   ],
+   [
+    "diffuser dyson",
+    1900,
+    0
+   ],
+   [
+    "istanbul geurstokjes",
+    0,
+    1600
+   ],
+   [
+    "rediffuser",
+    0,
+    1000
+   ],
+   [
+    "atelier rebul geurstokjes",
+    0,
+    880
+   ],
+   [
+    "atelier rebul istanbul geurstokjes",
+    0,
+    480
+   ],
+   [
+    "diffuser etherische olie",
+    0,
+    390
+   ],
+   [
+    "navulling voor geurstokjes",
+    0,
+    390
+   ],
+   [
+    "etherische oliën diffuser",
+    0,
+    390
+   ],
+   [
+    "navulling geurstokjes",
+    0,
+    390
+   ],
+   [
+    "geurdiffusers",
+    0,
+    320
+   ],
+   [
+    "ipuro geurstokjes",
+    0,
+    320
+   ],
+   [
+    "diffuser voor etherische olie",
+    0,
+    320
+   ]
+  ],
+  "wanddecoratie": [
+   [
+    "wanddecoraties",
+    18100,
+    2400
+   ],
+   [
+    "wanddecoratie",
+    18100,
+    2400
+   ],
+   [
+    "muurdecoraties",
+    9900,
+    1900
+   ],
+   [
+    "muurdecoratie",
+    9900,
+    1900
+   ],
+   [
+    "wanddecoraties woonkamer",
+    8100,
+    880
+   ],
+   [
+    "wanddecoratie woonkamer",
+    8100,
+    880
+   ],
+   [
+    "wandkleed",
+    8100,
+    0
+   ],
+   [
+    "muurdecoratie woonkamer",
+    4400,
+    0
+   ],
+   [
+    "muurdecoraties woonkamer",
+    4400,
+    0
+   ],
+   [
+    "houten wanddecoraties",
+    2400,
+    320
+   ],
+   [
+    "wanddecoraties hout",
+    2400,
+    320
+   ],
+   [
+    "houten wanddecoratie",
+    2400,
+    320
+   ],
+   [
+    "wanddecoraties van hout",
+    2400,
+    320
+   ],
+   [
+    "wanddecoratie van metaal",
+    2400,
+    320
+   ],
+   [
+    "wanddecoratie hout",
+    2400,
+    320
+   ],
+   [
+    "metaal wanddecoratie",
+    2400,
+    320
+   ],
+   [
+    "metalen wanddecoraties",
+    2400,
+    320
+   ],
+   [
+    "metalen wanddecoratie",
+    2400,
+    320
+   ],
+   [
+    "wanddecoratie van hout",
+    2400,
+    320
+   ],
+   [
+    "wanddecoraties metaal",
+    2400,
+    0
+   ]
+  ],
+  "kussen": [
+   [
+    "sierkussentjes",
+    18100,
+    2900
+   ],
+   [
+    "sierkussen",
+    18100,
+    2400
+   ],
+   [
+    "sierkussens",
+    18100,
+    2400
+   ],
+   [
+    "sierkussens voor bank",
+    5400,
+    0
+   ],
+   [
+    "sierkussen bank",
+    5400,
+    0
+   ],
+   [
+    "sierkussens voor op bank",
+    5400,
+    0
+   ],
+   [
+    "sierkussens bankstel",
+    5400,
+    0
+   ],
+   [
+    "sierkussens bank",
+    5400,
+    0
+   ]
+  ],
+  "kerst": [
+   [
+    "kerstvazen",
+    2900,
+    0
+   ],
+   [
+    "kerstversieringen buiten",
+    0,
+    1000
+   ],
+   [
+    "kerstversieringen voor buiten",
+    0,
+    1000
+   ]
+  ]
+ }
+}
