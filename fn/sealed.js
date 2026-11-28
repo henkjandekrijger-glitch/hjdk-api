@@ -17,7 +17,8 @@ import * as MAIL from '../lib/sealed-mail.js';
 import { prijsTekst } from '../lib/sealed-prijs.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { berichten, HAIKU, SONNET } from '../lib/ai.js';
-import { gwStap, gwStand, gwProef, gwPagina, gwStatusPagina, gwKaart, gwTrek, openPills, geoUit, TALEN as GW_TALEN } from '../lib/sealed-gw.js';
+import { gwStap, gwStand, gwProef, gwPagina, gwStatusPagina, gwKaart, gwTrek, gwBewaking, openPills, geoUit, TALEN as GW_TALEN } from '../lib/sealed-gw.js';
+import { helperStand, helperActie, helperPagina, ontwerpPagina } from '../lib/sealed-helper.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
 import { sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
@@ -101,6 +102,19 @@ export default async function handler(req, res) {
   if(op==='growth'){const days=Array.from({length:7},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)),counts={};for(const d of days){counts[d]={};for(const c of CHANNELS){const k='si:conversion:'+d+':'+c;counts[d][c]={browserSignals:+(await kv.get('si:visit:'+d+':'+c).catch(()=>0))||0,submissions:+(await kv.get(k).catch(()=>0))||0,intentSubmissions:+(await kv.get(k+':intent').catch(()=>0))||0,sampleReplySubmissions:+(await kv.get(k+':partner').catch(()=>0))||0,buyerCriteriaSubmissions:+(await kv.get('si:buyer-conv:'+d+':'+c).catch(()=>0))||0};}}return stuur(res,200,'application/json',JSON.stringify({basis:'Aggregate browser signals, not verified unique humans or confirmed search clicks. Anonymous submissions and buyer criteria are reported separately; test is an explicit QA channel.',segmentation:'Mode-specific anonymous counts start on 2026-11-17; earlier anonymous submissions remain only in submissions.',days:counts}),'no-store');}
   if(op==='visit'&&req.method==='POST'){const b=await leesBody(req);if(!CHANNELS.includes(b.channel)||/bot|crawler|spider|headless/i.test(String(req.headers['user-agent']||'')))return stuur(res,400,'application/json','{"ok":false}','no-store');const k='si:visit:'+new Date().toISOString().slice(0,10)+':'+b.channel;try{await kv.incr(k);await kv.raw(['EXPIRE',k,100*86400]);}catch{}return stuur(res,200,'application/json','{"ok":true}','no-store');}
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
+  if (op === 'gwontwerp') return stuur(res, 200, 'text/html; charset=utf-8', ontwerpPagina(), 'private, no-store', 'nl', 'noindex, nofollow');
+  if (op === 'gwhulp') {
+    // Alleen de bestaande beschermde productiehost, nooit via een openbaar domein of een willekeurige vercel.app-alias.
+    if (String(req.headers.host || '').toLowerCase() !== 'hjdk-api-henq.vercel.app') return stuur(res, 404, 'application/json', '{}', 'no-store');
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    if (req.method === 'POST') {
+      if (req.headers.origin !== 'https://hjdk-api-henq.vercel.app') return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
+      const b = await leesBody(req); if (JSON.stringify(b).length > 5000) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
+      return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await helperActie(kv, b)), 'private, no-store');
+    }
+    if (req.method !== 'GET') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    return q.get('vorm') === 'json' ? stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await helperStand(kv)), 'private, no-store') : stuur(res, 200, 'text/html; charset=utf-8', helperPagina(), 'private, no-store', 'nl', 'noindex, nofollow');
+  }
   // Eén ingang voor elke intentie (lib/sealed-gw.js, Henkjan 27 nov 2026): de chat, de stand, de controle en intrekken.
   if (op === 'gw' || op === 'gwtrek') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
@@ -121,7 +135,7 @@ export default async function handler(req, res) {
   if (op === 'gwproef') {
     if (!/\.vercel\.app$/i.test(String(req.headers.host || ''))) return stuur(res, 404, 'application/json', '{}', 'no-store');
     const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET, oidc: String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '') });
-    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwProef(ai), null, 1), 'no-store');
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwProef(ai, { geval: q.get('geval') || '' }), null, 1), 'no-store');
   }
   if (op === 'gwpagina') { // dezelfde pagina op de beschermde host, om te bekijken zonder de rewrite van sealedintent.com
     const t = GW_TALEN.includes(q.get('taal')) ? q.get('taal') : 'nl';
@@ -153,7 +167,7 @@ export default async function handler(req, res) {
     } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
   if (op === 'chatstand') { const st = await chatStand(kv); return q.get('format') === 'json' ? stuur(res, 200, 'application/json', JSON.stringify(st, null, 1), 'no-store', '', 'noindex') : stuur(res, 200, 'text/plain; charset=utf-8', chatStandTekst(st) + '\n', 'no-store'); }
-  if (op === 'chatleer') { const r = await chatLeer(kv, { ai: o => berichten({ ...o, model: HAIKU }) }); return stuur(res, 200, 'application/json', JSON.stringify(r, null, 1), 'no-store'); }
+  if (op === 'chatleer') { const bewaking = await gwBewaking(kv); const r = await chatLeer(kv, { ai: o => berichten({ ...o, model: HAIKU }) }); return stuur(res, 200, 'application/json', JSON.stringify({ ...r, ingang: bewaking }, null, 1), 'no-store'); }
   if (op === 'koper') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
@@ -256,3 +270,4 @@ export default async function handler(req, res) {
   if (slug === 'manage') return stuur(res, 200, 'text/html; charset=utf-8', renderManagePage(taal), 'private, no-store', taal, 'noindex, nofollow');
   return nietGevonden(taal);
 }
+
