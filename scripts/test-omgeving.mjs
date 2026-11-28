@@ -34,7 +34,7 @@ ja(O.daglicht(40.71, -74.0, t('2026-06-21T14:00:00Z')) === 'licht' && O.daglicht
 ja(O.daglicht('x', 4, 1) === '' && O.daglicht(91, 0, 1) === '', 'daglicht: ongeldige plek geeft leeg');
 
 // koopkracht
-ja(T.US.length === 100000 && T.NL === '', 'tabel: US 100000 tekens, NL leeg (geen verifieerbare bron)');
+ja(T.US.length === 100000 && T.NL === '', 'tabel: US 100000 tekens, NL niet in het bestand (komt uit Redis, lib/kknl.js)');
 ja(O.koopkracht('US', '90210', T) === '5 hoogste 20%' && O.koopkracht('us', '48201-1234', T) === '1 laagste 20%', 'koopkracht: 90210 hoogste, 48201 laagste (met ZIP+4)');
 ja(O.koopkracht('us', '00501', T) === '' && O.koopkracht('us', 'abc', T) === '' && O.koopkracht('de', '10115', T) === '', 'koopkracht: onbekend, onleesbaar of ander land is leeg');
 ja(O.koopkracht('nl', '1011 AB', T) === '', 'koopkracht: NL zonder tabel is leeg');
@@ -167,4 +167,30 @@ const F = { koopkracht: '5', daglicht: 'licht', weer: 'regen', temp: '10-19' };
   ja(c.length === 0 && k.h.get('mm:vf:cccc3333dddd4444').u_koop === '2026-11-28' && k.ttl.get('mm:vf:cccc3333dddd4444') === 30 * 3600, 'late uitkomst zonder klikgeheugen: markering met houdbaarheid van 30 uur, niets geteld');
 }
 ja(LABEL.koopkracht && LABEL.daglicht && LABEL.weer && LABEL.temp && !('weer' in {}) , 'LABEL: vier nieuwe voorspellers');
+// koopkracht Nederland (lib/kknl.js): gewogen vijfden, onbekend, drempel, lezen via koopkracht()
+{
+  const KN = await import('../lib/kknl.js');
+  const rijen = []; for (let i = 0; i < 10; i++) rijen.push({ postcode: 1000 + i, inwoners: 100, inkomen: 20000 + i * 1000 });
+  rijen.push({ postcode: 1010, inwoners: 100, inkomen: -99997 }, { postcode: 1011, inwoners: 100, inkomen: null }, { postcode: 1012, inwoners: 0, inkomen: 40000 }, { postcode: 1013, inwoners: 50, inkomen: -99995 }, { postcode: 1004, inwoners: 100, inkomen: 99999 });
+  const v = KN.vijfden(rijen);
+  ja(v.tabel.length === 9000 && v.meta.gevuld === 10 && v.meta.onbekend === 4 && v.meta.gezien === 14, 'kknl: 10 gevuld, 4 onbekend, dubbele postcode telt niet mee');
+  ja(v.tabel.slice(0, 10) === '1122334455' && v.meta.perVijfde.join() === '2,2,2,2,2', 'kknl: tien gelijke PC4 in twee per vijfde, laag naar hoog');
+  ja(v.tabel[10] === '0' && v.tabel[11] === '0' && v.tabel[12] === '0' && v.tabel[13] === '0' && v.tabel[5000] === '0', 'kknl: negatieve code, leeg, zonder inwoners en niet in de lijst zijn 0 (nooit opvullen)');
+  ja(v.meta.grenzen.join() === '22000,24000,26000,28000', 'kknl: grenzen tussen de vijfden in inkomen');
+  const w = KN.vijfden([{ postcode: 2000, inwoners: 800, inkomen: 10000 }, { postcode: 2001, inwoners: 50, inkomen: 20000 }, { postcode: 2002, inwoners: 50, inkomen: 30000 }, { postcode: 2003, inwoners: 50, inkomen: 40000 }, { postcode: 2004, inwoners: 50, inkomen: 50000 }]);
+  ja(w.tabel.slice(1000, 1005) === '35555', 'kknl: gewogen op inwoners, niet op aantal gebieden (grote PC4 krijgt het midden, de kleine erboven alle hoog)');
+  ja(!KN.geloofwaardig(v.meta, [2023]) && KN.geloofwaardig({ gevuld: 3500 }, [2023]) && !KN.geloofwaardig({ gevuld: 4000 }, [2023, 2024]) && !KN.geloofwaardig({ gevuld: 3499 }, [2023]) && !KN.geloofwaardig({ gevuld: 4000 }, []), 'kknl: drempel 3.500 PC4 en alleen jaarcode 2023');
+  const grote = []; for (let i = 0; i < 4000; i++) grote.push({ postcode: 1000 + i, inwoners: 1000, inkomen: 25000 + (i * 7919) % 30000 });
+  const g = KN.vijfden(grote); ja(g.meta.gevuld === 4000 && g.meta.perVijfde.every(n => n > 700 && n < 900), 'kknl: 4.000 PC4 verdeeld in vijfden van ongeveer 800');
+  const TT = { NL: g.tabel, US: '' }; ja(O.koopkracht('nl', '1012AB', TT) !== '' && O.koopkracht('nl', '1012 AB', TT) === O.koopkracht('nl', '1012', TT) && O.koopkracht('nl', '9999ZZ', TT) === '' && O.koopkracht('nl', '0999AB', TT) === '', 'koopkracht: NL met tabel, spatie, onbekend en onder 1000');
+  const k = nepKv(); ja(await KN.laadNL(k) === '', 'kknl: laadNL zonder tabel is leeg');
+  await KN.bewaar(k, { ok: true, tabel: g.tabel, meta: Object.assign({ gehaald: new Date().toISOString() }, g.meta) });
+  ja(await KN.laadNL(k) === g.tabel && (await KN.stand(k)).gevuld === 4000 && !(await KN.stand(k)).oud, 'kknl: bewaren, laden en stand (niet oud)');
+  const f = nepKv(); await KN.bewaar(f, { ok: false, fout: 'proef' }); ja((await KN.stand(f)).oud && /LEEG/.test(KN.standTekst(await KN.stand(f))), 'kknl: lege stand zegt het hardop');
+  // haalNL met een nep PDOK: 18 blokken, een pagina met next-link, alleen jaarcode 2023
+  const data = {}; for (let p = 1000; p < 5000; p++) data[p] = { properties: { postcode: p, aantal_inwoners: 500, gemiddeld_inkomen_huishouden: p === 1500 ? -99997 : 30000 + (p % 97) * 500, jaarcode: 2023 }, geometry: null };
+  const nep = async (url) => { const u = new URL(url), fl = decodeURIComponent(u.searchParams.get('filter')), m = /postcode>=(\d+) AND postcode<(\d+)/.exec(fl), a = Number(m[1]), b = Number(m[2]), c = Number(u.searchParams.get('cursor') || a), uit = []; for (let p = c; p < b && uit.length < 250; p++) if (data[p]) uit.push(data[p]); const volg = uit.length === 250 ? Number(uit[249].properties.postcode) + 1 : 0; return { ok: true, status: 200, json: async () => ({ features: uit, links: volg && volg < b ? [{ rel: 'next', href: u.origin + u.pathname + '?f=json&limit=250&filter=' + u.searchParams.get('filter') + '&cursor=' + volg }] : [] }) }; };
+  const h = await KN.haalNL(nep); ja(h.ok && h.meta.gevuld === 3999 && h.meta.onbekend === 1 && h.tabel[500] === '0', 'kknl: haalNL met bladeren over pagina\'s, een onbekende PC4 blijft 0');
+  const h2 = await KN.haalNL(async () => ({ ok: false, status: 500, json: async () => ({}) })); ja(!h2.ok && /500/.test(h2.fout), 'kknl: een fout van PDOK bewaart niets');
+}
 console.log(fout ? fout + ' fout' : 'alles ok (' + ok + ')'); process.exit(fout ? 1 : 0);

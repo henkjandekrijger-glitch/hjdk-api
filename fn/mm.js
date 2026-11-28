@@ -253,9 +253,18 @@ export default async function handler(req, res) {
       if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(P.standTekst(st) + '\n'); }
       const { CSS } = await import('../lib/dashboard.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(P.standHtml(st, CSS));
     }
+    if (op === 'kknl') { // koopkracht Nederland per PC4 (lib/kknl.js, 28 nov 2026, taak xwo1wj): stand, ophalen bij PDOK (run=1), ruwe vorm (proef=1), een PC4 nakijken (pc=)
+      const KN = await import('../lib/kknl.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
+      if (q('proef') === '1') return res.status(200).json(await KN.proef().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) })));
+      if (q('run') === '1') { const r = await KN.bewaar(kv, await KN.haalNL().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }))); if (r.ok) KN.zetGeheugen(r.tabel); return res.status(r.ok ? 200 : 502).json({ ok: r.ok, fout: r.fout, meta: r.meta, stand: await KN.stand(kv) }); }
+      const pc = String(q('pc') || '').replace(/\D/g, '').slice(0, 4), st = await KN.stand(kv);
+      if (pc.length === 4) { const OM = await import('../lib/omgeving.js'); return res.status(200).json({ ok: true, pc, vijfde: OM.koopkracht('nl', pc, { NL: await KN.laadNL(kv) }) || 'onbekend' }); }
+      return res.status(200).json({ ok: true, stand: st, tekst: KN.standTekst(st) });
+    }
     if (op === 'bronnen') { // databronnen van Clickmind (lib/pxcheck.js, Henkjan 27 nov 2026): stand, per zone, en de dagelijkse Radar-ronde
       const P = await import('../lib/pxcheck.js'); res.setHeader('cache-control', 'no-store'); cors(res);
-      if (q('run') === '1') return res.status(200).json(await P.radarRonde(kv));
+      if (q('run') === '1') { const kk = await (await import('../lib/kknl.js')).zorgNL(kv, fetch, { tijd: 100000 }); const rr = await P.radarRonde(kv); return res.status(200).json(Object.assign({}, rr, { kknl: kk })); } /* NL-koopkracht ophalen als hij ontbreekt of ouder is dan 180 dagen, met eigen try/catch en tijdslimiet */
       const st = await P.bronnenStand(kv), zones = await P.pxZones(kv, 7);
       const UT = await import('../lib/uitkomstterug.js'), uts = await UT.terugStand(kv, Math.max(1, Math.min(14, Number(q('dagen')) || 1))).catch(() => null); // uitkomsten terug naar de klik (28 nov 2026): per bron vandaag gekoppeld en niet gekoppeld
       if (q('terug')) return res.status(200).json({ ok: true, terug: uts, amazonZones: (await UT.zoneAmazon(kv, 7).catch(() => [])).slice(0, 30) });
