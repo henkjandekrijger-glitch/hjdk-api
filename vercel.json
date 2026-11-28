@@ -3267,7 +3267,18 @@
           "value": "hnkjn.me"
         }
       ],
-      "destination": "https://hjdk-api-henq.vercel.app/api/mm/verder",
+      "destination": "https://hjdk-api-henq.vercel.app/dashboard",
+      "permanent": false
+    },
+    {
+      "source": "/ai",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "https://hjdk-api-henq.vercel.app/api/mm/dashboard?vorm=start",
       "permanent": false
     },
     {
@@ -3278,7 +3289,18 @@
           "value": "hnkjn.me"
         }
       ],
-      "destination": "https://hjdk-api-henq.vercel.app/api/mm/verder?vorm=tekst",
+      "destination": "https://hjdk-api-henq.vercel.app/api/mm/dashboard?vorm=start",
+      "permanent": false
+    },
+    {
+      "source": "/verder",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "https://hjdk-api-henq.vercel.app/api/mm/verder",
       "permanent": false
     },
     {
@@ -3293,6 +3315,17 @@
       "permanent": false
     },
     {
+      "source": "/:project([a-z0-9-]{2,20})",
+      "has": [
+        {
+          "type": "host",
+          "value": "hnkjn.me"
+        }
+      ],
+      "destination": "https://hjdk-api-henq.vercel.app/api/mm/dashboard?vorm=bij&project=:project",
+      "permanent": false
+    },
+    {
       "source": "/:pad*",
       "has": [
         {
@@ -3300,7 +3333,7 @@
           "value": "hnkjn.me"
         }
       ],
-      "destination": "https://hjdk-api-henq.vercel.app/api/mm/verder",
+      "destination": "https://hjdk-api-henq.vercel.app/dashboard",
       "permanent": false
     },
     {
