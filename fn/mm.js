@@ -248,6 +248,8 @@ export default async function handler(req, res) {
       const P = await import('../lib/pxcheck.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       if (q('run') === '1') return res.status(200).json(await P.radarRonde(kv));
       const st = await P.bronnenStand(kv), zones = await P.pxZones(kv, 7);
+      const UT = await import('../lib/uitkomstterug.js'), uts = await UT.terugStand(kv, Math.max(1, Math.min(14, Number(q('dagen')) || 1))).catch(() => null); // uitkomsten terug naar de klik (28 nov 2026): per bron vandaag gekoppeld en niet gekoppeld
+      if (q('terug')) return res.status(200).json({ ok: true, terug: uts, amazonZones: (await UT.zoneAmazon(kv, 7).catch(() => [])).slice(0, 30) });
       if (q('zones')) return res.status(200).json({ ok: true, zones: zones.slice(0, 300) });
       if (q('json')) return res.status(200).json({ ok: true, bronnen: st, zones: zones.filter(z => z.oordeel !== 'te weinig').slice(0, 50) });
       const V = await import('../lib/vmodel.js'), M = await kv.get('mm:model:g').catch(() => null); // voorspelmodel per klik: voorspeld tegen echt
@@ -258,7 +260,7 @@ export default async function handler(req, res) {
       const OM = await import('../lib/omgeving.js'), OS = await OM.stand(kv).catch(() => null); // omgevingsdata (koopkracht, weer, daglicht): dagtellers en pauze
       if (q('omgeving')) return res.status(200).json({ ok: true, omgeving: OS });
       const omt = OS ? OM.standTekst(OS) : '';
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + P.bronnenTekst(st, zones));
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
     }
     if (op === 'gadslogin') { // Google Ads koppelen voor het campagne-archief (27 nov 2026): alleen Henkjan op de beschermde host; door naar de inlog van Google
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
@@ -707,12 +709,14 @@ export default async function handler(req, res) {
       if (op === 'geheugen') { const { geheugenPerGroep, geheugenPatroon } = await import('../lib/dbgeheugen.js'); const m = String(q('match') || ''); return res.status(200).json(m ? await geheugenPatroon(kv, { match: m.slice(0, 60) }) : await geheugenPerGroep(kv, { alle: q('alle') === '1' })); }
       if (op === 'venster') { const { vensterPerZone } = await import('../lib/venster.js'); const r = await vensterPerZone(kv, { dag: q('dag') || new Date().toISOString().slice(0, 10), min: Number(q('min')) || 10 }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
+      if (op === 'amzzone') { const r = await (await import('../lib/uitkomstterug.js')).amazonNaarZone(kv, { dag: q('dag') || new Date(Date.now() - 864e5).toISOString().slice(0, 10) }); return res.status(r.ok ? 200 : 400).json(r); } // Amazon per tag naar de zones van een dag opnieuw uitrekenen (schrijft per zone, dus herhalen is veilig)
       if (op === 'amazon') {
         // hele dagronde in één keer: POST { dag, bron, rijen: [{tag, kliks, artikelen, omzet, verdiend}] }
         if (req.method === 'POST') {
           const b = leesJson(req.body) || {}; if (!Array.isArray(b.rijen)) return res.status(400).json({ ok: false, fout: 'body { dag, rijen: [{tag,kliks,artikelen,omzet}] }' });
           const uit = []; for (const r of b.rijen.slice(0, 60)) uit.push(await amazonUitkomst(kv, { dag: b.dag, bron: b.bron, ...r }));
-          return res.status(200).json({ ok: uit.every(x => x.ok), dag: b.dag, rijen: uit });
+          const zone = uit.some(x => x.ok) ? await (await import('../lib/uitkomstterug.js')).amazonNaarZone(kv, { dag: b.dag }).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 100) })) : null; // 28 nov 2026: de artikelen per tag ook naar de zones (zwak bewijs, alleen binnen Clickmind)
+          return res.status(200).json({ ok: uit.every(x => x.ok), dag: b.dag, rijen: uit, ...(zone ? { zones: zone } : {}) });
         }
         const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r);
       }
