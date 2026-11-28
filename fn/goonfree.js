@@ -1,5 +1,7 @@
 // GoonFree 2.0 (app, overgenomen 27 nov 2026; repo henkjandekrijger-glitch/goonfree). Openbaar via https://keuzehulp.best/api/goonfree
-//   POST ?op=coach  { d, l, m:[{r:'u'|'c',t}], ctx:{dagen,uur,drangen} } -> { t }  AI-coach bij een drang (Haiku, eigen sleutel eerst, gateway als terugval)
+//   POST ?op=coach  { d, l, m:[{r:'u'|'c',t}], ctx:{dagen,uur,drangen,waarom,plannen,triggers,terugval,piek,geloof,land} } -> { t }
+//                   AI-coach bij een drang die de gebruiker kent (Haiku, eigen sleutel eerst, gateway als terugval). Alles komt van het toestel, niets wordt bewaard.
+//   POST ?op=inzicht { d, l, ctx:{...zelfde, week:{drang,gehaald,daling,terugval,checkins}} } -> { t }  weekinzicht: 3 korte zinnen, hoogstens 3 per toestel per dag
 //   POST ?op=ev     { d, e, p, os, v, l } -> { ok }  elke stap in de app telt (Clickmind-principe), tellers per dag, unieke toestellen (HyperLogLog)
 //   GET  ?op=stand[&dagen=7][&vorm=tekst]  tellers per dag voor dashboard en rondes
 // Regels (Henkjan 27 nov 2026): 18+, geen advertenties, nooit NoFap of andermans merknamen; de coach noemt geen andere programma's of gemeenschappen.
@@ -22,9 +24,33 @@ After a slip: no shame, their total clean days stay, focus on the next hour and 
 Never write sexual content, never describe porn, never suggest "just a little". Never name other quitting programs, challenges,
 communities, apps or brands. If they ask what you are: the GoonFree coach, an AI, not a therapist.
 If the user mentions self-harm, suicide or being in danger: respond with care, tell them to contact local emergency services or a
-crisis line now (US 988, NL 113 or 0800-0113, UK 116 123), and stay with them in the conversation.
+crisis line now (US and Canada 988, UK and Ireland 116 123, Australia 13 11 14, Germany 0800 111 0 111, NL 113 or 0800-0113),
+and stay with them in the conversation.
 If problems are heavy or long-lasting, suggest a professional therapist who treats compulsive sexual behaviour.
+You know this user from the context below: use their own why and their own if-then plans by name, refer to their pattern
+(risk hour, triggers before earlier slips) when it helps, but never repeat the whole profile back.
+If the context says faith=yes, the user welcomes faith-based encouragement (grace, prayer, purpose); keep it gentle and
+non-denominational unless they name their faith. If faith=no, keep it secular.
 Always answer in the user's language (code: {LANG}).`;
+
+const INZICHT = `You write the weekly insight inside GoonFree, an app for adults who want to stop compulsive porn use.
+You get the user's numbers for the last 7 days and their profile. Write exactly 3 short sentences, max 60 words total, no lists, no emojis:
+1) what went well, with one concrete number from the data; 2) the clearest pattern (an hour, a trigger or a feeling);
+3) one concrete if-then plan for next week that fits that pattern. Warm and direct, never shaming. If faith=yes you may end with one
+gentle line of faith-based encouragement. Never name other programs, apps or brands. Answer in the user's language (code: {LANG}).`;
+
+const lijst = (x, n) => (Array.isArray(x) ? x.slice(0, 6).map(v => schoon(v, n)).filter(Boolean) : []);
+function profiel(c) {
+  const r = [`current clean run ${Number(c.dagen) || 0} days`, `local hour ${Number(c.uur) || 0}`, `urges logged ${Number(c.drangen) || 0}`];
+  if (c.waarom) r.push(`their why: "${schoon(c.waarom, 80)}"`);
+  const p = lijst(c.plannen, 140); if (p.length) r.push(`their if-then plans: ${p.map(x => '"' + x + '"').join('; ')}`);
+  const t = lijst(c.triggers, 40); if (t.length) r.push(`their risk moments: ${t.join(', ')}`);
+  const v = lijst(c.terugval, 60); if (v.length) r.push(`before recent slips: ${v.join(', ')}`);
+  if (Number.isFinite(Number(c.piek)) && c.piek !== null && c.piek !== '') r.push(`peak urge hour ${Number(c.piek)}:00`);
+  r.push('faith=' + (c.geloof ? 'yes' : 'no'));
+  if (c.land) r.push('country ' + schoon(c.land, 3));
+  return 'Context: ' + r.join(', ') + '.';
+}
 
 function lijf(req) {
   if (req.body && typeof req.body === 'object') return req.body;
@@ -40,7 +66,7 @@ async function coach(req, res) {
   if (totaal === 1) await kv.raw(['EXPIRE', 'gf:coach:' + dag, TTL]).catch(() => {});
   if (eigen > PER_TOESTEL || totaal > PER_DAG) return res.json({ t: '', grens: true });
   const c = b.ctx || {};
-  const context = `Context: current clean run ${Number(c.dagen) || 0} days, local hour ${Number(c.uur) || 0}, urges logged ${Number(c.drangen) || 0}.`;
+  const context = profiel(c);
   const gesprek = m.map(x => (x.r === 'u' ? 'User: ' : 'Coach: ') + x.t).join('\n');
   try {
     const r = await berichten({
@@ -54,6 +80,28 @@ async function coach(req, res) {
     return res.json({ t });
   } catch (e) {
     await kv.incr('gf:ev:' + dag + ':coach_fout').catch(() => {});
+    return res.status(502).json({ t: '', fout: 'ai' });
+  }
+}
+
+async function inzicht(req, res) {
+  const b = lijf(req), d = schoon(b.d, 40) || 'anon', dag = DAG(), c = b.ctx || {}, w = c.week || {};
+  const [eigen, totaal] = await Promise.all([kv.incr('gf:inz:' + dag + ':' + d), kv.incr('gf:coach:' + dag)]);
+  if (eigen === 1) await kv.raw(['EXPIRE', 'gf:inz:' + dag + ':' + d, 172800]).catch(() => {});
+  if (eigen > 3 || totaal > PER_DAG) return res.json({ t: '', grens: true });
+  const n = k => Math.max(0, Math.round(Number(w[k]) || 0));
+  const week = `Last 7 days: urges logged ${n('drang')}, urges beaten ${n('gehaald')}, average urge drop ${Math.round((Number(w.daling) || 0) * 10) / 10} points on 1-10, slips ${n('terugval')}, daily check-ins ${n('checkins')} (hard days ${n('zwaar')}).`;
+  try {
+    const r = await berichten({
+      fn: 'goonfree-inzicht', model: HAIKU, max: 220, timeout: 15000,
+      system: INZICHT.replace('{LANG}', schoon(b.l, 5) || 'en'),
+      user: profiel(c) + '\n' + week + '\n\nWrite the 3 sentences only.',
+      oidc: String(req.headers['x-vercel-oidc-token'] || ''), directKey: process.env.ANTHROPIC_API_KEY,
+    });
+    await kv.incr('gf:ev:' + dag + ':inzicht_antwoord').catch(() => {});
+    return res.json({ t: String(r.txt || '').trim().slice(0, 600) });
+  } catch (e) {
+    await kv.incr('gf:ev:' + dag + ':inzicht_fout').catch(() => {});
     return res.status(502).json({ t: '', fout: 'ai' });
   }
 }
@@ -98,6 +146,7 @@ export default async function handler(req, res) {
   try {
     if (op === 'coach' && req.method === 'POST') return await coach(req, res);
     if (op === 'ev' && req.method === 'POST') return await ev(req, res);
+    if (op === 'inzicht' && req.method === 'POST') return await inzicht(req, res);
     if (op === 'stand') return await stand(req, res);
     if (op === 'gezond') return res.json({ ok: true, app: 'goonfree', v: 1 });
     return res.status(404).json({ fout: 'onbekende op' });
