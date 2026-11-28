@@ -1,0 +1,166 @@
+{
+ "trending": {
+  "code": 0,
+  "message": "OK",
+  "data": {
+   "filter_info": {
+    "category_name": "HOUSEHOLD_PRODUCTS",
+    "country_code": "NL",
+    "date_range": "7DAY"
+   },
+   "list": [
+    {
+     "hashtag_id": "3621418679443",
+     "hashtag_name": "lego",
+     "posts": 1682,
+     "rank_position": "1",
+     "top_country_list": [
+      "US",
+      "GB",
+      "DE"
+     ],
+     "posts_global_lifetime": 11405847,
+     "rank_change": "0",
+     "views": 7653605,
+     "views_global_lifetime": 124472025442
+    },
+    {
+     "views_global_lifetime": 89710245743,
+     "posts": 434,
+     "posts_global_lifetime": 4842629,
+     "rank_change": "0",
+     "hashtag_id": "1814381916938",
+     "hashtag_name": "squishy",
+     "rank_position": "2",
+     "top_country_list": [
+      "US",
+      "VN",
+      "ID"
+     ],
+     "views": 10257344
+    },
+    {
+     "posts": 369,
+     "posts_global_lifetime": 41333,
+     "rank_position": "3",
+     "top_country_list": [
+      "NL",
+      "BE",
+      "HK"
+     ],
+     "rank_change": "0",
+     "views": 5340863,
+     "views_global_lifetime": 564799032,
+     "hashtag_id": "1761780641661",
+     "hashtag_name": "speelgoed"
+    },
+    {
+     "views_global_lifetime": 7291842589,
+     "hashtag_id": "228983875739",
+     "posts_global_lifetime": 763237,
+     "rank_change": "26",
+     "rank_position": "4",
+     "hashtag_name": "лего",
+     "posts": 3535,
+     "top_country_list": [
+      "BY",
+      "KZ",
+      "UA"
+     ],
+     "views": 1404224
+    },
+    {
+     "posts": 122,
+     "rank_position": "5",
+     "views": 4299547,
+     "posts_global_lifetime": 11653419,
+     "rank_change": "2",
+     "top_country_list": [
+      "US",
+      "PH",
+      "ID"
+     ],
+     "views_global_lifetime": 176164960700,
+     "hashtag_id": "1621197013022",
+     "hashtag_name": "toys"
+    },
+    {
+     "hashtag_name": "tcg",
+     "views": 1432357,
+     "views_global_lifetime": 11774363683,
+     "hashtag_id": "3751653880856",
+     "posts": 692,
+     "posts_global_lifetime": 3156018,
+     "rank_change": "2",
+     "rank_position": "6",
+     "top_country_list": [
+      "US",
+      "GB",
+      "FR"
+     ]
+    }
+   ]
+  }
+ },
+ "videos": {
+  "code": 0,
+  "message": "OK",
+  "data": {
+   "list": [
+    {
+     "hashtag_id": "1761780641661",
+     "hashtag_name": "speelgoed",
+     "top_video_list": [
+      {
+       "share_url": "https://www.tiktok.com/@voorbeeld1/video/7709850783780539681?_t=x",
+       "video_id": "7709850783780539681"
+      },
+      {
+       "share_url": "https://www.tiktok.com/@voorbeeld2/video/7711312472682106145",
+       "video_id": "7711312472682106145"
+      }
+     ]
+    },
+    {
+     "hashtag_id": "3621418679443",
+     "hashtag_name": null,
+     "top_video_list": null
+    }
+   ]
+  }
+ },
+ "bench": {
+  "code": 0,
+  "message": "OK",
+  "data": {
+   "items": [
+    {
+     "info": {
+      "ad_id": "1"
+     },
+     "metrics": {}
+    },
+    {
+     "info": {
+      "ad_id": "2"
+     },
+     "metrics": {}
+    },
+    {
+     "info": {
+      "ad_id": "3",
+      "placement": "Tiktok"
+     },
+     "metrics": {
+      "ctr": 0.4,
+      "cpc": 0.2,
+      "cpm": 0.3
+     }
+    }
+   ],
+   "page_info": {
+    "total_number": 3
+   }
+  }
+ }
+}

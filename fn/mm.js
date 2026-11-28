@@ -35,6 +35,7 @@
 //   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
 //   /api/mm/stukken[?vorm=tekst|json][&run=1]   geheugen van alles wat de deur uit ging, met paspoort (medium, waarvoor, doel), oordeel en lessen; /api/mm/briefing?medium=&project=&doel= lezen vóór je iets maakt; /api/mm?op=stuk&j=<JSON> een stuk melden (lib/paspoort.js; beschermde host of team-sleutel)
 //   /api/mm?op=trend[&j=<JSON>|&medium=|&vorm=tekst]   wat nu groot is per platform (lib/trend.js); /api/mm?op=voorstel[&j=<JSON>|&id=] nieuwe stukken die Henkjan eerst ziet (/voorstel?id=); /api/mm/stukken?lijst=1&project=&medium=&regel=1 stukken met hun oordeel opvragen
+//   /api/mm?op=adbieb[&project=<id>|&vorm=json]   advertentiebibliotheken van buiten (lib/adbieb.js, Henkjan 27 nov 2026: "Ja bouw 4"): langlopers uit de Meta Ad Library (Zernio) en TikTok-hashtags, trendvideo's en benchmark per project; run=1 de dagronde (cron elk uur van 00:07 tot en met 03:07 UTC), POST of j=<JSON> melding van een chat die het met de MCP-tools ophaalde, zoek=<JSON> de zoektermen per project (beschermde host)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
 //   /api/mm/lookalike?project=todayin&land=us   lookalikes op uitkomst (lib/lookalike.js; openbaar, alleen zone-nummers)
@@ -199,7 +200,7 @@ export default async function handler(req, res) {
       if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n'), tekst: q('tekst'), haak: q('haak'), doelsoort: q('doelsoort'), variant: q('variant'), trend: q('trend'), paar: q('paar'), store: q('store'), stats: q('imp') != null ? { imp: q('imp'), likes: q('likes'), reacties: q('reacties'), delen: q('delen') } : null }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
     }
-    if (op === 'stuk' || op === 'stukken' || op === 'briefing' || op === 'trend' || op === 'voorstel') { // paspoort en geheugen (lib/paspoort.js, Henkjan 27 nov 2026): één register voor alles wat de deur uit gaat, met medium, waarvoor en doel
+    if (op === 'stuk' || op === 'stukken' || op === 'briefing' || op === 'trend' || op === 'voorstel' || op === 'adbieb') { // paspoort en geheugen (lib/paspoort.js, Henkjan 27 nov 2026): één register voor alles wat de deur uit gaat, met medium, waarvoor en doel
       const P = await import('../lib/paspoort.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
       const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''), given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
@@ -209,6 +210,14 @@ export default async function handler(req, res) {
         const b = await P.briefing({ medium: q('medium'), project: q('project'), doel: q('doel'), dagen: Math.min(180, Number(q('dagen')) || 90) }); if (!b.ok) return res.status(400).json(b);
         if (q('vorm') === 'json') return res.status(200).json(b);
         res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(b.tekst + '\n');
+      }
+      if (op === 'adbieb') { // advertentiebibliotheken van buiten (lib/adbieb.js): ronde, melding van een chat, zoektermen, stand
+        const AB = await import('../lib/adbieb.js'), b = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j'));
+        if (q('run') === '1') { if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' }); return res.status(200).json(await AB.ronde({ forceer: q('forceer') === '1', alleen: q('project') ? AB.pid(q('project')) : '' })); }
+        if (q('zoek')) { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' }); const r = await AB.zetZoek(leesJson(q('zoek'))); return res.status(r.ok ? 200 : 400).json(r); }
+        if (b) { const r = await AB.zet(b); return res.status(r.ok ? 200 : 400).json(r); }
+        if (q('vorm') === 'json') return res.status(200).json(await AB.stand());
+        res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((await AB.tekst(q('project') ? AB.pid(q('project')) : '')) + '\n');
       }
       if (op === 'trend') { // wat nu groot is per platform (lib/trend.js, Henkjan 27 nov 2026): melden met j= of POST, lezen met medium= of vorm=tekst
         const TR = await import('../lib/trend.js'), b = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j'));

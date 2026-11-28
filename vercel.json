@@ -353,6 +353,10 @@
       "schedule": "41 6 * * *"
     },
     {
+      "path": "/api/mm?op=adbieb&run=1",
+      "schedule": "7 0,1,2,3 * * *"
+    },
+    {
       "path": "/api/mm?op=campagnes&run=1",
       "schedule": "57 5 * * *"
     },
