@@ -257,7 +257,7 @@ export default async function handler(req, res) {
     if (op === 'kknl') { // koopkracht Nederland per PC4 (lib/kknl.js, 28 nov 2026, taak xwo1wj): stand, ophalen bij PDOK (run=1), ruwe vorm (proef=1), een PC4 nakijken (pc=)
       const KN = await import('../lib/kknl.js'); res.setHeader('cache-control', 'no-store'); cors(res);
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
-      if (q('proef') === '1') return res.status(200).json(await KN.proef(fetch, q('van')).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) })));
+      if (q('proef') === '1') return res.status(200).json(await KN.proef(fetch, q('van'), q('jaar'), q('breed')).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) })));
       if (q('run') === '1') { const r = await KN.bewaar(kv, await KN.haalNL().catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }))); if (r.ok) KN.zetGeheugen(r.tabel); return res.status(r.ok ? 200 : 502).json({ ok: r.ok, fout: r.fout, meta: r.meta, stand: await KN.stand(kv) }); }
       const pc = String(q('pc') || '').replace(/\D/g, '').slice(0, 4), st = await KN.stand(kv);
       if (pc.length === 4) { const OM = await import('../lib/omgeving.js'); return res.status(200).json({ ok: true, pc, vijfde: OM.koopkracht('nl', pc, { NL: await KN.laadNL(kv) }) || 'onbekend' }); }
