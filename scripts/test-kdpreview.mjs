@@ -11,7 +11,10 @@ ok(R.reviewUrl('teens', 'NZ').startsWith('https://www.amazon.com.au/'), 'teens N
 ok(R.reviewUrl('advent', '').startsWith('https://www.amazon.de/'), 'DE-boek zonder land: thuismarkt');
 ok(R.reviewUrl('advent', 'AT').startsWith('https://www.amazon.de/'), 'AT -> de');
 ok(R.reviewUrl('pitboss', 'BR').startsWith('https://www.amazon.com/'), 'land zonder KDP print -> thuismarkt');
-ok(R.reviewUrl('buero', 'DE').includes('/s?k='), 'zonder ASIN: zoeken');
+ok(R.reviewUrl('buero', 'DE') === 'https://www.amazon.de/review/create-review?asin=B0HSM844T2', 'buero live: reviewformulier');
+R.BOEKEN.zonderasin = { m: 'de', asin: '', zoek: 'Testboek', titel: 'Testboek', taal: 'de' };
+ok(R.reviewUrl('zonderasin', 'DE').includes('/s?k='), 'zonder ASIN: zoeken');
+delete R.BOEKEN.zonderasin;
 ok(R.reviewUrl('bestaatniet', 'US') === 'https://www.amazon.com/', 'onbekend boek');
 
 // pagina's: bonus zonder voorwaarde, reviewvraag neutraal, geen sterren, geen gedachtestreepjes
