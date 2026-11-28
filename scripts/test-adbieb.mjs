@@ -112,11 +112,14 @@ await t('volgorde: TikTok eerst, daarna Meta om de beurt per project, en elke da
   const eersteMeta = r.log.findIndex(x => / meta /.test(x)), laatsteTt = r.log.map(x => / tiktok /.test(x)).lastIndexOf(true); assert.ok(eersteMeta > laatsteTt, 'TikTok staat voor Meta');
   const eersten = r.log.filter(x => / meta /.test(x)).slice(0, n).map(x => x.split(' ')[0]); assert.equal(new Set(eersten).size, n, 'de eerste ' + n + ' Meta-zoekopdrachten zijn van ' + n + ' projecten');
   const r2 = await AB.ronde({ nu: NU + DAG, haal: haalGoed, kvx: stub(), sleutels: S2, hulp: stil }); assert.notEqual(r2.log.find(x => / meta /.test(x)).split(' ')[0], eersten[0], 'de volgende dag begint een ander project');
-  assert.equal(r.fouten.length, 0); assert.equal(r.meta.ok, Object.keys(AB.ZOEK).reduce((a, p) => a + Math.min(AB.MAX_META_PER_DAG, AB.termenVan(p).meta.length), 0));
+  const totaal = Object.keys(AB.ZOEK).reduce((a, p) => a + Math.min(AB.MAX_META_PER_DAG, AB.termenVan(p).meta.length), 0); assert.equal(r.fouten.length, 0);
+  assert.equal(r.meta.ok, AB.META_MAX_VERZOEKEN - 1, 'hoogstens 30 zoekopdrachten per aanroep (uurquotum van Zernio)'); assert.ok(r.log.some(x => /hoogstens 30 per aanroep/.test(x)));
+  const k3 = stub(), a1 = await AB.ronde({ nu: NU, haal: haalGoed, kvx: k3, sleutels: S2, hulp: stil }), a2 = await AB.ronde({ nu: NU, haal: haalGoed, kvx: k3, sleutels: S2, hulp: stil }); assert.equal(a1.meta.ok + a2.meta.ok, totaal, 'de tweede aanroep maakt de rest af'); assert.equal((await AB.stand({ kvx: k3, nu: NU })).open.length, 0);
 });
 await t('drie fouten op rij stopt die bron voor deze aanroep, de andere bron loopt door', async () => {
-  const haalStuk = async url => new URL(url).hostname === 'zernio.com' ? js({ error: 'limiet' }, 429) : haalGoed(url);
-  const r = await AB.ronde({ nu: NU, haal: haalStuk, kvx: stub(), sleutels: S2, hulp: stil }); assert.equal(r.meta.fout, AB.FOUTEN_OP_RIJ); assert.equal(r.meta.ok, 0); assert.ok(r.tiktok.ok > 3); assert.ok(r.log.some(x => /meta: 3 fouten op rij/.test(x)));
+  const haalStuk = st => async url => new URL(url).hostname === 'zernio.com' ? js({ error: 'stuk' }, st) : haalGoed(url);
+  const r = await AB.ronde({ nu: NU, haal: haalStuk(500), kvx: stub(), sleutels: S2, hulp: stil }); assert.equal(r.meta.fout, AB.FOUTEN_OP_RIJ); assert.equal(r.meta.ok, 0); assert.ok(r.tiktok.ok > 3); assert.ok(r.log.some(x => /meta: 3 fouten op rij/.test(x)));
+  const q = await AB.ronde({ nu: NU, haal: haalStuk(429), kvx: stub(), sleutels: S2, hulp: stil }); assert.equal(q.meta.fout, 1, 'bij 429 meteen stoppen: het uurquotum is op'); assert.ok(q.log.some(x => /uurquotum van Zernio/.test(x))); assert.ok(q.tiktok.ok > 3);
 });
 await t('video\'s worden niet leeg afgevinkt als de lijsten mislukten', async () => {
   const k = stub(), haalTt = async url => { const u = new URL(url); return u.pathname.endsWith('/trending_list/') ? js({ code: 40001, message: 'geen toegang' }) : haalGoed(url); };
@@ -144,5 +147,12 @@ await t('raakt: de zoekwoorden moeten in de advertentie staan; bereik telt zwaar
   const r = [AB.normMeta(meta('n1', 'Geen bereik', 390, 0, 'cadeau zonder bereik'), NU, 'cadeau'), AB.normMeta(meta('n2', 'Klein', 108, 316, 'cadeau klein'), NU, 'cadeau'), AB.normMeta(meta('n3', 'Groot', 100, 28000, 'cadeau groot'), NU, 'cadeau')];
   assert.deepEqual(AB.kiesLanglopers(r, { nu: NU }).map(x => x.id), ['n3', 'n2', 'n1']); assert.ok(r.every(x => x.raak === true));
   assert.equal(AB.normMeta({ ...meta('n4', 'VK', 100, 0, 'cadeau'), total_reach_by_location: [{ key: 'GB', value: 4000 }, { key: 'EU', value: 500 }] }, NU, 'cadeau').bereik, 4500); assert.equal(AB.normMeta(meta('n5', 'x', 5, 1, 'iets anders'), NU, 'cadeau').raak, false);
+});
+await t('afronden: oude rijen zonder toets krijgen hem alsnog, en een dag met alleen fouten laat de oude stand en datum staan', async () => {
+  const k = stub(), dag = new Date(NU).toISOString().slice(0, 10), oudRij = (id, pagina, tekst) => { const x = AB.normMeta(meta(id, pagina, 200, 9000, tekst), NU, 'Curacao holiday'); delete x.raak; return x; };
+  await k.set('ab:dag:' + dag + ':curacao', { meta: { 'curacao-holiday|GBIE': { q: 'Curacao holiday', landen: 'GB,IE', rijen: [oudRij('o1', 'Tui', 'Curacao holiday deals'), oudRij('o2', 'Busverhuur', 'A family that travels together')] } }, tt: {}, videos: null, bench: null, fout: {} });
+  const r = await AB.afronden('curacao', dag, { kvx: k, nu: NU }); assert.deepEqual(r.meta.map(x => x.id), ['o1']);
+  const morgen = NU + DAG, dag2 = new Date(morgen).toISOString().slice(0, 10); await k.set('ab:dag:' + dag2 + ':curacao', { meta: {}, tt: {}, videos: null, bench: null, fout: { 'meta|x': 'Zernio HTTP 500' } });
+  const r2 = await AB.afronden('curacao', dag2, { kvx: k, nu: morgen }); assert.equal(r2.dag, dag, 'de datum van de laatste geslaagde dag blijft staan'); assert.equal((await k.get('ab:p:curacao')).t, r.t);
 });
 console.log(ok + ' tests geslaagd'); if (process.exitCode) console.error('MISLUKT');
