@@ -275,13 +275,15 @@ export default async function handler(req, res) {
       if (q('model')) return res.status(200).json({ ok: true, model: M ? { t: M.t, p0: M.p0, kal: M.kal, raak: M.raak, raakKliks: M.raakKliks, mag: M.mag, voorspellers: Object.fromEntries(Object.entries(M.w || {}).map(([d, W]) => [d, Object.keys(W).length])) } : null });
       const D5 = await (await import('../lib/d51.js')).stand(kv).catch(() => null); // 51Degrees: opvragingen deze maand en fouten
       if (q('d51')) return res.status(200).json({ ok: true, d51: D5 });
+      const PKO = await kv.get('mm:plekkosten').catch(() => null); if (q('plek')) return res.status(200).json({ ok: true, plekkosten: PKO }); // kosten per uitkomst per plek (lib/plekkosten.js, leerronde elk uur)
+      const pkt = PKO && PKO.tekst && PKO.tekst.length ? PKO.tekst.join('\n') + (PKO.plekken ? '\nDit uur op het blokvoorstel: ' + PKO.plekken + ' plekken ($' + PKO.kosten + ' zonder uitkomst in 3 dagen).' : '') : '';
       const d5t = D5 ? '51Degrees: ' + (D5.aan ? 'aan' : 'uit (geen D51_KEY)') + ', ' + D5.dezeMaand + ' van ' + D5.max + ' opvragingen deze maand' + (Object.keys(D5.fout).length ? ', fouten ' + JSON.stringify(D5.fout) + (D5.laatsteFout ? ' laatste: ' + D5.laatsteFout : '') : '') : '';
       const OM = await import('../lib/omgeving.js'), OS = await OM.stand(kv).catch(() => null); // omgevingsdata (koopkracht, weer, daglicht): dagtellers en pauze
       if (q('omgeving')) return res.status(200).json({ ok: true, omgeving: OS });
       const omt = OS ? OM.standTekst(OS) : '';
       const SG = await import('../lib/segment.js'), sgt = SG.segTekst(await SG.segStand(kv, 1).catch(() => null)); // koopkrachtscore en segmentpostbacks (28 nov 2026)
       const JA = await import('../lib/jacht.js'), jat = JA.standTekst(await JA.stand(kv).catch(() => null)); // kopersjacht per product (28 nov 2026): meetgat en hypothese zonder diepe stap
-      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (sgt ? sgt + '\n\n' : '') + (jat ? jat + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.modelTekst(M) + '\n\n' + (pkt ? pkt + '\n\n' : '') + (d5t ? d5t + '\n\n' : '') + (omt ? omt + '\n\n' : '') + (sgt ? sgt + '\n\n' : '') + (jat ? jat + '\n\n' : '') + (uts ? UT.terugTekst(uts) + '\n\n' : '') + P.bronnenTekst(st, zones));
     }
     if (op === 'jacht') { // kopersjacht per product (lib/jacht.js, 28 nov 2026, taak d4rc1s): hypothese met bron, kopersprofiel, jachtlijst; alleen een voorstel
       const J = await import('../lib/jacht.js'); res.setHeader('cache-control', 'no-store'); cors(res);
