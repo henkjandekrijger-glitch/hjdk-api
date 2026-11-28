@@ -1,0 +1,6 @@
+{
+  "uitleg": "Titelproef gratis vermeldingen Kadoly (lib/gmctitel.js). titels: nieuwe titel per product-id, alleen arm b gaat de feed in. controle: de producten van arm a met dezelfde keuze (op voorraad, geen variant, marge minstens EUR 5) die hun winkeltitel houden.",
+  "start": "2026-11-29",
+  "titels": {},
+  "controle": []
+}

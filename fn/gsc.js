@@ -155,6 +155,7 @@ export default async function handler(req, res) {
       if (!/vercel\.app$/.test(String(req.headers.host || ''))) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const M = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); const tk = await token(oidc, 'https://www.googleapis.com/auth/content'); const acc = url.searchParams.get('account') || '5876502305';
       const id = url.searchParams.get('id'); if (id) return res.status(200).json(await M.productLabels(tk, acc, id));
+      if (url.searchParams.get('bron') === 'titels') return res.status(200).json(await M.labelBron(tk, acc, { proef: url.searchParams.get('proef') === '1', naam: 'Kadoly titels', uri: 'https://keuzehulp.best/api/shop/gmctitels.csv', voorop: true })); // 28 nov 2026: titelproef gratis vermeldingen (lib/gmctitel.js); vóór de hoofdfeed, want de hoofdfeed heeft al een titel
       return res.status(200).json(await M.labelBron(tk, acc, { proef: url.searchParams.get('proef') === '1' }));
     }
     if (op === 'yoorsinhoud') { // 8 nov 2026 (Henkjan: "kijk welke content bij Yoors organisch goed werkte"): beste pagina's en zoekvragen van yoo.rs uit Search Console, 16 maanden
