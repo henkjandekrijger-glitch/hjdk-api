@@ -778,13 +778,22 @@ export default async function handler(req, res) {
       if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('content-type', 'text/html; charset=utf-8');
       const ZG = await import('../lib/gidsen-zoek.js'); const cat = await catalogus(); const s = String(q.get('voorbeeld') || '');
-      if (s) { const nieuw = ZG.nieuweGids(s), g0 = nieuw || (ZG.SCHERP[s] && GIDSEN[s]); if (!g0) return res.status(404).send('Niet gevonden');
-        const g1 = ZG.zoekToepas(g0, { vul: LG.vul, cat, thuis, euro, toegestaan: aanbevelingToegestaan }) || g0;
-        let h = await gidsPagina(nieuw ? Object.assign({}, g1, { bronnen: [] }) : g1);
-        h = h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">').replace(/<link rel="canonical"[^>]*>/, '').replace(/<figure[\s\S]*?<\/figure>/, '').replace(/<script src="https:\/\/go\.kadoly\.com\/cm\.js"[^>]*><\/script>/, '').replace(/<script>\(function\(\)\{var g="[^"]*",s=\{\};[\s\S]*?<\/script>/, '');
-        if (nieuw) h = h.replace('<h2 id="bestellen">', ZG.zoekBronnenHtml(nieuw.bronnen, esc) + '\n<h2 id="bestellen">');
-        return res.status(200).send(h.replace('<main class="wrap">', `<main class="wrap"><p class="meta"><b>Voorbeeld, nog niet live.</b> ${nieuw ? 'Nieuwe gids.' : 'Bestaande gids met de AI-vraag als eerste vraag en een eerste keus bovenaan.'} <a href="/api/gids?op=zoekgids">Terug naar het voorstel</a></p>`)); }
-      return res.status(200).send(kop('Voorstel: gidsen op zoekvraag en AI-vraag | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + ZG.zoekHtml({ cat, thuis, euro, esc, GIDSEN }) + '</main></body></html>');
+      // producten van bol.com voor de gidsen waar Kadoly (nog) niets heeft: prijs, beoordeling en levertijd van vandaag (lib/bol.js, met cache)
+      const bolVan = async gl => { const uit = {}; const qs = [...new Set(gl.flatMap(x => (x.bol || []).map(b => b.q)))]; if (!qs.length) return uit; const { searchCached } = await import('../lib/bol.js'); for (const t of qs) { try { const r = await searchCached(t, { country: 'NL', size: 12, sort: 'RELEVANCE' }); for (const p of (r.products || [])) uit[p.id] = p; } catch (e) {} } return uit; };
+      if (s) { const nieuw = ZG.nieuweGids(s), bolg = ZG.bolGids(s), g0 = nieuw || bolg || (ZG.SCHERP[s] && GIDSEN[s]); if (!g0) return res.status(404).send('Niet gevonden');
+        const bol = await bolVan([g0]);
+        const g1 = Object.assign({}, ZG.zoekToepas(g0, { vul: LG.vul, cat, thuis, euro, toegestaan: aanbevelingToegestaan, bol }) || g0, { inHetKort: ZG.IN_HET_KORT[s] });
+        const kItem = k => { const i = cat[k.pid]; if (!i || i.vr === false || !aanbevelingToegestaan(i)) return null; return { soort: 'k', id: k.pid, naam: k.naam || i.t, label: k.label, waarom: k.waarom, beperking: k.beperking, specs: ZG.SPECS[k.pid] || [], prijs: thuis(i), img: i.img || '', merk: i.b || '', lt: N(i.lt) }; };
+        const bItem = b => { const p = bol[b.id]; if (!p || !(p.price > 0)) return null; return { soort: 'b', id: b.id, naam: b.naam, label: b.label, waarom: b.waarom, beperking: b.beperking, specs: [], prijs: p.price, img: p.image || '', rating: p.rating, delivery: p.delivery, url: p.url }; };
+        const kI = (g1.keuze || []).map(kItem).filter(Boolean), bI = (g1.bol || []).map(bItem).filter(Boolean), items = g1.bolEerst ? bI.concat(kI) : kI.concat(bI);
+        // alles van de soort bij Kadoly (filters uit lib/gidsen-alle.js; bol-gidsen lenen het filter van een verwante gids)
+        const { ALLE } = await import('../lib/gidsen-alle.js'); const def = ALLE[s] || ALLE[{ 'tulpenvaas': 'vaas-kiezen', 'wasmand-3-vakken': 'manden', 'aroma-diffuser': 'kaarsen-cadeau' }[s]];
+        let alle = []; if (def) { const re = new RegExp(def.re, 'i'), uit = def.uit ? new RegExp(def.uit, 'i') : null, inG = new Set(kI.map(x => x.id)); alle = Object.values(cat).filter(i => i && i.id && i.t && i.vr !== false && thuis(i) > 0 && i.img && !inG.has(i.id) && aanbevelingToegestaan(i) && re.test(i.t) && !(uit && uit.test(i.t))).sort((a, b) => N(b.mg) - N(a.mg)).map(i => ({ pid: i.id, naam: i.t, prijs: thuis(i), img: i.img })); }
+        const bronnen = (nieuw || bolg) ? ZG.zoekBronnenHtml(g1.bronnen, esc) : ((g1.bronnen || []).length ? `<section><h2>Bronnen en beperkingen</h2>${bronnenHtml(g1.bronnen, g1.bronnenControle)}</section>` : '');
+        const { shopGidsHtml } = await import('../lib/gids-shop.js');
+        return res.status(200).send(shopGidsHtml(g1, { esc, euro, leverDatum, nlDatum, items, alle, alleKop: def ? def.kop + ' bij Kadoly' : '', alleZoek: s.replace(/-/g, ' '), bronnenHtml: bronnen, datum: datumNl(ZG.ZOEK_DAG), voorbeeld: nieuw ? 'Nieuwe gids.' : bolg ? 'Nieuwe gids, tijdelijk met producten van bol.com.' : 'Bestaande gids in het nieuwe design, met de AI-vraag als eerste vraag.' })); }
+      const bolAlle = await bolVan(ZG.BOL_SLUGS.map(ZG.bolGids));
+      return res.status(200).send(kop('Voorstel: gidsen op zoekvraag en AI-vraag | Kadoly gids', 'Voorstel voor Henkjan, niet live.', '/', '<meta name="robots" content="noindex,nofollow">') + ZG.zoekHtml({ cat, thuis, euro, esc, GIDSEN, bol: bolAlle }) + '</main></body></html>');
     }
     if (op === 'vraagkansen') { // Henkjan 10 nov 2026: onderwerpen die ChatGPT naar boven haalt en die in de winkel komen. Zoekvraag (Demand Radar) naast aanbod en gidsen. Cron 00:20 UTC met vers=1.
       const { vraagKansen } = await import('../lib/kadoly-vraag.js');
