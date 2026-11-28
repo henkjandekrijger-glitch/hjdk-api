@@ -969,7 +969,7 @@ const OG_FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weigh
 const hEl = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
 // Spaarzegel-campagne (Henkjan 26 nov 2026: "Test een campagne over de spaarzegels . En dat ze ze als eerste krijgen 5 op een kaart is vol . Zij krijgen er meteen 3"):
 // een spaarkaart met 3 van de 5 zegels. v=icon (192x192, één zegel) of img (984x656, kaart); t = regel onder de kaart (0-3).
-const ZEGEL_CAMPS = ['12196034', '12199133']; // PA-campagnes die op de zegelpagina landen (12196034: SHOP-LUS ZEGEL spaarkaart, 26 nov 2026, CPA-doel $0,50, $10/dag, $30 totaal)
+const ZEGEL_CAMPS = ['12196034', '12199133', '12201180']; // PA-campagnes die op de zegelpagina landen (12196034: SHOP-LUS ZEGEL spaarkaart, 26 nov 2026, CPA-doel $0,50, $10/dag, $30 totaal; 12201180: ZEGEL C op CPA-doel $0,05, 28 nov)
 const ZEGEL_REGEL = ['Kaart vol = gratis cadeau', 'Nog 2 en je kiest een cadeau', 'Je krijgt er meteen 3', 'Als eerste sparen bij Kadoly'];
 async function zegelBeeld(res, url) {
   const v = url.searchParams.get('v') === 'icon' ? 'icon' : 'img', t = Math.max(0, Math.min(3, Number(url.searchParams.get('t')) || 0));
