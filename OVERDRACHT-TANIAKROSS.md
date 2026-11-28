@@ -16,7 +16,7 @@ Elke ochtend, in deze volgorde:
 2. Mail (Mailmind tk-mailchimp). Antwoorden gaan vanzelf (antwoordmotor, lib/tkmc.js). Lees `/api/post?op=mailmind&s=tk-mailchimp&inzicht=1`: wat zeggen de replies over de lezers? Neem de sterkste les mee in de advertenties van vandaag en, als hij nieuw is, in een uitdager voor de mail (`op=tkmc&uitdager=`, eerst als voorbeeld aan Henkjan).
 3. Eén regel in het werklog (wie=tk-dagronde): kosten per adres gisteren, wat eruit ging, welke haak won, wat de replies leerden. Geen nullen.
 
-Stand 28 nov 12:45 UTC: kopie 12202790 loopt op $0,05 met 8 nieuwe advertenties en 93 zones (bron 12193513 gestopt). 26-28 nov: 5 adressen voor $1,06 ($0,21 per adres); de zones met een adres kostten samen $0,13 ($0,025 per adres), 11 zones zonder adres namen 64% van het geld (eraf). Antwoordmotor tk-mailchimp staat aan (na de uitrol van 28 nov). De zin over een ander adres in de mail zelf wacht op Henkjans ja (voorbeeld: `/api/post?op=tkmc&voorbeeld=1&ander=1` op de beschermde host).
+Stand 28 nov 12:45 UTC: kopie 12202790 loopt op $0,05 met 8 nieuwe advertenties en 93 zones (bron 12193513 gestopt). 26-28 nov: 5 adressen voor $1,06 ($0,21 per adres); de zones met een adres kostten samen $0,13 ($0,025 per adres), 11 zones zonder adres namen 64% van het geld (eraf). Antwoordmotor tk-mailchimp staat aan (na de uitrol van 28 nov). De zin over een ander adres in de mail zelf wacht op Henkjans ja (voorbeeld: `/api/post?op=tkmc&voorbeeld=1&metander=1` op de beschermde host; aanzetten na zijn ja met `&ander=1` zonder voorbeeld).
 
 ### Eén eigenaar en één plek per soort informatie
 
