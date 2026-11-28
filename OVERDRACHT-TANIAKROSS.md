@@ -1,11 +1,22 @@
 # Overdracht taniakross.media (Tania Kross): site, lijst, podcastmail, betaald en organisch
 
-Eerste versie: vrijdag 20 november 2026 door chat-taniakross. Laatst bijgewerkt: vrijdag 27 november 2026, 12:30 UTC, door tk-chat2. Begin bij deel 0.
+Eerste versie: vrijdag 20 november 2026 door chat-taniakross. Laatst bijgewerkt: zaterdag 28 november 2026, 12:45 UTC, door tk-chat2. Begin bij deel 0.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
 
 ## 0. START HIER (27 nov 2026, 14:05 UTC, door tk-chat2)
 
 Dit deel gaat voor op alles eronder. Alleen dit deel lezen: `/api/wtb?op=tkoverdracht&deel=kort`.
+
+### Elke dag beter: de opdracht van de dagronde (28 nov 2026, tk-chat2)
+
+Henkjan 28 nov 12:29 UTC: "Adressen moet beter moet naar 0.05 cent per adres max iedere dag moet campagne dus met geleerde en 8 niewe creatives aan de slag . Beantwoord iedereen die echt reageert in mijn email met een kort bericht maak dat ook lerend zit veel informatie in . Zet dit in dboard als taak dagelijks beter . dus ook campagne". Dit gaat voor op oudere regels over de dagkopie hieronder.
+
+Elke ochtend, in deze volgorde:
+1. Campagne (PropellerAds, lijn TK ADRES). Doel: hoogstens $0,05 per adres. Lees de briefing (`/api/mm/briefing?medium=propeller&project=tk&doel=aanmelding`) en gisteren per advertentie (creative_stats) en per zone (zone_stats). Maak één kopie met `kopie_met_verse_creatives` (bod_van_bron true, behouden_ids [-1] = niets mee) met **8 nieuwe advertenties**: 4 tweelingen native en trend, gebouwd op de haak en woorden die gisteren adressen gaven; elke dag een andere nog niet geprobeerde haak erbij. Knoptekst hoogstens 15 tekens. Beeld met `beeld_van` (een losse foto-URL wordt geweigerd zonder icoon van precies 192x192). Zet het bod op $0,05 (`update_campaign` rate; nooit hoger zonder Henkjans woord), haal met `zones_erbij_uitsluiten` elke zone van de witte lijst die $0,02 of meer kostte zonder adres, start, en stop de voorganger als de kopie op status 6 staat (opvolger_lager_bewust alleen als de kopie bewust lager biedt). Meld elke advertentie in het paspoort (`/api/mm?op=stuk&j=` met id ad:propeller:<creative>, variant en paar) en het campagnedoel (`op=stuk&campagne=propeller:<id>&doel=aanmelding`). Twee uur na de start: krijgt de kopie vertoningen op de zones die gisteren adressen gaven? Zo niet, of meer dan $0,15 per adres na $0,30: bron weer aan, kopie uit, melden.
+2. Mail (Mailmind tk-mailchimp). Antwoorden gaan vanzelf (antwoordmotor, lib/tkmc.js). Lees `/api/post?op=mailmind&s=tk-mailchimp&inzicht=1`: wat zeggen de replies over de lezers? Neem de sterkste les mee in de advertenties van vandaag en, als hij nieuw is, in een uitdager voor de mail (`op=tkmc&uitdager=`, eerst als voorbeeld aan Henkjan).
+3. Eén regel in het werklog (wie=tk-dagronde): kosten per adres gisteren, wat eruit ging, welke haak won, wat de replies leerden. Geen nullen.
+
+Stand 28 nov 12:45 UTC: kopie 12202790 loopt op $0,05 met 8 nieuwe advertenties en 93 zones (bron 12193513 gestopt). 26-28 nov: 5 adressen voor $1,06 ($0,21 per adres); de zones met een adres kostten samen $0,13 ($0,025 per adres), 11 zones zonder adres namen 64% van het geld (eraf). Antwoordmotor tk-mailchimp staat aan (na de uitrol van 28 nov). De zin over een ander adres in de mail zelf wacht op Henkjans ja (voorbeeld: `/api/post?op=tkmc&voorbeeld=1&ander=1` op de beschermde host).
 
 ### Eén eigenaar en één plek per soort informatie
 

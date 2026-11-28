@@ -1,0 +1,22 @@
+// Test van de antwoordmotor van tk-mailchimp (Henkjan 28 nov 2026): automatisch antwoord, ander adres, bedank, thema en de zin over een ander adres. node scripts/test-tkmc-antwoord.mjs
+import * as M from '../lib/mailmind.js';
+import * as T from '../lib/tkmc.js';
+const ok = (c, m) => { if (!c) { console.log('FOUT', m); process.exitCode = 1; } };
+ok(M.AUTO_OND.test('Automatisch antwoord: Barcelona van Tania Kross en Tommie Christiaan'), 'auto nl');
+ok(M.AUTO_OND.test('Automatic reply: x') && M.AUTO_OND.test('Out of Office: x'), 'auto en');
+ok(!M.AUTO_OND.test('Re: Barcelona van Tania Kross'), 'gewone re');
+ok(M.anderAdres('Mail me voortaan op piet@gmail.com graag', 'piet@oudbedrijf.nl') === 'piet@gmail.com', 'ander 1');
+ok(M.anderAdres('Ja graag! Groet, Piet piet@oudbedrijf.nl', 'piet@oudbedrijf.nl') === '', 'geen ander');
+ok(M.anderAdres('Ik werk niet meer bij X. Mijn nieuwe adres: a.b@hotmail.com\n\ninfo@x.nl', 'a@x.nl') === 'a.b@hotmail.com', 'ander 2');
+const a = { n: 'Edith Jansen', tok: 'ABC', v: 'o1' };
+const af = T.afwezigTekst(a, 'Vanwege herstel na een fietsongeval ben ik maar beperkt aan het werk.');
+ok(/^Hoi Edith,/.test(af) && /beterschap/.test(af) && /blijf\/ABC/.test(af), 'afwezig herstel'); ok(T.afwezigTekst(a, 'Ik ben afwezig tot maandag') === null, 'afwezig zonder reden');
+ok(/Barcelona komt zo/.test(T.bedankTekst(a, 'ja', 'g1')), 'bedank ja'); ok(/blijf\/ABC/.test(T.bedankTekst(a, 'anders')), 'bedank anders');
+ok(T.anderTekst(a, 'x@y.nl', { fout: 'x' }) === '', 'ander fout'); ok(/x@y.nl op de lijst/.test(T.anderTekst(a, 'x@y.nl', { lijst: 'erop' })), 'ander ok');
+const j = M.leesAiJson('{"nodig":false,"zeker":true,"antwoord":"","thema":"herinnering","les":"Lezers kennen Tania van Barcelona, mail piet@x.nl"}');
+ok(j.thema === 'herinnering' && !/@/.test(j.les), 'ai json'); ok(M.leesAiJson('{"thema":"gek"}').thema === 'overig', 'thema onbekend');
+const m = T.mailTekst({ n: 'Edith', j: '2017', m: 'e@x.nl' }, { v: T.VARIANTEN[1], tok: 'T', ctx: { ander: true } });
+ok(m.tekst.includes(T.ANDER_ZIN) && m.tekst.indexOf(T.ANDER_ZIN) < m.tekst.indexOf('Henkjan de Krijger'), 'ander-zin in mail');
+ok(!T.mailTekst({ n: 'Edith', j: '2017' }, { v: T.VARIANTEN[1], tok: 'T', ctx: {} }).tekst.includes(T.ANDER_ZIN), 'zonder vlag geen zin');
+ok(T.STROOM.antwoord && T.STROOM.anderAdres && T.STROOM.jaUitAi && typeof T.STROOM.bedank === 'function', 'stroom');
+console.log(process.exitCode ? 'MISLUKT' : 'test-tkmc-antwoord: alles goed');
