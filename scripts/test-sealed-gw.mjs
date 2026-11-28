@@ -64,9 +64,17 @@ ok((await gwKaart(kv, i, s)).netwerk.length === 1, 'de vraag ziet het aanbod ook
 // reserve zonder AI
 const r3 = await gwStap(kv, { taal: 'en', keuze: ['Find customers'] }, req, { ai: async () => { throw new Error('weg'); }, meld });
 ok(r3.ok && !r3.ai && r3.vraag && r3.pills.length, 'zonder AI loopt de chat door met een reservevraag');
+{ const weg = async () => { const e = new Error('credit op'); e.status = 402; throw e; };
+  let x = await gwStap(kv, { taal: 'nl', keuze: ['Leverancier zoeken'] }, req, { ai: weg }), n = 1;
+  x = await gwStap(kv, { sid: x.sid, taal: 'nl', tekst: 'Fulfilment voor 1500 orders per maand' }, req, { ai: weg }); n++;
+  const vragen = new Set();
+  while (!x.klaar && n < 10) { vragen.add(x.vraag); x = await gwStap(kv, { sid: x.sid, taal: 'nl', keuze: [x.pills[0]] }, req, { ai: weg }); n++; }
+  ok(x.klaar && n <= 6 && vragen.size === n - 2, 'zonder AI: geen herhaalde vraag en klaar binnen 6 beurten');
+  ok(/Fulfilment/.test(x.kaart.zoekt) && x.kaart.waar && x.kaart.wanneer && x.kaart.mits && x.kaart.soort === 'Leverancier zoeken', 'zonder AI: de kaart vult zich uit de antwoorden');
+  ok(/402 credit op/.test(String((await kv.get('gw:aifout') || {}).fout)), 'zonder AI: de reden staat in gw:aifout'); }
 
 const st = await gwStand(kv);
-ok(st.trechter7d.start === 3 && st.trechter7d.uitzet === 1 && st.kaarten.length === 2, 'stand: trechter en kaarten');
+ok(st.trechter7d.start === 4 && st.trechter7d.uitzet === 1 && st.kaarten.length === 2, 'stand: trechter en kaarten');
 ok(await gwTrek(kv, i, s) && (await gwKaart(kv, i, s)).status === 'ingetrokken', 'intrekken');
 
 // pagina's: script moet geldig zijn
