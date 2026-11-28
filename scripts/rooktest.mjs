@@ -19,7 +19,7 @@ import fsRem from 'node:fs';
 // Code achter een //-commentaar (22 nov 2026, derde keer in twee dagen; scripts/commentaarcheck.mjs). Eén fout = build gestopt.
 { const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, [new URL('./commentaarcheck.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status) { console.error(r.stderr || ''); process.exit(1); } }
 // Een platformimport mag het eigen doel niet vervangen door een klikdoel. Deze controle gebruikt geen netwerk of Redis.
-{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-paspoort-zernio.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'paspoortcontrole mislukt'); process.exit(1); } }
+{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-paspoort-zernio.mjs', import.meta.url).pathname, new URL('./test-gids-herkomst.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'paspoortcontrole mislukt'); process.exit(1); } }
 const PAG = [['keuzehulp.best', '/api/kz?slug=airfryer'], ['keuzehulp.best', '/api/kz?slug=matras'], ['keuzehulp.best', '/api/kz']];
 const kz = (await import('../fn/kz.js')).default;
 let fout = 0;

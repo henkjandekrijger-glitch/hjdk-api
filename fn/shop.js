@@ -18,6 +18,7 @@
 //   2. Advertentieplekken: nep, geen echte mensen of nooit een doorklik -> uitgesloten in alle shop-campagnes van dat netwerk.
 //   3. Advertenties: zwakke teksten uit, elke dag nieuwe teksten voor de best lopende producten (Claude), prijs in de tekst klopt niet meer -> uit.
 //   4. Bod en budget: te weinig verkeer bij goede kwaliteit -> bod omhoog; geld weg zonder doorkliks -> campagne stil.
+import { gidsHerkomst } from '../lib/gids-herkomst.js';
 import { shopRss } from '../lib/shoprss.js';
 import { gevoelig } from '../lib/shopgevoelig.js';
 import { ImageResponse } from '@vercel/og';
@@ -1806,7 +1807,7 @@ export default async function handler(req, res) {
       const fn = String(url.searchParams.get('f') || '').replace(/[^0-9a-f]/g, '').slice(0, 16); // funnel-id van de pagina (keuzehulp.best of gids.kadoly.com), 18 nov
       let gcamp = 'g-' + (g || 'gids'); try { const { ptUit } = await import('../lib/partner.js'); const pt = await ptUit(req, url.searchParams); if (pt) gcamp = 'p-' + pt; } catch (e) {} // partnermodel (21 nov 2026): klik via een partnerlink krijgt campagne p-<code>; de bestelling komt in zijn grootboek
       if (!bot) laterAf(kv.raw(['SADD', 'org:posts', gcamp]).catch(() => {})); // 21 nov (Henkjan: "meet alle gedrag met clickmind dat organisch ook echt gaat converteren"): zone og = kanaal gids, camp g-<gids>: de keten kliks, echt, actie, mandje, koop per gids in op=orgstand
-      return await direct(req, res, { net: 'x', clickid, zone: 'og', cr: '', camp: gcamp, pid, code: shortId('x:' + clickid), bot, vrij: true, kassa: arm === 'k', bron: { source: 'gids.kadoly.com', medium: 'gids', campaign: g || 'gids' }, fn: fn.length === 16 ? fn : '' }); }
+      return await direct(req, res, { net: 'x', clickid, zone: 'og', cr: '', camp: gcamp, pid, code: shortId('x:' + clickid), bot, vrij: true, kassa: arm === 'k', bron: { source: 'gids.kadoly.com', medium: 'gids', campaign: g || 'gids' }, extra: gidsHerkomst(req.headers.referer || req.headers.referrer || ''), fn: fn.length === 16 ? fn : '' }); }
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }

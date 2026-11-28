@@ -1,0 +1,200 @@
+{
+  "datum": "2026-11-28",
+  "ronde": "ochtend",
+  "gemeten_op": "2026-11-28T09:45:00Z",
+  "verkeer": {
+    "facebook": {
+      "kliks": 50,
+      "echt": 20,
+      "mandjes": 3
+    },
+    "youtube": {
+      "kliks": 4
+    },
+    "pinterest": {
+      "kliks_clickmind": 3
+    },
+    "gids": {
+      "doorsturen": 1309,
+      "echt": 1,
+      "actie": 1
+    },
+    "periode": "cumulatief sinds 16 november, geen unieke bezoekers"
+  },
+  "koop": {
+    "ok": true,
+    "dagen": 7,
+    "feedFout": null,
+    "bestellingen": 1,
+    "kopers": 1,
+    "terugkerend": 0,
+    "samen": {
+      "toestel": {
+        "iPhone/iPad": 1
+      },
+      "app": {
+        "Google-app": 1
+      },
+      "methode": {
+        "ideal": 1
+      },
+      "dag": {
+        "woensdag": 1
+      },
+      "uur": {
+        "08": 1
+      }
+    },
+    "lijst": [
+      {
+        "at": "2026-11-25T07:30:52+00:00",
+        "moment": "woensdag 08:30",
+        "bedrag": 69.95,
+        "methode": "ideal",
+        "koper": "koper 1",
+        "keerDatHijKocht": 1,
+        "telefoonGegeven": false,
+        "producten": [
+          {
+            "id": "oc_4174002164744193",
+            "stuks": 2,
+            "titel": "Rond Tafelhaard Zand voor Gezellige Winteravonden",
+            "soort": "wonen",
+            "prijs": 30.45,
+            "merk": null
+          }
+        ],
+        "toestel": {
+          "os": "iPhone/iPad",
+          "app": "Google-app",
+          "versie": "26",
+          "model": null
+        },
+        "bron": "onbekend"
+      }
+    ]
+  },
+  "google": {
+    "status": "beschrijvend",
+    "voor": 0,
+    "na": 0,
+    "verschil": 0,
+    "procent": null,
+    "eenheid": "klikken",
+    "vertoningen": {
+      "voor": 1,
+      "na": 8,
+      "verschil": 7,
+      "procent": 700
+    },
+    "klikken": {
+      "voor": 0,
+      "na": 0,
+      "verschil": 0,
+      "procent": null
+    },
+    "voorPeriode": [
+      "2026-11-12",
+      "2026-11-18"
+    ],
+    "naPeriode": [
+      "2026-11-19",
+      "2026-11-25"
+    ],
+    "reden": "Niet-overlappende weken. Dit bewijst geen oorzakelijk optimalisatie-effect."
+  },
+  "ai": {
+    "status": "panelmeting",
+    "dag": "2026-11-28",
+    "model": "perplexity/sonar",
+    "panel": "fc590a7f69780fdf",
+    "geslaagd": 8,
+    "geciteerd": 0,
+    "rate": 0,
+    "reden": "Bestaande ZICHT-dagmeting, apart van de vroegere immutable gids-snapshot; vast model/vragenpanel, geen alle-LLMs-meting."
+  },
+  "tv": {
+    "post_id": "6b083a2d58833ba789e0e2f8",
+    "content": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+    "status": "published",
+    "published_at": "2026-11-26T18:45:58.163Z",
+    "sync_status": "synced",
+    "metrics": {
+      "impressions": 0,
+      "reach": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "saves": 0,
+      "clicks": 0,
+      "views": 0,
+      "engagement_rate": 0
+    },
+    "platforms": [
+      {
+        "platform": "pinterest",
+        "username": "kadolyshop",
+        "status": "published",
+        "post_url": "https://www.pinterest.com/pin/271060471319766759/",
+        "sync_status": "synced",
+        "metrics": {
+          "impressions": 0,
+          "reach": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "clicks": 0,
+          "views": 0,
+          "engagement_rate": 0
+        }
+      }
+    ]
+  },
+  "plant": {
+    "post": {
+      "id": "6b083a2d58833ba789e0e2ff",
+      "status": "scheduled",
+      "content": "Een lege woning of woon je er nog? Vergelijk echte planten en kunstplanten voor home staging. De gids helpt kiezen op plek, maat en onderhoud, met actuele producten en hun beperkingen.",
+      "title": "Planten bij home staging: echt of kunst kiezen",
+      "scheduled_for": "2026-11-28T18:45:00.000Z",
+      "timezone": "UTC",
+      "media_urls": [
+        "https://go.kadoly.com/api/shop/beeld/oc_4174003512573953/g.jpg?s=gids&tk=Echt%20of%20kunst%3F&u=Groen%20in%20een%20lege%20woning&e=Kies%20op%20plek%2C%20maat%20en%20onderhoud&r=Bekijk%20de%20plantenkeuze&g=Afgebeeld%3A%20Raphis%20kunstplant%20van%20150%20cm.%20Geen%20eigen%20producttest."
+      ],
+      "targets": [
+        {
+          "platform": "pinterest",
+          "account_id": "6afb8a5d86e8bb18f844fc95",
+          "username": "kadolyshop",
+          "status": "pending"
+        }
+      ]
+    }
+  },
+  "afweging": [
+    {
+      "actie": "Extra gidsen",
+      "keuze": false,
+      "waarom": "Indexering en koopmeting blijven klein; bestaande gidsronde en voorstellen niet verdubbelen."
+    },
+    {
+      "actie": "Extra posts",
+      "keuze": false,
+      "waarom": "Social heeft vandaag zes pins en video al gepland; geen onafhankelijke koopuitkomst."
+    },
+    {
+      "actie": "Herkomst bewaren op bestaande gidsuit-route",
+      "keuze": true,
+      "waarom": "Gratis onzichtbaar herstel, controleerbaar bij de volgende echte klik; geen nieuwe publiekstype of uitgave."
+    }
+  ],
+  "verwachting": "Aangegeven organische campagne uit geldige gidsreferer blijft in rec.q en Clickmind q. Geen extra verkeer of verkoop beloofd.",
+  "beperkingen": [
+    "Ontbrekende of ingekorte referer onbekend; tussenliggende gidsnavigatie kan UTM verliezen.",
+    "De velden zijn bezoeker-opgegeven, geen platformbewijs.",
+    "Betaalketen met hj-code tot echte koop nog niet bevestigd.",
+    "Uitgaande Pinterest-link niet teruggegeven door connector.",
+    "Bouwkosten apart en pushmeldingen onbekend."
+  ]
+}
