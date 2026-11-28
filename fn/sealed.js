@@ -16,7 +16,8 @@ import { renderChatPage, renderManagePage, renderThreadPage, kleinePagina } from
 import * as MAIL from '../lib/sealed-mail.js';
 import { prijsTekst } from '../lib/sealed-prijs.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
-import { berichten, HAIKU } from '../lib/ai.js';
+import { berichten, HAIKU, SONNET } from '../lib/ai.js';
+import { gwStap, gwStand, gwProef, gwPagina, gwStatusPagina, gwKaart, gwTrek, openPills, geoUit, TALEN as GW_TALEN } from '../lib/sealed-gw.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
 import { sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
@@ -100,6 +101,32 @@ export default async function handler(req, res) {
   if(op==='growth'){const days=Array.from({length:7},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)),counts={};for(const d of days){counts[d]={};for(const c of CHANNELS){const k='si:conversion:'+d+':'+c;counts[d][c]={browserSignals:+(await kv.get('si:visit:'+d+':'+c).catch(()=>0))||0,submissions:+(await kv.get(k).catch(()=>0))||0,intentSubmissions:+(await kv.get(k+':intent').catch(()=>0))||0,sampleReplySubmissions:+(await kv.get(k+':partner').catch(()=>0))||0,buyerCriteriaSubmissions:+(await kv.get('si:buyer-conv:'+d+':'+c).catch(()=>0))||0};}}return stuur(res,200,'application/json',JSON.stringify({basis:'Aggregate browser signals, not verified unique humans or confirmed search clicks. Anonymous submissions and buyer criteria are reported separately; test is an explicit QA channel.',segmentation:'Mode-specific anonymous counts start on 2026-11-17; earlier anonymous submissions remain only in submissions.',days:counts}),'no-store');}
   if(op==='visit'&&req.method==='POST'){const b=await leesBody(req);if(!CHANNELS.includes(b.channel)||/bot|crawler|spider|headless/i.test(String(req.headers['user-agent']||'')))return stuur(res,400,'application/json','{"ok":false}','no-store');const k='si:visit:'+new Date().toISOString().slice(0,10)+':'+b.channel;try{await kv.incr(k);await kv.raw(['EXPIRE',k,100*86400]);}catch{}return stuur(res,200,'application/json','{"ok":true}','no-store');}
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
+  // Eén ingang voor elke intentie (lib/sealed-gw.js, Henkjan 27 nov 2026): de chat, de stand, de controle en intrekken.
+  if (op === 'gw' || op === 'gwtrek') {
+    if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    try {
+      const b = await leesBody(req); if (JSON.stringify(b).length > 6000) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
+      if (op === 'gwtrek') return stuur(res, 200, 'application/json', JSON.stringify({ ok: await gwTrek(kv, b.i, b.s) }), 'no-store');
+      if (/bot|crawler|spider|headless/i.test(String(req.headers['user-agent'] || ''))) return stuur(res, 200, 'application/json', '{"ok":false}', 'no-store');
+      // Hoogstens 80 beurten per adres per dag: AI kost geld, een lus van een bot mag dat niet opeten.
+      const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim(), ik = 'gw:ip:' + new Date().toISOString().slice(0, 10) + ':' + ip.replace(/[^0-9a-f.:]/gi, '').slice(0, 45);
+      const n = Number(await kv.raw(['INCR', ik]).catch(() => 0)); if (n === 1) await kv.raw(['EXPIRE', ik, 86400]).catch(() => {});
+      if (n > 80) return stuur(res, 429, 'application/json', '{"ok":false,"fout":"te veel"}', 'no-store');
+      const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET });
+      return stuur(res, 200, 'application/json', JSON.stringify(await gwStap(kv, b, req, { ai, meld })), 'no-store');
+    } catch (e) { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+  }
+  if (op === 'gwstand') { res.setHeader('X-Robots-Tag', 'noindex'); return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwStand(kv), null, 1), 'no-store'); }
+  if (op === 'gwproef') {
+    if (!/\.vercel\.app$/i.test(String(req.headers.host || ''))) return stuur(res, 404, 'application/json', '{}', 'no-store');
+    const ai = o => berichten({ ...o, model: o.model === 'haiku' ? HAIKU : SONNET });
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(await gwProef(ai), null, 1), 'no-store');
+  }
+  if (op === 'gwpagina') { // dezelfde pagina op de beschermde host, om te bekijken zonder de rewrite van sealedintent.com
+    const t = GW_TALEN.includes(q.get('taal')) ? q.get('taal') : 'nl';
+    return stuur(res, 200, 'text/html; charset=utf-8', gwPagina(t, { geo: geoUit(req), open: await openPills(kv, t) }), 'private, no-store', t, 'noindex, nofollow');
+  }
   if (['intent','partij','receipt','withdraw','renew','plausible'].includes(op)) {
     if(req.method!=='POST')return stuur(res,405,'application/json','{"ok":false}','no-store');
     return anonymousRequest(req,res,op);
@@ -223,6 +250,8 @@ export default async function handler(req, res) {
   if (naar) { res.statusCode = 301; res.setHeader('Location', naar); res.setHeader('Cache-Control', 'public, max-age=3600'); res.setHeader('X-Robots-Tag', 'noindex'); return res.end(); }
   const info = infoPagina(taal, slug, { mail: await MAIL.mailAan(kv).catch(() => false) });
   if (info) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...chatOpts, pagina: info, links: infoLinks(taal, slug) }), 'public, max-age=60, s-maxage=300', taal);
+  if (slug === 'start' && GW_TALEN.includes(taal)) return stuur(res, 200, 'text/html; charset=utf-8', gwPagina(taal, { geo: geoUit(req), open: await openPills(kv, taal), growthScript: GROWTH_SCRIPT }), 'private, no-store', taal, 'noindex, follow');
+  if (slug === 'k' && GW_TALEN.includes(taal)) return stuur(res, 200, 'text/html; charset=utf-8', gwStatusPagina(taal, await gwKaart(kv, q.get('i'), q.get('s'))), 'private, no-store', taal, 'noindex, nofollow');
   if (slug === 'gesprek') return stuur(res, 200, 'text/html; charset=utf-8', renderThreadPage(taal), 'private, no-store', taal, 'noindex, nofollow');
   if (slug === 'manage') return stuur(res, 200, 'text/html; charset=utf-8', renderManagePage(taal), 'private, no-store', taal, 'noindex, nofollow');
   return nietGevonden(taal);
